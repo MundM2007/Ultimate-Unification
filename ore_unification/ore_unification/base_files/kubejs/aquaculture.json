@@ -1,0 +1,22 @@
+{
+    "neptunium": {
+        "replace": [
+            ["ingot", "aquaculture:item/neptunium_ingot", "aquaculture:neptunium_ingot"],
+            ["storage_block", "aquaculture:block/neptunium_block", "aquaculture:neptunium_block"],
+            ["nugget", "aquaculture:item/neptunium_nugget", "aquaculture:neptunium_nugget"]
+        ],
+        "add": [
+            "ingot",
+            "gear",
+            "dust",
+            "plate",
+            "rod"
+        ],
+        "remove": {
+            "ingot": [
+                "aquaculture:neptunium_ingot",
+                "chemlib:ingot_neptunium"
+            ]
+        }
+    }
+}

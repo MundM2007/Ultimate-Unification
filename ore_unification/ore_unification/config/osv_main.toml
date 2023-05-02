@@ -1,0 +1,11 @@
+
+[[ore]]
+    file = "ore/vanilla"
+
+[[strata]]
+    file = "strata/vanilla" 
+
+[system]
+    # whether it should overwrite the formatters section in the ore.values section to make the ore fit the displa Name. Optional, defaults to true.
+    # currently does nothing (bug in osv)
+    overwrite_formatters = true

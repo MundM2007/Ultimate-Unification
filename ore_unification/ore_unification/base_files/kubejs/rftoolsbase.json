@@ -1,0 +1,22 @@
+{
+    "dimensional": {
+        "replace": [
+            ["gem", "rftoolsbase:item/dimensionalshard", "rftoolsbase:dimensionalshard"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

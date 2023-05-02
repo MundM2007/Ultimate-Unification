@@ -1,0 +1,44 @@
+{
+    "lithium": {
+        "replace": [
+            ["dust", "mekanism:item/dust_lithium", "mekanism:dust_lithium"]
+        ],
+        "add": [],
+        "remove": {}
+    },
+    "refined_obsidian": {
+        "replace": [
+            ["ingot", "mekanism:item/ingot_refined_obsidian", "mekanism:ingot_refined_obsidian"],
+            ["storage_block", "mekanism:block/block_refined_obsidian", "mekanism:block_refined_obsidian"],
+            ["nugget", "mekanism:item/nugget_refined_obsidian", "mekanism:nugget_refined_obsidian"],
+            ["dust", "mekanism:item/dust_refined_obsidian", "mekanism:dust_refined_obsidian"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "refined_glowstone": {
+        "replace": [
+            ["ingot", "mekanism:item/ingot_refined_glowstone", "mekanism:ingot_refined_glowstone"],
+            ["storage_block", "mekanism:block/block_refined_glowstone", "mekanism:block_refined_glowstone"],
+            ["nugget", "mekanism:item/nugget_refined_glowstone", "mekanism:nugget_refined_glowstone"],
+            ["dust", "mekanism:item/dust_refined_glowstone", "mekanism:dust_refined_glowstone"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "charcoal": {
+        "replace": [
+            ["dust", "mekanism:item/dust_charcoal", "mekanism:dust_charcoal"]
+        ],
+        "add": [],
+        "remove": {}
+    }
+}

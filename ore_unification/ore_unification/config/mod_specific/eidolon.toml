@@ -1,0 +1,6 @@
+
+[pewter]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

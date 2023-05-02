@@ -1,0 +1,36 @@
+{
+    "draconium": {
+        "replace": [
+            ["storage_block", "draconicevolution:block/draconium_block", "draconicevolution:draconium_block"],
+            ["ingot", "draconicevolution:item/components/draconium_ingot", "draconicevolution:draconium_ingot"],
+            ["nugget", "draconicevolution:item/components/draconium_nugget", "draconicevolution:draconium_nugget"],
+            ["dust", "draconicevolution:item/components/draconium_dust", "draconicevolution:draconium_dust"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "awakened_draconium": {
+        "replace": [
+            ["storage_block", "draconicevolution:block/awakened_draconium_block", "draconicevolution:awakened_draconium_block"],
+            ["ingot", "draconicevolution:item/components/awakened_draconium_ingot", "draconicevolution:awakened_draconium_ingot"],
+            ["nugget", "draconicevolution:item/components/awakened_draconium_nugget", "draconicevolution:awakened_draconium_nugget"],
+            ["dust", "draconicevolution:item/components/awakened_draconium_dust", "draconicevolution:awakened_draconium_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

@@ -1,0 +1,138 @@
+
+[arcane_gold]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[brass]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[bronze]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[cast_iron]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[coal_coke]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[constantan]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[electrum]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[ender_pearl]
+
+[enderium]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[graphite]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[invar]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[lumium]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[obsidian]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[red_alloy]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[signalum]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[silicon]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[steel]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[wood]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false

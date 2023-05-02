@@ -1,0 +1,58 @@
+{
+    "aquamarine": {
+        "replace": [
+            ["gem", "astralsorcery:item/aquamarine", "astralsorcery:aquamarine"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {}
+    },
+    "resonating_gem": {
+        "replace": [
+            ["gem", "astralsorcery:item/resonating_gem", "astralsorcery:resonating_gem"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "starmetal": {
+        "replace": [
+            ["ingot", "astralsorcery:item/starmetal_ingot", "astralsorcery:starmetal_ingot"],
+            ["storage_block", "astralsorcery:item/starmetal", "astralsorcery:starmetal"]
+        ],
+        "add": [
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    }
+}

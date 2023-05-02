@@ -1,0 +1,42 @@
+
+[aquatic]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[arlemite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[hellstone]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[realmite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[rupee]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[shadow_bar]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[torridite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

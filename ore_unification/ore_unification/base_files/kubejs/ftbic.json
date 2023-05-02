@@ -1,0 +1,30 @@
+{
+    "advanced_alloy": {
+        "replace": [
+            ["ingot", "ftbic:item/advanced_alloy", "ftbic:advanced_alloy"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "iridium_alloy": {
+        "replace": [
+            ["ingot", "ftbic:item/iridium_alloy", "ftbic:iridium_alloy"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

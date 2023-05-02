@@ -1,0 +1,18 @@
+
+[manasteel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[terrasteel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[elementium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

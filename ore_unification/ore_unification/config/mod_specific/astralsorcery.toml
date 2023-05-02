@@ -1,0 +1,18 @@
+
+[resonating_gem]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[aquamarine]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[starmetal]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

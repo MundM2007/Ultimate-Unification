@@ -1,0 +1,180 @@
+
+[arsenic]
+    overwrite_texture = true
+    add_tooltip = true
+
+[beryllium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[boron]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[boron_arsenide]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[boron_nitride]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[carobbite]
+
+[extreme_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[ferroboron_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[hard_carbon_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[hsla_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[lead_platinum_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[lithium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[lithium_manganese_dioxide_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[magnesium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[magnesium_diboride_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[manganese]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[manganese_dioxide]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[manganese_oxide]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[rhodochrosite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[shibuichi_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[sic_sic_caramic_matrix_composite_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[silicon_carbide_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[thermoconducting_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[thorium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[thorium_oxide]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[tin_silver_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[tough_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[uranium_oxide]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[villiaumite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[zircaloy_alloy]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[zirconium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

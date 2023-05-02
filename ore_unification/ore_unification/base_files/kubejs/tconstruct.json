@@ -1,0 +1,91 @@
+{
+    "manyullyn": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/manyullyn", "biggerreactors:manyullyn_block"],
+            ["ingot", "biggerreactors:item/manyullyn_ingot", "biggerreactors:manyullyn_ingot"],
+            ["nugget", "biggerreactors:item/manyullyn_nugget", "biggerreactors:manyullyn_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "pig_iron": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/pig_iron/left", "biggerreactors:pig_iron_block"],
+            ["storage_block", "biggerreactors:block/storage/pig_iron/right", "biggerreactors:pig_iron_block"],
+            ["storage_block", "biggerreactors:block/storage/pig_iron/back", "biggerreactors:pig_iron_block"],
+            ["storage_block", "biggerreactors:block/storage/pig_iron/front", "biggerreactors:pig_iron_block"],
+            ["storage_block", "biggerreactors:block/storage/pig_iron/bottum", "biggerreactors:pig_iron_block"],
+            ["storage_block", "biggerreactors:block/storage/pig_iron/top", "biggerreactors:pig_iron_block"],
+            ["ingot", "biggerreactors:item/pig_iron_ingot", "biggerreactors:pig_iron_ingot"],
+            ["nugget", "biggerreactors:item/pig_iron_nugget", "biggerreactors:pig_iron_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "hepatizon": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/hepatizon", "biggerreactors:hepatizon_block"],
+            ["ingot", "biggerreactors:item/hepatizon_ingot", "biggerreactors:hepatizon_ingot"],
+            ["nugget", "biggerreactors:item/hepatizon_nugget", "biggerreactors:hepatizon_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "tinkers_bronze": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/tinkers_bronze", "biggerreactors:tinkers_bronze_block"],
+            ["ingot", "biggerreactors:item/tinkers_bronze_ingot", "biggerreactors:tinkers_bronze_ingot"],
+            ["nugget", "biggerreactors:item/tinkers_bronze_nugget", "biggerreactors:tinkers_bronze_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "queens_slime": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/queens_slime", "biggerreactors:queens_slime_block"],
+            ["ingot", "biggerreactors:item/queens_slime_ingot", "biggerreactors:queens_slime_ingot"],
+            ["nugget", "biggerreactors:item/queens_slime_nugget", "biggerreactors:queens_slime_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "slimesteel": {
+        "replace": [
+            ["storage_block", "biggerreactors:block/storage/slimesteel", "biggerreactors:slimesteel_block"],
+            ["ingot", "biggerreactors:item/slimesteel_ingot", "biggerreactors:slimesteel_ingot"],
+            ["nugget", "biggerreactors:item/slimesteel_nugget", "biggerreactors:slimesteel_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

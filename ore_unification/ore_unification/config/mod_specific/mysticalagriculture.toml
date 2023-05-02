@@ -1,0 +1,80 @@
+
+[imperium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[imperium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[inferium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[inferium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[insanium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[insanium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[prosperity]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[prosperity_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[prudentium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[prudentium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[soulium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[soulium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[supremium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[supremium_gem]
+    overwrite_texture = true
+    add_tooltip = true
+
+[tertium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[tertium_gem]
+    overwrite_texture = true
+    add_tooltip = true

@@ -1,0 +1,16 @@
+{
+    "desh": {
+        "replace": [
+            ["storage_block", "boss_tools:blocks/desh_block", "boss_tools:desh_block"],
+            ["ingot", "boss_tools:items/desh_ingot", "boss_tools:desh_ingot"],
+            ["nugget", "boss_tools:items/desh_nugget", "boss_tools:desh_nugget"],
+            ["plate", "boss_tools:items/desh_plate", "boss_tools:desh_plate"]
+        ],
+        "add": [
+            "dust",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

@@ -1,0 +1,20 @@
+
+[adesite_alloy]
+
+[chromatic_compound]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[refined_radiance]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[shadow_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

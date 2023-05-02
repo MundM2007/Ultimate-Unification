@@ -1,0 +1,11 @@
+{
+  "values": [
+    ["blockRegistry",["checkForDuplicates"]],
+    ["modSupport",["minecraft","druidcraft","byg","osv","quark","create","simpleores","iceandfire"]],
+    ["general",["updatePresets","forceCompatibilityMode"]],
+    ["blocks",["bgImitation","bgDuplication","enableFurnaceRecipes","variantsDrop","variantsDropWithSilkTouch","mapInfestedVariants"]],
+    ["tags",["copyTags","copyBlockTags","copyItemTags","copyBgTags","copyFgTags","copyDenseTags"]],
+    ["denseOres",["enabled","chance","smeltingMultiplier","dropMultiplier","dropMultiplierMin","randomDropCount"]],
+    ["worldGen",["biomeSpecific","autoDisableOres","autoDisableStone","enableOSVOres","enableOSVStone","disabledFeatures"]]
+  ]
+}

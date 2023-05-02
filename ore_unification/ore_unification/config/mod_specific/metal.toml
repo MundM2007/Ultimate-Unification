@@ -1,0 +1,112 @@
+
+[aluminum]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[bismuth]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[cobalt]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[iridium]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[lead]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[osmium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[platinum]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[silver]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[tin]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[titanium]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[tungsten]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[uranium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[zinc]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false

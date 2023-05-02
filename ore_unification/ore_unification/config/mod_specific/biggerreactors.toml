@@ -1,0 +1,18 @@
+
+[blutonium]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[cyanite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[ludicrite]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

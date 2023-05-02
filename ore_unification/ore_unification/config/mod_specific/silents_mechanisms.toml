@@ -1,0 +1,18 @@
+
+[aluminum_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[bismuth_brass]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[bismuth_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

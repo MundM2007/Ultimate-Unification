@@ -1,0 +1,18 @@
+{
+    "quartz_enriched_iron": {
+        "replace": [
+            ["ingot", "refinedstorage:item/quartz_enriched_iron", "refinedstorage:quartz_enriched_iron"],
+            ["storage_block", "refinedstorage:block/quartz_enriched_iron_block", "refinedstorage:quartz_enriched_iron_block"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

@@ -1,0 +1,3 @@
+{
+  "parent": "osv:block/custom/%s_shade_%s"
+}

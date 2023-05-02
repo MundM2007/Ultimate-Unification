@@ -1,0 +1,55 @@
+{
+  blockRegistry: {
+    values: [
+%s
+    ]
+    propertyGroups: {}
+    checkForDuplicates: %s
+  }
+  modSupport: {
+    minecraft: %s
+    druidcraft: %s
+    byg: %s
+    osv: %s
+    quark: %s
+    create: %s
+    simpleores: %s
+    iceandfire: %s
+  }
+  general: {
+    updatePresets: %s
+    forceCompatibilityMode: %s
+  }
+  blocks: {
+    bgImitation: %s
+    bgDuplication: %s
+    enableFurnaceRecipes: %s
+    variantsDrop: %s
+    variantsDropWithSilkTouch: %s
+    mapInfestedVariants: %s
+  }
+  tags: {
+    copyTags: %s
+    copyBlockTags: %s
+    copyItemTags: %s
+    copyBgTags: %s
+    copyFgTags: %s
+    copyDenseTags: %s
+  }
+  denseOres: {
+    enabled: %s
+    chance: %s
+    smeltingMultiplier: %s
+    dropMultiplier: %s
+    dropMultiplierMin: %s
+    randomDropCount: %s
+  }
+  worldGen: {
+    biomeSpecific: %s
+    autoDisableOres: %s
+    autoDisableStone: %s
+    enableOSVOres: %s
+    enableOSVStone: %s
+    disabledFeatures: %s
+  }
+}

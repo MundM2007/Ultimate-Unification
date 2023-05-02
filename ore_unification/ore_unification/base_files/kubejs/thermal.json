@@ -1,0 +1,22 @@
+{
+    "apatite": {
+        "replace": [
+            ["storage_block", "thermal:block/apatite_block", "thermal:apatite_block"],
+            ["gem", "thermal:item/apatite", "thermal:apatite"],
+            ["dust", "thermal:item/apatite_dust", "thermal:apatite_dust"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

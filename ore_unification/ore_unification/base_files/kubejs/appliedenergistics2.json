@@ -1,0 +1,49 @@
+{
+    "fluix": {
+        "replace": [
+            ["dust", "appliedenergistics2:item/fluix_dust", "appliedenergistics2:fluix_dust"],
+            ["gem", "appliedenergistics2:item/fluix_crystal", "appliedenergistics2:fluix_crystal"]
+        ],
+        "add": [],
+        "remove": {}
+    },
+    "certus_quartz": {
+        "replace": [
+            ["dust", "appliedenergistics2:item/certus_quartz_dust", "appliedenergistics2:certus_quartz_dust"],
+            ["gem", "appliedenergistics2:item/certus_quartz_crystal", "appliedenergistics2:certus_quartz_crystal"],
+            ["storage_block", "appliedenergistics2:item/quartz_block", "appliedenergistics2:quartz_block"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {}
+    },
+    "charged_certus_quartz": {
+        "replace": [
+            ["gem", "appliedenergistics2:item/charged_certus_quartz_crystal", "appliedenergistics2:charged_certus_quartz_crystal"]
+        ],
+        "add": [
+            "storage_block",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {}
+    }
+}

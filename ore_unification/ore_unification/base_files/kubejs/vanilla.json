@@ -1,0 +1,354 @@
+{
+    "iron": {
+        "replace": [
+            ["storage_block", "minecraft:block/iron_block", "minecraft:iron_block"],
+            ["ingot", "minecraft:item/iron_ingot", "minecraft:iron_ingot"],
+            ["nugget", "minecraft:item/iron_nugget", "minecraft:iron_nuggot"],
+            ["crystal", "mekanism:item/crystal_iron", "mekanism:crystal_iron"],
+            ["shard", "mekanism:item/shard_iron", "mekanism:shard_iron"],
+            ["clump", "mekanism:item/clump_iron", "mekanism:clump_iron"],
+            ["dirty_dust", "mekanism:item/dirty_dust_iron", "mekanism:dirty_dust_iron"],
+            ["crushed", "create:item/crushed_iron_ore", "create:crushed_iron_ore"],
+            ["fragment", "bloodmagic:item/ironfragment", "bloodmagic:ironfragment"],
+            ["gravel", "bloodmagic:item/irongravel", "bloodmagic:irongravel"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {
+            "dust": [
+                "appliedenergistics2:iron_dust",
+                "bloodmagic:ironsand",
+                "immersiveengineering:dust_iron",
+                "mekanism:dust_iron",
+                "thermal:iron_dust",
+                "pedestals:dustiron",
+                "silents_mechanisms:iron_dust"
+            ],
+            "plate": [
+                "create:iron_sheet",
+                "immersiveengineering:plate_iron",
+                "thermal:iron_plate",
+                "boss_tools:iron_plate",
+                "silents_mechanisms:compressed_iron_ingot"
+            ],
+            "rod": [
+                "createaddition:iron_rod",
+                "immersiveengineering:stick_iron",
+                "silentgear:iron_rod",
+                "boss_tools:iron_stick"
+            ],
+            "gear": [
+                "thermal:iron_gear",
+                "titanium:iron_gear"
+            ]
+        }
+    },
+    "gold": {
+        "replace": [
+            ["storage_block", "minecraft:block/gold_block", "minecraft:gold_block"],
+            ["ingot", "minecraft:item/gold_ingot", "minecraft:gold_ingot"],
+            ["nugget", "minecraft:item/gold_nugget", "minecraft:gold_nuggot"],
+            ["crystal", "mekanism:item/crystal_gold", "mekanism:crystal_gold"],
+            ["shard", "mekanism:item/shard_gold", "mekanism:shard_gold"],
+            ["clump", "mekanism:item/clump_iron", "mekanism:clump_iron"],
+            ["dirty_dust", "mekanism:item/dirty_dust_gold", "mekanism:dirty_dust_gold"],
+            ["crushed", "create:item/crushed_gold_ore", "create:crushed_gold_ore"],
+            ["fragment", "bloodmagic:item/goldfragment", "bloodmagic:goldfragment"],
+            ["gravel", "bloodmagic:item/goldgravel", "bloodmagic:goldgravel"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {
+            "dust": [
+                "appliedenergistics2:gold_dust",
+                "bloodmagic:goldsand",
+                "immersiveengineering:dust_gold",
+                "mekanism:dust_gold",
+                "thermal:gold_dust",
+                "pedestals:dustgold",
+                "silents_mechanisms:gold_dust"
+            ],
+            "plate": [
+                "create:golden_sheet",
+                "immersiveengineering:plate_gold",
+                "thermal:gold_plate"
+            ],
+            "rod": [
+                "createaddition:gold_rod",
+                "immersiveposts:stick_gold"
+            ],
+            "gear": [
+                "thermal:gold_gear",
+                "titanium:gold_gear"
+            ]
+        }
+    },
+    "redstone": {
+        "replace": [],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {}
+    },
+    "coal": {
+        "replace": [],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {
+            "dust": [
+                "bloodmagic:coalsand",
+                "lazierae2:coal_dust",
+                "mekanism:dust_coal",
+                "silents_mechanisms:coal_dust",
+                "nuclearcraft:gem_dust_coal"
+            ]
+        }
+    },
+    "copper": {
+        "replace": [
+            ["crystal", "mekanism:item/crystal_copper", "mekanism:crystal_copper"],
+            ["shard", "mekanism:item/shard_copper", "mekanism:shard_copper"],
+            ["clump", "mekanism:item/clump_copper", "mekanism:clump_copper"],
+            ["dirty_dust", "mekanism:item/dirty_dust_copper", "mekanism:dirty_dust_copper"],
+            ["crushed", "create:item/crushed_copper_ore", "create:crushed_copper_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {
+            "storage_block": [
+                "create:copper_block",
+                "immersiveengineering:storage_coppper",
+                "mekanism:block_copper",
+                "projectred-exploration:copper_block",
+                "thermal:copper_block",
+                "tconstruct:copper_block",
+                "silents_mechanisms:copper_block",
+                "nuclearcraft:ingot_block_copper"
+            ],
+            "ingot": [
+                "chemlib:ingot_copper",
+                "create:copper_ingot",
+                "immersiveengineering:ingot_coppper",
+                "mekanism:ingot_copper",
+                "projectred-core:copper_ingot",
+                "thermal:copper_ingot",
+                "tconstruct:copper_ingot",
+                "silents_mechanisms:copper_ingot",
+                "nuclearcraft:ingot_copper"
+            ],
+            "nugget": [
+                "create:copper_nugget",
+                "immersiveengineering:nugget_coppper",
+                "mekanism:nugget_copper",
+                "thermal:copper_nugget",
+                "tconstruct:copper_nugget",
+                "silents_mechanisms:copper_nugget"
+            ],
+            "dust": [
+                "immersiveengineering:dust_copper",
+                "mekanism:dust_copper",
+                "thermal:copper_dust",
+                "pedestals:dustcopper",
+                "silents_mechanisms:copper_dust",
+                "nuclearcraft:dust_copper"
+            ],
+            "plate": [
+                "create:copper_sheet",
+                "immersiveengineering:plate_copper",
+                "thermal:copper_plate"
+            ],
+            "rod": [
+                "createaddition:copper_rod",
+                "immersiveposts:stick_copper"
+            ],
+            "gear": [
+                "thermal:copper_gear"
+            ]
+        }
+    },
+    "diamond": {
+        "replace": [
+            ["storage_block", "minecraft:block/diamond_block", "minecraft:diamond_block"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {
+            "dust": [
+                "createaddition:diamond_grit",
+                "mekanims:dust_diamond",
+                "thermal:diamond_dust",
+                "nuclearcraft:gem_dust_diamond"
+            ],
+            "gear": [
+                "thermal:diamond_gear",
+                "titanium:diamond_gear"
+            ]
+        }
+    },
+    "emerald": {
+        "replace": [
+            ["storage_block", "minecraft:block/emerald_block", "minecraft:emerald_block"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {
+            "dust": [
+                "mekanims:dust_emerald",
+                "thermal:emerald_dust"
+            ],
+            "gear": [
+                "thermal:emerald_gear"
+            ]
+        }
+    },
+    "lapis": {
+        "replace": [],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {
+            "dust": [
+                "mekanims:dust_lapis_lazuli",
+                "thermal:lapis_dust"
+            ],
+            "gear": [
+                "thermal:lapis_gear"
+            ]
+        }
+    },
+    "quartz": {
+        "replace": [],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed",
+            "fragment",
+            "gravel"
+        ],
+        "remove": {
+            "dust": [
+                "appliedenergistics2:nether_quartz_dust",
+                "mekanims:dust_quartz",
+                "thermal:quartz_dust",
+                "nuclearcraft:gem_dust_quartz"
+            ],
+            "gear": [
+                "thermal:quartz_gear"
+            ]
+        }
+    },
+    "netherite": {
+        "replace": [
+            ["storage_block", "minecraft:block/netherite_block", "minecraft:netherite_block"],
+            ["ingot", "minecraft:block/netherite_ingot", "minecraft:netherite_ingot"],
+            ["fragment", "bloodmagic:item/fragment_netherite_scrap", "bloodmagic:fragment_netherite_scrap"],
+            ["gravel", "bloodmagic:item/gravel_netherite_scrap", "bloodmagic:gravel_netherite_scrap"]
+        ],
+        "add": [
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crushed"
+        ],
+        "remove": {
+            "nugget": [
+                "createdeco:netherite_nugget",
+                "tconstruct:netherite_nugget"
+            ],
+            "dust": [
+                "mekanims:dust_netherite",
+                "thermal:netherite_dust"
+            ],
+            "plate": [
+                "createdeco:netherite_sheet",
+                "thermal:netherite_plate"
+            ],
+            "gear": [
+                "thermal:netherite_gear"
+            ]
+        }
+    }
+}

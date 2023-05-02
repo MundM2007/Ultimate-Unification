@@ -1,0 +1,23 @@
+{
+    "electrotine": {
+        "replace": [
+            ["ingot", "projectred-core:item/arcane_crystal", "projectred-core:arcane_crystal"],
+            ["dust", "projectred-core:item/arcane_crystal_dust", "projectred-core:arcane_crystal_dust"],
+            ["storage_block", "projectred-exploration:block/arcane_crystal_block", "projectred-exploration:arcane_crystal_block"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "plate",
+            "rod",
+            "gear",
+            "nugget"
+        ],
+        "remove": {}
+    }
+}

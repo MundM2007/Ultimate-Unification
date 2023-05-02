@@ -1,0 +1,16 @@
+{
+    "pewter": {
+        "replace": [
+            ["storage_block", "eidolon:block/pewter_block", "eidolon:pewter_block"],
+            ["ingot", "eidolon:item/pewter_ingot", "eidolon:pewter_ingot"],
+            ["nugget", "eidolon:item/pewter_nugget", "eidolon:pewter_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

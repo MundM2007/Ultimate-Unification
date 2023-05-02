@@ -1,0 +1,58 @@
+
+[bitumen]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[flour]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[fluorite]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[potassium_nitrate]
+
+[ruby]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[salt]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[sapphire]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[sulfur]
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false

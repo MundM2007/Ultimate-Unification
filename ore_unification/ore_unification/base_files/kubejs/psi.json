@@ -1,0 +1,54 @@
+{
+    "ebony": {
+        "replace": [
+            ["ingot", "psi:items/ebony_psimetal", "psi:ebony_psimetal"],
+            ["storage_block", "psi:blocks/ebony_psimetal_block", "psi:ebony_psimetal_block"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "ivory": {
+        "replace": [
+            ["ingot", "psi:items/ivory_psimetal", "psi:ivory_psimetal"],
+            ["storage_block", "psi:blocks/ivory_psimetal_block", "psi:ivory_psimetal_block"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "psimetal": {
+        "replace": [
+            ["ingot", "psi:items/psimetal", "psi:psimetal"],
+            ["storage_block", "psi:blocks/psimetal_block", "psi:psimetal_block"],
+            ["dust", "psi:items/psidust", "psi:psidust"]
+        ],
+        "add": [
+            "nugget",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "psigem": {
+        "replace": [
+            ["storage_block", "psi:blocks/psigem_block", "psi:psigem_block"],
+            ["gem", "psi:items/psigem", "psi:psigem"]
+        ],
+        "add": [],
+        "remove": {}
+    }
+}

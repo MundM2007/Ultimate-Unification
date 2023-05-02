@@ -1,0 +1,5 @@
+[system]
+    # Set the file location of the python file and this config file. It goes of from the modpack project folder.
+    file_location = "ore_unification"
+    # Enables and disables file logging. Optional, defaults to true.
+    enable_logging = true

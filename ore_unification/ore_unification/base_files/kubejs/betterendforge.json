@@ -1,0 +1,53 @@
+{
+    "thallasium": {
+        "replace": [
+            ["storage_block", "betterendforge:block/thallasium_block", "betterendforge:thallasium_block"],
+            ["ingot", "betterendforge:item/thallasium_ingot", "betterendforge:thallasium_ingot"],
+            ["nugget", "betterendforge:item/thallasium_nugget", "betterendforge:thallasium_nugget"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block",
+            "dust"
+        ],
+        "remove": {}
+    },
+    "aeternium": {
+        "replace": [
+            ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
+            ["ingot", "betterendforge:item/aeternium_ingot", "betterendforge:aeternium_ingot"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "nugget"
+        ],
+        "remove": {}
+    },
+    "terminite": {
+        "replace": [
+            ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
+            ["ingot", "betterendforge:item/terminite_ingot", "betterendforge:terminite_ingot"],
+            ["nugget", "betterendforge:item/terminite_nugget", "betterendforge:terminite_nugget"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust"
+        ],
+        "remove": {}
+    }
+}

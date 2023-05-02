@@ -1,0 +1,104 @@
+{
+    "azure_silver": {
+        "replace": [
+            ["ingot", "silentgear:item/azure_silver_ingot", "silentgear:azure_silver_ingot"],
+            ["storage_block", "silentgear:block/azure_silver_block", "silentgear:azure_silver_block"],
+            ["nugget", "silentgear:item/azure_silver_nugget", "silentgear:azure_silver_nugget"],
+            ["dust", "silentgear:item/azure_silver_dust", "silentgear:azure_silver_dust"],
+            ["raw", "silentgear:item/raw_azure_silver", "silentgear:raw_azure_silver"],
+            ["raw_block", "silentgear:block/raw_azure_silver_block", "silentgear:raw_azure_silver_block"]
+        ],
+        "add": [
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "plate",
+            "rod",
+            "gear",
+            "crushed"
+        ],
+        "remove": {}
+    },
+    "azure_electrum": {
+        "replace": [
+            ["ingot", "silentgear:item/azure_electrum_ingot", "silentgear:azure_electrum_ingot"],
+            ["storage_block", "silentgear:block/azure_electrum_block", "silentgear:azure_electrum_block"],
+            ["nugget", "silentgear:item/azure_electrum_nugget", "silentgear:azure_electrum_nugget"],
+            ["dust", "silentgear:item/azure_electrum_dust", "silentgear:azure_electrum_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "tyrian_steel": {
+        "replace": [
+            ["ingot", "silentgear:item/tyrian_steel_ingot", "silentgear:tyrian_steel_ingot"],
+            ["storage_block", "silentgear:block/tyrian_steel_block", "silentgear:tyrian_steel_block"],
+            ["nugget", "silentgear:item/tyrian_steel_nugget", "silentgear:tyrian_steel_nugget"],
+            ["dust", "silentgear:item/tyrian_steel_dust", "silentgear:tyrian_steel_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "blaze_gold": {
+        "replace": [
+            ["ingot", "silentgear:item/blaze_gold_ingot", "silentgear:blaze_gold_ingot"],
+            ["storage_block", "silentgear:block/blaze_gold_block", "silentgear:blaze_gold_block"],
+            ["nugget", "silentgear:item/blaze_gold_nugget", "silentgear:blaze_gold_nugget"],
+            ["dust", "silentgear:item/blaze_gold_dust", "silentgear:blaze_gold_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "crimson_iron": {
+        "replace": [
+            ["ingot", "silentgear:item/crimson_iron_ingot", "silentgear:crimson_iron_ingot"],
+            ["storage_block", "silentgear:block/crimson_iron_block", "silentgear:crimson_iron_block"],
+            ["nugget", "silentgear:item/crimson_iron_nugget", "silentgear:crimson_iron_nugget"],
+            ["dust", "silentgear:item/crimson_iron_dust", "silentgear:crimson_iron_dust"],
+            ["raw", "silentgear:item/raw_crimson_iron", "silentgear:raw_crimson_iron"],
+            ["raw_block", "silentgear:block/raw_crimson_iron_block", "silentgear:raw_crimson_iron_block"]
+        ],
+        "add": [
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "plate",
+            "rod",
+            "gear",
+            "crushed"
+        ],
+        "remove": {}
+    },
+    "crimson_steel": {
+        "replace": [
+            ["ingot", "silentgear:item/crimson_steel_ingot", "silentgear:crimson_steel_ingot"],
+            ["storage_block", "silentgear:block/crimson_steel_block", "silentgear:crimson_steel_block"],
+            ["nugget", "silentgear:item/crimson_steel_nugget", "silentgear:crimson_steel_nugget"],
+            ["dust", "silentgear:item/crimson_steel_dust", "silentgear:crimson_steel_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

@@ -1,0 +1,36 @@
+
+[azure_electrum]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[azure_silver]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[blaze_gold]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[crimson_iron]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[crimson_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[tyrian_steel]
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

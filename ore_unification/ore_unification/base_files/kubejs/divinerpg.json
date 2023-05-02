@@ -1,0 +1,143 @@
+{
+    "aquatic": {
+        "replace": [
+            ["ingot", "divinerpg:items/aquantic_ingot", "divinerpg:aquantic_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "crushed",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "arlemite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/arlemite_block", "divinerpg:arlemite_block"],
+            ["ingot", "divinerpg:items/arlemite_ingot", "divinerpg:arlemite_ingot"],
+            ["nugget", "divinerpg:items/arlemite_nugget", "divinerpg:arlemite_nugget"]
+        ],
+        "add": [
+            "crushed",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    },
+    "hellstone": {
+        "replace": [
+            ["ingot", "divinerpg:items/hellstone_ingot", "divinerpg:hellstone_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "shadow_bar": {
+        "replace": [
+            ["ingot", "divinerpg:items/shadow_bar", "divinerpg:shadow_bar"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "realmite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/realmite_block", "divinerpg:realmite_block"],
+            ["ingot", "divinerpg:items/realmite_ingot", "divinerpg:realmite_ingot"],
+            ["nugget", "divinerpg:items/realmite_nugget", "divinerpg:realmite_nugget"]
+        ],
+        "add": [
+            "crushed",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    },
+    "rupee": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/rupee_block", "divinerpg:rupee_block"],
+            ["ingot", "divinerpg:items/rupee_ingot", "divinerpg:rupee_ingot"],
+            ["nugget", "divinerpg:items/rupee_nugget", "divinerpg:rupee_nugget"]
+        ],
+        "add": [
+            "crushed",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    },
+    "torridite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/torridite_block", "divinerpg:torridite_block"],
+            ["ingot", "divinerpg:items/torridite_ingot", "divinerpg:torridite_ingot"],
+            ["nugget", "divinerpg:items/torridite_nugget", "divinerpg:torridite_nugget"]
+        ],
+        "add": [
+            "crushed",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    }
+}

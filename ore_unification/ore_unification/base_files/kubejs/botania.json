@@ -1,0 +1,44 @@
+{
+    "manasteel": {
+        "replace": [
+            ["storage_block", "botania:block/manasteel_block", "botania:manasteel_block"],
+            ["ingot", "botania:item/manasteel_ingot", "botania:manasteel_ingot"],
+            ["dust", "botania:item/manasteel_dust", "botania:manasteel_dust"]
+        ],
+        "add": [
+            "nugget",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "terrasteel": {
+        "replace": [
+            ["storage_block", "botania:block/terrasteel_block", "botania:terrasteel_block"],
+            ["ingot", "botania:item/terrasteel_ingot", "botania:terrasteel_ingot"],
+            ["dust", "botania:item/terrasteel_dust", "botania:terrasteel_dust"]
+        ],
+        "add": [
+            "nugget",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "elementium": {
+        "replace": [
+            ["storage_block", "botania:block/elementium_block", "botania:elementium_block"],
+            ["ingot", "botania:item/elementium_ingot", "botania:elementium_ingot"],
+            ["dust", "botania:item/elementium_dust", "botania:elementium_dust"]
+        ],
+        "add": [
+            "nugget",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}

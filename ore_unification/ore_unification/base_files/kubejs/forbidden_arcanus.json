@@ -1,0 +1,36 @@
+{
+    "obsidian_ingot": {
+        "replace": [
+            ["ingot", "forbidden_arcanus:item/obsidian_ingot", "forbidden_arcanus:obsidian_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "arcane_crystal": {
+        "replace": [
+            ["gem", "forbidden_arcanus:item/arcane_crystal", "forbidden_arcanus:arcane_crystal"],
+            ["dust", "forbidden_arcanus:item/arcane_crystal_dust", "forbidden_arcanus:arcane_crystal_dust"],
+            ["storage_block", "forbidden_arcanus:block/arcane_crystal_block", "forbidden_arcanus:arcane_crystal_block"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    }
+}
