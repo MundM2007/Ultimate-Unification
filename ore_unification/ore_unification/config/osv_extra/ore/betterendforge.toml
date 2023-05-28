@@ -1,0 +1,60 @@
+
+[[ore]]
+    id = "amber"
+    dim = ["end"]
+    displayName = "Amber Ore"
+    active = true
+
+    [ore.texture]
+        name = "betterendforge/amber"
+
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 50]
+            size = 7
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "thallasium"
+    dim = ["end"]
+    displayName = "Thallasium Ore"
+    active = true
+
+    [ore.texture]
+        name = "betterendforge/thallasium"
+
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 70]
+            size = 10
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

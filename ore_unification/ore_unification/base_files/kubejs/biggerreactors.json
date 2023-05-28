@@ -1,9 +1,28 @@
 {
-    "ludicrite": {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
+    "blutonium": {
         "replace": [
-            ["storage_block", "biggerreactors:block/ludicrite_block", "biggerreactors:ludicrite_block"],
-            ["ingot", "biggerreactors:item/ludicrite_ingot", "biggerreactors:ludicrite_ingot"],
-            ["dust", "biggerreactors:item/ludicrite_dust", "biggerreactors:ludicrite_dust"]
+            ["storage_block", "biggerreactors:block/blutonium_block", "biggerreactors:blutonium_block"],
+            ["ingot", "biggerreactors:item/blutonium_ingot", "biggerreactors:blutonium_ingot"],
+            ["dust", "biggerreactors:item/blutonium_dust", "biggerreactors:blutonium_dust"]
         ],
         "add": [
             "nugget",
@@ -27,11 +46,11 @@
         ],
         "remove": {}
     },
-    "blutonium": {
+    "ludicrite": {
         "replace": [
-            ["storage_block", "biggerreactors:block/blutonium_block", "biggerreactors:blutonium_block"],
-            ["ingot", "biggerreactors:item/blutonium_ingot", "biggerreactors:blutonium_ingot"],
-            ["dust", "biggerreactors:item/blutonium_dust", "biggerreactors:blutonium_dust"]
+            ["storage_block", "biggerreactors:block/ludicrite_block", "biggerreactors:ludicrite_block"],
+            ["ingot", "biggerreactors:item/ludicrite_ingot", "biggerreactors:ludicrite_ingot"],
+            ["dust", "biggerreactors:item/ludicrite_dust", "biggerreactors:ludicrite_dust"]
         ],
         "add": [
             "nugget",

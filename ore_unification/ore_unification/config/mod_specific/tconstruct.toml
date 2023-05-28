@@ -1,35 +1,41 @@
 
 [hepatizon]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [manyullyn]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [pig_iron]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [queens_slime]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [slimesteel]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [tinkers_bronze]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

@@ -1,11 +1,13 @@
 
 [advanced_alloy]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [iridium_alloy]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

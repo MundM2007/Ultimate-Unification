@@ -1,11 +1,137 @@
+[[ore]]
+    file = "ore/alloy"
+    active = true
 
 [[ore]]
-    file = "ore/vanilla"
+    file = "ore/aoa3"
+    active = true
+
+[[ore]]
+    file = "ore/appliedenergistics2"
+    active = true
+
+[[ore]]
+    file = "ore/ars_nouveau"
+    active = true
+
+[[ore]]
+    file = "ore/astralsorcery"
+    active = true
+
+[[ore]]
+    file = "ore/atum"
+    active = true
+
+[[ore]]
+    file = "ore/betterendforge"
+    active = true
+
+[[ore]]
+    file = "ore/boss_tools"
+    active = true
+
+[[ore]]
+    file = "ore/byg"
+    active = true
+
+[[ore]]
+    file = "ore/divinerpg"
+    active = true
+
+[[ore]]
+    file = "ore/draconicevolution"
+    active = true
+
+[[ore]]
+    file = "ore/elementalcraft"
+    active = true
+
+[[ore]]
+    file = "ore/evilcraft"
+    active = true
+
+[[ore]]
+    file = "ore/forbidden_arcanus"
+    active = true
+
+[[ore]]
+    file = "ore/gem"
+    active = true
+
+[[ore]]
+    file = "ore/metal"
+    active = true
+
+[[ore]]
+    file = "ore/minecraft"
+    active = true
+
+[[ore]]
+    file = "ore/mysticalagriculture"
+    active = true
+
+[[ore]]
+    file = "ore/mythicbotany"
+    active = true
+
+[[ore]]
+    file = "ore/nuclearcraft"
+    active = true
+
+[[ore]]
+    file = "ore/powah"
+    active = true
+
+[[ore]]
+    file = "ore/projectred-core"
+    active = true
+
+[[ore]]
+    file = "ore/rftoolsbase"
+    active = true
+
+[[ore]]
+    file = "ore/silentgear"
+    active = true
+
+[[ore]]
+    file = "ore/thermal"
+    active = true
+
+# ------ #
+# Strata #
+# ------ #
 
 [[strata]]
-    file = "strata/vanilla" 
+    file = "strata/aoa3"
+    active = true
+
+[[strata]]
+    file = "strata/atum"
+    active = true
+
+[[strata]]
+    file = "strata/boss_tools"
+    active = true
+
+[[strata]]
+    file = "strata/divinerpg"
+    active = true
+
+[[strata]]
+    file = "strata/minecraft"
+    active = true
+
+[[strata]]
+    file = "strata/mysticalagriculture"
+    active = true
+
+[[strata]]
+    file = "strata/mythicbotany"
+    active = true
+
 
 [system]
     # whether it should overwrite the formatters section in the ore.values section to make the ore fit the displa Name. Optional, defaults to true.
     # currently does nothing (bug in osv)
-    overwrite_formatters = true
+    add_formatters = true

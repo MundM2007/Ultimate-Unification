@@ -1,4 +1,23 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
     "desh": {
         "replace": [
             ["storage_block", "boss_tools:blocks/desh_block", "boss_tools:desh_block"],
@@ -9,7 +28,52 @@
         "add": [
             "dust",
             "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "raw",
+            "raw_block"
+        ],
+        "remove": {}
+    },
+    "ice_shard": {
+        "replace": [
+            ["gem", "boss_tools:items/ice_shard", "boss_tools:ice_shard"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
             "gear"
+        ],
+        "remove": {}
+    },
+    "silicon": {
+        "replace": [
+            ["storage_block", "boss_tools:blocks/silicon_block", "boss_tools:silicon_block"],
+            ["ingot", "boss_tools:items/silicon_ingot", "boss_tools:silicon_ingot"],
+            ["nugget", "boss_tools:items/silicon_nugget", "boss_tools:silicon_nugget"]
+        ],
+        "add": [
+            "dust",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "raw",
+            "raw_block",
+            "plate"
         ],
         "remove": {}
     }

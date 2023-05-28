@@ -1,4 +1,23 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
     "aluminum": {
         "replace": [
             ["crushed", "create:item/crushed_aluminum_ore", "create:crushed_aluminum_ore"]
@@ -47,6 +66,42 @@
             ],
             "rod": [
                 "immersiveengineering:stick_aluminum"
+            ]
+        }
+    },
+    "bismuth": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw",
+            "raw_block",
+            "crushed"
+        ],
+        "remove": {
+            "storage_block": [
+                "silents_mechanisms:bismuth_block"
+            ],
+            "ingot": [
+                "silents_mechanisms:bismuth_ingot",
+                "chemlib:ingot_bismuth"
+            ],
+            "nugget": [
+                "silents_mechanisms:bismuth_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:bismuth_dust"
             ]
         }
     },
@@ -573,42 +628,6 @@
             "plate": [
                 "createaddition:zinc_sheet",
                 "createdeco:zinc_sheet"
-            ]
-        }
-    },
-    "bismuth": {
-        "replace": [],
-        "add": [
-            "storage_block",
-            "ingot",
-            "nugget",
-            "fragment",
-            "gravel",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "dust",
-            "plate",
-            "rod",
-            "gear",
-            "raw",
-            "raw_block",
-            "crushed"
-        ],
-        "remove": {
-            "storage_block": [
-                "silents_mechanisms:bismuth_block"
-            ],
-            "ingot": [
-                "silents_mechanisms:bismuth_ingot",
-                "chemlib:ingot_bismuth"
-            ],
-            "nugget": [
-                "silents_mechanisms:bismuth_nugget"
-            ],
-            "dust": [
-                "silents_mechanisms:bismuth_dust"
             ]
         }
     }

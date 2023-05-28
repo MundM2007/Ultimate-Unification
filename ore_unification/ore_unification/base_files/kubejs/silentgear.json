@@ -1,4 +1,38 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
+    
+    "azure_electrum": {
+        "replace": [
+            ["ingot", "silentgear:item/azure_electrum_ingot", "silentgear:azure_electrum_ingot"],
+            ["storage_block", "silentgear:block/azure_electrum_block", "silentgear:azure_electrum_block"],
+            ["nugget", "silentgear:item/azure_electrum_nugget", "silentgear:azure_electrum_nugget"],
+            ["dust", "silentgear:item/azure_electrum_dust", "silentgear:azure_electrum_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
     "azure_silver": {
         "replace": [
             ["ingot", "silentgear:item/azure_silver_ingot", "silentgear:azure_silver_ingot"],
@@ -19,34 +53,6 @@
             "rod",
             "gear",
             "crushed"
-        ],
-        "remove": {}
-    },
-    "azure_electrum": {
-        "replace": [
-            ["ingot", "silentgear:item/azure_electrum_ingot", "silentgear:azure_electrum_ingot"],
-            ["storage_block", "silentgear:block/azure_electrum_block", "silentgear:azure_electrum_block"],
-            ["nugget", "silentgear:item/azure_electrum_nugget", "silentgear:azure_electrum_nugget"],
-            ["dust", "silentgear:item/azure_electrum_dust", "silentgear:azure_electrum_dust"]
-        ],
-        "add": [
-            "plate",
-            "rod",
-            "gear"
-        ],
-        "remove": {}
-    },
-    "tyrian_steel": {
-        "replace": [
-            ["ingot", "silentgear:item/tyrian_steel_ingot", "silentgear:tyrian_steel_ingot"],
-            ["storage_block", "silentgear:block/tyrian_steel_block", "silentgear:tyrian_steel_block"],
-            ["nugget", "silentgear:item/tyrian_steel_nugget", "silentgear:tyrian_steel_nugget"],
-            ["dust", "silentgear:item/tyrian_steel_dust", "silentgear:tyrian_steel_dust"]
-        ],
-        "add": [
-            "plate",
-            "rod",
-            "gear"
         ],
         "remove": {}
     },
@@ -93,6 +99,20 @@
             ["storage_block", "silentgear:block/crimson_steel_block", "silentgear:crimson_steel_block"],
             ["nugget", "silentgear:item/crimson_steel_nugget", "silentgear:crimson_steel_nugget"],
             ["dust", "silentgear:item/crimson_steel_dust", "silentgear:crimson_steel_dust"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "tyrian_steel": {
+        "replace": [
+            ["ingot", "silentgear:item/tyrian_steel_ingot", "silentgear:tyrian_steel_ingot"],
+            ["storage_block", "silentgear:block/tyrian_steel_block", "silentgear:tyrian_steel_block"],
+            ["nugget", "silentgear:item/tyrian_steel_nugget", "silentgear:tyrian_steel_nugget"],
+            ["dust", "silentgear:item/tyrian_steel_dust", "silentgear:tyrian_steel_dust"]
         ],
         "add": [
             "plate",

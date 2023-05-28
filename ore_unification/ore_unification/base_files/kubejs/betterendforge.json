@@ -1,4 +1,66 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
+    "aeternium": {
+        "replace": [
+            ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
+            ["ingot", "betterendforge:item/aeternium_ingot", "betterendforge:aeternium_ingot"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "nugget"
+        ],
+        "remove": {}
+    },
+    "amber": {
+        "replace": [
+            ["storage_block", "byg:block/amber_block", "byg:amber_block"],
+            ["gem", "byg:item/amber_gem", "byg:amber_gem"],
+            ["raw", "byg:item/raw_amber", "byg:raw_amber"]
+        ],
+        "add": [
+            "raw_block",
+            "plate",
+            "rod",
+            "gear",
+            "dust"
+        ],
+        "remove": {}
+    },
+    "terminite": {
+        "replace": [
+            ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
+            ["ingot", "betterendforge:item/terminite_ingot", "betterendforge:terminite_ingot"],
+            ["nugget", "betterendforge:item/terminite_nugget", "betterendforge:terminite_nugget"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust"
+        ],
+        "remove": {}
+    },
     "thallasium": {
         "replace": [
             ["storage_block", "betterendforge:block/thallasium_block", "betterendforge:thallasium_block"],
@@ -18,34 +80,6 @@
             "gear",
             "raw",
             "raw_block",
-            "dust"
-        ],
-        "remove": {}
-    },
-    "aeternium": {
-        "replace": [
-            ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
-            ["ingot", "betterendforge:item/aeternium_ingot", "betterendforge:aeternium_ingot"]
-        ],
-        "add": [
-            "plate",
-            "rod",
-            "gear",
-            "dust",
-            "nugget"
-        ],
-        "remove": {}
-    },
-    "terminite": {
-        "replace": [
-            ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
-            ["ingot", "betterendforge:item/terminite_ingot", "betterendforge:terminite_ingot"],
-            ["nugget", "betterendforge:item/terminite_nugget", "betterendforge:terminite_nugget"]
-        ],
-        "add": [
-            "plate",
-            "rod",
-            "gear",
             "dust"
         ],
         "remove": {}

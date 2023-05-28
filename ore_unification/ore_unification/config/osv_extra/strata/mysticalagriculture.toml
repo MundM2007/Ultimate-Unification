@@ -1,0 +1,5 @@
+# mercury
+[[strata]]
+    id = "soulstone"
+    block = "mysticalagriculture:soulstone"
+    dim = ["nether_soulstone"]

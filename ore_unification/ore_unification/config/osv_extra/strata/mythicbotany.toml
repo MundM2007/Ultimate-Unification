@@ -1,0 +1,5 @@
+# alfheim
+[[strata]]
+    id = "livingrock"
+    block = "mythicbotany:livingrock"
+    dim = ["alfheim"]

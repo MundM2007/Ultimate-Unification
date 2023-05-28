@@ -1,0 +1,143 @@
+[[ore]]
+    id = "arcane_crystal"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Arcane Crystal Ore"
+    active = true
+
+    [ore.texture]
+        name = "forbidden_arcanus/arcane_crystal"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 25]
+            size = 5
+            count = 3
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 55]
+            size = 4
+            count = 3
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 45]
+            size = 4
+            count = 3
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "dark_rune"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Dark Rune Ore"
+    active = true
+
+    [ore.texture]
+        name = "forbidden_arcanus/dark_rune"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 10]
+            size = 3
+            count = 2
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 30]
+            size = 3
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 30]
+            size = 3
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "rune"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Rune Ore"
+    active = true
+
+    [ore.texture]
+        name = "forbidden_arcanus/rune"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [10, 35]
+            size = 3
+            count = 2
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 65]
+            size = 3
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 55]
+            size = 3
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

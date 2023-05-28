@@ -1,6 +1,6 @@
 
 [neptunium]
-    overwrite_texture = true
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true

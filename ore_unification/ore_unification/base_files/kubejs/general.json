@@ -20,6 +20,7 @@
         "fluid": "%s",
         "clean_slurry": "Clean %s Slurry",
         "dirty_slurry": "Dirty %s Slurry",
-        "gem": "%s"
+        "gem": "%s",
+        "parts": "%s Parts"
     }
 }

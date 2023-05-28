@@ -1,0 +1,95 @@
+[[ore]]
+    id = "certus_quartz"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Certus Quartz Ore"
+    active = true
+
+    [ore.texture]
+        name = "appliedenergistics2/certus_quartz"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 64]
+            size = 7
+            count = 9
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 95]
+            size = 7
+            count = 8
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 85]
+            size = 7
+            count = 8
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "charged_certus_quartz"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Charged Certus Quartz Ore"
+    active = true
+
+    [ore.texture]
+        name = "appliedenergistics2/charged_certus_quartz"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 32]
+            size = 3
+            count = 5
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 65]
+            size = 3
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 55]
+            size = 3
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

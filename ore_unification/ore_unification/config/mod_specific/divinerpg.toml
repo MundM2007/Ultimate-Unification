@@ -1,41 +1,151 @@
 
+[apalachia]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
 [aquatic]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [arlemite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[bloodgem]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[bluefire_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[corrupted_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[divine_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[eden]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[ender_stone]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [hellstone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[ice_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[jungle_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[molten_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[mortum]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [realmite]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [rupee]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [shadow_bar]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[shadow_stone]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+
+[skythern]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[terran_stone]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [torridite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[wildwood]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

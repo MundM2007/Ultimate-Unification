@@ -1,0 +1,86 @@
+[[ore]]
+    id = "desh"
+    dim = ["moon"]
+    displayName = "Desh Ore"
+    active = true
+
+    [ore.texture]
+        name = "boss_tools/desh"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 64]
+            size = 8
+            count = 4
+
+            [ore.values.gen.dimensions]
+                names = ["boss_tools:moon"]
+
+[[ore]]
+    id = "ice_shard"
+    dim = ["mars"]
+    displayName = "Ice Shard Ore"
+    active = true
+
+    [ore.texture]
+        name = "boss_tools/ice_shard"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 64]
+            size = 12
+            count = 10
+
+            [ore.values.gen.dimensions]
+                names = ["boss_tools:mars"]
+
+[[ore]]
+    id = "silicon"
+    dim = ["mars"]
+    displayName = "Silicon Ore"
+    active = true
+
+    [ore.texture]
+        name = "boss_tools/silicon"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 64]
+            size = 10
+            count = 8
+
+            [ore.values.gen.dimensions]
+                names = ["boss_tools:mars"]

@@ -1,11 +1,34 @@
 
 [arcane_crystal]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[dark_rune]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [obsidian_ingot]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[rune]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[stellarite]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

@@ -1,0 +1,47 @@
+[[ore]]
+    id = "ender_dust"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Ender Dust Ore"
+    active = true
+
+    [ore.texture]
+        name = "alloy/ender_dust"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 0
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 48]
+            size = 6
+            count = 5
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 80]
+            size = 6
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 70]
+            size = 6
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

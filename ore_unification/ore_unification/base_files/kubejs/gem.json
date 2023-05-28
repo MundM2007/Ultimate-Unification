@@ -1,16 +1,28 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
     "bitumen": {
         "replace": [],
         "add": [
             "storage_block",
             "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
             "dust",
             "plate",
             "rod",
@@ -31,13 +43,6 @@
         "add": [
             "storage_block",
             "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
             "dust",
             "plate",
             "rod",
@@ -57,18 +62,11 @@
             ]
         }
     },
-    "pottassium_nitrate": {
+    "potassium_nitrate": {
         "replace": [],
         "add": [
             "storage_block",
             "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
             "dust",
             "plate",
             "rod",
@@ -88,18 +86,38 @@
             ]
         }
     },
+    "ruby": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "gem",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {
+            "storage_block": [
+                "projectred-exploration:ruby_block",
+                "thermal:ruby_block"
+            ],
+            "gem": [
+                "projectred-core:ruby",
+                "thermal:ruby"
+            ],
+            "dust": [
+                "thermal:ruby_dust"
+            ],
+            "gear": [
+                "thermal:ruby_gear"
+            ]
+        }
+    },
     "sapphire": {
         "replace": [],
         "add": [
             "storage_block",
             "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
             "dust",
             "plate",
             "rod",
@@ -124,52 +142,11 @@
             ]
         }
     },
-    "ruby": {
-        "replace": [],
-        "add": [
-            "storage_block",
-            "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
-            "dust",
-            "plate",
-            "rod",
-            "gear"
-        ],
-        "remove": {
-            "storage_block": [
-                "projectred-exploration:ruby_block",
-                "thermal:ruby_block"
-            ],
-            "gem": [
-                "projectred-core:ruby",
-                "thermal:ruby"
-            ],
-            "dust": [
-                "thermal:ruby_dust"
-            ],
-            "gear": [
-                "thermal:ruby_gear"
-            ]
-        }
-    },
     "sulfur": {
         "replace": [],
         "add": [
             "storage_block",
             "gem",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "fragment",
-            "gravel",
-            "crushed",
             "dust",
             "plate",
             "rod",
@@ -189,35 +166,6 @@
                 "thermal:sulfur_dust",
                 "eidolon:sulfur",
                 "nuclearcraft:gem_dust_sulfur"
-            ]
-        }
-    },
-    "salt": {
-        "replace": [],
-        "add": [
-            "dust"
-        ],
-        "remove": {
-            "dust": [
-                "pamhc2foodcore:saltitem",
-                "alchemistry:mineral_salt"
-            ]
-        }
-    },
-    "flour": {
-        "replace": [],
-        "add": [
-            "dust"
-        ],
-        "remove": {
-            "dust": [
-                "appliedenergistics2:flour",
-                "atum:emmer_flour",
-                "create:wheat_flour",
-                "pneumaticcraft:wheat_flour",
-                "pamhc2foodcore:flouritem",
-                "pedestals:dustflour",
-                "nuclearcraft:flour"
             ]
         }
     }

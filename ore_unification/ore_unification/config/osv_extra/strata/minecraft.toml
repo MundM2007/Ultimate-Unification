@@ -1,0 +1,48 @@
+# overworld
+[[strata]]
+    id = "stone"
+    block = "minecraft:stone"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "andesite"
+    block = "minecraft:andesite"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "diorite"
+    block = "minecraft:diorite"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "granite"
+    block = "minecraft:granite"
+    dim = ["overworld"]
+
+# overworld_sand
+[[strata]]
+    id = "sand"
+    block = "minecraft:sand"
+    dim = ["overworld_sand"]
+
+[[strata]]
+    id = "red_sand"
+    block = "minecraft:red_sand"
+    dim = ["overworld_sand"]
+
+# nether
+[[strata]]
+    id = "netherrack"
+    block = "minecraft:netherrack"
+    dim = ["nether"]
+
+[[strata]]
+    id = "soul_soil"
+    block = "minecraft:soul_soil"
+    dim = ["nether"]
+
+# end
+[[strata]]
+    id = "end_stone"
+    block = "minecraft:end_stone"
+    dim = ["end"]

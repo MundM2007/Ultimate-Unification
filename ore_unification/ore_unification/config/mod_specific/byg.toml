@@ -1,0 +1,35 @@
+
+[ametrine]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[anthracite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[emeraldite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[lignite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[pendorite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

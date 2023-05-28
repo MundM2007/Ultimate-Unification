@@ -1,12 +1,23 @@
 {
-    "fluix": {
-        "replace": [
-            ["dust", "appliedenergistics2:item/fluix_dust", "appliedenergistics2:fluix_dust"],
-            ["gem", "appliedenergistics2:item/fluix_crystal", "appliedenergistics2:fluix_crystal"]
-        ],
-        "add": [],
-        "remove": {}
-    },
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
     "certus_quartz": {
         "replace": [
             ["dust", "appliedenergistics2:item/certus_quartz_dust", "appliedenergistics2:certus_quartz_dust"],
@@ -16,14 +27,7 @@
         "add": [
             "plate",
             "rod",
-            "gear",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "crushed",
-            "fragment",
-            "gravel"
+            "gear"
         ],
         "remove": {}
     },
@@ -36,14 +40,16 @@
             "plate",
             "rod",
             "gear",
-            "crystal",
-            "shard",
-            "clump",
-            "dirty_dust",
-            "crushed",
-            "fragment",
-            "gravel"
+            "dust"
         ],
+        "remove": {}
+    },
+    "fluix": {
+        "replace": [
+            ["dust", "appliedenergistics2:item/fluix_dust", "appliedenergistics2:fluix_dust"],
+            ["gem", "appliedenergistics2:item/fluix_crystal", "appliedenergistics2:fluix_crystal"]
+        ],
+        "add": [],
         "remove": {}
     }
 }

@@ -1,5 +1,6 @@
 
 [aluminum]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -9,6 +10,7 @@
     replace_output = false
 
 [bismuth]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -17,6 +19,7 @@
     replace_output = false
 
 [cobalt]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -25,6 +28,7 @@
     replace_output = false
 
 [iridium]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -33,6 +37,17 @@
     replace_output = false
 
 [lead]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[nickel]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -42,6 +57,7 @@
     replace_output = false
 
 [osmium]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -51,6 +67,7 @@
     replace_output = false
 
 [platinum]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -60,6 +77,7 @@
     replace_output = false
 
 [silver]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -69,6 +87,7 @@
     replace_output = false
 
 [tin]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -78,6 +97,7 @@
     replace_output = false
 
 [titanium]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -86,6 +106,7 @@
     replace_output = false
 
 [tungsten]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -94,6 +115,7 @@
     replace_output = false
 
 [uranium]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
@@ -103,6 +125,7 @@
     replace_output = false
 
 [zinc]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

@@ -1,0 +1,5 @@
+# atum
+[[strata]]
+    id = "limestone"
+    block = "atum:limestone"
+    dim = ["atum"]

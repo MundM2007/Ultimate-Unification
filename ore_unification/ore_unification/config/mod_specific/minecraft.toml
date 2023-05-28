@@ -1,0 +1,93 @@
+
+[coal]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[copper]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[diamond]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[emerald]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[gold]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[iron]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[lapis]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[netherite]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[quartz]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    remove_recipe = false
+    replace_output = false
+
+[redstone]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true

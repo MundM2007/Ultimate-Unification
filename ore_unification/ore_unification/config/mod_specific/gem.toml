@@ -1,13 +1,6 @@
 
 [bitumen]
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-    hide_jei = false
-    remove_recipe = false
-    replace_output = false
-
-[flour]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -16,6 +9,7 @@
     replace_output = false
 
 [fluorite]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -24,8 +18,7 @@
     replace_output = false
 
 [potassium_nitrate]
-
-[ruby]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -33,7 +26,8 @@
     remove_recipe = false
     replace_output = false
 
-[salt]
+[ruby]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -42,6 +36,7 @@
     replace_output = false
 
 [sapphire]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true
@@ -50,6 +45,7 @@
     replace_output = false
 
 [sulfur]
+    active = true
     add_tooltip = true
     add_element = true
     add_tag = true

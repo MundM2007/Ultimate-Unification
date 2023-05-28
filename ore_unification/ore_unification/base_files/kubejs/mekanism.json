@@ -1,23 +1,35 @@
 {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
+    "charcoal": {
+        "replace": [
+            ["dust", "mekanism:item/dust_charcoal", "mekanism:dust_charcoal"]
+        ],
+        "add": [],
+        "remove": {}
+    },
     "lithium": {
         "replace": [
             ["dust", "mekanism:item/dust_lithium", "mekanism:dust_lithium"]
         ],
         "add": [],
-        "remove": {}
-    },
-    "refined_obsidian": {
-        "replace": [
-            ["ingot", "mekanism:item/ingot_refined_obsidian", "mekanism:ingot_refined_obsidian"],
-            ["storage_block", "mekanism:block/block_refined_obsidian", "mekanism:block_refined_obsidian"],
-            ["nugget", "mekanism:item/nugget_refined_obsidian", "mekanism:nugget_refined_obsidian"],
-            ["dust", "mekanism:item/dust_refined_obsidian", "mekanism:dust_refined_obsidian"]
-        ],
-        "add": [
-            "plate",
-            "rod",
-            "gear"
-        ],
         "remove": {}
     },
     "refined_glowstone": {
@@ -34,11 +46,18 @@
         ],
         "remove": {}
     },
-    "charcoal": {
+    "refined_obsidian": {
         "replace": [
-            ["dust", "mekanism:item/dust_charcoal", "mekanism:dust_charcoal"]
+            ["ingot", "mekanism:item/ingot_refined_obsidian", "mekanism:ingot_refined_obsidian"],
+            ["storage_block", "mekanism:block/block_refined_obsidian", "mekanism:block_refined_obsidian"],
+            ["nugget", "mekanism:item/nugget_refined_obsidian", "mekanism:nugget_refined_obsidian"],
+            ["dust", "mekanism:item/dust_refined_obsidian", "mekanism:dust_refined_obsidian"]
         ],
-        "add": [],
+        "add": [
+            "plate",
+            "rod",
+            "gear"
+        ],
         "remove": {}
     }
 }

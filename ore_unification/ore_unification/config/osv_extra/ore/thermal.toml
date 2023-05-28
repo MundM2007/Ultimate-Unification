@@ -1,0 +1,47 @@
+[[ore]]
+    id = "apatite"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Apatite Ore"
+    active = true
+
+    [ore.texture]
+        name = "thermal/apatite"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [64, 128]
+            size = 22
+            count = 2
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [100, 128]
+            size = 22
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [80, 110]
+            size = 22
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

@@ -3,3 +3,6 @@
     file_location = "ore_unification"
     # Enables and disables file logging. Optional, defaults to true.
     enable_logging = true
+    # enables and disables these specific logging messages
+    enable_logging_dim_not_existent_errors = true
+    enable_logging_strata_not_existent_errors = true

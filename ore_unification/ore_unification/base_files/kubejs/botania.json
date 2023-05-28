@@ -1,26 +1,30 @@
 {
-    "manasteel": {
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 By:                                     \n",
+        "//         - MundM2007 (https://github.com/MundM2007)                              \n",
+        "// Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        \n\n"
+    ],
+    "dragonstone": {
         "replace": [
-            ["storage_block", "botania:block/manasteel_block", "botania:manasteel_block"],
-            ["ingot", "botania:item/manasteel_ingot", "botania:manasteel_ingot"],
-            ["dust", "botania:item/manasteel_dust", "botania:manasteel_dust"]
+            ["storage_block", "botania:block/dragonstone_block", "botania:dragonstone_block"],
+            ["gem", "botania:item/dragonstone", "botania:dragonstone"]
         ],
         "add": [
-            "nugget",
-            "plate",
-            "rod",
-            "gear"
-        ],
-        "remove": {}
-    },
-    "terrasteel": {
-        "replace": [
-            ["storage_block", "botania:block/terrasteel_block", "botania:terrasteel_block"],
-            ["ingot", "botania:item/terrasteel_ingot", "botania:terrasteel_ingot"],
-            ["dust", "botania:item/terrasteel_dust", "botania:terrasteel_dust"]
-        ],
-        "add": [
-            "nugget",
+            "dust",
             "plate",
             "rod",
             "gear"
@@ -31,10 +35,47 @@
         "replace": [
             ["storage_block", "botania:block/elementium_block", "botania:elementium_block"],
             ["ingot", "botania:item/elementium_ingot", "botania:elementium_ingot"],
-            ["dust", "botania:item/elementium_dust", "botania:elementium_dust"]
+            ["nugget", "botania:item/elementium_nugget", "botania:elementium_nugget"]
         ],
         "add": [
-            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed",
+            "raw",
+            "raw_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "manasteel": {
+        "replace": [
+            ["storage_block", "botania:block/manasteel_block", "botania:manasteel_block"],
+            ["ingot", "botania:item/manasteel_ingot", "botania:manasteel_ingot"],
+            ["nugget", "botania:item/manasteel_nugget", "botania:manasteel_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear"
+        ],
+        "remove": {}
+    },
+    "terrasteel": {
+        "replace": [
+            ["storage_block", "botania:block/terrasteel_block", "botania:terrasteel_block"],
+            ["ingot", "botania:item/terrasteel_ingot", "botania:terrasteel_ingot"],
+            ["nugget", "botania:item/terrasteel_nugget", "botania:terrasteel_nugget"]
+        ],
+        "add": [
+            "dust",
             "plate",
             "rod",
             "gear"

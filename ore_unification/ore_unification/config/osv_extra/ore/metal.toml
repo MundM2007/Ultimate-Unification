@@ -1,0 +1,653 @@
+[[ore]]
+    id = "aluminum"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Aluminum Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/aluminum"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [45, 75]
+            size = 5
+            count = 8
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [70, 100]
+            size = 5
+            count = [6, 7]
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [60, 90]
+            size = 5
+            count = [6, 7]
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "bismuth"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Bismuth Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/bismuth"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 2
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [15, 50]
+            size = 7
+            count = 4
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [50, 80]
+            size = 7
+            count = 3
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 70]
+            size = 7
+            count = 3
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "cobalt"
+    dim = ["nether"]
+    displayName = "Cobalt Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/cobalt"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [45, 80]
+            size = 7
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+[[ore]]
+    id = "iridium"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Iridium Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/iridium"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "STONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 20]
+            size = 5
+            count = 5
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 50]
+            size = 4
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 40]
+            size = 4
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+
+[[ore]]
+    id = "lead"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Lead Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/lead"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 45]
+            size = 4
+            count = 7
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [55, 70]
+            size = 4
+            count = [5, 6]
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [45, 60]
+            size = 4
+            count = [5, 6]
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "nickel"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Nickel Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/nickel"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 40]
+            size = 5
+            count = 7
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [50, 70]
+            size = 5
+            count = 6
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 60]
+            size = 5
+            count = 6
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "osmium"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Osmium Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/osmium"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 50]
+            size = 10
+            count = 6
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [50, 80]
+            size = 9
+            count = [5, 6]
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 80]
+            size = 9
+            count = [5, 6]
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "platinum"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Platinum Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/platinum"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 20]
+            size = 6
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 50]
+            size = 6
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 40]
+            size = 6
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "silver"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Silver Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/silver"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [25, 40]
+            size = 4
+            count = 7
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [45, 60]
+            size = 4
+            count = 6
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [35, 50]
+            size = 4
+            count = 6
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "tin"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Tin Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/tin"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 1
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 65]
+            size = 6
+            count = 10
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [70, 95]
+            size = 5
+            count = 9
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [60, 85]
+            size = 5
+            count = 9
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "titanium"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Titanium Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/titanium"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 30]
+            size = 4
+            count = [1, 2]
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [50, 60]
+            size = 4
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 50]
+            size = 4
+            count = 1
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "tungsten"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Tungsten Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/tungsten"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [10, 30]
+            size = 5
+            count = 4
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [40, 60]
+            size = 5
+            count = 3
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 50]
+            size = 5
+            count = 4
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "uranium"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Uranium Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/uranium"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 20]
+            size = 5
+            count = 6
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 50]
+            size = 5
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [20, 40]
+            size = 5
+            count = 5
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "zinc"
+    dim = ["overworld", "nether", "end", "atum"]
+    displayName = "Zinc Ore"
+    active = true
+
+    [ore.texture]
+        name = "metal/zinc"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [30, 50]
+            size = 5
+            count = 8
+
+            [ore.values.gen.biomes]
+                blacklist = true
+                types = ["NETHER", "THE_END"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [60, 80]
+            size = 4
+            count = 8
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [50, 70]
+            size = 4
+            count = 8
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]

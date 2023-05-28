@@ -1,0 +1,81 @@
+# barathos
+[[strata]]
+    id = "baron_stone"
+    block = "aoa3:baron_stone"
+    dim = ["barathos"]
+
+[[strata]]
+    id = "hellstone"
+    block = "aoa3:hellstone"
+    dim = ["barathos"]
+
+# runandor
+[[strata]]
+    id = "runic_stone"
+    block = "aoa3:runic_stone"
+    dim = ["runandor"]
+
+# greckon
+[[strata]]
+    id = "greckon_stone"
+    block = "aoa3:greckon_stone"
+    dim = ["greckon"]
+
+# iromine
+[[strata]]
+    id = "irostone"
+    block = "aoa3:irostone"
+    dim = ["iromine"]
+
+# mysterium
+[[strata]]
+    id = "fungal_rock"
+    block = "aoa3:fungal_rock"
+    dim = ["mysterium"]
+
+# shyrelands
+[[strata]]
+    id = "bright_rock"
+    block = "aoa3:bright_rock"
+    dim = ["shyrelands"]
+
+# precasia
+[[strata]]
+    id = "precasian_lower_rock"
+    block = "aoa3:precasian_lower_rock"
+    dim = ["precasia"]
+
+# crystevia
+[[strata]]
+    id = "crystallised_rock"
+    block = "aoa3:crystallised_rock"
+    dim = ["crystevia"]
+
+# creeponia
+[[strata]]
+    id = "pressed_creep_stone"
+    block = "aoa3:pressed_creep_stone"
+    dim = ["creeponia_pressed"]
+
+[[strata]]
+    id = "primed_stone"
+    block = "aoa3:primed_stone"
+    dim = ["creeponia_primed"]
+
+# deeplands
+[[strata]]
+    id = "dense_stone"
+    block = "aoa3:dense_stone"
+    dim = ["deeplands"]
+
+# abyss
+[[strata]]
+    id = "abyssal_stone"
+    block = "aoa3:abyssal_stone"
+    dim = ["abyss"]
+
+# haven
+[[strata]]
+    id = "weightless_stone"
+    block = "aoa3:weightless_stone"
+    dim = ["haven"]

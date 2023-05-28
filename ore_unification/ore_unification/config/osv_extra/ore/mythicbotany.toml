@@ -1,0 +1,57 @@
+[[ore]]
+    id = "dragonstone"
+    dim = ["alfheim"]
+    displayName = "Dragonstone Ore"
+    active = true
+
+    [ore.texture]
+        name = "mythicbotany/dragonstone"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 20]
+            size = 3
+            count = 3
+
+        [ore.values.gen.dimensions]
+                names = ["mythicbotany:alfheim"]
+
+[[ore]]
+    id = "elementium"
+    dim = ["alfheim"]
+    displayName = "Elementium Ore"
+    active = true
+
+    [ore.texture]
+        name = "mythicbotany/elementium"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 20]
+            size = 5
+            count = 3
+
+            [ore.values.gen.dimensions]
+                names = ["mythicbotany:alfheim"]

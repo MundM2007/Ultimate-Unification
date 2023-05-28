@@ -1,0 +1,23 @@
+# moon
+[[strata]]
+    id = "moon_stone"
+    block = "boss_tools:moon_stone"
+    dim = ["moon"]
+
+# mars
+[[strata]]
+    id = "mars_stone"
+    block = "boss_tools:mars_stone"
+    dim = ["mars"]
+
+# venus
+[[strata]]
+    id = "venus_stone"
+    block = "boss_tools:venus_stone"
+    dim = ["venus"]
+
+# mercury
+[[strata]]
+    id = "mercury_stone"
+    block = "boss_tools:mercury_stone"
+    dim = ["mercury"]

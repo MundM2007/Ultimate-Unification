@@ -1,0 +1,57 @@
+[[ore]]
+    id = "azure_silver"
+    dim = ["end"]
+    displayName = "Azure Silver Ore"
+    active = true
+
+    [ore.texture]
+        name = "silentgear/azure_silver"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 4
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [15, 80]
+            size = 8
+            count = 8
+
+            [ore.values.gen.biomes]
+                types = ["THE_END"]
+
+[[ore]]
+    id = "crimson_iron"
+    dim = ["end"]
+    displayName = "Crimson Iron Ore"
+    active = true
+
+    [ore.texture]
+        name = "silentgear/crimson_iron"
+
+    [ore.values]
+        [ore.values.block]
+            material = {color = "NONE"}
+            soundType = "STONE"
+            destroyTime = 3
+            explosionResistance = 3
+
+        [ore.values.forge]
+            harvestLevel = 2
+            harvestTool = "pickaxe"
+
+        [[ore.values.gen]]
+            type = "CLUSTER"
+            height = [1, 128]
+            size = 9
+            count = 14
+
+            [ore.values.gen.biomes]
+                types = ["NETHER"]

@@ -32,6 +32,11 @@ gem_silktouch_affected = true
     overworld = 1
     nether = 1.5
     end = 2
+    mars = 1.5
+    mercury = 1.5
+    moon = 1.5
+    venus = 1.5
+    atum = 1.5
 
     # gems
     [ores.gem_fortune]
@@ -58,3 +63,8 @@ gem_silktouch_affected = true
     overworld = 1
     nether = 1.5
     end = 2
+    mars = 1.5
+    mercury = 1.5
+    moon = 1.5
+    venus = 1.5
+    atum = 1.5

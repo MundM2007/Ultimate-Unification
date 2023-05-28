@@ -1,5 +1,20 @@
 
 [desh]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[ice_shard]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[silicon]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true

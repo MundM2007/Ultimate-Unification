@@ -1,17 +1,27 @@
 
-[manasteel]
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
-[terrasteel]
+[dragonstone]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
 
 [elementium]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[manasteel]
+    active = true
+    overwrite_texture = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+
+[terrasteel]
+    active = true
     overwrite_texture = true
     add_tooltip = true
     add_element = true
