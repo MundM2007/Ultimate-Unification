@@ -41,6 +41,16 @@
     block = "minecraft:soul_soil"
     dim = ["nether"]
 
+[[strata]]
+    id = "blackstone"
+    block = "minecraft:blackstone"
+    dim = ["nether"]
+
+[[strata]]
+    id = "basalt"
+    block = "minecraft:basalt"
+    dim = ["nether"]
+
 # end
 [[strata]]
     id = "end_stone"

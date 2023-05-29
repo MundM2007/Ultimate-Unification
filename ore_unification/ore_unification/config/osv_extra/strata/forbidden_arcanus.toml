@@ -1,0 +1,5 @@
+# overworld
+[[strata]]
+    id = "darkstone"
+    block = "forbidden_arcanus:darkstone"
+    dim = ["overworld"]

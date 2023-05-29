@@ -103,6 +103,10 @@
 # ------ #
 
 [[strata]]
+    file = "strata/astralsorcery"
+    active = true
+
+[[strata]]
     file = "strata/aoa3"
     active = true
 
@@ -111,11 +115,27 @@
     active = true
 
 [[strata]]
+    file = "strata/betterendforge"
+    active = true
+
+[[strata]]
     file = "strata/boss_tools"
     active = true
 
 [[strata]]
+    file = "strata/byg"
+    active = true
+
+[[strata]]
+    file = "strata/chisel"
+    active = true
+
+[[strata]]
     file = "strata/divinerpg"
+    active = true
+
+[[strata]]
+    file = "strata/forbidden_arcanus"
     active = true
 
 [[strata]]
@@ -128,6 +148,10 @@
 
 [[strata]]
     file = "strata/mythicbotany"
+    active = true
+
+[[strata]]
+    file = "strata/quark"
     active = true
 
 

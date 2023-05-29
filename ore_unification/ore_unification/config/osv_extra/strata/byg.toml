@@ -1,0 +1,37 @@
+# overworld
+[[strata]]
+    id = "scoria_stone"
+    block = "byg:scoria_stone"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "soapstone"
+    block = "byg:soapstone"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "rocky_stone"
+    block = "byg:rocky_stone"
+    dim = ["overworld"]
+
+# nether
+[[strata]]
+    id = "byg/brimstone"
+    block = "byg:brimstone"
+    dim = ["nether"]
+
+[[strata]]
+    id = "blue_netherrack"
+    block = "byg:blue_netherrack"
+    dim = ["nether"]
+
+# end
+[[strata]]
+    id = "cryptic_stone"
+    block = "byg:cryptic_stone"
+    dim = ["end"]
+
+[[strata]]
+    id = "ether_stone"
+    block = "byg:ether_stone"
+    dim = ["end"]

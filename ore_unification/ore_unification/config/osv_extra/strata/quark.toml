@@ -1,0 +1,10 @@
+# overworld
+[[strata]]
+    id = "deepslate"
+    block = "quark:deepslate"
+    dim = ["overworld"]
+
+[[strata]]
+    id = "jasper"
+    block = "quark:jasper"
+    dim = ["overworld"]
