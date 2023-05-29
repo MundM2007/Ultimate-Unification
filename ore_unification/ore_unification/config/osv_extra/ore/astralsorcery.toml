@@ -29,7 +29,7 @@
             count = 5
 
             [ore.values.gen.biomes]
-                types = ["OCEANS", "RIVER"]
+                types = ["OCEAN", "RIVER"]
                 names = ["minecraft:beach"]
 
 [[ore]]

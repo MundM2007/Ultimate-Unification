@@ -1,5 +1,5 @@
 # alfheim
 [[strata]]
     id = "livingrock"
-    block = "mythicbotany:livingrock"
+    block = "botania:livingrock"
     dim = ["alfheim"]
