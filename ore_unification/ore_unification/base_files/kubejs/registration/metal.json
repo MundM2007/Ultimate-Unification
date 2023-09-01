@@ -1,0 +1,890 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "aluminum": {
+        "replace": [
+            ["crushed_ore", "create:item/crushed_ore_aluminum_ore", "create:crushed_ore_aluminum_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#d2e2f0",
+            "wire",
+            "coin",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "silents_mechanisms:aluminum_block",
+                "nuclearcraft:ingot_block_aluminum",
+                "immersiveengineering:storage_aluminum"
+            ],
+            "ingot": [
+                "silents_mechanisms:aluminum_ingot",
+                "nuclearcraft:ingot_aluminum",
+                "immersiveengineering:ingot_aluminum",
+                "chemlib:ingot_aluminum"
+            ],
+            "nugget": [
+                "silents_mechanisms:aluminum_nugget",
+                "immersiveengineering:nugget_aluminum"
+            ],
+            "dust": [
+                "immersiveengineering:dust_aluminum",
+                "pedestals:dustaluminum",
+                "silents_mechanisms:aluminum_dust",
+                "nuclearcraft:dust_aluminum",
+                "potionsmaster:aluminum_powder"
+            ],
+            "plate": [
+                "immersiveengineering:plate_aluminum"
+            ],
+            "rod": [
+                "immersiveengineering:stick_aluminum"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_aluminum"
+            ]
+        }
+    },
+    "bismuth": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "crushed_ore",
+            "slurry#d3b9d0",
+            "piece",
+            "wire",
+            "coin",
+            "molten#d3b9d0"
+        ],
+        "remove": {
+            "storage_block": [
+                "silents_mechanisms:bismuth_block"
+            ],
+            "ingot": [
+                "silents_mechanisms:bismuth_ingot",
+                "chemlib:ingot_bismuth"
+            ],
+            "nugget": [
+                "silents_mechanisms:bismuth_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:bismuth_dust",
+                "potionsmaster:bismuth_powder"
+            ]
+        }
+    },
+    "boron": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#83808f",
+            "piece",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_boron"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_boron",
+                "chemlib:ingot_boron"
+            ],
+            "dust": [
+                "nuclearcraft:dust_boron"
+            ]
+        }
+    },
+    "cobalt": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed_ore",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#1589b3",
+            "wire",
+            "coin",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "tconstruct:cobalt_block"
+            ],
+            "ingot": [
+                "tconstruct:cobalt_ingot",
+                "chemlib:ingot_cobalt"
+            ],
+            "nugget": [
+                "tconstruct:cobalt_nugget"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_cobalt"
+            ]
+        }
+    },
+    "iridium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed_ore",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#cef4f6",
+            "piece",
+            "wire",
+            "coin",
+            "molten#cef4f6"
+        ],
+        "remove": {
+            "ingot": [
+                "chemlib:ingot_iridium"
+            ]
+        }
+    },
+    "lead": {
+        "replace": [
+            ["crystal", "mekanism:item/crystal_lead", "mekanism:crystal_lead"],
+            ["shard", "mekanism:item/shard_lead", "mekanism:shard_lead"],
+            ["clump", "mekanism:item/clump_lead", "mekanism:clump_lead"],
+            ["dirty_dust", "mekanism:item/dirty_dust_lead", "mekanism:dirty_dust_lead"],
+            ["crushed_ore", "create:item/crushed_ore_lead_ore", "create:crushed_ore_lead_ore"],
+            ["coin", "thermal:item/lead_coin_0", "thermal:lead_coin"],
+            ["coin", "thermal:item/lead_coin_1", "thermal:lead_coin"],
+            ["coin", "thermal:item/lead_coin_2", "thermal:lead_coin"],
+            ["coin", "thermal:item/lead_coin_3", "thermal:lead_coin"],
+            ["coin", "thermal:item/lead_coin_4", "thermal:lead_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "wire",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "mekanism:block_lead",
+                "thermal:lead_block",
+                "eidolon:lead_block",
+                "silents_mechanisms:lead_block",
+                "nuclearcraft:ingot_block_lead",
+                "immersiveengineering:storage_lead"
+            ],
+            "ingot": [
+                "mekanism:ingot_lead",
+                "thermal:lead_ingot",
+                "eidolon:lead_ingot",
+                "silents_mechanisms:lead_ingot",
+                "nuclearcraft:ingot_lead",
+                "immersiveengineering:ingot_lead",
+                "chemlib:ingot_lead"
+            ],
+            "nugget": [
+                "mekanism:nugget_lead",
+                "thermal:lead_nugget",
+                "eidolon:lead_nugget",
+                "silents_mechanisms:lead_nugget",
+                "immersiveengineering:nugget_lead"
+            ],
+            "dust": [
+                "mekanism:dust_lead",
+                "thermal:lead_dust",
+                "silents_mechanisms:lead_dust",
+                "nuclearcraft:dust_lead",
+                "immersiveengineering:dust_lead",
+                "pedestals:dustlead",
+                "potionsmaster:lead_powder"
+            ],
+            "plate": [
+                "immersiveengineering:plate_lead",
+                "thermal:lead_plate"
+            ],
+            "gear": [
+                "thermal:lead_gear"
+            ],
+            "rod": [
+                "immersiveposts:stick_lead"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_lead"
+            ]
+        }
+    },
+    "lithium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#ececed",
+            "piece",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_lithium"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_lithium",
+                "chemlib:ingot_lithium"
+            ],
+            "dust": [
+                "nuclearcraft:dust_lithium"
+            ]
+        }
+    },
+    "magnesium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#e1bfd8",
+            "piece",
+            "wire",
+            "coin",
+            "molten#e1bfd8"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_magnesium"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_magnesium",
+                "chemlib:ingot_magnesium"
+            ],
+            "dust": [
+                "nuclearcraft:dust_magnesium"
+            ]
+        }
+    },
+    "nickel": {
+        "replace": [
+            ["crushed_ore", "create:item/crushed_ore_lead_ore", "create:crushed_ore_lead_ore"],
+            ["coin", "thermal:item/nickel_coin_0", "thermal:nickel_coin"],
+            ["coin", "thermal:item/nickel_coin_1", "thermal:nickel_coin"],
+            ["coin", "thermal:item/nickel_coin_2", "thermal:nickel_coin"],
+            ["coin", "thermal:item/nickel_coin_3", "thermal:nickel_coin"],
+            ["coin", "thermal:item/nickel_coin_4", "thermal:nickel_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#a0a883",
+            "wire",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "thermal:nickel_block",
+                "silents_mechanisms:nickel_block",
+                "immersiveengineering:storage_nickel"
+            ],
+            "ingot": [
+                "thermal:nickel_ingot",
+                "silents_mechanisms:nickel_ingot",
+                "immersiveengineering:ingot_nickel",
+                "chemlib:ingot_nickel"
+            ],
+            "nugget": [
+                "thermal:nickel_nugget",
+                "silents_mechanisms:nickel_nugget",
+                "immersiveengineering:nugget_nickel"
+            ],
+            "dust": [
+                "thermal:nickel_dust",
+                "silents_mechanisms:nickel_dust",
+                "immersiveengineering:dust_nickel",
+                "pedestals:dustnickel",
+                "potionsmaster:nickel_powder"
+            ],
+            "plate": [
+                "immersiveengineering:plate_nickel",
+                "thermal:nickel_plate"
+            ],
+            "gear": [
+                "thermal:nickel_gear"
+            ],
+            "rod": [
+                "immersiveposts:stick_nickel"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_nickel"
+            ]
+        }
+    },
+    "osmium": {
+        "replace": [
+            ["crystal", "mekanism:item/crystal_osmium", "mekanism:crystal_osmium"],
+            ["shard", "mekanism:item/shard_osmium", "mekanism:shard_osmium"],
+            ["clump", "mekanism:item/clump_osmium", "mekanism:clump_osmium"],
+            ["dirty_dust", "mekanism:item/dirty_dust_osmium", "mekanism:dirty_dust_osmium"],
+            ["crushed_ore", "create:item/crushed_ore_osmium_ore", "create:crushed_ore_osmium_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "wire",
+            "coin",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "mekanism:block_osmium"
+            ],
+            "ingot": [
+                "mekanism:ingot_osmium",
+                "chemlib:ingot_osmium"
+            ],
+            "nugget": [
+                "mekanism:nugget_osmium"
+            ],
+            "dust": [
+                "mekanism:dust_osmium",
+                "pedestals:dustosmium",
+                "potionsmaster:osmium_powder"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_osmium"
+            ]
+        }
+    },
+    "platinum": {
+        "replace": [
+            ["crushed_ore", "create:item/crushed_ore_platinum_ore", "create:crushed_ore_platinum_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#6b9999",
+            "piece",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "storage_block": [
+                "silents_mechanisms:platinum_block"
+            ],
+            "ingot": [
+                "silents_mechanisms:platinum_ingot",
+                "chemlib:ingot_platinum"
+            ],
+            "nugget": [
+                "silents_mechanisms:platinum_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:platinum_dust",
+                "potionsmaster:platinum_powder"
+            ]
+        }
+    },
+    "silver": {
+        "replace": [
+            ["crushed_ore", "create:item/crushed_ore_silver_ore", "create:crushed_ore_silver_ore"],
+            ["coin", "thermal:item/silver_coin_0", "thermal:silver_coin"],
+            ["coin", "thermal:item/silver_coin_1", "thermal:silver_coin"],
+            ["coin", "thermal:item/silver_coin_2", "thermal:silver_coin"],
+            ["coin", "thermal:item/silver_coin_3", "thermal:silver_coin"],
+            ["coin", "thermal:item/silver_coin_4", "thermal:silver_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#b7ddff",
+            "wire",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "immersiveengineering:storage_silver",
+                "projectred-exploration:silver_block",
+                "thermal:silver_block",
+                "silents_mechanisms:silver_block",
+                "nuclearcraft:ingot_block_silver",
+                "ocultism:silver_block"
+            ],
+            "ingot": [
+                "immersiveengineering:ingot_silver",
+                "projectred-core:silver_ingot",
+                "thermal:silver_ingot",
+                "silents_mechanisms:silver_ingot",
+                "nuclearcraft:ingot_silver",
+                "chemlib:ingot_silver",
+                "ocultism:silver_ingot"
+            ],
+            "nugget": [
+                "immersiveengineering:nugget_silver",
+                "thermal:silver_nugget",
+                "silents_mechanisms:silver_nugget",
+                "ocultism:silver_nugget"
+            ],
+            "dust": [
+                "immersiveengineering:dust_silver",
+                "pedestals:dustsilver",
+                "thermal:silver_dust",
+                "silents_mechanisms:silver_dust",
+                "nuclearcraft:idust_silver",
+                "ocultism:silver_dust",
+                "potionsmaster:silver_powder"
+            ],
+            "rod": [
+                "immersiveposts:stick_silver"
+            ],
+            "gear": [
+                "thermal:silver_gear"
+            ],
+            "plate": [
+                "immersiveengineering:plate_silver",
+                "thermal:silver_plate"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_silver"
+            ]
+        }
+    },
+    "thorium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#3d3d3d",
+            "piece",
+            "wire",
+            "coin",
+            "molten#3d3d3d"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_thorium"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_thorium",
+                "chemlib:ingot_thorium"
+            ],
+            "dust": [
+                "nuclearcraft:dust_thorium"
+            ]
+        }
+    },
+    "tin": {
+        "replace": [
+            ["crystal", "mekanism:item/crystal_tin", "mekanism:crystal_tin"],
+            ["shard", "mekanism:item/shard_tin", "mekanism:shard_tin"],
+            ["clump", "mekanism:item/clump_tin", "mekanism:clump_tin"],
+            ["dirty_dust", "mekanism:item/dirty_dust_tin", "mekanism:dirty_dust_tin"],
+            ["crushed_ore", "create:item/crushed_ore_tin_ore", "create:crushed_ore_tin_ore"],
+            ["coin", "thermal:item/tin_coin_0", "thermal:tin_coin"],
+            ["coin", "thermal:item/tin_coin_1", "thermal:tin_coin"],
+            ["coin", "thermal:item/tin_coin_2", "thermal:tin_coin"],
+            ["coin", "thermal:item/tin_coin_3", "thermal:tin_coin"],
+            ["coin", "thermal:item/tin_coin_4", "thermal:tin_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "wire",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "mekanism:block_tin",
+                "projectred-exploration:tin_block",
+                "thermal:tin_block",
+                "silents_mechanisms:tin_block",
+                "nuclearcraft:ingot_block_tin"
+            ],
+            "ingot": [
+                "mekanism:ingot_tin",
+                "projectred-core:tin_block",
+                "thermal:tin_block",
+                "silents_mechanisms:tin_block",
+                "nuclearcraft:ingot_block_tin",
+                "chemlib:ingot_tin"
+            ],
+            "nugget": [
+                "mekanism:nugget_tin",
+                "thermal:tin_nugget",
+                "silents_mechanisms:tin_nugget"
+            ],
+            "dust": [
+                "mekanism:dust_tin",
+                "thermal:tin_dust",
+                "silents_mechanisms:tin_dust",
+                "nuclearcraft:dust_tin",
+                "pedestals:dusttin",
+                "potionsmaster:tin_powder"
+            ],
+            "gear": [
+                "thermal:tin_gear"
+            ],
+            "plate": [
+                "thermal:tin_plate"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_tin"
+            ]
+        }
+    },
+    "titanium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#8fa9ab",
+            "piece",
+            "wire",
+            "coin",
+            "molten#8fa9ab"
+        ],
+        "remove": {
+            "ingot": [
+                "chemlib:ingot_titanium"
+            ]
+        }
+    },
+    "tungsten": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#7a95a9",
+            "piece",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "ingot": [
+                "chemlib:ingot_tungsten"
+            ]
+        }
+    },
+    "uranium": {
+        "replace": [
+            ["crystal", "mekanism:item/crystal_uranium", "mekanism:crystal_uranium"],
+            ["shard", "mekanism:item/shard_uranium", "mekanism:shard_uranium"],
+            ["clump", "mekanism:item/clump_uranium", "mekanism:clump_uranium"],
+            ["dirty_dust", "mekanism:item/dirty_dust_uranium", "mekanism:dirty_dust_uranium"],
+            ["crushed_ore", "create:item/crushed_ore_uranium_ore", "create:crushed_ore_uranium_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "wire",
+            "coin",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "immersiveengineering:storage_uranium",
+                "mekanism:block_uranium",
+                "silents_mechanisms:uranium_block",
+                "biggerreactors:yellorium_block",
+                "nuclearcraft:ingot_block_uranium"
+            ],
+            "ingot": [
+                "immersiveengineering:ingot_uranium",
+                "mekanism:ingot_uranium",
+                "silents_mechanisms:uranium_ingot",
+                "biggerreactors:yellorium_ingot",
+                "nuclearcraft:ingot_uranium",
+                "chemlib:ingot_uranium"
+            ],
+            "nugget": [
+                "immersiveengineering:nugget_uranium",
+                "mekanism:nugget_uranium",
+                "silents_mechanisms:uranium_nugget"
+            ],
+            "dust": [
+                "immersiveengineering:dust_uranium",
+                "mekanism:dust_uranium",
+                "silents_mechanisms:uranium_dust",
+                "biggerreactors:yellorium_dust",
+                "nuclearcraft:dust_uranium",
+                "pedestals:dusturanium",
+                "potionsmaster:uranium_powder"
+            ],
+            "rod":[
+                "immersiveposts:stick_uranium"
+            ],
+            "plate": [
+                "immersiveengineering:plate_uranium"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_uranium"
+            ]
+        }
+    },
+    "zinc": {
+        "replace": [
+            ["crushed_ore", "create:item/crushed_ore_zinc_ore", "create:crushed_ore_zinc_ore"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "fragment",
+            "gravel",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#babf8b",
+            "wire",
+            "coin",
+            "piece"
+        ],
+        "remove": {
+            "storage_block": [
+                "create:zinc_block",
+                "silents_mechanisms:zinc_block"
+            ],
+            "ingot": [
+                "create:zinc_ingot",
+                "silents_mechanisms:zinc_ingot",
+                "chemlib:ingot_zinc"
+            ],
+            "nugget": [
+                "create:zinc_nugget",
+                "silents_mechanisms:zinc_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:zinc_dust"
+            ],
+            "plate": [
+                "createaddition:zinc_sheet",
+                "createdeco:zinc_sheet"
+            ],
+            "piece": [
+                "exnihilosequentia:piece_zinc"
+            ]
+        }
+    }
+}

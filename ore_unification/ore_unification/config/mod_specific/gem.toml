@@ -5,8 +5,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [fluorite]
     active = true
@@ -14,8 +14,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [potassium_nitrate]
     active = true
@@ -23,8 +23,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [ruby]
     active = true
@@ -32,8 +32,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [sapphire]
     active = true
@@ -41,8 +41,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [sulfur]
     active = true
@@ -50,5 +50,5 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false

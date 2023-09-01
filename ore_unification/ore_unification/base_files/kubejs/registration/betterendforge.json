@@ -1,0 +1,100 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "aeternium": {
+        "replace": [
+            ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
+            ["ingot", "betterendforge:item/aeternium_ingot", "betterendforge:aeternium_ingot"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "nugget",
+            "wire",
+            "coin",
+            "molten#6c8681"
+        ],
+        "remove": {}
+    },
+    "amber": {
+        "replace": [
+            ["storage_block", "betterendforge:block/amber_block", "byg:amber_block"],
+            ["gem", "betterendforge:item/amber_gem", "byg:amber_gem"],
+            ["raw_material", "betterendforge:item/raw_amber", "byg:raw_amber"]
+        ],
+        "add": [
+            "raw_block",
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "wire",
+            "coin",
+            "molten#c98f0d"
+        ],
+        "remove": {}
+    },
+    "terminite": {
+        "replace": [
+            ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
+            ["ingot", "betterendforge:item/terminite_ingot", "betterendforge:terminite_ingot"],
+            ["nugget", "betterendforge:item/terminite_nugget", "betterendforge:terminite_nugget"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "wire",
+            "coin",
+            "molten#70f0e5"
+        ],
+        "remove": {}
+    },
+    "thallasium": {
+        "replace": [
+            ["storage_block", "betterendforge:block/thallasium_block", "betterendforge:thallasium_block"],
+            ["ingot", "betterendforge:item/thallasium_ingot", "betterendforge:thallasium_ingot"],
+            ["nugget", "betterendforge:item/thallasium_nugget", "betterendforge:thallasium_nugget"]
+        ],
+        "add": [
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "crushed_ore",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "dust",
+            "slurry#53aebd",
+            "piece",
+            "wire",
+            "coin",
+            "molten#53aebd"
+        ],
+        "remove": {}
+    }
+}

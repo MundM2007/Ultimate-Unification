@@ -10,6 +10,7 @@
     biggerreactors = true
     bloodmagic = true
     boss_tools = true # space boss tools
+    boss_tools_giselle_addon = true # space boss tools: giselle addon
     botania = true
     byg = true  # oh the biomes you'll go
     chemlib = true
@@ -20,8 +21,14 @@
     draconicevolution = true
     eidolon = true
     elementalcraft = true
+    elgineerstools = true
     envirocore = true # environmental core
     evilcraft = true
+    exnihiloae2 = true
+    exnihilomekanism = true
+    exnihilosequentia = true
+    exnihilothermal = true
+    exnihilotinkers = true
     forbidden_arcanus = true
     ftbic = true
     ftbjarmod = true
@@ -34,9 +41,11 @@
     morered = true
     mysticalagriculture = true
     nuclearcraft = true
+    occultism = true
     pamhc2foodcore = true # pam's harvest craft food core
     pedestals = true
     pneumaticcraft = true
+    potionsmaster = true
     powah = true
     projectred-core = true
     projectred-exploration = true

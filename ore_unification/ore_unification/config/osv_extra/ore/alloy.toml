@@ -1,11 +1,11 @@
 [[ore]]
-    id = "ender_dust"
+    id = "ender"
     dim = ["overworld", "nether", "end", "atum"]
-    displayName = "Ender Dust Ore"
+    displayName = "Ender Ore"
     active = true
 
     [ore.texture]
-        name = "alloy/ender_dust"
+        name = "alloy/ender"
 
     [ore.values]
         [ore.values.block]

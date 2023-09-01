@@ -1,0 +1,722 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "arcane_gold": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#cc8956"
+        ],
+        "remove": {
+            "storage_block": [
+                "eidolon:arcane_gold_block",
+                "forbidden_arcanus:arcane_gold_block"
+            ],
+            "ingot": [
+                "eidolon:arcane_gold_ingot",
+                "forbidden_arcanus:arcane_gold_ingot"
+            ],
+            "nugget": [
+                "eidolon:arcane_gold_nugget",
+                "forbidden_arcanus:arcane_gold_nugget"
+            ]
+        }
+    },
+    "beryllium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_beryllium"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_beryllium",
+                "chemlib:ingot_beryllium"
+            ],
+            "dust": [
+                "nuclearcraft:dust_beryllium"
+            ]
+        }
+    },
+    "brass": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin"
+        ],
+        "remove": {
+            "storage_block": [
+                "create:brass_block",
+                "silents_mechanisms:brass_block"
+            ],
+            "ingot": [
+                "create:brass_ingot",
+                "silents_mechanisms:brass_ingot"
+            ],
+            "nugget": [
+                "create:brass_nugget",
+                "silents_mechanisms:brass_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:brass_dust"
+            ],
+            "plate": [
+                "create:brass_sheet"
+            ],
+            "rod": [
+                "createaddition:brass_rod"
+            ]
+        }
+    },
+    "bronze": {
+        "replace": [
+            ["coin", "thermal:item/bronze_coin_0", "thermal:bronze_coin"],
+            ["coin", "thermal:item/bronze_coin_1", "thermal:bronze_coin"],
+            ["coin", "thermal:item/bronze_coin_2", "thermal:bronze_coin"],
+            ["coin", "thermal:item/bronze_coin_3", "thermal:bronze_coin"],
+            ["coin", "thermal:item/bronze_coin_4", "thermal:bronze_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "mekanism:block_bronze",
+                "thermal:bronze_block",
+                "silents_mechanisms:bronze_block"
+            ],
+            "ingot": [
+                "mekanism:ingot_bronze",
+                "thermal:bronze_ingot",
+                "silents_mechanisms:bronze_ingot",
+                "nuclearcraft:alloy_bronze"
+            ],
+            "nugget": [
+                "mekanism:nugget_bronze",
+                "thermal:bronze_nugget",
+                "silents_mechanisms:bronze_nugget"
+            ],
+            "dust": [
+                "mekanism:dust_bronze",
+                "thermal:bronze_dust",
+                "silents_mechanisms:bronze_dust"
+            ],
+            "plate": [
+                "steampowered:bronze_sheet",
+                "thermal:bronze_plate"
+            ],
+            "gear": [
+                "thermal:bronze_gear"
+            ]
+        }
+    },
+    "cast_iron": {
+        "replace": [],
+        "add": [
+            "ingot",
+            "nugget",
+            "storage_block",
+            "gear",
+            "rod",
+            "plate",
+            "dust",
+            "wire",
+            "coin",
+            "molten#606980"
+        ],
+        "remove": {
+            "ingot": [
+                "steampowered:cast_iron_ingot",
+                "ftbjarmod:cast_iron_ingot"
+            ],
+            "nugget": [
+                "ftbjarmod:cast_iron_nugget"
+            ],
+            "storage_block": [
+                "ftbjarmod:cast_iron_block"
+            ],
+            "plate": [
+                "steampowered:cast_iron_sheet"
+            ],
+            "gear": [
+                "ftbjarmod:cast_iron_gear"
+            ]
+        }
+    },
+    "charcoal": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "mekanism:dust_charcoal",
+                "envirocore:charcoal_powder",
+                "potionsmaster:charcoal_powder"
+            ]
+        }
+    },
+    "coal_coke": {
+        "replace": [],
+        "add": [
+            "gem",
+            "dust",
+            "storage_block",
+            "molten#2e4049"
+        ],
+        "remove": {
+            "gem": [
+                "immersiveengineering:coal_coke",
+                "thermal:coal_coke"
+            ],
+            "dust": [
+                "immersiveengineering:dust_coke"
+            ],
+            "storage_block": [
+                "immersiveengineering:coke",
+                "thermal:coal_coke_block"
+            ]
+        }
+    },
+    "constantan": {
+        "replace": [
+            ["coin", "thermal:item/constantan_coin_0", "thermal:constantan_coin"],
+            ["coin", "thermal:item/constantan_coin_1", "thermal:constantan_coin"],
+            ["coin", "thermal:item/constantan_coin_2", "thermal:constantan_coin"],
+            ["coin", "thermal:item/constantan_coin_3", "thermal:constantan_coin"],
+            ["coin", "thermal:item/constantan_coin_4", "thermal:constantan_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "immersiveengineering:storage_constantan",
+                "thermal:constantan_block"
+            ],
+            "ingot": [
+                "immersiveengineering:ingot_constantan",
+                "thermal:constantan_ingot"
+            ],
+            "nugget": [
+                "immersiveengineering:nugget_constantan",
+                "thermal:constantan_nugget"
+            ],
+            "dust": [
+                "immersiveengineering:dust_constantan",
+                "thermal:constantan_dust"
+            ],
+            "plate": [
+                "immersiveengineering:plate_constantan",
+                "thermal:constantan_plate"
+            ],
+            "rod": [
+                "immersiveposts:stick_constantan"
+            ],
+            "gear": [
+                "thermal:constantan_gear"
+            ]
+        }
+    },
+    "electrum": {
+        "replace": [
+            ["coin", "thermal:item/electrum_coin_0", "thermal:electrum_coin"],
+            ["coin", "thermal:item/electrum_coin_1", "thermal:electrum_coin"],
+            ["coin", "thermal:item/electrum_coin_2", "thermal:electrum_coin"],
+            ["coin", "thermal:item/electrum_coin_3", "thermal:electrum_coin"],
+            ["coin", "thermal:item/electrum_coin_4", "thermal:electrum_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "immersiveengineering:storage_electrum",
+                "thermal:electrum_block",
+                "silents_mechanisms:electrum_block"
+            ],
+            "ingot": [
+                "immersiveengineering:ingot_electrum",
+                "thermal:electrum_ingot",
+                "silents_mechanisms:electrum_ingot"
+            ],
+            "nugget": [
+                "immersiveengineering:nugget_electrum",
+                "thermal:electrum_nugget",
+                "silents_mechanisms:electrum_nugget"
+            ],
+            "dust": [
+                "immersiveengineering:dust_electrum",
+                "thermal:electrum_dust",
+                "silents_mechanisms:electrum_dust"
+            ],
+            "plate": [
+                "immersiveengineering:plate_electrum",
+                "thermal:electrum_plate"
+            ],
+            "rod": [
+                "immersiveposts:stick_electrum"
+            ],
+            "gear": [
+                "thermal:electrum_gear"
+            ]
+        }
+    },
+    "ender": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "appliedenergistics2:ender_dust",
+                "miniutilities:ender_dust",
+                "thermal:ender_pearl_dust",
+                "betterendforge:ender_dust",
+                "potionsmaster:ender_powder"
+            ]
+        }
+    },
+    "enderium": {
+        "replace": [
+            ["coin", "thermal:item/enderium_coin_0", "thermal:enderium_coin"],
+            ["coin", "thermal:item/enderium_coin_1", "thermal:enderium_coin"],
+            ["coin", "thermal:item/enderium_coin_2", "thermal:enderium_coin"],
+            ["coin", "thermal:item/enderium_coin_3", "thermal:enderium_coin"],
+            ["coin", "thermal:item/enderium_coin_4", "thermal:enderium_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "thermal:enderium_block",
+                "silents_mechanisms:enderium_block"
+            ],
+            "ingot": [
+                "thermal:enderium_ingot",
+                "silents_mechanisms:enderium_ingot"
+            ],
+            "nugget": [
+                "thermal:enderium_nugget",
+                "silents_mechanisms:enderium_nugget"
+            ],
+            "dust": [
+                "thermal:enderium_dust",
+                "silents_mechanisms:enderium_dust"
+            ],
+            "plate": [
+                "thermal:enderium_plate"
+            ],
+            "gear": [
+                "thermal:enderium_gear"
+            ]
+        }
+    },
+    "flour": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "appliedenergistics2:flour",
+                "atum:emmer_flour",
+                "create:wheat_flour",
+                "pneumaticcraft:wheat_flour",
+                "pamhc2foodcore:flouritem",
+                "pedestals:dustflour",
+                "nuclearcraft:flour"
+            ]
+        }
+    },
+    "graphite": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#1e252a"
+        ],
+        "remove": {
+            "storage_block": [
+                "biggerreactors:graphite_block",
+                "nuclearcraft:ingot_block_graphite"
+            ],
+            "ingot": [
+                "biggerreactors:graphite_ingot",
+                "nuclearcraft:ingot_graphite"
+            ],
+            "dust": [
+                "biggerreactors:graphite_dust",
+                "nuclearcraft:dust_graphite"
+            ]
+        }
+    },
+    "invar": {
+        "replace": [
+            ["coin", "thermal:item/invar_coin_0", "thermal:invar_coin"],
+            ["coin", "thermal:item/invar_coin_1", "thermal:invar_coin"],
+            ["coin", "thermal:item/invar_coin_2", "thermal:invar_coin"],
+            ["coin", "thermal:item/invar_coin_3", "thermal:invar_coin"],
+            ["coin", "thermal:item/invar_coin_4", "thermal:invar_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "thermal:invar_block",
+                "silents_mechanisms:invar_block"
+            ],
+            "ingot": [
+                "thermal:invar_ingot",
+                "silents_mechanisms:invar_ingot"
+            ],
+            "nugget": [
+                "thermal:invar_nugget",
+                "silents_mechanisms:invar_nugget"
+            ],
+            "dust": [
+                "thermal:invar_dust",
+                "silents_mechanisms:invar_dust"
+            ],
+            "plate": [
+                "thermal:invar_plate"
+            ],
+            "gear": [
+                "thermal:invar_gear"
+            ]
+        }
+    },
+    "lumium": {
+        "replace": [
+            ["coin", "thermal:item/lumium_coin_0", "thermal:lumium_coin"],
+            ["coin", "thermal:item/lumium_coin_1", "thermal:lumium_coin"],
+            ["coin", "thermal:item/lumium_coin_2", "thermal:lumium_coin"],
+            ["coin", "thermal:item/lumium_coin_3", "thermal:lumium_coin"],
+            ["coin", "thermal:item/lumium_coin_4", "thermal:lumium_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "thermal:lumium_block",
+                "silents_mechanisms:lumium_block"
+            ],
+            "ingot": [
+                "thermal:lumium_ingot",
+                "silents_mechanisms:lumium_ingot"
+            ],
+            "nugget": [
+                "thermal:lumium_nugget",
+                "silents_mechanisms:lumium_nugget"
+            ],
+            "dust": [
+                "thermal:lumium_dust",
+                "silents_mechanisms:lumium_dust"
+            ],
+            "plate": [
+                "thermal:lumium_plate"
+            ],
+            "gear": [
+                "thermal:lumium_gear"
+            ]
+        }
+    },
+    "obsidian": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "create:powdered_obsidian",
+                "mekanism:dust_obsidian",
+                "nuclearcraft:gem_dust_obsidian",
+                "occultism:obsidian_dust"
+            ]
+        }
+    },
+    "red_alloy": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#a11b11"
+        ],
+        "remove": {
+            "storage_block": [
+                "silents_mechanisms:redstone_alloy_block"
+            ],
+            "ingot": [
+                "projectred-core:red_ingot",
+                "morered:red_alloy_ingot",
+                "silents_mechanisms:redstone_alloy_ingot"
+            ],
+            "nugget": [
+                "silents_mechanisms:redstone_alloy_nugget"
+            ],
+            "dust": [
+                "silents_mechanisms:redstone_alloy_dust"
+            ]
+        }
+    },
+    "salt": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "pamhc2foodcore:saltitem",
+                "alchemistry:mineral_salt"
+            ]
+        }
+    },
+    "signalum": {
+        "replace": [
+            ["coin", "thermal:item/signalum_coin_0", "thermal:signalum_coin"],
+            ["coin", "thermal:item/signalum_coin_1", "thermal:signalum_coin"],
+            ["coin", "thermal:item/signalum_coin_2", "thermal:signalum_coin"],
+            ["coin", "thermal:item/signalum_coin_3", "thermal:signalum_coin"],
+            ["coin", "thermal:item/signalum_coin_4", "thermal:signalum_coin"]
+        ],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "thermal:signalum_block",
+                "silents_mechanisms:signalum_block"
+            ],
+            "ingot": [
+                "thermal:signalum_ingot",
+                "silents_mechanisms:signalum_ingot"
+            ],
+            "nugget": [
+                "thermal:signalum_nugget",
+                "silents_mechanisms:signalum_nugget"
+            ],
+            "dust": [
+                "thermal:signalum_dust",
+                "silents_mechanisms:signalum_dust"
+            ],
+            "plate": [
+                "thermal:signalum_plate"
+            ],
+            "gear": [
+                "thermal:signalum_gear"
+            ]
+        }
+    },
+    "silicon": {
+        "replace": [],
+        "add": [
+            "gem"
+        ],
+        "remove": {
+            "gem": [
+                "appliedenergistics2:silicon",
+                "tinyredstone:silicon",
+                "refinedstorage:silicon",
+                "nuclearcraft:gem_silicon",
+                "chemlib:ingot_silicon",
+                "envirocore:silicon_powder"
+            ]
+        }
+    },
+    "steel": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "coin",
+            "wire"
+        ],
+        "remove": {
+            "storage_block": [
+                "immersiveengineering:storage_steel",
+                "mekanism:block_steel",
+                "silents_mechanisms:steel_block",
+                "boss_tools:steel_block"
+            ],
+            "ingot": [
+                "steampowered:steel_ingot",
+                "immersiveengineering:ingot_steel",
+                "mekanism:ingot_steel",
+                "silents_mechanisms:steel_ingot",
+                "nuclearcraft:alloy_steel",
+                "boss_tools:steel_ingot"
+            ],
+            "nugget": [
+                "immersiveengineering:nugget_steel",
+                "mekanism:nugget_steel",
+                "silents_mechanisms:steel_nugget",
+                "boss_tools:steel_nugget"
+            ],
+            "dust": [
+                "mekanism:dust_bronze",
+                "thermal:bronze_dust",
+                "silents_mechanisms:bronze_dust"
+            ],
+            "plate": [
+                "immersiveengineering:dust_steel",
+                "mekanism:dust_steel",
+                "silents_mechanisms:steel_dust"
+            ],
+            "rod": [
+                "immersiveengineering:stick_steel"
+            ]
+        }
+    },
+    "wood": {
+        "replace": [],
+        "add": [
+            "dust"
+        ],
+        "remove": {
+            "dust": [
+                "immersiveengineering:dust_wood",
+                "mekanism:sawdust",
+                "thermal:sawdust"
+            ]
+        }
+    },
+    "zirconium": {
+        "replace": [],
+        "add": [
+            "storage_block",
+            "ingot",
+            "dust",
+            "nugget",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#d3d1a8"
+        ],
+        "remove": {
+            "storage_block": [
+                "nuclearcraft:ingot_block_zirconium"
+            ],
+            "ingot": [
+                "nuclearcraft:ingot_zirconium",
+                "chemlib:ingot_zirconium"
+            ],
+            "dust": [
+                "nuclearcraft:dust_zirconium"
+            ]
+        }
+    }
+}

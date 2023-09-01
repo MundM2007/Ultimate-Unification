@@ -1,9 +1,4 @@
 
-[charcoal]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-
 [lithium]
     active = true
     overwrite_texture = true

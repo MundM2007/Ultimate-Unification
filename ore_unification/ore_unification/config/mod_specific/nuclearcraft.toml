@@ -4,20 +4,6 @@
     overwrite_texture = true
     add_tooltip = true
 
-[beryllium]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
-[boron]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
 [boron_arsenide]
     active = true
     overwrite_texture = true
@@ -74,21 +60,7 @@
     add_element = true
     add_tag = true
 
-[lithium]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
 [lithium_manganese_dioxide_alloy]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
-[magnesium]
     active = true
     overwrite_texture = true
     add_tooltip = true
@@ -158,13 +130,6 @@
     add_element = true
     add_tag = true
 
-[thorium]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
 [thorium_oxide]
     active = true
     overwrite_texture = true
@@ -201,13 +166,6 @@
     add_tag = true
 
 [zircaloy_alloy]
-    active = true
-    overwrite_texture = true
-    add_tooltip = true
-    add_element = true
-    add_tag = true
-
-[zirconium]
     active = true
     overwrite_texture = true
     add_tooltip = true

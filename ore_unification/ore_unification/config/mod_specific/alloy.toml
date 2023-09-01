@@ -5,8 +5,17 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
+
+[beryllium]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    replace_output = false
+    replace_input = false
 
 [brass]
     active = true
@@ -14,17 +23,18 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [bronze]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [cast_iron]
     active = true
@@ -32,8 +42,17 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
+
+[charcoal]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    replace_output = false
+    replace_input = false
 
 [coal_coke]
     active = true
@@ -41,44 +60,47 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [constantan]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [electrum]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
-[ender_pearl]
+[ender]
     active = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [enderium]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [flour]
     active = true
@@ -86,8 +108,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [graphite]
     active = true
@@ -95,26 +117,28 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [invar]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [lumium]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [obsidian]
     active = true
@@ -122,8 +146,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [red_alloy]
     active = true
@@ -131,8 +155,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [salt]
     active = true
@@ -140,17 +164,18 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [signalum]
     active = true
+    overwrite_texture = true
     add_tooltip = true
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [silicon]
     active = true
@@ -158,8 +183,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [steel]
     active = true
@@ -167,8 +192,8 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
 
 [wood]
     active = true
@@ -176,5 +201,14 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false
+
+[zirconium]
+    active = true
+    add_tooltip = true
+    add_element = true
+    add_tag = true
+    hide_jei = false
+    replace_output = false
+    replace_input = false

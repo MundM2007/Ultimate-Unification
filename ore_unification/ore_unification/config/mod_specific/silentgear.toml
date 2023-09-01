@@ -26,6 +26,9 @@
     add_tooltip = true
     add_element = true
     add_tag = true
+    hide_jei = false
+    replace_output = false
+    replace_input = false
 
 [crimson_steel]
     active = true

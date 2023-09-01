@@ -5,5 +5,5 @@
     add_element = true
     add_tag = true
     hide_jei = false
-    remove_recipe = false
     replace_output = false
+    replace_input = false

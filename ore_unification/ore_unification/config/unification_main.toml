@@ -7,59 +7,16 @@ metal_silktouch_affected = true
 gem_ore_drop = "gem"
 gem_silktouch_affected = true
 
-    # metals
-    [ores.metal_fortune]
+# metals
+[ores.metal_fortune]
     affected = true
 
-        [ores.metal_fortune.level_1]
-        possible_drops = [2]
-        chance_for_each = 0.333
-
-        [ores.metal_fortune.level_2]
-        possible_drops = [2, 3]
-        chance_for_each = 0.25
-
-        [ores.metal_fortune.level_3]
-        possible_drops = [2, 3, 4]
-        chance_for_each = 0.2
-
-        # extra mod
-        [ores.metal_fortune.level_4]
-        possible_drops = [2, 3, 4, 5]
-        chance_for_each = 0.1667
-
-    [ores.metal_multiplyer]
-    overworld = 1
-    nether = 1.5
-    end = 2
-    mars = 1.5
-    mercury = 1.5
-    moon = 1.5
-    venus = 1.5
-    atum = 1.5
-
-    # gems
-    [ores.gem_fortune]
+# gems
+[ores.gem_fortune]
     affected = true
 
-        [ores.gem_fortune.level_1]
-        possible_drops = [2]
-        chance_for_each = 0.333
-
-        [ores.gem_fortune.level_2]
-        possible_drops = [2, 3]
-        chance_for_each = 0.25
-
-        [ores.gem_fortune.level_3]
-        possible_drops = [2, 3, 4]
-        chance_for_each = 0.2
-
-        # extra mod
-        [ores.gem_fortune.level_4]
-        possible_drops = [2, 3, 4, 5]
-        chance_for_each = 0.1667
-
-    [ores.gem_multiplyer]
+# if not existent will use value of overworld
+[ores.dim_multiplyer]
     overworld = 1
     nether = 1.5
     end = 2

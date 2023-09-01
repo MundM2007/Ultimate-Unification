@@ -1,3 +1,7 @@
+# ----- #
+#  Ore  #
+# ----- #
+
 [[ore]]
     file = "ore/alloy"
     active = true

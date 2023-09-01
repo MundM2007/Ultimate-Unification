@@ -29,7 +29,7 @@
 
 [[ore]]
     id = "crimson_iron"
-    dim = ["end"]
+    dim = ["nether"]
     displayName = "Crimson Iron Ore"
     active = true
 

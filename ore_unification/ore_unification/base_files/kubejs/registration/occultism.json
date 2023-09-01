@@ -1,0 +1,48 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "iesnium": {
+        "replace": [
+            ["nugget", "pneumaticcraft:item/ingot_iron_compressed", "pneumaticcraft:ingot_iron_compressed"],
+            ["ingot", "pneumaticcraft:item/ingot_iron_compressed", "pneumaticcraft:ingot_iron_compressed"],
+            ["storage_block", "pneumaticcraft:block/compressed_iron_block", "pneumaticcraft:compressed_iron_block"],
+            ["dust", "pneumaticcraft:item/compressed_iron_gear", "pneumaticcraft:compressed_iron_gear"]
+        ],
+        "add": [
+            "gear",
+            "plate",
+            "rod",
+            "wire",
+            "raw_material",
+            "raw_block",
+            "shard",
+            "clump",
+            "crystal",
+            "dirty_dust",
+            "slurry#3d8a9b",
+            "fragment",
+            "gravel",
+            "crushed_ore",
+            "piece",
+            "coin",
+            "molten#3d8a9b"
+        ],
+        "remove": {}
+    }
+}

@@ -13,9 +13,8 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2023 By:                                     
-#         - MundM2007 (https://github.com/MundM2007)                              
-# Licensed under GNU GPL v3: https://www.gnu.org/licenses/                        
+# Ultimate Unification Copyright (C) 2023 under MIT License by:                   
+#         - MundM2007 (https://github.com/MundM2007)
 
 import ast
 import time
@@ -38,14 +37,14 @@ path_ = __file__.removesuffix("main.py").replace("/", "\\")
 # clears / generates logging file
 if not os.path.isdir(f"{path_}logs"):
     os.makedirs(f"{path_}logs")
-with open(f"{path_}logs\\latest_log.txt", mode="w") as file_log:
+with open(f"{path_}logs\\latest.log", mode="w") as file_log:
     file_log.close()
 
 # generates constant logging file
 index_logging = 0
 while True:
-    if not os.path.isfile(f"{path_}logs\\log-{time.strftime('%Y-%m-%d', time.gmtime(start_time))}-{index_logging}.txt"):
-        file_log_constant_name = f"log-{time.strftime('%Y-%m-%d', time.gmtime(start_time))}-{index_logging}.txt"
+    file_log_constant_name = f"log-{time.strftime('%Y-%m-%d', time.gmtime(start_time))}-{index_logging}.log"
+    if not os.path.isfile(f"{path_}logs\\{file_log_constant_name}"):
         with open(f"{path_}logs\\{file_log_constant_name}", mode="w") as file_log_constant:
             break
     index_logging += 1
@@ -75,7 +74,9 @@ def clear_path(path_f):
 
 # generates folders
 def gen_folders():
-    for path_create in [f"{path_to_osv_ores}custom", f"{path_to_osv_assets}textures\\block\\custom"]:
+    for path_create in [f"{path_to_osv_ores}custom", f"{path_to_osv_assets}blockstates",
+                        f"{path_to_osv_assets}textures\\block\\custom", f"{path_to_osv_assets}models\\item",
+                        f"{path_to_osv_assets}models\\block\\custom"]:
         if not os.path.isdir(path_create):
             os.makedirs(path_create)
         else:
@@ -133,15 +134,15 @@ def logging(type_logging, message, error_name=""):
             err_name = error_name.__class__.__name__
 
         # write to log file
-        with open(f"{path_}logs\\latest_log.txt", mode="a") as file_log:
-            with open(f"{path_}logs\\{file_log_constant_name}", mode="w") as file_log_constant:
+        with open(f"{path_}logs\\latest.log", mode="a") as file_log:
+            with open(f"{path_}logs\\{file_log_constant_name}", mode="a") as file_log_constant:
                 if err_name == "None" or exception == "None":
-                    file_log.write(f"[Seconds Elapsed: {str(seconds):>09}] [{type_logging.replace('_', ' ').title():^18}]: {message}\n")
-                    file_log_constant.write(f"[Seconds Elapsed: {str(seconds):>09}] [{type_logging.replace('_', ' ').title():^18}]: {message}\n")
+                    file_log.write(f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n")
+                    file_log_constant.write(f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n")
                 else:
-                    file_log.write((f"[Seconds Elapsed: {str(seconds):>09}] [{type_logging.replace('_',' ').title():^18}]: "
+                    file_log.write((f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_',' ').title():^20}]: "
                                     f"{message}, Error Name: {err_name}, Exception:{exception}\n"))
-                    file_log_constant.write((f"[Seconds Elapsed: {str(seconds):>09}] [{type_logging.replace('_', ' ').title():^18}]: "
+                    file_log_constant.write((f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_', ' ').title():^20}]: "
                                              f"{message}, Error Name: {err_name}, Exception:{exception}\n"))
 
         if type_logging in problematic_error_types:
@@ -436,10 +437,10 @@ with open(f"{path_}/base_files/osv/osv-common_base_default.toml", "rb") as file_
 logging("info", 'Base files read successfully')
 
 total_ores = 0
+all_ores = []
 total_unique_ores = 0
 values_for_osvcommon = ""
 for ore in ores:
-    total_ores += 1
     # changes the formatters section if it is enabled
     # if add_formatters and (ore[3].get("item") is None or ore[3]["item"].get("formatters") is None):
     #    ore[3]["item"]["formatters"] = {"": [{"text": "%s ({bg})" % (ore[6])}]}
@@ -516,13 +517,27 @@ for ore in ores:
         active_stratas.extend(all_stratas)
 
     stratas_added = []
+    all_ores_strata = []
     for dim in ore[1]:
         for strata in stratas_sorted[dim]:
             if strata[0] in active_stratas and strata[0] not in stratas_added:
                 # needed later for osvcommon gen
                 values_for_osvcommon += f"        custom_{ore[0]}_ore {strata[1]}\n"
+                
+                # needed later for ore drops. minecraft is removed, cause it isn't generated by the mod osv
+                if strata[1][:strata[1].find(':')] == "minecraft":
+                    all_ores_strata.append([strata[1], f"custom_{ore[0]}_ore_{strata[1][strata[1].find(':') + 1:]}"])
+                else:
+                    all_ores_strata.append([strata[1], f"custom_{ore[0]}_ore_{strata[1].replace(':', '_', 1)}"])
+                    
                 stratas_added.append(strata[0])
                 total_unique_ores += 1
+    
+    # [[ore_id, [[strata, name_block], ...]], ...]
+    all_ores.append([ore[0], all_ores_strata])
+    
+    if stratas_added != []:
+        total_ores += 1
 
 logging("info", 'HJSON and Texture files created successfully')
 
@@ -554,6 +569,7 @@ clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_u
 clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_output")
 clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_recipes")
 clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags")
+clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification")
 
 # used for counting
 material_added = 0
@@ -604,7 +620,7 @@ def check_mod(mod):
 
 def config_mat_set_default():
     result = {}
-    for index, check_config in enumerate(["active", "overwrite_texture", "add_tooltip", "add_element", "add_tag", "hide_jei", "remove_recipe", "replace_output"]):
+    for index, check_config in enumerate(["active", "overwrite_texture", "add_tooltip", "add_element", "add_tag", "hide_jei", "replace_output", "replace_input", "remove_tag"]):
         if index in [0, 1, 2, 3, 4]:
             result[check_config] = True
         else:
@@ -620,18 +636,21 @@ def gen_config(id_file, id_name, base_file):
     if base_file.get(id_name) is not None and base_file[id_name].get("add") is not None and base_file[id_name]["add"] != []: 
         config_options_needed.extend([2, 3, 4])
     if base_file.get(id_name) is not None and base_file[id_name].get("remove") is not None and base_file[id_name]["remove"] != {}: 
-        config_options_needed.extend([5, 6, 7])
+        config_options_needed.extend([5, 6, 7, 8])
 
     config_add = f"\n[{id_name}]\n"
 
-    config_options = ["    active = true\n",
-                      "    overwrite_texture = true\n",
-                      "    add_tooltip = true\n",
-                      "    add_element = true\n",
-                      "    add_tag = true\n",
-                      "    hide_jei = false\n",
-                      "    remove_recipe = false\n",
-                      "    replace_output = false\n",]
+    config_options = [
+        "    active = true\n",
+        "    overwrite_texture = true\n",
+        "    add_tooltip = true\n",
+        "    add_element = true\n",
+        "    add_tag = true\n",
+        "    hide_jei = false\n",
+        "    replace_output = false\n",
+        "    replace_input = false\n",
+        "    remove_tag = false\n"
+    ]
 
     for i in range(8):
         if i in config_options_needed:
@@ -640,25 +659,75 @@ def gen_config(id_file, id_name, base_file):
     return [f"{path_}config\\mod_specific\\{id_file}.toml", id_file + ".toml", config_add, 0, "", ""]
 
 
+path_general_config = f"{path_}\\base_files\\kubejs\\registration\\general.json"
+if os.path.isfile(path_general_config):
+    with open(path_general_config) as f:
+        try:
+            config_general_file = json.load(f)
+        except json.decoder.JSONDecodeError as ex:
+            logging("file_error", "The Base File kubejs\\registration\\general.json couldn't be read, check for any syntax errors / redownload the file", ex)
+else:
+    logging("file_missing", "The Base File kubejs\\registration\\general.json couldn't be found, redownload the file")
+
+def get_display_name(type_material, display_name):
+    if config_general_file.get("names") is not None and config_general_file["names"].get(type_material) is not None:
+        return str(config_general_file["names"][type_material] % (display_name,))
+    else:
+        logging("type_missing", f"The {type_material} material type is missing in general.json, please add it, to format Display Names correctly")
+        return display_name
+
+
+def read_info():
+    array_write_to_files = []
+    
+    if os.path.isfile(f"{path_}base_files\\kubejs\\registration\\gen_scripts_info.json"):
+        with open(f"{path_}base_files\\kubejs\\registration\\gen_scripts_info.json") as f:
+            try:
+                info = json.load(f)
+            except json.decoder.JSONDecodeError as ex:
+                logging("file_error", f"The Base File kubejs\\registration\\gen_scripts_info.json couldn't be read, check for any syntax errors / redownload the file", ex)
+    else:
+        logging("file_missing", f"missing base file: {path_}base_files\\kubejs\\registration\\gen_scripts_info.json")
+    
+    if info.get("main") is not None:
+        for element in info["main"]:
+            array_write_to_files.extend(gen_scripts(element[0], element[1], element[2]))
+
+    for ore in all_ores: 
+        #array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\ores_items.js", "ores_items.js", 
+        #                             f"    event.removeAll('forge:ores/{ore[0]}')\n", 50, "onEvent('item.tags', event => {\n    event.removeAll('forge:ores')\n", "})"])
+        #array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\ores_blocks.js", "ores_blocks.js", 
+        #                             f"    event.removeAll('forge:ores/{ore[0]}')\n", 50, "onEvent('block.tags', event => {\n    event.removeAll('forge:ores')\n", "})"])
+        for ore_strata in ore[1]:
+            item_name = f'osv:{ore_strata[1]}'[:-6] if ore_strata[1].endswith("ore_stone") else f'osv:{ore_strata[1]}'
+            array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\items\\ores.js", "ores.js", 
+                                         f"    event.add('forge:ores/{ore[0]}', '{item_name}')\n    event.add('forge:ores', '{item_name}')\n", 40, "onEvent('item.tags', event => {\n", "})"])
+            array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\blocks\\ores.js", "ores.js", 
+                                         f"    event.add('forge:ores/{ore[0]}', '{item_name}')\n    event.add('forge:ores', '{item_name}')\n", 40, "onEvent('block.tags', event => {\n", "})"])
+
+    write_to_files(array_write_to_files)
+
+
 def gen_scripts(id_file, id_name, display_name):
     array_write_to_files = []
-    anything_changed = 0
 
     # opens needed files
-    if os.path.isfile(f"{path_}base_files\\kubejs\\{id_file}.json"):
-        with open(f"{path_}base_files\\kubejs\\{id_file}.json", encoding="utf-8") as f:
+    if os.path.isfile(f"{path_}base_files\\kubejs\\registration\\{id_file}.json"):
+        with open(f"{path_}base_files\\kubejs\\registration\\{id_file}.json", encoding="utf-8") as f:
             try:
-                base_file = json.load(f)
+                base_file_registry = json.load(f)
             except json.decoder.JSONDecodeError as ex:
-                logging("file_error", f"The Base File kubejs\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                logging("base_file_error", f"The Base File kubejs\\registration\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                return []
     else:
-        logging("file_missing", f"missing base file: {path_}base_files\\kubejs\\{id_file}.json")
-
-    if base_file.get(id_name) is None:
-        logging("material_missing", f"The following material id is not defined in the following file: {id_name}, {id_file}")
+        logging("base_file_missing", f"missing base file: {path_}base_files\\kubejs\\registration\\{id_file}.json")
         return []
 
-    license_notice = base_file.get("license_notice")
+    if base_file_registry.get(id_name) is None:
+        logging("material_missing", f"The following material id is not defined in the following file: {id_name}, kubejs\\registration\\{id_file}.json")
+        return []
+
+    license_notice = base_file_registry.get("license_notice")
     if license_notice is None:
         license_notice = ""
     else:
@@ -671,7 +740,7 @@ def gen_scripts(id_file, id_name, display_name):
             try:
                 config_file = tomli.load(f)
                 if config_file.get(id_name) is not None:
-                    for check_config in ["active", "overwrite_texture", "add_tooltip", "add_element","add_tag", "hide_jei", "remove_recipe", "replace_output"]:
+                    for check_config in ["active", "overwrite_texture", "add_tooltip", "add_element", "add_tag", "hide_jei", "replace_output", "replace_input", "remove_tag"]:
                         if config_file[id_name].get(check_config) is not None:
                             config_mat[check_config] = config_file[id_name][check_config]
                         else:
@@ -679,7 +748,7 @@ def gen_scripts(id_file, id_name, display_name):
 
                 else:
                     config_mat = config_mat_set_default()
-                    array_write_to_files.append(gen_config(id_file, id_name, base_file))
+                    array_write_to_files.append(gen_config(id_file, id_name, base_file_registry))
 
             except tomli.TOMLDecodeError as ex:
                 logging("config_error", f"mod specific config\\{id_file} file invalid, check for any syntax errors", ex)
@@ -687,44 +756,58 @@ def gen_scripts(id_file, id_name, display_name):
 
     else:
         config_mat = config_mat_set_default()
-        array_write_to_files.append(gen_config(id_file, id_name, base_file))
+        array_write_to_files.append(gen_config(id_file, id_name, base_file_registry))
 
-    if base_file[id_name].get("replace") is not None:
-        for element_to_replace in base_file[id_name]["replace"]:
+    array_write_to_files.extend(register_elements(id_file, id_name, display_name, base_file_registry, config_mat, license_notice))
+    return array_write_to_files
+    
+
+def register_elements(id_file, id_name, display_name, base_file_registry, config_mat, license_notice):
+    array_write_to_files = []
+    anything_changed = 0
+
+    if base_file_registry[id_name].get("replace") is not None:
+        all_element_to_replace = []
+        for element_to_replace in base_file_registry[id_name]["replace"]:
             if len(element_to_replace) == 3 and check_material(element_to_replace[0]):
                 active_overwrite_texture = (config_mat["overwrite_texture"] and config_mat["active"])
-                globals()["texture_replaced"] += replace_texture(id_name, element_to_replace[0], element_to_replace[1], id_file, active_overwrite_texture)
-                anything_changed += 1
-                if config_mat["overwrite_texture"] and config_mat["add_tooltip"] and config_mat["active"]:
+                return_replace_texture = replace_texture(id_name, element_to_replace[0], element_to_replace[1], id_file, active_overwrite_texture, False)
+                globals()["texture_replaced"] += return_replace_texture
+                anything_changed += return_replace_texture
+                if config_mat["overwrite_texture"] and config_mat["add_tooltip"] and config_mat["active"] and element_to_replace[0] not in all_element_to_replace:
                     array_write_to_files.append(add_item_tooltip(element_to_replace[2], id_file, license_notice))
+                all_element_to_replace.append(element_to_replace[0])
 
     if config_mat["active"]:
         all_added = []
-        if base_file[id_name].get("add") is not None:
-            for element_to_add in base_file[id_name]["add"]:
+        if base_file_registry[id_name].get("add") is not None:
+            for element_to_add in base_file_registry[id_name]["add"]:
                 if config_mat["add_element"] and check_material(element_to_add):
                     all_added.append(element_to_add)
 
                     color = ""
-                    if element_to_add in ["clean_slurry", "dirty_slurry"]:
-                        if base_file[id_name].get("slurries") is not None and base_file[id_name]["slurries"].get(element_to_add) is not None:
-                            if re.search(r'^#[0-9a-fA-F]{6}$', base_file[id_name]["slurries"][element_to_add]):
-                                color = base_file[id_name]["slurries"][element_to_add]
+                    if element_to_add.startswith("slurry") or element_to_add.startswith("molten"):
+                        if re.search(r'^#[0-9a-fA-F]{6}$', element_to_add.replace("slurry", "").replace("molten", "")):
+                            color = "0x" + element_to_add.replace("slurry#", "").replace("molten#", "")
+                            element_to_add = element_to_add[:-7]
 
                     return_add_element = add_element(id_name, element_to_add, id_file, display_name, color, license_notice)
                     if return_add_element != "":
-                        array_write_to_files.append(return_add_element)
+                        array_write_to_files.extend(return_add_element)
                         globals()["type_added"] += 1
                         anything_changed += 1
-                        if config_mat["add_tooltip"]:
-                            array_write_to_files.append(add_item_tooltip(f"kubejs:{id_name}_{element_to_add}", id_file, license_notice))
-                        if config_mat["add_tag"]:
-                            array_write_to_files.append(add_tag(f"kubejs:{id_name}_{element_to_add}", f"#forge:{element_to_add}s/{id_name}", id_file, license_notice))
+                        if not element_to_add.startswith("slurry") and not element_to_add.startswith("molten"):
+                            if config_mat["add_tooltip"]:
+                                array_write_to_files.append(add_item_tooltip(f"unification:{id_name}_{element_to_add}", id_file, license_notice))
+                            if config_mat["add_tag"]:
+                                is_block = True if element_to_add in ["raw_block", "storage_block"] else False
+                                array_write_to_files.extend(add_tag(f"unification:{id_name}_{element_to_add}", f"forge:{element_to_add}s/{id_name}", is_block, id_file, license_notice))
+                                array_write_to_files.extend(add_tag(f"unification:{id_name}_{element_to_add}", f"forge:{element_to_add}s", is_block, id_file, license_notice))
 
-        if base_file[id_name].get("remove") is not None:
+        if base_file_registry[id_name].get("remove") is not None:
             for check_remove in all_added:
-                if base_file[id_name]["remove"].get(check_remove) is not None:
-                    for element_to_remove in base_file[id_name]["remove"][check_remove]:
+                if base_file_registry[id_name]["remove"].get(check_remove) is not None:
+                    for element_to_remove in base_file_registry[id_name]["remove"][check_remove]:
                         mod_id = element_to_remove[:element_to_remove.find(":")]
                         if check_mod(mod_id) is False:
                             continue
@@ -734,9 +817,13 @@ def gen_scripts(id_file, id_name, display_name):
                         if config_mat["hide_jei"]:
                             array_write_to_files.append(jei_hide(element_to_remove, id_file, license_notice))
                         if config_mat["replace_output"]:
-                            array_write_to_files.append(replace_output(element_to_remove, f"kubejs:{id_name}_{check_remove}", id_file, license_notice))
-                        if config_mat["remove_recipe"]:
-                            array_write_to_files.append(remove_recipe(element_to_remove, id_file, license_notice))
+                            array_write_to_files.append(replace_output(element_to_remove, f"unification:{id_name}_{check_remove}", id_file, license_notice))
+                        if config_mat["replace_input"]:
+                            array_write_to_files.append(replace_input(element_to_remove, f"#forge:{check_remove}/{id_name}", id_file, license_notice)) # use non tag? f"kubejs:{id_name}_{check_remove}"
+                        if config_mat["remove_tag"]:
+                            array_write_to_files.append(remove_tag(element_to_remove, id_file, license_notice))
+        
+            array_write_to_files.extend(register_recipes(id_file, id_name, base_file_registry))
 
         if anything_changed > 1:
             globals()["material_added"] += 1
@@ -747,38 +834,107 @@ def gen_scripts(id_file, id_name, display_name):
             globals()["material_added"] += 1
         return []
 
+
+def register_recipes(id_file, id_name, base_file_registry):
+    return []
+
+    array_write_to_files = []
+
+    # opens needed files
+    if os.path.isfile(f"{path_}base_files\\kubejs\\recipe\\{id_file}.json"):
+        with open(f"{path_}base_files\\kubejs\\recipe\\{id_file}.json", encoding="utf-8") as f:
+            try:
+                base_file_recipe = json.load(f)
+            except json.decoder.JSONDecodeError as ex:
+                logging("base_file_error", f"The Base File kubejs\\recipe\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                return []
+    else:
+        logging("base_file_missing", f"missing base file: {path_}base_files\\kubejs\\recipe\\{id_file}.json")
+        return []
+
+    if base_file_recipe.get(id_name) is None:
+        logging("material_missing", f"The following material id is not defined in the following file: {id_name}, kubejs\\recipe\\{id_file}.json")
+        return []
+
+    license_notice = base_file_recipe.get("license_notice")
+    if license_notice is None:
+        license_notice = ""
+    else:
+        license_notice = "".join(license_notice)
+
+    m_names = {}
+
+    if base_file_registry[id_name].get("add") is not None:
+        for material in base_file_registry[id_name]["add"]:
+            m_names[material] = f"unification:{id_name}_{material}"
+
+    if base_file_registry[id_name].get("replace") is not None:
+        for material_array in base_file_registry[id_name]["replace"]:
+            if material_array[0] not in m_names:
+                m_names[material_array[0]] = material_array[2]
+    
+    if base_file_recipe[id_name].get("variants") is not None:
+        for material in base_file_recipe[id_name]["variants"]:
+            if material not in m_names:
+                m_names[material] = base_file_recipe[id_name]["variants"][material]
+            
+
+    recipes = []
+    if base_file_recipe[id_name].get("add") is not None:
+        for recipe in base_file_recipe[id_name]["add"]:
+            if not isinstance(recipe, list):
+                recipe = [recipe]
+            #if recipe[0] == "appliedenergistics.dust":
+            #    recipes.append(f"    global.rp.appliedenergistics.dust(event, {pass_inputs([id_name], m_names.get('dust'), recipe[1:2])})\n")
+            
+    file_path = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\recipes\\{id_file}\\{id_name}.js"
+    for recipe in recipes:
+        array_write_to_files.append([file_path, f"{id_name}.js", recipe, 50, "onEvent('recipes', event => {\n", "})"])
+    
+    return array_write_to_files
+
+
+def pass_inputs(params, remove):
+    for i in remove:
+        params.remove(i)
+    return str(params).removeprefix("[").removesuffix("]").replace("None", "null")
+
+
 def add_item_tooltip(id_item, id_file, license_notice):
     path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\client_scripts\\ore_unification\\tooltips\\{id_file}.js"
-    tooltip_add = (f"    tooltip.addAdvanced('{id_item}', (item, advanced, text) => {{\n"
-                   f"        if (tooltip.shift) {{\n"
-                   f"            text.add(Text.gray('This Item is using a Texture from Emendatus Enigmatica'))\n"
-                   f"        }}\n"
-                   f"    }})\n\n")
-
-    return [path_script_file, id_file + ".js", tooltip_add, 100, license_notice + "onEvent('item.tooltip', tooltip => {\n", "})"]
+    tooltip_add = f"    global.scripts.add_item_tooltip(event, '{id_item}')\n"
+    return [path_script_file, id_file + ".js", tooltip_add, 100, license_notice + "onEvent('item.tooltip', event => {\n", "})"]
 
 
-def replace_texture(id_name, type_material, texture_path, id_file, active):
+def replace_texture(id_name, type_material, texture_path, id_file, active, isAdding):
     texture_path_seperator_index = texture_path.find(":")
     texture_path_mod_name = texture_path[:texture_path_seperator_index]
     texture_path_other = texture_path[texture_path_seperator_index + 1:]
     texture_path_copy_to = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\{texture_path_mod_name}\\textures\\{texture_path_other}.png"
 
+    extra_file_path = ""
+    if(type_material == "coin"):
+        extra_file_path = texture_path[-1]
+
     if not os.path.isdir(texture_path_copy_to[:texture_path_copy_to.replace("/", "\\").rfind("\\") + 1]):
         os.makedirs(texture_path_copy_to[:texture_path_copy_to.replace("/", "\\").rfind("\\") + 1])
 
-    if active and check_mod(texture_path_mod_name):
+    if active and (check_mod(texture_path_mod_name) or texture_path_mod_name == "unification"):
         if type_material in ["raw_block", "storage_block"]:
-            texture_path_copy_from = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\kubejs\\textures\\ore_unification\\{id_file}\\{id_name}\\block\\{id_name}_{type_material}.png"
+            texture_path_copy_from = f"{path_}textures\\general\\{id_file}\\{id_name}\\block\\{id_name}_{type_material}{extra_file_path}.png"
         else:
-            texture_path_copy_from = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\kubejs\\textures\\ore_unification\\{id_file}\\{id_name}\\item\\{id_name}_{type_material}.png"
+            texture_path_copy_from = f"{path_}textures\\general\\{id_file}\\{id_name}\\item\\{id_name}_{type_material}{extra_file_path}.png"
 
         if os.path.isfile(texture_path_copy_from):
             shutil.copyfile(texture_path_copy_from, texture_path_copy_to)
             return 1
         else:
-            logging("texture_missing", (f"The following Meterial texture file is missing, meaning this texture file couldn't be copied to replace another texture: "
-                                        f"kubejs\\assets\\kubejs\\textures\\ore_unification\\{id_file}\\{id_name}\\item\\{id_name}_{type_material}.png"))
+            if isAdding:
+                logging("texture_missing", (f"The following Meterial texture file is missing, for that reason this item or block won't be added: : "
+                    f"{texture_path_copy_from.removeprefix(path_)}"))
+            else:
+                logging("texture_missing", (f"The following Meterial texture file is missing, meaning this texture file couldn't be copied to replace a texture: "
+                    f"{texture_path_copy_from.removeprefix(path_)}"))
             if os.path.isfile(texture_path_copy_to):
                 os.remove(texture_path_copy_to)
             return 0
@@ -786,61 +942,138 @@ def replace_texture(id_name, type_material, texture_path, id_file, active):
     elif os.path.isfile(texture_path_copy_to):
         os.remove(texture_path_copy_to)
         return 0
-    
+
     return 0
 
 
 def add_element(id_name, type_material, id_file, display_name, color, license_notice):
     if type_material in ["raw_block", "storage_block"]:
-        path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\block_add\\{id_file}.js"
-        texture_path = f"kubejs:ore_unification/{id_file}/{id_name}/block/{id_name}_{type_material}"
+        return add_block(id_name, type_material, id_file, display_name, license_notice)
+    
+    elif type_material.startswith("molten"):
+        return add_molten(id_name, type_material, id_file, display_name, color, license_notice)
 
-        type_material_extra = "metal"
-        if type_material == "raw_block":
-            type_material_extra = "stone"
-
-        material_add = (f"    event.create('{id_name}_{type_material}')\n"
-                        f"        .textureAll('{texture_path}')\n"
-                        f"        .material('{type_material_extra}')\n"
-                        f"        .displayName('{get_display_name(type_material, display_name)}')\n"
-                        f"        .hardness(5.0)\n"
-                        f"        .resistance(6.0)\n"
-                        f"        .harvestTool('pickaxe', 2)\n\n")
-        event_write = "onEvent('block.registry', event => {\n"
-
-    elif type_material in ["clean_slurry", "dirty_slurry"]:
-        path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\slurry_add\\{type_material.removesuffix('_slurry')}\\{id_file}.js"
-        texture_path = True
-        if color == "":
-            color = "#ffffff"
-
-        material_add = (f"    event.create('{id_name}_{type_material}', '{type_material.removesuffix('_slurry')}')\n"
-                        f"        .color({color.replace('#', '0x')})")
-        event_write = "onEvent('mekanism.slurry.registry', event => {\n"
+    elif type_material.startswith("slurry"):
+        return add_slurry(id_name, type_material, id_file, display_name, color, license_notice)
+    
+    elif type_material == "coin": 
+        return add_coin(id_name, id_file, display_name, license_notice)
 
     else:
-        path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\item_add\\{id_file}.js"
-        texture_path = f"kubejs:ore_unification/{id_file}/{id_name}/item/{id_name}_{type_material}"
+        return add_item(id_name, type_material, id_file, display_name, license_notice)
 
-        material_add = (f"    event.create('{id_name}_{type_material}')\n"
-                        f"        .texture('{texture_path}')\n"
-                        f"        .displayName('{get_display_name(type_material, display_name)}')\n\n")
-        event_write = "onEvent('item.registry', event => {\n"
 
-    texture_path = path_.removesuffix(file_loc + '\\') + texture_path.replace(":", "/assets/kubejs/textures/", 1) + ".png"
-    if os.path.isfile(texture_path) or texture_path is True:
-        return [path_script_file, id_file + ".js", material_add, 100, license_notice + event_write, "})"]
-    else:
-        logging("texture_missing", (f"The following Meterial texture file is missing, meaning this texture file can't be used in an "
-                                    f"item or block, for that reason this item or block won't be added: {texture_path}"))
+def add_item(id_name, type_material, id_file, display_name, license_notice):
+    texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_{type_material}"
+        
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\item_add\\{id_file}.js"
+    texture_exists = replace_texture(id_name, type_material, texture_path, id_file, True, True)
+    material_add = f"    global.scripts.add_item(event, '{id_name}', '{type_material}', '{texture_path}', '{get_display_name(type_material, display_name)}')\n"
+
+    if texture_exists == 1: 
+        return [[path_script_file, id_file + ".js", material_add, 100, license_notice + "onEvent('item.registry', event => {\n", "})"]]
+    else: 
+        return ""
+
+
+def add_coin(id_name, id_file, display_name, license_notice):
+    texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_coin"
+
+    model_files = []
+    texture_exists = 0
+    for i in range(5):
+        texture_exists += replace_texture(id_name, "coin" + str(i), texture_path + str(i), id_file, True, True)
+        path_model_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\models\\{id_file}\\{id_name}\\item\\{id_name}_coin{i}.json"
+        model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path  + str(i) + '"}}'
+        model_files.append([path_model_file, f"{id_name}_coin{i}.json", model_json, 0, "", ""])
+
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\coin_add\\{id_file}.js"
+    material_add = f"    global.scripts.add_coin(event, '{id_name}', '{get_display_name('coin', display_name)}')\n"
+    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\coin_add\\{id_file}_register_item_property.js"
+    material_add_extra = f"    global.scripts.register_item_property('unification:{id_name}_coin')\n"
+    path_main_model = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\models\\item\\{id_name}_coin.json"
+    main_model = (f'{{"parent": "item/generated", '
+                  f'"textures": {{"layer0": "{texture_path + "0"}"}}, '
+                  f'"overrides": ['
+                  f'{{"predicate": {{"count": 0.00000}}, "model": "{texture_path + "0"}"}}, '
+                  f'{{"predicate": {{"count": 0.03125}}, "model": "{texture_path + "1"}"}}, '
+                  f'{{"predicate": {{"count": 0.25000}}, "model": "{texture_path + "2"}"}}, '
+                  f'{{"predicate": {{"count": 0.50000}}, "model": "{texture_path + "3"}"}}, '
+                  f'{{"predicate": {{"count": 1.00000}}, "model": "{texture_path + "4"}"}}'
+                  f']'
+                  f'}}')
+
+    if texture_exists == 5: 
+        return [
+            [path_script_file, id_file + ".js", material_add, 100, license_notice + "onEvent('item.registry', event => {\n", "})"], 
+            [path_script_file_extra, id_file + "_register_item_property.js", material_add_extra, 100, license_notice + "onEvent('postinit', event => {\n", "})"],
+            [path_main_model, f"{id_name}_coin.json", main_model, 0, "", ""]
+        ] + model_files
+    else: 
+        return ""
+    
+def add_block(id_name, type_material, id_file, display_name, license_notice):
+    
+    texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{type_material}"
+
+    type_material_extra = "metal"
+    if type_material == "raw_block":
+        type_material_extra = "stone"
+
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\block_add\\{id_file}.js"
+    texture_exists = replace_texture(id_name, type_material, texture_path, id_file, True, True)
+    material_add = f"    global.scripts.add_block(event, '{id_name}', '{type_material}', '{texture_path}', '{type_material_extra}', '{get_display_name(type_material, display_name)}')\n"
+
+    if texture_exists == 1: 
+        return [[path_script_file, id_file + ".js", material_add, 100, license_notice + "onEvent('block.registry', event => {\n", "})"]]
+    else: 
         return ""
     
 
-def add_tag(id_item, item_tag, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\{id_file}.js"
-    event_write = "onEvent('item.tags', event => {"
+def add_molten(id_name, type_material, id_file, display_name, color, license_notice):
+    if color == "":
+        color = "0xffffff"
+
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\molten_add\\{id_file}.js"
+    material_add = f"    global.scripts.add_fluid(event, '{id_name}', {color}, '{get_display_name(type_material, display_name)}')\n"
+
+    return [[path_script_file, id_file + ".js", material_add, 100, license_notice + "onEvent('fluid.registry', event => {\n", "})"]]
+
+
+def add_slurry(id_name, type_material, id_file, display_name, color, license_notice):
+    if color == "":
+        color = "0xffffff"
+
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\slurry_add\\{id_file}.js"
+    material_add = f"SLURRY.register('{id_name}_{type_material}', builder => builder.color({color}))\n"
+    event_write =  ("let $EventBuses = java('me.shedaniel.architectury.platform.forge.EventBuses')\n"
+                    "let $SlurryDeferredRegister = java('mekanism.common.registration.impl.SlurryDeferredRegister')\n"
+                    "let SLURRY = new $SlurryDeferredRegister('unification')\n")
+    ending_string = "SLURRY['register(net.minecraftforge.eventbus.api.IEventBus)']($EventBuses.getModEventBus('kubejs').get())"
+
+    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\lang\\en_us.json"
+    material_add_extra  = (f'    "slurry.unification.dirty_{id_name}_{type_material}": "{get_display_name("dirty_" + type_material, display_name)}",\n'
+                            f'    "slurry.unification.clean_{id_name}_{type_material}": "{get_display_name("clean_" + type_material, display_name)}",\n')
+
+    return [
+        [path_script_file, id_file + ".js", material_add, 100, license_notice + event_write, ending_string], 
+        [path_script_file_extra, "en_us.json", material_add_extra, 0, "{\n", '    "": ""\n}']
+    ]
+
+
+def add_tag(id_item, item_tag, is_block, id_file, license_notice):
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\items\\{id_file}.js"
+    event_write = "onEvent('item.tags', event => {\n"
     string_write = f"    event.add('{item_tag}', '{id_item}')\n"
-    return [path_script_file, id_file + ".js", string_write, 90, license_notice + event_write, "})"]
+    if is_block:
+        path_script_file_block = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\blocks\\{id_file}.js"
+        event_write_block = "onEvent('block.tags', event => {\n"
+        return [
+            [path_script_file, id_file + ".js", string_write, 90, license_notice + event_write, "})"],
+            [path_script_file_block, id_file + ".js", string_write, 90, license_notice + event_write_block, "})"]
+        ]
+    else:
+        return [[path_script_file, id_file + ".js", string_write, 90, license_notice + event_write, "})"]]
 
 
 def jei_hide(id_item, id_file, license_notice):
@@ -850,52 +1083,33 @@ def jei_hide(id_item, id_file, license_notice):
     return [path_script_file, id_file + ".js", string_write, 50, license_notice + event_write, "})"]
 
 
-def replace_output(id_input, id_output, id_file, license_notice):
+def replace_output(id_output_old, id_output, id_file, license_notice):
     path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_output\\{id_file}.js"
     event_write = "onEvent('recipes', event => {\n"
-    string_write = f"    event.replaceOutput({{}}, '{id_input}', '{id_output}')\n"
+    string_write = f"    event.replaceOutput({{}}, '{id_output_old}', '{id_output}')\n"
     return [path_script_file, id_file + ".js", string_write, 100, license_notice + event_write, "})"]
 
 
-def remove_recipe(id_item, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_recipes\\{id_file}.js"
+def replace_input(id_input_old, id_input, id_file, license_notice):
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_input\\{id_file}.js"
     event_write = "onEvent('recipes', event => {\n"
-    string_write = f"    event.remove({{output: '{id_item}'}})\n"
-    return [path_script_file, id_file + ".js", string_write, 90, license_notice + event_write, "})"]
+    string_write = f"    event.replaceInput({{}}, '{id_input_old}', '{id_input}')\n"
+    return [path_script_file, id_file + ".js", string_write, 100, license_notice + event_write, "})"]
 
 
-def get_display_name(type_material, display_name):
-    path_general_config = f"{path_}\\base_files\\kubejs\\general.json"
-    if os.path.isfile(path_general_config):
-        with open(path_general_config) as f:
-            try:
-                config_general_file = json.load(f)
-            except json.decoder.JSONDecodeError as ex:
-                logging("file_error", "The Base File kubejs\\general.json couldn't be read, check for any syntax errors / redownload the file", ex)
+def remove_tag(id_item, id_file, license_notice):
+    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\items\\{id_file}.js"
+    path_script_file_block = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\blocks\\{id_file}.js"
+    event_write = "onEvent('item.tags', event => {\n"
+    event_write_block = "onEvent('item.tags', event => {\n"
+    string_write = f"    event.removeAllTagsFrom('{id_item}')\n"
+    
+    return [
+        [path_script_file, id_file + ".js", string_write, 60, license_notice + event_write, "})"],
+        [path_script_file_block, id_file + ".js", string_write, 60, license_notice + event_write_block, "})"] 
+    ]
 
-    if config_general_file.get("names") is not None and config_general_file["names"].get(type_material) is not None:
-        return str(config_general_file["names"][type_material] % (display_name,))
-    
 
-def read_info():
-    array_write_to_files = []
-    
-    if os.path.isfile(f"{path_}base_files\\kubejs\\gen_scripts_info.json"):
-        with open(f"{path_}base_files\\kubejs\\gen_scripts_info.json") as f:
-            try:
-                info = json.load(f)
-            except json.decoder.JSONDecodeError as ex:
-                logging("file_error", f"The Base File kubejs\\gen_scripts_info.json couldn't be read, check for any syntax errors / redownload the file", ex)
-    else:
-        logging("file_missing", f"missing base file: {path_}base_files\\kubejs\\gen_scripts_info.json")
-    
-    if info.get("main") is not None:
-        for element in info["main"]:
-            array_write_to_files.extend(gen_scripts(element[0], element[1], element[2]))
-
-    write_to_files(array_write_to_files)
-    
-    
 def write_to_files(data_array):
     # data_array = ["path_file", "file_name", "string write", "prio", "starting_string", "ending_string"]
     # name: ["priority?", "starting_string", "rest_of_text_in_multiple_strings", "ending_string"]
@@ -922,6 +1136,8 @@ def write_to_files(data_array):
 
 
 read_info()
+
+shutil.copytree(f"{path_}textures\\general\\copy", path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\textures", copy_function=shutil.copyfile, dirs_exist_ok=True)
 
 logging("info", (f"Changed {material_added} materials. Replaced {texture_replaced} textures. "
                  f"Added {type_added} items/blocks. Removed {element_removed} items/blocks"))
