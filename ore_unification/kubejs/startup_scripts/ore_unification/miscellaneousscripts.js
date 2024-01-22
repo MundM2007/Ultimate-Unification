@@ -18,6 +18,7 @@
 //         - MundM2007          (https://github.com/MundM2007)
 
 onEvent("loaded", event => {
+    let $ItemModelProperties = java('net.minecraft.item.ItemModelsProperties')
     global.scripts = {
         add_item_tooltip: (event, id_item) => {
             event.addAdvanced(id_item, (item, advanced, text) => {
@@ -34,6 +35,7 @@ onEvent("loaded", event => {
                 .hardness(5.0)
                 .resistance(6.0)
                 .harvestTool('pickaxe', 2)
+                .requiresTool(true)
         },
         add_item: (event, id_name, type_material, texture_path, display_name) => {
             event.create(`unification:${id_name}_${type_material}`)
@@ -54,7 +56,6 @@ onEvent("loaded", event => {
         },
         register_item_property: (item) => {
             if (!Platform.isClientEnvironment) return;
-            let $ItemModelProperties = java('net.minecraft.item.ItemModelsProperties')
 
             $ItemModelProperties.func_239418_a_(Item.of(item), new ResourceLocation('count'), (stack, world, living) => {
                 return stack.func_190916_E() / stack.func_77976_d()

@@ -1,0 +1,88 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "drenched_iron": {
+        "replace": [
+            ["storage_block", "elementalcraft:block/drenched_iron_block", "elementalcraft:drenched_iron_block"],
+            ["ingot", "elementalcraft:item/drenched_iron_ingot", "elementalcraft:drenched_iron_ingot"],
+            ["nugget", "elementalcraft:item/drenched_iron_nugget", "elementalcraft:drenched_iron_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#9cb9e3"
+        ],
+        "remove": {}
+    },
+    "fireite": {
+        "replace": [
+            ["storage_block", "elementalcraft:block/fireite_block", "elementalcraft:fireite_block"],
+            ["ingot", "elementalcraft:item/fireite_ingot", "elementalcraft:fireite_ingot"],
+            ["nugget", "elementalcraft:item/fireite_nugget", "elementalcraft:fireite_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#553436"
+        ],
+        "remove": {}
+    },
+    "inert_crystal": {
+        "replace": [
+            ["gem", "elementalcraft:item/inertcrystal", "elementalcraft:inertcrystal"],
+            ["storage_block", "elementalcraft:block/inertcrystal_block", "elementalcraft:inertcrystal_block"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#868686"
+        ],
+        "remove": {}
+    },
+    "swift_alloy": {
+        "replace": [
+            ["storage_block", "elementalcraft:block/swift_alloy_block", "elementalcraft:swift_alloy_block"],
+            ["ingot", "elementalcraft:item/swift_alloy_ingot", "elementalcraft:swift_alloy_ingot"],
+            ["nugget", "elementalcraft:item/swift_alloy_nugget", "elementalcraft:swift_alloy_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#fcc051"
+        ],
+        "remove": {}
+    }
+}

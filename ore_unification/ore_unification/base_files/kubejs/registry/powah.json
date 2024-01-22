@@ -1,0 +1,133 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "blazing_crystal": {
+        "replace": [
+            ["storage_block", "powah:block/blazing_crystal_block", "powah:blazing_crystal_block"],
+            ["gem", "powah:item/crystal_blazing", "powah:crystal_blazing"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#d3b419"
+        ],
+        "remove": {}
+    },
+    "energized_steel": {
+        "replace": [
+            ["storage_block", "powah:block/energized_steel_block", "powah:energized_steel_block"],
+            ["ingot", "powah:item/steel_energized", "powah:steel_energized"]
+        ],
+        "add": [
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#ba9d6a"
+        ],
+        "remove": {}
+    },
+    "niotic_crystal": {
+        "replace": [
+            ["storage_block", "powah:block/niotic_crystal_block", "powah:niotic_crystal_block"],
+            ["gem", "powah:item/crystal_niotic", "powah:crystal_niotic"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#04b0bc"
+        ],
+        "remove": {}
+    },
+    "nitro_crystal": {
+        "replace": [
+            ["storage_block", "powah:block/blazing_crystal_nitro", "powah:nitro_crystal_block"],
+            ["gem", "powah:item/crystal_nitro", "powah:crystal_nitro"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#a42022"
+        ],
+        "remove": {}
+    },
+    "overcharged": {
+        "replace": [
+            ["gem", "powah:item/overcharged_core", "powah:overcharged_core"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#b931ae"
+        ],
+        "remove": {}
+    },
+    "spirited_crystal": {
+        "replace": [
+            ["storage_block", "powah:block/spirited_crystal_block", "powah:spirited_crystal_block"],
+            ["gem", "powah:item/crystal_spirited", "powah:crystal_spirited"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#499704"
+        ],
+        "remove": {}
+    },
+    "uraninite": {
+        "replace": [
+            ["storage_block", "powah:block/uraninite_block", "powah:uraninite_block"],
+            ["gem", "powah:item/uraninite", "powah:uraninite"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#04c02f"
+        ],
+        "remove": {}
+    }
+}

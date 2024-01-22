@@ -32,6 +32,7 @@
     forbidden_arcanus = true
     ftbic = true
     ftbjarmod = true
+    hammerlib = true
     immersiveengineering = true
     immersiveposts = true
     industrialforegoing = true
@@ -39,6 +40,7 @@
     mekanism = true
     miniutilities = true
     morered = true
+    mysticalagradditions = true
     mysticalagriculture = true
     nuclearcraft = true
     occultism = true

@@ -16,7 +16,73 @@
 # Ultimate Unification Copyright (C) 2023 under MIT License by:                   
 #         - MundM2007 (https://github.com/MundM2007)
 
-import ast
+
+
+
+
+
+
+# todo: integrate ore tag removals; 
+
+
+
+#       add thermal ingot in smelter recipe
+
+
+#       Unify Items: 
+#           arcane gold ingot eidolon + the usage
+#           brass, different rates or maybe other alloys
+#           add coal coke burntime + from bitumen recipe + from coal in immersive engineering
+#           ender pearl dust (betterend, lazier ae2, mini utilities ore drop, probably not needed cause worldgem is changes), add recipes
+#           flour (nuclearcraft, pneumaticcraft, lazier ae2, atum)
+#           obsidian dust (mekanism, nuclearcraft, exnihilo, occultism)
+#           salt (meka, alchemistry)
+#           silicon check all mods in registry base file
+#           wood (thermal, excompressum) gears
+#           chromatic compound recipe
+#           ritual of the forest ore aren't using tags
+#           netherite ore processing + calcinated netherite powder isn't using tags + dust from blood magic
+#           quartz: add casting and smelting of block
+#       Unify Essences: from mystical agriculture
+#       Unify Fluids: 
+#           Aluminum, Boron, Lithium, Silver, Beryllium, Manganese, Steel, Coal, basically every one from (nc)
+#           from create automated
+#           Destabelized redstone
+
+#       rose gold
+#       semi-stable-ingot
+#       extended crafting
+#       nature's aura
+#       mythicbotany
+#       the twilight forest
+#       redo manganese (move to alloy)
+#       wood gear texture
+
+
+
+
+
+
+
+#       conditional recipes after mods
+#       write to generalsettings
+#       ore drops
+#       make a directory for files like mandatory kubejs files and config files to be copied over????
+#       remove additional argument removal in recipe function and seperate the tconstruct casting recipes for that reason
+#       add function to read files
+#       also add tags to replaced items
+# 6 libaries:
+#   - IOUtils (Handles Input and Output)
+#   - LoggingUtils (Handles logging, with class that stores it) 
+#   - LanguageUtils (Handles Language Files) ???????? Or just in main file
+#   - FilesUtils (Tracks what to write to a file using a class)
+#   - TextureUtils ? maybe in FileUtils
+#   - BackupUtils
+
+
+
+
+from ast import literal_eval
 import time
 import decimal
 from decimal import Decimal
@@ -179,14 +245,13 @@ def extra_file(file_path, type_material, id_strata):
 
     return array_extra
 
-
 enable_logging = True
 # checks the main.toml file if it should disable logging (even without the scripts being valid)
 if os.path.isfile(f"{path_}config\\main.toml"):
     with open(f"{path_}config\\main.toml", mode="r") as main:
         for line in main:
             if "enable_logging" in line and ("true" in line or "false" in line) and "enable_logging_" not in line and "#" not in line:
-                enable_logging = ast.literal_eval(line.replace("enable_logging", "").replace("=", "").replace(" ", "").replace("true", "True").replace("false", "False"))
+                enable_logging = literal_eval(line.replace("enable_logging", "").replace("=", "").replace(" ", "").replace("true", "True").replace("false", "False"))
 
 logging("info", 'Program started')
 
@@ -591,7 +656,7 @@ if os.path.isfile(f"{path_}config\\mod_list.toml"):
             logging("file_error", f"mod specific config\\mod_list file invalid, check for any syntax errors", ex)
 
 else:
-    logging("file_missing", f"missing base file: {path_}config\\mod_list.toml")
+    logging("file_missing", f"missing config file: {path_}config\\mod_list.toml")
 
 mod_list = ["minecraft"]
 if config_mod_list.get("mods") is not None:
@@ -612,10 +677,7 @@ def check_material(type_material):
 
 
 def check_mod(mod):
-    if mod in mod_list:
-        return True
-    else:
-        return False
+    return mod in mod_list
 
 
 def config_mat_set_default():
@@ -647,27 +709,27 @@ def gen_config(id_file, id_name, base_file):
         "    add_element = true\n",
         "    add_tag = true\n",
         "    hide_jei = false\n",
-        "    replace_output = false\n",
-        "    replace_input = false\n",
-        "    remove_tag = false\n"
+        "    replace_output = true\n",
+        "    replace_input = true\n",
+        "    remove_tag = true\n"
     ]
 
-    for i in range(8):
+    for i in range(9):
         if i in config_options_needed:
             config_add += config_options[i]
 
     return [f"{path_}config\\mod_specific\\{id_file}.toml", id_file + ".toml", config_add, 0, "", ""]
 
 
-path_general_config = f"{path_}\\base_files\\kubejs\\registration\\general.json"
+path_general_config = f"{path_}\\base_files\\kubejs\\registry\\general.json"
 if os.path.isfile(path_general_config):
     with open(path_general_config) as f:
         try:
             config_general_file = json.load(f)
         except json.decoder.JSONDecodeError as ex:
-            logging("file_error", "The Base File kubejs\\registration\\general.json couldn't be read, check for any syntax errors / redownload the file", ex)
+            logging("file_error", "The Base File kubejs\\registry\\general.json couldn't be read, check for any syntax errors / redownload the file", ex)
 else:
-    logging("file_missing", "The Base File kubejs\\registration\\general.json couldn't be found, redownload the file")
+    logging("file_missing", "The Base File kubejs\\registry\\general.json couldn't be found, redownload the file")
 
 def get_display_name(type_material, display_name):
     if config_general_file.get("names") is not None and config_general_file["names"].get(type_material) is not None:
@@ -680,20 +742,21 @@ def get_display_name(type_material, display_name):
 def read_info():
     array_write_to_files = []
     
-    if os.path.isfile(f"{path_}base_files\\kubejs\\registration\\gen_scripts_info.json"):
-        with open(f"{path_}base_files\\kubejs\\registration\\gen_scripts_info.json") as f:
+    if os.path.isfile(f"{path_}base_files\\kubejs\\registry\\gen_scripts_info.json"):
+        with open(f"{path_}base_files\\kubejs\\registry\\gen_scripts_info.json") as f:
             try:
                 info = json.load(f)
             except json.decoder.JSONDecodeError as ex:
-                logging("file_error", f"The Base File kubejs\\registration\\gen_scripts_info.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                logging("file_error", f"The Base File kubejs\\registry\\gen_scripts_info.json couldn't be read, check for any syntax errors / redownload the file", ex)
     else:
-        logging("file_missing", f"missing base file: {path_}base_files\\kubejs\\registration\\gen_scripts_info.json")
+        logging("file_missing", f"missing base file: {path_}base_files\\kubejs\\registry\\gen_scripts_info.json")
     
     if info.get("main") is not None:
         for element in info["main"]:
             array_write_to_files.extend(gen_scripts(element[0], element[1], element[2]))
 
     for ore in all_ores: 
+        # think about if this should really be done this way and not all tags removed from the item seperatly
         #array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\ores_items.js", "ores_items.js", 
         #                             f"    event.removeAll('forge:ores/{ore[0]}')\n", 50, "onEvent('item.tags', event => {\n    event.removeAll('forge:ores')\n", "})"])
         #array_write_to_files.append([path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\ores_blocks.js", "ores_blocks.js", 
@@ -712,19 +775,19 @@ def gen_scripts(id_file, id_name, display_name):
     array_write_to_files = []
 
     # opens needed files
-    if os.path.isfile(f"{path_}base_files\\kubejs\\registration\\{id_file}.json"):
-        with open(f"{path_}base_files\\kubejs\\registration\\{id_file}.json", encoding="utf-8") as f:
+    if os.path.isfile(f"{path_}base_files\\kubejs\\registry\\{id_file}.json"):
+        with open(f"{path_}base_files\\kubejs\\registry\\{id_file}.json", encoding="utf-8") as f:
             try:
                 base_file_registry = json.load(f)
             except json.decoder.JSONDecodeError as ex:
-                logging("base_file_error", f"The Base File kubejs\\registration\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                logging("base_file_error", f"The Base File {path_}base_files\\kubejs\\registry\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
                 return []
     else:
-        logging("base_file_missing", f"missing base file: {path_}base_files\\kubejs\\registration\\{id_file}.json")
+        logging("base_file_missing", f"missing base file: {path_}base_files\\kubejs\\registry\\{id_file}.json")
         return []
 
     if base_file_registry.get(id_name) is None:
-        logging("material_missing", f"The following material id is not defined in the following file: {id_name}, kubejs\\registration\\{id_file}.json")
+        logging("material_missing", f"The following material id is not defined in the following base file: {id_name}, {path_}base_files\\kubejs\\registry\\{id_file}.json")
         return []
 
     license_notice = base_file_registry.get("license_notice")
@@ -776,6 +839,10 @@ def register_elements(id_file, id_name, display_name, base_file_registry, config
                 anything_changed += return_replace_texture
                 if config_mat["overwrite_texture"] and config_mat["add_tooltip"] and config_mat["active"] and element_to_replace[0] not in all_element_to_replace:
                     array_write_to_files.append(add_item_tooltip(element_to_replace[2], id_file, license_notice))
+                if config_mat["add_tag"]:
+                    is_block = True if element_to_replace[0] in ["raw_block", "storage_block"] else False
+                    array_write_to_files.extend(add_tag(element_to_replace[2], f"forge:{element_to_replace[0]}s/{id_name}", is_block, id_file, license_notice))
+                    array_write_to_files.extend(add_tag(element_to_replace[2], f"forge:{element_to_replace[0]}s", is_block, id_file, license_notice))
                 all_element_to_replace.append(element_to_replace[0])
 
     if config_mat["active"]:
@@ -821,7 +888,7 @@ def register_elements(id_file, id_name, display_name, base_file_registry, config
                         if config_mat["replace_input"]:
                             array_write_to_files.append(replace_input(element_to_remove, f"#forge:{check_remove}/{id_name}", id_file, license_notice)) # use non tag? f"kubejs:{id_name}_{check_remove}"
                         if config_mat["remove_tag"]:
-                            array_write_to_files.append(remove_tag(element_to_remove, id_file, license_notice))
+                            array_write_to_files.extend(remove_tag(element_to_remove, id_file, license_notice))
         
             array_write_to_files.extend(register_recipes(id_file, id_name, base_file_registry))
 
@@ -836,8 +903,6 @@ def register_elements(id_file, id_name, display_name, base_file_registry, config
 
 
 def register_recipes(id_file, id_name, base_file_registry):
-    return []
-
     array_write_to_files = []
 
     # opens needed files
@@ -846,14 +911,14 @@ def register_recipes(id_file, id_name, base_file_registry):
             try:
                 base_file_recipe = json.load(f)
             except json.decoder.JSONDecodeError as ex:
-                logging("base_file_error", f"The Base File kubejs\\recipe\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
+                logging("base_file_error", f"The Base File {path_}base_files\\kubejs\\recipe\\{id_file}.json couldn't be read, check for any syntax errors / redownload the file", ex)
                 return []
     else:
         logging("base_file_missing", f"missing base file: {path_}base_files\\kubejs\\recipe\\{id_file}.json")
         return []
 
     if base_file_recipe.get(id_name) is None:
-        logging("material_missing", f"The following material id is not defined in the following file: {id_name}, kubejs\\recipe\\{id_file}.json")
+        logging("material_missing", f"The following material id is not defined in the following base file: {id_name}, {path_}base_files\\kubejs\\recipe\\{id_file}.json")
         return []
 
     license_notice = base_file_recipe.get("license_notice")
@@ -861,33 +926,120 @@ def register_recipes(id_file, id_name, base_file_registry):
         license_notice = ""
     else:
         license_notice = "".join(license_notice)
-
-    m_names = {}
-
-    if base_file_registry[id_name].get("add") is not None:
-        for material in base_file_registry[id_name]["add"]:
-            m_names[material] = f"unification:{id_name}_{material}"
-
-    if base_file_registry[id_name].get("replace") is not None:
-        for material_array in base_file_registry[id_name]["replace"]:
-            if material_array[0] not in m_names:
-                m_names[material_array[0]] = material_array[2]
     
-    if base_file_recipe[id_name].get("variants") is not None:
-        for material in base_file_recipe[id_name]["variants"]:
-            if material not in m_names:
-                m_names[material] = base_file_recipe[id_name]["variants"][material]
-            
+    file_path = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\recipes\\{id_file}\\{id_name}.js"        
+    if base_file_recipe[id_name].get("remove") is not None:
+        for recipe_to_remove in base_file_recipe[id_name]["remove"]:
+            array_write_to_files.append([file_path, f"{id_name}.js", f'    event.remove({{id: "{recipe_to_remove}"}})\n', 50, "onEvent('recipes', event => {\n", "})"])
 
     recipes = []
     if base_file_recipe[id_name].get("add") is not None:
+        #material names
+        mns = {}
+
+        if base_file_registry[id_name].get("add") is not None:
+            for material in base_file_registry[id_name]["add"]:
+                if material.startswith("slurry"):
+                    mns["dirty_slurry"] = f"unification:dirty_{id_name}_slurry"
+                    mns["clean_slurry"] = f"unification:clean_{id_name}_slurry"
+                elif material.startswith("molten"):
+                    mns["molten"] = f"unification:molten_{id_name}"
+                else:
+                    mns[material] = f"unification:{id_name}_{material}"
+
+        if base_file_registry[id_name].get("replace") is not None:
+            for material_array in base_file_registry[id_name]["replace"]:
+                if material_array[0] not in mns:
+                    if not (material.startswith("slurry") or material.startswith("molten")):
+                        mns[material_array[0]] = material_array[2]
+        
+        if base_file_recipe[id_name].get("variants") is not None:
+            for material in base_file_recipe[id_name]["variants"]:
+                if material not in mns:
+                    mns[material] = base_file_recipe[id_name]["variants"][material]
+
+        all_coin = ["ftbic.coin", "thermal.coin"]
+        all_dust = ["appliedenergistics2.dust", "bloodmagic.dust", "create.dust", "ftbic.dust", "immersiveengineering.dust", "mekanism.dust", "occultism.dust",
+            "potionsmaster.dust", "silents_mechanisms.dust", "thermal.dust"
+        ]
+        all_gear = ["ftbic.gear", "immersiveengineering.gear", "thermal.gear", "minecraft.gear"]
+        all_plate = ["boss_tools.plate", "boss_tools_giselle_addon.plate", "create.plate", "ftbic.plate", "immersiveengineering.plate", "thermal.plate"]
+        all_rod = ["boss_tools_giselle_addon.rod", "createaddition.rod", "ftbic.rod", "immersiveengineering.rod", "minecraft.rod"]
+        all_wire = ["boss_tools_giselle_addon.wire", "createaddition.wire", "ftbic.wire", "immersiveengineering.wire", "minecraft.wire"]
         for recipe in base_file_recipe[id_name]["add"]:
             if not isinstance(recipe, list):
                 recipe = [recipe]
-            #if recipe[0] == "appliedenergistics.dust":
-            #    recipes.append(f"    global.rp.appliedenergistics.dust(event, {pass_inputs([id_name], m_names.get('dust'), recipe[1:2])})\n")
+
+            if recipe[0] in all_coin: recipes.append(pass_inputs([id_name, mns.get('coin')], recipe[1:2]))
+            elif recipe[0] in all_dust: recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+            elif recipe[0] in all_gear: recipes.append(pass_inputs([id_name, mns.get('gear')], recipe[1:2]))
+            elif recipe[0] in all_plate: recipes.append(pass_inputs([id_name, mns.get('plate')], recipe[1:2]))
+            elif recipe[0] in all_rod: recipes.append(pass_inputs([id_name, mns.get('rod')], recipe[1:2]))
+            elif recipe[0] in all_wire: recipes.append(pass_inputs([id_name, mns.get('wire')], recipe[1:2]))
+
+            elif recipe[0] == "appliedenergistics2.ore_processing": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get("gem_multiplyer")], recipe[1:2]))
+
+            elif recipe[0] == "astralsorcery.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "astralsorcery.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
+
+            elif recipe[0] == "betterendforge.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "betterendforge.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
+
+            elif recipe[0] == "bloodmagic.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get('gravel'), mns.get('fragment')], recipe[1:2]))
+
+            elif recipe[0] == "create.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "create.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get("nugget"), mns.get("crushed_ore")], recipe[1:2]))
+
+            elif recipe[0] == "engineerstools.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "exnihilo.pieces_to_raw": recipes.append(pass_inputs([id_name, mns.get('raw_material')], recipe[1:2]))
+
+            elif recipe[0] == "ftbic.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "ftbic.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "immersiveengineering.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "immersiveengineering.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "integrateddynamics.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "integrateddynamics.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "mekanism.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "mekanism.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get('dirty_dust'), mns.get('clump'), mns.get('shard'), 
+                                                                                           mns.get('crystal'), mns.get('clean_slurry'), mns.get('dirty_slurry')], recipe[1:2]))
+                
+            elif recipe[0] == "minecraft.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "minecraft.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
+            elif recipe[0] == "minecraft.smelting_recipes": recipes.append(pass_inputs([id_name, [mns.get('ingot'), mns.get('gem')], mns.get('nugget'), False], recipe[1:2]))
+            elif recipe[0] == "minecraft.storage_convert_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get('block')], recipe[1:2]))
+            elif recipe[0] == "minecraft.storage_convert_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('block'), mns.get('nugget')], recipe[1:2]))
+            elif recipe[0] == "minecraft.storage_convert_raw": recipes.append(pass_inputs([id_name, mns.get('raw_material'), mns.get('raw_block')], recipe[1:2]))
             
-    file_path = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\recipes\\{id_file}\\{id_name}.js"
+            elif recipe[0] == "occultism.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "silents_mechanisms.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "silents_mechanisms.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
+
+            elif recipe[0] == "tconstruct.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('molten'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "tconstruct.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('molten')], recipe[1:2]))
+            elif recipe[0] == "tconstruct.smelting": recipes.append(pass_inputs([id_name, mns.get('molten')], recipe[1:2]))
+            elif recipe[0] == "tconstruct.casting": recipes.append(pass_inputs([mns.get('molten'), mns.get('storage_block'), mns.get('ingot'), mns.get('nugget'), mns.get('gem'),
+                                                                                mns.get('plate'), mns.get('gear'), mns.get('rod'), mns.get('wire'), mns.get('coin')], recipe[1:2]))
+            
+            elif recipe[0] == "thermal.coin_to_energy": recipes.append(pass_inputs([id_name, mns.get('energy_from_coin')], recipe[1:2]))
+            elif recipe[0] == "thermal.ingot_in_chiller": recipes.append(pass_inputs([mns.get('molten'), mns.get('ingot')], recipe[1:2]))
+            elif recipe[0] == "thermal.ingot_in_smelter": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
+            elif recipe[0] == "thermal.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
+            elif recipe[0] == "thermal.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('dust')], recipe[1:2]))
+            elif recipe[0] == "thermal.rod": recipes.append(pass_inputs([mns.get("molten"), mns.get("rod")], recipe[1:2]))
+            elif recipe[0] == "thermal.storage_convert_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get('block')], recipe[1:2]))
+            elif recipe[0] == "thermal.storage_convert_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('block'), mns.get('nugget')], recipe[1:2]))
+
+            else: 
+                logging("recipe_error", f"Unknown recipe type: {recipe[0]}")
+                continue
+
+            recipes[-1] = f"    global.rp.{recipe[0]}(event, " + recipes[-1] + ")\n"
+            
     for recipe in recipes:
         array_write_to_files.append([file_path, f"{id_name}.js", recipe, 50, "onEvent('recipes', event => {\n", "})"])
     
@@ -897,7 +1049,7 @@ def register_recipes(id_file, id_name, base_file_registry):
 def pass_inputs(params, remove):
     for i in remove:
         params.remove(i)
-    return str(params).removeprefix("[").removesuffix("]").replace("None", "null")
+    return str(params).removeprefix("[").removesuffix("]").replace("None", "null").replace("False", "false").replace("True", "true")
 
 
 def add_item_tooltip(id_item, id_file, license_notice):
@@ -907,10 +1059,13 @@ def add_item_tooltip(id_item, id_file, license_notice):
 
 
 def replace_texture(id_name, type_material, texture_path, id_file, active, isAdding):
+    if(texture_path.find(":") == -1):
+        return 0
+    
     texture_path_seperator_index = texture_path.find(":")
     texture_path_mod_name = texture_path[:texture_path_seperator_index]
     texture_path_other = texture_path[texture_path_seperator_index + 1:]
-    texture_path_copy_to = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\{texture_path_mod_name}\\textures\\{texture_path_other}.png"
+    texture_path_copy_to = path_.removesuffix(file_loc + '\\') + f"resources\\{texture_path_mod_name}\\textures\\{texture_path_other}.png"
 
     extra_file_path = ""
     if(type_material == "coin"):
@@ -983,7 +1138,7 @@ def add_coin(id_name, id_file, display_name, license_notice):
     texture_exists = 0
     for i in range(5):
         texture_exists += replace_texture(id_name, "coin" + str(i), texture_path + str(i), id_file, True, True)
-        path_model_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\models\\{id_file}\\{id_name}\\item\\{id_name}_coin{i}.json"
+        path_model_file = path_.removesuffix(file_loc + '\\') + f"resources\\unification\\models\\{id_file}\\{id_name}\\item\\{id_name}_coin{i}.json"
         model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path  + str(i) + '"}}'
         model_files.append([path_model_file, f"{id_name}_coin{i}.json", model_json, 0, "", ""])
 
@@ -1051,7 +1206,7 @@ def add_slurry(id_name, type_material, id_file, display_name, color, license_not
                     "let SLURRY = new $SlurryDeferredRegister('unification')\n")
     ending_string = "SLURRY['register(net.minecraftforge.eventbus.api.IEventBus)']($EventBuses.getModEventBus('kubejs').get())"
 
-    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\lang\\en_us.json"
+    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"resources\\unification\\lang\\en_us.json"
     material_add_extra  = (f'    "slurry.unification.dirty_{id_name}_{type_material}": "{get_display_name("dirty_" + type_material, display_name)}",\n'
                             f'    "slurry.unification.clean_{id_name}_{type_material}": "{get_display_name("clean_" + type_material, display_name)}",\n')
 
@@ -1101,9 +1256,9 @@ def remove_tag(id_item, id_file, license_notice):
     path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\items\\{id_file}.js"
     path_script_file_block = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\blocks\\{id_file}.js"
     event_write = "onEvent('item.tags', event => {\n"
-    event_write_block = "onEvent('item.tags', event => {\n"
+    event_write_block = "onEvent('block.tags', event => {\n"
     string_write = f"    event.removeAllTagsFrom('{id_item}')\n"
-    
+
     return [
         [path_script_file, id_file + ".js", string_write, 60, license_notice + event_write, "})"],
         [path_script_file_block, id_file + ".js", string_write, 60, license_notice + event_write_block, "})"] 
@@ -1111,7 +1266,7 @@ def remove_tag(id_item, id_file, license_notice):
 
 
 def write_to_files(data_array):
-    # data_array = ["path_file", "file_name", "string write", "prio", "starting_string", "ending_string"]
+    # data_array = array of ["path_file", "file_name", "string write", "prio", "starting_string", "ending_string"]
     # name: ["priority?", "starting_string", "rest_of_text_in_multiple_strings", "ending_string"]
     data_sorted = {}
     all_file_paths = []
@@ -1133,7 +1288,6 @@ def write_to_files(data_array):
     for file_path in all_file_paths:
         with open(file_path, "w", encoding="utf-8") as f:
             f.write("".join(data_sorted[file_path]))
-
 
 read_info()
 

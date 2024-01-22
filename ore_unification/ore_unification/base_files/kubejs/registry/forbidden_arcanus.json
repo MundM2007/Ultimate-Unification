@@ -1,0 +1,102 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "arcane_crystal": {
+        "replace": [
+            ["gem", "forbidden_arcanus:item/arcane_crystal", "forbidden_arcanus:arcane_crystal"],
+            ["dust", "forbidden_arcanus:item/arcane_crystal_dust", "forbidden_arcanus:arcane_crystal_dust"],
+            ["storage_block", "forbidden_arcanus:block/arcane_crystal_block", "forbidden_arcanus:arcane_crystal_block"]
+        ],
+        "add": [
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#acb4cd"
+        ],
+        "remove": {}
+    },
+    "dark_rune": {
+        "replace": [
+            ["gem", "forbidden_arcanus:item/dark_rune", "forbidden_arcanus:dark_rune"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#51414d"
+        ],
+        "remove": {}
+    },
+    "obsidian_ingot": {
+        "replace": [
+            ["ingot", "forbidden_arcanus:item/obsidian_ingot", "forbidden_arcanus:obsidian_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#4c2e5f"
+        ],
+        "remove": {}
+    },
+    "rune": {
+        "replace": [
+            ["gem", "forbidden_arcanus:item/rune", "forbidden_arcanus:rune"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#931a7f"
+        ],
+        "remove": {}
+    },
+    "stellarite": {
+        "replace": [
+            ["ingot", "forbidden_arcanus:item/stellarite_piece", "forbidden_arcanus:stellarite_piece"],
+            ["storage_block", "forbidden_arcanus:block/stellarite_block", "forbidden_arcanus:stellarite_block"]
+        ],
+        "add": [
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#757666"
+        ],
+        "remove": {}
+    }
+}

@@ -1,0 +1,420 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "apalachia": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/apalachia_block", "divinerpg:apalachia_block"],
+            ["gem", "divinerpg:items/apalachia_gem", "divinerpg:apalachia_gem"],
+            ["parts", "divinerpg:items/apalachia_fragments", "divinerpg:apalachia_fragments"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#a630b4"
+        ],
+        "remove": {}
+    },
+    "aquatic": {
+        "replace": [
+            ["ingot", "divinerpg:items/aquatic_ingot", "divinerpg:aquatic_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#41a0cc"
+        ],
+        "remove": {}
+    },
+    "arlemite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/arlemite_block", "divinerpg:arlemite_block"],
+            ["ingot", "divinerpg:items/arlemite_ingot", "divinerpg:arlemite_ingot"],
+            ["nugget", "divinerpg:items/arlemite_nugget", "divinerpg:arlemite_nugget"]
+        ],
+        "add": [
+            "crushed_ore",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#579f3f",
+            "piece",
+            "wire",
+            "coin",
+            "molten#579f3f"
+        ],
+        "remove": {}
+    },
+    "bloodgem": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/bloodgem_block", "divinerpg:bloodgem_block"],
+            ["gem", "divinerpg:items/bloodgem", "divinerpg:bloodgem"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#982b6a"
+        ],
+        "remove": {}
+    },
+    "bluefire_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/bluefire_stone", "divinerpg:bluefire_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#486ae3"
+        ],
+        "remove": {}
+    },
+    "corrupted_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/corrupted_stone", "divinerpg:corrupted_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#5a26ca"
+        ],
+        "remove": {}
+    },
+    "divine_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/divine_stone", "divinerpg:divine_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#c9b845"
+        ],
+        "remove": {}
+    },
+    "eden": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/eden_block", "divinerpg:eden_block"],
+            ["gem", "divinerpg:items/eden_gem", "divinerpg:eden_gem"],
+            ["parts", "divinerpg:items/eden_fragments", "divinerpg:eden_fragments"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#b85915"
+        ],
+        "remove": {}
+    },
+    "ender_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/ender_stone", "divinerpg:ender_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#c058ea"
+        ],
+        "remove": {}
+    },
+    "hellstone": {
+        "replace": [
+            ["ingot", "divinerpg:items/hellstone_ingot", "divinerpg:hellstone_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#5f2c1d"
+        ],
+        "remove": {}
+    },
+    "ice_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/ice_stone", "divinerpg:ice_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#6ed3d3"
+        ],
+        "remove": {}
+    },
+    "jungle_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/jungle_stone", "divinerpg:jungle_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#78aa1b"
+        ],
+        "remove": {}
+    },
+    "molten_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/molten_stone", "divinerpg:molten_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#c5852b"
+        ],
+        "remove": {}
+    },
+    "mortum": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/mortum_block", "divinerpg:mortum_block"],
+            ["gem", "divinerpg:items/mortum_gem", "divinerpg:mortum_gem"],
+            ["parts", "divinerpg:items/mortum_fragments", "divinerpg:mortum_fragments"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#4c4b4d"
+        ],
+        "remove": {}
+    },
+    "realmite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/realmite_block", "divinerpg:realmite_block"],
+            ["ingot", "divinerpg:items/realmite_ingot", "divinerpg:realmite_ingot"],
+            ["nugget", "divinerpg:items/realmite_nugget", "divinerpg:realmite_nugget"]
+        ],
+        "add": [
+            "crushed_ore",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#c0751e",
+            "piece",
+            "wire",
+            "coin",
+            "molten#c0751e"
+        ],
+        "remove": {}
+    },
+    "rupee": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/rupee_block", "divinerpg:rupee_block"],
+            ["ingot", "divinerpg:items/rupee_ingot", "divinerpg:rupee_ingot"],
+            ["nugget", "divinerpg:items/rupee_nugget", "divinerpg:rupee_nugget"]
+        ],
+        "add": [
+            "crushed_ore",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#42b0cf",
+            "piece",
+            "wire",
+            "coin",
+            "molten#42b0cf"
+        ],
+        "remove": {}
+    },
+    "shadow_bar": {
+        "replace": [
+            ["ingot", "divinerpg:items/shadow_bar", "divinerpg:shadow_bar"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#4f4f4f"
+        ],
+        "remove": {}
+    },
+    "shadow_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/bluefire_stone", "divinerpg:bluefire_stone"]
+        ],
+        "add": [],
+        "remove": {}
+    },
+    "skythern": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/skythern_block", "divinerpg:skythern_block"],
+            ["gem", "divinerpg:items/skythern_gem", "divinerpg:skythern_gem"],
+            ["parts", "divinerpg:items/skythern_fragments", "divinerpg:skythern_fragments"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#bbb7c0"
+        ],
+        "remove": {}
+    },
+    "terran_stone": {
+        "replace": [
+            ["gem", "divinerpg:items/terran_stone", "divinerpg:terran_stone"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#2ecc44"
+        ],
+        "remove": {}
+    },
+    "torridite": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/torridite_block", "divinerpg:torridite_block"],
+            ["ingot", "divinerpg:items/torridite_ingot", "divinerpg:torridite_ingot"],
+            ["nugget", "divinerpg:items/torridite_nugget", "divinerpg:torridite_nugget"]
+        ],
+        "add": [
+            "crushed_ore",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "fragment",
+            "gravel",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "raw_material",
+            "raw_block",
+            "slurry#ba2d21",
+            "piece",
+            "wire",
+            "coin",
+            "molten#ba2d21"
+        ],
+        "remove": {}
+    },
+    "wildwood": {
+        "replace": [
+            ["storage_block", "divinerpg:blocks/wildwood_block", "divinerpg:wildwood_block"],
+            ["gem", "divinerpg:items/wildwood_gem", "divinerpg:wildwood_gem"],
+            ["parts", "divinerpg:items/wildwood_fragments", "divinerpg:wildwood_fragments"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#70c3ee"
+        ],
+        "remove": {}
+    }
+}

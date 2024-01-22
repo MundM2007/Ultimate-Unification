@@ -121,7 +121,8 @@ function gasConvert(gasArray, withChemicalType, gasAmountPerAmount, defaultAmoun
 	if (typeof gasAmountPerAmount!="number") gasAmountPerAmount = 1
 	if (typeof defaultAmount!="number") defaultAmount = 1
 
-	let gas = {amount: typeof gasArray[1]=="number" ? Math.round(gasArray[1]/gasAmountPerAmount) : defaultAmount}
+	let amount = typeof gasArray[1]=="number" ? Math.round(gasArray[1]/gasAmountPerAmount) : defaultAmount
+	let gas = {amount: amount===0 ? 1 : amount}
 	gasArray[0].substring(0, 1)==="#" ? gas["tag"] = gasArray[0].substring(1) : gas["gas"] = gasArray[0] 
 	if (withChemicalType===true) gas["chemicalType"] = "gas"
 	return gas
@@ -131,7 +132,8 @@ function slurryConvert(slurryArray, withChemicalType, slurryAmountPerAmount, def
 	if (typeof slurryAmountPerAmount!="number") slurryAmountPerAmount = 1
 	if (typeof defaultAmount!="number") defaultAmount = 1
 
-	let slurry = {amount: typeof slurryArray[1]=="number" ? Math.round(slurryArray[1]/slurryAmountPerAmount) : defaultAmount}
+	let amount = typeof slurryArray[1]=="number" ? Math.round(slurryArray[1]/slurryAmountPerAmount) : defaultAmount
+	let slurry = {amount: amount===0 ? 1 : amount}
 	slurryArray[0].substring(0, 1)==="#" ? slurry["tag"] = slurryArray[0].substring(1) : slurry["slurry"] = slurryArray[0] 
 	if (withChemicalType===true) slurry["chemicalType"] = "slurry"
 	return slurry
@@ -149,14 +151,14 @@ function addFTBICRecipes(event, output, input, type, id) {
 
 		if (ingredient.withCount(1).tag===undefined) {
 			ingredientJson = {ingredient: {item: ingredient.id}, count: ingredient.getCount()}
+			if (ingredient.getNBT()!=null){
+				ingredientJson["ingredient"]["type"] = "forge:nbt"
+				ingredientJson["ingredient"]["nbt"] = String(ingredient.getNbt())
+			}
 		} else {
 			ingredientJson = {ingredient: {tag: ingredient.withCount(1).tag}, count: ingredient.getCount()}
 		}
-
-		if (ingredient.getNbt()!=null){
-			ingredientJson["ingredient"]["type"] = "forge:nbt"
-			ingredientJson["ingredient"]["nbt"] = String(ingredient.getNbt())
-		}
+		
 		ingredients.push(ingredientJson)
 	})
 
@@ -416,7 +418,6 @@ onEvent("loaded", e => {
 				applyID(event, id, recipe)
 			},
 			crush: (event, output, input, id) => {
-
 				applyID(event, id, {
 					type: "ars_nouveau:crush",
 					
@@ -425,15 +426,19 @@ onEvent("loaded", e => {
 				})
 			},
 			glyph_recipe: (event, output, input, tier, id) => {
-				if (typeof tier!="number" && typeof tier!="string") tier = 1
-				tier = ["ONE", "TWO", "THREE"][tier - 1]
+				if (typeof tier=="number"){
+					if (tier < 1 || tier > 3) tier = 1
+					tier = ["ONE", "TWO", "THREE"][tier - 1]
+				} else if (typeof tier=="string"){
+					if(!(["ONE", "TWO", "THREE"].includes(tier))) tier = "ONE"
+				} else {tier = "ONE"}
 
 				applyID(event, id, {
 					type: "ars_nouveau:glyph_recipe",
 					
 					input: Ingredient.of(input),
 					output: Ingredient.of(output),
-					tier: tier === undefined ? "ONE" : tier
+					tier: tier
 				})
 			}
 		},
@@ -1355,27 +1360,35 @@ onEvent("loaded", e => {
 
 				applyID(event, id, recipe)
 			},
-			squeezer: (event, outputItem, outputFluid, input, id) => {
+			squeezer: (event, outputItems, outputFluid, input, id) => {
+				outputItems = ingredientsConvert(arrConvert(outputItems))
+				outputFluid = fluidConvert(outputFluid)
+
+				let result = {}
+				if(outputItems.length > 0) result["items"] = outputItems
+				if(outputFluid.fluid != "minecraft:empty") result["fluid"] = outputFluid
+				
 				applyID(event, id, {
 					type: "integrateddynamics:squeezer",
 					item: Ingredient.of(input),
-					result: {
-						items: ingredientsConvert(outputItem),
-					  	fluid: outputFluid
-					}
+					result: result
 				})
 			},
-			mechanical_squeezer: (event, outputItem, outputFluid, input, time, id) => {
+			mechanical_squeezer: (event, outputItems, outputFluid, input, time, id) => {
+				outputItems = ingredientsConvert(arrConvert(outputItems))
+				outputFluid = fluidConvert(outputFluid)
+
+				let result = {}
+				if(outputItems.length > 0) result["items"] = outputItems
+				if(outputFluid.fluid != "minecraft:empty") result["fluid"] = outputFluid
+				
 				applyID(event, id, {
 					type: "integrateddynamics:mechanical_squeezer",
 					item: Ingredient.of(input),
-					result: {
-						items: ingredientsConvert(outputItem),
-					  	fluid: outputFluid
-					},
+					result: result,
 					duration: typeof time == "number" ? time : 10
 				})
-			},
+			}
 		},
 
 		mekanism: {
@@ -1487,8 +1500,6 @@ onEvent("loaded", e => {
 				})
 			},		
 			injecting: (event, output, inputItem, inputGas, id) => {
-				output = arrConvert(output)
-
 				applyID(event, id, {
 					type:"mekanism:injecting",
 					itemInput: Ingredient.of(inputItem),
@@ -1999,7 +2010,7 @@ onEvent("loaded", e => {
 				let temperatures = {}
 				if (typeof temperature[0]=="number") temperatures["min_temp"] = temperature[0]
 				if (typeof temperature[1]=="number") temperatures["max_temp"] = temperature[1]
-				if (temperatures!=={}) recipe["temperature"] = temperatures
+				if (Object.keys(temperatures).length === 0) recipe["temperature"] = temperatures
 
 				if (typeof pressure=="number") recipe["pressure"] = pressure
 

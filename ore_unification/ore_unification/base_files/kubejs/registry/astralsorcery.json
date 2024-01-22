@@ -1,0 +1,96 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "aquamarine": {
+        "replace": [
+            ["gem", "astralsorcery:item/aquamarine", "astralsorcery:aquamarine"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#0491c0"
+        ],
+        "remove": {}
+    },
+    "resonating_gem": {
+        "replace": [
+            ["gem", "astralsorcery:item/resonating_gem", "astralsorcery:resonating_gem"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#034c88"
+        ],
+        "remove": {}
+    },
+    "rock_crystal": {
+        "replace": [
+            ["crystal", "astralsorcery:item/crystal_rock", "astralsorcery:rock_crystal"]
+        ],
+        "add": [
+            "storage_block",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#f1f1f1"
+        ],
+        "remove": {}
+    },
+    "starmetal": {
+        "replace": [
+            ["ingot", "astralsorcery:item/starmetal_ingot", "astralsorcery:starmetal_ingot"],
+            ["storage_block", "astralsorcery:item/starmetal", "astralsorcery:starmetal"]
+        ],
+        "add": [
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "crystal",
+            "shard",
+            "clump",
+            "dirty_dust",
+            "crushed_ore",
+            "fragment",
+            "gravel",
+            "raw_material",
+            "raw_block",
+            "slurry#033b8a",
+            "piece",
+            "wire",
+            "coin",
+            "molten#033b8a"
+        ],
+        "remove": {}
+    }
+}
