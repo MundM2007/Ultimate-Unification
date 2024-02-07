@@ -297,7 +297,7 @@
         "remove": {
             "dust": [
                 "appliedenergistics2:nether_quartz_dust",
-                "mekanims:dust_quartz",
+                "mekanism:dust_quartz",
                 "thermal:quartz_dust",
                 "nuclearcraft:gem_dust_quartz",
                 "envirocore:quartz_powder",

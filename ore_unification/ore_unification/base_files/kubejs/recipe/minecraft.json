@@ -251,6 +251,7 @@
     },
     "gold": {
         "variants": {
+            "energy_from_coin": 64000,
             "molten": "tconstruct:molten_gold",
             "clean_slurry": "mekanism:clean_gold",
             "dirty_slurry": "mekanism:dirty_gold"
@@ -280,6 +281,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_raw",
@@ -287,9 +289,12 @@
             "occultism.ore_processing_metal",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal",
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "appliedenergistics2:grinder/gold_dust_ore",
@@ -357,6 +362,7 @@
             "silents_mechanisms:crushing/gold_dust_from_ingot",
             "silents_mechanisms:smelting/gold_ingot",
             "tconstruct:smeltery/melting/metal/gold/ore",
+            "thermal:fuels/numismatic/numismatic_gold_coin",
             "thermal:machine/press/packing3x3/press_gold_packing",
             "thermal:machine/press/unpacking/press_gold_unpacking",
             "thermal:machine/pulverizer/pulverizer_gold_ore",
@@ -366,6 +372,7 @@
     },
     "iron": {
         "variants": {
+            "energy_from_coin": 32000,
             "molten": "tconstruct:molten_iron",
             "clean_slurry": "mekanism:clean_iron",
             "dirty_slurry": "mekanism:dirty_iron"
@@ -380,7 +387,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.ore_processing_metal",
@@ -394,6 +400,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.storage_convert_raw",
             "minecraft.smelting_recipes",
@@ -401,9 +408,12 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal",
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "appliedenergistics2:grinder/iron_dust_ore",
@@ -472,6 +482,7 @@
             "silents_mechanisms:crushing/iron_dust",
             "silents_mechanisms:smelting/iron_ingot",
             "tconstruct:smeltery/melting/metal/iron/ore",
+            "thermal:fuels/numismatic/numismatic_iron_coin",
             "thermal:machine/press/packing3x3/press_iron_packing",
             "thermal:machine/press/unpacking/press_iron_unpacking",
             "thermal:machine/pulverizer/pulverizer_iron_ore",
@@ -552,7 +563,8 @@
     },
     "netherite": {
         "variants": {
-            "molten": "tconstruct:molten_netherite"
+            "molten": "tconstruct:molten_netherite",
+            "energy_from_coin": 320000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -583,6 +595,7 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.ingot_in_smelter",
             "thermal.rod",
             "thermal.storage_convert_metal"
@@ -597,6 +610,7 @@
             "minecraft:netherite_ingot_from_netherite_block",
             "potionsmaster:netherite_powder",
             "tconstruct:common/materials/netherite_nugget_from_ingot",
+            "thermal:fuels/numismatic/numismatic_netherite_coin",
             "thermal:machine/press/packing3x3/press_netherite_packing",
             "thermal:machine/press/unpacking/press_netherite_unpacking",
             "thermal:parts/netherite_gear"

@@ -85,7 +85,6 @@
             ["gem", "divinerpg:items/bloodgem", "divinerpg:bloodgem"]
         ],
         "add": [
-            "storage_block",
             "dust",
             "plate",
             "rod",
@@ -334,7 +333,7 @@
     },
     "shadow_stone": {
         "replace": [
-            ["gem", "divinerpg:items/bluefire_stone", "divinerpg:bluefire_stone"]
+            ["gem", "divinerpg:items/shadow_stone", "divinerpg:shadow_stone"]
         ],
         "add": [],
         "remove": {}

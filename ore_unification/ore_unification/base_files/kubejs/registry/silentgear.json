@@ -85,11 +85,11 @@
             ["ingot", "silentgear:item/crimson_iron_ingot", "silentgear:crimson_iron_ingot"],
             ["storage_block", "silentgear:block/crimson_iron_block", "silentgear:crimson_iron_block"],
             ["nugget", "silentgear:item/crimson_iron_nugget", "silentgear:crimson_iron_nugget"],
+            ["dust", "silentgear:item/crimson_iron_dust", "silentgear:crimson_iron_dust"],
             ["raw_material", "silentgear:item/raw_crimson_iron", "silentgear:raw_crimson_iron"],
             ["raw_block", "silentgear:block/raw_crimson_iron_block", "silentgear:raw_crimson_iron_block"]
         ],
         "add": [
-            "dust",
             "fragment",
             "gravel",
             "crystal",

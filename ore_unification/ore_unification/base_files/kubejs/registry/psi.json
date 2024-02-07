@@ -23,7 +23,6 @@
             ["storage_block", "psi:blocks/ebony_psimetal_block", "psi:ebony_psimetal_block"]
         ],
         "add": [
-            "storage_block",
             "nugget",
             "dust",
             "plate",
@@ -41,7 +40,6 @@
             ["storage_block", "psi:blocks/ivory_psimetal_block", "psi:ivory_psimetal_block"]
         ],
         "add": [
-            "storage_block",
             "nugget",
             "dust",
             "plate",
@@ -51,6 +49,13 @@
             "coin",
             "molten#dddfd2"
         ],
+        "remove": {}
+    },
+    "psidust": {
+        "replace": [
+            ["dust", "psi:items/psidust", "psi:psidust"]
+        ],
+        "add": [],
         "remove": {}
     },
     "psigem": {
@@ -64,11 +69,11 @@
     "psimetal": {
         "replace": [
             ["ingot", "psi:items/psimetal", "psi:psimetal"],
-            ["storage_block", "psi:blocks/psimetal_block", "psi:psimetal_block"],
-            ["dust", "psi:items/psidust", "psi:psidust"]
+            ["storage_block", "psi:blocks/psimetal_block", "psi:psimetal_block"]
         ],
         "add": [
             "nugget",
+            "dust",
             "plate",
             "rod",
             "gear",

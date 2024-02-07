@@ -19,8 +19,7 @@
     ],
     "pink_slime": {
         "replace": [
-            ["ingot", "industrialforegoing:items/pink_slime_ingot", "industrialforegoing:pink_slime_ingot"],
-            ["gem", "industrialforegoing:items/pink_slime", "industrialforegoing:pink_slime"]
+            ["ingot", "industrialforegoing:items/pink_slime_ingot", "industrialforegoing:pink_slime_ingot"]
         ],
         "add": [
             "storage_block",
@@ -30,8 +29,16 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "molten#b45ca5"
         ],
+        "remove": {}
+    }, 
+    "pink_slime_gem": {
+        "replace": [
+            ["gem", "industrialforegoing:items/pink_slime", "industrialforegoing:pink_slime"]
+        ],
+        "add": [],
         "remove": {}
     }
 }

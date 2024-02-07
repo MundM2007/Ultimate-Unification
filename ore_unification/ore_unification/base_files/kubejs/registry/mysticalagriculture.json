@@ -29,8 +29,7 @@
             "rod",
             "gear",
             "wire",
-            "coin",
-            "molten#720000"
+            "coin"
         ],
         "remove": {}
     },
@@ -62,31 +61,6 @@
         "replace": [
             ["storage_block", "mysticalagriculture:block/inferium_gemstone_block", "mysticalagriculture:inferium_gemstone_block"],
             ["gem", "mysticalagriculture:item/inferium_gemstone", "mysticalagriculture:inferium_gemstone"]
-        ],
-        "add": [],
-        "remove": {}
-    },
-    "insanium": {
-        "replace": [
-            ["ingot", "mysticalagriculture:item/insanium_ingot", "mysticalagriculture:insanium_ingot"],
-            ["storage_block", "mysticalagriculture:block/insanium_ingot_block", "mysticalagriculture:insanium_ingot_block"],
-            ["nugget", "mysticalagriculture:item/insanium_nugget", "mysticalagriculture:insanium_nugget"]
-        ],
-        "add": [
-            "dust",
-            "plate",
-            "rod",
-            "gear",
-            "wire",
-            "coin",
-            "molten#6800a3"
-        ],
-        "remove": {}
-    },
-    "insanium_gem": {
-        "replace": [
-            ["storage_block", "mysticalagriculture:block/insanium_gemstone_block", "mysticalagriculture:insanium_gemstone_block"],
-            ["gem", "mysticalagriculture:item/insanium_gemstone", "mysticalagriculture:insanium_gemstone"]
         ],
         "add": [],
         "remove": {}

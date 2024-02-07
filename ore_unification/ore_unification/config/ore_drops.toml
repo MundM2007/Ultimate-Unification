@@ -101,7 +101,7 @@ drops = [
     ['metal', 'lithium', 'kubejs:lithium_raw', 1],
     ['metal', 'magnesium', 'kubejs:magnesium_raw', 1],
     ['metal', 'thorium', 'kubejs:thorium_raw', 1],
-    ['metal', 'uraninite', 'kubejs:uraninite_raw', 1],
+    ['metal', 'uraninite', 'powah:uraninite', 1],
     ['gem', 'electrotine', 'projectred-core:electrotine_dust', [4, 5]],
     ['gem', 'peridot', 'projectred-core:peridot', [2, 3, 4]],
     ['gem', 'dimensional_shard', 'rftoolsbase:dimensionalshard', 1],

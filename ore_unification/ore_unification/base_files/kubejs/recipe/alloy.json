@@ -168,7 +168,8 @@
     },
     "bronze": {
         "variants": {
-            "molten": "tconstruct:molten_bronze"
+            "molten": "tconstruct:molten_bronze",
+            "energy_from_coin": 36000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -195,6 +196,7 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.rod",
             "thermal.storage_convert_metal"
         ],
@@ -212,6 +214,7 @@
             "silents_mechanisms:metals/bronze_ingot_from_nugget",
             "silents_mechanisms:metals/bronze_nugget",
             "silents_mechanisms:smelting/bronze_ingot",
+            "thermal:fuels/numismatic/numismatic_bronze_coin",
             "thermal:machine/press/packing3x3/press_bronze_packing",
             "thermal:machine/press/unpacking/press_bronze_unpacking",
             "thermal:parts/bronze_gear"
@@ -219,7 +222,7 @@
     },
     "cast_iron": {
         "variants": {
-            "energy_from_coin": 32000
+            "energy_from_coin": 36000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -310,7 +313,8 @@
     },
     "constantan": {
         "variants": {
-            "molten": "tconstruct:molten_constantan"
+            "molten": "tconstruct:molten_constantan",
+            "energy_from_coin": 52000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -338,11 +342,13 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.rod",
             "thermal.storage_convert_metal"
         ],
         "remove": [
             "immersiveposts:has_constantan_rod",
+            "thermal:fuels/numismatic/numismatic_constantan_coin",
             "thermal:machine/press/packing3x3/press_constantan_packing",
             "thermal:machine/press/unpacking/press_constantan_unpacking",
             "thermal:parts/constantan_gear"
@@ -350,7 +356,8 @@
     },
     "electrum": {
         "variants": {
-            "molten": "tconstruct:molten_electrum"
+            "molten": "tconstruct:molten_electrum",
+            "energy_from_coin": 60000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -379,6 +386,7 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.rod",
             "thermal.storage_convert_metal"
         ],
@@ -391,6 +399,7 @@
             "silents_mechanisms:metals/electrum_ingot_from_nugget",
             "silents_mechanisms:metals/electrum_nugget",
             "silents_mechanisms:smelting/electrum_ingot",
+            "thermal:fuels/numismatic/numismatic_electrum_coin",
             "thermal:machine/press/packing3x3/press_electrum_packing",
             "thermal:machine/press/unpacking/press_electrum_unpacking",
             "thermal:parts/electrum_gear"
@@ -398,7 +407,8 @@
     },
     "enderium": {
         "variants": {
-            "molten": "tconstruct:molten_enderium"
+            "molten": "tconstruct:molten_enderium",
+            "energy_from_coin": 140000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -431,6 +441,7 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_metal"
@@ -443,11 +454,13 @@
             "silents_mechanisms:metals/enderium_ingot_from_nugget",
             "silents_mechanisms:metals/enderium_nugget",
             "silents_mechanisms:smelting/enderium_ingot",
+            "thermal:fuels/numismatic/numismatic_enderium_coin",
             "thermal:machine/press/packing3x3/press_enderium_packing",
             "thermal:machine/press/unpacking/press_enderium_unpacking",
             "thermal:parts/enderium_gear"
         ]
     },
+    "ender_pearl": {},
     "graphite": {
         "variants": {
             "energy_from_coin": 16000
@@ -499,9 +512,11 @@
             "biggerreactors:crafting/graphite_block"
         ]
     },
+    "flour": {},
     "invar": {
         "variants": {
-            "molten": "tconstruct:molten_invar"
+            "molten": "tconstruct:molten_invar",
+            "energy_from_coin": 48000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -529,6 +544,7 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.rod",
             "thermal.storage_convert_metal"
         ],
@@ -540,6 +556,7 @@
             "silents_mechanisms:metals/invar_ingot_from_nugget",
             "silents_mechanisms:metals/invar_nugget",
             "silents_mechanisms:smelting/invar_ingot",
+            "thermal:fuels/numismatic/numismatic_invar_coin",
             "thermal:machine/press/packing3x3/press_invar_packing",
             "thermal:machine/press/unpacking/press_invar_unpacking",
             "thermal:parts/invar_gear"
@@ -547,7 +564,8 @@
     },
     "lumium": {
         "variants": {
-            "molten": "tconstruct:molten_lumium"
+            "molten": "tconstruct:molten_lumium",
+            "energy_from_coin": 76000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -580,21 +598,23 @@
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
+            "thermal.coin_to_energy",
             "thermal.ingot_in_chiller",
             "thermal.rod",
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/invar_ingot",
-            "silents_mechanisms:crushing/invar_dust_from_ingot",
-            "silents_mechanisms:metals/invar_block",
-            "silents_mechanisms:metals/invar_ingot_from_block",
-            "silents_mechanisms:metals/invar_ingot_from_nugget",
-            "silents_mechanisms:metals/invar_nugget",
-            "silents_mechanisms:smelting/invar_ingot",
-            "thermal:machine/press/packing3x3/press_invar_packing",
-            "thermal:machine/press/unpacking/press_invar_unpacking",
-            "thermal:parts/invar_gear"
+            "silents_mechanisms:blasting/lumium_ingot",
+            "silents_mechanisms:crushing/lumium_dust_from_ingot",
+            "silents_mechanisms:metals/lumium_block",
+            "silents_mechanisms:metals/lumium_ingot_from_block",
+            "silents_mechanisms:metals/lumium_ingot_from_nugget",
+            "silents_mechanisms:metals/lumium_nugget",
+            "silents_mechanisms:smelting/lumium_ingot",
+            "thermal:fuels/numismatic/numismatic_lumium_coin",
+            "thermal:machine/press/packing3x3/press_lumium_packing",
+            "thermal:machine/press/unpacking/press_lumium_unpacking",
+            "thermal:parts/lumium_gear"
         ]
     },
     "manganese": {
@@ -648,6 +668,7 @@
             "nuclearcraft:smelting/dust_manganese_from_ingot_manganese"
         ]
     },
+    "obsidian": {},
     "red_alloy": {
         "variants": {
             "energy_from_coin": 40000
@@ -705,6 +726,7 @@
             "silents_mechanisms:smelting/redstone_alloy_ingot"
         ]
     },
+    "salt": {},
     "signalum": {
         "variants": {
             "energy_from_coin": 64000,
@@ -755,6 +777,7 @@
             "silents_mechanisms:metals/signalum_ingot_from_nugget",
             "silents_mechanisms:metals/signalum_nugget",
             "silents_mechanisms:smelting/signalum_ingot",
+            "thermal:fuels/numismatic/numismatic_signalum_coin",
             "thermal:machine/press/packing3x3/press_signalum_packing",
             "thermal:machine/press/press_signalum_ingot_to_coin",
             "thermal:machine/press/press_signalum_nugget_to_coin",
@@ -762,6 +785,7 @@
             "thermal:parts/signalum_gear"
         ]
     },
+    "silicon": {},
     "steel": {
         "variants": {
             "energy_from_coin": 40000,
@@ -820,6 +844,7 @@
             "silents_mechanisms:smelting/steel_ingot"
         ]
     },
+    "wood": {},
     "zirconium": {
         "variants": {
             "energy_from_coin": 8000

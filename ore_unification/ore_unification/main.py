@@ -43,9 +43,39 @@
 #           ritual of the forest ore aren't using tags
 #           netherite ore processing + calcinated netherite powder isn't using tags + dust from blood magic
 #           quartz: add casting and smelting of block
+#           bitumen: obtaining and usage from immersive petroleum and thermal + ore processing
+#           sapphire drops from mobs aoa
+#           sulfur (immersive petroleum, eidolon)
+#           generally add burn time to specific items (sulfur, bitumen, coal coke ...)
+#           skeletal ore processing
+#           certus quartz block pack and unpack
+#           fluix thermal storage convert
+#           neptunium, does it give correct one (fishing)
+#           aquamarine ore recipe
+#           nebu ore processing
+#           storage_convert and ore processing for amber
+#           ice shard ore recipe
+#           boss tools wire recipes in tconstruct
+#           pendorite ore processing
+#           chromatic compound recipe 
+#           apalachia, eden... ore processing
+#           stellarite forbidden and arachnus ore processing
+#           check if pink slime is correct
+#           add minecraft.smelting_recipes without dust to refined obsidian
+#           add minecraft.smelting_recipes and tconstruct melting without dust to soulium
+#           add ore processing recipes to prosperity and soulium
+#           adjust manganese and sic_sic_cmc coin value and recipes that uses them (check recipes in 1.12)
+#           adjust fluid amount for nc (boron arsenide, boron nitride)
+#           asjust silicon carbide alloy recipe
+#           electrotine ore processing recipes + smelting (tc + mc) recipes without dust
+#           remove recipes using silent gear / mekanisms chunks
+#           add compat recipes for tconstruct alloys + maybe others aswell
+
+#           add a recipe type that would just copy over the gem multiplier to a kubejs read file (for custom scripts)
+
 #       Unify Essences: from mystical agriculture
 #       Unify Fluids: 
-#           Aluminum, Boron, Lithium, Silver, Beryllium, Manganese, Steel, Coal, basically every one from (nc)
+#           Aluminum, Boron, Lithium, Silver, Beryllium, Manganese, Steel, Coal, sulfur, basically every one from (nc)
 #           from create automated
 #           Destabelized redstone
 
@@ -55,7 +85,6 @@
 #       nature's aura
 #       mythicbotany
 #       the twilight forest
-#       redo manganese (move to alloy)
 #       wood gear texture
 
 
@@ -992,8 +1021,6 @@ def register_recipes(id_file, id_name, base_file_registry):
 
             elif recipe[0] == "engineerstools.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
 
-            elif recipe[0] == "exnihilo.pieces_to_raw": recipes.append(pass_inputs([id_name, mns.get('raw_material')], recipe[1:2]))
-
             elif recipe[0] == "ftbic.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('dust'), mns.get("gem_multiplyer")], recipe[1:2]))
             elif recipe[0] == "ftbic.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
 
@@ -1009,6 +1036,7 @@ def register_recipes(id_file, id_name, base_file_registry):
                 
             elif recipe[0] == "minecraft.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
             elif recipe[0] == "minecraft.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
+            elif recipe[0] == "minecraft.pieces_to_raw": recipes.append(pass_inputs([id_name, mns.get('raw_material')], recipe[1:2]))
             elif recipe[0] == "minecraft.smelting_recipes": recipes.append(pass_inputs([id_name, [mns.get('ingot'), mns.get('gem')], mns.get('nugget'), False], recipe[1:2]))
             elif recipe[0] == "minecraft.storage_convert_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get('block')], recipe[1:2]))
             elif recipe[0] == "minecraft.storage_convert_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('block'), mns.get('nugget')], recipe[1:2]))
@@ -1019,20 +1047,22 @@ def register_recipes(id_file, id_name, base_file_registry):
             elif recipe[0] == "silents_mechanisms.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
             elif recipe[0] == "silents_mechanisms.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('dust')], recipe[1:2]))
 
+            elif recipe[0] == "tconstruct.casting": recipes.append(pass_inputs([mns.get('molten'), mns.get('storage_block'), mns.get('ingot'), mns.get('nugget'), mns.get('gem'),
+                                                                                mns.get('plate'), mns.get('gear'), mns.get('rod'), mns.get('wire'), mns.get('coin')], recipe[1:2]))
             elif recipe[0] == "tconstruct.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('molten'), mns.get("gem_multiplyer")], recipe[1:2]))
             elif recipe[0] == "tconstruct.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('molten')], recipe[1:2]))
             elif recipe[0] == "tconstruct.smelting": recipes.append(pass_inputs([id_name, mns.get('molten')], recipe[1:2]))
-            elif recipe[0] == "tconstruct.casting": recipes.append(pass_inputs([mns.get('molten'), mns.get('storage_block'), mns.get('ingot'), mns.get('nugget'), mns.get('gem'),
-                                                                                mns.get('plate'), mns.get('gear'), mns.get('rod'), mns.get('wire'), mns.get('coin')], recipe[1:2]))
             
             elif recipe[0] == "thermal.coin_to_energy": recipes.append(pass_inputs([id_name, mns.get('energy_from_coin')], recipe[1:2]))
             elif recipe[0] == "thermal.ingot_in_chiller": recipes.append(pass_inputs([mns.get('molten'), mns.get('ingot')], recipe[1:2]))
             elif recipe[0] == "thermal.ingot_in_smelter": recipes.append(pass_inputs([id_name, mns.get('ingot')], recipe[1:2]))
             elif recipe[0] == "thermal.ore_processing_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get("gem_multiplyer")], recipe[1:2]))
             elif recipe[0] == "thermal.ore_processing_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('dust')], recipe[1:2]))
+            elif recipe[0] == "thermal.pieces_to_raw": recipes.append(pass_inputs([id_name, mns.get('piece')], recipe[1:2]))
             elif recipe[0] == "thermal.rod": recipes.append(pass_inputs([mns.get("molten"), mns.get("rod")], recipe[1:2]))
             elif recipe[0] == "thermal.storage_convert_gem": recipes.append(pass_inputs([id_name, mns.get('gem'), mns.get('block')], recipe[1:2]))
             elif recipe[0] == "thermal.storage_convert_metal": recipes.append(pass_inputs([id_name, mns.get('ingot'), mns.get('block'), mns.get('nugget')], recipe[1:2]))
+            elif recipe[0] == "thermal.storage_convert_raw": recipes.append(pass_inputs([id_name, mns.get('raw_material'), mns.get('raw_block')], recipe[1:2]))
 
             else: 
                 logging("recipe_error", f"Unknown recipe type: {recipe[0]}")

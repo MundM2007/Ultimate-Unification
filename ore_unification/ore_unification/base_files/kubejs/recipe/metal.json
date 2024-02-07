@@ -39,7 +39,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin", 
             "ftbic.dust",
             "ftbic.gear",
@@ -54,6 +53,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -71,10 +71,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
-            "thermal.ore_processing_metal",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_aluminum_compat_immersiveengineering",
@@ -112,7 +114,7 @@
             "thermal:compat/immersiveengineering/pulverizer_ie_aluminum_ore"
         ]
     },
-    "bismtuh": {
+    "bismuth": {
         "variants": {
             "energy_from_coin": 64000
         },
@@ -133,7 +135,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -152,6 +153,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -171,10 +173,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "silents_mechanisms:blasting/bismuth_ingot",
@@ -211,7 +215,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -230,6 +233,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -249,10 +253,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "nuclearcraft:smelting/ore_boron_to_ingot_boron"
@@ -279,7 +285,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -294,6 +299,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -309,10 +315,12 @@
             "thermal.coin_to_energy",
             "thermal.dust",
             "thermal.gear",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "exnihilosequentia:ens_ingot_cobalt",
@@ -330,6 +338,7 @@
     },
     "copper": {
         "variants":{
+            "energy_from_coin": 32000,
             "molten": "tconstruct:molten_copper",
             "clean_slurry": "mekanism:clean_copper",
             "dirty_slurry": "mekanism:dirty_copper"
@@ -350,7 +359,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.ore_processing_metal",
@@ -362,6 +370,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.storage_convert_metal",
             "minecraft.storage_convert_raw",
@@ -371,9 +380,12 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/copper_ingot_from_crushed",
@@ -450,6 +462,7 @@
             "tconstruct:common/materials/copper_ingot_blasting", 
             "tconstruct:common/materials/copper_ingot_smelting", 
             "tconstruct:smeltery/melting/metal/copper/ore",
+            "thermal:fuels/numismatic/numismatic_copper_coin",
             "thermal:parts/copper_gear",
             "thermal:machine/press/unpacking/press_copper_unpacking",
             "thermal:machine/press/packing3x3/press_copper_packing",
@@ -480,7 +493,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -499,6 +511,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -518,14 +531,17 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ]
     },
     "lead": {
         "variants": {
+            "energy_from_coin": 48000,
             "molten": "tconstruct:molten_lead",
             "clean_slurry": "mekanism:clean_lead",
             "dirty_slurry": "mekanism:dirty_lead"
@@ -547,7 +563,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -560,6 +575,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -570,9 +586,11 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
+            "thermal.coin_to_energy",
             "thermal.ore_processing_metal",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_lead_compat_immersiveengineering",
@@ -643,6 +661,7 @@
             "silents_mechanisms:smelting/lead_ingot",
             "silents_mechanisms:smelting/lead_ingot_from_ore",
             "tconstruct:smeltery/melting/metal/lead/ore",
+            "thermal:fuels/numismatic/numismatic_lead_coin",
             "thermal:machine/press/packing3x3/press_lead_packing",
             "thermal:machine/press/unpacking/press_lead_unpacking",
             "thermal:machine/pulverizer/pulverizer_lead_ore",
@@ -673,7 +692,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -692,6 +710,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -711,10 +730,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "nuclearcraft:smelting/ore_lithium_to_ingot_lithium"
@@ -741,7 +762,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -760,6 +780,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -779,10 +800,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "nuclearcraft:smelting/ore_magnesium_to_ingot_magnesium"
@@ -790,7 +813,8 @@
     },
     "nickel": {
         "variants": {
-            "molten": "tconstruct:molten_nickel"
+            "molten": "tconstruct:molten_nickel",
+            "energy_from_coin": 64000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -809,7 +833,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -822,6 +845,7 @@
             "mekanism.dust",
             "mekanism.ore_processing_metal",
             "minecraft.gear",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -832,9 +856,12 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_nickel_compat_immersiveengineering",
@@ -871,6 +898,7 @@
             "silents_mechanisms:smelting/nickel_ingot",
             "silents_mechanisms:smelting/nickel_ingot_from_ore",
             "tconstruct:smeltery/melting/metal/nickel/ore",
+            "thermal:fuels/numismatic/numismatic_nickel_coin",
             "thermal:machine/press/packing3x3/press_nickel_packing",
             "thermal:machine/press/unpacking/press_nickel_unpacking",
             "thermal:machine/pulverizer/pulverizer_nickel_ore",
@@ -904,7 +932,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -917,6 +944,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -933,10 +961,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_osmium_compat_mekanism",
@@ -997,7 +1027,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1011,6 +1040,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1028,10 +1058,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/platinum_ingot_compat_silents_mechanisms",
@@ -1060,7 +1092,8 @@
     },
     "silver": {
         "variants": {
-            "molten": "tconstruct:molten_silver"
+            "molten": "tconstruct:molten_silver",
+            "energy_from_coin": 48000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -1079,7 +1112,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1093,6 +1125,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1102,9 +1135,12 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_silver_compat_immersiveengineering",
@@ -1154,6 +1190,7 @@
             "silents_mechanisms:smelting/silver_ingot",
             "silents_mechanisms:smelting/silver_ingot_from_ore",
             "tconstruct:smeltery/melting/metal/silver/ore",
+            "thermal:fuels/numismatic/numismatic_silver_coin",
             "thermal:machine/press/packing3x3/press_silver_packing",
             "thermal:machine/press/unpacking/press_silver_unpacking",
             "thermal:machine/pulverizer/pulverizer_silver_ore",
@@ -1184,7 +1221,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1203,6 +1239,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1222,10 +1259,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "nuclearcraft:smelting/ore_thorium_to_ingot_thorium"
@@ -1235,7 +1274,8 @@
         "variants": {
             "molten": "tconstruct:molten_tin",
             "clean_slurry": "mekanism:clean_tin",
-            "dirty_slurry": "mekanism:dirty_tin"
+            "dirty_slurry": "mekanism:dirty_tin",
+            "energy_from_coin": 32000
         },
         "add": [
             "appliedenergistics2.dust",
@@ -1254,7 +1294,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1267,6 +1306,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1277,9 +1317,12 @@
             "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
-            "thermal.ore_processing_metal",
+            "thermal.coin_to_energy",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "create:blasting/ingot_tin_compat_mekanism",
@@ -1335,6 +1378,7 @@
             "silents_mechanisms:smelting/tin_ingot",
             "silents_mechanisms:smelting/tin_ingot_from_ore",
             "tconstruct:smeltery/melting/metal/tin/ore",
+            "thermal:fuels/numismatic/numismatic_tin_coin",
             "thermal:machine/press/packing3x3/press_tin_packing",
             "thermal:machine/press/unpacking/press_tin_unpacking",
             "thermal:machine/pulverizer/pulverizer_tin_ore",
@@ -1344,7 +1388,7 @@
             "thermal:smelting/tin_ingot_from_ore_smelting"
         ]
     },
-    "titaniun": {
+    "titanium": {
         "variants": {
             "energy_from_coin": 64000
         },
@@ -1365,7 +1409,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1384,6 +1427,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1403,10 +1447,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ]
     },
     "tungsten": {
@@ -1431,7 +1477,6 @@
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
             "ftbic.coin",
             "ftbic.dust",
             "ftbic.gear",
@@ -1445,6 +1490,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1462,10 +1508,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "immersiveengineering:arcfurnace/ore_tungsten",
@@ -1510,6 +1558,7 @@
             "mekanism.ore_processing_metal",
             "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
@@ -1526,10 +1575,12 @@
             "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
             "thermal.plate",
             "thermal.rod",
-            "thermal.storage_convert_metal"
+            "thermal.storage_convert_metal", 
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "biggerreactors:crafting/yellorium_block",
@@ -1543,7 +1594,6 @@
             "create:crushing/uranium_ore",
             "create:milling/uranium_ore",
             "engineerstools:crushing/uranium_grit_crushing_recipe",
-            "exnihilo.pieces_to_raw",
             "exnihilomekanism:ens_ingot_uranium",
             "exnihilomekanism:ens_ingot_uranium",
             "immersiveengineering:arcfurnace/ore_uranium",
@@ -1597,34 +1647,58 @@
             "molten": "tconstruct:molten_zinc"
         },
         "add": [
-            "ftbic.coin", "thermal.coin","appliedenergistics2.dust", "bloodmagic.dust", "create.dust", "ftbic.dust", "mekanism.dust", "occultism.dust",
-            "potionsmaster.dust", "silents_mechanisms.dust", "thermal.dust", "ftbic.gear", "thermal.gear", "minecraft.gear", "boss_tools.plate", 
-            "boss_tools_giselle_addon.plate", "ftbic.plate", "thermal.plate",
-            "boss_tools_giselle_addon.rod", "createaddition.rod", "ftbic.rod", "minecraft.rod",
-            "boss_tools_giselle_addon.wire", "createaddition.wire", "ftbic.wire", "minecraft.wire",
+            "appliedenergistics2.dust",
             "appliedenergistics2.ore_processing",
             "astralsorcery.ore_processing_metal",
             "betterendforge.ore_processing_metal",
+            "bloodmagic.dust",
             "bloodmagic.ore_processing_metal",
+            "boss_tools.plate",
+            "boss_tools_giselle_addon.plate",
+            "boss_tools_giselle_addon.rod",
+            "boss_tools_giselle_addon.wire",
+            "create.dust",
             "create.ore_processing_metal",
+            "createaddition.rod",
+            "createaddition.wire",
             "engineerstools.ore_processing_metal",
-            "exnihilo.pieces_to_raw",
+            "ftbic.coin",
+            "ftbic.dust",
+            "ftbic.gear",
             "ftbic.ore_processing_metal",
+            "ftbic.plate",
+            "ftbic.rod",
+            "ftbic.wire",
             "immersiveengineering.ore_processing_metal",
             "integrateddynamics.ore_processing_metal",
+            "mekanism.dust",
             "mekanism.ore_processing_metal",
+            "minecraft.gear",
             "minecraft.ore_processing_metal",
+            "minecraft.pieces_to_raw",
+            "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
             "minecraft.storage_convert_raw",
+            "minecraft.wire",
+            "occultism.dust",
             "occultism.ore_processing_metal",
+            "potionsmaster.dust",
+            "silents_mechanisms.dust",
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
+            "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.dust",
+            "thermal.gear",
             "thermal.ingot_in_chiller",
             "thermal.ingot_in_smelter",
-            "thermal.ore_processing_metal",
-            "thermal.rod"
+            "thermal.ore_processing_metal", 
+            "thermal.pieces_to_raw",
+            "thermal.plate",
+            "thermal.rod",
+            "thermal.storage_convert_metal",
+            "thermal.storage_convert_raw"
         ],
         "remove": [
             "silents_mechanisms:crushing/zinc_dust", 
@@ -1656,8 +1730,7 @@
             "create:crafting/materials/zinc_block_from_compacting",
             "tconstruct:smeltery/melting/metal/zinc/ore",
             "thermal:compat/create/pulverizer_create_zinc_ore",
-            "thermal:compat/create/smelter_create_zinc_ore",
-            "thermal.storage_convert_metal"
+            "thermal:compat/create/smelter_create_zinc_ore"
         ]
     }
 }

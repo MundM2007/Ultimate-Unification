@@ -19,7 +19,7 @@
     ],
     "ametrine": {
         "replace": [
-            ["parts", "byg:item/ametrine_gems", "byg:ametrine_gems"],
+            ["gem", "byg:item/ametrine_gems", "byg:ametrine_gems"],
             ["storage_block", "byg:block/ametrine_block", "byg:ametrine_block"]
         ],
         "add": [

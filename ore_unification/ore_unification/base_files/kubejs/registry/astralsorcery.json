@@ -91,6 +91,10 @@
             "coin",
             "molten#033b8a"
         ],
-        "remove": {}
+        "remove": {
+            "dust": [
+                "silentgear:starmetal_dust"
+            ]
+        }
     }
 }

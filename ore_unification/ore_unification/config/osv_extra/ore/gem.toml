@@ -126,9 +126,9 @@
 
 
 [[ore]]
-    id = "rupy"
+    id = "ruby"
     dim = ["overworld", "nether", "end", "atum"]
-    displayName = "Rupy Ore"
+    displayName = "Ruby Ore"
     active = true
 
     [ore.texture]
