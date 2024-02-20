@@ -127,32 +127,34 @@ import shutil
 
 start_time = time.time()
 
-path_ = __file__.removesuffix("main.py").replace("/", "\\")
+path_ = os.path.abspath(os.path.dirname(__file__))
 
 # clears / generates logging file
-if not os.path.isdir(f"{path_}logs"):
-    os.makedirs(f"{path_}logs")
-with open(f"{path_}logs\\latest.log", mode="w") as file_log:
+if not os.path.isdir(os.path.join(path_, "logs")):
+    os.makedirs(os.path.join(path_, "logs"))
+with open(os.path.join(path_, "logs", "latest.log"), mode="w") as file_log:
     file_log.close()
 
 # generates constant logging file
 index_logging = 0
 while True:
     file_log_constant_name = f"log-{time.strftime('%Y-%m-%d', time.gmtime(start_time))}-{index_logging}.log"
-    if not os.path.isfile(f"{path_}logs\\{file_log_constant_name}"):
-        with open(f"{path_}logs\\{file_log_constant_name}", mode="w") as file_log_constant:
+    if not os.path.isfile(os.path.join(path_, "logs", file_log_constant_name)):
+        with open(os.path.join(path_, "logs", file_log_constant_name), mode="w") as file_log_constant:
             break
     index_logging += 1
 
 # checks if all base files exist
 def check_base_files():
     for i in range(1, 11):
-        if not os.path.isfile(f"{path_}textures\\overlay_base\\ore_{i}.png"):
+        if not os.path.isfile(os.path.join(path_, "textures", "overlay_base", "ore_{i}.png")):
             logging("file_missing", f"Missing Overlay Base texture file: ore_{i}")
 
-    for file in [f"{path_}base_files\\osv\\osv-common_base.txt",
-                 f"{path_}base_files\\osv\\osv-common_base_default.toml",
-                 f"{path_}base_files\\osv\\osv-common_values.json"]:
+    for file in [
+        os.path.join(path_, "base_files", "osv", "osv-common_base.txt"),
+        os.path.join(path_, "base_files", "osv", "osv-common_base_default.toml"),
+        os.path.join(path_, "base_files", "osv", "osv-common_values.json")
+    ]:
         if not os.path.isfile(file):
             logging("file_missing", f"Missing Base File: {file}")
 
@@ -161,17 +163,21 @@ def check_base_files():
 def clear_path(path_f):
     if os.path.isdir(path_f):
         for file in os.listdir(path_f):
-            if os.path.isfile(path_f + "\\" + file):
-                os.remove(path_f + "\\" + file)
+            if os.path.isfile(os.path.join(path_f, file)):
+                os.remove(os.path.join(path_f, file))
             else:
-                shutil.rmtree(path_f + "\\" + file)
+                shutil.rmtree(os.path.join(path_f, file))
 
 
 # generates folders
 def gen_folders():
-    for path_create in [f"{path_to_osv_ores}custom", f"{path_to_osv_assets}blockstates",
-                        f"{path_to_osv_assets}textures\\block\\custom", f"{path_to_osv_assets}models\\item",
-                        f"{path_to_osv_assets}models\\block\\custom"]:
+    for path_create in [
+        os.path.join(path_, "custom"),
+        os.path.join(path_, "blockstates"),
+        os.path.join(path_, "textures", "block", "custom"),
+        os.path.join(path_, "models", "item"),
+        os.path.join(path_, "models", "block", "custom"),
+    ]:
         if not os.path.isdir(path_create):
             os.makedirs(path_create)
         else:
@@ -229,8 +235,8 @@ def logging(type_logging, message, error_name=""):
             err_name = error_name.__class__.__name__
 
         # write to log file
-        with open(f"{path_}logs\\latest.log", mode="a") as file_log:
-            with open(f"{path_}logs\\{file_log_constant_name}", mode="a") as file_log_constant:
+        with open(os.path.join("path_", "logs", "latest.log"), mode="a") as file_log:
+            with open(os.path.join(path_, "logs", file_log_constant_name), mode="a") as file_log_constant:
                 if err_name == "None" or exception == "None":
                     file_log.write(f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n")
                     file_log_constant.write(f"[Seconds Elapsed: {str(seconds):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n")
@@ -251,8 +257,8 @@ def logging(type_logging, message, error_name=""):
 
 
 def extra_file(file_path, type_material, id_strata):
-    if os.path.isfile(f"{path_}config/osv_extra/{file_path}.toml"):
-        with open(f"{path_}config/osv_extra/{file_path}.toml", mode="rb") as config_extra_f:
+    if os.path.isfile(os.path.join(path_, "config", "osv_extra", f"{file_path}.toml")):
+        with open(os.path.join(path_, "config", "osv_extra", f"{file_path}.toml"), mode="rb") as config_extra_f:
             try:
                 config_extra = tomli.load(config_extra_f)
             except tomli.TOMLDecodeError as ex:
@@ -276,8 +282,8 @@ def extra_file(file_path, type_material, id_strata):
 
 enable_logging = True
 # checks the main.toml file if it should disable logging (even without the scripts being valid)
-if os.path.isfile(f"{path_}config\\main.toml"):
-    with open(f"{path_}config\\main.toml", mode="r") as main:
+if os.path.isfile(os.path.join(path_, "config", "main.toml")):
+    with open(os.path.join(path_, "config", "main.toml"), mode="r") as main:
         for line in main:
             if "enable_logging" in line and ("true" in line or "false" in line) and "enable_logging_" not in line and "#" not in line:
                 enable_logging = literal_eval(line.replace("enable_logging", "").replace("=", "").replace(" ", "").replace("true", "True").replace("false", "False"))
@@ -286,8 +292,8 @@ logging("info", 'Program started')
 
 check_base_files()
 # loads the main config
-if os.path.isfile(f"{path_}config\\main.toml"):
-    with open(f"{path_}config\\main.toml", mode="rb") as main:
+if os.path.isfile(os.path.join(path_, "config", "main.toml")):
+    with open(os.path.join(path_, "config", "main.toml"), mode="rb") as main:
         try:
             system_config = tomli.load(main)
         except tomli.TOMLDecodeError as ex:
@@ -297,8 +303,8 @@ else:
     logging("file_missing", 'Main config file is missing or is named incorrectly. The name should be: "main.toml"')
 
 # loads the osv_main config
-if os.path.isfile(f"{path_}config\\osv_main.toml"):
-    with open(f"{path_}config\\osv_main.toml", mode="rb") as osv_main:
+if os.path.isfile(os.path.join(path_, "config", "osv_main.toml")):
+    with open(os.path.join(path_, "config", "osv_main.toml"), mode="rb") as osv_main:
         try:
             config = tomli.load(osv_main)
         except tomli.TOMLDecodeError as ex:
@@ -322,8 +328,8 @@ if system_config["system"].get("enable_logging_dim_not_existent_errors") is Fals
 if system_config["system"].get("enable_logging_strata_not_existent_errors") is False:
     enable_logging_strata_not_existent_errors = False
 
-path_to_osv_ores = path_.removesuffix(file_loc + "\\") + "config\\osv\\ores\\"
-path_to_osv_assets = path_to_osv_ores.removesuffix("ores\\") + "resources\\assets\\osv\\"
+path_to_osv_ores = os.path.join(os.path.join(path_, os.pardir), "config", "osv", "ores")
+path_to_osv_assets = os.path.join(os.path.join(path_, os.pardir), "resources", "assets", "osv")
 
 gen_folders()
 logging("info", 'Folders Generated successfully')
@@ -447,7 +453,7 @@ if "ore" in config:
 
                     # checks if the texture exist (only if it's the texture variant)
                     if texture_valid == [0, 0, 1]:
-                        if not os.path.isfile(f"{path_}textures\\ore\\{ore_add['texture']['name']}.png"):
+                        if not os.path.isfile(os.path.join(path_, "textures", "ore", f"{ore_add['texture']['name']}.png")):
                             logging("texture_missing", f'The following ore texture file is missing: "textures\\ore\\{ore_add["texture"]["name"]}.png"')
                             continue
 
@@ -519,13 +525,13 @@ if "ore" in config:
 logging("info", 'The Ore Config section has been read and processed successfully')
 
 # opens needed files for osvcommon gen
-with open(f"{path_}/base_files/osv/osv-common_values.json", "r") as file_osvcommon_values:
+with open(os.path.join(path_, "base_files", "osv", "osv-common_values.json"), mode="r") as file_osvcommon_values:
     osvcommon_values = json.load(file_osvcommon_values)
 
-with open(f"{path_}/base_files/osv/osv-common_base.txt", "r") as file_osvcommon_base:
+with open(os.path.join(path_, "base_files", "osv", "osv-common_base.txt"), mode="r") as file_osvcommon_base:
     osvcommon_base = file_osvcommon_base.read()
 
-with open(f"{path_}/base_files/osv/osv-common_base_default.toml", "rb") as file_osvcommon_base_default:
+with open(os.path.join(path_, "base_files", "osv", "osv-common_base_default.toml"), mode="r") as file_osvcommon_base_default:
     osvcommon_base_default = tomli.load(file_osvcommon_base_default)
 
 logging("info", 'Base files read successfully')
@@ -561,23 +567,23 @@ for ore in ores:
             values_for_ore_file += f"'{type_}': " + str(ore[3][type_]).replace("True", "true").replace("False", "false") + ", "
 
     # creates the ore file
-    with open(f"{path_to_osv_ores}custom\\custom_{ore[0]}_ore.hjson", "w") as file:
+    with open(os.poth.join(path_to_osv_ores, "custom", f"custom_{ore[0]}_ore.hjson"), "w") as file:
         file.write("{" + values_for_ore_file.removesuffix(", ") + "}")
 
     # copies textures
     if not ore[5]:
         # with tinting
         if sum([1 if key in ore[2] else 0 for key in ["color", "type", "name"]]) == 2:
-            texture = tint_texture(f"{path_}textures\\overlay_base\\ore_{ore[2]['type']}.png", ore[2]['color'])
-            texture.save(f"{path_to_osv_assets}textures\\block\\custom\\custom_{ore[0]}_ore.png", "PNG")
-            texture.save(f"{path_to_osv_assets}textures\\block\\custom\\custom_{ore[0]}_ore_shade.png", "PNG")
+            texture = tint_texture(os.path.join(path_, "textures", "overlay_base", f"ore_{ore[2]['type']}.png"), ore[2]['color'])
+            texture.save(os.path.join(path_to_osv_assets, "textures", "block", "custom", f"custom_{ore[0]}_ore.png"), "PNG")
+            texture.save(os.path.join(path_to_osv_assets, "textures", "block", "custom", f"custom_{ore[0]}_ore_shade.png"), "PNG")
 
         # without tinting
         else:
-            shutil.copyfile(f"{path_}textures\\ore\\{ore[2]['name']}.png",
-                            f"{path_to_osv_assets}textures\\block\\custom\\custom_{ore[0]}_ore.png")
-            shutil.copyfile(f"{path_}textures\\ore\\{ore[2]['name']}.png",
-                            f"{path_to_osv_assets}textures\\block\\custom\\custom_{ore[0]}_ore_shade.png")
+            shutil.copyfile(os.path.join(path_, "textures", "ore", f"{ore[2]['name']}.png"),
+                            os.path.join(path_to_osv_assets, "textures", "block", "custom", f"custom_{ore[0]}_ore.png"))
+            shutil.copyfile(os.path.join(path_, "textures", "ore", f"{ore[2]['name']}.png"),
+                            os.path.join(path_to_osv_assets, "textures", "block", "custom", f"custom_{ore[0]}_ore_shade.png"))
 
     values_extra_rules = []
     true_exists = False
@@ -643,7 +649,7 @@ for value in osvcommon_values["values"]:
         else:
             format_osvcommon_array.append(str(osvcommon_base_default[value[0]][key]))
 
-with open(path_.removesuffix(file_loc + "\\") + "config\\osv-common.hjson", "w") as file_osvcommon:
+with open(os.path.join(os.path.join(path_, os.pardir), "config", "osv-common.hjson"), "w") as file_osvcommon:
     file_osvcommon.write(str(osvcommon_base % tuple(format_osvcommon_array)).replace("True", "true").replace("False", "false"))
 
 logging("info", 'osv-common config created successfully')
@@ -654,16 +660,17 @@ logging("info", f'Generated {total_ores} ores and {total_unique_ores} unique ore
 # ---------------------------------------------- #
 
 logging("info", 'finished osv config generation. Starting second the part of script.')
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\client_scripts\\ore_unification\\tooltips")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\item_add")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\block_add")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\slurry_add\\dirty")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\slurry_add\\clean")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\jei_hide")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_output")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_recipes")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags")
-clear_path(path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification")
+mc_path = os.path.join(path_, os.pardir)
+clear_path(os.path.join(mc_path, "kubejs", "client_scripts", "ore_unification", "tooltips"))
+clear_path(os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "item_add"))
+clear_path(os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "block_add"))
+clear_path(os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "slurry_add", "dirty"))
+clear_path(os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "slurry_add", "clean"))
+clear_path(os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "jei_hide"))
+clear_path(os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "replace_output"))
+clear_path(os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "remove_recipes"))
+clear_path(os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "add_tags"))
+clear_path(os.path.join(mc_path, "kubejs", "assets", "unification"))
 
 # used for counting
 material_added = 0
@@ -677,8 +684,8 @@ bloodmagic_types = ["fragment", "gravel"]
 create_types = ["crushed"]
 
 # opens the file and reads the mod list
-if os.path.isfile(f"{path_}config\\mod_list.toml"):
-    with open(f"{path_}config\\mod_list.toml", "rb") as f:
+if os.path.isfile(os.path.join(path_, "config", "mod_list.toml")):
+    with open(os.path.join(path_, "config", "mod_list.toml"), "rb") as f:
         try:
             config_mod_list = tomli.load(f)
         except tomli.TOMLDecodeError as ex:
@@ -747,10 +754,10 @@ def gen_config(id_file, id_name, base_file):
         if i in config_options_needed:
             config_add += config_options[i]
 
-    return [f"{path_}config\\mod_specific\\{id_file}.toml", id_file + ".toml", config_add, 0, "", ""]
+    return [os.path.join(path_, "config", "mod_specific", f"{id_file}.toml"), id_file + ".toml", config_add, 0, "", ""]
 
 
-path_general_config = f"{path_}\\base_files\\kubejs\\registry\\general.json"
+path_general_config = os.path.join(path_, "base_files", "kubejs", "registry", "general.json")
 if os.path.isfile(path_general_config):
     with open(path_general_config) as f:
         try:
@@ -771,8 +778,8 @@ def get_display_name(type_material, display_name):
 def read_info():
     array_write_to_files = []
     
-    if os.path.isfile(f"{path_}base_files\\kubejs\\registry\\gen_scripts_info.json"):
-        with open(f"{path_}base_files\\kubejs\\registry\\gen_scripts_info.json") as f:
+    if os.path.isfile(os.path.join(path_, "base_files", "kubejs", "registry", "gen_scripts_info.json")):
+        with open(os.path.join(path_, "base_files", "kubejs", "registry", "gen_scripts_info.json")) as f:
             try:
                 info = json.load(f)
             except json.decoder.JSONDecodeError as ex:
@@ -804,8 +811,8 @@ def gen_scripts(id_file, id_name, display_name):
     array_write_to_files = []
 
     # opens needed files
-    if os.path.isfile(f"{path_}base_files\\kubejs\\registry\\{id_file}.json"):
-        with open(f"{path_}base_files\\kubejs\\registry\\{id_file}.json", encoding="utf-8") as f:
+    if os.path.isfile(os.path.join(path_, "base_files", "kubejs", "registry", f"{id_file}.json")):
+        with open(os.path.join(path_, "base_files", "kubejs", "registry", f"{id_file}.json"), encoding="utf-8") as f:
             try:
                 base_file_registry = json.load(f)
             except json.decoder.JSONDecodeError as ex:
@@ -827,8 +834,8 @@ def gen_scripts(id_file, id_name, display_name):
         
     config_mat = {}
     # opens the file to check if this item is active
-    if os.path.isfile(f"{path_}config\\mod_specific\\{id_file}.toml"):
-        with open(f"{path_}config\\mod_specific\\{id_file}.toml", "rb") as f:
+    if os.path.isfile(os.path.join(path_, "config", "mod_specific", f"{id_file}.toml")):
+        with open(os.path.join(path_, "config", "mod_specific", f"{id_file}.toml"), "rb") as f:
             try:
                 config_file = tomli.load(f)
                 if config_file.get(id_name) is not None:
@@ -935,8 +942,8 @@ def register_recipes(id_file, id_name, base_file_registry):
     array_write_to_files = []
 
     # opens needed files
-    if os.path.isfile(f"{path_}base_files\\kubejs\\recipe\\{id_file}.json"):
-        with open(f"{path_}base_files\\kubejs\\recipe\\{id_file}.json", encoding="utf-8") as f:
+    if os.path.isfile(os.path.join(path_, "base_files", "kubejs", "recipe", f"{id_file}.json")):
+        with open(os.path.join(path_, "base_files", "kubejs", "recipe", f"{id_file}.json"), encoding="utf-8") as f:
             try:
                 base_file_recipe = json.load(f)
             except json.decoder.JSONDecodeError as ex:
@@ -956,7 +963,7 @@ def register_recipes(id_file, id_name, base_file_registry):
     else:
         license_notice = "".join(license_notice)
     
-    file_path = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\recipes\\{id_file}\\{id_name}.js"        
+    file_path = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "recipes", id_file, id_name + ".js") 
     if base_file_recipe[id_name].get("remove") is not None:
         for recipe_to_remove in base_file_recipe[id_name]["remove"]:
             array_write_to_files.append([file_path, f"{id_name}.js", f'    event.remove({{id: "{recipe_to_remove}"}})\n', 50, "onEvent('recipes', event => {\n", "})"])
@@ -1083,7 +1090,7 @@ def pass_inputs(params, remove):
 
 
 def add_item_tooltip(id_item, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\client_scripts\\ore_unification\\tooltips\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "client_scripts", "ore_unification", "tooltips", f"{id_file}.js")
     tooltip_add = f"    global.scripts.add_item_tooltip(event, '{id_item}')\n"
     return [path_script_file, id_file + ".js", tooltip_add, 100, license_notice + "onEvent('item.tooltip', event => {\n", "})"]
 
@@ -1095,7 +1102,7 @@ def replace_texture(id_name, type_material, texture_path, id_file, active, isAdd
     texture_path_seperator_index = texture_path.find(":")
     texture_path_mod_name = texture_path[:texture_path_seperator_index]
     texture_path_other = texture_path[texture_path_seperator_index + 1:]
-    texture_path_copy_to = path_.removesuffix(file_loc + '\\') + f"resources\\{texture_path_mod_name}\\textures\\{texture_path_other}.png"
+    texture_path_copy_to = os.path.join(mc_path, "resources", texture_path_mod_name, "textures", texture_path_other + ".png")
 
     extra_file_path = ""
     if(type_material == "coin"):
@@ -1106,9 +1113,9 @@ def replace_texture(id_name, type_material, texture_path, id_file, active, isAdd
 
     if active and (check_mod(texture_path_mod_name) or texture_path_mod_name == "unification"):
         if type_material in ["raw_block", "storage_block"]:
-            texture_path_copy_from = f"{path_}textures\\general\\{id_file}\\{id_name}\\block\\{id_name}_{type_material}{extra_file_path}.png"
+            texture_path_copy_from = os.path.join(path_, "textures", "general", id_file, id_name, "block", id_name + "_" + type_material + extra_file_path + ".png")
         else:
-            texture_path_copy_from = f"{path_}textures\\general\\{id_file}\\{id_name}\\item\\{id_name}_{type_material}{extra_file_path}.png"
+            texture_path_copy_from = os.path.join(path_, "textures", "general", id_file, id_name, "item", id_name + "_" + type_material + extra_file_path + ".png")
 
         if os.path.isfile(texture_path_copy_from):
             shutil.copyfile(texture_path_copy_from, texture_path_copy_to)
@@ -1151,7 +1158,7 @@ def add_element(id_name, type_material, id_file, display_name, color, license_no
 def add_item(id_name, type_material, id_file, display_name, license_notice):
     texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_{type_material}"
         
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\item_add\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "item_add", f"{id_file}.js")
     texture_exists = replace_texture(id_name, type_material, texture_path, id_file, True, True)
     material_add = f"    global.scripts.add_item(event, '{id_name}', '{type_material}', '{texture_path}', '{get_display_name(type_material, display_name)}')\n"
 
@@ -1168,15 +1175,15 @@ def add_coin(id_name, id_file, display_name, license_notice):
     texture_exists = 0
     for i in range(5):
         texture_exists += replace_texture(id_name, "coin" + str(i), texture_path + str(i), id_file, True, True)
-        path_model_file = path_.removesuffix(file_loc + '\\') + f"resources\\unification\\models\\{id_file}\\{id_name}\\item\\{id_name}_coin{i}.json"
+        path_model_file = os.path.join(mc_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json")
         model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path  + str(i) + '"}}'
         model_files.append([path_model_file, f"{id_name}_coin{i}.json", model_json, 0, "", ""])
 
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\coin_add\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "coin_add", f"{id_file}.js")
     material_add = f"    global.scripts.add_coin(event, '{id_name}', '{get_display_name('coin', display_name)}')\n"
-    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\coin_add\\{id_file}_register_item_property.js"
+    path_script_file_extra = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "coin_add", f"{id_file}_register_item_property.js")
     material_add_extra = f"    global.scripts.register_item_property('unification:{id_name}_coin')\n"
-    path_main_model = path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\models\\item\\{id_name}_coin.json"
+    path_main_model = os.path.join(mc_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json")
     main_model = (f'{{"parent": "item/generated", '
                   f'"textures": {{"layer0": "{texture_path + "0"}"}}, '
                   f'"overrides": ['
@@ -1198,14 +1205,13 @@ def add_coin(id_name, id_file, display_name, license_notice):
         return ""
     
 def add_block(id_name, type_material, id_file, display_name, license_notice):
-    
     texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{type_material}"
 
     type_material_extra = "metal"
     if type_material == "raw_block":
         type_material_extra = "stone"
 
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\block_add\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "block_add", f"{id_file}.js")
     texture_exists = replace_texture(id_name, type_material, texture_path, id_file, True, True)
     material_add = f"    global.scripts.add_block(event, '{id_name}', '{type_material}', '{texture_path}', '{type_material_extra}', '{get_display_name(type_material, display_name)}')\n"
 
@@ -1219,7 +1225,7 @@ def add_molten(id_name, type_material, id_file, display_name, color, license_not
     if color == "":
         color = "0xffffff"
 
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\molten_add\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "molten_add", f"{id_file}.js")
     material_add = f"    global.scripts.add_fluid(event, '{id_name}', {color}, '{get_display_name(type_material, display_name)}')\n"
 
     return [[path_script_file, id_file + ".js", material_add, 100, license_notice + "onEvent('fluid.registry', event => {\n", "})"]]
@@ -1229,14 +1235,14 @@ def add_slurry(id_name, type_material, id_file, display_name, color, license_not
     if color == "":
         color = "0xffffff"
 
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\startup_scripts\\ore_unification\\slurry_add\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "startup_scripts", "ore_unification", "slurry_add", f"{id_file}.js")
     material_add = f"SLURRY.register('{id_name}_{type_material}', builder => builder.color({color}))\n"
     event_write =  ("let $EventBuses = java('me.shedaniel.architectury.platform.forge.EventBuses')\n"
                     "let $SlurryDeferredRegister = java('mekanism.common.registration.impl.SlurryDeferredRegister')\n"
                     "let SLURRY = new $SlurryDeferredRegister('unification')\n")
     ending_string = "SLURRY['register(net.minecraftforge.eventbus.api.IEventBus)']($EventBuses.getModEventBus('kubejs').get())"
 
-    path_script_file_extra = path_.removesuffix(file_loc + '\\') + f"resources\\unification\\lang\\en_us.json"
+    path_script_file_extra = os.path.join(mc_path, "resources", "unification", "lang", "en_us.json")
     material_add_extra  = (f'    "slurry.unification.dirty_{id_name}_{type_material}": "{get_display_name("dirty_" + type_material, display_name)}",\n'
                             f'    "slurry.unification.clean_{id_name}_{type_material}": "{get_display_name("clean_" + type_material, display_name)}",\n')
 
@@ -1247,11 +1253,11 @@ def add_slurry(id_name, type_material, id_file, display_name, color, license_not
 
 
 def add_tag(id_item, item_tag, is_block, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\items\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "add_tags", "items", f"{id_file}.js")
     event_write = "onEvent('item.tags', event => {\n"
     string_write = f"    event.add('{item_tag}', '{id_item}')\n"
     if is_block:
-        path_script_file_block = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\add_tags\\blocks\\{id_file}.js"
+        path_script_file_block = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "add_tags", "blocks", f"{id_file}.js")
         event_write_block = "onEvent('block.tags', event => {\n"
         return [
             [path_script_file, id_file + ".js", string_write, 90, license_notice + event_write, "})"],
@@ -1262,29 +1268,29 @@ def add_tag(id_item, item_tag, is_block, id_file, license_notice):
 
 
 def jei_hide(id_item, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\client_scripts\\ore_unification\\jei_hide\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "client_scripts", "ore_unification", "jei_hide", f"{id_file}.js")
     event_write = "onEvent('jei.hide.items', event => {\n"
     string_write = f"    event.hide('{id_item}')\n"
     return [path_script_file, id_file + ".js", string_write, 50, license_notice + event_write, "})"]
 
 
 def replace_output(id_output_old, id_output, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_output\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "replace_output", f"{id_file}.js")
     event_write = "onEvent('recipes', event => {\n"
     string_write = f"    event.replaceOutput({{}}, '{id_output_old}', '{id_output}')\n"
     return [path_script_file, id_file + ".js", string_write, 100, license_notice + event_write, "})"]
 
 
 def replace_input(id_input_old, id_input, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\replace_input\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "replace_input", f"{id_file}.js")
     event_write = "onEvent('recipes', event => {\n"
     string_write = f"    event.replaceInput({{}}, '{id_input_old}', '{id_input}')\n"
     return [path_script_file, id_file + ".js", string_write, 100, license_notice + event_write, "})"]
 
 
 def remove_tag(id_item, id_file, license_notice):
-    path_script_file = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\items\\{id_file}.js"
-    path_script_file_block = path_.removesuffix(file_loc + '\\') + f"kubejs\\server_scripts\\ore_unification\\remove_tags\\blocks\\{id_file}.js"
+    path_script_file = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "remove_tags", "items", f"{id_file}.js")
+    path_script_file_block = os.path.join(mc_path, "kubejs", "server_scripts", "ore_unification", "remove_tags", "blocks", f"{id_file}.js")
     event_write = "onEvent('item.tags', event => {\n"
     event_write_block = "onEvent('block.tags', event => {\n"
     string_write = f"    event.removeAllTagsFrom('{id_item}')\n"
@@ -1321,7 +1327,8 @@ def write_to_files(data_array):
 
 read_info()
 
-shutil.copytree(f"{path_}textures\\general\\copy", path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\textures", copy_function=shutil.copyfile, dirs_exist_ok=True)
+shutil.copytree(os.path.join(path_, "textures", "general", "copy"), path_.removesuffix(file_loc + '\\') + f"kubejs\\assets\\unification\\textures", 
+                copy_function=shutil.copyfile, dirs_exist_ok=True)
 
 logging("info", (f"Changed {material_added} materials. Replaced {texture_replaced} textures. "
                  f"Added {type_added} items/blocks. Removed {element_removed} items/blocks"))
