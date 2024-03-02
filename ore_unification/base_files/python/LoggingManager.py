@@ -1,0 +1,91 @@
+import os
+import time
+import traceback
+import re
+import sys
+
+class LoggingManager:
+    # initializes the logging manager and creates the logging files
+    def __init__(self, path_program):
+        self.start_time = time.time()
+        self.content = []
+        self.percentage_step_last = -1
+        self.path_program = path_program
+
+        os.makedirs(os.path.join(path_program, "logs"), exist_ok=True)
+        self.path_log = os.path.join(path_program, "logs", "latest.log")
+        with open(self.path_log, mode="w"):
+            pass
+        
+        index_logging = 0
+        while True:
+            name_constant_log = f"log-{time.strftime('%Y-%m-%d', time.gmtime(self.start_time))}-{index_logging}.log"
+            path_constant_log = os.path.join(path_program, "logs", name_constant_log)
+            if not os.path.isfile(path_constant_log):
+                with open(path_constant_log, mode="w"):
+                    self.path_constant_log = path_constant_log
+                    break
+            index_logging += 1
+
+
+    # saves the log content to the log files
+    def save(self):
+        with open(self.path_log, mode="a") as file:
+            file.writelines(self.content)
+        with open(self.path_constant_log, mode="a") as file:
+            file.writelines(self.content)
+        self.content = []
+
+
+    # logs a message to the log files and info messages to the console
+    def log(self, type_logging, message, error_name=""): 
+        time_now = round(time.time() - self.start_time, 5)
+        
+        if type_logging == "info":
+            print(message)
+        
+        problematic_error_types = ["file_error", "file_missing", "script_error"]
+        exception = "None"
+        if type_logging in problematic_error_types:
+            exception = "\n" + traceback.format_exc()
+            exception = re.sub('\n', '\n' + ' ' * 51, exception)
+
+        err_name = error_name.__class__.__name__ if error_name else "None"
+
+        if err_name == "None" or exception == "None":
+            log_message = f"[Seconds Elapsed: {str(time_now):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n"
+        else:
+            log_message = f"[Seconds Elapsed: {str(time_now):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}, Error Name: {err_name}, Exception: {exception}\n"
+
+        self.content.append(log_message)
+
+        if type_logging in problematic_error_types:
+            print("An Error occurred, please check log file")
+            self.save()
+            for i in range(10):
+                if i in [0, 5, 7, 8, 9]:
+                    print(f"\rclosing in {10 - i} second(s) ", end="")
+                time.sleep(1)
+            sys.exit("")
+
+        if len(self.content) > 100:
+            self.save()
+
+    # logs a percentage to the log files and the console
+    def log_percentage(self, message, float_n):
+        state = round(float_n * 192)
+        full_bars = state // 8
+        sub_bar = [" ", "▏", "▎", "▍", "▌", "▋", "▋", "▊"][state % 8] if full_bars < 24 else ""
+        spaces = " " * (23 - full_bars)
+
+        print(f"\r{message}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
+
+        while True:
+            if float_n * 10 >= self.percentage_step_last + 1:
+                self.log(" info ", f"{message}: {float_n * 100:.2f}%")
+                self.percentage_step_last += 1
+            else:
+                break
+
+        if float_n == 1:
+            self.percentage_step_last = -1

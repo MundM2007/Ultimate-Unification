@@ -1,5 +1,0 @@
-# overworld
-[[strata]]
-    id = "natural_scoria"
-    block = "create:natural_scoria"
-    dim = ["overworld"]

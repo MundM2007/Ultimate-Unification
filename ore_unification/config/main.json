@@ -1,0 +1,38 @@
+{
+    "unification": {
+        "c1": "Here you can enable or disable weither gems textures should be replaced",
+        "replace_gem_textures": true
+    },
+
+    "ores": {
+        "c1": "What should the metal drop, options: raw, ore",
+        "metal_ore_drop": "raw",
+
+        "c2": "Weither the metal should be affected by silk touch",
+        "metal_silktouch_affected": true,
+
+        "c3": "Weither the metal should be affected by fortune",
+        "metal_fortune_affected": true,
+
+        "c4": "What should the gem drop, options: gem, ore",
+        "gem_ore_drop": "gem",
+
+        "c5": "Weither the gem should be affected by silk touch",
+        "gem_silktouch_affected": true,
+
+        "c6": "Weither the gem should be affected by fortune",
+        "gem_fortune_affected": true,
+
+        "c7": "Here you can modify the ore drop dimension multiplier for the ores",
+        "dim_multiplyer": {
+            "atum": 1.5,
+            "end": 2,
+            "mars": 1.5,
+            "mercury": 1.5,
+            "moon": 1.5,
+            "nether": 1.5,
+            "overworld": 1,
+            "venus": 1.5
+        }
+    }
+  }

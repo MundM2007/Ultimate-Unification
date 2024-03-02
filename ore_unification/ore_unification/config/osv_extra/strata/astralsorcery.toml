@@ -1,5 +1,0 @@
-# overworld
-[[strata]]
-    id = "marble_raw"
-    block = "astralsorcery:marble_raw"
-    dim = ["overworld"]

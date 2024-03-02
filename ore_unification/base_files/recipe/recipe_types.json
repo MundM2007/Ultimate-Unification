@@ -1,0 +1,96 @@
+{
+    "ftbic.coin": ["id_name", "coin"],
+    "thermal.coin": ["id_name", "coin"],
+
+    "appliedenergistics2.dust": ["id_name", "dust"],
+    "bloodmagic.dust": ["id_name", "dust"],
+    "create.dust": ["id_name", "dust"],
+    "ftbic.dust": ["id_name", "dust"],
+    "immersiveengineering.dust": ["id_name", "dust"],
+    "mekanism.dust": ["id_name", "dust"],
+    "occultism.dust": ["id_name", "dust"],
+    "potionsmaster.dust": ["id_name", "dust"],
+    "silents_mechanisms.dust": ["id_name", "dust"],
+    "thermal.dust": ["id_name", "dust"],
+
+    "ftbic.gear": ["id_name", "gear"],
+    "immersiveengineering.gear": ["id_name", "gear"],
+    "thermal.gear": ["id_name", "gear"],
+    "minecraft.gear": ["id_name", "gear"],
+
+    "boss_tools.plate": ["id_name", "plate"],
+    "boss_tools_giselle_addon.plate": ["id_name", "plate"],
+    "create.plate": ["id_name", "plate"],
+    "ftbic.plate": ["id_name", "plate"],
+    "immersiveengineering.plate": ["id_name", "plate"],
+    "thermal.plate": ["id_name", "plate"],
+
+    "boss_tools_giselle_addon.rod": ["id_name", "rod"],
+    "createaddition.rod": ["id_name", "rod"],
+    "ftbic.rod": ["id_name", "rod"],
+    "immersiveengineering.rod": ["id_name", "rod"],
+    "minecraft.rod": ["id_name", "rod"],
+
+    "boss_tools_giselle_addon.wire": ["id_name", "wire"],
+    "createaddition.wire": ["id_name", "wire"],
+    "ftbic.wire": ["id_name", "wire"],
+    "immersiveengineering.wire": ["id_name", "wire"],
+    "minecraft.wire": ["id_name", "wire"],
+
+
+    "appliedenergistics2.ore_processing": ["id_name", "dust", "gem_multiplyer"],
+
+    "astralsorcery.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "astralsorcery.ore_processing_metal": ["id_name", "ingot"],
+
+    "betterendforge.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "betterendforge.ore_processing_metal": ["id_name", "ingot"],
+
+    "bloodmagic.ore_processing_metal": ["id_name", "dust", "gravel", "fragment"],
+
+    "create.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "create.ore_processing_metal": ["id_name", "ingot", "nugget", "crushed_ore"],
+
+    "engineerstools.ore_processing_metal": ["id_name", "dust"],
+
+    "ftbic.ore_processing_gem": ["id_name", "dust", "gem_multiplyer"],
+    "ftbic.ore_processing_metal": ["id_name", "dust"],
+
+    "immersiveengineering.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "immersiveengineering.ore_processing_metal": ["id_name", "ingot", "dust"],
+
+    "integrateddynamics.ore_processing_gem": ["id_name", "dust", "gem_multiplyer"],
+    "integrateddynamics.ore_processing_metal": ["id_name", "dust"],
+
+    "mekanism.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "mekanism.ore_processing_metal": ["id_name", "dust", "dirty_dust", "clump", "shard", "crystal", "clean_slurry", "dirty_slurry"],
+
+    "minecraft.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "minecraft.ore_processing_metal": ["id_name", "ingot"],
+    "minecraft.pieces_to_raw": ["id_name", "raw_material"],
+    "minecraft.smelting_recipes": ["id_name", "ingot", "gem", "nugget"],
+    "minecraft.storage_convert_gem": ["id_name", "gem", "block"],
+    "minecraft.storage_convert_metal": ["id_name", "ingot", "block", "nugget"],
+    "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_block"],
+
+    "occultism.ore_processing_metal": ["id_name", "dust"],
+
+    "silents_mechanisms.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "silents_mechanisms.ore_processing_metal": ["id_name", "dust"],
+
+    "tconstruct.casting": ["molten", "storage_block", "ingot", "nugget", "gem", "plate", "gear", "rod", "wire", "coin"],
+    "tconstruct.ore_processing_gem": ["id_name", "molten", "gem_multiplyer"],
+    "tconstruct.ore_processing_metal": ["id_name", "molten"],
+    "tconstruct.smelting": ["id_name", "molten"],
+    
+    "thermal.coin_to_energy": ["id_name", "energy_from_coin"],
+    "thermal.ingot_in_chiller": ["molten", "ingot"],
+    "thermal.ingot_in_smelter": ["id_name", "ingot"],
+    "thermal.ore_processing_gem": ["id_name", "gem", "gem_multiplyer"],
+    "thermal.ore_processing_metal": ["id_name", "ingot", "dust"],
+    "thermal.pieces_to_raw": ["id_name", "piece"],
+    "thermal.rod": ["molten", "rod"],
+    "thermal.storage_convert_gem": ["id_name", "gem", "block"],
+    "thermal.storage_convert_metal": ["id_name", "ingot", "block", "nugget"],
+    "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_block"]
+}

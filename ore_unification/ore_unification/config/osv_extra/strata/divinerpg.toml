@@ -1,5 +1,0 @@
-# twilight_dims
-[[strata]]
-    id = "twilight_stone"
-    block = "divinerpg:twilight_stone"
-    dim = ["twilight_dims"]

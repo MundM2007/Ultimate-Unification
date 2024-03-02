@@ -1,5 +1,0 @@
-# end
-[[strata]]
-    id = "betterendforge/brimstone"
-    block = "betterendforge:brimstone"
-    dim = ["end"]
