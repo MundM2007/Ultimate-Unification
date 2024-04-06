@@ -18,12 +18,11 @@ class LoggingManager:
             pass
         
         index_logging = 0
+        path_constant_log = os.path.join(path_program, "logs", f"log-{time.strftime('%Y-%m-%d', time.gmtime(self.start_time))}-%s.log")
         while True:
-            name_constant_log = f"log-{time.strftime('%Y-%m-%d', time.gmtime(self.start_time))}-{index_logging}.log"
-            path_constant_log = os.path.join(path_program, "logs", name_constant_log)
-            if not os.path.isfile(path_constant_log):
-                with open(path_constant_log, mode="w"):
-                    self.path_constant_log = path_constant_log
+            if not os.path.isfile(path_constant_log % index_logging):
+                with open(path_constant_log % index_logging, mode="w"):
+                    self.path_constant_log = path_constant_log % index_logging
                     break
             index_logging += 1
 
@@ -53,19 +52,16 @@ class LoggingManager:
         err_name = error_name.__class__.__name__ if error_name else "None"
 
         if err_name == "None" or exception == "None":
-            log_message = f"[Seconds Elapsed: {str(time_now):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n"
+            log_message = f"[Seconds Elapsed: {time_now:>08.5f}] [{type_logging.replace('_', ' ').title():^20}]: {message}\n"
         else:
-            log_message = f"[Seconds Elapsed: {str(time_now):>08}] [{type_logging.replace('_', ' ').title():^20}]: {message}, Error Name: {err_name}, Exception: {exception}\n"
+            log_message = f"[Seconds Elapsed: {time_now:>08.5f}] [{type_logging.replace('_', ' ').title():^20}]: {message}, Error Name: {err_name}, Exception: {exception}\n"
 
         self.content.append(log_message)
 
         if type_logging in problematic_error_types:
             print("An Error occurred, please check log file")
             self.save()
-            for i in range(10):
-                if i in [0, 5, 7, 8, 9]:
-                    print(f"\rclosing in {10 - i} second(s) ", end="")
-                time.sleep(1)
+            input("To close the programm press any key")
             sys.exit("")
 
         if len(self.content) > 100:
@@ -78,14 +74,15 @@ class LoggingManager:
         sub_bar = [" ", "▏", "▎", "▍", "▌", "▋", "▋", "▊"][state % 8] if full_bars < 24 else ""
         spaces = " " * (23 - full_bars)
 
-        print(f"\r{message}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
+        print(f"\r{message:<15}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
 
         while True:
             if float_n * 10 >= self.percentage_step_last + 1:
-                self.log(" info ", f"{message}: {float_n * 100:.2f}%")
+                self.log(" info ", f"{message:<15}: {float_n * 100:>6.2f}%")
                 self.percentage_step_last += 1
             else:
                 break
 
         if float_n == 1:
+            print(" Finished")
             self.percentage_step_last = -1

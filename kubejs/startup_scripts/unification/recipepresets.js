@@ -50,19 +50,19 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore_processing: (event, material, dust, gem_multiplyer) => {
+            ore_processing: (event, material, dust, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(dust)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.appliedenergistics2.grinder(event, Item.of(dust, Math.round(2 * gem_multiplyer)), `#forge:ores/${material}`, 8, 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.appliedenergistics2.grinder(event, Item.of(dust, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 8, 
                         `unification:appliedenergistics2/grinder/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
         },
         astralsorcery: {
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
-                if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.astralsorcery.infuser(event, Item.of(gem, Math.round(2 * gem_multiplyer)), `#forge:ores/${material}`, 100,  0.1, [true], "astralsorcery:liquid_starlight",
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
+                if (checkTag(`#forge:ores/${material}`) && checkItems(material)) {
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1; console.log(gem)
+                    global.mrt.astralsorcery.infuser(event, Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 100,  0.1, [true], "astralsorcery:liquid_starlight",
                         `unification:astralsorcery/infuser/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -78,10 +78,10 @@ onEvent("loaded", e => {
             },
         },
         betterendforge: {
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.betterendforge.alloying(event, Item.of(gem, Math.round(4 * gem_multiplyer)), [`#forge:ores/${material}`, `#forge:ores/${material}`], 200, 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.betterendforge.alloying(event, Item.of(gem, Math.round(4 * gem_multiplier)), [`#forge:ores/${material}`, `#forge:ores/${material}`], 200, 
                         `unification:betterendforge/alloying/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -134,7 +134,7 @@ onEvent("loaded", e => {
                         }
                     }
                 })
-                
+
                 if(checkItems([gravel, fragment])){
                     event.recipes.bloodmagic.arc(gravel, fragment, "#bloodmagic:arc/resonator", [Item.of("bloodmagic:corrupted_tinydust").withChance(0.05),
                         Item.of("bloodmagic:corrupted_tinydust").withChance(0.01)]).consumeIngredient(false)
@@ -213,10 +213,10 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    event.recipes.createCrushing([Item.of(gem, Math.round(2 * gem_multiplyer)), Item.of(gem, Math.round(gem_multiplyer)).withChance(0.25)], `#forge:ores/${material}`)
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    event.recipes.createCrushing([Item.of(gem, Math.round(2 * gem_multiplier)), Item.of(gem, Math.round(gem_multiplier)).withChance(0.25)], `#forge:ores/${material}`)
                         .id(`unification:create/crushing/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -316,11 +316,11 @@ onEvent("loaded", e => {
                     global.mrt.ftbic.rolling(event, gear, `4x #forge:plates/${material}`, `unification:ftbic/rolling/component/${removeMod(gear)}/from_plates`)
                 }
             },
-            ore_processing_gem: (event, material, dust, gem_multiplyer) => {
+            ore_processing_gem: (event, material, dust, gem_multiplier) => {
                 let input = `#forge:ores/${material}`
                 if (checkTag(input) && checkItems(dust)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.ftbic.macerating(event, [Item.of(dust, Math.round(2 * gem_multiplyer))], input, `unification:ftbic/macerating/ore_processing/${removeMod(dust)}/from_ore`)
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.ftbic.macerating(event, [Item.of(dust, Math.round(2 * gem_multiplier))], input, `unification:ftbic/macerating/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
             ore_processing_metal: (event, material, dust) => {
@@ -384,10 +384,10 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    event.recipes.immersiveengineeringCrusher(Item.of(gem, Math.round(2 * gem_multiplyer)), `#forge:ores/${material}`, Item.of(gem, Math.round(gem_multiplyer)).withChance(0.25)
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    event.recipes.immersiveengineeringCrusher(Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, Item.of(gem, Math.round(gem_multiplier)).withChance(0.25)
                         ).id(`unification:immersiveengineering/crusher/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -465,12 +465,12 @@ onEvent("loaded", e => {
             }
         },
         integrateddynamics: {
-            ore_processing_gem: (event, material, dust, gem_multiplyer) => {
+            ore_processing_gem: (event, material, dust, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(dust)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.integrateddynamics.squeezer(event, [Item.of(dust, Math.round(gem_multiplyer)), Item.of(dust, Math.round(gem_multiplyer)).withChance(0.5)], "", 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.integrateddynamics.squeezer(event, [Item.of(dust, Math.round(gem_multiplier)), Item.of(dust, Math.round(gem_multiplier)).withChance(0.5)], "", 
                         `#forge:ores/${material}`, `unification:integrateddynamics/squeezer/ore_processing/${removeMod(dust)}/from_ore`)
-                    global.mrt.integrateddynamics.mechanical_squeezer(event, [Item.of(dust, Math.round(2 * gem_multiplyer))], "", `#forge:ores/${material}`, 40,
+                    global.mrt.integrateddynamics.mechanical_squeezer(event, [Item.of(dust, Math.round(2 * gem_multiplier))], "", `#forge:ores/${material}`, 40,
                         `unification:integrateddynamics/mechanical_squeezer/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
@@ -525,10 +525,10 @@ onEvent("loaded", e => {
                     })
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.mekanism.enriching(event, Item.of(gem, Math.round(2 * gem_multiplyer)), `#forge:ores/${material}`, 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.mekanism.enriching(event, Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 
                         `unification:mekanism/enriching/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -632,10 +632,10 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.silents_mechanisms.crushing(event, [Item.of(gem, Math.round(2 * gem_multiplyer)), Item.of("minecraft:cobblestone").withChance(0.1)], `#forge:ores/${material}`, 200, 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.silents_mechanisms.crushing(event, [Item.of(gem, Math.round(2 * gem_multiplier)), Item.of("minecraft:cobblestone").withChance(0.1)], `#forge:ores/${material}`, 200, 
                         `unification:silents_mechanisms/crushing/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -659,10 +659,10 @@ onEvent("loaded", e => {
             }
         },
         tconstruct: {
-            ore_processing_gem: (event, material, molten, gem_multiplyer) => {
+            ore_processing_gem: (event, material, molten, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && !Fluid.of(molten).equals(Fluid.empty)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, Math.round(144 * gem_multiplyer)), Fluid.of(molten, Math.round(48 * gem_multiplyer)), 
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, Math.round(144 * gem_multiplier)), Fluid.of(molten, Math.round(48 * gem_multiplier)), 
                         `#forge:ores/${material}`, 800, 100, `unification:tconstruct/melting/ore_processing/${removeMod(molten)}/from_ore`)
                 }
             },
@@ -767,13 +767,13 @@ onEvent("loaded", e => {
                     event.recipes.thermal.smelter(ingot, [`#forge:dusts/${material}`]).id(`unification:thermal/smelter/component/${removeMod(ingot)}/from_dust`)
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 input = `#forge:ores/${material}`
                 if (checkTag(input) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    event.recipes.thermal.pulverizer([Item.of(gem, Math.round(2 * gem_multiplyer)), Item.of("minecraft:gravel").withChance(0.2)], input).energy(4000)
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    event.recipes.thermal.pulverizer([Item.of(gem, Math.round(2 * gem_multiplier)), Item.of("minecraft:gravel").withChance(0.2)], input).energy(4000)
                         .id(`unification:thermal/pulverizer/ore_processing/${removeMod(gem)}/from_ore`)
-                    event.recipes.thermal.smelter([Item.of(gem, Math.round(gem_multiplyer)), Item.of(gem, Math.round(gem_multiplyer)).withChance(0.5), 
+                    event.recipes.thermal.smelter([Item.of(gem, Math.round(gem_multiplier)), Item.of(gem, Math.round(gem_multiplier)).withChance(0.5), 
                         Item.of("thermal:rich_slag").withChance(0.15)], input).energy(3200).id(`unification:thermal/smelter/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -900,12 +900,12 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore_processing_gem: (event, material, gem, gem_multiplyer) => {
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(gem_multiplyer == null) gem_multiplyer = 1
-                    event.smelting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplyer)))
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    event.smelting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplier)))
                         .xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(gem)}/from_ore`)
-                    event.blasting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplyer)))
+                    event.blasting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplier)))
                         .xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },     

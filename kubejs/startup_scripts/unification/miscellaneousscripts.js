@@ -20,7 +20,7 @@
 onEvent("loaded", event => {
     let $ItemModelProperties = java('net.minecraft.item.ItemModelsProperties')
     global.scripts = {
-        add_block: (event, id_name, type_material, texture_path, type_material_extra) => {
+        add_block: (event, id_name, type_material, type_material_extra, texture_path) => {
             event.create(`unification:${id_name}_${type_material}`)
                 .textureAll(texture_path)
                 .material(type_material_extra)

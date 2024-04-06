@@ -7,6 +7,7 @@ class Utilities:
         self.LM = FM.LM
         self.IOM = FM.IOM
         self.FM = FM
+        self.pack_path = os.path.abspath(os.path.join(self.LM.path_program, os.pardir))
 
         self.mod_list = ["minecraft"]
         mod_list_config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "mod_list.json")))
@@ -17,7 +18,7 @@ class Utilities:
     
     # gets the path of the pack from the path of the program
     def get_pack_path(self):
-        return os.path.join(self.LM.path_program, os.pardir)
+        return self.pack_path
 
 
     # gets the file path from a resource location
@@ -49,16 +50,18 @@ class Utilities:
     # checks if a material type is from a mod that is in the mod list
     def check_material(self, material_type):
         mod_mapping = {
-            "crystal": "makanism",
-            "shard": "makanism",
-            "clump": "makanism",
-            "dirty_dust": "makanism",
-            "clean_slurry": "makanism",
-            "dirty_slurry": "makanism",
+            "crystal": "mekanism",
+            "shard": "mekanism",
+            "clump": "mekanism",
+            "dirty_dust": "mekanism",
+            "slurry": "mekanism",
             "fragment": "bloodmagic",
             "gravel": "bloodmagic",
             "crushed": "create"
         }
+
+        if "slurry" in material_type:
+            material_type = "slurry"
 
         if material_type in mod_mapping and not self.check_mod(mod_mapping[material_type]):
             return False

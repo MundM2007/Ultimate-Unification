@@ -1,6 +1,7 @@
 import functools
 import os
 import shutil
+import stat
 
 class IOManager:
     def __init__(self, LM):
@@ -57,7 +58,10 @@ class IOManager:
         try:
             os.makedirs(path, exist_ok=True)
             for file in os.listdir(path):
-                os.remove(os.path.join(path, file))
+                if os.path.isdir(os.path.join(path, file)):
+                    shutil.rmtree(os.path.join(path, file))
+                else:
+                    os.remove(os.path.join(path, file))
         except Exception as e:
             self.LM.log("file_error", f"Error clearing path: {path}", e)
     
