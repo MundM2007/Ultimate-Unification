@@ -174,6 +174,8 @@ for element in gen_scripts_info.get("main"):
 
             arguments = recipe_types.get(recipe).replace("'id_name'", f"'{id_name}'")
             for material in mns:
+                if material in ["gem_multiplier", "energy_from_coin"]:
+                    arguments = arguments.replace(f"'{material}'", f"{mns[material]}")
                 arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
             FM.addKJS(os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
                       f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
