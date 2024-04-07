@@ -61,7 +61,7 @@ onEvent("loaded", e => {
         astralsorcery: {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(material)) {
-                    if(isNaN(gem_multiplier)) gem_multiplier = 1; console.log(gem)
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
                     global.mrt.astralsorcery.infuser(event, Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 100,  0.1, [true], "astralsorcery:liquid_starlight",
                         `unification:astralsorcery/infuser/ore_processing/${removeMod(gem)}/from_ore`)
                 }
