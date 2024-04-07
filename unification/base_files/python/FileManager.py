@@ -1,4 +1,4 @@
-from json import loads, dumps
+import json
 import os
 
 class FileManager:
@@ -19,14 +19,21 @@ class FileManager:
     
 
     # adds a JSON file section to be written to the file later
-    def addJson(self, path_file, content):
+    def addJson(self, path_file, content, pretty_print=False):
         if self.files.get(path_file):
-            content = content if isinstance(content, dict) else loads(content)
-            self.files[path_file] = dumps({**loads(self.files[path_file]), **content})
+            try:
+                content = content if isinstance(content, dict) else json.loads(content)
+                self.files[path_file] = json.dumps({**json.loads(self.files[path_file]), **content}, indent=4 if pretty_print else None, sort_keys=True if pretty_print else False)
+            except json.JSONDecodeError as e:
+                self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
         else:
             if isinstance(content, dict):
-                content = dumps(content)
-            self.files[path_file] = content
+                content = json.dumps(content, indent=4 if pretty_print else None, sort_keys=True if pretty_print else False)
+            try: 
+                json.loads(content)
+                self.files[path_file] = content
+            except json.JSONDecodeError as e:
+                self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
     
 
     # handles a texture to be created or deleted later
@@ -43,15 +50,13 @@ class FileManager:
                 if os.path.exists(path_copy):
                     if path_copy in self.textures_add:
                         self.textures_add.pop(path_copy)
-                    else:
-                        self.textures_remove.add(path_copy)
+                    self.textures_remove.add(path_copy)
                 return False
         else:
             if os.path.exists(path_copy):
                 if path_copy in self.textures_add:
                     self.textures_add.pop(path_copy)
-                else:
-                    self.textures_remove.add(path_copy)
+                self.textures_remove.add(path_copy)
             return False
         
 

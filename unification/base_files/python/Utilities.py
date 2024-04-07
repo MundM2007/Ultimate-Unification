@@ -10,7 +10,10 @@ class Utilities:
         self.pack_path = os.path.abspath(os.path.join(self.LM.path_program, os.pardir))
 
         self.mod_list = ["minecraft"]
-        mod_list_config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "mod_list.json")))
+        try:
+            mod_list_config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "mod_list.json")))
+        except json.JSONDecodeError as e:
+            self.LM.log("critical_json_error", f"Error decoding JSON content of the file: mod_list.json", e)
         for mod in mod_list_config:
             if mod_list_config[mod]:
                 self.mod_list.append(mod) 

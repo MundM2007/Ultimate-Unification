@@ -1,7 +1,6 @@
 import functools
 import os
 import shutil
-import stat
 
 class IOManager:
     def __init__(self, LM):
@@ -11,15 +10,6 @@ class IOManager:
     # reads the content of a file
     @functools.lru_cache()
     def read(self, path_file):
-        #
-        ##
-        ###
-        ####
-        #### maybe add some fallback cases so it doesn't end the program if the file is missing
-        ####
-        ###
-        ##
-        #
         try:
             with open(path_file, mode="r", encoding="utf-8") as file:
                 return file.read()

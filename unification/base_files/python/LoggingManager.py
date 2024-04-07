@@ -43,7 +43,7 @@ class LoggingManager:
         if type_logging == "info":
             print(message)
         
-        problematic_error_types = ["file_error", "file_missing", "script_error"]
+        problematic_error_types = ["file_error", "file_missing", "script_error", "critical_json_error"]
         exception = "None"
         if type_logging in problematic_error_types:
             exception = "\n" + traceback.format_exc()
