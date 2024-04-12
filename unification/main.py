@@ -98,7 +98,7 @@ for element in gen_scripts_info.get("main"):
             FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
     else:
         FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
-    
+
     anything_changed = 0
     all_added_or_replaced = dict()
     # replaces items with a new texture and adds the tags
@@ -184,8 +184,8 @@ for element in gen_scripts_info.get("main"):
 
      # checks if the base file exists and is valid
     base_file_recipe_path = os.path.join(path_program, "base_files", "recipe", f"{id_file}.json")
-    if not os.path.isfile(base_file_registry_path):
-        LM.log("material_file_missing", f"Material Base file missing: {base_file_registry_path} skipping")
+    if not os.path.isfile(base_file_recipe_path):
+        LM.log("material_file_missing", f"Material Base file missing: {base_file_recipe_path} skipping")
         continue
     try:
         base_file_recipe = json.loads(IOM.read(base_file_recipe_path))
@@ -193,10 +193,10 @@ for element in gen_scripts_info.get("main"):
         LM.log("json_error", f"Error decoding JSON content of the file: {base_file_recipe_path}", e)
         continue
     if base_file_recipe.get(id_name) is None:
-        LM.log("material_missing", f"Material ({id_name}) not found in base file: {base_file_registry_path}")
+        LM.log("material_missing", f"Material ({id_name}) not found in base file: {base_file_recipe_path}")
         continue
 
-    license_notice = base_file_registry.get("license_notice", "")
+    license_notice = base_file_recipe.get("license_notice", "")
     if license_notice is not None:
         license_notice = "".join(license_notice)
     
@@ -228,7 +228,7 @@ for element in gen_scripts_info.get("main"):
                       f"    event.remove({{id: '{recipe}'}})\n", license_notice, 40, "onEvent('recipes', event => {\n")
 
 FM.save()
-IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.get_pack_path(), "kubejs", "assets", "unification"))
+IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.get_pack_path(), "kubejs", "assets", "unification", "textures"))
 LM.log("info", f"Materials added: {material_added}, Types added: {type_added}, Textures replaced: {texture_replaced}, Elements removed: {element_removed}")
 LM.log("info", "Finished")
 LM.save()

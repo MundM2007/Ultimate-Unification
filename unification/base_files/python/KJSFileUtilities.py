@@ -40,6 +40,7 @@ class KJSFileUtilities:
             path_script_file = os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_item", f"{id_file}.js")
             self.FM.addKJS(path_script_file, f"    global.scripts.add_item(event, '{id_name}', '{material_type}', '{texture_path}')\n", 
                            license_notice, 100, "onEvent('item.registry', event => {\n")
+            self.UT.gen_lang_entry(id_file, id_name, material_type)
             return True
         return False
     
@@ -48,9 +49,10 @@ class KJSFileUtilities:
         texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{material_type}"
         if self.FM.handleTexture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
             path_script_file = os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_block", f"{id_file}.js")
-            type_material_extra = "stone" if material_type == "raw_block" else "metal"
-            self.FM.addKJS(path_script_file, f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{type_material_extra}', '{texture_path}')\n", 
+            material_type_extra = "stone" if material_type == "raw_block" else "metal"
+            self.FM.addKJS(path_script_file, f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}')\n", 
                            license_notice, 100, "onEvent('block.registry', event => {\n")
+            self.UT.gen_lang_entry(id_file, id_name, material_type)
             return True
         return False
     
@@ -60,6 +62,7 @@ class KJSFileUtilities:
         path_script_file = os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_fluid", f"{id_file}.js")
         self.FM.addKJS(path_script_file, f"    global.scripts.add_molten(event, '{id_name}', {color})\n",
                        license_notice, 100, "onEvent('fluid.registry', event => {\n")
+        self.UT.gen_lang_entry(id_file, id_name, "molten")
         return True
 
 
@@ -67,6 +70,7 @@ class KJSFileUtilities:
         color = "0xffffff" if color == "" else color
         path_script_file = os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_slurry", f"{id_file}.js")
         self.FM.addKJS(path_script_file, f"SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "", "")
+        self.UT.gen_lang_entry(id_file, id_name, "slurry")
         return True
     
 
@@ -86,7 +90,8 @@ class KJSFileUtilities:
                        f"    global.scripts.add_coin(event, '{id_name}')\n", license_notice, 100, "onEvent('item.registry', event => {\n")
         self.FM.addKJS(os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}_register_item_property.js"),
                        f"    global.scripts.register_item_property('unification:{id_name}_coin')\n", license_notice, 100, "onEvent('postinit', event => {\n")
-        
+        self.UT.gen_lang_entry(id_file, id_name, "coin")
+
         main_model = (f'{{"parent": "item/generated", '
                       f'"textures": {{"layer0": "{texture_path_new + "0"}"}}, '
                         f'"overrides": ['

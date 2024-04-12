@@ -23,15 +23,12 @@ class FileManager:
         if self.files.get(path_file):
             try:
                 content = content if isinstance(content, dict) else json.loads(content)
-                self.files[path_file] = json.dumps({**json.loads(self.files[path_file]), **content}, indent=4 if pretty_print else None, sort_keys=True if pretty_print else False)
+                self.files[path_file][0].update(content)
             except json.JSONDecodeError as e:
                 self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
         else:
-            if isinstance(content, dict):
-                content = json.dumps(content, indent=4 if pretty_print else None, sort_keys=True if pretty_print else False)
             try: 
-                json.loads(content)
-                self.files[path_file] = content
+                self.files[path_file] = [json.loads(content) if isinstance(content, str) else content, pretty_print==True]
             except json.JSONDecodeError as e:
                 self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
     
@@ -64,10 +61,10 @@ class FileManager:
     def save(self):
         amount_files = len(self.files)
         for index, (path_file, content) in enumerate(self.files.items()):
-            if isinstance(content, list):
+            if len(content) == 3:
                 self.IOM.write(path_file, content[0] + content[1] + content[2])
             else:
-                self.IOM.write(path_file, content)
+                self.IOM.write(path_file, json.dumps(content[0], indent=4 if content[1] else None))
             self.LM.log_percentage(f"Saving files", index / (amount_files - 1))
         
         amount_textures_add = len(self.textures_add)

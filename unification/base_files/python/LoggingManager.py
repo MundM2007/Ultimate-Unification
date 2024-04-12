@@ -74,11 +74,11 @@ class LoggingManager:
         sub_bar = [" ", "▏", "▎", "▍", "▌", "▋", "▋", "▊"][state % 8] if full_bars < 24 else ""
         spaces = " " * (23 - full_bars)
 
-        print(f"\r{message:<15}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
+        print(f"\r{message:<17}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
 
         while True:
             if float_n * 10 >= self.percentage_step_last + 1:
-                self.log(" info ", f"{message:<15}: {float_n * 100:>6.2f}%")
+                self.log(" info ", f"{message:<17}: {float_n * 100:>6.2f}%")
                 self.percentage_step_last += 1
             else:
                 break

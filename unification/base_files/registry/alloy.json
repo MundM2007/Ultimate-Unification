@@ -646,7 +646,7 @@
             ]
         }
     },
-    "silicon": {
+    "silicon_gem": {
         "replace": [],
         "add": [
             "gem"

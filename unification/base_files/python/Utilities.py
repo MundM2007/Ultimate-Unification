@@ -17,6 +17,18 @@ class Utilities:
         for mod in mod_list_config:
             if mod_list_config[mod]:
                 self.mod_list.append(mod) 
+
+        self.langs = []
+        for id_file in os.listdir(os.path.join(self.LM.path_program, "base_files", "lang")):
+            if os.path.isfile(os.path.join(self.LM.path_program, "base_files", "lang", id_file)):
+                base_file_lang = os.path.join(self.LM.path_program, "base_files", "lang", f"{id_file}")
+                # checks if the lang file is valid
+                try:
+                    base_file_registry = json.loads(self.IOM.read(base_file_lang))
+                    base_file_registry["lang"] = id_file.removesuffix(".json")
+                    self.langs.append(base_file_registry)
+                except json.JSONDecodeError as e:
+                    self.LM.log("json_error", f"Error decoding JSON content of the file: {base_file_lang} skipping this lang", e)      
     
     
     # gets the path of the pack from the path of the program
@@ -35,6 +47,9 @@ class Utilities:
             return os.path.join(self.get_pack_path(), storage_location, namespace, "models", f"{path}.json")
         elif type_rc == "blockstate":
             return os.path.join(self.get_pack_path(), storage_location, namespace, "blockstates", f"{path}.json")
+        elif type_rc == "lang":
+            return os.path.join(self.get_pack_path(), storage_location, namespace, "lang", f"{path}.json")
+        return ""
 
 
     # gets the base files texture path
@@ -72,3 +87,24 @@ class Utilities:
         return True
     
 
+    def gen_lang_entry(self, id_file, id_name, material_type):
+        for lang in self.langs:
+            path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
+            for material_type in [f"dirty_{material_type}", f"clean_{material_type}"] if material_type in ["slurry"] else [material_type]:
+                if lang.get(material_type) is not None:
+                    if lang.get(f"{id_file}.{id_name}") is not None:
+                        if material_type in ["raw_block", "storage_block"]:
+                            lang_key = f"block.unification.{id_name}_{material_type}"
+                        elif material_type == "molten":
+                            lang_key = f"fluid.unification.{id_name}_molten"
+                        elif material_type == "dirty_slurry":
+                            lang_key = f"slurry.unification.dirty_{id_name}_slurry"
+                        elif material_type == "clean_slurry":
+                            lang_key = f"slurry.unification.clean_{id_name}_slurry"
+                        else:
+                            lang_key = f"item.unification.{id_name}_{material_type}"
+                        self.FM.addJson(path_lang_file, {lang_key: lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
+                    else:
+                        self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
+                else:
+                    self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")

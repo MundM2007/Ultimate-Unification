@@ -785,7 +785,7 @@
             "thermal:parts/signalum_gear"
         ]
     },
-    "silicon": {},
+    "silicon_gem": {},
     "steel": {
         "variants": {
             "energy_from_coin": 40000,
