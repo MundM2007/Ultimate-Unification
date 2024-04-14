@@ -24,7 +24,7 @@ onEvent('loaded', event => {
             event.create(`unification:${id_name}_${material_type}`)
                 .textureAll(texture_path)
                 .material(material_type_extra)
-                .translationKey('block.unification.' + id_name + '_' + material_type)
+                .translationKey('')
                 .hardness(5.0)
                 .resistance(6.0)
                 .harvestTool('pickaxe', 2)
@@ -33,11 +33,11 @@ onEvent('loaded', event => {
         add_item: (event, id_name, material_type, texture_path) => {
             event.create(`unification:${id_name}_${material_type}`)
                 .texture(texture_path)
-                .translationKey('item.unification.' + id_name + '_' + material_type)
+                .translationKey('')
         },
         add_coin: (event, id_name) => {
             event.create(`unification:${id_name}_coin`)
-                .translationKey('item.unification.' + id_name + '_coin')
+                .translationKey('')
         },
         add_molten: (event, id_name, color) => {
             event.create(`unification:${id_name}_molten`)
@@ -45,7 +45,7 @@ onEvent('loaded', event => {
                 .textureFlowing('unification:fluid/molten_flow')
                 .color(color)
                 .bucketColor(color)
-                .translationKey('fluid.unification.' + id_name + '_molten')
+                .translationKey('')
         },
         register_item_property: (item) => {
             if (!Platform.isClientEnvironment) return;
