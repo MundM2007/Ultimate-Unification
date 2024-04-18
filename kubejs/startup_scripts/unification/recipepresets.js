@@ -432,7 +432,7 @@ onEvent("loaded", e => {
                             .damageIngredient(Item.of("immersiveengineering:hammer").ignoreNBT(), 1)
                             .id(`unification:minecraft/shaped/component/${removeMod(plate)}/from_gem/with_immersiveengineering_hammer`)
                         event.recipes.immersiveengineeringMetalPress(plate, `#forge:gems/${material}`, "immersiveengineering:mold_plate")
-                            .id(`unification:im mersiveengineering/metal_press/component/${removeMod(plate)}/from_gem`)
+                            .id(`unification:immersiveengineering/metal_press/component/${removeMod(plate)}/from_gem`)
                     }
                 }
             },
