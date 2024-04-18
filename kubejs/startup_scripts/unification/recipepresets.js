@@ -837,7 +837,7 @@ onEvent("loaded", e => {
                     if (checkTag(`#forge:ingots/${material}`)){
                         event.recipes.thermal.press(plate, `#forge:ingots/${material}`).id(`unification:thermal/press/component/${removeMod(plate)}/from_ingot`).energy(2400)
                     } else if (checkTag(`#forge:gems/${material}`)){
-                        event.recipes.thermal.press(plate, `#gems:ingots/${material}`).id(`unification:thermal/press/component/${removeMod(plate)}/from_gem`).energy(2400)
+                        event.recipes.thermal.press(plate, `#forge:gems/${material}`).id(`unification:thermal/press/component/${removeMod(plate)}/from_gem`).energy(2400)
                     }
                 }
             },
