@@ -50,7 +50,6 @@ onEvent('loaded', event => {
         register_item_property: (item) => {
             if (!Platform.isClientEnvironment) return;
 
-            $ItemModelProperties.func_239418_a_(Item.of(item), new ResourceLocation('count'), (stack, world, living) => {
             $ItemModelsProperties.func_239418_a_(Item.of(item), new ResourceLocation('count'), (stack, world, living) => {
                 return stack.getCount() / stack.getMaxStackSize()
             })
