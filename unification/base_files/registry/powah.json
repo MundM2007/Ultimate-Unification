@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blazing_crystal": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "powah:block/blazing_crystal_block", "powah:blazing_crystal_block"],
             ["gem", "powah:item/crystal_blazing", "powah:crystal_blazing"]
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "energized_steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "powah:block/energized_steel_block", "powah:energized_steel_block"],
             ["ingot", "powah:item/steel_energized", "powah:steel_energized"]
@@ -51,6 +63,12 @@
         "remove": {}
     },
     "niotic_crystal": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "powah:block/niotic_crystal_block", "powah:niotic_crystal_block"],
             ["gem", "powah:item/crystal_niotic", "powah:crystal_niotic"]
@@ -67,8 +85,14 @@
         "remove": {}
     },
     "nitro_crystal": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
-            ["storage_block", "powah:block/blazing_crystal_nitro", "powah:nitro_crystal_block"],
+            ["storage_block", "powah:block/nitro_crystal_block", "powah:nitro_crystal_block"],
             ["gem", "powah:item/crystal_nitro", "powah:crystal_nitro"]
         ],
         "add": [
@@ -83,11 +107,17 @@
         "remove": {}
     },
     "overcharged": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
+            ["storage_block", "powah:block/overcharged_core_block", "powah:overcharged_core_block"],
             ["gem", "powah:item/overcharged_core", "powah:overcharged_core"]
         ],
         "add": [
-            "storage_block",
             "dust",
             "plate",
             "rod",
@@ -99,6 +129,12 @@
         "remove": {}
     },
     "spirited_crystal": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "powah:block/spirited_crystal_block", "powah:spirited_crystal_block"],
             ["gem", "powah:item/crystal_spirited", "powah:crystal_spirited"]
@@ -115,6 +151,12 @@
         "remove": {}
     },
     "uraninite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "powah:block/uraninite_block", "powah:uraninite_block"],
             ["gem", "powah:item/uraninite", "powah:uraninite"]

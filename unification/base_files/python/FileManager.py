@@ -37,7 +37,10 @@ class FileManager:
     def handleTexture(self, path_file, path_copy, active, isAdding):
         if active:
             if os.path.exists(path_file):
-                self.textures_add[path_file] = path_copy
+                if path_file in self.textures_add:
+                    self.textures_add[path_file].append(path_copy)
+                else:
+                    self.textures_add[path_file] = [path_copy]
                 return True
             else:
                 if isAdding:
@@ -68,8 +71,9 @@ class FileManager:
             self.LM.log_percentage(f"Saving files", index / (amount_files - 1))
         
         amount_textures_add = len(self.textures_add)
-        for index, (path_file, path_copy) in enumerate(self.textures_add.items()):
-            self.IOM.copy(path_file, path_copy)
+        for index, (path_file, paths_copy) in enumerate(self.textures_add.items()):
+            for path_copy in paths_copy:
+                self.IOM.copy(path_file, path_copy)
             self.LM.log_percentage(f"Saving textures", index / (amount_textures_add - 1))
 
         amount_textures_remove = len(self.textures_remove)

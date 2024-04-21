@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aluminum_steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silents_mechanisms:item/aluminum_steel_ingot", "silents_mechanisms:aluminum_steel_ingot"],
             ["storage_block", "silents_mechanisms:block/aluminum_steel_block", "silents_mechanisms:aluminum_steel_block"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "bismuth_brass": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silents_mechanisms:item/bismuth_brass_ingot", "silents_mechanisms:bismuth_brass_ingot"],
             ["storage_block", "silents_mechanisms:block/bismuth_brass_block", "silents_mechanisms:bismuth_brass_block"],
@@ -52,6 +64,12 @@
         "remove": {}
     },
     "bismuth_steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "silents_mechanisms:item/bismuth_steel_ingot", "silents_mechanisms:bismuth_steel_ingot"],
             ["storage_block", "silents_mechanisms:block/bismuth_steel_block", "silents_mechanisms:bismuth_steel_block"],

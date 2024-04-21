@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "andesite_alloy": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "create:item/andesite_alloy", "create:andesite_alloy"]
         ],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "chromatic_compound": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "create:item/chromatic_compound_0", "create:chromatic_compound"],
             ["ingot", "create:item/chromatic_compound_1", "create:chromatic_compound"],
@@ -54,6 +66,12 @@
         "remove": {}
     },
     "refined_radiance": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "create:item/refined_radiance", "create:refined_radiance"]
         ],
@@ -70,7 +88,36 @@
         ],
         "remove": {}
     },
+    "polished_rose_quartz": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
+        "replace": [
+            ["gem", "create:item/polished_rose_quartz", "create:polished_rose_quartz"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#fc797f"
+        ],
+        "remove": {}
+    },
     "shadow_steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [
             ["ingot", "create:item/shadow_steel", "create:shadow_steel"]
         ],

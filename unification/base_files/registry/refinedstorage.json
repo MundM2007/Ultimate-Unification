@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "quartz_enriched_iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "refinedstorage:item/quartz_enriched_iron", "refinedstorage:quartz_enriched_iron"],
             ["storage_block", "refinedstorage:block/quartz_enriched_iron_block", "refinedstorage:quartz_enriched_iron_block"]

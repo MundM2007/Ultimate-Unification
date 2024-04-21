@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "insanium": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "mysticalagradditions:item/insanium_ingot", "mysticalagradditions:insanium_ingot"],
             ["storage_block", "mysticalagradditions:block/insanium_ingot_block", "mysticalagradditions:insanium_ingot_block"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "insanium_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["storage_block", "mysticalagradditions:block/insanium_gemstone_block", "mysticalagradditions:insanium_gemstone_block"],
             ["gem", "mysticalagradditions:item/insanium_gemstone", "mysticalagradditions:insanium_gemstone"]

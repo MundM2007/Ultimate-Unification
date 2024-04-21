@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aethium": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/aethium/_", "envirocore:aethium"],
             ["gem", "envirocore:item/crystal/aethium", "envirocore:aethium_crystal"],
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "erodium": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/erodium/_", "envirocore:erodium"],
             ["gem", "envirocore:item/crystal/erodium", "envirocore:erodium_crystal"],
@@ -50,6 +62,12 @@
         "remove": {}
     },
     "ionite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/ionite/_", "envirocore:ionite"],
             ["gem", "envirocore:item/crystal/ionite", "envirocore:ionite_crystal"],
@@ -66,6 +84,12 @@
         "remove": {}
     },
     "kyronite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/kyronite/_", "envirocore:kyronite"],
             ["gem", "envirocore:item/crystal/kyronite", "envirocore:kyronite_crystal"],
@@ -82,6 +106,12 @@
         "remove": {}
     },
     "litherite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/litherite/_", "envirocore:litherite"],
             ["gem", "envirocore:item/crystal/litherite", "envirocore:litherite_crystal"],
@@ -98,6 +128,12 @@
         "remove": {}
     },
     "lonsdaleite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "envirocore:item/crystal/lonsdaleite", "envirocore:lonsdaleite_crystal"]
         ],
@@ -114,6 +150,12 @@
         "remove": {}
     },
     "nanorite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/nanorite/_", "envirocore:nanorite"],
             ["gem", "envirocore:item/crystal/nanorite", "envirocore:nanorite_crystal"],
@@ -130,6 +172,12 @@
         "remove": {}
     },
     "pladium": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/pladium/_", "envirocore:pladium"],
             ["gem", "envirocore:item/crystal/pladium", "envirocore:pladium_crystal"],
@@ -146,6 +194,12 @@
         "remove": {}
     },
     "xerothium": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "envirocore:block/xerothium/_", "envirocore:xerothium"],
             ["gem", "envirocore:item/crystal/xerothium", "envirocore:xerothium_crystal"],

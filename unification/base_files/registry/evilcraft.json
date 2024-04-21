@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dark_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "evilcraft:item/dark_gem", "evilcraft:dark_gem"],
             ["storage_block", "evilcraft:block/dark_block", "evilcraft:dark_block"],
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "dark_power_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["gem", "evilcraft:item/dark_power_gem", "evilcraft:dark_power_gem"],
             ["storage_block", "evilcraft:block/dark_power_gem_block", "evilcraft:dark_power_gem_block"]

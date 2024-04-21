@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "pink_slime": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "industrialforegoing:items/pink_slime_ingot", "industrialforegoing:pink_slime_ingot"]
         ],
@@ -35,6 +41,12 @@
         "remove": {}
     }, 
     "pink_slime_gem": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["gem", "industrialforegoing:items/pink_slime", "industrialforegoing:pink_slime"]
         ],

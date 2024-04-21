@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "compressed_iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "pneumaticcraft:item/ingot_iron_compressed", "pneumaticcraft:ingot_iron_compressed"],
             ["storage_block", "pneumaticcraft:block/compressed_iron_block", "pneumaticcraft:compressed_iron_block"],

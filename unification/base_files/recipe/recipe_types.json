@@ -69,9 +69,9 @@
     "minecraft.ore_processing_metal": ["id_name", "ingot"],
     "minecraft.pieces_to_raw": ["id_name", "raw_material"],
     "minecraft.smelting_recipes": ["id_name", "ingot", "gem", "nugget"],
-    "minecraft.storage_convert_gem": ["id_name", "gem", "block"],
-    "minecraft.storage_convert_metal": ["id_name", "ingot", "block", "nugget"],
-    "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_block"],
+    "minecraft.storage_convert_gem": ["id_name", "gem", "storage_block"],
+    "minecraft.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget"],
+    "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"],
 
     "occultism.ore_processing_metal": ["id_name", "dust"],
 
@@ -90,7 +90,7 @@
     "thermal.ore_processing_metal": ["id_name", "ingot", "dust"],
     "thermal.pieces_to_raw": ["id_name", "raw"],
     "thermal.rod": ["molten", "rod"],
-    "thermal.storage_convert_gem": ["id_name", "gem", "block"],
-    "thermal.storage_convert_metal": ["id_name", "ingot", "block", "nugget"],
-    "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_block"]
+    "thermal.storage_convert_gem": ["id_name", "gem", "storage_block"],
+    "thermal.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget"],
+    "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"]
 }

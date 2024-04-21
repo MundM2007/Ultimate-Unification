@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 5,
+            "explosion_resistance": 6
+        },
+
         "replace": [],
         "add": [
             "dust",
@@ -41,6 +47,12 @@
         }
     },
     "diamond": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 6
+        },
+
         "replace": [
             ["storage_block", "minecraft:block/diamond_block", "minecraft:diamond_block"]
         ],
@@ -68,6 +80,12 @@
         }
     },
     "emerald": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "minecraft:block/emerald_block", "minecraft:emerald_block"]
         ],
@@ -91,6 +109,12 @@
         }
     },
     "gold": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "minecraft:block/gold_block", "minecraft:gold_block"],
             ["ingot", "minecraft:item/gold_ingot", "minecraft:gold_ingot"],
@@ -153,6 +177,12 @@
         }
     },
     "iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "minecraft:block/iron_block", "minecraft:iron_block"],
             ["ingot", "minecraft:item/iron_ingot", "minecraft:iron_ingot"],
@@ -220,6 +250,12 @@
         }
     },
     "lapis": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "dust",
@@ -242,6 +278,12 @@
         }
     },
     "netherite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 50,
+            "explosion_resistance": 1200
+        },
+
         "replace": [
             ["storage_block", "minecraft:block/netherite_block", "minecraft:netherite_block"],
             ["ingot", "minecraft:item/netherite_ingot", "minecraft:netherite_ingot"],
@@ -283,6 +325,12 @@
         }
     },
     "quartz": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "appliedenergistics2:item/purified_nether_quartz_crystal", "appliedenergistics2:purified_nether_quartz_crystal"]
         ],
@@ -309,6 +357,12 @@
         }
     },
     "redstone": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "plate",

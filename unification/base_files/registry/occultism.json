@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "iesnium": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["nugget", "occultism:item/iesnium_nugget", "occultism:iesnium_nugget"],
             ["ingot", "occultism:item/iesnium_ingot", "occultism:iesnium_ingot"],

@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_crystal": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "forbidden_arcanus:item/arcane_crystal", "forbidden_arcanus:arcane_crystal"],
             ["dust", "forbidden_arcanus:item/arcane_crystal_dust", "forbidden_arcanus:arcane_crystal_dust"],
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "dark_rune": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "forbidden_arcanus:item/dark_rune", "forbidden_arcanus:dark_rune"]
         ],
@@ -50,6 +62,12 @@
         "remove": {}
     },
     "obsidian_ingot": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 20,
+            "explosion_resistance": 1200
+        },
+
         "replace": [
             ["ingot", "forbidden_arcanus:item/obsidian_ingot", "forbidden_arcanus:obsidian_ingot"]
         ],
@@ -67,6 +85,12 @@
         "remove": {}
     },
     "rune": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "forbidden_arcanus:item/rune", "forbidden_arcanus:rune"]
         ],
@@ -83,6 +107,11 @@
         "remove": {}
     },
     "stellarite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 8,
+            "explosion_resistance": 8
+        },
         "replace": [
             ["ingot", "forbidden_arcanus:item/stellarite_piece", "forbidden_arcanus:stellarite_piece"],
             ["storage_block", "forbidden_arcanus:block/stellarite_block", "forbidden_arcanus:stellarite_block"]

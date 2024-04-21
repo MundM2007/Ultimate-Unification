@@ -101,6 +101,29 @@ for element in gen_scripts_info.get("main"):
 
     anything_changed = 0
     all_added_or_replaced = dict()
+
+    if base_file_registry[id_name].get("block") is not None:
+        harvest_level = base_file_registry[id_name]["block"].get("harvest_level")
+        if harvest_level is None:
+            harvest_level = 2
+            LM.log("value_missing", f"Harvest Level not found for {id_name}, using default value of 2")
+        
+        destroy_time = base_file_registry[id_name]["block"].get("destroy_time")
+        if destroy_time is None:
+            destroy_time = 5
+            LM.log("value_missing", f"Destroy Time not found for {id_name}, using default value of 5")
+        
+        explosion_resistance = base_file_registry[id_name]["block"].get("explosion_resistance")
+        if explosion_resistance is None:
+            explosion_resistance = 6
+            LM.log("value_missing", f"Explosion Resistance not found for {id_name}, using default value of 6")
+        
+    else:
+        harvest_level = 2
+        destroy_time = 5
+        explosion_resistance = 6
+        LM.log("value_missing", f"Block values not found for {id_name}, using default values")
+
     # replaces items with a new texture and adds the tags
     if base_file_registry[id_name].get("replace") is not None:
         all_element_to_replace = []
@@ -130,6 +153,7 @@ for element in gen_scripts_info.get("main"):
                 else:
                     # removes the texture if the material type doesn't exist
                     FM.handleTexture("", UT.resource_location_to_path(element_to_replace[2]), False, False)
+    
     # adds new items with tags
     if base_file_registry[id_name].get("add") is not None:
         # loops over all elements to add
@@ -145,7 +169,7 @@ for element in gen_scripts_info.get("main"):
                     element_to_add = element_to_add[:-7]
 
             # adds the element
-            if KFUT.add_element(id_file, id_name, element_to_add, color, license_notice):
+            if KFUT.add_element(id_file, id_name, element_to_add, color, license_notice, harvest_level, destroy_time, explosion_resistance):
                 # item id is added to a dictionary to be used later
                 if element_to_add == "slurry":
                     all_added_or_replaced["clean_slurry"] = f"unification:clean_{id_name}_slurry"

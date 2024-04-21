@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "source_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["gem", "ars_nouveau:items/mana_gem", "ars_nouveau:mana_gem"],
             ["storage_block", "ars_nouveau:blocks/mana_gem_block", "ars_nouveau:mana_gem_block"]

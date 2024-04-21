@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "desh": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "boss_tools:blocks/desh_block", "boss_tools:desh_block"],
             ["ingot", "boss_tools:items/item_desh", "boss_tools:desh_ingot"],
@@ -45,6 +51,12 @@
         "remove": {}
     },
     "ice_shard": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "boss_tools:items/item_ice_shard", "boss_tools:ice_shard"]
         ],
@@ -61,6 +73,12 @@
         "remove": {}
     },
     "silicon": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "boss_tools:blocks/silicon_block", "boss_tools:silicon_block"],
             ["ingot", "boss_tools:items/item_silicon", "boss_tools:silicon_ingot"],

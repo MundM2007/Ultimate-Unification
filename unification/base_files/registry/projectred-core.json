@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "electrotine": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "projectred-core:item/electrotine_ingot", "projectred-core:electrotine_ingot"],
             ["dust", "projectred-core:item/electrotine_dust", "projectred-core:electrotine_dust"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "peridot": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["gem", "projectred-core:item/peridot", "projectred-core:peridot"],
             ["storage_block", "projectred-exploration:block/peridot_block", "projectred-exploration:peridot_block"]

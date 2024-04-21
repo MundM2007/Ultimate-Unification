@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dragonstone": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "botania:block/dragonstone_block", "botania:dragonstone_block"],
             ["gem", "botania:item/dragonstone", "botania:dragonstone"]
@@ -33,6 +39,12 @@
         "remove": {}
     },
     "elementium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "botania:block/elementium_block", "botania:elementium_block"],
             ["ingot", "botania:item/elementium_ingot", "botania:elementium_ingot"],
@@ -61,6 +73,12 @@
         "remove": {}
     },
     "manasteel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "botania:block/manasteel_block", "botania:manasteel_block"],
             ["ingot", "botania:item/manasteel_ingot", "botania:manasteel_ingot"],
@@ -78,6 +96,12 @@
         "remove": {}
     },
     "terrasteel": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [
             ["storage_block", "botania:block/terrasteel_block", "botania:terrasteel_block"],
             ["ingot", "botania:item/terrasteel_ingot", "botania:terrasteel_ingot"],

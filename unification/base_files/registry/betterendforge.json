@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aeternium": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 6,
+            "explosion_resistance": 6
+        },
+
         "replace": [
             ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
             ["ingot", "betterendforge:item/aeternium_ingot", "betterendforge:aeternium_ingot"]
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "amber": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "betterendforge:block/amber_block", "betterendforge:amber_block"],
             ["gem", "betterendforge:item/amber_gem", "betterendforge:amber_gem"],
@@ -53,6 +65,12 @@
         "remove": {}
     },
     "terminite": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
             ["ingot", "betterendforge:item/terminite_ingot", "betterendforge:terminite_ingot"],
@@ -70,6 +88,12 @@
         "remove": {}
     },
     "thallasium": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "betterendforge:block/thallasium_block", "betterendforge:thallasium_block"],
             ["ingot", "betterendforge:item/thallasium_ingot", "betterendforge:thallasium_ingot"],

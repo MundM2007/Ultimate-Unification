@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "neptunium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",

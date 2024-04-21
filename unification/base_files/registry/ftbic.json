@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "advanced_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "ftbic:item/advanced_alloy", "ftbic:advanced_alloy"]
         ],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "iridium_alloy": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "ftbic:item/iridium_alloy", "ftbic:iridium_alloy"]
         ],

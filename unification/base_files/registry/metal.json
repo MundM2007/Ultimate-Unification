@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aluminum": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
+
         "replace": [
             ["crushed_ore", "create:item/crushed_aluminum_ore", "create:crushed_aluminum_ore"]
         ],
@@ -78,6 +84,12 @@
         }
     },
     "bismuth": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -120,6 +132,12 @@
         }
     },
     "boron": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -157,6 +175,12 @@
         }
     },
     "cobalt": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -197,6 +221,12 @@
         }
     },
     "copper": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "mekanism:item/crystal_copper", "mekanism:crystal_copper"],
             ["shard", "mekanism:item/shard_copper", "mekanism:shard_copper"],
@@ -292,6 +322,12 @@
         }
     },
     "iridium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -323,6 +359,12 @@
         }
     },
     "lead": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "mekanism:item/crystal_lead", "mekanism:crystal_lead"],
             ["shard", "mekanism:item/shard_lead", "mekanism:shard_lead"],
@@ -404,6 +446,12 @@
         }
     },
     "lithium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -442,6 +490,12 @@
         }
     },
     "magnesium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -479,6 +533,12 @@
         }
     },
     "nickel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crushed_ore", "create:item/crushed_nickel_ore", "create:crushed_nickel_ore"],
             ["coin", "thermal:item/nickel_coin_0", "thermal:nickel_coin"],
@@ -548,6 +608,12 @@
         }
     },
     "osmium": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "mekanism:item/crystal_osmium", "mekanism:crystal_osmium"],
             ["shard", "mekanism:item/shard_osmium", "mekanism:shard_osmium"],
@@ -593,6 +659,12 @@
         }
     },
     "platinum": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crushed_ore", "create:item/crushed_platinum_ore", "create:crushed_platinum_ore"]
         ],
@@ -635,6 +707,12 @@
         }
     },
     "silver": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crushed_ore", "create:item/crushed_silver_ore", "create:crushed_silver_ore"],
             ["coin", "thermal:item/silver_coin_0", "thermal:silver_coin"],
@@ -713,6 +791,12 @@
         }
     },
     "thorium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -750,6 +834,12 @@
         }
     },
     "tin": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
+
         "replace": [
             ["crystal", "mekanism:item/crystal_tin", "mekanism:crystal_tin"],
             ["shard", "mekanism:item/shard_tin", "mekanism:shard_tin"],
@@ -819,6 +909,12 @@
         }
     },
     "titanium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 4,
+            "explosion_resistance": 4
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -849,6 +945,12 @@
         }
     },
     "tungsten": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 4,
+            "explosion_resistance": 4
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -878,6 +980,12 @@
         }
     },
     "uranium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "mekanism:item/crystal_uranium", "mekanism:crystal_uranium"],
             ["shard", "mekanism:item/shard_uranium", "mekanism:shard_uranium"],
@@ -944,6 +1052,12 @@
         }
     },
     "zinc": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crushed_ore", "create:item/crushed_zinc_ore", "create:crushed_zinc_ore"]
         ],

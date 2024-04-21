@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "drenched_iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "elementalcraft:block/drenched_iron_block", "elementalcraft:drenched_iron_block"],
             ["ingot", "elementalcraft:item/drenched_iron_ingot", "elementalcraft:drenched_iron_ingot"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "fireite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [
             ["storage_block", "elementalcraft:block/fireite_block", "elementalcraft:fireite_block"],
             ["ingot", "elementalcraft:item/fireite_ingot", "elementalcraft:fireite_ingot"],
@@ -52,12 +64,17 @@
         "remove": {}
     },
     "inert_crystal": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "elementalcraft:item/inertcrystal", "elementalcraft:inertcrystal"],
             ["storage_block", "elementalcraft:block/inertcrystal_block", "elementalcraft:inertcrystal_block"]
         ],
         "add": [
-            "storage_block",
             "dust",
             "plate",
             "rod",
@@ -69,6 +86,12 @@
         "remove": {}
     },
     "swift_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "elementalcraft:block/swift_alloy_block", "elementalcraft:swift_alloy_block"],
             ["ingot", "elementalcraft:item/swift_alloy_ingot", "elementalcraft:swift_alloy_ingot"],

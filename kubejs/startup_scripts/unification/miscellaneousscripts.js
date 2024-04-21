@@ -18,17 +18,17 @@
 //         - MundM2007          (https://github.com/MundM2007)
 
 onEvent('loaded', event => {
-    let $ItemModelProperties = java('net.minecraft.item.ItemModelsProperties')
+    let $ItemModelsProperties = java('net.minecraft.item.ItemModelsProperties')
     global.scripts = {
-        add_block: (event, id_name, material_type, material_type_extra, texture_path) => {
+        add_block: (event, id_name, material_type, material_type_extra, texture_path, harvest_level, destroy_time, explosion_resistance) => {
             event.create(`unification:${id_name}_${material_type}`)
                 .textureAll(texture_path)
                 .material(material_type_extra)
                 .translationKey('')
-                .hardness(5.0)
-                .resistance(6.0)
-                .harvestTool('pickaxe', 2)
-                .requiresTool(true)
+                .hardness(destroy_time)
+                .resistance(explosion_resistance)
+                .harvestTool('pickaxe', harvest_level <= 0 ? 0 : harvest_level)
+                .requiresTool(!harvest_level <= 0)
         },
         add_item: (event, id_name, material_type, texture_path) => {
             event.create(`unification:${id_name}_${material_type}`)
@@ -51,7 +51,8 @@ onEvent('loaded', event => {
             if (!Platform.isClientEnvironment) return;
 
             $ItemModelProperties.func_239418_a_(Item.of(item), new ResourceLocation('count'), (stack, world, living) => {
-                return stack.func_190916_E() / stack.func_77976_d()
+            $ItemModelsProperties.func_239418_a_(Item.of(item), new ResourceLocation('count'), (stack, world, living) => {
+                return stack.getCount() / stack.getMaxStackSize()
             })
         }
     }

@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "ebony": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "psi:items/ebony_psimetal", "psi:ebony_psimetal"],
             ["storage_block", "psi:blocks/ebony_psimetal_block", "psi:ebony_psimetal_block"]
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "ivory": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "psi:items/ivory_psimetal", "psi:ivory_psimetal"],
             ["storage_block", "psi:blocks/ivory_psimetal_block", "psi:ivory_psimetal_block"]
@@ -52,6 +64,12 @@
         "remove": {}
     },
     "psidust": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["dust", "psi:items/psidust", "psi:psidust"]
         ],
@@ -59,6 +77,12 @@
         "remove": {}
     },
     "psigem": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "psi:blocks/psigem_block", "psi:psigem_block"],
             ["gem", "psi:items/psigem", "psi:psigem"]
@@ -67,6 +91,12 @@
         "remove": {}
     },
     "psimetal": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "psi:items/psimetal", "psi:psimetal"],
             ["storage_block", "psi:blocks/psimetal_block", "psi:psimetal_block"]

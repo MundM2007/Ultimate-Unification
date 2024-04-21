@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aquamarine": {
+        "block": {
+            "harvest_level": -1,
+            "destroy_time": 0.5,
+            "explosion_resistance": 0.5
+        },
+
         "replace": [
             ["gem", "astralsorcery:item/aquamarine", "astralsorcery:aquamarine"]
         ],
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "resonating_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "astralsorcery:item/resonating_gem", "astralsorcery:resonating_gem"]
         ],
@@ -50,6 +62,12 @@
         "remove": {}
     },
     "rock_crystal": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["crystal", "astralsorcery:item/crystal_rock", "astralsorcery:rock_crystal"]
         ],
@@ -66,6 +84,12 @@
         "remove": {}
     },
     "starmetal": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "astralsorcery:item/starmetal_ingot", "astralsorcery:starmetal_ingot"],
             ["storage_block", "astralsorcery:item/starmetal", "astralsorcery:starmetal"]

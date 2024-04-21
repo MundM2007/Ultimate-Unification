@@ -17,9 +17,9 @@ class KJSFileUtilities:
             self.FM.addKJS(path_script_file_block, f"    event.add('{item_tag}', '{id_item}')\n", license_notice, 90, "onEvent('block.tags', event => {\n")
     
 
-    def add_element(self, id_file, id_name, material_type, color, license_notice):
+    def add_element(self, id_file, id_name, material_type, color, license_notice, harvest_level, destroy_time, explosion_resistance):
         if material_type in ["raw_block", "storage_block"]:
-            return self.add_block(id_file, id_name, material_type, license_notice)
+            return self.add_block(id_file, id_name, material_type, license_notice, harvest_level, destroy_time, explosion_resistance)
     
         elif material_type.startswith("molten"):
             return self.add_molten(id_file, id_name, color, license_notice)
@@ -45,13 +45,13 @@ class KJSFileUtilities:
         return False
     
 
-    def add_block(self, id_file, id_name, material_type, license_notice):
+    def add_block(self, id_file, id_name, material_type, license_notice, harvest_level, destroy_time, explosion_resistance):
         texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{material_type}"
         if self.FM.handleTexture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
             path_script_file = os.path.join(self.UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_block", f"{id_file}.js")
             material_type_extra = "stone" if material_type == "raw_block" else "metal"
-            self.FM.addKJS(path_script_file, f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}')\n", 
-                           license_notice, 100, "onEvent('block.registry', event => {\n")
+            self.FM.addKJS(path_script_file, (f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}', "
+                           f"{harvest_level}, {destroy_time}, {explosion_resistance})\n"), license_notice, 100, "onEvent('block.registry', event => {\n")
             self.UT.gen_lang_entry(id_file, id_name, material_type)
             return True
         return False

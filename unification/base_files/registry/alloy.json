@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_gold": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -47,6 +53,12 @@
         }
     },
     "beryllium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -74,6 +86,12 @@
         }
     },
     "brass": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -111,6 +129,12 @@
         }
     },
     "bronze": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/bronze_coin_0", "thermal:bronze_coin"],
             ["coin", "thermal:item/bronze_coin_1", "thermal:bronze_coin"],
@@ -160,6 +184,12 @@
         }
     },
     "cast_iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "ingot",
@@ -193,21 +223,40 @@
         }
     },
     "charcoal": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
+
         "replace": [
             ["gem", "", "minecraft:charcoal"]
         ],
         "add": [
-            "dust"
+            "dust",
+            "storage_block"
         ],
         "remove": {
             "dust": [
                 "mekanism:dust_charcoal",
                 "envirocore:charcoal_powder",
                 "potionsmaster:charcoal_powder"
+            ],
+            "storage_block": [
+                "mekanism:block_charcoal",
+                "quark:charcoal_block",
+                "thermal:charcoal_block",
+                "betterendforge:charcoal_block"
             ]
         }
     },
     "coal_coke": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "gem",
@@ -230,6 +279,12 @@
         }
     },
     "constantan": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/constantan_coin_0", "thermal:constantan_coin"],
             ["coin", "thermal:item/constantan_coin_1", "thermal:constantan_coin"],
@@ -277,6 +332,12 @@
         }
     },
     "electrum": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/electrum_coin_0", "thermal:electrum_coin"],
             ["coin", "thermal:item/electrum_coin_1", "thermal:electrum_coin"],
@@ -328,6 +389,12 @@
         }
     },
     "ender_pearl": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "dust"
@@ -343,6 +410,12 @@
         }
     },
     "enderium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/enderium_coin_0", "thermal:enderium_coin"],
             ["coin", "thermal:item/enderium_coin_1", "thermal:enderium_coin"],
@@ -386,6 +459,12 @@
         }
     },
     "flour": {
+        "block": {
+            "harvest_level": -1,
+            "destroy_time": 0.5,
+            "explosion_resistance": 0.5
+        },
+
         "replace": [],
         "add": [
             "dust"
@@ -403,6 +482,12 @@
         }
     },
     "graphite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -432,6 +517,12 @@
         }
     },
     "invar": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/invar_coin_0", "thermal:invar_coin"],
             ["coin", "thermal:item/invar_coin_1", "thermal:invar_coin"],
@@ -475,6 +566,12 @@
         }
     },
     "lumium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/lumium_coin_0", "thermal:lumium_coin"],
             ["coin", "thermal:item/lumium_coin_1", "thermal:lumium_coin"],
@@ -518,6 +615,12 @@
         }
     },
     "manganese": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -545,6 +648,12 @@
         }
     },
     "obsidian": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 50,
+            "explosion_resistance": 1200
+        },
+
         "replace": [],
         "add": [
             "dust"
@@ -560,6 +669,12 @@
         }
     },
     "red_alloy": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -590,7 +705,13 @@
             ]
         }
     },
-    "salt": {
+    "salt": { 
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 0.5,
+            "explosion_resistance": 0.5
+        },
+
         "replace": [],
         "add": [
             "dust"
@@ -604,6 +725,12 @@
         }
     },
     "signalum": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["coin", "thermal:item/signalum_coin_0", "thermal:signalum_coin"],
             ["coin", "thermal:item/signalum_coin_1", "thermal:signalum_coin"],
@@ -647,6 +774,11 @@
         }
     },
     "silicon_gem": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
         "replace": [],
         "add": [
             "gem"
@@ -663,6 +795,12 @@
         }
     },
     "steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",
@@ -711,6 +849,12 @@
         }
     },
     "wood": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 2,
+            "explosion_resistance": 2
+        },
+
         "replace": [],
         "add": [
             "dust",
@@ -730,6 +874,12 @@
         }
     },
     "zirconium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [],
         "add": [
             "storage_block",

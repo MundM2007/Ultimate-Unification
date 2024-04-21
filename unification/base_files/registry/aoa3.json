@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "amethyst": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/amethyst_block", "aoa3:amethyst_block"],
             ["gem", "aoa3:item/amethyst", "aoa3:amethyst"]
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "baronyte": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/baronyte_block", "aoa3:baronyte_block"],
             ["ingot", "aoa3:item/baronyte_ingot", "aoa3:baronyte_ingot"],
@@ -61,6 +73,12 @@
         "remove": {}
     },
     "blazium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/blazium_block", "aoa3:blazium_block"],
             ["ingot", "aoa3:item/blazium_ingot", "aoa3:blazium_ingot"],
@@ -88,6 +106,12 @@
         "remove": {}
     },
     "bloodstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/bloodstone_block", "aoa3:bloodstone_block"],
             ["gem", "aoa3:item/bloodstone", "aoa3:bloodstone"]
@@ -104,6 +128,12 @@
         "remove": {}
     },
     "blue_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/blue_gemstones", "aoa3:blue_gemstones"]
         ],
@@ -120,6 +150,12 @@
         "remove": {}
     },
     "charged_runium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/charged_runium_chunk", "aoa3:charged_runium_chunk"]
         ],
@@ -136,6 +172,12 @@
         "remove": {}
     },
     "crystallite": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/crystallite_block", "aoa3:crystallite_block"],
             ["gem", "aoa3:item/crystallite", "aoa3:crystallite"]
@@ -152,6 +194,12 @@
         "remove": {}
     },
     "elecanium": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/elecanium_block", "aoa3:elecanium_block"],
             ["ingot", "aoa3:item/elecanium_ingot", "aoa3:elecanium_ingot"],
@@ -179,6 +227,12 @@
         "remove": {}
     },
     "emberstone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/emberstone_block", "aoa3:emberstone_block"],
             ["ingot", "aoa3:item/emberstone_ingot", "aoa3:emberstone_ingot"],
@@ -206,6 +260,12 @@
         "remove": {}
     },
     "gemenyte": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/gemenyte_block", "aoa3:gemenyte_block"],
             ["gem", "aoa3:item/gemenyte", "aoa3:gemenyte"]
@@ -222,6 +282,12 @@
         "remove": {}
     },
     "ghastly": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/ghastly_block", "aoa3:ghastly_block"],
             ["ingot", "aoa3:item/ghastly_ingot", "aoa3:ghastly_ingot"],
@@ -249,6 +315,12 @@
         "remove": {}
     },
     "ghoulish": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/ghoulish_block", "aoa3:ghoulish_block"],
             ["ingot", "aoa3:item/ghoulish_ingot", "aoa3:ghoulish_ingot"],
@@ -276,6 +348,12 @@
         "remove": {}
     },
     "green_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/green_gemstones", "aoa3:green_gemstones"]
         ],
@@ -292,6 +370,12 @@
         "remove": {}
     },
     "jade": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/jade_block", "aoa3:jade_block"],
             ["gem", "aoa3:item/jade", "aoa3:jade"]
@@ -307,6 +391,12 @@
         "remove": {}
     },
     "jewelyte": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/jewelyte_block", "aoa3:jewelyte_block"],
             ["gem", "aoa3:item/jewelyte", "aoa3:jewelyte"]
@@ -323,6 +413,12 @@
         "remove": {}
     },
     "limonite": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/limonite_block", "aoa3:limonite_block"],
             ["ingot", "aoa3:item/limonite_ingot", "aoa3:limonite_ingot"],
@@ -350,6 +446,12 @@
         "remove": {}
     },
     "lunar": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/lunar_block", "aoa3:lunar_block"],
             ["ingot", "aoa3:item/lunar_ingot", "aoa3:lunar_ingot"],
@@ -366,6 +468,12 @@
         "remove": {}
     },
     "lyon": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/lyon_block", "aoa3:lyon_block"],
             ["ingot", "aoa3:item/lyon_ingot", "aoa3:lyon_ingot"],
@@ -393,6 +501,12 @@
         "remove": {}
     },
     "mystite": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/mystite_block", "aoa3:mystite_block"],
             ["ingot", "aoa3:item/mystite_ingot", "aoa3:mystite_ingot"],
@@ -420,6 +534,12 @@
         "remove": {}
     },
     "ornamyte": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/ornamyte_block", "aoa3:ornamyte_block"],
             ["gem", "aoa3:item/ornamyte", "aoa3:ornamyte"]
@@ -436,6 +556,12 @@
         "remove": {}
     },
     "purple_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/purple_gemstones", "aoa3:purple_gemstones"]
         ],
@@ -451,6 +577,12 @@
         "remove": {}
     },
     "red_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/red_gemstones", "aoa3:red_gemstones"]
         ],
@@ -467,6 +599,12 @@
         "remove": {}
     },
     "rosite": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/rosite_block", "aoa3:rosite_block"],
             ["ingot", "aoa3:item/rosite_ingot", "aoa3:rosite_ingot"],
@@ -494,6 +632,12 @@
         "remove": {}
     },
     "runium": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/runium_chunk", "aoa3:runium_chunk"]
         ],
@@ -510,6 +654,12 @@
         "remove": {}
     },
     "rusted_iron": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["ingot", "aoa3:item/rusted_iron_ingot", "aoa3:rusted_iron_ingot"]
         ],
@@ -527,6 +677,12 @@
         "remove": {}
     },
     "shyregem": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/shyregem_block", "aoa3:shyregem_block"],
             ["gem", "aoa3:item/shyregem", "aoa3:shyregem"]
@@ -543,6 +699,12 @@
         "remove": {}
     },
     "shyrestone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/shyrestone_block", "aoa3:shyrestone_block"],
             ["ingot", "aoa3:item/shyrestone_ingot", "aoa3:shyrestone_ingot"],
@@ -570,6 +732,12 @@
         "remove": {}
     },
     "skeletal": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/skeletal_block", "aoa3:skeletal_block"],
             ["ingot", "aoa3:item/skeletal_ingot", "aoa3:skeletal_ingot"],
@@ -595,6 +763,12 @@
         "remove": {}
     },
     "varsium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "aoa3:block/varsium_block", "aoa3:varsium_block"],
             ["ingot", "aoa3:item/varsium_ingot", "aoa3:varsium_ingot"],
@@ -622,6 +796,12 @@
         "remove": {}
     },
     "white_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/white_gemstones", "aoa3:white_gemstones"]
         ],
@@ -638,6 +818,12 @@
         "remove": {}
     },
     "yellow_gemstone": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["gem", "aoa3:item/yellow_gemstones", "aoa3:yellow_gemstones"]
         ],

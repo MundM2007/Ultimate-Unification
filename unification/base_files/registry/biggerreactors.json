@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blutonium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [
             ["storage_block", "biggerreactors:block/blutonium_block", "biggerreactors:blutonium_block"],
             ["ingot", "biggerreactors:item/blutonium_ingot", "biggerreactors:blutonium_ingot"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "cyanite": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "biggerreactors:block/cyanite_block", "biggerreactors:cyanite_block"],
             ["ingot", "biggerreactors:item/cyanite_ingot", "biggerreactors:cyanite_ingot"],
@@ -52,6 +64,12 @@
         "remove": {}
     },
     "ludicrite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 8,
+            "explosion_resistance": 8
+        },
+
         "replace": [
             ["storage_block", "biggerreactors:block/ludicrite_block", "biggerreactors:ludicrite_block"],
             ["ingot", "biggerreactors:item/ludicrite_ingot", "biggerreactors:ludicrite_ingot"],

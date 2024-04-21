@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "certus_quartz": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["dust", "appliedenergistics2:item/certus_quartz_dust", "appliedenergistics2:certus_quartz_dust"],
             ["gem", "appliedenergistics2:item/certus_quartz_crystal", "appliedenergistics2:certus_quartz_crystal"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "charged_certus_quartz": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "appliedenergistics2:item/certus_quartz_crystal_charged", "appliedenergistics2:charged_certus_quartz_crystal"]
         ],
@@ -51,6 +63,12 @@
         "remove": {}
     },
     "fluix": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["dust", "appliedenergistics2:item/fluix_dust", "appliedenergistics2:fluix_dust"],
             ["gem", "appliedenergistics2:item/fluix_crystal", "appliedenergistics2:fluix_crystal"],

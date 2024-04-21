@@ -1187,7 +1187,7 @@
     },
     "mystite": {
         "variants": {
-            "molten": "aoa3:molten_mistite",
+            "molten": "aoa3:molten_mystite",
             "energy_from_coin": 64000
         },
         "add": [

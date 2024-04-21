@@ -285,6 +285,16 @@
             "occultism.dust",
             "silents_mechanisms.dust",
             "thermal.dust"
+        ],
+        "remove": [
+            "mekanism:storage_blocks/charcoal",
+            "quark:building/crafting/compressed/charcoal_block",
+            "thermal:storage/charcoal_block",
+            "thermal:machine/press/packing3x3/press_charcoal_packing",
+            "thermal:machine/press/unpacking/press_charcoal_unpacking",
+            "mekanism:charcoal",
+            "quark:building/crafting/compressed/charcoal_block_uncompress",
+            "thermal:storage/charcoal_from_block"
         ]
     },
     "coal_coke": {

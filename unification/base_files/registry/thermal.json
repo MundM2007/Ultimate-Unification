@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apatite": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "thermal:block/apatite_block", "thermal:apatite_block"],
             ["gem", "thermal:item/apatite", "thermal:apatite"],
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "cinnabar": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["storage_block", "thermal:block/cinnabar_block", "thermal:cinnabar_block"],
             ["gem", "thermal:item/cinnabar", "thermal:cinnabar"],

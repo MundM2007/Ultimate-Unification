@@ -19,6 +19,12 @@
     ],
     
     "azure_electrum": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/azure_electrum_ingot", "silentgear:azure_electrum_ingot"],
             ["storage_block", "silentgear:block/azure_electrum_block", "silentgear:azure_electrum_block"],
@@ -36,6 +42,12 @@
         "remove": {}
     },
     "azure_silver": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/azure_silver_ingot", "silentgear:azure_silver_ingot"],
             ["storage_block", "silentgear:block/azure_silver_block", "silentgear:azure_silver_block"],
@@ -64,6 +76,12 @@
         "remove": {}
     },
     "blaze_gold": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/blaze_gold_ingot", "silentgear:blaze_gold_ingot"],
             ["storage_block", "silentgear:block/blaze_gold_block", "silentgear:blaze_gold_block"],
@@ -81,6 +99,12 @@
         "remove": {}
     },
     "crimson_iron": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/crimson_iron_ingot", "silentgear:crimson_iron_ingot"],
             ["storage_block", "silentgear:block/crimson_iron_block", "silentgear:crimson_iron_block"],
@@ -114,6 +138,12 @@
         }
     },
     "crimson_steel": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/crimson_steel_ingot", "silentgear:crimson_steel_ingot"],
             ["storage_block", "silentgear:block/crimson_steel_block", "silentgear:crimson_steel_block"],
@@ -131,6 +161,12 @@
         "remove": {}
     },
     "tyrian_steel": {
+        "block": {
+            "harvest_level": 4,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "silentgear:item/tyrian_steel_ingot", "silentgear:tyrian_steel_ingot"],
             ["storage_block", "silentgear:block/tyrian_steel_block", "silentgear:tyrian_steel_block"],

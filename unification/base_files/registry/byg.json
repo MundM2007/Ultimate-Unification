@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "ametrine": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "byg:item/ametrine_gems", "byg:ametrine_gems"],
             ["storage_block", "byg:block/ametrine_block", "byg:ametrine_block"]
@@ -34,6 +40,12 @@
         "remove": {}
     },
     "anthracite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "byg:item/anthracite", "byg:anthracite"],
             ["storage_block", "byg:block/anthracite_block", "byg:anthracite_block"]
@@ -50,6 +62,12 @@
         "remove": {}
     },
     "emeraldite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "byg:item/emeraldite_shards", "byg:emeraldite_shards"]
         ],
@@ -66,6 +84,12 @@
         "remove": {}
     },
     "lignite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "byg:item/lignite", "byg:lignite"],
             ["storage_block", "byg:block/lignite_block", "byg:lignite_block"]
@@ -82,6 +106,12 @@
         "remove": {}
     },
     "pendorite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "byg:block/pendorite_block", "byg:pendorite_block"],
             ["ingot", "byg:item/pendorite_ingot", "byg:pendorite_ingot"],

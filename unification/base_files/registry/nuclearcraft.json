@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arsenic": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["dust", "nuclearcraft:items/gem_dust_arsenic", "nuclearcraft:gem_dust_arsenic"]
         ],
@@ -25,6 +31,12 @@
         "remove": {}
     },
     "boron_arsenide": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["gem", "nuclearcraft:items/gem_boron_arsenide", "nuclearcraft:gem_boron_arsenide"]
         ],
@@ -40,6 +52,12 @@
         "remove": {}
     },
     "boron_nitride": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "nuclearcraft:items/gem_boron_nitride", "nuclearcraft:gem_boron_nitride"],
             ["dust", "nuclearcraft:items/gem_dust_boron_nitride", "nuclearcraft:gem_dust_boron_nitride"]
@@ -55,6 +73,12 @@
         "remove": {}
     },
     "carobbiite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "nuclearcraft:items/gem_carobbiite", "nuclearcraft:gem_carobbiite"],
             ["dust", "nuclearcraft:items/gem_dust_carobbiite", "nuclearcraft:gem_dust_carobbiite"]
@@ -71,6 +95,12 @@
         "remove": {}
     },
     "extreme_alloy": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_extreme", "nuclearcraft:alloy_extreme"]
         ],
@@ -88,6 +118,12 @@
         "remove": {}
     },
     "ferroboron_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_ferroboron", "nuclearcraft:alloy_ferroboron"]
         ],
@@ -104,6 +140,12 @@
         "remove": {}
     },
     "hard_carbon_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_hard_carbon", "nuclearcraft:alloy_hard_carbon"]
         ],
@@ -137,6 +179,12 @@
         "remove": {}
     },
     "lead_platinum_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_lead_platinum", "nuclearcraft:alloy_lead_platinum"]
         ],
@@ -154,6 +202,12 @@
         "remove": {}
     },
     "lithium_manganese_dioxide_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_lithium_manganese_dioxide", "nuclearcraft:alloy_lithium_manganese_dioxide"]
         ],
@@ -171,6 +225,12 @@
         "remove": {}
     },
     "magnesium_diboride_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_magnesium_diboride", "nuclearcraft:alloy_magnesium_diboride"]
         ],
@@ -188,6 +248,12 @@
         "remove": {}
     },
     "manganese_dioxide": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_manganese2", "nuclearcraft:ingot_oxide_manganese2"],
             ["dust", "nuclearcraft:items/dust_oxide_manganese2", "nuclearcraft:dust_oxide_manganese2"]
@@ -204,6 +270,12 @@
         "remove": {}
     },
     "manganese_oxide": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_manganese", "nuclearcraft:ingot_oxide_manganese"],
             ["dust", "nuclearcraft:items/dust_oxide_manganese", "nuclearcraft:dust_oxide_manganese"]
@@ -221,6 +293,12 @@
         "remove": {}
     },
     "rhodochrosite": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "nuclearcraft:items/gem_rhodochrosite", "nuclearcraft:gem_rhodochrosite"],
             ["dust", "nuclearcraft:items/gem_dust_rhodochrosite", "nuclearcraft:gem_dust_rhodochrosite"]
@@ -237,6 +315,12 @@
         "remove": {}
     },
     "shibuichi_alloy": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_shibuichi", "nuclearcraft:alloy_shibuichi"]
         ],
@@ -254,6 +338,12 @@
         "remove": {}
     },
     "sic_sic_caramic_matrix_composite_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_sic_sic_cmc", "nuclearcraft:alloy_sic_sic_cmc"]
         ],
@@ -271,6 +361,12 @@
         "remove": {}
     },
     "silicon_carbide_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_silicon_carbide", "nuclearcraft:alloy_silicon_carbide"]
         ],
@@ -288,6 +384,12 @@
         "remove": {}
     },
     "thermoconducting_alloy": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_thermoconducting", "nuclearcraft:alloy_thermoconducting"]
         ],
@@ -305,6 +407,12 @@
         "remove": {}
     },
     "thorium_oxide": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_thorium", "nuclearcraft:ingot_oxide_thorium"],
             ["dust", "nuclearcraft:items/dust_oxide_thorium", "nuclearcraft:dust_oxide_thorium"]
@@ -322,6 +430,12 @@
         "remove": {}
     },
     "tin_silver_alloy": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_tin_silver", "nuclearcraft:alloy_tin_silver"]
         ],
@@ -339,6 +453,12 @@
         "remove": {}
     },
     "tough_alloy": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_tough", "nuclearcraft:alloy_tough"]
         ],
@@ -356,6 +476,12 @@
         "remove": {}
     },
     "uranium_oxide": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_uranium", "nuclearcraft:ingot_oxide_uranium"],
             ["dust", "nuclearcraft:items/dust_oxide_uranium", "nuclearcraft:dust_oxide_uranium"]
@@ -373,6 +499,11 @@
         "remove": {}
     },
     "villiaumite": {
+        "block": {
+            "harvest_level": 0,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
         "replace": [
             ["gem", "nuclearcraft:items/gem_villiaumite", "nuclearcraft:gem_villiaumite"],
             ["dust", "nuclearcraft:items/gem_dust_villiaumite", "nuclearcraft:gem_dust_villiaumite"]
@@ -389,6 +520,12 @@
         "remove": {}
     },
     "zircaloy_alloy": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_zircaloy", "nuclearcraft:alloy_zircaloy"]
         ],

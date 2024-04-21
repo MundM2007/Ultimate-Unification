@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apalachia": {
+        "block": {
+            "harvest_level": 7,
+            "destroy_time": 8,
+            "explosion_resistance": 8
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/apalachia_block", "divinerpg:apalachia_block"],
             ["gem", "divinerpg:items/apalachia_gem", "divinerpg:apalachia_gem"],
@@ -35,6 +41,12 @@
         "remove": {}
     },
     "aquatic": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "divinerpg:items/aquatic_ingot", "divinerpg:aquatic_ingot"]
         ],
@@ -52,6 +64,12 @@
         "remove": {}
     },
     "arlemite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/arlemite_block", "divinerpg:arlemite_block"],
             ["ingot", "divinerpg:items/arlemite_ingot", "divinerpg:arlemite_ingot"],
@@ -80,6 +98,12 @@
         "remove": {}
     },
     "bloodgem": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/bloodgem_block", "divinerpg:bloodgem_block"],
             ["gem", "divinerpg:items/bloodgem", "divinerpg:bloodgem"]
@@ -96,6 +120,12 @@
         "remove": {}
     },
     "bluefire_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/bluefire_stone", "divinerpg:bluefire_stone"]
         ],
@@ -112,6 +142,12 @@
         "remove": {}
     },
     "corrupted_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/corrupted_stone", "divinerpg:corrupted_stone"]
         ],
@@ -128,6 +164,12 @@
         "remove": {}
     },
     "divine_stone": {
+        "block": {
+            "harvest_level": 5,
+            "destroy_time": 6,
+            "explosion_resistance": 6
+        },
+
         "replace": [
             ["gem", "divinerpg:items/divine_stone", "divinerpg:divine_stone"]
         ],
@@ -144,6 +186,12 @@
         "remove": {}
     },
     "eden": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/eden_block", "divinerpg:eden_block"],
             ["gem", "divinerpg:items/eden_gem", "divinerpg:eden_gem"],
@@ -161,6 +209,12 @@
         "remove": {}
     },
     "ender_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/ender_stone", "divinerpg:ender_stone"]
         ],
@@ -177,6 +231,12 @@
         "remove": {}
     },
     "hellstone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "divinerpg:items/hellstone_ingot", "divinerpg:hellstone_ingot"]
         ],
@@ -194,6 +254,12 @@
         "remove": {}
     },
     "ice_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/ice_stone", "divinerpg:ice_stone"]
         ],
@@ -210,6 +276,12 @@
         "remove": {}
     },
     "jungle_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/jungle_stone", "divinerpg:jungle_stone"]
         ],
@@ -226,6 +298,12 @@
         "remove": {}
     },
     "molten_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/molten_stone", "divinerpg:molten_stone"]
         ],
@@ -242,6 +320,12 @@
         "remove": {}
     },
     "mortum": {
+        "block": {
+            "harvest_level": 9,
+            "destroy_time": 10,
+            "explosion_resistance": 10
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/mortum_block", "divinerpg:mortum_block"],
             ["gem", "divinerpg:items/mortum_gem", "divinerpg:mortum_gem"],
@@ -259,6 +343,12 @@
         "remove": {}
     },
     "realmite": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/realmite_block", "divinerpg:realmite_block"],
             ["ingot", "divinerpg:items/realmite_ingot", "divinerpg:realmite_ingot"],
@@ -287,6 +377,12 @@
         "remove": {}
     },
     "rupee": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/rupee_block", "divinerpg:rupee_block"],
             ["ingot", "divinerpg:items/rupee_ingot", "divinerpg:rupee_ingot"],
@@ -315,6 +411,12 @@
         "remove": {}
     },
     "shadow_bar": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["ingot", "divinerpg:items/shadow_bar", "divinerpg:shadow_bar"]
         ],
@@ -332,6 +434,12 @@
         "remove": {}
     },
     "shadow_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/shadow_stone", "divinerpg:shadow_stone"]
         ],
@@ -339,6 +447,12 @@
         "remove": {}
     },
     "skythern": {
+        "block": {
+            "harvest_level": 8,
+            "destroy_time": 9,
+            "explosion_resistance": 9
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/skythern_block", "divinerpg:skythern_block"],
             ["gem", "divinerpg:items/skythern_gem", "divinerpg:skythern_gem"],
@@ -356,6 +470,12 @@
         "remove": {}
     },
     "terran_stone": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["gem", "divinerpg:items/terran_stone", "divinerpg:terran_stone"]
         ],
@@ -372,6 +492,12 @@
         "remove": {}
     },
     "torridite": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "divinerpg:blocks/torridite_block", "divinerpg:torridite_block"],
             ["ingot", "divinerpg:items/torridite_ingot", "divinerpg:torridite_ingot"],
@@ -400,6 +526,11 @@
         "remove": {}
     },
     "wildwood": {
+        "block": {
+            "harvest_level": 6,
+            "destroy_time": 7,
+            "explosion_resistance": 7
+        },
         "replace": [
             ["storage_block", "divinerpg:blocks/wildwood_block", "divinerpg:wildwood_block"],
             ["gem", "divinerpg:items/wildwood_gem", "divinerpg:wildwood_gem"],

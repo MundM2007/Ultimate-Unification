@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "pewter": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "eidolon:block/pewter_block", "eidolon:pewter_block"],
             ["ingot", "eidolon:item/pewter_ingot", "eidolon:pewter_ingot"],

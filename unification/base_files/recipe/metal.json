@@ -266,7 +266,8 @@
     },
     "cobalt": {
         "variants": {
-            "energy_from_coin": 64000
+            "energy_from_coin": 64000,
+            "molten": "tconstruct:molten_cobalt"
         },
         "add": [
             "appliedenergistics2.dust",

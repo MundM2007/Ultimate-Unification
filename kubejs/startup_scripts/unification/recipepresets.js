@@ -32,8 +32,7 @@ function checkItems(items){
     let failed = false
     items.forEach(item => {
         if (!Item.exists(item)) {failed = true; return}
-        if (Item.of(item).id == "minecraft:air") {failed = true; return}
-        
+        if (Item.of(item).id == "minecraft:air") {failed = true; return}   
     })
     return !failed
 }
@@ -510,7 +509,7 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore: (event, material, stratas) => {
+            ore: (event, material, stratas, gem_multiplier) => {
                 if (checkTag(`#forge:raw_materials/${material}`)) {
                     stratas.forEach(strata => {
                         let ore = `osv:custom_${material}_ore`
@@ -521,7 +520,8 @@ onEvent("loaded", e => {
                                 ore += strata.replace(":", "_")
                             }
                         }
-                        global.mrt.mekanism.combining(event, ore, [`8x #forge:raw_materials/${material}`, strata], `unification:mekanism/combining/component/${removeMod(ore)}/from_${strata}`)
+                        global.mrt.mekanism.combining(event, ore, [`${8*gem_multiplier}x #forge:raw_materials/${material}`, strata], 
+                            `unification:mekanism/combining/component/${removeMod(ore)}/from_${strata}`)
                     })
                 }
             },
@@ -903,9 +903,9 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    event.smelting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplier)))
+                    event.smelting(Item.of(gem, Math.round(gem_multiplier)), `#forge:ores/${material}`)
                         .xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(gem)}/from_ore`)
-                    event.blasting(gem, Ingredient.of(`#forge:ores/${material}`, Math.round(gem_multiplier)))
+                    event.blasting(Item.of(gem, Math.round(gem_multiplier)), `#forge:ores/${material}`)
                         .xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },     
@@ -984,7 +984,7 @@ onEvent("loaded", e => {
                 let output = [element, `4x ${element}`, element, `4x ${nugget}`, `4x ${nugget}`, `3x ${nugget}`]
                 let xp = [0.1, 0, 0, 0, 0, 0]
                 types.forEach((type, i) => {
-                    if (checkTag(`#forge:${type}s/${material}`)){
+                    if(checkTag(`#forge:${type}s/${material}`)){
                         if(checkItems(Item.of(output[i]).id)){
                             event.smelting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/smelting/component/${removeMod(output[i])}/from_${type}`)
                             event.blasting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/blasting/component/${removeMod(output[i])}/from_${type}`)

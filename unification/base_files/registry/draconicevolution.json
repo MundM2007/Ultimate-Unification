@@ -18,6 +18,12 @@
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "awakened_draconium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 5,
+            "explosion_resistance": 5
+        },
+
         "replace": [
             ["storage_block", "draconicevolution:block/awakened_draconium_block", "draconicevolution:awakened_draconium_block"],
             ["storage_block", "draconicevolution:block/awakened_draconium_block_side", "draconicevolution:awakened_draconium_block"],
@@ -36,6 +42,12 @@
         "remove": {}
     },
     "draconium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
         "replace": [
             ["storage_block", "draconicevolution:block/draconium_block", "draconicevolution:draconium_block"],
             ["ingot", "draconicevolution:item/components/draconium_ingot", "draconicevolution:draconium_ingot"],
