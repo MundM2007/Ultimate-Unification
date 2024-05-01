@@ -39,16 +39,16 @@
         ],
         "remove": {
             "storage_block": [
-                "eidolon:arcane_gold_block",
-                "forbidden_arcanus:arcane_gold_block"
+                ["eidolon:arcane_gold_block", "eidolon:block/arcane_gold_block"],
+                ["forbidden_arcanus:arcane_gold_block", "forbidden_arcanus:block/arcane_gold_block"]
             ],
             "ingot": [
-                "eidolon:arcane_gold_ingot",
-                "forbidden_arcanus:arcane_gold_ingot"
+                ["eidolon:arcane_gold_ingot", "eidolon:item/arcane_gold_ingot"],
+                ["forbidden_arcanus:arcane_gold_ingot", "forbidden_arcanus:item/arcane_gold_ingot"]
             ],
             "nugget": [
-                "eidolon:arcane_gold_nugget",
-                "forbidden_arcanus:arcane_gold_nugget"
+                ["eidolon:arcane_gold_nugget", "eidolon:item/arcane_gold_nugget"],
+                ["forbidden_arcanus:arcane_gold_nugget", "forbidden_arcanus:item/arcane_gold_nugget"]
             ]
         }
     },
@@ -74,14 +74,14 @@
         ],
         "remove": {
             "storage_block": [
-                "nuclearcraft:ingot_block_beryllium"
+                ["nuclearcraft:ingot_block_beryllium", "nuclearcraft:blocks/ingot_block_beryllium"]
             ],
             "ingot": [
-                "nuclearcraft:ingot_beryllium",
-                "chemlib:ingot_beryllium"
+                ["nuclearcraft:ingot_beryllium", "nuclearcraft:items/ingot_beryllium"],
+                ["chemlib:ingot_beryllium", ""]
             ],
             "dust": [
-                "nuclearcraft:dust_beryllium"
+                ["nuclearcraft:dust_beryllium", "nuclearcraft:items/dust_beryllium"]
             ]
         }
     },
@@ -106,25 +106,25 @@
         ],
         "remove": {
             "storage_block": [
-                "create:brass_block",
-                "silents_mechanisms:brass_block"
+                ["create:brass_block", "create:block/brass_block"],
+                ["silents_mechanisms:brass_block", "silents_mechanisms:block/brass_block"]
             ],
             "ingot": [
-                "create:brass_ingot",
-                "silents_mechanisms:brass_ingot"
+                ["create:brass_ingot", "create:item/brass_ingot"],
+                ["silents_mechanisms:brass_ingot", "silents_mechanisms:item/brass_ingot"]
             ],
             "nugget": [
-                "create:brass_nugget",
-                "silents_mechanisms:brass_nugget"
+                ["create:brass_nugget", "create:item/brass_nugget"],
+                ["silents_mechanisms:brass_nugget", "silents_mechanisms:item/brass_nugget"]
             ],
             "dust": [
-                "silents_mechanisms:brass_dust"
+                ["silents_mechanisms:brass_dust", "silents_mechanisms:item/brass_dust"]
             ],
             "plate": [
-                "create:brass_sheet"
+                ["create:brass_sheet", "create:item/brass_sheet"]
             ],
             "rod": [
-                "createaddition:brass_rod"
+                ["createaddition:brass_rod", "createaddition:item/brass_rod"]
             ]
         }
     },
@@ -154,32 +154,33 @@
         ],
         "remove": {
             "storage_block": [
-                "mekanism:block_bronze",
-                "thermal:bronze_block",
-                "silents_mechanisms:bronze_block"
+                ["mekanism:block_bronze", "mekansim:block/block_bronze"],
+                ["thermal:bronze_block", "thermal:block/bronze_block"],
+                ["silents_mechanisms:bronze_block", "silents_mechanisms:block/bronze_block"]
             ],
             "ingot": [
-                "mekanism:ingot_bronze",
-                "thermal:bronze_ingot",
-                "silents_mechanisms:bronze_ingot",
-                "nuclearcraft:alloy_bronze"
+                ["mekanism:ingot_bronze", "mekanism:item/ingot_bronze"],
+                ["thermal:bronze_ingot", "thermal:item/bronze_ingot"],
+                ["silents_mechanisms:bronze_ingot", "silents_mechanisms:item/bronze_ingot"],
+                ["nuclearcraft:alloy_bronze", "nuclearcraft:items/alloy_bronze"]
             ],
             "nugget": [
-                "mekanism:nugget_bronze",
-                "thermal:bronze_nugget",
-                "silents_mechanisms:bronze_nugget"
+                ["mekanism:nugget_bronze", "mekanism:item/nugget_bronze"],
+                ["thermal:bronze_nugget", "thermal:item/bronze_nugget"],
+                ["silents_mechanisms:bronze_nugget", "silents_mechanisms:item/bronze_nugget"]
             ],
             "dust": [
-                "mekanism:dust_bronze",
-                "thermal:bronze_dust",
-                "silents_mechanisms:bronze_dust"
+                ["mekanism:dust_bronze", "mekanism:item/dust_bronze"],
+                ["thermal:bronze_dust", "thermal:item/bronze_dust"],
+                ["silents_mechanisms:bronze_dust", "silents_mechanisms:item/bronze_dust"]
+
             ],
             "plate": [
-                "steampowered:bronze_sheet",
-                "thermal:bronze_plate"
+                ["steampowered:bronze_sheet", "steampowered:item/bronze_sheet"],
+                ["thermal:bronze_plate", "thermal:item/bronze_plate"]
             ],
             "gear": [
-                "thermal:bronze_gear"
+                ["thermal:bronze_gear", "thermal:item/bronze_gear"]
             ]
         }
     },
@@ -205,20 +206,20 @@
         ],
         "remove": {
             "ingot": [
-                "steampowered:cast_iron_ingot",
-                "ftbjarmod:cast_iron_ingot"
+                ["steampowered:cast_iron_ingot", "steampowered:item/cast_iron_ingot"],
+                ["ftbjarmod:cast_iron_ingot", "ftbjarmod:item/cast_iron_ingot"]
             ],
             "nugget": [
-                "ftbjarmod:cast_iron_nugget"
+                ["ftbjarmod:cast_iron_nugget", "ftbjarmod:item/cast_iron_nugget"]
             ],
             "storage_block": [
-                "ftbjarmod:cast_iron_block"
+                ["ftbjarmod:cast_iron_block", "ftbjarmod:block/cast_iron_block"]
             ],
             "plate": [
-                "steampowered:cast_iron_sheet"
+                ["steampowered:cast_iron_sheet", "steampowered:item/cast_iron_sheet"]
             ],
             "gear": [
-                "ftbjarmod:cast_iron_gear"
+                ["ftbjarmod:cast_iron_gear", "ftbjarmod:item/cast_iron_gear"]
             ]
         }
     },
@@ -238,15 +239,15 @@
         ],
         "remove": {
             "dust": [
-                "mekanism:dust_charcoal",
-                "envirocore:charcoal_powder",
-                "potionsmaster:charcoal_powder"
+                ["mekanism:dust_charcoal", "mekanism:item/dust_charcoal"],
+                ["envirocore:charcoal_powder", "envirocore:item/powder/charcoal"],
+                ["potionsmaster:charcoal_powder", "potionsmaster:item/charcoal_powder"]
             ],
             "storage_block": [
-                "mekanism:block_charcoal",
-                "quark:charcoal_block",
-                "thermal:charcoal_block",
-                "betterendforge:charcoal_block"
+                ["mekanism:block_charcoal", "mekanism:block/block_charcoal"],
+                ["quark:charcoal_block", "quark:block/charcoal_block"],
+                ["thermal:charcoal_block", "thermal:block/charcoal_block"],
+                ["betterendforge:charcoal_block", "betterendforge:block/charcoal_block"]
             ]
         }
     },
@@ -266,15 +267,15 @@
         ],
         "remove": {
             "gem": [
-                "immersiveengineering:coal_coke",
-                "thermal:coal_coke"
+                ["immersiveengineering:coal_coke", "immersiveengineering:item/material_coal_coke"],
+                ["thermal:coal_coke", "thermal:item/coal_coke"]
             ],
             "dust": [
-                "immersiveengineering:dust_coke"
+                ["immersiveengineering:dust_coke", "immersiveengineering:item/material_dust_coke"]
             ],
             "storage_block": [
-                "immersiveengineering:coke",
-                "thermal:coal_coke_block"
+                ["immersiveengineering:coke", "immersiveengineering:block/stone_decoration/coke"],
+                ["thermal:coal_coke_block", "thermal:block/coal_coke_block"]
             ]
         }
     },
@@ -304,30 +305,30 @@
         ],
         "remove": {
             "storage_block": [
-                "immersiveengineering:storage_constantan",
-                "thermal:constantan_block"
+                ["immersiveengineering:storage_constantan", "immersiveengineering:block/metal/storage_constantan"],
+                ["thermal:constantan_block", "thermal:block/constantan_block"]
             ],
             "ingot": [
-                "immersiveengineering:ingot_constantan",
-                "thermal:constantan_ingot"
+                ["immersiveengineering:ingot_constantan", "immersiveengineering:item/material_ingot_constantan"],
+                ["thermal:constantan_ingot", "thermal:item/constantan_ingot"]
             ],
             "nugget": [
-                "immersiveengineering:nugget_constantan",
-                "thermal:constantan_nugget"
+                ["immersiveengineering:nugget_constantan", "immersiveengineering:item/material_nugget_constantan"],
+                ["thermal:constantan_nugget", "thermal:item/constantan_nugget"]
             ],
             "dust": [
-                "immersiveengineering:dust_constantan",
-                "thermal:constantan_dust"
+                ["immersiveengineering:dust_constantan", "immersiveengineering:item/material_dust_constantan"],
+                ["thermal:constantan_dust", "thermal:item/constantan_dust"]
             ],
             "plate": [
-                "immersiveengineering:plate_constantan",
-                "thermal:constantan_plate"
+                ["immersiveengineering:plate_constantan", "immersiveengineering:item/material_plate_constantan"],
+                ["thermal:constantan_plate", "thermal:item/constantan_plate"]
             ],
             "rod": [
-                "immersiveposts:stick_constantan"
+                ["immersiveposts:stick_constantan", "immersiveposts:item/stick_constantan"]
             ],
             "gear": [
-                "thermal:constantan_gear"
+                ["thermal:constantan_gear", "thermal:item/constantan_gear"]
             ]
         }
     },
@@ -357,34 +358,37 @@
         ],
         "remove": {
             "storage_block": [
-                "immersiveengineering:storage_electrum",
-                "thermal:electrum_block",
-                "silents_mechanisms:electrum_block"
+                ["immersiveengineering:storage_electrum", "immersiveengineering:block/metal/storage_electrum"],
+                ["thermal:electrum_block", "thermal:block/electrum_block"],
+                ["silents_mechanisms:electrum_block", "silents_mechanisms:block/electrum_block"]
             ],
             "ingot": [
-                "immersiveengineering:ingot_electrum",
-                "thermal:electrum_ingot",
-                "silents_mechanisms:electrum_ingot"
+                ["immersiveengineering:ingot_electrum", "immersiveengineering:item/material_ingot_electrum"],
+                ["thermal:electrum_ingot", "thermal:item/electrum_ingot"],
+                ["silents_mechanisms:electrum_ingot", "silents_mechanisms:item/electrum_ingot"]
             ],
             "nugget": [
-                "immersiveengineering:nugget_electrum",
-                "thermal:electrum_nugget",
-                "silents_mechanisms:electrum_nugget"
+                ["immersiveengineering:nugget_electrum", "immersiveengineering:item/material_nugget_electrum"],
+                ["thermal:electrum_nugget", "thermal:item/electrum_nugget"],
+                ["silents_mechanisms:electrum_nugget", "silents_mechanisms:item/electrum_nugget"]
             ],
             "dust": [
-                "immersiveengineering:dust_electrum",
-                "thermal:electrum_dust",
-                "silents_mechanisms:electrum_dust"
+                ["immersiveengineering:dust_electrum", "immersiveengineering:item/material_dust_electrum"],
+                ["thermal:electrum_dust", "thermal:item/electrum_dust"],
+                ["silents_mechanisms:electrum_dust", "silents_mechanisms:item/electrum_dust"]
             ],
             "plate": [
-                "immersiveengineering:plate_electrum",
-                "thermal:electrum_plate"
+                ["immersiveengineering:plate_electrum", "immersiveengineering:item/material_plate_electrum"],
+                ["thermal:electrum_plate", "thermal:item/electrum_plate"]
             ],
             "rod": [
-                "immersiveposts:stick_electrum"
+                ["immersiveposts:stick_electrum", "immersiveposts:item/stick_electrum"]
             ],
             "gear": [
-                "thermal:electrum_gear"
+                ["thermal:electrum_gear", "thermal:item/electrum_gear"]
+            ],
+            "wire": [
+                ["immersiveengineering:wire_electrum", "immersiveengineering:item/material_wire_electrum"]
             ]
         }
     },
@@ -401,11 +405,11 @@
         ],
         "remove": {
             "dust": [
-                "appliedenergistics2:ender_dust",
-                "miniutilities:ender_dust",
-                "thermal:ender_pearl_dust",
-                "betterendforge:ender_dust",
-                "potionsmaster:ender_powder"
+                ["appliedenergistics2:ender_dust", "appliedenergistics2:item/ender_dust"],
+                ["betterendforge:ender_dust", "betterendforge:item/ender_dust"],
+                ["miniutilities:ender_dust", "miniutilities:item/ender_dust"],
+                ["potionsmaster:ender_powder", "potionsmaster:item/ender_powder"],
+                ["thermal:ender_pearl_dust", "thermal:item/ender_pearl_dust"]
             ]
         }
     },
@@ -435,26 +439,26 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:enderium_block",
-                "silents_mechanisms:enderium_block"
+                ["thermal:enderium_block", "thermal:block/enderium_block"],
+                ["silents_mechanisms:enderium_block", "silents_mechanisms:block/enderium_block"]
             ],
             "ingot": [
-                "thermal:enderium_ingot",
-                "silents_mechanisms:enderium_ingot"
+                ["thermal:enderium_ingot", "thermal:item/enderium_ingot"],
+                ["silents_mechanisms:enderium_ingot", "silents_mechanisms:item/enderium_ingot"]
             ],
             "nugget": [
-                "thermal:enderium_nugget",
-                "silents_mechanisms:enderium_nugget"
+                ["thermal:enderium_nugget", "thermal:item/enderium_nugget"],
+                ["silents_mechanisms:enderium_nugget", "silents_mechanisms:item/enderium_nugget"]
             ],
             "dust": [
-                "thermal:enderium_dust",
-                "silents_mechanisms:enderium_dust"
+                ["thermal:enderium_dust", "thermal:item/enderium_dust"],
+                ["silents_mechanisms:enderium_dust", "silents_mechanisms:item/enderium_dust"]
             ],
             "plate": [
-                "thermal:enderium_plate"
+                ["thermal:enderium_plate", "thermal:item/enderium_plate"]
             ],
             "gear": [
-                "thermal:enderium_gear"
+                ["thermal:enderium_gear", "thermal:item/enderium_gear"]
             ]
         }
     },
@@ -471,13 +475,12 @@
         ],
         "remove": {
             "dust": [
-                "appliedenergistics2:flour",
-                "atum:emmer_flour",
-                "create:wheat_flour",
-                "pneumaticcraft:wheat_flour",
-                "pamhc2foodcore:flouritem",
-                "pedestals:dustflour",
-                "nuclearcraft:flour"
+                ["appliedenergistics2:flour", "appliedenergistics2:item/flour"],
+                ["create:wheat_flour", "create:item/wheat_flour"],
+                ["pneumaticcraft:wheat_flour", "pneumaticcraft:item/wheat_flour"],
+                ["pamhc2foodcore:flouritem", "pamhc2foodcore:item/flouritem"],
+                ["pedestals:dustflour", "pedestals:items/dustflour"],
+                ["nuclearcraft:flour", "nuclearcraft:items/flour"]
             ]
         }
     },
@@ -503,16 +506,16 @@
         ],
         "remove": {
             "storage_block": [
-                "biggerreactors:graphite_block",
-                "nuclearcraft:ingot_block_graphite"
+                ["biggerreactors:graphite_block", "biggerreactors:block/graphite_block"],
+                ["nuclearcraft:ingot_block_graphite", "nuclearcraft:blocks/ingot_block_graphite"]
             ],
             "ingot": [
-                "biggerreactors:graphite_ingot",
-                "nuclearcraft:ingot_graphite"
+                ["biggerreactors:graphite_ingot", "biggerreactors:item/graphite_ingot"],
+                ["nuclearcraft:ingot_graphite", "nuclearcraft:items/ingot_graphite"]
             ],
             "dust": [
-                "biggerreactors:graphite_dust",
-                "nuclearcraft:dust_graphite"
+                ["biggerreactors:graphite_dust", "biggerreactors:item/graphite_dust"],
+                ["nuclearcraft:dust_graphite", "nuclearcraft:items/dust_graphite"]
             ]
         }
     },
@@ -542,26 +545,26 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:invar_block",
-                "silents_mechanisms:invar_block"
+                ["thermal:invar_block", "thermal:block/invar_block"],
+                ["silents_mechanisms:invar_block", "silents_mechanisms:block/invar_block"]
             ],
             "ingot": [
-                "thermal:invar_ingot",
-                "silents_mechanisms:invar_ingot"
+                ["thermal:invar_ingot", "thermal:item/invar_ingot"],
+                ["silents_mechanisms:invar_ingot", "silents_mechanisms:item/invar_ingot"]
             ],
             "nugget": [
-                "thermal:invar_nugget",
-                "silents_mechanisms:invar_nugget"
+                ["thermal:invar_nugget", "thermal:item/invar_nugget"],
+                ["silents_mechanisms:invar_nugget", "silents_mechanisms:item/invar_nugget"]
             ],
             "dust": [
-                "thermal:invar_dust",
-                "silents_mechanisms:invar_dust"
+                ["thermal:invar_dust", "thermal:item/invar_dust"],
+                ["silents_mechanisms:invar_dust", "silents_mechanisms:item/invar_dust"]
             ],
             "plate": [
-                "thermal:invar_plate"
+                ["thermal:invar_plate", "thermal:item/invar_plate"]
             ],
             "gear": [
-                "thermal:invar_gear"
+                ["thermal:invar_gear", "thermal:item/invar_gear"]
             ]
         }
     },
@@ -591,26 +594,26 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:lumium_block",
-                "silents_mechanisms:lumium_block"
+                ["thermal:lumium_block", "thermal:block/lumium_block"],
+                ["silents_mechanisms:lumium_block", "silents_mechanisms:block/lumium_block"]
             ],
             "ingot": [
-                "thermal:lumium_ingot",
-                "silents_mechanisms:lumium_ingot"
+                ["thermal:lumium_ingot", "thermal:item/lumium_ingot"],
+                ["silents_mechanisms:lumium_ingot", "silents_mechanisms:item/lumium_ingot"]
             ],
             "nugget": [
-                "thermal:lumium_nugget",
-                "silents_mechanisms:lumium_nugget"
+                ["thermal:lumium_nugget", "thermal:item/lumium_nugget"],
+                ["silents_mechanisms:lumium_nugget", "silents_mechanisms:item/lumium_nugget"]
             ],
             "dust": [
-                "thermal:lumium_dust",
-                "silents_mechanisms:lumium_dust"
+                ["thermal:lumium_dust", "thermal:item/lumium_dust"],
+                ["silents_mechanisms:lumium_dust", "silents_mechanisms:item/lumium_dust"]
             ],
             "plate": [
-                "thermal:lumium_plate"
+                ["thermal:lumium_plate", "thermal:item/lumium_plate"]
             ],
             "gear": [
-                "thermal:lumium_gear"
+                ["thermal:lumium_gear", "thermal:item/lumium_gear"]
             ]
         }
     },
@@ -636,14 +639,47 @@
         ],
         "remove": {
             "storage_block": [
-                "nuclearcraft:ingot_block_manganese"
+                ["nuclearcraft:ingot_block_manganese", "nuclearcraft:blocks/ingot_block_manganese"]
             ],
             "ingot": [
-                "nuclearcraft:ingot_manganese",
-                "chemlib:ingot_manganese"
+                ["nuclearcraft:ingot_manganese", "nuclearcraft:items/ingot_manganese"],
+                ["chemlib:ingot_manganese", ""]
             ],
             "dust": [
-                "nuclearcraft:dust_manganese"
+                ["nuclearcraft:dust_manganese", "nuclearcraft:items/dust_manganese"]
+            ]
+        }
+    },
+    "neptunium": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+
+        "replace": [],
+        "add": [
+            "storage_block",
+            "nugget",
+            "ingot",
+            "gear",
+            "dust",
+            "plate",
+            "rod",
+            "wire",
+            "coin",
+            "molten#0adfa5"
+        ],
+        "remove": {
+            "ingot": [
+                ["aquaculture:neptunium_ingot", "aquaculture:item/neptunium_ingot"],
+                ["chemlib:ingot_neptunium", ""]
+            ],
+            "storage_block": [
+                ["aquaculture:neptunium_block", "aquaculture:block/neptunium_block"]
+            ],
+            "nugget": [
+                ["aquaculture:neptunium_nugget", "aquaculture:item/neptunium_nugget"]
             ]
         }
     },
@@ -660,11 +696,11 @@
         ],
         "remove": {
             "dust": [
-                "create:powdered_obsidian",
-                "mekanism:dust_obsidian",
-                "nuclearcraft:gem_dust_obsidian",
-                "occultism:obsidian_dust",
-                "exnihilosequentia:dust_obsidian"
+                ["create:powdered_obsidian", "create:item/powdered_obsidian"],
+                ["mekanism:dust_obsidian", "mekanism:item/dust_obsidian"],
+                ["nuclearcraft:gem_dust_obsidian", "nuclearcraft:items/gem_dust_obsidian"],
+                ["occultism:obsidian_dust", "occultism:item/obsidian_dust"],
+                ["exnihilosequentia:dust_obsidian", ""]
             ]
         }
     },
@@ -690,18 +726,18 @@
         ],
         "remove": {
             "storage_block": [
-                "silents_mechanisms:redstone_alloy_block"
+                ["silents_mechanisms:redstone_alloy_block", "silents_mechanisms:block/redstone_alloy_block"]
             ],
             "ingot": [
-                "projectred-core:red_ingot",
-                "morered:red_alloy_ingot",
-                "silents_mechanisms:redstone_alloy_ingot"
+                ["projectred-core:red_ingot", "projectred-core:item/red_ingot"],
+                ["morered:red_alloy_ingot", "morered:item/red_alloy_ingot"],
+                ["silents_mechanisms:redstone_alloy_ingot", "silents_mechanisms:item/redstone_alloy_ingot"]
             ],
             "nugget": [
-                "silents_mechanisms:redstone_alloy_nugget"
+                ["silents_mechanisms:redstone_alloy_nugget", "silents_mechanisms:item/redstone_alloy_nugget"]
             ],
             "dust": [
-                "silents_mechanisms:redstone_alloy_dust"
+                ["silents_mechanisms:redstone_alloy_dust", "silents_mechanisms:item/redstone_alloy_dust"]
             ]
         }
     },
@@ -718,9 +754,9 @@
         ],
         "remove": {
             "dust": [
-                "pamhc2foodcore:saltitem",
-                "alchemistry:mineral_salt",
-                "mekanism:salt"
+                ["pamhc2foodcore:saltitem", "pamhc2foodcore:item/saltitem"],
+                ["mekanism:salt", "mekanism:item/salt"],
+                ["alchemistry:mineral_salt", "alchemistry:items/mineral_salt"]
             ]
         }
     },
@@ -750,26 +786,26 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:signalum_block",
-                "silents_mechanisms:signalum_block"
+                ["thermal:signalum_block", "thermal:block/signalum_block"],
+                ["silents_mechanisms:signalum_block", "silents_mechanisms:block/signalum_block"]
             ],
             "ingot": [
-                "thermal:signalum_ingot",
-                "silents_mechanisms:signalum_ingot"
+                ["thermal:signalum_ingot", "thermal:item/signalum_ingot"],
+                ["silents_mechanisms:signalum_ingot", "silents_mechanisms:item/signalum_ingot"]
             ],
             "nugget": [
-                "thermal:signalum_nugget",
-                "silents_mechanisms:signalum_nugget"
+                ["thermal:signalum_nugget", "thermal:item/signalum_nugget"],
+                ["silents_mechanisms:signalum_nugget", "silents_mechanisms:item/signalum_nugget"]
             ],
             "dust": [
-                "thermal:signalum_dust",
-                "silents_mechanisms:signalum_dust"
+                ["thermal:signalum_dust", "thermal:item/signalum_dust"],
+                ["silents_mechanisms:signalum_dust", "silents_mechanisms:item/signalum_dust"]
             ],
             "plate": [
-                "thermal:signalum_plate"
+                ["thermal:signalum_plate", "thermal:item/signalum_plate"]
             ],
             "gear": [
-                "thermal:signalum_gear"
+                ["thermal:signalum_gear", "thermal:item/signalum_gear"]
             ]
         }
     },
@@ -785,12 +821,12 @@
         ],
         "remove": {
             "gem": [
-                "appliedenergistics2:silicon",
-                "tinyredstone:silicon",
-                "refinedstorage:silicon",
-                "nuclearcraft:gem_silicon",
-                "chemlib:ingot_silicon",
-                "envirocore:silicon_powder"
+                ["appliedenergistics2:silicon", "appliedenergistics2:item/silicon"],
+                ["tinyredstone:silicon", "tinyredstone:item/silicon"],
+                ["refinedstorage:silicon", "refinedstorage:item/silicon"],
+                ["nuclearcraft:gem_silicon", "nuclearcraft:items/gem_silicon"],
+                ["chemlib:ingot_silicon", ""],
+                ["envirocore:silicon_powder", "envirocore:item/silicon_powder"]
             ]
         }
     },
@@ -815,36 +851,39 @@
         ],
         "remove": {
             "storage_block": [
-                "immersiveengineering:storage_steel",
-                "mekanism:block_steel",
-                "silents_mechanisms:steel_block",
-                "boss_tools:steel_block"
+                ["immersiveengineering:storage_steel", "immersiveengineering:block/metal/storage_steel"],
+                ["mekanism:block_steel", "mekanism:block/block_steel"],
+                ["silents_mechanisms:steel_block", "silents_mechanisms:block/steel_block"],
+                ["boss_tools:steel_block", "boss_tools:blocks/steel_block"]
             ],
             "ingot": [
-                "steampowered:steel_ingot",
-                "immersiveengineering:ingot_steel",
-                "mekanism:ingot_steel",
-                "silents_mechanisms:steel_ingot",
-                "nuclearcraft:alloy_steel",
-                "boss_tools:steel_ingot"
+                ["steampowered:steel_ingot", "steampowered:item/steel_ingot"],
+                ["immersiveengineering:ingot_steel", "immersiveengineering:item/material_ingot_steel"],
+                ["mekanism:ingot_steel", "mekanism:item/ingot_steel"],
+                ["silents_mechanisms:steel_ingot", "silents_mechanisms:item/steel_ingot"],
+                ["nuclearcraft:alloy_steel", "nuclearcraft:items/alloy_steel"],
+                ["boss_tools:steel_ingot", "boss_tools:items/item_steel"]
             ],
             "nugget": [
-                "immersiveengineering:nugget_steel",
-                "mekanism:nugget_steel",
-                "silents_mechanisms:steel_nugget",
-                "boss_tools:steel_nugget"
+                ["immersiveengineering:nugget_steel", "immersiveengineering:item/material_nugget_steel"],
+                ["mekanism:nugget_steel", "mekanism:item/nugget_steel"],
+                ["silents_mechanisms:steel_nugget", "silents_mechanisms:item/steel_nugget"],
+                ["boss_tools:steel_nugget", "boss_tools:items/steel_nugget"]
             ],
             "dust": [
-                "immersiveengineering:dust_steel",
-                "mekanism:dust_steel",
-                "silents_mechanisms:steel_dust"
+                ["immersiveengineering:dust_steel", "immersiveengineering:item/material_dust_steel"],
+                ["mekanism:dust_steel", "mekanism:item/dust_steel"],
+                ["silents_mechanisms:steel_dust", "silents_mechanisms:item/steel_dust"]
             ],
             "plate": [
-                "immersiveengineering:plate_steel",
-                "steampowered:steel_sheet"
+                ["immersiveengineering:plate_steel", "immersiveengineering:item/material_plate_steel"],
+                ["steampowered:steel_sheet", "steampowered:item/steel_sheet"]
             ],
             "rod": [
-                "immersiveengineering:stick_steel"
+                ["immersiveengineering:stick_steel", "immersiveengineering:item/material_stick_steel"]
+            ],
+            "wire": [
+                ["immersiveengineering:wire_steel", "immersiveengineering:item/material_wire_steel"]
             ]
         }
     },
@@ -862,20 +901,20 @@
         ],
         "remove": {
             "dust": [
-                "immersiveengineering:dust_wood",
-                "mekanism:sawdust",
-                "thermal:sawdust",
-                "excompressum:wood_chippings"
+                ["immersiveengineering:dust_wood", "immersiveengineering:item/material_dust_wood"],
+                ["mekanism:dust_wood", "mekanism:item/dust_wood"],
+                ["thermal:dust_wood", "thermal:item/dust_wood"],
+                ["excompressum:wood_dust", "excompressum:items/wood_chippings"]
             ],
             "gear": [
-                "appliedenergistics2:wooden_gear",
-                "hammerlib:gears/wooden"
+                ["appliedenergistics2:wooden_gear", "appliedenergistics2:item/wooden_gear"],
+                ["hammerlib:gears/wooden", "hammerlib:item/gears/wooden"]
             ]
         }
     },
     "zirconium": {
         "block": {
-            "harvest_level": 2,
+            "harvest_level": 1,
             "destroy_time": 3,
             "explosion_resistance": 3
         },
@@ -895,14 +934,14 @@
         ],
         "remove": {
             "storage_block": [
-                "nuclearcraft:ingot_block_zirconium"
+                ["nuclearcraft:ingot_block_zirconium", "nuclearcraft:blocks/ingot_block_zirconium"]
             ],
             "ingot": [
-                "nuclearcraft:ingot_zirconium",
-                "chemlib:ingot_zirconium"
+                ["nuclearcraft:ingot_zirconium", "nuclearcraft:items/ingot_zirconium"],
+                ["chemlib:ingot_zirconium", ""]
             ],
             "dust": [
-                "nuclearcraft:dust_zirconium"
+                ["nuclearcraft:dust_zirconium", "nuclearcraft:items/dust_zirconium"]
             ]
         }
     }

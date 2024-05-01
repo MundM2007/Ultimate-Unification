@@ -13,6 +13,7 @@
     "boss_tools_giselle_addon": true,
     "botania": true,
     "byg": true,
+    "charm": true,
     "chemlib": true,
     "create": true,
     "createaddition": true,
@@ -24,6 +25,7 @@
     "elgineerstools": true,
     "envirocore": true,
     "evilcraft": true,
+    "excompressum": true,
     "exnihiloae2": true,
     "exnihilomekanism": true,
     "exnihilosequentia": true,
@@ -34,6 +36,7 @@
     "ftbjarmod": true,
     "hammerlib": true,
     "immersiveengineering": true,
+    "immersivepetroleum": true,
     "immersiveposts": true,
     "industrialforegoing": true,
     "lazierae2": true,
@@ -59,5 +62,6 @@
     "steampowered": true,
     "tconstruct": true,
     "thermal": true,
+    "tinyredstone": true,
     "titanium": true
 }

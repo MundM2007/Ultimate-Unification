@@ -39,14 +39,14 @@
         ],
         "remove": {
             "ingot": [
-                "aquaculture:neptunium_ingot",
-                "chemlib:ingot_neptunium"
+                ["aquaculture:neptunium_ingot", "aquaculture:item/neptunium_ingot"],
+                ["chemlib:ingot_neptunium", ""]
             ],
             "storage_block": [
-                "aquaculture:neptunium_block"
+                ["aquaculture:neptunium_block", "aquaculture:block/neptunium_block"]
             ],
             "nugget": [
-                "aquaculture:neptunium_nugget"
+                ["aquaculture:neptunium_nugget", "aquaculture:item/neptunium_nugget"]
             ]
         }
     }

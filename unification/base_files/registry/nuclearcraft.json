@@ -162,6 +162,12 @@
         "remove": {}
     },
     "hsla_steel": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_hsla_steel", "nuclearcraft:alloy_hsla_steel"]
         ],

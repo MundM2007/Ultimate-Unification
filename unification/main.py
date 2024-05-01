@@ -1,12 +1,13 @@
 import os
 import json
-import re
+import copy
 
 import base_files.python.LoggingManager
 import base_files.python.IOManager 
 import base_files.python.FileManager
 import base_files.python.Utilities
 import base_files.python.KJSFileUtilities
+import base_files.python.MainExtended
 
 # get path of the program
 path_program = os.path.abspath(os.path.dirname(__file__))
@@ -17,45 +18,38 @@ IOM = base_files.python.IOManager.IOManager(LM)
 FM = base_files.python.FileManager.FileManager(IOM)
 UT = base_files.python.Utilities.Utilities(FM)
 KFUT = base_files.python.KJSFileUtilities.KJSFileUtilities(UT)
+ME = base_files.python.MainExtended.MainExtended(KFUT)
 
 LM.log("info", "Started")
 
 total_time = 0
 # clears paths
 paths_to_clear = [
-    os.path.join(UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_item"),
-    os.path.join(UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_block"),
-    os.path.join(UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_slurry"),
-    os.path.join(UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_fluid"),
-    os.path.join(UT.get_pack_path(), "kubejs", "startup_scripts", "unification", "add_coin"),
-    os.path.join(UT.get_pack_path(), "kubejs", "client_scripts", "unification", "jei_hide"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "add_recipe"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "replace_output"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "replace_input"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "remove_recipe"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "add_tag"),
-    os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "remove_tag"),
-    os.path.join(UT.get_pack_path(), "kubejs", "assets", "unification")
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_item"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_block"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_slurry"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_fluid"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin"),
+    os.path.join(UT.pack_path, "kubejs", "client_scripts", "unification", "jei_hide"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_output"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_input"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag"),
+    os.path.join(UT.pack_path, "kubejs", "assets", "unification")
 ]
 for path in paths_to_clear:
     IOM.clear_path(path)
 
 # used for counting
 material_added = 0
-type_added = 0
-texture_replaced = 0
-element_removed = 0
 
-# reads the main config
-try:
-    config = json.loads(IOM.read(os.path.join(path_program, "config", "main.json")))
-except json.JSONDecodeError as e:
-    LM.log("critical_json_error", f"Error decoding JSON content of the file: main.json", e)
 
 # reads the gen scripts info and recipe types info
 try:
     gen_scripts_info = json.loads(IOM.read(os.path.join(path_program, "base_files", "gen_scripts_info.json")))
-    recipe_types = json.loads(IOM.read(os.path.join(path_program, "base_files", "recipe", "recipe_types.json")))
+    recipe_types = json.loads(IOM.read(os.path.join(path_program, "base_files", "recipe_types.json")))
 except json.JSONDecodeError as e:
     LM.log("critical_json_error", f"Error decoding JSON content of the file: gen_scripts_info.json or recipe_types.json", e)
 for recipe_type in recipe_types:
@@ -100,7 +94,6 @@ for element in gen_scripts_info.get("main"):
         FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
 
     anything_changed = 0
-    all_added_or_replaced = dict()
 
     if base_file_registry[id_name].get("block") is not None:
         harvest_level = base_file_registry[id_name]["block"].get("harvest_level")
@@ -124,84 +117,48 @@ for element in gen_scripts_info.get("main"):
         explosion_resistance = 6
         LM.log("value_missing", f"Block values not found for {id_name}, using default values")
 
+    if base_file_registry[id_name].get("add") is not None:
+        base_file_registry[id_name]["add"] = list(set(base_file_registry[id_name]["add"]))
+
+    ME.init_actions()
     # replaces items with a new texture and adds the tags
     if base_file_registry[id_name].get("replace") is not None:
-        all_element_to_replace = []
         # loops over all elements to replace
         for element_to_replace in base_file_registry[id_name]["replace"]:
-            if len(element_to_replace) == 3:
-                if UT.check_material(element_to_replace[0]):
-                    if element_to_replace[1] != "":
-                        # gets the path of the texture from which it should be copied
-                        path_texture = UT.get_texture_path(id_file, id_name, element_to_replace[0], element_to_replace[1])
-                        
-                        # replaces the texture 
-                        if element_to_replace[0] != "gem" or config.get("unification") is None or config["unification"].get("replace_gem_texture") is True:
-                            if FM.handleTexture(path_texture, UT.resource_location_to_path(element_to_replace[1]), True, False):
-                                globals()["texture_replaced"] += 1
-                                anything_changed += 1
-                    
-                    # adds the tags
-                    if element_to_replace[0] not in all_element_to_replace and "slurry" not in element_to_replace[0] and "molten" not in element_to_replace[0]:
-                        is_block = element_to_add in ["raw_block", "storage_block"]
-                        KFUT.add_tag(id_file, element_to_replace[2], f"forge:{element_to_replace[0]}s/{id_name}", is_block, license_notice)
-                        KFUT.add_tag(id_file, element_to_replace[2], f"forge:{element_to_replace[0]}s", is_block, license_notice)
-                        anything_changed += 1
-                        all_element_to_replace.append(element_to_replace[0])
-                    
-                    all_added_or_replaced[element_to_replace[0]] = element_to_replace[2]
-                else:
-                    # removes the texture if the material type doesn't exist
-                    FM.handleTexture("", UT.resource_location_to_path(element_to_replace[2]), False, False)
+            anything_changed += ME.replace_element(element_to_replace, id_file, id_name, license_notice)
     
-    # adds new items with tags
-    if base_file_registry[id_name].get("add") is not None:
-        # loops over all elements to add
-        for element_to_add in base_file_registry[id_name]["add"]:
-            if not UT.check_material(element_to_add):
-                continue
-
-            # extract color and element name
-            color = ""
-            if element_to_add.startswith("slurry") or element_to_add.startswith("molten"):
-                if re.search(r'^#[0-9a-fA-F]{6}$', element_to_add.replace("slurry", "").replace("molten", "")):
-                    color = "0x" + element_to_add.replace("slurry#", "").replace("molten#", "")
-                    element_to_add = element_to_add[:-7]
-
-            # adds the element
-            if KFUT.add_element(id_file, id_name, element_to_add, color, license_notice, harvest_level, destroy_time, explosion_resistance):
-                # item id is added to a dictionary to be used later
-                if element_to_add == "slurry":
-                    all_added_or_replaced["clean_slurry"] = f"unification:clean_{id_name}_slurry"
-                    all_added_or_replaced["dirty_slurry"] = f"unification:dirty_{id_name}_slurry"
-                else:
-                    all_added_or_replaced[element_to_add] = f"unification:{id_name}_{element_to_add}"
-                globals()["type_added"] += 1
-                anything_changed += 1
-
-                # adds the tags
-                if not element_to_add.startswith("slurry") and not element_to_add.startswith("molten"):
-                    is_block = element_to_add in ["raw_block", "storage_block"]
-                    KFUT.add_tag(id_file, f"unification:{id_name}_{element_to_add}", f"forge:{element_to_add}s/{id_name}", is_block, license_notice)
-                    KFUT.add_tag(id_file, f"unification:{id_name}_{element_to_add}", f"forge:{element_to_add}s", is_block, license_notice)
+    if UT.get_main_config("unification.mode", "full") == "full":
+        anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance)
     
-    # removes elements and replaces the recipes
-    if base_file_registry[id_name].get("remove") is not None:
-        # loops over all elements to remove
-        for check_remove, new_item in all_added_or_replaced.items():
-            if base_file_registry[id_name]["remove"].get(check_remove) is not None:
-                for element_to_remove in base_file_registry[id_name]["remove"][check_remove]:
-                    mod_id = element_to_remove[:element_to_remove.find(":")]
-                    if not UT.check_mod(mod_id):
-                        continue
+    elif UT.get_main_config("unification.mode", "full") in ["replace", "no_add"]:
+        if base_file_registry[id_name].get("remove") is not None and base_file_registry[id_name].get("add") is not None:
+            for material_type in copy.deepcopy(base_file_registry[id_name]["add"]):
+                if base_file_registry[id_name]["remove"].get(material_type) is not None and material_type not in ME.elements_replaced:
+                    mods_potential_items = []
+                    for element_to_remove in base_file_registry[id_name]["remove"][material_type]:
+                        mods_potential_items.append(element_to_remove[0][:element_to_remove[0].find(":")])
 
-                    # removes the element
-                    globals()["element_removed"] += 1
-                    anything_changed += 1
-                    KFUT.jei_hide(element_to_remove, id_file, license_notice)
-                    KFUT.remove_tag(element_to_remove, id_file, element_to_add in ["raw_block", "storage_block"], license_notice)
-                    KFUT.replace_input(element_to_remove, f"#forge:{check_remove}/{id_name}", id_file, license_notice)
-                    KFUT.replace_output(element_to_remove, new_item, id_file, license_notice)
+                    mods = list(filter(lambda x: x != None, [UT.get_main_config("unification.mod_overwrites", "dict").get(id_name)]))
+                    mods.extend(UT.get_main_config("unification.mod_priorities", "list"))
+                    
+                    for mod in mods:
+                        if mod in mods_potential_items:
+                            index_of_item_to_replace = mods_potential_items.index(mod)
+                            break
+                    else:
+                        index_of_item_to_replace = mods_potential_items.index(sorted(mods_potential_items)[0])
+                    
+                    removal_array = base_file_registry[id_name]["remove"][material_type][index_of_item_to_replace][::-1]
+                    removal_array.insert(0, material_type)
+                    anything_changed += ME.replace_element(removal_array, id_file, id_name, license_notice)
+                    base_file_registry[id_name]["remove"][material_type].pop(index_of_item_to_replace)
+                    if(UT.get_main_config("unification.mode", "full") == "replace"): base_file_registry[id_name]["add"].remove(material_type)
+                
+        if UT.get_main_config("unification.mode", "full") == "replace":
+            anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance)
+        else:
+            anything_changed += ME.remove_elements(base_file_registry, id_file, id_name, license_notice)
+
 
     if anything_changed > 0:
         globals()["material_added"] += 1
@@ -225,7 +182,7 @@ for element in gen_scripts_info.get("main"):
         license_notice = "".join(license_notice)
     
     if base_file_recipe[id_name].get("add") is not None:
-        mns = all_added_or_replaced
+        mns = {**ME.elements_replaced, **ME.elements_added}
         if base_file_recipe[id_name].get("variants") is not None:
             for material in base_file_recipe[id_name]["variants"]:
                 if material not in mns:
@@ -243,16 +200,16 @@ for element in gen_scripts_info.get("main"):
                 else:
                     arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
 
-            FM.addKJS(os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
+            FM.addKJS(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
                       f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
     
     if base_file_recipe[id_name].get("remove") is not None:
         for recipe in base_file_recipe[id_name]["remove"]:
-            FM.addKJS(os.path.join(UT.get_pack_path(), "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
+            FM.addKJS(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
                       f"    event.remove({{id: '{recipe}'}})\n", license_notice, 40, "onEvent('recipes', event => {\n")
 
 FM.save()
-IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.get_pack_path(), "kubejs", "assets", "unification", "textures"))
-LM.log("info", f"Materials added: {material_added}, Types added: {type_added}, Textures replaced: {texture_replaced}, Elements removed: {element_removed}")
+IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures"))
+LM.log("info", f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed}")
 LM.log("info", "Finished")
 LM.save()

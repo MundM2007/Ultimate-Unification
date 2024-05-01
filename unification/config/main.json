@@ -1,6 +1,15 @@
 {
     "unification": {
-        "c1": "Here you can enable or disable weither gems textures should be replaced",
+        "c1": "Here you can set the mode the unification will work in, options: 'full': uses the exact json base files without changes, 'replace': replaces instead of adds, when remove is available, 'no_add': doesn't add new items only replaces and removes originals, uses the same logic as 'replace'",
+        "mode": "full",
+
+        "c2": "This is a list of mod priorities used if mode is replace or no_add, uses alphabatical order if not provided",
+        "mod_priorities": [],
+
+        "c3": "Here you can overwrite the mod chosen for a specific material, syntax: {material: mod}",
+        "mod_overwrites": {},
+
+        "c4": "Here you can enable or disable weither gems textures should be replaced",
         "replace_gem_textures": true
     },
 
@@ -24,7 +33,7 @@
         "gem_fortune_affected": true,
 
         "c7": "Here you can modify the ore drop dimension multiplier for the ores",
-        "dim_multiplyer": {
+        "dim_multiplier": {
             "atum": 1.5,
             "end": 2,
             "mars": 1.5,

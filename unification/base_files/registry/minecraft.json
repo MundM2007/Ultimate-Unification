@@ -36,13 +36,13 @@
         ],
         "remove": {
             "dust": [
-                "bloodmagic:coalsand",
-                "lazierae2:coal_dust",
-                "mekanism:dust_coal",
-                "silents_mechanisms:coal_dust",
-                "nuclearcraft:gem_dust_coal",
-                "envirocore:carbon_powder",
-                "potionsmaster:coal_powder"
+                ["bloodmagic:coalsand", "bloodmagic:item/coalsand"],
+                ["lazierae2:coal_dust", "lazierae2:item/coal_dust"],
+                ["mekanism:dust_coal", "mekanism:item/dust_coal"],
+                ["silents_mechanisms:coal_dust", "silents_mechanisms:item/coal_dust"],
+                ["nuclearcraft:gem_dust_coal", "nuclearcraft:items/gem_dust_coal"],
+                ["envirocore:coal_powder", "envirocore:item/powder/coal"],
+                ["potionsmaster:coal_powder", "potionsmaster:item/coal_powder"]
             ]
         }
     },
@@ -66,16 +66,16 @@
         ],
         "remove": {
             "dust": [
-                "createaddition:diamond_grit",
-                "mekanism:dust_diamond",
-                "thermal:diamond_dust",
-                "nuclearcraft:gem_dust_diamond",
-                "potionsmaster:diamond_powder"
+                ["createaddition:diamond_grit", "createaddition:item/diamond_grit"],
+                ["mekanism:dust_diamond", "mekanism:item/dust_diamond"],
+                ["thermal:diamond_dust", "thermal:item/diamond_dust"],
+                ["nuclearcraft:gem_dust_diamond", "nuclearcraft:items/gem_dust_diamond"],
+                ["potionsmaster:diamond_powder", "potionsmaster:item/diamond_powder"]
             ],
             "gear": [
-                "hammerlib:gears/diamond",
-                "thermal:diamond_gear",
-                "titanium:diamond_gear"
+                ["hammerlib:gears/diamond", "hammerlib:item/gears/diamond"],
+                ["thermal:diamond_gear", "thermal:item/diamond_gear"],
+                ["titanium:diamond_gear", "titanium:item/diamond/gear"]
             ]
         }
     },
@@ -99,12 +99,12 @@
         ],
         "remove": {
             "dust": [
-                "mekanism:dust_emerald",
-                "thermal:emerald_dust",
-                "potionsmaster:emerald_powder"
+                ["mekanism:dust_emerald", "mekanism:item/dust_emerald"],
+                ["thermal:emerald_dust", "thermal:item/emerald_dust"],
+                ["potionsmaster:emerald_powder", "potionsmaster:item/emerald_powder"]
             ],
             "gear": [
-                "thermal:emerald_gear"
+                ["thermal:emerald_gear", "thermal:item/emerald_gear"]
             ]
         }
     },
@@ -144,35 +144,35 @@
         ],
         "remove": {
             "dust": [
-                "appliedenergistics2:gold_dust",
-                "bloodmagic:goldsand",
-                "immersiveengineering:dust_gold",
-                "mekanism:dust_gold",
-                "occultism:gold_dust",
-                "thermal:gold_dust",
-                "pedestals:dustgold",
-                "silents_mechanisms:gold_dust",
-                "potionsmaster:gold_powder"
+                ["appliedenergistics2:gold_dust", "appliedenergistics2:item/gold_dust"],
+                ["bloodmagic:goldsand", "bloodmagic:item/goldsand"],
+                ["immersiveengineering:dust_gold", "immersiveengineering:item/metal_dust_gold"],
+                ["mekanism:dust_gold", "mekanism:item/dust_gold"],
+                ["occultism:gold_dust", "occultism:item/gold_dust"],
+                ["thermal:gold_dust", "thermal:item/gold_dust"],
+                ["pedestals:dustgold", "pedestals:items/dustgold"],
+                ["silents_mechanisms:gold_dust", "silents_mechanisms:item/gold_dust"],
+                ["potionsmaster:gold_powder", "potionsmaster:item/gold_powder"]
             ],
             "plate": [
-                "create:golden_sheet",
-                "immersiveengineering:plate_gold",
-                "thermal:gold_plate"
+                ["create:golden_sheet", "create:item/golden_sheet"],
+                ["immersiveengineering:plate_gold", "immersiveengineering:item/metal_plate_gold"],
+                ["thermal:gold_plate", "thermal:item/gold_plate"]
             ],
             "rod": [
-                "createaddition:gold_rod",
-                "immersiveposts:stick_gold"
+                ["createaddition:gold_rod", "createaddition:item/gold_rod"],
+                ["immersiveposts:stick_gold", "immersiveposts:item/stick_gold"]
             ],
             "gear": [
-                "hammerlib:gears/gold",
-                "thermal:gold_gear",
-                "titanium:gold_gear"
+                ["hammerlib:gears/gold", "hammerlib:item/gears/gold"],
+                ["thermal:gold_gear", "thermal:item/gold_gear"],
+                ["titanium:gold_gear", "titanium:items/gold/gear"]
             ],
             "piece": [
-                "exnihilosequentia:piece_gold"
+                ["exnihilosequentia:piece_gold", ""]
             ],
             "wire": [
-                "createaddition:gold_wire"
+                ["createaddition:gold_wire", "createaddition:item/gold_wire"]
             ]
         }
     },
@@ -208,44 +208,43 @@
             "raw_material",
             "raw_block",
             "piece",
-            "wire",
-            "piece"
+            "wire"
         ],
         "remove": {
             "dust": [
-                "appliedenergistics2:iron_dust",
-                "bloodmagic:ironsand",
-                "immersiveengineering:dust_iron",
-                "mekanism:dust_iron",
-                "occultism:iron_dust",
-                "thermal:iron_dust",
-                "pedestals:dustiron",
-                "silents_mechanisms:iron_dust",
-                "potionsmaster:iron_powder"
+                ["appliedenergistics2:iron_dust", "appliedenergistics2:item/iron_dust"],
+                ["bloodmagic:ironsand", "bloodmagic:item/ironsand"],
+                ["immersiveengineering:dust_iron", "immersiveengineering:item/metal_dust_iron"],
+                ["mekanism:dust_iron", "mekanism:item/dust_iron"],
+                ["occultism:iron_dust", "occultism:item/iron_dust"],
+                ["thermal:iron_dust", "thermal:item/iron_dust"],
+                ["pedestals:dustiron", "pedestals:items/dustiron"],
+                ["silents_mechanisms:iron_dust", "silents_mechanisms:item/iron_dust"],
+                ["potionsmaster:iron_powder", "potionsmaster:item/iron_powder"]
             ],
             "plate": [
-                "create:iron_sheet",
-                "immersiveengineering:plate_iron",
-                "thermal:iron_plate",
-                "boss_tools:iron_plate",
-                "silents_mechanisms:compressed_iron_ingot"
+                ["create:iron_sheet", "create:item/iron_sheet"],
+                ["immersiveengineering:plate_iron", "immersiveengineering:item/metal_plate_iron"],
+                ["thermal:iron_plate", "thermal:item/iron_plate"],
+                ["boss_tools:iron_plate", "boss_tools:items/iron_plate"],
+                ["silents_mechanisms:compressed_iron_ingot", "silents_mechanisms:item/compressed_iron_ingot"]
             ],
             "rod": [
-                "createaddition:iron_rod",
-                "immersiveengineering:stick_iron",
-                "silentgear:iron_rod",
-                "boss_tools:iron_stick"
+                ["createaddition:iron_rod", "createaddition:item/iron_rod"],
+                ["immersiveengineering:stick_iron", "immersiveengineering:item/material_stick_iron"],
+                ["silentgear:iron_rod", "silentgear:item/iron_rod"],
+                ["boss_tools:iron_stick", "boss_tools:items/iron_stick"]
             ],
             "gear": [
-                "hammerlib:gears/iron",
-                "thermal:iron_gear",
-                "titanium:iron_gear"
+                ["hammerlib:gears/iron", "hammerlib:item/gears/iron"],
+                ["thermal:iron_gear", "thermal:item/iron_gear"],
+                ["titanium:iron_gear", "titanium:items/iron/gear"]
             ],
             "piece": [
-                "exnihilosequentia:piece_iron"
+                ["exnihilosequentia:piece_iron", ""]
             ],
             "wire": [
-                "createaddition:iron_wire"
+                ["createaddition:iron_wire", "createaddition:item/iron_wire"]
             ]
         }
     },
@@ -268,12 +267,12 @@
         ],
         "remove": {
             "dust": [
-                "mekanism:dust_lapis_lazuli",
-                "thermal:lapis_dust",
-                "potionsmaster:lapis_powder"
+                ["mekanism:dust_lapis_lazuli", "mekanism:item/dust_lapis_lazuli"],
+                ["thermal:lapis_dust", "thermal:item/lapis_dust"],
+                ["potionsmaster:lapis_powder", "potionsmaster:item/lapis_powder"]
             ],
             "gear": [
-                "thermal:lapis_gear"
+                ["thermal:lapis_gear", "thermal:item/lapis_gear"]
             ]
         }
     },
@@ -306,21 +305,21 @@
         ],
         "remove": {
             "nugget": [
-                "createdeco:netherite_nugget",
-                "tconstruct:netherite_nugget",
-                "charm:netherite_nugget"
+                ["createdeco:netherite_nugget", "createdeco:item/netherite_nugget"],
+                ["tconstruct:netherite_nugget", "tconstruct:item/materials/netherite_nugget"],
+                ["charm:netherite_nugget", "charm:item/netherite_nugget"]
             ],
             "dust": [
-                "mekanism:dust_netherite",
-                "thermal:netherite_dust"
+                ["mekanism:dust_netherite", "mekanism:item/dust_netherite"],
+                ["thermal:netherite_dust", "thermal:item/netherite_dust"]
             ],
             "plate": [
-                "createdeco:netherite_sheet",
-                "thermal:netherite_plate"
+                ["createdeco:netherite_sheet", "createdeco:item/netherite_sheet"],
+                ["thermal:netherite_plate", "thermal:item/netherite_plate"]
             ],
             "gear": [
-                "hammerlib:gears/netherite",
-                "thermal:netherite_gear"
+                ["hammerlib:gears/netherite", "hammerlib:item/gears/netherite"],
+                ["thermal:netherite_gear", "thermal:item/netherite_gear"]
             ]
         }
     },
@@ -344,15 +343,15 @@
         ],
         "remove": {
             "dust": [
-                "appliedenergistics2:nether_quartz_dust",
-                "mekanism:dust_quartz",
-                "thermal:quartz_dust",
-                "nuclearcraft:gem_dust_quartz",
-                "envirocore:quartz_powder",
-                "potionsmaster:quartz_powder"
+                ["appliedenergistics2:nether_quartz_dust", "appliedenergistics2:item/nether_quartz_dust"],
+                ["mekanism:dust_quartz", "mekanism:item/dust_quartz"],
+                ["thermal:quartz_dust", "thermal:item/quartz_dust"],
+                ["nuclearcraft:gem_dust_quartz", "nuclearcraft:items/gem_dust_quartz"],
+                ["envirocore:quartz_powder", "envirocore:item/powder/quartz"],
+                ["potionsmaster:quartz_powder", "potionsmaster:item/quartz_powder"]
             ],
             "gear": [
-                "thermal:quartz_gear"
+                ["thermal:quartz_gear", "thermal:item/quartz_gear"]
             ]
         }
     },

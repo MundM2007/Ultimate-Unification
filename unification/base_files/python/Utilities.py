@@ -1,5 +1,7 @@
 import json
 import os
+import copy
+import functools
 
 class Utilities:
     # initializes the utilities and creates a mod list
@@ -9,14 +11,16 @@ class Utilities:
         self.FM = FM
         self.pack_path = os.path.abspath(os.path.join(self.LM.path_program, os.pardir))
 
-        self.mod_list = ["minecraft"]
+        self.mod_list = {"minecraft": True}
         try:
             mod_list_config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "mod_list.json")))
         except json.JSONDecodeError as e:
             self.LM.log("critical_json_error", f"Error decoding JSON content of the file: mod_list.json", e)
         for mod in mod_list_config:
             if mod_list_config[mod]:
-                self.mod_list.append(mod) 
+                self.mod_list.update({mod: True})
+            else:
+                self.mod_list.update({mod: False})
 
         self.langs = []
         for id_file in os.listdir(os.path.join(self.LM.path_program, "base_files", "lang")):
@@ -28,12 +32,13 @@ class Utilities:
                     base_file_registry["lang"] = id_file.removesuffix(".json")
                     self.langs.append(base_file_registry)
                 except json.JSONDecodeError as e:
-                    self.LM.log("json_error", f"Error decoding JSON content of the file: {base_file_lang} skipping this lang", e)      
-    
-    
-    # gets the path of the pack from the path of the program
-    def get_pack_path(self):
-        return self.pack_path
+                    self.LM.log("json_error", f"Error decoding JSON content of the file: {base_file_lang} skipping this lang", e)
+         
+        # reads the main config
+        try:
+            self.config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "main.json")))
+        except json.JSONDecodeError as e:
+            self.LM.log("critical_json_error", f"Error decoding JSON content of the file: main.json", e)
 
 
     # gets the file path from a resource location
@@ -42,13 +47,13 @@ class Utilities:
         path = resource_location[resource_location.find(":") + 1:]
         storage_location = "kubejs\\assets" if kubejs_assets else "resources"
         if type_rc == "texture":
-            return os.path.join(self.get_pack_path(), storage_location, namespace, "textures", f"{path}.png")
+            return os.path.join(self.pack_path, storage_location, namespace, "textures", f"{path}.png")
         elif type_rc == "model":
-            return os.path.join(self.get_pack_path(), storage_location, namespace, "models", f"{path}.json")
+            return os.path.join(self.pack_path, storage_location, namespace, "models", f"{path}.json")
         elif type_rc == "blockstate":
-            return os.path.join(self.get_pack_path(), storage_location, namespace, "blockstates", f"{path}.json")
+            return os.path.join(self.pack_path, storage_location, namespace, "blockstates", f"{path}.json")
         elif type_rc == "lang":
-            return os.path.join(self.get_pack_path(), storage_location, namespace, "lang", f"{path}.json")
+            return os.path.join(self.pack_path, storage_location, namespace, "lang", f"{path}.json")
         return ""
 
 
@@ -62,8 +67,11 @@ class Utilities:
 
     # checks if a mod is in the mod list
     def check_mod(self, mod_id):
-        return mod_id in self.mod_list
+        return mod_id in self.mod_list and self.mod_list[mod_id]
     
+
+    def check_mod_written(self, mod_id):
+        return mod_id in self.mod_list
 
     # checks if a material type is from a mod that is in the mod list
     def check_material(self, material_type):
@@ -81,8 +89,11 @@ class Utilities:
         if "slurry" in material_type:
             material_type = "slurry"
 
-        if material_type in mod_mapping and not self.check_mod(mod_mapping[material_type]):
-            return False
+        if material_type in mod_mapping:
+            if not self.check_mod(mod_mapping[material_type]):
+                if not self.check_mod_written(mod_mapping[material_type]):
+                    self.LM.log("mod_not_found", f"Mod {mod_mapping[material_type]} not found in the mod list")
+                return False
 
         return True
     
@@ -108,3 +119,14 @@ class Utilities:
                         self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                 else:
                     self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
+
+    
+    @functools.lru_cache()
+    def get_main_config(self, config_path, fallback):
+        config_temp = copy.deepcopy(self.config)
+        for key in config_path.split("."):
+            if config_temp.get(key) is not None:
+                config_temp = config_temp[key]
+            else:
+                return {} if fallback == "dict" else [] if fallback == "list" else fallback
+        return config_temp

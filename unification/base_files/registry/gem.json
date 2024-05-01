@@ -37,11 +37,11 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:bitumen_block"
+                ["thermal:bitumen_block", "thermal:block/bitumen_block"]
             ],
             "gem": [
-                "thermal:bitumen",
-                "immersivepetroleum:bitumen"
+                ["thermal:bitumen", "thermal:item/bitumen"],
+                ["immersivepetroleum:bitumen", "immersivepetroleum:item/bitumen"]
             ]
         }
     },
@@ -65,15 +65,15 @@
         ],
         "remove": {
             "storage_block": [
-                "mekanism:block_fluorite"
+                ["mekanism:block_fluorite", "mekanism:block/block_fluorite"]
             ],
             "gem": [
-                "mekanism:fluorite_gem",
-                "nuclearcraft:gem_fluorite"
+                ["mekanism:fluorite_gem", "mekanism:item/fluorite_gem"],
+                ["nuclearcraft:gem_fluorite", "nuclearcraft:items/gem_fluorite"]
             ],
             "dust": [
-                "mekanism:dust_fluorite",
-                "nuclearcraft:gem_dust_fluorite"
+                ["mekanism:dust_fluorite", "mekanism:item/dust_fluorite"],
+                ["nuclearcraft:gem_dust_fluorite", "nuclearcraft:items/gem_dust_fluorite"]
             ]
         }
     },
@@ -97,15 +97,15 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:niter_block"
+                ["thermal:niter_block", "thermal:block/niter_block"]
             ],
             "gem": [
-                "thermal:niter"
+                ["thermal:niter", "thermal:item/niter"]
             ],
             "dust": [
-                "bloodmagic:saltpeter",
-                "thermal:niter_dust",
-                "immersiveengineering:dust_saltpeter"
+                ["bloodmagic:saltpeter", "bloodmagic:item/saltpeter"],
+                ["thermal:niter_dust", "thermal:item/niter_dust"],
+                ["immersiveengineering:dust_saltpeter", "immersiveengineering:item/material_dust_saltpeter"]
             ]
         }
     },
@@ -129,18 +129,18 @@
         ],
         "remove": {
             "storage_block": [
-                "projectred-exploration:ruby_block",
-                "thermal:ruby_block"
+                ["projectred-exploration:ruby_block", "projectred-exploration:block/ruby_block"],
+                ["thermal:ruby_block", "thermal:block/ruby_block"]
             ],
             "gem": [
-                "projectred-core:ruby",
-                "thermal:ruby"
+                ["projectred-core:ruby", "projectred-core:item/ruby"],
+                ["thermal:ruby", "thermal:item/ruby"]
             ],
             "dust": [
-                "thermal:ruby_dust"
+                ["thermal:ruby_dust", "thermal:item/ruby_dust"]
             ],
             "gear": [
-                "thermal:ruby_gear"
+                ["thermal:ruby_gear", "thermal:item/ruby_gear"]
             ]
         }
     },
@@ -164,20 +164,20 @@
         ],
         "remove": {
             "storage_block": [
-                "aoa3:sapphire_block",
-                "projectred-exploration:sapphire_block",
-                "thermal:sapphire_block"
+                ["aoa3:sapphire_block", "aoa3:block/sapphire_block"],
+                ["projectred-exploration:sapphire_block", "projectred-exploration:block/sapphire_block"],
+                ["thermal:sapphire_block", "thermal:block/sapphire_block"]
             ],
             "gem": [
-                "aoa3:sapphire",
-                "projectred-core:sapphire",
-                "thermal:sapphire"
+                ["aoa3:sapphire", "aoa3:item/sapphire"],
+                ["projectred-core:sapphire", "projectred-core:item/sapphire"],
+                ["thermal:sapphire", "thermal:item/sapphire"]
             ],
             "dust": [
-                "thermal:sapphire_dust"
+                ["thermal:sapphire_dust", "thermal:item/sapphire_dust"]
             ],
             "gear": [
-                "thermal:sapphire_gear"
+                ["thermal:sapphire_gear", "thermal:item/sapphire_gear"]
             ]
         }
     },
@@ -202,18 +202,18 @@
         ],
         "remove": {
             "storage_block": [
-                "thermal:sulfur_block"
+                ["thermal:sulfur_block", "thermal:block/sulfur_block"]
             ],
             "gem": [
-                "thermal:sulfur"
+                ["thermal:sulfur", "thermal:item/sulfur"]
             ],
             "dust": [
-                "immersiveengineering:dust_sulfur",
-                "bloodmagic:sulfur",
-                "mekanism:dust_sulfur",
-                "thermal:sulfur_dust",
-                "eidolon:sulfur",
-                "nuclearcraft:gem_dust_sulfur"
+                ["immersiveengineering:dust_sulfur", "immersiveengineering:item/material_dust:sulufr"],
+                ["bloodmagic:sulfur", "bloodmagic:item/sulfur"],
+                ["mekanism:dust_sulfur", "mekanism:item/dust_sulfur"],
+                ["thermal:sulfur_dust", "thermal:item/sulfur_dust"],
+                ["eidolon:sulfur", "eidolon:item/sulfur"],
+                ["nuclearcraft:gem_dust_sulfur", "nuclearcraft:items/gem_dust_sulfur"]
             ]
         }
     }

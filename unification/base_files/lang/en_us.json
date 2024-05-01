@@ -43,6 +43,7 @@
 	"alloy.invar": "Invar",
 	"alloy.lumium": "Lumium",
 	"alloy.manganese": "Manganese",
+	"alloy.neptunium": "Neptunium",
 	"alloy.obsidian": "Obsidian",
 	"alloy.red_alloy": "Red Alloy",
 	"alloy.salt": "Salt",
@@ -87,8 +88,6 @@
 	"appliedenergistics2.certus_quartz": "Certus Quartz",
 	"appliedenergistics2.charged_certus_quartz": "Charged Certus Quartz",
 	"appliedenergistics2.fluix": "Fluix",
-
-	"aquaculture.neptunium": "Neptunium",
 
 	"ars_nouveau.source_gem": "Source Gem",
 
@@ -281,7 +280,7 @@
 	"powah.spirited_crystal": "Spirited Crystal",
 	"powah.uraninite": "Uraninite",
 
-	"projectred-core.electrotine": "Electrotine",
+	"projectred-core.electrotine": "Electrotine Alloy",
 	"projectred-core.peridot": "Peridot",
 
 	"psi.ebony": "Ebony Psimetal",

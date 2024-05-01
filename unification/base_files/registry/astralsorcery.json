@@ -117,7 +117,7 @@
         ],
         "remove": {
             "dust": [
-                "silentgear:starmetal_dust"
+                ["silentgear:starmetal_dust", "silentgear:item/starmetal_dust"]
             ]
         }
     }

@@ -132,8 +132,8 @@
         ],
         "remove": {
             "dust": [
-                "potionsmaster:crimsoniron_powder",
-                "silentgear:crimson_iron_dust"
+                ["potionsmaster:crimsoniron_powder", "potionsmaster:item/crimsoniron_powder"],
+                ["silentgear:crimson_iron_dust", "silentgear:item/crimson_iron_dust"]
             ]
         }
     },
