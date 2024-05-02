@@ -27,10 +27,13 @@ class MainExtended:
                     path_texture = self.UT.get_texture_path(id_file, id_name, material_type[0], material_type[1])
                     
                     # replaces the texture 
-                    if material_type[0] != "gem" or self.UT.get_main_config("unification.replace_gem_textures", True) is True:
-                        if self.FM.handleTexture(path_texture, self.UT.resource_location_to_path(material_type[1]), True, False):
+                    gem_disabled = (material_type[0] != "gem" or self.UT.get_main_config("unification.replace_gem_textures", True) is True)
+                    if self.UT.get_main_config("unification.replace_textures", True) is True and gem_disabled:
+                        if self.FM.handle_texture(path_texture, self.UT.resource_location_to_path(material_type[1]), True, False):
                             self.texture_replaced += 1
                             anything_changed += 1
+                    else:
+                        self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
                 
                 # adds the tags
                 if material_type[0] not in self.all_element_replaced and "slurry" not in material_type[0] and "molten" not in material_type[0]:
@@ -41,7 +44,7 @@ class MainExtended:
                 self.elements_replaced[material_type[0]] = material_type[2]
             else:
                 # removes the texture if the material type doesn't exist
-                self.FM.handleTexture("", self.UT.resource_location_to_path(material_type[2]), False, False)
+                self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
             
         return anything_changed
     

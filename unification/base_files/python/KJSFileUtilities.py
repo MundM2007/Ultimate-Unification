@@ -12,10 +12,10 @@ class KJSFileUtilities:
         path_script_file_item = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", "item", f"{id_file}.js")
         is_block = material_type in ["raw_block", "storage_block"]
         for tag in [f"forge:{material_type}s/{id_name}", f"forge:{material_type}s"]:
-            self.FM.addKJS(path_script_file_item, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('item.tags', event => {\n")
+            self.FM.add_kjs(path_script_file_item, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('item.tags', event => {\n")
             if is_block:
                 path_script_file_block = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", "block", f"{id_file}.js")
-                self.FM.addKJS(path_script_file_block, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('block.tags', event => {\n")
+                self.FM.add_kjs(path_script_file_block, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('block.tags', event => {\n")
     
 
     def add_element(self, id_file, id_name, material_type, color, license_notice, harvest_level, destroy_time, explosion_resistance):
@@ -37,9 +37,9 @@ class KJSFileUtilities:
 
     def add_item(self, id_file, id_name, material_type, license_notice):
         texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_{material_type}"
-        if self.FM.handleTexture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
+        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
             path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_item", f"{id_file}.js")
-            self.FM.addKJS(path_script_file, f"    global.scripts.add_item(event, '{id_name}', '{material_type}', '{texture_path}')\n", 
+            self.FM.add_kjs(path_script_file, f"    global.scripts.add_item(event, '{id_name}', '{material_type}', '{texture_path}')\n", 
                            license_notice, 100, "onEvent('item.registry', event => {\n")
             self.UT.gen_lang_entry(id_file, id_name, material_type)
             return True
@@ -48,10 +48,10 @@ class KJSFileUtilities:
 
     def add_block(self, id_file, id_name, material_type, license_notice, harvest_level, destroy_time, explosion_resistance):
         texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{material_type}"
-        if self.FM.handleTexture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
+        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
             path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_block", f"{id_file}.js")
             material_type_extra = "stone" if material_type == "raw_block" else "metal"
-            self.FM.addKJS(path_script_file, (f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}', "
+            self.FM.add_kjs(path_script_file, (f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}', "
                            f"{harvest_level}, {destroy_time}, {explosion_resistance})\n"), license_notice, 100, "onEvent('block.registry', event => {\n")
             self.UT.gen_lang_entry(id_file, id_name, material_type)
             return True
@@ -61,7 +61,7 @@ class KJSFileUtilities:
     def add_molten(self, id_file, id_name, color, license_notice):
         color = "0xffffff" if color == "" else color
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_fluid", f"{id_file}.js")
-        self.FM.addKJS(path_script_file, f"    global.scripts.add_molten(event, '{id_name}', {color})\n",
+        self.FM.add_kjs(path_script_file, f"    global.scripts.add_molten(event, '{id_name}', {color})\n",
                        license_notice, 100, "onEvent('fluid.registry', event => {\n")
         self.UT.gen_lang_entry(id_file, id_name, "molten")
         return True
@@ -70,7 +70,7 @@ class KJSFileUtilities:
     def add_slurry(self, id_file, id_name, color, license_notice):
         color = "0xffffff" if color == "" else color
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_slurry", f"{id_file}.js")
-        self.FM.addKJS(path_script_file, f"SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "", "")
+        self.FM.add_kjs(path_script_file, f"SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "", "")
         self.UT.gen_lang_entry(id_file, id_name, "slurry")
         return True
     
@@ -78,18 +78,18 @@ class KJSFileUtilities:
     def add_coin(self, id_file, id_name, license_notice):
         texture_path_new = f"unification:{id_file}/{id_name}/item/{id_name}_coin"
         for i in range(5):
-            if not self.FM.handleTexture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path_new + str(i)), True, True):
+            if not self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path_new + str(i)), True, True):
                 for j in range(i):
-                    self.FM.handleTexture("", self.UT.resource_location_to_path(texture_path_new + str(j)), False, True)
+                    self.FM.handle_texture("", self.UT.resource_location_to_path(texture_path_new + str(j)), False, True)
                 return False
             
             path_model_file = os.path.join(self.UT.pack_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json")
             model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path_new + str(i) + '"}}'
-            self.FM.addJson(path_model_file, model_json)
+            self.FM.add_json(path_model_file, model_json)
         
-        self.FM.addKJS(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}.js"), 
+        self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}.js"), 
                        f"    global.scripts.add_coin(event, '{id_name}')\n", license_notice, 100, "onEvent('item.registry', event => {\n")
-        self.FM.addKJS(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}_register_item_property.js"),
+        self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}_register_item_property.js"),
                        f"    global.scripts.register_item_property('unification:{id_name}_coin')\n", license_notice, 100, "onEvent('postinit', event => {\n")
         self.UT.gen_lang_entry(id_file, id_name, "coin")
 
@@ -103,15 +103,15 @@ class KJSFileUtilities:
                           f'{{"predicate": {{"count": 1.00000}}, "model": "{texture_path_new + "4"}"}}'
                         f']'
                       f'}}')
-        self.FM.addJson(os.path.join(self.UT.pack_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json"), main_model)
+        self.FM.add_json(os.path.join(self.UT.pack_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json"), main_model)
         return True
     
 
     def jei_hide(self, id_item, id_file, is_block, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "client_scripts", "unification", "jei_hide", f"{id_file}.js")
-        self.FM.addKJS(path_script_file, f"    event.hide('{id_item}')\n", license_notice, 50, "onEvent('jei.hide.items', event => {\n")
+        self.FM.add_kjs(path_script_file, f"    event.hide('{id_item}')\n", license_notice, 50, "onEvent('jei.hide.items', event => {\n")
         if is_block:
-            self.FM.addKJS(path_script_file, f"    event.hide(Item.of('appliedenergistics2:facade', '{{item:\"{id_item}\"}}'))\n", 
+            self.FM.add_kjs(path_script_file, f"    event.hide(Item.of('appliedenergistics2:facade', '{{item:\"{id_item}\"}}'))\n", 
                 license_notice, 50, "onEvent('jei.hide.fluids', event => {\n")
 
 
@@ -119,17 +119,17 @@ class KJSFileUtilities:
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag", "items", f"{id_file}.js")
         is_block = material_type in ["raw_block", "storage_block"]
         for tag in [f"forge:{material_type}s/{id_name}", f"forge:{material_type}s"]:
-            self.FM.addKJS(path_script_file, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('item.tags', event => {\n")
+            self.FM.add_kjs(path_script_file, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('item.tags', event => {\n")
             if is_block:
                 path_script_file_block = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tags", "blocks", f"{id_file}.js")
-                self.FM.addKJS(path_script_file_block, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
+                self.FM.add_kjs(path_script_file_block, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
 
     
     def replace_input(self, id_item, new_tag, id_file, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "replace_input", f"{id_file}.js")
-        self.FM.addKJS(path_script_file, f"    event.replaceInput({{}}, '{id_item}', '{new_tag}')\n", license_notice, 100, "onEvent('recipes', event => {\n")
+        self.FM.add_kjs(path_script_file, f"    event.replaceInput({{}}, '{id_item}', '{new_tag}')\n", license_notice, 100, "onEvent('recipes', event => {\n")
 
     
     def replace_output(self, id_item, new_id_item, id_file, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "replace_output", f"{id_file}.js")
-        self.FM.addKJS(path_script_file, f"    event.replaceOutput({{}}, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('recipes', event => {\n")
+        self.FM.add_kjs(path_script_file, f"    event.replaceOutput({{}}, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('recipes', event => {\n")

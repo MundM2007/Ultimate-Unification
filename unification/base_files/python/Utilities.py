@@ -114,7 +114,7 @@ class Utilities:
                             lang_key = f"slurry.unification.clean_{id_name}_slurry"
                         else:
                             lang_key = f"item.unification.{id_name}_{material_type}"
-                        self.FM.addJson(path_lang_file, {lang_key: lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
+                        self.FM.add_json(path_lang_file, {lang_key: lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
                     else:
                         self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                 else:

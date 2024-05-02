@@ -11,7 +11,7 @@ class FileManager:
     
 
     # adds a KubeJS file section to be written to the file later
-    def addKJS(self, path_file, content, license_notice, priority, event_write, ending="})"):
+    def add_kjs(self, path_file, content, license_notice, priority, event_write, ending="})"):
         if path_file in self.files:
             self.files[path_file][1] += content
         else:
@@ -19,7 +19,7 @@ class FileManager:
     
 
     # adds a JSON file section to be written to the file later
-    def addJson(self, path_file, content, pretty_print=False):
+    def add_json(self, path_file, content, pretty_print=False):
         if self.files.get(path_file):
             try:
                 content = content if isinstance(content, dict) else json.loads(content)
@@ -34,7 +34,7 @@ class FileManager:
     
 
     # handles a texture to be created or deleted later
-    def handleTexture(self, path_file, path_copy, active, isAdding):
+    def handle_texture(self, path_file, path_copy, active, isAdding):
         if active:
             if os.path.exists(path_file):
                 if path_file in self.textures_add:

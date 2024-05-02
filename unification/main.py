@@ -86,12 +86,12 @@ for element in gen_scripts_info.get("main"):
             LM.log("critical_json_error", f"Error decoding JSON content of the file: materials.json", e)
 
         if config.get(id_name) is False:
-            FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: False}, True)
+            FM.add_json(os.path.join(path_program, "config", f"materials.json"), {id_name: False}, True)
             continue
         else:
-            FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
+            FM.add_json(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
     else:
-        FM.addJson(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
+        FM.add_json(os.path.join(path_program, "config", f"materials.json"), {id_name: True}, True)
 
     anything_changed = 0
 
@@ -200,12 +200,12 @@ for element in gen_scripts_info.get("main"):
                 else:
                     arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
 
-            FM.addKJS(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
+            FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
                       f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
     
     if base_file_recipe[id_name].get("remove") is not None:
         for recipe in base_file_recipe[id_name]["remove"]:
-            FM.addKJS(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
+            FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
                       f"    event.remove({{id: '{recipe}'}})\n", license_notice, 40, "onEvent('recipes', event => {\n")
 
 FM.save()

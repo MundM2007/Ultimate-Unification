@@ -10,7 +10,10 @@
         "mod_overwrites": {},
 
         "c4": "Here you can enable or disable weither gems textures should be replaced",
-        "replace_gem_textures": true
+        "replace_gem_textures": true,
+
+        "c5": "Here you can enable or disable weither textures should be replaced at all, overwrites replace_gem_textures if false",
+        "replace_textures": true
     },
 
     "ores": {
