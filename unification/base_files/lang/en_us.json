@@ -27,6 +27,7 @@
     "clean_slurry": "Clean %s Slurry",
     "dirty_slurry": "Dirty %s Slurry",
 
+	
     "alloy.arcane_gold": "Arcane Gold",
 	"alloy.beryllium": "Beryllium",
 	"alloy.brass": "Brass",
@@ -312,5 +313,8 @@
 	"tconstruct.tinkers_bronze": "Tinkers Bronze",
     
 	"thermal.apatite": "Apatite",
-	"thermal.cinnabar": "Cinnabar"
+	"thermal.cinnabar": "Cinnabar",
+
+
+	"projectred-core.electrotine.dust": "Electrotine"
 }

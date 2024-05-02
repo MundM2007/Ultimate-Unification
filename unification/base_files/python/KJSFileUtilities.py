@@ -1,3 +1,20 @@
+#          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         
+#          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         
+#          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           
+#          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           
+#          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         
+#           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         
+#                                                                                 
+# ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+# ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+# ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║
+# ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+# ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+#  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+# --------------------------------------------------------------------------------
+# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+#         - MundM2007 (https://github.com/MundM2007)
+
 import os
 
 class KJSFileUtilities:
@@ -6,6 +23,8 @@ class KJSFileUtilities:
         self.IOM = UT.IOM
         self.FM = UT.FM
         self.UT = UT
+
+        self.jei_hide_logged = False
         
     # adds a tag to an item
     def add_tag(self, id_item, id_file, id_name, material_type, license_notice):
@@ -111,8 +130,12 @@ class KJSFileUtilities:
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "client_scripts", "unification", "jei_hide", f"{id_file}.js")
         self.FM.add_kjs(path_script_file, f"    event.hide('{id_item}')\n", license_notice, 50, "onEvent('jei.hide.items', event => {\n")
         if is_block:
-            self.FM.add_kjs(path_script_file, f"    event.hide(Item.of('appliedenergistics2:facade', '{{item:\"{id_item}\"}}'))\n", 
-                license_notice, 50, "onEvent('jei.hide.fluids', event => {\n")
+            if self.UT.check_mod("appliedenergistics2"):
+                self.FM.add_kjs(path_script_file, f"    event.hide(Item.of('appliedenergistics2:facade', '{{item:\"{id_item}\"}}'))\n", 
+                    license_notice, 50, "onEvent('jei.hide.fluids', event => {\n")
+            elif not self.jei_hide_logged:
+                if not self.UT.check_mod_written("appliedenergistics2"):
+                    self.LM.log("mod_not_found", f"Mod (appliedenergistics2) not found in the mod list")
 
 
     def remove_tag(self, id_item, id_file, id_name, material_type, license_notice):

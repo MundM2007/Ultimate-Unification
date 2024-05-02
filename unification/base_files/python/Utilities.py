@@ -1,3 +1,20 @@
+#          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         
+#          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         
+#          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           
+#          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           
+#          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         
+#           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         
+#                                                                                 
+# ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+# ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+# ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║
+# ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+# ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+#  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+# --------------------------------------------------------------------------------
+# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+#         - MundM2007 (https://github.com/MundM2007)
+
 import json
 import os
 import copy
@@ -98,27 +115,33 @@ class Utilities:
         return True
     
 
+    def get_lang_key(self, id_name, material_type):
+        if material_type in ["raw_block", "storage_block"]:
+            return f"block.unification.{id_name}_{material_type}"
+        elif material_type == "molten":
+            return f"fluid.unification.{id_name}_molten"
+        elif material_type == "dirty_slurry":
+            return f"slurry.unification.dirty_{id_name}_slurry"
+        elif material_type == "clean_slurry":
+            return f"slurry.unification.clean_{id_name}_slurry"
+        else:
+            return f"item.unification.{id_name}_{material_type}"
+
+
     def gen_lang_entry(self, id_file, id_name, material_type):
         for lang in self.langs:
             path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
             for material_type in [f"dirty_{material_type}", f"clean_{material_type}"] if material_type in ["slurry"] else [material_type]:
-                if lang.get(material_type) is not None:
-                    if lang.get(f"{id_file}.{id_name}") is not None:
-                        if material_type in ["raw_block", "storage_block"]:
-                            lang_key = f"block.unification.{id_name}_{material_type}"
-                        elif material_type == "molten":
-                            lang_key = f"fluid.unification.{id_name}_molten"
-                        elif material_type == "dirty_slurry":
-                            lang_key = f"slurry.unification.dirty_{id_name}_slurry"
-                        elif material_type == "clean_slurry":
-                            lang_key = f"slurry.unification.clean_{id_name}_slurry"
-                        else:
-                            lang_key = f"item.unification.{id_name}_{material_type}"
-                        self.FM.add_json(path_lang_file, {lang_key: lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
-                    else:
-                        self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
+                if lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
+                    self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(f"{id_file}.{id_name}.{material_type}")})
                 else:
-                    self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
+                    if lang.get(material_type) is not None:
+                        if lang.get(f"{id_file}.{id_name}") is not None:
+                            self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
+                        else:
+                            self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
+                    else:
+                        self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
 
     
     @functools.lru_cache()
