@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aeternium": {
@@ -65,8 +65,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "betterendforge:aeternium_block",
-            "betterendforge:aeternium_ingot_from_aeternium_block"
+            ["betterendforge:aeternium_block", "minecraft.storage_convert_metal"],
+            ["betterendforge:aeternium_ingot_from_aeternium_block", "minecraft.storage_convert_metal"]
         ]
     },
     "amber": {
@@ -113,7 +113,7 @@
             "thermal.rod"
         ],
         "remove": [
-            "thermal:compat/betterforge/smelter_betterendforge_amber_ore"
+            ["thermal:compat/betterforge/smelter_betterendforge_amber_ore", "thermal.ore_processing_gem"]
         ]
     },
     "terminite": {
@@ -164,9 +164,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "betterendforge:terminite_block",
-            "betterendforge:terminite_ingot_from_terminite_block",
-            "betterendforge:terminite_ingot_from_terminite_nuggets"
+            ["betterendforge:terminite_block", "minecraft.storage_convert_metal"],
+            ["betterendforge:terminite_ingot_from_terminite_block", "minecraft.storage_convert_metal"],
+            ["betterendforge:terminite_ingot_from_terminite_nuggets", "minecraft.storage_convert_metal"]
         ]
     },
     "thallasium": {
@@ -236,13 +236,13 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "betterendforge:additional_thallasium",
-            "betterendforge:thallasium_block",
-            "betterendforge:thalassium_ingot_from_blasting",
-            "betterendforge:thallasium_ingot_from_thallasium_block",
-            "betterendforge:thallasium_ingot_from_thallasium_nuggets",
-            "betterendforge:thallasium_ingot_from_smelting",
-            "thermal:compat/betterforge/smelter_betterendforge_thallasium_ore"
+            ["betterendforge:additional_thallasium", "betterendforge.ore_processing_metal"],
+            ["betterendforge:thallasium_block", "minecraft.storage_convert_metal"],
+            ["betterendforge:thalassium_ingot_from_blasting", "minecraft.ore_processing_metal"],
+            ["betterendforge:thallasium_ingot_from_thallasium_block", "minecraft.storage_convert_metal"],
+            ["betterendforge:thallasium_ingot_from_thallasium_nuggets", "minecraft.storage_convert_metal"],
+            ["betterendforge:thallasium_ingot_from_smelting", "minecraft.ore_processing_metal"],
+            ["thermal:compat/betterforge/smelter_betterendforge_thallasium_ore", "thermal.ore_processing_metal"]
         ]
     }
 }

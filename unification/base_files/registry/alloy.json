@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_gold": {
@@ -902,9 +902,9 @@
         "remove": {
             "dust": [
                 ["immersiveengineering:dust_wood", "immersiveengineering:item/material_dust_wood"],
-                ["mekanism:dust_wood", "mekanism:item/dust_wood"],
-                ["thermal:dust_wood", "thermal:item/dust_wood"],
-                ["excompressum:wood_dust", "excompressum:items/wood_chippings"]
+                ["mekanism:sawdust", "mekanism:item/sawdust"],
+                ["thermal:sawdust", "thermal:item/sawdust"],
+                ["excompressum:wood_chippings", "excompressum:items/wood_chippings"]
             ],
             "gear": [
                 ["appliedenergistics2:wooden_gear", "appliedenergistics2:item/wooden_gear"],

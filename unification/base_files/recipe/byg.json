@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "ametrine": {
@@ -75,8 +75,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "byg:ametrine_from_blasting",
-            "byg:compat/create/ametrine_ore"
+            ["byg:ametrine_from_blasting", "minecraft.ore_processing_gem"],
+            ["byg:compat/create/ametrine_ore", "create.ore_processing_gem"]
         ]
     },
     "anthracite": {
@@ -137,8 +137,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "byg:anthracite_from_blasting",
-            "byg:compat/create/anthracite_ore"
+            ["byg:anthracite_from_blasting", "minecraft.ore_processing_gem"],
+            ["byg:compat/create/anthracite_ore", "create.ore_processing_gem"]
         ]
     },
     "emeraldite": {
@@ -200,7 +200,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "byg:emeraldite_from_blasting"
+            ["byg:emeraldite_from_blasting", "minecraft.ore_processing_gem"]
         ]
     },
     "lignite": {
@@ -261,8 +261,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "byg:lignite_from_blasting",
-            "byg:compat/create/lignite_ore"
+            ["byg:lignite_from_blasting", "minecraft.ore_processing_gem"],
+            ["byg:compat/create/lignite_ore", "create.ore_processing_gem"]
         ]
     },
     "pendorite": {
@@ -317,8 +317,8 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "byg:pendorite_block",
-            "byg:raw_pendorite_block"
+            ["byg:pendorite_block", "minecraft.storage_convert_metal"],
+            ["byg:raw_pendorite_block", "minecraft.storage_convert_raw"]
         ]
     }
 }

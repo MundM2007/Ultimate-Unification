@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arsenic": {},
@@ -545,7 +545,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "nuclearcraft:smelting/dust_oxide_manganese2_to_ingot_oxide_manganese2"
+            ["nuclearcraft:smelting/dust_oxide_manganese2_to_ingot_oxide_manganese2", "minecraft.smelting_recipes"]
         ]
     },
     "manganese_oxide": {
@@ -596,7 +596,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "nuclearcraft:smelting/dust_oxide_manganese_to_ingot_oxide_manganese"
+            ["nuclearcraft:smelting/dust_oxide_manganese_to_ingot_oxide_manganese", "minecraft.smelting_recipes"]
         ]
     },
     "rhodochrosite": {
@@ -885,7 +885,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "nuclearcraft:smelting/dust_oxide_thorium_to_ingot_oxide_thorium"
+            ["nuclearcraft:smelting/dust_oxide_thorium_to_ingot_oxide_thorium", "minecraft.smelting_recipes"]
         ]
     },
     "tin_silver_alloy": {
@@ -1032,7 +1032,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "nuclearcraft:smelting/dust_oxide_uranium_to_ingot_oxide_uranium"
+            ["nuclearcraft:smelting/dust_oxide_uranium_to_ingot_oxide_uranium", "minecraft.smelting_recipes"]
         ]
     },
     "villiaumite": {

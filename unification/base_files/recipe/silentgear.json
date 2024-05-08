@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "azure_electrum": {
@@ -64,9 +64,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silentgear:azure_electrum_dust",
-            "silentgear:azure_electrum_dust_blasting",
-            "silentgear:azure_electrum_dust_smelting"
+            ["silentgear:azure_electrum_dust", ""],
+            ["silentgear:azure_electrum_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:azure_electrum_dust_smelting", "minecraft.smelting_recipes"]
         ]
     },
     "azure_silver": {
@@ -134,15 +134,15 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "silentgear:azure_silver_dust",
-            "silentgear:azure_silver_dust_blasting",
-            "silentgear:azure_silver_dust_ore_blasting",
-            "silentgear:azure_silver_dust_ore_smelting",
-            "silentgear:azure_silver_dust_raw_ore_blasting",
-            "silentgear:azure_silver_dust_raw_ore_smelting",
-            "silentgear:azure_silver_dust_smelting",
-            "silentgear:crushing/azure_silver_chunks",
-            "silentgear:crushing/azure_silver_dust"
+            ["silentgear:azure_silver_dust", ""],
+            ["silentgear:azure_silver_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:azure_silver_dust_ore_blasting", "minecraft.ore_processing_metal"],
+            ["silentgear:azure_silver_dust_ore_smelting", "minecraft.ore_processing_metal"],
+            ["silentgear:azure_silver_dust_raw_ore_blasting", "minecraft.ore_processing_metal"],
+            ["silentgear:azure_silver_dust_raw_ore_smelting", "minecraft.ore_processing_metal"],
+            ["silentgear:azure_silver_dust_smelting", "minecraft.smelting_recipes"],
+            ["silentgear:crushing/azure_silver_chunks", "silents_mechanisms.ore_processing_metal"],
+            ["silentgear:crushing/azure_silver_dust", "silents_mechanisms.ore_processing_metal"]
         ]
     },
     "blaze_gold": {
@@ -192,9 +192,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silentgear:blaze_gold_dust",
-            "silentgear:blaze_gold_dust_blasting",
-            "silentgear:blaze_gold_dust_smelting"
+            ["silentgear:blaze_gold_dust", ""],
+            ["silentgear:blaze_gold_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:blaze_gold_dust_smelting", "minecraft.smelting_recipes"]
         ]
     },
     "crimson_iron": {
@@ -262,14 +262,14 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "silentgear:crimson_iron_dust_blasting",
-            "silentgear:crimson_iron_dust_ore_blasting",
-            "silentgear:crimson_iron_dust_ore_smelting",
-            "silentgear:crimson_iron_dust_raw_ore_blasting",
-            "silentgear:crimson_iron_dust_raw_ore_smelting",
-            "silentgear:crimson_iron_dust_smelting",
-            "silentgear:crushing/crimson_iron_chunks",
-            "silentgear:crushing/crimson_iron_dust"
+            ["silentgear:crimson_iron_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:crimson_iron_dust_ore_blasting", "minecraft.ore_processing_metal"],
+            ["silentgear:crimson_iron_dust_ore_smelting", "minecraft.ore_processing_metal"],
+            ["silentgear:crimson_iron_dust_raw_ore_blasting", "minecraft.ore_processing_metal"],
+            ["silentgear:crimson_iron_dust_raw_ore_smelting", "minecraft.ore_processing_metal"],
+            ["silentgear:crimson_iron_dust_smelting", "minecraft.smelting_recipes"],
+            ["silentgear:crushing/crimson_iron_chunks", "silents_mechanisms.ore_processing_metal"],
+            ["silentgear:crushing/crimson_iron_dust", "silents_mechanisms.ore_processing_metal"]
         ]
     },
     "crimson_steel": {
@@ -319,9 +319,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silentgear:crimson_steel_dust",
-            "silentgear:crimson_steel_dust_blasting",
-            "silentgear:crimson_steel_dust_smelting"
+            ["silentgear:crimson_steel_dust", ""],
+            ["silentgear:crimson_steel_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:crimson_steel_dust_smelting", "minecraft.smelting_recipes"]
         ]
     },
     "tyrian_steel": {
@@ -371,9 +371,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silentgear:tyrian_steel_dust",
-            "silentgear:tyrian_steel_dust_blasting",
-            "silentgear:tyrian_steel_dust_smelting"
+            ["silentgear:tyrian_steel_dust", ""],
+            ["silentgear:tyrian_steel_dust_blasting", "minecraft.smelting_recipes"],
+            ["silentgear:tyrian_steel_dust_smelting", "minecraft.smelting_recipes"]
         ]
     }
 }

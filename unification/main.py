@@ -39,7 +39,6 @@ ME = base_files.python.MainExtended.MainExtended(KFUT)
 
 LM.log("info", "Started")
 
-total_time = 0
 # clears paths
 paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_item"),
@@ -135,25 +134,35 @@ for element in gen_scripts_info.get("main"):
         LM.log("value_missing", f"Block values not found for {id_name}, using default values")
 
     if base_file_registry[id_name].get("add") is not None:
-        base_file_registry[id_name]["add"] = list(set(base_file_registry[id_name]["add"]))
+        base_file_registry[id_name]["add"] = set(base_file_registry[id_name]["add"])
 
-    ME.init_actions()
+    ME.init_actions(harvest_level, destroy_time, explosion_resistance)
     # replaces items with a new texture and adds the tags
     if base_file_registry[id_name].get("replace") is not None:
         # loops over all elements to replace
         for element_to_replace in base_file_registry[id_name]["replace"]:
             anything_changed += ME.replace_element(element_to_replace, id_file, id_name, license_notice)
     
+    if base_file_registry[id_name].get("add") is not None:
+        base_file_registry[id_name]["add"].update(ME.element_to_add_candidates)
+    else:
+        base_file_registry[id_name]["add"] = ME.element_to_add_candidates
+
     if UT.get_main_config("unification.mode", "full") == "full":
-        anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance)
-    
+        anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice)
+
     elif UT.get_main_config("unification.mode", "full") in ["replace", "no_add"]:
-        if base_file_registry[id_name].get("remove") is not None and base_file_registry[id_name].get("add") is not None:
+        if base_file_registry[id_name].get("remove") is not None:
             for material_type in copy.deepcopy(base_file_registry[id_name]["add"]):
-                if base_file_registry[id_name]["remove"].get(material_type) is not None and material_type not in ME.elements_replaced:
+                if base_file_registry[id_name]["remove"].get(material_type) is not None and material_type not in ME.element_replaced:
                     mods_potential_items = []
                     for element_to_remove in base_file_registry[id_name]["remove"][material_type]:
-                        mods_potential_items.append(element_to_remove[0][:element_to_remove[0].find(":")])
+                        mod_id = element_to_remove[0][:element_to_remove[0].find(":")]
+                        if UT.check_mod(mod_id):
+                            mods_potential_items.append(mod_id)
+                        else:
+                            if not UT.check_mod_written(mod_id):
+                                LM.log_same_message_once("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
 
                     mods = list(filter(lambda x: x != None, [UT.get_main_config("unification.mod_overwrites", "dict").get(id_name)]))
                     mods.extend(UT.get_main_config("unification.mod_priorities", "list"))
@@ -167,20 +176,23 @@ for element in gen_scripts_info.get("main"):
                     
                     removal_array = base_file_registry[id_name]["remove"][material_type][index_of_item_to_replace][::-1]
                     removal_array.insert(0, material_type)
-                    anything_changed += ME.replace_element(removal_array, id_file, id_name, license_notice)
-                    base_file_registry[id_name]["remove"][material_type].pop(index_of_item_to_replace)
-                    if(UT.get_main_config("unification.mode", "full") == "replace"): base_file_registry[id_name]["add"].remove(material_type)
+                    anything_changed_replace = ME.replace_element(removal_array, id_file, id_name, license_notice)
+                    anything_changed += anything_changed_replace
+                    if anything_changed_replace > 0:
+                        base_file_registry[id_name]["remove"][material_type].pop(index_of_item_to_replace)
+                        if(UT.get_main_config("unification.mode", "full") == "replace"): base_file_registry[id_name]["add"].remove(material_type)
+                    
                 
         if UT.get_main_config("unification.mode", "full") == "replace":
-            anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance)
+            anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice)
         else:
             anything_changed += ME.remove_elements(base_file_registry, id_file, id_name, license_notice)
 
 
     if anything_changed > 0:
-        globals()["material_added"] += 1
+        material_added += 1
 
-     # checks if the base file exists and is valid
+    # checks if the base file exists and is valid
     base_file_recipe_path = os.path.join(path_program, "base_files", "recipe", f"{id_file}.json")
     if not os.path.isfile(base_file_recipe_path):
         LM.log("material_file_missing", f"Material Base file missing: {base_file_recipe_path} skipping")
@@ -198,35 +210,30 @@ for element in gen_scripts_info.get("main"):
     if license_notice is not None:
         license_notice = "".join(license_notice)
     
+    recipe_types_active = set()
+    if UT.get_main_config("unification.replace_recipes", False) is True:
+        if base_file_recipe[id_name].get("remove") is not None:
+            recipe_types_active = ME.remove_recipes(base_file_recipe, id_file, id_name, True, license_notice)
+        else:
+            recipe_types_active = set()
+        recipe_types_active.update(UT.get_main_config("unification.recipe_types_to_keep", "list"))
+        recipe_types_active.difference_update(UT.get_main_config("unification.recipe_types_to_remove", "list"))
+    else:
+        if base_file_recipe[id_name].get("remove") is not None:
+            ME.remove_recipes(base_file_recipe, id_file, id_name, False, license_notice)
+
     if base_file_recipe[id_name].get("add") is not None:
-        mns = {**ME.elements_replaced, **ME.elements_added}
+        mns = {**ME.element_replaced, **ME.element_added}
         if base_file_recipe[id_name].get("variants") is not None:
             for material in base_file_recipe[id_name]["variants"]:
                 if material not in mns:
                     mns[material] = base_file_recipe[id_name]["variants"][material]
 
-        for recipe in base_file_recipe[id_name]["add"]:
-            if recipe_types.get(recipe) is None:
-                continue
-
-            stop_recipe = False
-            arguments = recipe_types.get(recipe).replace("'id_name'", f"'{id_name}'")
-            for material in mns:
-                if material in ["gem_multiplier", "energy_from_coin"]:
-                    arguments = arguments.replace(f"'{material}'", f"{mns[material]}")
-                else:
-                    arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
-
-            FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
-                      f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
-    
-    if base_file_recipe[id_name].get("remove") is not None:
-        for recipe in base_file_recipe[id_name]["remove"]:
-            FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
-                      f"    event.remove({{id: '{recipe}'}})\n", license_notice, 40, "onEvent('recipes', event => {\n")
-
+        ME.add_recipes(base_file_recipe, id_file, id_name, mns, recipe_types, recipe_types_active, license_notice)
+            
 FM.save()
 IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures"))
-LM.log("info", f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed}")
+LM.log("info", (f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed} "
+                f"Recipes removed: {ME.recipe_removed}, Amount of Recipe Presets that will be run: {ME.recipe_added}"))
 LM.log("info", "Finished")
 LM.save()

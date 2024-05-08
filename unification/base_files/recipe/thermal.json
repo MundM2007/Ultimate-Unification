@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apatite": {
@@ -73,11 +73,11 @@
             "thermal.rod"
         ],
         "remove": [
-            "create:compat/thermal/crushing/apatite_ore",
-            "thermal:machine/pulverizer/pulverizer_apatite_ore",
-            "thermal:machine/smelter/smelter_apatite_ore",
-            "thermal:smelting/apatite_from_blasting",
-            "thermal:smelting/apatite_from_smelting"
+            ["create:compat/thermal/crushing/apatite_ore", "create.ore_processing_gem"],
+            ["thermal:machine/pulverizer/pulverizer_apatite_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_apatite_ore", "thermal.ore_processing_gem"],
+            ["thermal:smelting/apatite_from_blasting", "minecraft.ore_processing_gem"],
+            ["thermal:smelting/apatite_from_smelting", "minecraft.ore_processing_gem"]
         ]
     },
     "cinnabar": {
@@ -136,11 +136,11 @@
             "thermal.rod"
         ],
         "remove": [
-            "create:compat/thermal/crushing/cinnabar_ore",
-            "thermal:machine/pulverizer/pulverizer_cinnabar_ore",
-            "thermal:machine/smelter/smelter_cinnabar_ore",
-            "thermal:smelting/cinnabar_from_blasting",
-            "thermal:smelting/cinnabar_from_smelting"
+            ["create:compat/thermal/crushing/cinnabar_ore", "create.ore_processing_gem"],
+            ["thermal:machine/pulverizer/pulverizer_cinnabar_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_cinnabar_ore", "thermal.ore_processing_gem"],
+            ["thermal:smelting/cinnabar_from_blasting", "minecraft.ore_processing_gem"],
+            ["thermal:smelting/cinnabar_from_smelting", "minecraft.ore_processing_gem"]
         ]
     }
 }

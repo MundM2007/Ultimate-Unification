@@ -26,8 +26,10 @@ class LoggingManager:
     def __init__(self, path_program):
         self.start_time = time.time()
         self.content = []
+        self.percentage_state_last = -1
         self.percentage_step_last = -1
         self.path_program = path_program
+        self.messages_logged = set()
 
         os.makedirs(os.path.join(path_program, "logs"), exist_ok=True)
         self.path_log = os.path.join(path_program, "logs", "latest.log")
@@ -84,14 +86,23 @@ class LoggingManager:
         if len(self.content) > 100:
             self.save()
 
+
+    def log_same_message_once(self, type, message):
+        if message not in self.messages_logged:
+            self.messages_logged.add(message)
+            self.log(type, message)
+
+
     # logs a percentage to the log files and the console
     def log_percentage(self, message, float_n):
         state = round(float_n * 192)
-        full_bars = state // 8
-        sub_bar = [" ", "▏", "▎", "▍", "▌", "▋", "▋", "▊"][state % 8] if full_bars < 24 else ""
-        spaces = " " * (23 - full_bars)
+        if state > self.percentage_state_last:
+            self.percentage_state_last = state
+            full_bars = self.percentage_state_last // 8
+            sub_bar = [" ", "▏", "▎", "▍", "▌", "▋", "▋", "▊"][self.percentage_state_last % 8] if full_bars < 24 else ""
+            spaces = " " * (23 - full_bars)
 
-        print(f"\r{message:<17}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
+            print(f"\r{message:<17}: [{'▉' * full_bars + sub_bar + spaces}]", end="")
 
         while True:
             if float_n * 10 >= self.percentage_step_last + 1:
@@ -102,4 +113,5 @@ class LoggingManager:
 
         if float_n == 1:
             print(" Finished")
+            self.percentage_state_last = -1
             self.percentage_step_last = -1

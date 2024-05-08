@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "imperium": {
@@ -65,10 +65,10 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/imperium/block",
-            "mysticalagradditions:tconstruct/casting/imperium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/imperium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/imperium/nugget_gold_cast"
+            ["mysticalagradditions:tconstruct/casting/imperium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/imperium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/imperium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/imperium/nugget_gold_cast", "tconstruct.casting"]
         ]
     },
     "imperium_gem": {},
@@ -120,11 +120,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/inferium/block",
-            "mysticalagradditions:tconstruct/casting/inferium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/inferium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/inferium/nugget_gold_cast",
-            "mysticalagradditions:tconstruct/casting/inferium/nugget_sand_cast"
+            ["mysticalagradditions:tconstruct/casting/inferium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/inferium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/inferium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/inferium/nugget_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/inferium/nugget_sand_cast", "tconstruct.casting"]
             
         ]
     },
@@ -225,11 +225,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/prudentium/block",
-            "mysticalagradditions:tconstruct/casting/prudentium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/prudentium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/prudentium/nugget_gold_cast",
-            "mysticalagradditions:tconstruct/casting/prudentium/nugget_sand_cast"
+            ["mysticalagradditions:tconstruct/casting/prudentium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/prudentium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/prudentium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/prudentium/nugget_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/prudentium/nugget_sand_cast", "tconstruct.casting"]
             
         ]
     },
@@ -270,11 +270,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/soulium/block",
-            "mysticalagradditions:tconstruct/casting/soulium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/soulium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/soulium/nugget_gold_cast",
-            "mysticalagradditions:tconstruct/casting/soulium/nugget_sand_cast"
+            ["mysticalagradditions:tconstruct/casting/soulium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/soulium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/soulium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/soulium/nugget_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/soulium/nugget_sand_cast", "tconstruct.casting"]
             
         ]
     },
@@ -327,11 +327,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/supremium/block",
-            "mysticalagradditions:tconstruct/casting/supremium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/supremium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/supremium/nugget_gold_cast",
-            "mysticalagradditions:tconstruct/casting/supremium/nugget_sand_cast"
+            ["mysticalagradditions:tconstruct/casting/supremium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/supremium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/supremium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/supremium/nugget_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/supremium/nugget_sand_cast", "tconstruct.casting"]
             
         ]
     },
@@ -384,11 +384,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mysticalagradditions:tconstruct/casting/tertium/block",
-            "mysticalagradditions:tconstruct/casting/tertium/ingot_gold_cast",
-            "mysticalagradditions:tconstruct/casting/tertium/ingot_sand_cast",
-            "mysticalagradditions:tconstruct/casting/tertium/nugget_gold_cast",
-            "mysticalagradditions:tconstruct/casting/tertium/nugget_sand_cast"
+            ["mysticalagradditions:tconstruct/casting/tertium/block", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/tertium/ingot_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/tertium/ingot_sand_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/tertium/nugget_gold_cast", "tconstruct.casting"],
+            ["mysticalagradditions:tconstruct/casting/tertium/nugget_sand_cast", "tconstruct.casting"]
             
         ]
     },

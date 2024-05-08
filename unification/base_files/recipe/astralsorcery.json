@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aquamarine": {
@@ -77,9 +77,9 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "astralsorcery:blasting/aquamarine",
-            "astralsorcery:smelting/aquamarine",
-            "thermal:compat/astralsorcery/pulverizer_astralsorcery_aquamarine_ore"
+            ["astralsorcery:blasting/aquamarine", "minecraft.ore_processing_gem"],
+            ["astralsorcery:smelting/aquamarine", "minecraft.ore_processing_gem"],
+            ["thermal:compat/astralsorcery/pulverizer_astralsorcery_aquamarine_ore", "thermal.ore_processing_gem"]
         ]
     },
     "resonating_gem": {
@@ -255,11 +255,11 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "astralsorcery:blasting/starmetal_ingot",
-            "astralsorcery:shaped/starmetal",
-            "astralsorcery:shapeless/starmetal_ingot",
-            "astralsorcery:smelting/starmetal_ingot",
-            "silentgear:starmetal_dust"
+            ["astralsorcery:blasting/starmetal_ingot", "minecraft.ore_processing_metal"],
+            ["astralsorcery:shaped/starmetal", "minecraft.storage_convert_metal"],
+            ["astralsorcery:shapeless/starmetal_ingot", "minecraft.storage_convert_metal"],
+            ["astralsorcery:smelting/starmetal_ingot", "minecraft.ore_processing_metal"],
+            ["silentgear:starmetal_dust", ""]
         ]
     }
 }

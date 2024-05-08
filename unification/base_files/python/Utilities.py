@@ -90,8 +90,12 @@ class Utilities:
     def check_mod_written(self, mod_id):
         return mod_id in self.mod_list
 
+
     # checks if a material type is from a mod that is in the mod list
     def check_material(self, material_type):
+        if self.get_main_config("unification.disable_material_type_check", False) is True:
+            return True
+
         mod_mapping = {
             "crystal": "mekanism",
             "shard": "mekanism",
@@ -100,7 +104,7 @@ class Utilities:
             "slurry": "mekanism",
             "fragment": "bloodmagic",
             "gravel": "bloodmagic",
-            "crushed": "create"
+            "crushed_ore": "create"
         }
 
         if "slurry" in material_type:
@@ -113,7 +117,7 @@ class Utilities:
                 return False
 
         return True
-    
+
 
     def get_lang_key(self, id_name, material_type):
         if material_type in ["raw_block", "storage_block"]:

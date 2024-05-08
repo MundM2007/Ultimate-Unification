@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "electrotine": {
@@ -65,8 +65,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "projectred-exploration:electrotine_block",
-            "projectred-exploration:electrotine_from_block"
+            ["projectred-exploration:electrotine_block", "minecraft.storage_convert_metal"],
+            ["projectred-exploration:electrotine_from_block", "minecraft.storage_convert_metal"]
         ]
     },
     "peridot": {
@@ -127,7 +127,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "projectred-exploration:peridot_from_ore"
+            ["projectred-exploration:peridot_from_ore", "minecraft.ore_processing_gem"]
         ]
     }
 }

@@ -16,6 +16,7 @@
 #         - MundM2007 (https://github.com/MundM2007)
 
 import re
+import os
 
 class MainExtended:
     def __init__(self, KFUT):
@@ -28,48 +29,67 @@ class MainExtended:
         self.texture_replaced = 0
         self.type_added = 0
         self.element_removed = 0
+        self.recipe_removed = 0
+        self.recipe_added = 0
 
 
-    def init_actions(self):
-        self.all_element_replaced = []
-        self.elements_added = dict()
-        self.elements_replaced = dict()
+    def init_actions(self, harvest_level, destroy_time, explosion_resistance):
+        self.all_element_replaced = set()
+        self.element_added = dict()
+        self.element_replaced = dict()
+        self.element_to_add_candidates = set()
+
+        self.harvest_level = harvest_level
+        self.destroy_time = destroy_time
+        self.explosion_resistance = explosion_resistance
+
 
     def replace_element(self, material_type, id_file, id_name, license_notice):
         anything_changed = 0
         if len(material_type) == 3:
             if self.UT.check_material(material_type[0]):
-                if material_type[1] != "":
-                    # gets the path of the texture from which it should be copied
-                    path_texture = self.UT.get_texture_path(id_file, id_name, material_type[0], material_type[1])
+                mod_id = material_type[2][:material_type[2].find(":")]
+                if self.UT.check_mod(mod_id):
+                    if material_type[1] != "":
+                        # gets the path of the texture from which it should be copied
+                        path_texture = self.UT.get_texture_path(id_file, id_name, material_type[0], material_type[1])
+                        
+                        # replaces the texture 
+                        gem_disabled = (material_type[0] != "gem" or self.UT.get_main_config("unification.replace_gem_textures", True) is True)
+                        if self.UT.get_main_config("unification.replace_textures", True) is True and gem_disabled:
+                            if self.FM.handle_texture(path_texture, self.UT.resource_location_to_path(material_type[1]), True, False):
+                                self.texture_replaced += 1
+                                anything_changed += 1
+                        else:
+                            self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
                     
-                    # replaces the texture 
-                    gem_disabled = (material_type[0] != "gem" or self.UT.get_main_config("unification.replace_gem_textures", True) is True)
-                    if self.UT.get_main_config("unification.replace_textures", True) is True and gem_disabled:
-                        if self.FM.handle_texture(path_texture, self.UT.resource_location_to_path(material_type[1]), True, False):
-                            self.texture_replaced += 1
-                            anything_changed += 1
-                    else:
-                        self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
-                
-                # adds the tags
-                if material_type[0] not in self.all_element_replaced and "slurry" not in material_type[0] and "molten" not in material_type[0]:
-                    self.KFUT.add_tag(material_type[2], id_file, id_name, material_type, license_notice)
-                    anything_changed += 1
-                    self.all_element_replaced.append(material_type[0])
-                
-                self.elements_replaced[material_type[0]] = material_type[2]
+                    # adds the tags
+                    if material_type[0] not in self.all_element_replaced and "slurry" not in material_type[0] and "molten" not in material_type[0]:
+                        self.KFUT.add_tag(material_type[2], id_file, id_name, material_type[0], license_notice)
+                        anything_changed += 1
+                        self.all_element_replaced.add(material_type[0])
+                    
+                    self.element_replaced[material_type[0]] = material_type[2]
+
+                else:
+                    if not self.UT.check_mod_written(mod_id):
+                        self.LM.log_same_message_once("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
+                    self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
+                        
+                    if self.UT.get_main_config("unification.add_failed_replacements", True) is True:
+                        print(material_type[0], id_name)
+                        if "slurry" not in material_type[0] and "molten" not in material_type[0]:
+                            self.element_to_add_candidates.add(material_type[0])
+
             else:
                 # removes the texture if the material type doesn't exist
                 self.FM.handle_texture("", self.UT.resource_location_to_path(material_type[1]), False, False)
+                self.KFUT.add_element(id_file, id_name, material_type[0], 0, 0, 0, 0, False, license_notice)  
             
         return anything_changed
     
 
-    def add_element(self, material_type, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance):
-        if not self.UT.check_material(material_type):
-            return 0
-
+    def add_element(self, material_type, id_file, id_name, license_notice):
         # extract color and element name
         color = ""
         if material_type.startswith("slurry") or material_type.startswith("molten"):
@@ -77,14 +97,18 @@ class MainExtended:
                 color = "0x" + material_type.replace("slurry#", "").replace("molten#", "")
                 material_type = material_type[:-7]
 
+        add_element = True
+        if material_type in self.element_replaced or not self.UT.check_material(material_type):
+            add_element = False
+
         # adds the element
-        if self.KFUT.add_element(id_file, id_name, material_type, color, license_notice, harvest_level, destroy_time, explosion_resistance):
+        if self.KFUT.add_element(id_file, id_name, material_type, color, self.harvest_level, self.destroy_time, self.explosion_resistance, add_element, license_notice):
             # item id is added to a dictionary to be used later
             if material_type == "slurry":
-                self.elements_added["clean_slurry"] = f"unification:clean_{id_name}_slurry"
-                self.elements_added["dirty_slurry"] = f"unification:dirty_{id_name}_slurry"
+                self.element_added["clean_slurry"] = f"unification:clean_{id_name}_slurry"
+                self.element_added["dirty_slurry"] = f"unification:dirty_{id_name}_slurry"
             else:
-                self.elements_added[material_type] = f"unification:{id_name}_{material_type}"
+                self.element_added[material_type] = f"unification:{id_name}_{material_type}"
 
             # adds the tags
             if not material_type.startswith("slurry") and not material_type.startswith("molten"):
@@ -99,7 +123,7 @@ class MainExtended:
         mod_id = removal_array[0][:removal_array[0].find(":")]
         if not self.UT.check_mod(mod_id):
             if not self.UT.check_mod_written(mod_id):
-                self.LM.log("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
+                self.LM.log_same_message_once("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
             return 0
 
         # removes the element
@@ -112,14 +136,14 @@ class MainExtended:
         return 1
     
 
-    def add_and_remove_elements(self, base_file_registry, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance):
+    def add_and_remove_elements(self, base_file_registry, id_file, id_name, license_notice):
         anything_changed = 0
         if base_file_registry[id_name].get("add") is not None:
             for material_type in base_file_registry[id_name]["add"]:
-                anything_changed += self.add_element(material_type, id_file, id_name, license_notice, harvest_level, destroy_time, explosion_resistance)
+                anything_changed += self.add_element(material_type, id_file, id_name, license_notice)
         
         if base_file_registry[id_name].get("remove") is not None:
-            for material_type, new_item in {**self.elements_replaced, **self.elements_added}.items():
+            for material_type, new_item in {**self.element_replaced, **self.element_added}.items():
                 if base_file_registry[id_name]["remove"].get(material_type) is not None:
                     for removal_array in base_file_registry[id_name]["remove"][material_type]:
                         anything_changed += self.remove_element(removal_array, id_file, id_name, material_type, new_item, license_notice)
@@ -130,9 +154,51 @@ class MainExtended:
     def remove_elements(self, base_file_registry, id_file, id_name, license_notice):
         anything_changed = 0
         if base_file_registry[id_name].get("remove") is not None:
-            for material_type, new_item in self.elements_replaced.items():
+            for material_type, new_item in self.element_replaced.items():
                 if base_file_registry[id_name]["remove"].get(material_type) is not None:
                     for removal_array in base_file_registry[id_name]["remove"][material_type]:
                         anything_changed += self.remove_element(removal_array, id_file, id_name, material_type, new_item, license_notice)
         
         return anything_changed
+
+
+    def remove_recipes(self, base_file_recipe, id_file, id_name, track_recipe_types, license_notice):
+        recipe_types = set()
+        for recipe in base_file_recipe[id_name]["remove"]:
+            mod_id = recipe[0][:recipe[0].find(":")]
+            if self.UT.check_mod(mod_id):
+                self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe", f"{id_file}.js"), 
+                    f"    event.remove({{id: '{recipe[0]}'}})\n", license_notice, 40, "onEvent('recipes', event => {\n")
+                self.recipe_removed += 1
+                if track_recipe_types:
+                    recipe_types.add(recipe[1])
+            else:
+                if not self.UT.check_mod_written(mod_id):
+                    self.LM.log_same_message_once("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
+        return recipe_types
+    
+
+    def add_recipes(self, base_file_recipe, id_file, id_name, mns, recipe_types, recipe_types_active, license_notice):
+        for recipe in base_file_recipe[id_name]["add"]:
+            mod_id = recipe[:recipe.find(".")]
+            if not self.UT.check_mod(mod_id):
+                if not self.UT.check_mod_written(mod_id):
+                    self.LM.log_same_message_once("mod_not_found", f"Mod ({mod_id}) not found in the mod list")
+                continue
+
+            if self.UT.get_main_config("unification.replace_recipes", False) is True:
+                if recipe_types.get(recipe) is None or recipe not in recipe_types_active:
+                    continue
+            elif recipe_types.get(recipe) is None or recipe in self.UT.get_main_config("unification.recipe_types_to_remove", "list"):
+                continue
+            
+            arguments = recipe_types.get(recipe).replace("'id_name'", f"'{id_name}'")
+            for material in mns:
+                if material in ["gem_multiplier", "energy_from_coin"]:
+                    arguments = arguments.replace(f"'{material}'", f"{mns[material]}")
+                else:
+                    arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
+
+            self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
+                    f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
+            self.recipe_added += 1

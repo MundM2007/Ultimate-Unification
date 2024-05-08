@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "amethyst": {
@@ -422,7 +422,8 @@
         "replace": [
             ["storage_block", "aoa3:block/limonite_block", "aoa3:limonite_block"],
             ["ingot", "aoa3:item/limonite_ingot", "aoa3:limonite_ingot"],
-            ["nugget", "aoa3:item/limonite_nugget", "aoa3:limonite_nugget"]
+            ["nugget", "aoa3:item/limonite_nugget", "aoa3:limonite_nugget"],
+            ["rod", "aoa3:item/limonite_rod", "aoa3:limonite_rod"]
         ],
         "add": [
             "crushed_ore",
@@ -434,7 +435,6 @@
             "gravel",
             "dust",
             "plate",
-            "rod",
             "gear",
             "raw_material",
             "raw_block",

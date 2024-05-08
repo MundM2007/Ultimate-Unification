@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "bitumen": {
@@ -66,10 +66,10 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "thermal:machine/press/packing3x3/press_bitumen_packing",
-            "thermal:machine/press/unpacking/press_bitumen_unpacking",
-            "thermal:storage/bitumen_block",
-            "thermal:storage/bitumen_from_block"
+            ["thermal:machine/press/packing3x3/press_bitumen_packing", "thermal.storage_convert_gem"],
+            ["thermal:machine/press/unpacking/press_bitumen_unpacking", "thermal.storage_convert_gem"],
+            ["thermal:storage/bitumen_block", "minecraft.storage_convert_gem"],
+            ["thermal:storage/bitumen_from_block", "minecraft.storage_convert_gem"]
         ]
     },
     "fluorite": {
@@ -131,11 +131,11 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "immersiveengineering:crusher/ore_fluorite",
-            "mekanism:processing/fluorite/from_block",
-            "mekanism:processing/fluorite/from_ore",
-            "mekanism:storage_blocks/fluorite",
-            "thermal:compat/mekanism/pulverizer_mekanism_fluorite_ore"
+            ["immersiveengineering:crusher/ore_fluorite", "immersiveengineering.ore_processing_gem"],
+            ["mekanism:processing/fluorite/from_block", "minecraft.storage_convert_gem"],
+            ["mekanism:processing/fluorite/from_ore", "mekanism.ore_processing_gem"],
+            ["mekanism:storage_blocks/fluorite", "minecraft.storage_convert_gem"],
+            ["thermal:compat/mekanism/pulverizer_mekanism_fluorite_ore", "thermal.ore_processing_gem"]
         ]
     },
     "potassium_nitrate": {
@@ -197,15 +197,15 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "create:compat/thermal/crushing/niter_ore",
-            "thermal:earth_charge/niter_dust_from_niter",
-            "thermal:machine/press/packing3x3/press_niter_packing",
-            "thermal:machine/press/unpacking/press_niter_unpacking",
-            "thermal:machine/pulverizer/pulverizer_niter",
-            "thermal:machine/pulverizer/pulverizer_niter_ore",
-            "thermal:machine/smelter/smelter_niter_ore",
-            "thermal:smelting/niter_from_blasting",
-            "thermal:smelting/niter_from_smelting"
+            ["create:compat/thermal/crushing/niter_ore", "create.ore_processing_gem"],
+            ["thermal:earth_charge/niter_dust_from_niter", ""],
+            ["thermal:machine/press/packing3x3/press_niter_packing", "thermal.ore_processing_gem"],
+            ["thermal:machine/press/unpacking/press_niter_unpacking", "thermal.ore_processing_gem"],
+            ["thermal:machine/pulverizer/pulverizer_niter", "thermal.dust"],
+            ["thermal:machine/pulverizer/pulverizer_niter_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_niter_ore", "thermal.ore_processing_gem"],
+            ["thermal:smelting/niter_from_blasting", "minecraft.ore_processing_gem"],
+            ["thermal:smelting/niter_from_smelting", "minecraft.ore_processing_gem"]
         ]
     },
     "ruby": {
@@ -266,13 +266,13 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "projectred-exploration:ruby_block",
-            "projectred-exploration:ruby_from_block",
-            "projectred-exploration:ruby_from_ore",
-            "thermal:machine/press/packing3x3/press_ruby_packing",
-            "thermal:machine/press/unpacking/press_ruby_unpacking",
-            "thermal:machine/pulverizer/pulverizer_ruby_ore",
-            "thermal:machine/smelter/smelter_ruby_ore"
+            ["projectred-exploration:ruby_block", "minecraft.storage_convert_gem"],
+            ["projectred-exploration:ruby_from_block", "minecraft.storage_convert_gem"],
+            ["projectred-exploration:ruby_from_ore", "minecraft.ore_processing_gem"],
+            ["thermal:machine/press/packing3x3/press_ruby_packing", "thermal.storage_convert_gem"],
+            ["thermal:machine/press/unpacking/press_ruby_unpacking", "thermal.storage_convert_gem"],
+            ["thermal:machine/pulverizer/pulverizer_ruby_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_ruby_ore", "thermal.ore_processing_gem"]
         ]
     },
     "sapphire": {
@@ -333,15 +333,15 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_sapphire",
-            "aoa3:smelting_sapphire",
-            "projectred-exploration:sapphire_block",
-            "projectred-exploration:sapphire_from_ore",
-            "projectred-exploration:sapphire_from_ore",
-            "thermal:machine/press/packing3x3/press_sapphire_packing",
-            "thermal:machine/press/unpacking/press_sapphire_unpacking",
-            "thermal:machine/pulverizer/pulverizer_sapphire_ore",
-            "thermal:machine/smelter/smelter_sapphire_ore"
+            ["aoa3:blasting_sapphire", "minecraft.ore_processing_gem"],
+            ["aoa3:smelting_sapphire", "minecraft.ore_processing_gem"],
+            ["projectred-exploration:sapphire_block", "minecraft.storage_convert_gem"],
+            ["projectred-exploration:sapphire_from_block", "minecraft.storage_convert_gem"],
+            ["projectred-exploration:sapphire_from_ore", "minecraft.ore_processing_gem"],
+            ["thermal:machine/press/packing3x3/press_sapphire_packing", "thermal.storage_convert_gem"],
+            ["thermal:machine/press/unpacking/press_sapphire_unpacking", "thermal.storage_convert_gem"],
+            ["thermal:machine/pulverizer/pulverizer_sapphire_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_sapphire_ore", "thermal.ore_processing_gem"]
         ]
     },
     "sulfur": {
@@ -402,13 +402,13 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "create:compat/thermal/crushing/sulfur_ore",
-            "thermal:machine/press/packing3x3/press_sulfur_packing",
-            "thermal:machine/press/unpacking/press_sulfur_unpacking",
-            "thermal:machine/pulverizer/pulverizer_sulfur_ore",
-            "thermal:machine/smelter/smelter_sulfur_ore",
-            "thermal:smelting/sulfur_from_blasting",
-            "thermal:smelting/sulfur_from_smelting"
+            ["create:compat/thermal/crushing/sulfur_ore", "create.ore_processing_gem"],
+            ["thermal:machine/press/packing3x3/press_sulfur_packing", "thermal.storage_convert_gem"],
+            ["thermal:machine/press/unpacking/press_sulfur_unpacking", "thermal.storage_convert_gem"],
+            ["thermal:machine/pulverizer/pulverizer_sulfur_ore", "thermal.ore_processing_gem"],
+            ["thermal:machine/smelter/smelter_sulfur_ore", "thermal.ore_processing_gem"],
+            ["thermal:smelting/sulfur_from_blasting", "minecraft.ore_processing_gem"],
+            ["thermal:smelting/sulfur_from_smelting", "minecraft.ore_processing_gem"]
         ]
     }
 }   

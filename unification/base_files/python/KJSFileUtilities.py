@@ -23,8 +23,6 @@ class KJSFileUtilities:
         self.IOM = UT.IOM
         self.FM = UT.FM
         self.UT = UT
-
-        self.jei_hide_logged = False
         
     # adds a tag to an item
     def add_tag(self, id_item, id_file, id_name, material_type, license_notice):
@@ -37,26 +35,28 @@ class KJSFileUtilities:
                 self.FM.add_kjs(path_script_file_block, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('block.tags', event => {\n")
     
 
-    def add_element(self, id_file, id_name, material_type, color, license_notice, harvest_level, destroy_time, explosion_resistance):
+    def add_element(self, id_file, id_name, material_type, color, harvest_level, destroy_time, explosion_resistance, add_element, license_notice):
         if material_type in ["raw_block", "storage_block"]:
-            return self.add_block(id_file, id_name, material_type, license_notice, harvest_level, destroy_time, explosion_resistance)
+            return self.add_block(id_file, id_name, material_type, harvest_level, destroy_time, explosion_resistance, add_element, license_notice)
     
         elif material_type.startswith("molten"):
-            return self.add_molten(id_file, id_name, color, license_notice)
+            if add_element: return self.add_molten(id_file, id_name, color, license_notice)
+            return False
 
         elif material_type.startswith("slurry"):
-            return self.add_slurry(id_file, id_name, color, license_notice)
+            if add_element: return self.add_slurry(id_file, id_name, color, license_notice)
+            return False
     
         elif material_type == "coin": 
-            return self.add_coin(id_file, id_name, license_notice)
+            return self.add_coin(id_file, id_name, add_element, license_notice)
 
         else:
-            return self.add_item(id_file, id_name, material_type, license_notice)
+            return self.add_item(id_file, id_name, material_type, add_element, license_notice)
     
 
-    def add_item(self, id_file, id_name, material_type, license_notice):
+    def add_item(self, id_file, id_name, material_type, add_element, license_notice):
         texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_{material_type}"
-        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
+        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), add_element, True):
             path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_item", f"{id_file}.js")
             self.FM.add_kjs(path_script_file, f"    global.scripts.add_item(event, '{id_name}', '{material_type}', '{texture_path}')\n", 
                            license_notice, 100, "onEvent('item.registry', event => {\n")
@@ -65,9 +65,9 @@ class KJSFileUtilities:
         return False
     
 
-    def add_block(self, id_file, id_name, material_type, license_notice, harvest_level, destroy_time, explosion_resistance):
+    def add_block(self, id_file, id_name, material_type, harvest_level, destroy_time, explosion_resistance, add_element, license_notice):
         texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_{material_type}"
-        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), True, True):
+        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, material_type), self.UT.resource_location_to_path(texture_path), add_element, True):
             path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_block", f"{id_file}.js")
             material_type_extra = "stone" if material_type == "raw_block" else "metal"
             self.FM.add_kjs(path_script_file, (f"    global.scripts.add_block(event, '{id_name}', '{material_type}', '{material_type_extra}', '{texture_path}', "
@@ -94,12 +94,15 @@ class KJSFileUtilities:
         return True
     
 
-    def add_coin(self, id_file, id_name, license_notice):
+    def add_coin(self, id_file, id_name, add_element, license_notice):
         texture_path_new = f"unification:{id_file}/{id_name}/item/{id_name}_coin"
         for i in range(5):
-            if not self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path_new + str(i)), True, True):
-                for j in range(i):
-                    self.FM.handle_texture("", self.UT.resource_location_to_path(texture_path_new + str(j)), False, True)
+            if not self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path_new + str(i)), add_element, True):
+                for j in range(5):
+                    if i != j:
+                        self.FM.handle_texture("", self.UT.resource_location_to_path(texture_path_new + str(j)), False, True)
+                    self.FM.remove_json(os.path.join(self.UT.pack_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json"))
+                self.FM.remove_json(os.path.join(self.UT.pack_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json"))
                 return False
             
             path_model_file = os.path.join(self.UT.pack_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json")
@@ -133,19 +136,16 @@ class KJSFileUtilities:
             if self.UT.check_mod("appliedenergistics2"):
                 self.FM.add_kjs(path_script_file, f"    event.hide(Item.of('appliedenergistics2:facade', '{{item:\"{id_item}\"}}'))\n", 
                     license_notice, 50, "onEvent('jei.hide.fluids', event => {\n")
-            elif not self.jei_hide_logged:
-                if not self.UT.check_mod_written("appliedenergistics2"):
-                    self.LM.log("mod_not_found", f"Mod (appliedenergistics2) not found in the mod list")
+            elif not self.UT.check_mod_written("appliedenergistics2"):
+                self.LM.log_same_message_once("mod_not_found", f"Mod (appliedenergistics2) not found in the mod list")
 
 
     def remove_tag(self, id_item, id_file, id_name, material_type, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag", "items", f"{id_file}.js")
-        is_block = material_type in ["raw_block", "storage_block"]
         for tag in [f"forge:{material_type}s/{id_name}", f"forge:{material_type}s"]:
             self.FM.add_kjs(path_script_file, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('item.tags', event => {\n")
-            if is_block:
-                path_script_file_block = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tags", "blocks", f"{id_file}.js")
-                self.FM.add_kjs(path_script_file_block, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
+            if material_type in ["raw_block", "storage_block"]:
+                self.FM.add_kjs(path_script_file.replace("items", "blocks"), f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
 
     
     def replace_input(self, id_item, new_tag, id_file, license_notice):

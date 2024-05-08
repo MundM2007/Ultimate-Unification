@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apalachia": {
@@ -63,7 +63,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:shaped/apalachia_block"
+            ["divinerpg:shaped/apalachia_block", "minecraft.storage_convert_gem"]
         ]
     },
     "aquatic": {
@@ -180,8 +180,8 @@
             "thermal.storage_convert_raw"
         ] ,
         "remove": [
-            "divinerpg:blasting/arlemite_ingot_blasting",
-            "divinerpg:smelting/arlemite_ingot_smelting"
+            ["divinerpg:blasting/arlemite_ingot_blasting", "minecraft.ore_processing_metal"],
+            ["divinerpg:smelting/arlemite_ingot_smelting", "minecraft.ore_processing_metal"]
         ]
     },
     "bloodgem": {
@@ -241,8 +241,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:blasting/bloodgem_blasting",
-            "divinerpg:smelting/bloodgem_smelting"
+            ["divinerpg:blasting/bloodgem_blasting", "minecraft.ore_processing_gem"],
+            ["divinerpg:smelting/bloodgem_smelting", "minecraft.ore_processing_gem"]
         ]
     },
     "bluefire_stone": {
@@ -429,7 +429,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:shaped/eden_block"
+            ["divinerpg:shaped/eden_block", "minecraft.storage_convert_gem"]
         ]
     },
     "ender_stone": {
@@ -710,7 +710,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:shaped/mortum_block"
+            ["divinerpg:shaped/mortum_block", "minecraft.storage_convert_gem"]
         ]
     },
     "realmite": {
@@ -779,8 +779,8 @@
             "thermal.storage_convert_raw"
         ] ,
         "remove": [
-            "divinerpg:blasting/realmite_ingot_blasting",
-            "divinerpg:smelting/realmite_ingot_smelting"
+            ["divinerpg:blasting/realmite_ingot_blasting", "minecraft.ore_processing_metal"],
+            ["divinerpg:smelting/realmite_ingot_smelting", "minecraft.ore_processing_metal"]
         ]
     },
     "rupee": {
@@ -849,8 +849,8 @@
             "thermal.storage_convert_raw"
         ] ,
         "remove": [
-            "divinerpg:blasting/rupee_ingot_blasting",
-            "divinerpg:smelting/rupee_ingot_smelting"
+            ["divinerpg:blasting/rupee_ingot_blasting", "minecraft.ore_processing_metal"],
+            ["divinerpg:smelting/rupee_ingot_smelting", "minecraft.ore_processing_metal"]
         ]
     },
     "shadow_bar": {
@@ -948,7 +948,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:shaped/skythern_block"
+            ["divinerpg:shaped/skythern_block", "minecraft.storage_convert_gem"]
         ]
     },
     "terran_stone": {
@@ -1063,8 +1063,8 @@
             "thermal.storage_convert_raw"
         ] ,
         "remove": [
-            "divinerpg:blasting/torridite_ingot_blasting",
-            "divinerpg:smelting/torridite_ingot_smelting"
+            ["divinerpg:blasting/torridite_ingot_blasting", "minecraft.ore_processing_metal"],
+            ["divinerpg:smelting/torridite_ingot_smelting", "minecraft.ore_processing_metal"]
         ]
     },
     "wildwood": {
@@ -1113,7 +1113,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "divinerpg:shaped/wildwood_block"
+            ["divinerpg:shaped/wildwood_block", "minecraft.storage_convert_gem"]
         ]
     }
 }

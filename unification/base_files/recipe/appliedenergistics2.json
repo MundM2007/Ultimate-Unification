@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "certus_quartz": {
@@ -74,14 +74,14 @@
             "thermal.rod"
         ],
         "remove": [
-            "appliedenergistics2:grinder/certus_quartz_dust_ore",
-            "appliedenergistics2:grinder/certus_quartz_dust",
-            "create:compat/ae2/crushing/certus_ore",
-            "create:compat/ae2/milling/certus_quartz",
-            "mekanism:compat/appliedenergistics2/certus_ore_to_crystal",
-            "mekanism:compat/appliedenergistics2/certus_crystal_to_dust",
-            "thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_ore",
-            "thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_dust"
+            ["appliedenergistics2:grinder/certus_quartz_dust_ore", "appliedenergistics2.ore_processing"],
+            ["appliedenergistics2:grinder/certus_quartz_dust", "appliedenergistics2.dust"],
+            ["create:compat/ae2/crushing/certus_ore", "create.ore_processing_gem"],
+            ["create:compat/ae2/milling/certus_quartz", "create.dust"],
+            ["mekanism:compat/appliedenergistics2/certus_ore_to_crystal", "mekanism.ore_processing_gem"],
+            ["mekanism:compat/appliedenergistics2/certus_crystal_to_dust", "mekanism.dust"],
+            ["thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_ore", "thermal.ore_processing_gem"],
+            ["thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_dust", "thermal.dust"]
         ]
     },
     "charged_certus_quartz": {
@@ -144,9 +144,9 @@
         ]
         ,
         "remove": [
-            "create:compat/ae2/crushing/charged_certus_ore",
-            "mekanism:compat/appliedenergistics2/charged_certus_ore_to_crystal",
-            "thermal:compat/appliedenergistics2/pulverizer_ae2_chargede_certus_quartz_ore"
+            ["create:compat/ae2/crushing/charged_certus_ore", "create.ore_processing_gem"],
+            ["mekanism:compat/appliedenergistics2/charged_certus_ore_to_crystal", "mekanism.ore_processing_gem"],
+            ["thermal:compat/appliedenergistics2/pulverizer_ae2_chargede_certus_quartz_ore", "thermal.ore_processing_gem"]
         ]
     },
     "fluix": {

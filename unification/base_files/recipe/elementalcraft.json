@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "drenched_iron": {
@@ -169,8 +169,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "elementalcraft:inertcrystal_from_blasting",
-            "elementalcraft:inertcrystal"
+            ["elementalcraft:inertcrystal_from_blasting", "minecraft.ore_processing_gem"],
+            ["elementalcraft:inertcrystal", "minecraft.ore_processing_gem"]
         ]
     },
     "swift_alloy": {

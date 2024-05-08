@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "quartz_enriched_iron": {
@@ -65,8 +65,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "refinedstorage:block_of_quartz_enriched_iron", 
-            "refinedstorage:quartz_enriched_iron_from_block"
+            ["refinedstorage:block_of_quartz_enriched_iron", "minecraft.storage_convert_metal"],
+            ["refinedstorage:quartz_enriched_iron_from_block", "minecraft.storage_convert_metal"]
         ]
     }
 }

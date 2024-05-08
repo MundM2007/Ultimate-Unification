@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aluminum": {
@@ -70,7 +70,7 @@
                 ["pedestals:dustaluminum", "pedestals:items/dustaluminum"],
                 ["silents_mechanisms:aluminum_dust", "silents_mechanisms:item/aluminum_dust"],
                 ["nuclearcraft:dust_aluminum", "nuclearcraft:items/dust_aluminum"],
-                ["potionsmaster:aluminum_powder", "potionsmaster:item/aluminum_powder"]
+                ["potionsmaster:aluminium_powder", "potionsmaster:item/aluminum_powder"]
             ],
             "plate": [
                 ["immersiveengineering:plate_aluminum", "immersiveengineering:item/metal_plate_aluminum"]
@@ -1101,7 +1101,8 @@
                 ["silents_mechanisms:zinc_nugget", "silents_mechanisms:item/zinc_nugget"]
             ],
             "dust": [
-                ["silents_mechanisms:zinc_dust", "silents_mechanisms:item/zinc_dust"]
+                ["silents_mechanisms:zinc_dust", "silents_mechanisms:item/zinc_dust"],
+                ["potionsmaster:zinc_powder", "potionsmaster:item/zinc_powder"]
             ],
             "plate": [
                 ["createaddition:zinc_sheet", "createaddition:item/zinc_sheet"],

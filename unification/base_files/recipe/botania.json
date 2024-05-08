@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dragonstone": {
@@ -75,8 +75,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "mythicbotany:blasting/dragonstone",
-            "mythicbotany:smelting/dragonstone"
+            ["mythicbotany:blasting/dragonstone", "minecraft.ore_processing_gem"],
+            ["mythicbotany:smelting/dragonstone", "minecraft.ore_processing_gem"]
         ]
     },
     "elementium": {
@@ -145,8 +145,8 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "mythicbotany:blasting/elementium_ingot",
-            "mythicbotany:smelting/elementium_ingot"
+            ["mythicbotany:blasting/elementium_ingot", "minecraft.ore_processing_metal"],
+            ["mythicbotany:smelting/elementium_ingot", "minecraft.ore_processing_metal"]
         ]
     },
     "manasteel": {

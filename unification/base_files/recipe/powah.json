@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blazing_crystal": {
@@ -110,8 +110,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "powah:crafting/steel_energized",
-            "powah:crafting/energized_steel_block"
+            ["powah:crafting/steel_energized", "minecraft.storage_convert_metal"],
+            ["powah:crafting/energized_steel_block", "minecraft.storage_convert_metal"]
         ]
     },
     "niotic_crystal": {
@@ -353,18 +353,18 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "powah:smelting/uraninite_crystal_blasting",
-            "powah:smelting/uraninite_crystal_dense_blasting",
-            "powah:smelting/uraninite_crystal_poor_blasting",
-            "powah:smelting/uraninite_crystal_blasting_from_ore",
-            "powah:smelting/uraninite_crystal_dense_blasting_from_ore",
-            "powah:smelting/uraninite_crystal_poor_blasting_from_ore",
-            "powah:smelting/uraninite_crystal_furnace",
-            "powah:smelting/uraninite_crystal_dense_furnace",
-            "powah:smelting/uraninite_crystal_poor_furnace",
-            "powah:smelting/uraninite_crystal_furnace_from_ore",
-            "powah:smelting/uraninite_crystal_dense_furnace_from_ore",
-            "powah:smelting/uraninite_crystal_poor_furnace_from_ore"
+            ["powah:smelting/uraninite_crystal_blasting", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_dense_blasting", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_poor_blasting", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_blasting_from_ore", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_dense_blasting_from_ore", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_poor_blasting_from_ore", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_furnace", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_dense_furnace", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_poor_furnace", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_furnace_from_ore", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_dense_furnace_from_ore", "minecraft.ore_processing_gem"],
+            ["powah:smelting/uraninite_crystal_poor_furnace_from_ore", "minecraft.ore_processing_gem"]
         ]
     }
 }

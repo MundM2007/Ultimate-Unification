@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "compressed_iron": {
@@ -65,9 +65,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "pneumaticcraft:compressed_iron_gear",
-            "pneumaticcraft:compressed_iron_ingot_from_block",
-            "pneumaticcraft:compressed_iron_block_from_ingot"
+            ["pneumaticcraft:compressed_iron_gear", "minecraft.gear"],
+            ["pneumaticcraft:compressed_iron_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["pneumaticcraft:compressed_iron_block_from_ingot", "minecraft.storage_convert_metal"]
         ]
     }
 }

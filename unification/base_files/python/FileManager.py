@@ -24,7 +24,7 @@ class FileManager:
         self.IOM = IOM
         self.files = dict()
         self.textures_add = dict()
-        self.textures_remove = set()
+        self.files_remove = set()
     
 
     # adds a KubeJS file section to be written to the file later
@@ -65,17 +65,24 @@ class FileManager:
                 else:
                     self.LM.log("texture_missing", f"Missing Material texture file: {path_file} meaning the corresponding item's texture won't be changed")
                 if os.path.exists(path_copy):
-                    if path_copy in self.textures_add:
+                    self.files_remove.add(path_copy)
+                if path_copy in self.textures_add:
                         self.textures_add.pop(path_copy)
-                    self.textures_remove.add(path_copy)
                 return False
         else:
             if os.path.exists(path_copy):
-                if path_copy in self.textures_add:
+                self.files_remove.add(path_copy)
+            if path_copy in self.textures_add:
                     self.textures_add.pop(path_copy)
-                self.textures_remove.add(path_copy)
             return False
         
+    
+    def remove_json(self, path_file):
+        if os.path.exists(path_file):
+            self.files_remove.add(path_file)
+        if path_file in self.files:
+            self.files.pop(path_file)
+
 
     # saves the files and textures
     def save(self):
@@ -93,7 +100,7 @@ class FileManager:
                 self.IOM.copy(path_file, path_copy)
             self.LM.log_percentage(f"Saving textures", index / (amount_textures_add - 1))
 
-        amount_textures_remove = len(self.textures_remove)
-        for index, path_file in enumerate(self.textures_remove):
+        amount_files_remove = len(self.files_remove)
+        for index, path_file in enumerate(self.files_remove):
             self.IOM.remove(path_file)
-            self.LM.log_percentage(f"Removing textures", index / (amount_textures_remove - 1))
+            self.LM.log_percentage(f"Removing files", index / (amount_files_remove - 1))

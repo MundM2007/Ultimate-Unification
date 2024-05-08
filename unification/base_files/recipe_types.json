@@ -30,6 +30,7 @@
     "ftbic.rod": ["id_name", "rod"],
     "immersiveengineering.rod": ["id_name", "rod"],
     "minecraft.rod": ["id_name", "rod"],
+    "thermal.rod": ["molten", "rod"],
 
     "boss_tools_giselle_addon.wire": ["id_name", "wire"],
     "createaddition.wire": ["id_name", "wire"],
@@ -89,7 +90,6 @@
     "thermal.ore_processing_gem": ["id_name", "gem", "gem_multiplier"],
     "thermal.ore_processing_metal": ["id_name", "ingot", "dust"],
     "thermal.pieces_to_raw": ["id_name", "raw"],
-    "thermal.rod": ["molten", "rod"],
     "thermal.storage_convert_gem": ["id_name", "gem", "storage_block"],
     "thermal.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget"],
     "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"]

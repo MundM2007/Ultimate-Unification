@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_gold": {
@@ -153,17 +153,17 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "create:crafting/materials/brass_block_from_compacting",
-            "create:crafting/materials/brass_ingot_from_compacting",
-            "create:crafting/materials/brass_ingot_from_decompacting",
-            "create:crafting/materials/brass_nugget_from_decompacting",
-            "silents_mechanisms:blasting/brass_ingot",
-            "silents_mechanisms:crushing/brass_dust_from_ingot",
-            "silents_mechanisms:metals/brass_block",
-            "silents_mechanisms:metals/brass_ingot_from_block",
-            "silents_mechanisms:metals/brass_ingot_from_nugget",
-            "silents_mechanisms:metals/brass_nugget",
-            "silents_mechanisms:smelting/brass_ingot"
+            ["create:crafting/materials/brass_block_from_compacting", "minecraft.storage_convert_metal"],
+            ["create:crafting/materials/brass_ingot_from_compacting", "minecraft.storage_convert_metal"],
+            ["create:crafting/materials/brass_ingot_from_decompacting", "minecraft.storage_convert_metal"],
+            ["create:crafting/materials/brass_nugget_from_decompacting", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:blasting/brass_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/brass_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/brass_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/brass_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/brass_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/brass_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/brass_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "bronze": {
@@ -201,23 +201,23 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mekanism:processing/bronze/ingot/from_block",
-            "mekanism:processing/bronze/ingot/from_dust_blasting",
-            "mekanism:processing/bronze/ingot/from_dust_smelting",
-            "mekanism:processing/bronze/ingot/from_nuggets",
-            "mekanism:processing/bronze/nugget/from_ingot",
-            "mekanism:processing/bronze/storage_blocks/from_ingots",
-            "silents_mechanisms:blasting/bronze_ingot",
-            "silents_mechanisms:crushing/bronze_dust_from_ingot",
-            "silents_mechanisms:metals/bronze_block",
-            "silents_mechanisms:metals/bronze_ingot_from_block",
-            "silents_mechanisms:metals/bronze_ingot_from_nugget",
-            "silents_mechanisms:metals/bronze_nugget",
-            "silents_mechanisms:smelting/bronze_ingot",
-            "thermal:fuels/numismatic/numismatic_bronze_coin",
-            "thermal:machine/press/packing3x3/press_bronze_packing",
-            "thermal:machine/press/unpacking/press_bronze_unpacking",
-            "thermal:parts/bronze_gear"
+            ["mekanism:processing/bronze/ingot/from_block", "minecraft.storage_convert_metal"],
+            ["mekanism:processing/bronze/ingot/from_dust_blasting", "minecraft.smelting_recipes"],
+            ["mekanism:processing/bronze/ingot/from_dust_smelting", "minecraft.smelting_recipes"],
+            ["mekanism:processing/bronze/ingot/from_nuggets", "minecraft.storage_convert_metal"],
+            ["mekanism:nuggets/bronze", "minecraft.storage_convert_metal"],
+            ["mekanism:storage_blocks/bronze", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:blasting/bronze_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/bronze_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/bronze_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/bronze_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/bronze_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/bronze_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/bronze_ingot", "minecraft.smelting_recipes"],
+            ["thermal:fuels/numismatic/numismatic_bronze_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_bronze_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_bronze_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/bronze_gear", "minecraft.gear"]
         ]
     },
     "cast_iron": {
@@ -268,11 +268,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "ftbjarmod:cast_iron_block",
-            "ftbjarmod:cast_iron_gear",
-            "ftbjarmod:cast_iron_ingot",
-            "ftbjarmod:cast_iron_ingot_from_block",
-            "ftbjarmod:cast_iron_nugget_from_ingot"
+            ["ftbjarmod:cast_iron_block", "minecraft.storage_convert_metal"],
+            ["ftbjarmod:cast_iron_gear", "minecraft.gear"],
+            ["ftbjarmod:cast_iron_ingot", "minecraft.storage_convert_metal"],
+            ["ftbjarmod:cast_iron_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["ftbjarmod:cast_iron_nugget_from_ingot", "minecraft.storage_convert_metal"]
         ]
     },
     "charcoal": {
@@ -282,19 +282,21 @@
             "create.dust",
             "ftbic.dust",
             "immersiveengineering.dust",
+            "minecraft.storage_convert_gem",
             "occultism.dust",
             "silents_mechanisms.dust",
-            "thermal.dust"
+            "thermal.dust",
+            "thermal.storage_convert_gem"
         ],
         "remove": [
-            "mekanism:storage_blocks/charcoal",
-            "quark:building/crafting/compressed/charcoal_block",
-            "thermal:storage/charcoal_block",
-            "thermal:machine/press/packing3x3/press_charcoal_packing",
-            "thermal:machine/press/unpacking/press_charcoal_unpacking",
-            "mekanism:charcoal",
-            "quark:building/crafting/compressed/charcoal_block_uncompress",
-            "thermal:storage/charcoal_from_block"
+            ["mekanism:charcoal", "minecraft.storage_convert_gem"],
+            ["mekanism:storage_blocks/charcoal", "minecraft.storage_convert_gem"],
+            ["quark:building/crafting/compressed/charcoal_block", "minecraft.storage_convert_gem"],
+            ["quark:building/crafting/compressed/charcoal_block_uncompress", "minecraft.storage_convert_gem"],
+            ["thermal:machine/press/packing3x3/press_charcoal_packing", "thermal.storage_convert_gem"],
+            ["thermal:machine/press/unpacking/press_charcoal_unpacking", "thermal.storage_convert_gem"],
+            ["thermal:storage/charcoal_block", "minecraft.storage_convert_gem"],
+            ["thermal:storage/charcoal_from_block", "minecraft.storage_convert_gem"]
         ]
     },
     "coal_coke": {
@@ -316,9 +318,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "immersiveengineering:crusher/coke",
-            "thermal:machine/press/packing3x3/press_coal_coke_packing",
-            "thermal:machine/press/unpacking/press_coal_coke_unpacking"
+            ["immersiveengineering:crusher/coke", "immersiveengineering.dust"],
+            ["thermal:machine/press/packing3x3/press_coal_coke_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_coal_coke_unpacking", "thermal.storage_convert_metal"]
         ]
     },
     "constantan": {
@@ -357,11 +359,11 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "immersiveposts:has_constantan_rod",
-            "thermal:fuels/numismatic/numismatic_constantan_coin",
-            "thermal:machine/press/packing3x3/press_constantan_packing",
-            "thermal:machine/press/unpacking/press_constantan_unpacking",
-            "thermal:parts/constantan_gear"
+            ["immersiveposts:has_constantan_rod", "minecraft.rod"],
+            ["thermal:fuels/numismatic/numismatic_constantan_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_constantan_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_constantan_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/constantan_gear", "minecraft.gear"]
         ]
     },
     "electrum": {
@@ -401,18 +403,18 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "immersiveposts:has_electrum_rod",
-            "silents_mechanisms:blasting/electrum_ingot",
-            "silents_mechanisms:crushing/electrum_dust_from_ingot",
-            "silents_mechanisms:metals/electrum_block",
-            "silents_mechanisms:metals/electrum_ingot_from_block",
-            "silents_mechanisms:metals/electrum_ingot_from_nugget",
-            "silents_mechanisms:metals/electrum_nugget",
-            "silents_mechanisms:smelting/electrum_ingot",
-            "thermal:fuels/numismatic/numismatic_electrum_coin",
-            "thermal:machine/press/packing3x3/press_electrum_packing",
-            "thermal:machine/press/unpacking/press_electrum_unpacking",
-            "thermal:parts/electrum_gear"
+            ["immersiveposts:has_electrum_rod", "minecraft.rod"],
+            ["silents_mechanisms:blasting/electrum_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/electrum_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/electrum_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/electrum_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/electrum_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/electrum_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/electrum_ingot", "minecraft.smelting_recipes"],
+            ["thermal:fuels/numismatic/numismatic_electrum_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_electrum_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_electrum_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/electrum_gear", "minecraft.gear"]
         ]
     },
     "enderium": {
@@ -457,17 +459,17 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/enderium_ingot",
-            "silents_mechanisms:crushing/enderium_dust_from_ingot",
-            "silents_mechanisms:metals/enderium_block",
-            "silents_mechanisms:metals/enderium_ingot_from_block",
-            "silents_mechanisms:metals/enderium_ingot_from_nugget",
-            "silents_mechanisms:metals/enderium_nugget",
-            "silents_mechanisms:smelting/enderium_ingot",
-            "thermal:fuels/numismatic/numismatic_enderium_coin",
-            "thermal:machine/press/packing3x3/press_enderium_packing",
-            "thermal:machine/press/unpacking/press_enderium_unpacking",
-            "thermal:parts/enderium_gear"
+            ["silents_mechanisms:blasting/enderium_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/enderium_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/enderium_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/enderium_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/enderium_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/enderium_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/enderium_ingot", "minecraft.smelting_recipes"],
+            ["thermal:fuels/numismatic/numismatic_enderium_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_enderium_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_enderium_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/enderium_gear", "minecraft.gear"]
         ]
     },
     "ender_pearl": {},
@@ -519,7 +521,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "biggerreactors:crafting/graphite_block"
+            ["biggerreactors:crafting/graphite_block", "minecraft.storage_convert_metal"]
         ]
     },
     "flour": {},
@@ -559,17 +561,17 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/invar_ingot",
-            "silents_mechanisms:crushing/invar_dust_from_ingot",
-            "silents_mechanisms:metals/invar_block",
-            "silents_mechanisms:metals/invar_ingot_from_block",
-            "silents_mechanisms:metals/invar_ingot_from_nugget",
-            "silents_mechanisms:metals/invar_nugget",
-            "silents_mechanisms:smelting/invar_ingot",
-            "thermal:fuels/numismatic/numismatic_invar_coin",
-            "thermal:machine/press/packing3x3/press_invar_packing",
-            "thermal:machine/press/unpacking/press_invar_unpacking",
-            "thermal:parts/invar_gear"
+            ["silents_mechanisms:blasting/invar_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/invar_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/invar_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/invar_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/invar_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/invar_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/invar_ingot", "minecraft.smelting_recipes"],
+            ["thermal:fuels/numismatic/numismatic_invar_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_invar_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_invar_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/invar_gear", "minecraft.gear"]
         ]
     },
     "lumium": {
@@ -614,17 +616,17 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/lumium_ingot",
-            "silents_mechanisms:crushing/lumium_dust_from_ingot",
-            "silents_mechanisms:metals/lumium_block",
-            "silents_mechanisms:metals/lumium_ingot_from_block",
-            "silents_mechanisms:metals/lumium_ingot_from_nugget",
-            "silents_mechanisms:metals/lumium_nugget",
-            "silents_mechanisms:smelting/lumium_ingot",
-            "thermal:fuels/numismatic/numismatic_lumium_coin",
-            "thermal:machine/press/packing3x3/press_lumium_packing",
-            "thermal:machine/press/unpacking/press_lumium_unpacking",
-            "thermal:parts/lumium_gear"
+            ["silents_mechanisms:blasting/lumium_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/lumium_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/lumium_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/lumium_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/lumium_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/lumium_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/lumium_ingot", "minecraft.smelting_recipes"],
+            ["thermal:fuels/numismatic/numismatic_lumium_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_lumium_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/unpacking/press_lumium_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/lumium_gear", "minecraft.gear"]
         ]
     },
     "manganese": {
@@ -675,7 +677,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "nuclearcraft:smelting/dust_manganese_from_ingot_manganese"
+            ["nuclearcraft:smelting/dust_manganese_to_ingot_manganese", "minecraft.smelting_recipes"]
         ]
     },
     "neptunium": {
@@ -775,13 +777,13 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/redstone_alloy_ingot",
-            "silents_mechanisms:crushing/redstone_alloy_dust_from_ingot",
-            "silents_mechanisms:metals/redstone_alloy_block",
-            "silents_mechanisms:metals/redstone_alloy_ingot_from_block",
-            "silents_mechanisms:metals/redstone_alloy_ingot_from_nugget",
-            "silents_mechanisms:metals/redstone_alloy_nugget",
-            "silents_mechanisms:smelting/redstone_alloy_ingot"
+            ["silents_mechanisms:blasting/redstone_alloy_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/redstone_alloy_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/redstone_alloy_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/redstone_alloy_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/redstone_alloy_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/redstone_alloy_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/redstone_alloy_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "salt": {},
@@ -815,7 +817,7 @@
             "mekanism.dust",
             "minecraft.gear",
             "minecraft.rod",
-            "minecraft.smelting_recipes",
+            "silents_mechanisms.dust",
             "minecraft.storage_convert_metal",
             "minecraft.wire",
             "occultism.dust",
@@ -828,19 +830,19 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "silents_mechanisms:blasting/signalum_ingot",
-            "silents_mechanisms:crushing/signalum_dust_from_ingot",
-            "silents_mechanisms:metals/signalum_block",
-            "silents_mechanisms:metals/signalum_ingot_from_block",
-            "silents_mechanisms:metals/signalum_ingot_from_nugget",
-            "silents_mechanisms:metals/signalum_nugget",
-            "silents_mechanisms:smelting/signalum_ingot",
-            "thermal:fuels/numismatic/numismatic_signalum_coin",
-            "thermal:machine/press/packing3x3/press_signalum_packing",
-            "thermal:machine/press/press_signalum_ingot_to_coin",
-            "thermal:machine/press/press_signalum_nugget_to_coin",
-            "thermal:machine/press/unpacking/press_signalum_unpacking",
-            "thermal:parts/signalum_gear"
+            ["silents_mechanisms:blasting/signalum_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:crushing/signalum_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/signalum_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/signalum_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/signalum_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/signalum_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/signalum_ingot", "silents_mechanisms.dust"],
+            ["thermal:fuels/numismatic/numismatic_signalum_coin", "thermal.coin_to_energy"],
+            ["thermal:machine/press/packing3x3/press_signalum_packing", "thermal.storage_convert_metal"],
+            ["thermal:machine/press/press_signalum_ingot_to_coin", "thermal.coin"],
+            ["thermal:machine/press/press_signalum_nugget_to_coin", "thermal.coin"],
+            ["thermal:machine/press/unpacking/press_signalum_unpacking", "thermal.storage_convert_metal"],
+            ["thermal:parts/signalum_gear", "minecraft.gear"]
         ]
     },
     "silicon_gem": {},
@@ -887,19 +889,19 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "mekanism:processing/steel/ingot/from_block",
-            "mekanism:processing/steel/ingot/from_dust_blasting",
-            "mekanism:processing/steel/ingot/from_dust_smelting",
-            "mekanism:processing/steel/ingot/from_nuggets",
-            "mekanism:processing/steel/nugget/from_ingot",
-            "mekanism:processing/steel/storage_blocks/from_ingots",
-            "silents_mechanisms:blasting/steel_ingot",
-            "silents_mechanisms:crushing/steel_dust_from_ingot",
-            "silents_mechanisms:metals/steel_block",
-            "silents_mechanisms:metals/steel_ingot_from_block",
-            "silents_mechanisms:metals/steel_ingot_from_nugget",
-            "silents_mechanisms:metals/steel_nugget",
-            "silents_mechanisms:smelting/steel_ingot"
+            ["mekanism:processing/steel/ingot/from_block", "minecraft.storage_convert_metal"],
+            ["mekanism:processing/steel/ingot/from_dust_blasting", "minecraft.smelting_recipes"],
+            ["mekanism:processing/steel/ingot/from_dust_smelting", "minecraft.smelting_recipes"],
+            ["mekanism:processing/steel/ingot/from_nuggets", "minecraft.storage_convert_metal"],
+            ["mekanism:nuggets/steel", "minecraft.storage_convert_metal"],
+            ["mekanism:storage_blocks/steel", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:blasting/steel_ingot", "minecraft.smelting_recipes"],
+            ["silents_mechanisms:crushing/steel_dust_from_ingot", "silents_mechanisms.dust"],
+            ["silents_mechanisms:metals/steel_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/steel_ingot_from_block", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/steel_ingot_from_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:metals/steel_nugget", "minecraft.storage_convert_metal"],
+            ["silents_mechanisms:smelting/steel_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "wood": {},

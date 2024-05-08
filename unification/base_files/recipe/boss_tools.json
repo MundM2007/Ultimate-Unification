@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "desh": {
@@ -78,11 +78,11 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "boss_tools_giselle_addon:blasting/desh_ingot_from_moon_ore",
-            "boss_tools_giselle_addon:blasting/desh_ingot_from_plate",	
-            "boss_tools_giselle_addon:rolling/desh_plate",
-            "boss_tools_giselle_addon:smelting/desh_ingot_from_moon_ore",
-            "boss_tools_giselle_addon:smelting/desh_ingot_from_plate"
+            ["boss_tools_giselle_addon:blasting/desh_ingot_from_moon_ore", "minecraft.ore_processing_metal"],
+            ["boss_tools_giselle_addon:blasting/desh_ingot_from_plate", "minecraft.smelting_recipes"],
+            ["boss_tools_giselle_addon:rolling/desh_plate", "boss_tools_giselle_addon.plate"],
+            ["boss_tools_giselle_addon:smelting/desh_ingot_from_moon_ore", "minecraft.ore_processing_metal"],
+            ["boss_tools_giselle_addon:smelting/desh_ingot_from_plate", "minecraft.smelting_recipes"]
         ]
     },
     "ice_shard": {
@@ -144,8 +144,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "boss_tools_giselle_addon:compat/mekanism/enriching/mars_ice_shard_ore",
-            "boss_tools_giselle_addon:compat/thermal/pulverizer/pulverizer_mars_ice_shard_ore"
+            ["boss_tools_giselle_addon:compat/mekanism/enriching/mars_ice_shard_ore", "mekanism.ore_processing_gem"],
+            ["boss_tools_giselle_addon:compat/thermal/pulverizer/pulverizer_mars_ice_shard_ore", "thermal.ore_processing_gem"]
         ]
     },
     "silicon": {
@@ -213,8 +213,8 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "boss_tools_giselle_addon:blasting/silicon_ingot_from_mars_ore",
-            "boss_tools_giselle_addon:smelting/silicon_ingot_from_mars_ore"
+            ["boss_tools_giselle_addon:blasting/silicon_ingot_from_mars_ore", "minecraft.ore_processing_metal"],
+            ["boss_tools_giselle_addon:smelting/silicon_ingot_from_mars_ore", "minecraft.ore_processing_metal"]
         ]
     }
 }

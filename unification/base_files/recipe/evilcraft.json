@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dark_gem": {
@@ -75,10 +75,10 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "integrateddynamics:mechanical_squeezer/convenience/evilcraft_dark_gem",
-            "integrateddynamics:mechanical_squeezer/convenience/evilcraft_dark_gem_crushed",
-            "integrateddynamics:squeezer/convenience/evilcraft_dark_gem",
-            "integrateddynamics:squeezer/convenience/evilcraft_dark_gem_crushed"
+            ["integrateddynamics:mechanical_squeezer/convenience/evilcraft_dark_gem", "integrateddynamics.ore_processing_gem"],
+            ["integrateddynamics:mechanical_squeezer/convenience/evilcraft_dark_gem_crushed", ""],
+            ["integrateddynamics:squeezer/convenience/evilcraft_dark_gem", "integrateddynamics.ore_processing_gem"],
+            ["integrateddynamics:squeezer/convenience/evilcraft_dark_gem_crushed", ""]
         ]
     },
     "dark_power_gem": {

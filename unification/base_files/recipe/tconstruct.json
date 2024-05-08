@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "hepatizon": {
@@ -62,8 +62,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "createaddition:compat/tconstruct/hepatizon",
-            "thermal:compat/tconstruct/smelter_alloy_tconstruct_hepatizon_ingot"
+            ["createaddition:compat/tconstruct/hepatizon", ""],
+            ["thermal:compat/tconstruct/smelter_alloy_tconstruct_hepatizon_ingot", ""]
         ]
     },
     "manyullyn": {
@@ -111,7 +111,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "thermal:compat/tconstruct/smelter_alloy_tconstruct_manyullyn_ingot"
+            ["thermal:compat/tconstruct/smelter_alloy_tconstruct_manyullyn_ingot", ""]
         ]
     },
     "pig_iron": {
@@ -194,7 +194,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "thermal:compat/tconstruct/smelter_alloy_tconstruct_queens_slime_ingot"
+            ["thermal:compat/tconstruct/smelter_alloy_tconstruct_queens_slime_ingot", ""]
         ]
     },
     "slimesteel": {
@@ -279,14 +279,14 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "tconstruct:smeltery/casting/metal/silicon_bronze/block",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/block",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/ingot",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/ingot_gold_cast",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/ingot_sand_cast",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/nugget",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/nugget_gold_cast",
-            "tconstruct:smeltery/melting/metal/silicon_bronze/nugget_sand_cast"
+            ["tconstruct:smeltery/casting/metal/silicon_bronze/block", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/block", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/ingot", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/ingot_gold_cast", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/ingot_sand_cast", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/nugget", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/nugget_gold_cast", "tconstruct.smelting"],
+            ["tconstruct:smeltery/melting/metal/silicon_bronze/nugget_sand_cast", "tconstruct.smelting"]
         ]
     }
 }

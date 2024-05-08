@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blutonium": {
@@ -62,9 +62,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "biggerreactors:crafting/blutonium_block",
-            "biggerreactors:crafting/blutonium_ingot",
-            "biggerreactors:smelting/blutonium_ingot"
+            ["biggerreactors:crafting/blutonium_block", "minecraft.storage_convert_metal"],
+            ["biggerreactors:crafting/blutonium_ingot", "minecraft.storage_convert_metal"],
+            ["biggerreactors:smelting/blutonium_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "cyanite": {
@@ -112,9 +112,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "biggerreactors:crafting/cyanite_block",
-            "biggerreactors:crafting/cyanite_ingot",
-            "biggerreactors:smelting/cyanite_ingot"
+            ["biggerreactors:crafting/cyanite_block", "minecraft.storage_convert_metal"],
+            ["biggerreactors:crafting/cyanite_ingot", "minecraft.storage_convert_metal"],
+            ["biggerreactors:smelting/cyanite_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "ludicrite": {
@@ -162,9 +162,9 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "biggerreactors:crafting/ludicrite_block",
-            "biggerreactors:crafting/ludicrite_ingot",
-            "biggerreactors:smelting/ludicrite_ingot"
+            ["biggerreactors:crafting/ludicrite_block", "minecraft.storage_convert_metal"],
+            ["biggerreactors:crafting/ludicrite_ingot", "minecraft.storage_convert_metal"],
+            ["biggerreactors:smelting/ludicrite_ingot", "minecraft.smelting_recipes"]
         ]
     }
 }

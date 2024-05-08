@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
@@ -41,7 +41,7 @@
                 ["mekanism:dust_coal", "mekanism:item/dust_coal"],
                 ["silents_mechanisms:coal_dust", "silents_mechanisms:item/coal_dust"],
                 ["nuclearcraft:gem_dust_coal", "nuclearcraft:items/gem_dust_coal"],
-                ["envirocore:coal_powder", "envirocore:item/powder/coal"],
+                ["envirocore:carbon_powder", "envirocore:item/powder/carbon"],
                 ["potionsmaster:coal_powder", "potionsmaster:item/coal_powder"]
             ]
         }
@@ -311,7 +311,8 @@
             ],
             "dust": [
                 ["mekanism:dust_netherite", "mekanism:item/dust_netherite"],
-                ["thermal:netherite_dust", "thermal:item/netherite_dust"]
+                ["thermal:netherite_dust", "thermal:item/netherite_dust"],
+                ["potionsmaster:netherite_powder", "potionsmaster:item/netherite_powder"]
             ],
             "plate": [
                 ["createdeco:netherite_sheet", "createdeco:item/netherite_sheet"],

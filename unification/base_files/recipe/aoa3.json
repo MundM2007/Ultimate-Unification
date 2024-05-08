@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "amethyst": {
@@ -75,8 +75,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_amethyst",
-            "aoa3:smelting_amethyst"
+            ["aoa3:blasting_amethyst", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_amethyst", "minecraft.smelting_recipes"]
         ]
     },
     "baronyte": {
@@ -144,9 +144,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_baronyte_ingot",
-            "aoa3:smeltery/melting/metal/baronyte/ore",
-            "aoa3:smelting_baronyte_ingot"
+            ["aoa3:blasting_baronyte_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/baronyte/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_baronyte_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "blazium": {
@@ -214,9 +214,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_blazium_ingot",
-            "aoa3:smeltery/melting/metal/blazium/ore",
-            "aoa3:smelting_blazium_ingot"
+            ["aoa3:blasting_blazium_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/blazium/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_blazium_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "bloodstone": {
@@ -277,8 +277,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_bloodstone",
-            "aoa3:smelting_bloodstone"
+            ["aoa3:blasting_bloodstone", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_bloodstone", "minecraft.smelting_recipes"]
         ]
     },
     "blue_gemstone": {
@@ -340,8 +340,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_blue_gemstones",
-            "aoa3:smelting_blue_gemstones"
+            ["aoa3:blasting_blue_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_blue_gemstones", "minecraft.smelting_recipes"]
         ]
     },
     "charged_runium": {
@@ -403,8 +403,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_charged_runium_chunk",
-            "aoa3:smelting_charged_runium_chunk"
+            ["aoa3:blasting_charged_runium_chunk", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_charged_runium_chunk", "minecraft.smelting_recipes"]
         ]
     },
     "crystallite": {
@@ -465,8 +465,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_crystallite",
-            "aoa3:smelting_crystallite"
+            ["aoa3:blasting_crystallite", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_crystallite", "minecraft.smelting_recipes"]
         ]
     },
     "elecanium": {
@@ -534,9 +534,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_elecanium_ingot",
-            "aoa3:smeltery/melting/metal/elecanium/ore",
-            "aoa3:smelting_elecanium_ingot"
+            ["aoa3:blasting_elecanium_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/elecanium/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_elecanium_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "emberstone": {
@@ -604,9 +604,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_emberstone_ingot",
-            "aoa3:smeltery/melting/metal/emberstone/ore",
-            "aoa3:smelting_emberstone_ingot"
+            ["aoa3:blasting_emberstone_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/emberstone/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_emberstone_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "gemenyte": {
@@ -667,8 +667,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_gemenyte",
-            "aoa3:smelting_gemenyte"
+            ["aoa3:blasting_gemenyte", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_gemenyte", "minecraft.smelting_recipes"]
         ]
     },
     "ghastly": {
@@ -736,9 +736,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_ghastly_ingot",
-            "aoa3:smeltery/melting/metal/ghastly/ore",
-            "aoa3:smelting_ghastly_ingot"
+            ["aoa3:blasting_ghastly_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/ghastly/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_ghastly_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "ghoulish": {
@@ -806,9 +806,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_ghastly_ingot",
-            "aoa3:smeltery/melting/metal/ghastly/ore",
-            "aoa3:smelting_ghastly_ingot"
+            ["aoa3:blasting_ghastly_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/ghastly/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_ghastly_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "green_gemstone": {
@@ -870,8 +870,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_green_gemstones",
-            "aoa3:smelting_green_gemstones"
+            ["aoa3:blasting_green_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_green_gemstones", "minecraft.smelting_recipes"]
         ]
     },
     "jade": {
@@ -932,8 +932,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_jade",
-            "aoa3:smelting_jade"
+            ["aoa3:blasting_jade", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_jade", "minecraft.smelting_recipes"]
         ]
     },
     "jewelyte": {
@@ -994,8 +994,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_jewelyte",
-            "aoa3:smelting_jewelyte"
+            ["aoa3:blasting_jewelyte", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_jewelyte", "minecraft.smelting_recipes"]
         ]
     },
     "limonite": {
@@ -1063,10 +1063,10 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_limonite_ingot",
-            "aoa3:smeltery/melting/metal/limonite/ore",
-            "aoa3:smelting_limonite_ingot",
-            "aoa3:shaped_craft_limonite_rod"
+            ["aoa3:blasting_limonite_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/limonite/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_limonite_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:shaped_craft_limonite_rod", "minecraft.rod"]
         ]
     },
     "lunar": {
@@ -1180,9 +1180,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_lyon_ingot",
-            "aoa3:smeltery/melting/metal/lyon/ore",
-            "aoa3:smelting_lyon_ingot"
+            ["aoa3:blasting_lyon_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/lyon/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_lyon_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "mystite": {
@@ -1250,9 +1250,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_mistite_ingot",
-            "aoa3:smeltery/melting/metal/mistite/ore",
-            "aoa3:smelting_mistite_ingot"
+            ["aoa3:blasting_mistite_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/mistite/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_mistite_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "ornamyte": {
@@ -1313,8 +1313,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_ornamyte",
-            "aoa3:smelting_ornamyte"
+            ["aoa3:blasting_ornamyte", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_ornamyte", "minecraft.smelting_recipes"]
         ]
     },
     "purple_gemstone": {
@@ -1376,8 +1376,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_purple_gemstones",
-            "aoa3:smelting_purple_gemstones"
+            ["aoa3:blasting_purple_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_purple_gemstones", "minecraft.smelting_recipes"]
         ]
     },
     "red_gemstone": {
@@ -1439,8 +1439,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_red_gemstones",
-            "aoa3:smelting_red_gemstones"
+            ["aoa3:blasting_red_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_red_gemstones", "minecraft.smelting_recipes"]
         ]
     },
     "rosite": {
@@ -1508,9 +1508,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_rosite_ingot",
-            "aoa3:smeltery/melting/metal/rosite/ore",
-            "aoa3:smelting_rosite_ingot"
+            ["aoa3:blasting_rosite_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/rosite/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_rosite_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "runium": {
@@ -1572,8 +1572,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_runium_chunk",
-            "aoa3:smelting_runium_chunk"
+            ["aoa3:blasting_runium_chunk", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_runium_chunk", "minecraft.smelting_recipes"]
         ]
     },
     "rusted_iron": {
@@ -1685,8 +1685,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_shyregem",
-            "aoa3:smelting_shyregem"
+            ["aoa3:blasting_shyregem", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_shyregem", "minecraft.smelting_recipes"]
         ]
     },
     "shyrestone": {
@@ -1754,9 +1754,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_shyrestone_ingot",
-            "aoa3:smeltery/melting/metal/shyrestone/ore",
-            "aoa3:smelting_shyrestone_ingot"
+            ["aoa3:blasting_shyrestone_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/shyrestone/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_shyrestone_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "skeletal": {
@@ -1824,7 +1824,7 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:smeltery/melting/metal/skeletal/ore"
+            ["aoa3:smeltery/melting/metal/skeletal/ore", "tconstruct.ore_processing_metal"]
         ]
     },
     "varsium": {
@@ -1892,9 +1892,9 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "aoa3:blasting_varsium_ingot",
-            "aoa3:smeltery/melting/metal/varsium/ore",
-            "aoa3:smelting_varsium_ingot"
+            ["aoa3:blasting_varsium_ingot", "minecraft.smelting_recipes"],
+            ["aoa3:smeltery/melting/metal/varsium/ore", "tconstruct.ore_processing_metal"],
+            ["aoa3:smelting_varsium_ingot", "minecraft.smelting_recipes"]
         ]
     },
     "white_gemstone": {
@@ -1956,8 +1956,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_white_gemstones",
-            "aoa3:smelting_white_gemstones"
+            ["aoa3:blasting_white_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_white_gemstones", "minecraft.smelting_recipes"]
         ]
     },
     "yellow_gemstone": {
@@ -2019,8 +2019,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "aoa3:blasting_yellow_gemstones",
-            "aoa3:smelting_yellow_gemstones"
+            ["aoa3:blasting_yellow_gemstones", "minecraft.smelting_recipes"],
+            ["aoa3:smelting_yellow_gemstones", "minecraft.smelting_recipes"]
         ]
     }
 }

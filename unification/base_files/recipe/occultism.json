@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "iesnium": {
@@ -83,11 +83,11 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
-            "occultism:blasting/iesnium_ingot",
-            "occultism:blasting/iesnium_ingot_from_dust",
-            "occultism:crushing/iesnium_dust",
-            "occultism:smelting/iesnium_ingot",
-            "occultism:smelting/iesnium_ingot_from_dust"
+            ["occultism:blasting/iesnium_ingot", "minecraft.ore_processing_metal"],
+            ["occultism:blasting/iesnium_ingot_from_dust", "minecraft.smelting_recipes"],
+            ["occultism:crushing/iesnium_dust", "occultism.ore_processing_metal"],
+            ["occultism:smelting/iesnium_ingot", "minecraft.ore_processing_metal"],
+            ["occultism:smelting/iesnium_ingot_from_dust", "minecraft.smelting_recipes"]
         ]
     }
 }

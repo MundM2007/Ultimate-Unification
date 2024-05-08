@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_crystal": {
@@ -75,10 +75,10 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "forbidden_arcanus:arcane_crystal_from_blasting",
-            "forbidden_arcanus:arcane_crystal_from_smelting",
-            "forbidden_arcanus:blasting/arcane_crystal_dust_from_blasting",
-            "forbidden_arcanus:smelting/arcane_crystal_dust_from_smelting"
+            ["forbidden_arcanus:arcane_crystal_from_blasting", "minecraft.ore_processing_gem"],
+            ["forbidden_arcanus:arcane_crystal_from_smelting", "minecraft.ore_processing_gem"],
+            ["forbidden_arcanus:blasting/arcane_crystal_dust_from_blasting", ""],
+            ["forbidden_arcanus:smelting/arcane_crystal_dust_from_smelting", ""]
         ]
     },
     "dark_rune": {
@@ -140,8 +140,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "forbidden_arcanus:dark_rune_1",
-            "forbidden_arcanus:dark_rune_2"
+            ["forbidden_arcanus:dark_rune_1", "minecraft.ore_processing_gem"],
+            ["forbidden_arcanus:dark_rune_2", ""]
         ]
     },
     "obsidian_ingot": {
@@ -251,8 +251,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
-            "forbidden_arcanus:dark_rune_1",
-            "forbidden_arcanus:dark_rune_2"
+            ["forbidden_arcanus:rune_1", "minecraft.ore_processing_gem"],
+            ["forbidden_arcanus:rune_2", ""]
         ]
     },
     "stellarite": {
@@ -303,8 +303,8 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            "forbidden_arcanus:stellarite_piece",
-            "forbidden_arcanus:stellarite_block"
+            ["forbidden_arcanus:stellarite_piece", "minecraft.storage_convert_metal"],
+            ["forbidden_arcanus:stellarite_block", "minecraft.storage_convert_metal"]
         ]
     }
 }
