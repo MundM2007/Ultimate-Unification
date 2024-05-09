@@ -131,6 +131,7 @@ class MainExtended:
         self.KFUT.remove_tag(removal_array[0], id_file, id_name, material_type, license_notice)
         self.KFUT.replace_input(removal_array[0], f"#forge:{material_type}s/{id_name}", id_file, license_notice)
         self.KFUT.replace_output(removal_array[0], new_item, id_file, license_notice)
+        self.KFUT.replace_loot(removal_array[0], new_item, id_file, license_notice)
 
         self.element_removed += 1
         return 1

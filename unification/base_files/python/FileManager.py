@@ -54,10 +54,7 @@ class FileManager:
     def handle_texture(self, path_file, path_copy, active, isAdding):
         if active:
             if os.path.exists(path_file):
-                if path_file in self.textures_add:
-                    self.textures_add[path_file].append(path_copy)
-                else:
-                    self.textures_add[path_file] = [path_copy]
+                self.textures_add[path_copy] = path_file
                 return True
             else:
                 if isAdding:
@@ -67,13 +64,13 @@ class FileManager:
                 if os.path.exists(path_copy):
                     self.files_remove.add(path_copy)
                 if path_copy in self.textures_add:
-                        self.textures_add.pop(path_copy)
+                    self.textures_add.pop(path_copy)
                 return False
         else:
             if os.path.exists(path_copy):
                 self.files_remove.add(path_copy)
             if path_copy in self.textures_add:
-                    self.textures_add.pop(path_copy)
+                self.textures_add.pop(path_copy)
             return False
         
     
@@ -86,21 +83,20 @@ class FileManager:
 
     # saves the files and textures
     def save(self):
-        amount_files = len(self.files)
+        amount_files = len(self.files) - 1
         for index, (path_file, content) in enumerate(self.files.items()):
             if len(content) == 3:
                 self.IOM.write(path_file, content[0] + content[1] + content[2])
             else:
                 self.IOM.write(path_file, json.dumps(content[0], indent=4 if content[1] else None))
-            self.LM.log_percentage(f"Saving files", index / (amount_files - 1))
+            self.LM.log_percentage(f"Saving files", index / (amount_files))
         
-        amount_textures_add = len(self.textures_add)
-        for index, (path_file, paths_copy) in enumerate(self.textures_add.items()):
-            for path_copy in paths_copy:
-                self.IOM.copy(path_file, path_copy)
-            self.LM.log_percentage(f"Saving textures", index / (amount_textures_add - 1))
+        amount_textures_add = len(self.textures_add) - 1
+        for index, (path_copy, path_file) in enumerate(self.textures_add.items()):
+            self.IOM.copy(path_file, path_copy)
+            self.LM.log_percentage(f"Saving textures", index / (amount_textures_add))
 
-        amount_files_remove = len(self.files_remove)
+        amount_files_remove = len(self.files_remove) - 1
         for index, path_file in enumerate(self.files_remove):
             self.IOM.remove(path_file)
-            self.LM.log_percentage(f"Removing files", index / (amount_files_remove - 1))
+            self.LM.log_percentage(f"Removing files", index / (amount_files_remove))

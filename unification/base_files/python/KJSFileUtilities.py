@@ -156,3 +156,8 @@ class KJSFileUtilities:
     def replace_output(self, id_item, new_id_item, id_file, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "replace_output", f"{id_file}.js")
         self.FM.add_kjs(path_script_file, f"    event.replaceOutput({{}}, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('recipes', event => {\n")
+
+
+    def replace_loot(self, id_item, new_id_item, id_file, license_notice):
+        path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "replace_loot", f"{id_file}.js")
+        self.FM.add_kjs(path_script_file, f"    global.lp.replace(event, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('lootjs', event => {\n")

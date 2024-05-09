@@ -27,7 +27,15 @@ function calcFortuneDrops(level) {
 }
 
 onEvent("loaded", e => {
-	global.lootjs_presets = {
+	global.lp = {
+		replace: (event, old_item, new_item) => {
+			event
+				.addLootTypeModifier(LootType.BLOCK, LootType.ENTITY, LootType.CHEST, LootType.FISHING, LootType.GIFT, LootType.UNKNOWN)
+				.thenModify(old_item, (itemStack) => {
+					return Item.of(new_item, itemStack.getCount())
+				})
+		},
+
 		fortune: {
 			with_silk_touch: (event, block, drop, multiplyer) => {
 				event

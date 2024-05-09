@@ -50,6 +50,7 @@ paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_output"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_input"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_loot"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag"),
