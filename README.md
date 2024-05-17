@@ -86,7 +86,7 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 - [Tiny Redstone](https://www.curseforge.com/minecraft/mc-mods/tiny-redstone)
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium)
 
-Is your favorite mod missing? Create and issue and I'll look into it.
+Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new/choose) and I'll look into it.
 
 ## Join our Discord
 
