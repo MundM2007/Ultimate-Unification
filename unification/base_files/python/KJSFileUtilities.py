@@ -89,7 +89,7 @@ class KJSFileUtilities:
     def add_slurry(self, id_file, id_name, color, license_notice):
         color = "0xffffff" if color == "" else color
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_slurry", f"{id_file}.js")
-        self.FM.add_kjs(path_script_file, f"SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "", "")
+        self.FM.add_kjs(path_script_file, f"    SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "if(Platform.isLoaded('mekanism')){\n", "}")
         self.UT.gen_lang_entry(id_file, id_name, "slurry")
         return True
     

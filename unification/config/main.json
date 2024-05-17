@@ -28,7 +28,10 @@
         "replace_gem_textures": true,
 
         "c10": "Here you can enable or disable weither textures should be replaced at all; overwrites replace_gem_textures if false",
-        "replace_textures": true
+        "replace_textures": true,
+
+        "c11": "Which resource loader to use for textures; options: 'lmr' - faster, but may not work; 'kubejs' - a lot slower, but definetly always works",
+        "resource_loader": "lmr"
     },
 
     "ores": {

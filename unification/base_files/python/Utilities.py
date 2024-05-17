@@ -62,6 +62,8 @@ class Utilities:
     def resource_location_to_path(self, resource_location, type_rc="texture", kubejs_assets=False):
         namespace = resource_location[:resource_location.find(":")]
         path = resource_location[resource_location.find(":") + 1:]
+        if self.get_main_config("unification.resource_loader", "lmr") == "kubejs":
+            kubejs_assets = True
         storage_location = "kubejs\\assets" if kubejs_assets else "resources"
         if type_rc == "texture":
             return os.path.join(self.pack_path, storage_location, namespace, "textures", f"{path}.png")

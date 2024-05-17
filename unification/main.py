@@ -54,7 +54,8 @@ paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag"),
-    os.path.join(UT.pack_path, "kubejs", "assets", "unification")
+    os.path.join(UT.pack_path, "kubejs", "assets", "unification", "models", "item"),
+    os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures", "item"),
 ]
 for path in paths_to_clear:
     IOM.clear_path(path)
