@@ -1,6 +1,7 @@
 # Ultimate Unification
 
 Ultimate Unification is a python and kubejs script utility made for unification. It unifies items, ores and fluids and hides unused ones. For recipes, it removes duplicates and makes them use the same material for in and output. New items and recipes can also be added allowing for more similar recipes across all materials. Also unifies loot tables and allows to use new ore processing that was added in 1.18.
+
 Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 
 ## Required Mods
@@ -84,6 +85,7 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 - [Thermal Series Mods (5 in total)](https://www.curseforge.com/minecraft/mc-mods/thermal-expansion)
 - [Tiny Redstone](https://www.curseforge.com/minecraft/mc-mods/tiny-redstone)
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium)
+
 Is your favorite mod missing? Create and issue and I'll look into it.
 
 ## Join our Discord
