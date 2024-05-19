@@ -1,0 +1,78 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_0_y_0"
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_270_y_0",
+                "x": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_180_y_0",
+                "x": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_90_y_0",
+                "x": 270
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_0_y_270",
+                "y": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_270_y_270",
+                "x": 90,
+                "y": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_180_y_270",
+                "x": 180,
+                "y": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_90_y_270",
+                "x": 270,
+                "y": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_0_y_180",
+                "y": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_270_y_180",
+                "x": 90,
+                "y": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_180_y_180",
+                "x": 180,
+                "y": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_90_y_180",
+                "x": 270,
+                "y": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_0_y_90",
+                "y": 270
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_270_y_90",
+                "x": 90,
+                "y": 270
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_180_y_90",
+                "x": 180,
+                "y": 270
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/minecraft/netherrack/x_90_y_90",
+                "x": 270,
+                "y": 270
+            }
+        ]
+    }
+}

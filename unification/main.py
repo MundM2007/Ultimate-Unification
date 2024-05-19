@@ -234,7 +234,7 @@ for element in gen_scripts_info.get("main"):
         ME.add_recipes(base_file_recipe, id_file, id_name, mns, recipe_types, recipe_types_active, license_notice)
             
 FM.save()
-IOM.copy_tree(os.path.join(path_program, "base_files", "textures", "general", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures"))
+IOM.copy_tree(os.path.join(path_program, "base_files", "assets", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification"))
 LM.log("info", (f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed} "
                 f"Recipes removed: {ME.recipe_removed}, Amount of Recipe Presets that will be run: {ME.recipe_added}"))
 LM.log("info", "Finished")

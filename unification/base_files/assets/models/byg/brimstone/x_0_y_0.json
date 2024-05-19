@@ -1,0 +1,21 @@
+{
+    "parent": "block/block",
+    "loader": "forge:multi-layer",
+    "textures": {
+        "particle": "unification:%s/%s/block/%s_ore"
+    },
+    "layers": {
+        "solid": {
+            "parent": "minecraft:block/cube_all",
+            "textures": {
+                "all": "byg:block/brimstone"
+            }
+        },
+        "translucent": {
+            "parent": "minecraft:block/cube_all",
+            "textures": {
+                "all": "unification:%s/%s/block/%s_ore"
+            } 
+        }
+    }
+}

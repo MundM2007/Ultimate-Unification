@@ -79,7 +79,7 @@ class Utilities:
     # gets the base files texture path
     def get_texture_path(self, id_file, id_name, material_type, new_texture_rl=""):
         extra_texture_name = (new_texture_rl[-1] if material_type == "coin" else "") if new_texture_rl != "" else ""
-        return os.path.join(self.LM.path_program, "base_files", "textures", "general", id_file, id_name, 
+        return os.path.join(self.LM.path_program, "base_files", "assets", "textures", id_file, id_name, 
                             "block" if material_type in ["raw_block", "storage_block"] else "item", 
                             f"{id_name}_{material_type}{extra_texture_name}.png")
                     
