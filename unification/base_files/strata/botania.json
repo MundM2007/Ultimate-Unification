@@ -1,0 +1,12 @@
+{
+    "livingrock": {
+        "block": "botania:livingrock",
+        "tags": ["all-all", "all-botania", "alfheim-all", "alfheim-botania"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    }
+}

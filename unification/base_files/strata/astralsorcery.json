@@ -1,0 +1,12 @@
+{
+    "marble_raw": {
+        "block": "astralsorcery:marble_raw",
+        "tags": ["all-all", "all-astralsorcery", "overworld-all", "overworld-astralsorcery"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    }
+}

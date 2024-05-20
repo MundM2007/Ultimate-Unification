@@ -8,7 +8,7 @@
         "solid": {
             "parent": "minecraft:block/cube_all",
             "textures": {
-                "all": "aoa3:block/boron_stone"
+                "all": "aoa3:block/baron_stone"
             }
         },
         "translucent": {

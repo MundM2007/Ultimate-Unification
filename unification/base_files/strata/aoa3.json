@@ -1,0 +1,192 @@
+{
+    "abyssal_stone": {
+        "block": "aoa3:abyssal_stone",
+        "tags": ["all-all", "all-aoa3", "abyss-all", "abyss-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "aromatic_stone": {
+        "block": "aoa3:aromatic_stone",
+        "tags": ["all-all", "all-aoa3", "gardencia-all", "gardencia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "baron_stone": {
+        "block": "aoa3:baron_stone",
+        "tags": ["all-all", "all-aoa3", "barathos-all", "barathos-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "bright_rock": {
+        "block": "aoa3:bright_rock",
+        "tags": ["all-all", "all-aoa3", "shyrelands-all", "shyrelands-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "coral_rock": {
+        "block": "aoa3:coral_rock",
+        "tags": ["all-all", "all-aoa3", "lborean-all", "lborean-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "creep_stone": {
+        "block": "aoa3:creep_stone",
+        "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "crystallised_rock": {
+        "block": "aoa3:crystallised_rock",
+        "tags": ["all-all", "all-aoa3", "crystevia-all", "crystevia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "darkened_rock": {
+        "block": "aoa3:darkened_rock",
+        "tags": ["all-all", "all-aoa3", "dustopia-all", "dustopia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "dense_stone": {
+        "block": "aoa3:dense_stone",
+        "tags": ["all-all", "all-aoa3", "deeplands-all", "deeplands-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "fungal_rock": {
+        "block": "aoa3:fungal_rock",
+        "tags": ["all-all", "all-aoa3", "mysterium-all", "mysterium-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "greckon_stone": {
+        "block": "aoa3:greckon_stone",
+        "tags": ["all-all", "all-aoa3", "greckon-all", "greckon-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "hellstone": {
+        "block": "aoa3:hellstone",
+        "tags": ["all-all", "all-aoa3", "barathos-all", "barathos-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "irostone": {
+        "block": "aoa3:irostone",
+        "tags": ["all-all", "all-aoa3", "iromine-all", "iromine-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "lelyetian_stone": {
+        "block": "aoa3:lelyetian_stone",
+        "tags": ["all-all", "all-aoa3", "lelyetia-all", "lelyetia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "polluted_stone": {
+        "block": "aoa3:polluted_stone",
+        "tags": ["all-all", "all-aoa3", "vox_ponds-all", "vox_ponds-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "pressed_creep_stone": {
+        "block": "aoa3:pressed_creep_stone",
+        "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "primed_stone": {
+        "block": "aoa3:primed_stone",
+        "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "runic_stone": {
+        "block": "aoa3:runic_stone",
+        "tags": ["all-all", "all-aoa3", "runandor-all", "runandor-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "weightless_stone": {
+        "block": "aoa3:weightless_stone",
+        "tags": ["all-all", "all-aoa3", "haven-all", "haven-aoa3"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    }
+}

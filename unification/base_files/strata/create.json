@@ -1,0 +1,52 @@
+{
+    "dolomite": {
+        "block": "create:dolomite",
+        "tags": ["all-all", "all-create", "overworld-all", "overworld-create"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "gabbro": {
+        "block": "create:gabbro",
+        "tags": ["all-all", "all-create", "overworld-all", "overworld-create"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "limestone": {
+        "block": "create:limestone",
+        "tags": ["all-all", "all-create", "overworld-all", "overworld-create"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "natural_scoria": {
+        "block": "create:natural_scoria",
+        "tags": ["all-all", "all-create", "overworld-all", "overworld-create"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    },
+    "weathered_limestone": {
+        "block": "create:weathered_limestone",
+        "tags": ["all-all", "all-create", "overworld-all", "overworld-create"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    }
+}

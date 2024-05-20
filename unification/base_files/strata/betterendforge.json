@@ -1,0 +1,12 @@
+{
+    "brimstone": {
+        "block": "betterendforge:brimstone",
+        "tags": ["all-all", "all-betterendforge", "end-all", "end-betterendforge"],
+        "properties": [],
+        "falling": false,
+        "harvest_tool": "pickaxe",
+        "harvest_level": 0,
+        "destroy_time": 1.5,
+        "explosion_resistance": 6
+    }
+}
