@@ -93,6 +93,7 @@ Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ult
 - more mod support
 - strata world gen
 - support for ore generating methods, e.g. occultism miner, environmental tech
+- data structure verification for base_files
 
 ## Join our Discord
 
