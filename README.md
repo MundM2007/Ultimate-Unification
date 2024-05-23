@@ -86,13 +86,13 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 - [Tiny Redstone](https://www.curseforge.com/minecraft/mc-mods/tiny-redstone)
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium)
 
+Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new/choose) and I'll look into it.
+
 ## Planed Features
 
 - more mod support
 - strata world gen
 - support for ore generating methods, e.g. occultism miner, environmental tech
-
-Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new/choose) and I'll look into it.
 
 ## Join our Discord
 
