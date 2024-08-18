@@ -1,0 +1,758 @@
+{
+    "aluminum": {     
+        "type": "metal",
+        "drops": "unification:aluminum_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [45, 75],
+                    "size": 5,
+                    "count": 8,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [70, 100],
+                    "size": 5,
+                    "count": 7,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [60, 90],
+                    "size": 5,
+                    "count": 7,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "bismuth": {     
+        "type": "metal",
+        "drops": "unification:bismuth_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [15, 50],
+                    "size": 7,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [50, 80],
+                    "size": 7,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [40, 70],
+                    "size": 7,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "boron": {     
+        "type": "metal",
+        "drops": "unification:boron_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 5,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [25, 50],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [14, 40],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "cobalt": {     
+        "type": "metal",
+        "drops": "unification:cobalt_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [45, 80],
+                    "size": 7,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            }
+        ]
+    },
+    "copper": {     
+        "type": "metal",
+        "drops": "unification:copper_raw_material",
+        "counts": [2, 3, 4, 5],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [45, 90],
+                    "size": 9,
+                    "count": 13,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [70, 100],
+                    "size": 8,
+                    "count": 10,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [60, 90],
+                    "size": 8,
+                    "count": 10,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "iridium": {       
+        "type": "metal",
+        "drops": "unification:iridium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 20],
+                    "size": 5,
+                    "count": 5,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 4,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 40],
+                    "size": 4,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "lead": {       
+        "type": "metal",
+        "drops": "unification:lead_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [30, 45],
+                    "size": 4,
+                    "count": 7,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [55, 70],
+                    "size": 4,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [45, 60],
+                    "size": 4,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "lithium": {       
+        "type": "metal",
+        "drops": "unification:lithium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 5,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [25, 50],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [15, 40],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "magnesium": {       
+        "type": "metal",
+        "drops": "unification:magnesium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 25],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [25, 45],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [15, 35],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "nickel": {       
+        "type": "metal",
+        "drops": "unification:nickel_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 40],
+                    "size": 5,
+                    "count": 7,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [50, 70],
+                    "size": 5,
+                    "count": 6,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [40, 60],
+                    "size": 5,
+                    "count": 6,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "osmium": {       
+        "type": "metal",
+        "drops": "unification:osmium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 50],
+                    "size": 10,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [50, 80],
+                    "size": 9,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [40, 70],
+                    "size": 9,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "platinum": {       
+        "type": "metal",
+        "drops": "unification:platinum_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 20],
+                    "size": 4,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 6,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 50],
+                    "size": 6,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "silver": {       
+        "type": "metal",
+        "drops": "unification:silver_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [25, 40],
+                    "size": 4,
+                    "count": 7,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [45, 60],
+                    "size": 4,
+                    "count": 6,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [35, 50],
+                    "size": 4,
+                    "count": 6,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "thorium": {       
+        "type": "metal",
+        "drops": "unification:thorium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [25, 50],
+                    "size": 3,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [15, 40],
+                    "size": 3,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "tin": {       
+        "type": "metal",
+        "drops": "unification:tin_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [40, 65],
+                    "size": 6,
+                    "count": 10,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [70, 95],
+                    "size": 5,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [60, 85],
+                    "size": 5,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "titanium": {       
+        "type": "metal",
+        "drops": "unification:titanium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 30],
+                    "size": 3,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [50, 60],
+                    "size": 4,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [40, 50],
+                    "size": 4,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "tungsten": {       
+        "type": "metal",
+        "drops": "unification:tungsten_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [10, 30],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [40, 60],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "uranium": {       
+        "type": "metal",
+        "drops": "unification:uranium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 20],
+                    "size": 5,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 5,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 40],
+                    "size": 5,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "zinc": {       
+        "type": "metal",
+        "drops": "unification:zinc_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 5,
+                    "count": 8,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [60, 80],
+                    "size": 4,
+                    "count": 8,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [50, 70],
+                    "size": 4,
+                    "count": 8,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -8,7 +8,7 @@
         "solid": {
             "parent": "minecraft:block/cube_all",
             "textures": {
-                "all": "create:block/natural_scoria"
+                "all": "create:block/palettes/scoria/plain"
             }
         },
         "translucent": {

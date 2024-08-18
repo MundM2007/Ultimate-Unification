@@ -1,0 +1,84 @@
+{
+    "apatite": {       
+        "type": "gem",
+        "drops": "thermal:apatite",
+        "counts": [6, 7, 8],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [64, 128],
+                    "size": 22,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [100, 128],
+                    "size": 22,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [80, 110],
+                    "size": 22,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "cinnabar": {       
+        "type": "gem",
+        "drops": "thermal:cinnabar",
+        "counts": [1, 2],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [5, 30],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 55],
+                    "size": 5,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [25, 50],
+                    "size": 5,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

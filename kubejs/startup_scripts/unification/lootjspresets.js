@@ -18,11 +18,16 @@
 //         - MundM2007          (https://github.com/MundM2007)                              
 // Licensed under GNU GPL v3: https://www.gnu.org/licenses/         			   
 
-function calcFortuneDrops(level) {
+function chooseRandom(array) {
+	if (array.length == 1) return array[0]
+	return array[Math.floor(Math.random() * array.length)]
+}
+function calcFortuneDrops(level, mult) {
+	if(mult == undefined) mult = [1]
+	mult = chooseRandom(mult)
 	let chance = Math.random()
-	// (c - 2 / (l + 2)) / (1 / (l + 2)) = c * (l + 2) - 2; only gives extra drops
-	let drop_amount = Math.ceil(chance * (level + 2) - 1)
-	if (drop_amount <= 0) drop_amount = 1
+	let drop_amount = Math.ceil((chance * (level + 2) - 1) * mult)
+	if (drop_amount < mult) drop_amount = mult
 	return drop_amount
 }
 
@@ -36,21 +41,71 @@ onEvent("loaded", e => {
 				})
 		},
 
-		fortune: {
-			with_silk_touch: (event, block, drop, multiplyer) => {
+		with_fortune: {
+			with_silk_touch: (event, block, drops, counts) => {
 				event
         			.addBlockLootModifier(block)
-					.thenModify(Ingredient.getAll(), (itemStack) => {
-						return Item.of("minecraft:air")
-					})
-					.randomChanceWithEnchantment("minecraft:silk_touch", [0, 1]) 
-					.thenAdd(block)
 					.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
-					.thenAdd(drop)
-					.console.log("HI")
-        			//.thenApply(ctx => {
-						//ctx.addLoot(Item.of(drop, calcFortuneDrops(ctx.getLooting()) * multiplyer));
-					//})
+					.thenRemove(block)
+					.thenApply((context) => {
+						if(context.player){
+							let main_item = context.tool
+							let level = 0
+							if(main_item.nbt && main_item.nbt.Enchantments){
+								for(let i = 0; i < main_item.nbt.Enchantments.length; i++){
+									if(main_item.nbt.Enchantments[i].id == "minecraft:fortune"){
+										level = main_item.nbt.Enchantments[i].lvl
+										break
+									}
+								}
+							}
+							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, counts)))
+						}else{
+							context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
+						}
+					})
+			},
+			without_silk_touch: (event, block, drops, counts) => {
+				event
+        			.addBlockLootModifier(block)
+					.thenRemove(block)
+					.thenApply((context) => {
+						if(context.player){
+							let main_item = context.tool
+							let level = 0
+							if(main_item.nbt && main_item.nbt.Enchantments){
+								for(let i = 0; i < main_item.nbt.Enchantments.length; i++){
+									if(main_item.nbt.Enchantments[i].id == "minecraft:fortune"){
+										level = main_item.nbt.Enchantments[i].lvl
+										break
+									}
+								}
+							}
+							console.log(Item.of(chooseRandom(drops), calcFortuneDrops(level, counts)))
+							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, counts)))
+						}else{
+							context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
+						}
+					})
+			}
+		},
+		without_fortune: {
+			with_silk_touch: (event, block, drops, counts) => {
+				event
+        			.addBlockLootModifier(block)
+					.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
+					.thenRemove(block)
+					.thenApply((_) => {
+						context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
+					})
+			},
+			without_silk_touch: (event, block, drops, counts) => {
+				event
+        			.addBlockLootModifier(block)
+					.thenRemove(block)
+					.thenApply((_) => {
+						context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
+					})
 			}
 		}
 	}

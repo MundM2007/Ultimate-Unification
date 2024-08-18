@@ -1,0 +1,43 @@
+{
+    "dark_gem": {     
+        "type": "gem",
+        "drops": "evilcraft:dark_gem",
+        "counts": [4, 5],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 5,
+                    "count": 5,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 60],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 50],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

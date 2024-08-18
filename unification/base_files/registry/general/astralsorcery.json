@@ -92,7 +92,7 @@
 
         "replace": [
             ["ingot", "astralsorcery:item/starmetal_ingot", "astralsorcery:starmetal_ingot"],
-            ["storage_block", "astralsorcery:item/starmetal", "astralsorcery:starmetal"]
+            ["storage_block", "astralsorcery:block/starmetal", "astralsorcery:starmetal"]
         ],
         "add": [
             "nugget",

@@ -1,112 +1,75 @@
 {
     "andesite": {
         "block": "minecraft:andesite",
-        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "basalt": {
         "block": "minecraft:basalt",
         "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
+        "sound_type": "basalt",
         "properties": ["AXIS"],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
         "destroy_time": 1.25,
-        "explosion_resistance": 4.3
+        "explosion_resistance": 4.2
     },
     "blackstone": {
         "block": "minecraft:blackstone",
-        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"]
     },
     "diorite": {
         "block": "minecraft:diorite",
-        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "end_stone": {
         "block": "minecraft:end_stone",
         "tags": ["all-all", "all-minecraft", "end-all", "end-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
         "destroy_time": 3,
         "explosion_resistance": 9
     },
     "granite": {
         "block": "minecraft:granite",
-        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "netherrack": {
         "block": "minecraft:netherrack",
         "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
+        "sound_type": "netherrack",
         "destroy_time": 0.4,
         "explosion_resistance": 0.4
     },
     "red_sand": {
         "block": "minecraft:red_sand",
         "tags": ["all-all", "all-minecraft", "overworld_sand-all", "overworld_sand-minecraft"],
-        "properties": [],
-        "falling": true,
+        "falling": true,   
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "sand": {
         "block": "minecraft:sand",
         "tags": ["all-all", "all-minecraft", "overworld_sand-all", "overworld_sand-minecraft"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "soul_soil": {
         "block": "minecraft:soul_soil",
         "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
-        "properties": [],
-        "falling": false,
+        "material": "sand",
+        "sound_type": "soul_soil",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "stone": {
         "block": "minecraft:stone",
-        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     }
 }

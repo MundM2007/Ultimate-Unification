@@ -298,7 +298,7 @@
     "uraninite": {
         "variants": {
             "energy_from_coin": 64000,
-            "gem_multiplier": 2
+            "gem_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",

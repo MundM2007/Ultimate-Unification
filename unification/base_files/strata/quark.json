@@ -1,92 +1,40 @@
 {
     "brimstone": {
         "block": "quark:brimstone",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "deepslate": {
         "block": "quark:deepslate",
         "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
         "properties": ["AXIS"],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 3,
-        "explosion_resistance": 6
+        "destroy_time": 3
     },
     "elder_prismarine": {
         "block": "quark:elder_prismarine",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "jasper": {
         "block": "quark:jasper",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "limestone": {
         "block": "quark:limestone",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "marble": {
         "block": "quark:marble",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "myalite": {
         "block": "quark:myalite",
-        "tags": ["all-all", "all-quark", "end-all", "end-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "end-all", "end-quark"]
     },
     "slate": {
         "block": "quark:slate",
-        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "overworld-all", "overworld-quark"]
     },
     "voidstone": {
         "block": "quark:basalt",
-        "tags": ["all-all", "all-quark", "end-all", "end-quark"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-quark", "end-all", "end-quark"]
     }
 }

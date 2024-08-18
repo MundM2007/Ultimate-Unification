@@ -1,42 +1,18 @@
 {
     "mars_stone": {
         "block": "boss_tools:mars_stone",
-        "tags": ["all-all", "all-boss_tools", "mars-all", "mars-boss_tools"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-boss_tools", "mars-all", "mars-boss_tools"]
     },
     "mercury_stone": {
         "block": "boss_tools:mercury_stone",
-        "tags": ["all-all", "all-boss_tools", "mercury-all", "mercury-boss_tools"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-boss_tools", "mercury-all", "mercury-boss_tools"]
     },
     "moon_stone": {
         "block": "boss_tools:moon_stone",
-        "tags": ["all-all", "all-boss_tools", "moon-all", "moon-boss_tools"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-boss_tools", "moon-all", "moon-boss_tools"]
     },
     "venus_stone": {
         "block": "boss_tools:venus_stone",
-        "tags": ["all-all", "all-boss_tools", "venus-all", "venus-boss_tools"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-boss_tools", "venus-all", "venus-boss_tools"]
     }
 }

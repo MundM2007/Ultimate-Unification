@@ -2,18 +2,18 @@
     "black_sand": {
         "block": "byg:black_sand",
         "tags": ["all-all", "all-byg", "overworld_sand-all", "overworld_sand-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "blue_netherrack": {
         "block": "byg:blue_netherrack",
         "tags": ["all-all", "all-byg", "nether-all", "nether-byg"],
-        "properties": [],
-        "falling": false,
+        "sound_type": "netherrack",
         "harvest_tool": "pickaxe",
         "harvest_level": 0,
         "destroy_time": 0.4,
@@ -22,120 +22,83 @@
     "blue_sand": {
         "block": "byg:blue_sand",
         "tags": ["all-all", "all-byg", "overworld_sand-all", "overworld_sand-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "brimstone": {
         "block": "byg:brimstone",
-        "tags": ["all-all", "all-byg", "nether-all", "nether-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "nether-all", "nether-byg"]
     },
     "cryptic_stone": {
         "block": "byg:cryptic_stone",
-        "tags": ["all-all", "all-byg", "end-all", "end-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "end-all", "end-byg"]
     },
     "end_sand": {
         "block": "byg:end_sand",
         "tags": ["all-all", "all-byg", "end-all", "end-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "ether_stone": {
         "block": "byg:ether_stone",
-        "tags": ["all-all", "all-byg", "end-all", "end-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "end-all", "end-byg"]
     },
     "pink_sand": {
         "block": "byg:pink_sand",
         "tags": ["all-all", "all-byg", "overworld_sand-all", "overworld_sand-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "purple_sand": {
         "block": "byg:purple_sand",
         "tags": ["all-all", "all-byg", "overworld_sand-all", "overworld_sand-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     },
     "red_rock": {
         "block": "byg:red_rock",
-        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"]
     },
     "rocky_stone": {
         "block": "byg:rocky_stone",
-        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"]
     },
     "scoria_stone": {
         "block": "byg:scoria_stone",
-        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"]
     },
     "soapstone": {
         "block": "byg:soapstone",
-        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-byg", "overworld-all", "overworld-byg"]
     },
     "white_sand": {
         "block": "byg:white_sand",
         "tags": ["all-all", "all-byg", "overworld_sand-all", "overworld_sand-byg"],
-        "properties": [],
         "falling": true,
+        "material": "sand",
+        "sound_type": "sand",
         "harvest_tool": "shovel",
-        "harvest_level": 0,
+        "harvest_level": -1,
         "destroy_time": 0.5,
         "explosion_resistance": 0.5
     }

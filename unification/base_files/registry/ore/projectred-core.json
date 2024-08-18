@@ -1,0 +1,84 @@
+{
+    "electrotine": {       
+        "type": "gem",
+        "drops": "projectred-core:electrotine_dust",
+        "counts": [4, 5],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 64],
+                    "size": 8,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 70],
+                    "size": 7,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 60],
+                    "size": 7,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "peridot": {       
+        "type": "gem",
+        "drops": "projectred-core:peridot",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 25],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [45, 50],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [35, 40],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "aquamarine": {     
+        "type": "gem",
+        "drops": "astralsorcery:aquamarine",
+        "counts": [1, 2, 3],
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [30, 62],
+                    "size": 4,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#ocean", "#river", "minecraft:beach"]
+                    }
+                }
+            }
+        ]
+    },
+    "rock_crystal": {     
+        "type": "gem",
+        "drops": "astralsorcery:rock_crystal",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [15, 45],
+                    "size": 4,
+                    "count": 8,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "starmetal": {
+        "type": "metal",
+        "drops": "unification:starmetal_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#nether-all", "#end-all", "#atum-all", "#moon-all", "#mars-all", "#mercury-all"]
+            }
+        ]
+    }
+}

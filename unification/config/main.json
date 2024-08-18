@@ -35,25 +35,28 @@
     },
 
     "ores": {
-        "c1": "What should the metal drop, options: raw, ore",
-        "metal_ore_drop": "raw",
+        "c1": "Weither ores should be added at all",
+        "active": true,
 
-        "c2": "Weither the metal should be affected by silk touch",
-        "metal_silktouch_affected": true,
+        "c2": "Weither the metal ores should drop itself",
+        "metal_ore_drop_itself": false,
 
-        "c3": "Weither the metal should be affected by fortune",
+        "c3": "Weither the metal should be affected by fortune, disabled when dropping the ore itself",
         "metal_fortune_affected": true,
 
-        "c4": "What should the gem drop, options: gem, ore",
-        "gem_ore_drop": "gem",
+        "c4": "Weither the metal should be affected by silk touch, disabled when dropping the ore itself",
+        "metal_silktouch_affected": true,
 
-        "c5": "Weither the gem should be affected by silk touch",
-        "gem_silktouch_affected": true,
+        "c5": "Weither the gem ores should drop itself",
+        "gem_ore_drop_itself": false,
 
-        "c6": "Weither the gem should be affected by fortune",
+        "c6": "Weither the gem should be affected by fortune, disabled when dropping the ore itself",
         "gem_fortune_affected": true,
 
-        "c7": "Here you can modify the ore drop dimension multiplier for the ores",
+        "c7": "Weither the gem should be affected by silk touch, disabled when dropping the ore itself",
+        "gem_silktouch_affected": true,
+
+        "c8": "Here you can modify the ore drop dimension multiplier for the ores",
         "dim_multiplier": {
             "atum": 1.5,
             "end": 2,

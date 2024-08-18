@@ -1,0 +1,43 @@
+{
+    "ender_pearl": {
+        "type": "gem",
+        "drops": "unification:ender_pearl_dust",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 48],
+                    "size": 6,
+                    "count": 5,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 6,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 70],
+                    "size": 6,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

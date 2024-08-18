@@ -1,0 +1,251 @@
+{
+    "apalachia": {     
+        "type": "gem",
+        "drops": "divinerpg:apalachia_fragments",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#apalachia-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 10,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["divinerpg:apalachia"]
+                    }
+                }
+            }
+        ]
+    },
+    "arlemite": {     
+        "type": "metal",
+        "drops": "unification:arlemite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 16],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 45],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 35],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "bloodgem": {     
+        "type": "gem",
+        "drops": "divinerpg:bloodgem",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 6,
+                    "count": 8,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            }
+        ]
+    },
+    "eden": {     
+        "type": "gem",
+        "drops": "divinerpg:eden_fragments",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#eden-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 10,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["divinerpg:eden"]
+                    }
+                }
+            }
+        ]
+    },
+    "mortum": {     
+        "type": "gem",
+        "drops": "divinerpg:mortum_fragments",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#mortum-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 10,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["divinerpg:mortum"]
+                    }
+                }
+            }
+        ]
+    },
+    "realmite": {     
+        "type": "metal",
+        "drops": "unification:realmite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 50],
+                    "size": 5,
+                    "count": 8,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 80],
+                    "size": 5,
+                    "count": 7,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 70],
+                    "size": 5,
+                    "count": 7,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "rupee": {     
+        "type": "metal",
+        "drops": "unification:rupee_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 16],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 45],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 35],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "skythern": {     
+        "type": "gem",
+        "drops": "divinerpg:skythern_fragments",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#skythern-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 10,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["divinerpg:skythern"]
+                    }
+                }
+            }
+        ]
+    },
+    "torridite": {     
+        "type": "metal",
+        "drops": "unification:torridite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 6,
+                    "count": 8,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            }
+        ]
+    },
+    "wildwood": {     
+        "type": "gem",
+        "drops": "divinerpg:wildwood_fragments",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#wildwood-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 10,
+                    "count": 9,
+                    "biomes": {
+                        "values": ["divinerpg:wildwood"]
+                    }
+                }
+            }
+        ]
+    }
+}

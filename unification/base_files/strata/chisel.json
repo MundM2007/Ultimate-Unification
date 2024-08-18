@@ -1,32 +1,14 @@
 {
     "basalt": {
         "block": "chisel:basalt/raw",
-        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     },
     "limestone": {
         "block": "chisel:limestone/raw",
-        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     },
     "marble": {
         "block": "chisel:marble/raw",
-        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"],
-        "properties": [],
-        "falling": false,
-        "harvest_tool": "pickaxe",
-        "harvest_level": 0,
-        "destroy_time": 1.5,
-        "explosion_resistance": 6
+        "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     }
 }

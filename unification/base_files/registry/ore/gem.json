@@ -1,0 +1,226 @@
+{
+    "bitumen": {     
+        "type": "gem",
+        "drops": "unification:bitumen_gem",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld_sand-all"],
+                "gen": {
+                    "height": [40, 160],
+                    "size": 20,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "fluorite": {     
+        "type": "gem",
+        "drops": "unification:fluorite_gem",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 8,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [60, 90],
+                    "size": 8,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [50, 80],
+                    "size": 8,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "potassium_nitrate": {     
+        "type": "gem",
+        "drops": "unification:potassium_nitrate_gem",
+        "counts": [3, 4, 5],
+        "variants": [
+        {
+            "values": ["#overworld-all", "#atum-all"],
+            "gen": {
+                "height": [15, 35],
+                "size": 5,
+                "count": 5,
+                "biomes": {
+                    "blacklist": true,
+                    "values": ["#nether", "#the_end"]
+                }
+            }
+        },
+        {
+            "values": ["#nether-all"],
+            "gen": {
+                "height": [45, 65],
+                "size": 5,
+                "count": 4,
+                "biomes": {
+                    "values": ["#nether"]
+                }
+            }
+        },
+        {
+            "values": ["#end-all"],
+            "gen": {
+                "height": [35, 55],
+                "size": 5,
+                "count": 4,
+                "biomes": {
+                    "values": ["#the_end"]
+                }
+            }
+        }
+    ]
+},
+    "ruby": {     
+        "type": "gem",
+        "drops": "unification:ruby_gem",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 25],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [45, 50],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [35, 40],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "sapphire": {     
+        "type": "gem",
+        "drops": "unification:sapphire_gem",
+        "counts": [2, 3, 4],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [20, 25],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [45, 50],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [35, 40],
+                    "size": 4,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "sulfur": {     
+        "type": "gem",
+        "drops": "unification:sulfur_gem",
+        "counts": [3, 4, 5],
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 16],
+                    "size": 7,
+                    "count": 3,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 50],
+                    "size": 6,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 40],
+                    "size": 6,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

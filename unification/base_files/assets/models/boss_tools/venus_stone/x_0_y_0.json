@@ -8,7 +8,7 @@
         "solid": {
             "parent": "minecraft:block/cube_all",
             "textures": {
-                "all": "boss_tools:block/venus_stone"
+                "all": "boss_tools:blocks/venus_stone"
             }
         },
         "translucent": {

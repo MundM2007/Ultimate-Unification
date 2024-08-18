@@ -48,11 +48,12 @@ paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin"),
     os.path.join(UT.pack_path, "kubejs", "client_scripts", "unification", "jei_hide"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
+    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_loot"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_output"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_input"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "replace_loot"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe"),
-    os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag"),
     os.path.join(UT.pack_path, "kubejs", "assets", "unification", "models", "item"),
     os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures", "item"),
@@ -73,12 +74,34 @@ except json.JSONDecodeError as e:
 for recipe_type in recipe_types:
     recipe_types[recipe_type] = (str(recipe_types.get(recipe_type)).removeprefix("[").removesuffix("]").replace("None", "null").replace("False", "false").replace("True", "true"))
 
+
+for strata in gen_scripts_info.get("strata", []):
+    id_file = strata[:strata.find(".")]
+    id_name = strata[strata.find(".") + 1:]
+
+    base_file_strata_path = os.path.join(path_program, "base_files", "strata", f"{id_file}.json")
+    # checks if the base file exists and is valid
+    if not os.path.isfile(base_file_strata_path):
+        LM.log("strata_file_missing", f"Material Base file missing: {base_file_strata_path} skipping")
+        continue
+    try:
+        base_file_strata = json.loads(IOM.read(base_file_strata_path))
+    except json.JSONDecodeError as e:
+        LM.log("json_error", f"Error decoding JSON content of the file: {base_file_strata_path} skipping", e)
+        continue
+    if base_file_strata.get(id_name) is None:
+        LM.log("strata_missing", f"Material ({id_name}) not found in base file: {base_file_strata_path}")
+        continue
+
+    UT.register_strata(strata, base_file_strata[id_name])
+
+
 # loops over all materials to add
-for element in gen_scripts_info.get("main"):
+for element in gen_scripts_info.get("main", []):
     id_file = element[:element.find(".")]
     id_name = element[element.find(".") + 1:]
 
-    base_file_registry_path = os.path.join(path_program, "base_files", "registry", f"{id_file}.json")
+    base_file_registry_path = os.path.join(path_program, "base_files", "registry", "general", f"{id_file}.json")
     # checks if the base file exists and is valid
     if not os.path.isfile(base_file_registry_path):
         LM.log("material_file_missing", f"Material Base file missing: {base_file_registry_path} skipping")
@@ -189,8 +212,7 @@ for element in gen_scripts_info.get("main"):
             anything_changed += ME.add_and_remove_elements(base_file_registry, id_file, id_name, license_notice)
         else:
             anything_changed += ME.remove_elements(base_file_registry, id_file, id_name, license_notice)
-
-
+                
     if anything_changed > 0:
         material_added += 1
 
@@ -224,6 +246,7 @@ for element in gen_scripts_info.get("main"):
         if base_file_recipe[id_name].get("remove") is not None:
             ME.remove_recipes(base_file_recipe, id_file, id_name, False, license_notice)
 
+    gem_multiplier = 1
     if base_file_recipe[id_name].get("add") is not None:
         mns = {**ME.element_replaced, **ME.element_added}
         if base_file_recipe[id_name].get("variants") is not None:
@@ -232,6 +255,40 @@ for element in gen_scripts_info.get("main"):
                     mns[material] = base_file_recipe[id_name]["variants"][material]
 
         ME.add_recipes(base_file_recipe, id_file, id_name, mns, recipe_types, recipe_types_active, license_notice)
+        if mns.get("gem_multiplier") is not None:
+            gem_multiplier = mns["gem_multiplier"]
+
+
+    if UT.get_main_config("ores.active", True) is True:
+        base_file_ore_path = os.path.join(path_program, "base_files", "registry", "ore", f"{id_file}.json")
+        # checks if the base file exists and is valid
+        success = False
+        if os.path.isfile(base_file_ore_path):
+            try:
+                base_file_ore = json.loads(IOM.read(base_file_ore_path))
+                if base_file_ore.get(id_name) is not None:
+                    success = True
+            except json.JSONDecodeError as e:
+                LM.log("json_error", f"Error decoding JSON content of the file: {base_file_ore_path}, skipping", e)
+
+        if success:       
+            license_notice = base_file_registry.get("license_notice", "")
+            if license_notice is not None:
+                license_notice = "".join(license_notice)
+            
+            all_stratas = []
+            for ore_object in base_file_ore[id_name].get("variants", []):
+                if ore_object.get("values") is not None:
+                    all_stratas.extend(UT.get_stratas_in_values(ore_object["values"]))
+            
+            drop_info = None
+            if base_file_ore[id_name].get("drops") is not None:
+                drop_info = {"drops": base_file_ore[id_name]["drops"] if isinstance(base_file_ore[id_name]["drops"], list) else [base_file_ore[id_name]["drops"]]}
+                drop_info["type"] = base_file_ore[id_name].get("type", "metal")
+                counts = base_file_ore[id_name].get("counts", [1])
+                drop_info["counts"] = counts if isinstance(counts, list) else [counts]
+            
+            KFUT.add_ore(id_file, id_name, all_stratas, drop_info, gem_multiplier, harvest_level, destroy_time, explosion_resistance, license_notice)
             
 FM.save()
 IOM.copy_tree(os.path.join(path_program, "base_files", "assets", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification"))

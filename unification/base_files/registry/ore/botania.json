@@ -1,0 +1,38 @@
+{
+    "dragonstone": {     
+        "type": "gem",
+        "drops": "botania:dragonstone",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#alfheim-all"],
+                "gen": {
+                    "height": [1, 20],
+                    "size": 3,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["mythic_botany:alfheim_plains", "mythic_botany:alfheim_hills", "mythic_botany:dreamwood_forest", "mythic_botany:alfheim_lakes", "mythic_botany:golden_fields"]
+                    }
+                }
+            }
+        ]
+    },
+    "elementium": {     
+        "type": "metal",
+        "drops": "unification:elementium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#alfheim-all"],
+                "gen": {
+                    "height": [1, 20],
+                    "size": 3,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["mythic_botany:alfheim_plains", "mythic_botany:alfheim_hills", "mythic_botany:dreamwood_forest", "mythic_botany:alfheim_lakes", "mythic_botany:golden_fields"]
+                    }
+                }
+            }
+        ]
+    }
+}

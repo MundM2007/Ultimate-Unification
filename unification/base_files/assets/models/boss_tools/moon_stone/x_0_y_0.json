@@ -8,7 +8,7 @@
         "solid": {
             "parent": "minecraft:block/cube_all",
             "textures": {
-                "all": "boss_tools:block/moon_stone"
+                "all": "boss_tools:blocks/moon_stone"
             }
         },
         "translucent": {

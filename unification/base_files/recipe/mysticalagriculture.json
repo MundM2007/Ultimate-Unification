@@ -75,7 +75,8 @@
     "inferium": {
         "variants": {
             "energy_from_coin": 100000,
-            "molten": "mysticalagradditions:molten_inferium"
+            "molten": "mysticalagradditions:molten_inferium",
+            "gem_multiplier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -131,7 +132,8 @@
     "inferium_gem": {},
     "prosperity": {
         "variants": {
-            "energy_from_coin": 96000
+            "energy_from_coin": 96000,
+            "gem_multiplier": 2
         },
         "add": [
             "appliedenergistics2.dust",
@@ -237,7 +239,8 @@
     "soulium": {
         "variants": {
             "energy_from_coin": 160000,
-            "molten": "mysticalagradditions:molten_soulium"
+            "molten": "mysticalagradditions:molten_soulium",
+            "gem_multiplier": 1.5
         },
         "add": [
             "boss_tools.plate",

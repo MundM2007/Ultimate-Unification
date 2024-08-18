@@ -1,0 +1,38 @@
+{
+    "azure_silver": {       
+        "type": "metal",
+        "drops": "silentgear:raw_azure_silver",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [15, 80],
+                    "size": 8,
+                    "count": 8,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "crimson_iron": {       
+        "type": "metal",
+        "drops": "silentgear:raw_crimson_iron",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [1, 128],
+                    "size": 9,
+                    "count": 14,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            }
+        ]
+    }
+}

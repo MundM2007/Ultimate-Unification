@@ -1,0 +1,20 @@
+{
+    "nebu": {     
+        "type": "metal",
+        "drops": "unification:nebu_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#atum-all"],
+                "gen": {
+                    "height": [1, 64],
+                    "size": 8,
+                    "count": 1,
+                    "biomes": {
+                        "values": ["atum:oasis", "atum:savanna", "atum:savanna_plateau", "atum:strange_sands"]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,540 @@
+{
+    "amethyst": {     
+        "type": "gem",
+        "drops": "aoa3:amethyst",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [13, 31],
+                    "size": 7,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "baronyte": {     
+        "type": "metal",
+        "drops": "unification:baronyte_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#barathos-all"],
+                "gen": {
+                    "height": [24, 36],
+                    "size": 8,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["aoa3:barren_grounds"]
+                    }
+                }
+            }
+        ]
+    },
+    "blazium": {
+        "type": "metal",
+        "drops": "unification:blazium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#barathos-all"],
+                "gen": {
+                    "height": [0, 20],
+                    "size": 8,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:barren_grounds"]
+                    }
+                }
+            }
+        ]
+    },
+    "bloodstone": {
+        "type": "gem",
+        "drops": "aoa3:bloodstone",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#abyss-all"],
+                "gen": {
+                    "height": [1, 64],
+                    "size": 12,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:abyssal_plains"]
+                    }
+                }
+            }
+        ]
+    },
+    "blue_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:blue_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "charged_runium": {
+        "type": "gem",
+        "drops": "aoa3:charged_runium_chunk",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#deeplands-all"],
+                "gen": {
+                    "height": [70, 115],
+                    "size": 18,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["aoa3:cavern_depths"]
+                    }
+                }
+            }
+        ]
+    },
+    "crystallite": {
+        "type": "gem",
+        "drops": "aoa3:crystallite",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#haven-all"],
+                "gen": {
+                    "height": [70, 115],
+                    "size": 18,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["aoa3:haven"]
+                    }
+                }
+            }
+        ]
+    },
+    "elecanium": {
+        "type": "metal",
+        "drops": "unification:elecanium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#runandor-all"],
+                "gen": {
+                    "height": [1, 35],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["aoa3:runic_cliffs"]
+                    }
+                }
+            }
+        ]
+    },
+    "emberstone": {
+        "type": "metal",
+        "drops": "unification:emberstone_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [3, 32],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            }
+        ]
+    },
+    "gemenyte": {
+        "type": "gem",
+        "drops": "aoa3:gemenyte",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#creeponia-all"],
+                "gen": {
+                    "height": [21, 37],
+                    "size": 6,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:creepoid_forest"]
+                    }
+                }
+            }
+        ]
+    },
+    "ghastly": {
+        "type": "metal",
+        "drops": "unification:ghastly_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#greckon-all"],
+                "gen": {
+                    "height": [30, 60],
+                    "size": 7,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:greckon_mountains"]
+                    }
+                }
+            }
+        ]
+    },
+    "ghoulish": {
+        "type": "metal",
+        "drops": "unification:ghoulish_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#greckon-all"],
+                "gen": {
+                    "height": [1, 30],
+                    "size": 7,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:greckon_mountains"]
+                    }
+                }
+            }
+        ]
+    },
+    "green_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:green_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "jade": {
+        "type": "gem",
+        "drops": "aoa3:jade",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [15, 40],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [15, 40],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#ocean", "#river", "minecraft:beach"]
+                    }
+                }
+            }
+        ]
+    },
+    "jewelyte": {
+        "type": "gem",
+        "drops": "aoa3:jewelyte",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#creeponia-all"],
+                "gen": {
+                    "height": [21, 37],
+                    "size": 6,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:creepoid_forest"]
+                    }
+                }
+            }
+        ]
+    },
+    "limonite": {
+        "type": "metal",
+        "drops": "unification:limonite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [25, 250],
+                    "size": 7,
+                    "count": 15,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "lyon": {
+        "type": "metal",
+        "drops": "unification:lyon_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#iromine-all"],
+                "gen": {
+                    "height": [1, 64],
+                    "size": 7,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:iromine"]
+                    }
+                }
+            }
+        ]
+    },
+    "mystite": {
+        "type": "metal",
+        "drops": "unification:mystite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#mysterium-all"],
+                "gen": {
+                    "height": [1, 100],
+                    "size": 9,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:fungal_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "ornamyte": {
+        "type": "gem",
+        "drops": "aoa3:ornamyte",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#creeponia-all"],
+                "gen": {
+                    "height": [2, 15],
+                    "size": 6,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:creepoid_forest"]
+                    }
+                }
+            }
+        ]
+    },
+    "purple_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:purple_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "red_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:red_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "rosite": {
+        "type": "metal",
+        "drops": "unification:rosite_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [15, 50],
+                    "size": 10,
+                    "count": 4,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "runium": {
+        "type": "gem",
+        "drops": "aoa3:runium_chunk",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all"],
+                "gen": {
+                    "height": [5, 40],
+                    "size": 5,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "shyrestone": {
+        "type": "metal",
+        "drops": "unification:shyrestone_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#shyrelands-all"],
+                "gen": {
+                    "height": [65, 105],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:shyre_remnants"]
+                    }
+                }
+            }
+        ]
+    },
+    "shyregem": {
+        "type": "gem",
+        "drops": "aoa3:shyregem",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#shyrelands-all"],
+                "gen": {
+                    "height": [65, 105],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:shyre_remnants"]
+                    }
+                }
+            }
+        ]
+    },
+    "skeletal": {
+        "type": "gem",
+        "drops": ["aoa3:skullbone_fragment", "aoa3:chestbone_fragment", "aoa3:footbone_fragment", "aoa3:legbone_fragment"],
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#precasia-all"],
+                "gen": {
+                    "height": [65, 105],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["precasian_tall_forest"]
+                    }
+                }
+            }
+        ]
+    },
+    "varsium": {
+        "type": "metal",
+        "drops": "unification:varsium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#barathos-all"],
+                "gen": {
+                    "height": [24, 64],
+                    "size": 8,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["aoa3:barren_grounds"]
+                    }
+                }
+            }
+        ]
+    },
+    "white_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:white_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    },
+    "yellow_gemstone": {
+        "type": "gem",
+        "drops": "aoa3:yellow_gemstones",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#crystevia-all"],
+                "gen": {
+                    "height": [1, 115],
+                    "size": 13,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["aoa3:crystevian_caverns"]
+                    }
+                }
+            }
+        ]
+    }
+}

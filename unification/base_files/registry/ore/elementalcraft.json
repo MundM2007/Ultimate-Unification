@@ -1,0 +1,43 @@
+{
+    "inert_crystal": {     
+        "type": "gem",
+        "drops": "elementalcraft:inertcrystal",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 64],
+                    "size": 8,
+                    "count": 6,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 90],
+                    "size": 8,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 80],
+                    "size": 8,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -134,6 +134,7 @@
             ["immersiveengineering:crusher/ore_fluorite", "immersiveengineering.ore_processing_gem"],
             ["mekanism:processing/fluorite/from_block", "minecraft.storage_convert_gem"],
             ["mekanism:processing/fluorite/from_ore", "mekanism.ore_processing_gem"],
+            ["mekanism:processing/fluorite/to_ore", "mekanism.ore"],
             ["mekanism:storage_blocks/fluorite", "minecraft.storage_convert_gem"],
             ["thermal:compat/mekanism/pulverizer_mekanism_fluorite_ore", "thermal.ore_processing_gem"]
         ]

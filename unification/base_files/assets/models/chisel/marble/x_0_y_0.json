@@ -8,7 +8,7 @@
         "solid": {
             "parent": "minecraft:block/cube_all",
             "textures": {
-                "all": "chisel:block/basalt/raw"
+                "all": "chisel:block/marble/raw"
             }
         },
         "translucent": {

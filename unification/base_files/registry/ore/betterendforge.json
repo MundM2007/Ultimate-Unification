@@ -1,0 +1,38 @@
+{
+    "amber": {     
+        "type": "gem",
+        "drops": "betterendforge:raw_amber",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 50],
+                    "size": 7,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "thallasium": {     
+        "type": "metal",
+        "drops": "unification:thallasium_raw_material",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [30, 70],
+                    "size": 10,
+                    "count": 5,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}

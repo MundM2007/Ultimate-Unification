@@ -27,13 +27,23 @@ class KJSFileUtilities:
     # adds a tag to an item
     def add_tag(self, id_item, id_file, id_name, material_type, license_notice):
         path_script_file_item = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", "item", f"{id_file}.js")
-        is_block = material_type in ["raw_block", "storage_block"]
+        is_block = material_type in ["ore", "raw_block", "storage_block"]
         for tag in [f"forge:{material_type}s/{id_name}", f"forge:{material_type}s"]:
             self.FM.add_kjs(path_script_file_item, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('item.tags', event => {\n")
             if is_block:
                 path_script_file_block = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", "block", f"{id_file}.js")
                 self.FM.add_kjs(path_script_file_block, f"    event.add('{tag}', '{id_item}')\n", license_notice, 90, "onEvent('block.tags', event => {\n")
-    
+
+    def add_tag_ore(self, id_file, id_name, id_file_strata, id_name_strata, license_notice):
+        id_item = f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"
+        for type_tag in ["item", "block"]:
+            path_script_file_tag = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", type_tag, "ore", f"{id_file}.js")
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores/{id_name}', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_strata}', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_strata}/{id_file_strata}', '{id_item}')\n", 
+                            license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
+
 
     def add_element(self, id_file, id_name, material_type, color, harvest_level, destroy_time, explosion_resistance, add_element, license_notice):
         if material_type in ["raw_block", "storage_block"]:
@@ -89,40 +99,40 @@ class KJSFileUtilities:
     def add_slurry(self, id_file, id_name, color, license_notice):
         color = "0xffffff" if color == "" else color
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_slurry", f"{id_file}.js")
-        self.FM.add_kjs(path_script_file, f"    SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "if(Platform.isLoaded('mekanism')){\n", "}")
+        self.FM.add_kjs(path_script_file, f"    global.SLURRY.register('{id_name}_slurry', builder => builder.color({color}))\n", license_notice, 100, "if(Platform.isLoaded('mekanism')){\n", "}")
         self.UT.gen_lang_entry(id_file, id_name, "slurry")
         return True
     
 
     def add_coin(self, id_file, id_name, add_element, license_notice):
-        texture_path_new = f"unification:{id_file}/{id_name}/item/{id_name}_coin"
+        texture_path = f"unification:{id_file}/{id_name}/item/{id_name}_coin"
         for i in range(5):
-            if not self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path_new + str(i)), add_element, True):
+            if not self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, f"coin{i}"), self.UT.resource_location_to_path(texture_path + str(i)), add_element, True):
                 for j in range(5):
                     if i != j:
-                        self.FM.handle_texture("", self.UT.resource_location_to_path(texture_path_new + str(j)), False, True)
+                        self.FM.handle_texture("", self.UT.resource_location_to_path(texture_path + str(j)), False, True)
                     self.FM.remove_json(os.path.join(self.UT.pack_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json"))
                 self.FM.remove_json(os.path.join(self.UT.pack_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json"))
                 return False
             
             path_model_file = os.path.join(self.UT.pack_path, "resources", "unification", "models", id_file, id_name, "item", f"{id_name}_coin{i}.json")
-            model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path_new + str(i) + '"}}'
+            model_json = '{"parent": "item/generated", "textures": {"layer0": "' + texture_path + str(i) + '"}}'
             self.FM.add_json(path_model_file, model_json)
         
         self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}.js"), 
-                       f"    global.scripts.add_coin(event, '{id_name}')\n", license_notice, 100, "onEvent('item.registry', event => {\n")
+                        f"    global.scripts.add_coin(event, '{id_name}', '{texture_path}')\n", license_notice, 100, "onEvent('item.registry', event => {\n")
         self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin", f"{id_file}_register_item_property.js"),
-                       f"    global.scripts.register_item_property('unification:{id_name}_coin')\n", license_notice, 100, "onEvent('postinit', event => {\n")
+                        f"    global.scripts.register_item_property('unification:{id_name}_coin')\n", license_notice, 100, "onEvent('postinit', event => {\n")
         self.UT.gen_lang_entry(id_file, id_name, "coin")
 
         main_model = (f'{{"parent": "item/generated", '
-                      f'"textures": {{"layer0": "{texture_path_new + "0"}"}}, '
+                      f'"textures": {{"layer0": "{texture_path + "0"}"}}, '
                         f'"overrides": ['
-                          f'{{"predicate": {{"count": 0.00000}}, "model": "{texture_path_new + "0"}"}}, '
-                          f'{{"predicate": {{"count": 0.03125}}, "model": "{texture_path_new + "1"}"}}, '
-                          f'{{"predicate": {{"count": 0.25000}}, "model": "{texture_path_new + "2"}"}}, '
-                          f'{{"predicate": {{"count": 0.50000}}, "model": "{texture_path_new + "3"}"}}, '
-                          f'{{"predicate": {{"count": 1.00000}}, "model": "{texture_path_new + "4"}"}}'
+                          f'{{"predicate": {{"count": 0.00000}}, "model": "{texture_path + "0"}"}}, '
+                          f'{{"predicate": {{"count": 0.03125}}, "model": "{texture_path + "1"}"}}, '
+                          f'{{"predicate": {{"count": 0.25000}}, "model": "{texture_path + "2"}"}}, '
+                          f'{{"predicate": {{"count": 0.50000}}, "model": "{texture_path + "3"}"}}, '
+                          f'{{"predicate": {{"count": 1.00000}}, "model": "{texture_path + "4"}"}}'
                         f']'
                       f'}}')
         self.FM.add_json(os.path.join(self.UT.pack_path, "kubejs", "assets", "unification", "models", "item", f"{id_name}_coin.json"), main_model)
@@ -141,11 +151,17 @@ class KJSFileUtilities:
 
 
     def remove_tag(self, id_item, id_file, id_name, material_type, license_notice):
-        path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag", "items", f"{id_file}.js")
+        path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag", "item", f"{id_file}.js")
         for tag in [f"forge:{material_type}s/{id_name}", f"forge:{material_type}s"]:
             self.FM.add_kjs(path_script_file, f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('item.tags', event => {\n")
             if material_type in ["raw_block", "storage_block"]:
-                self.FM.add_kjs(path_script_file.replace("items", "blocks"), f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
+                self.FM.add_kjs(path_script_file.replace("item", "block"), f"    event.remove('{tag}', '{id_item}')\n", license_notice, 120, "onEvent('block.tags', event => {\n")
+
+    def remove_tag_ore(self, id_file, id_name, license_notice):
+        for type_tag in ["item", "block"]:
+            for tag in [f"forge:ores/{id_name}", f"forge:ores"]:
+                path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag", type_tag, "ore", f"{id_file}.js")
+                self.FM.add_kjs(path_script_file, f"    event.removeAll('{tag}')\n", license_notice, 120, f"onEvent('{type_tag}.tags', event => {{\n")
 
     
     def replace_input(self, id_item, new_tag, id_file, license_notice):
@@ -161,3 +177,61 @@ class KJSFileUtilities:
     def replace_loot(self, id_item, new_id_item, id_file, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "replace_loot", f"{id_file}.js")
         self.FM.add_kjs(path_script_file, f"    global.lp.replace(event, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('lootjs', event => {\n")
+
+
+    def add_ore(self, id_file, id_name, stratas, drop_info, gem_multiplier, harvest_level, destroy_time, explosion_resistance, license_notice):
+        texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_ore"
+        if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, "ore"), self.UT.resource_location_to_path(texture_path), True, True):
+            drop_function = ""
+            if drop_info and not self.UT.get_main_config(f"{drop_info["type"]}_ore_drop_itself", False):
+                fortune_part = "with_fortune" if self.UT.get_main_config(f"{drop_info["type"]}_fortune_affected", True) else "without_fortune"
+                silk_touch_part = "with_silk_touch" if self.UT.get_main_config(f"{drop_info["type"]}_silk_touch_affected", True) else "without_silk_touch"
+                drop_function = f"global.lp.{fortune_part}.{silk_touch_part}"
+            path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_ore", f"{id_file}.js")
+            path_script_file_drops = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_loot", f"{id_file}.js")
+            path_recipe_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", "ore", id_file)
+            
+            for strata in stratas:
+                if not self.UT.strata_exists(strata):
+                    continue
+                id_file_strata = strata[:strata.find(".")]
+                id_name_strata = strata[strata.find(".") + 1:]
+
+                resource_location_item_model = f'unification:item/{id_name}_ore_{id_file_strata}_{id_name_strata}'
+                resource_location_block_model = f'unification:{id_file}/{id_name}/block/{id_name}_ore/{id_file_strata}/{id_name_strata}/'
+                self.FM.add_json(self.UT.resource_location_to_path(resource_location_item_model, "model", True), {"parent": resource_location_block_model + "x_0_y_0"})
+
+                model_path = os.path.join(self.LM.path_program, "base_files", "assets", "models", id_file_strata, id_name_strata)
+                for model_file in os.listdir(model_path):
+                    model = (self.IOM.read(os.path.join(model_path, model_file)) % (id_file, id_name, id_name, id_file, id_name, id_name)).replace("\n", "").replace("\t", "").replace(" ", "")
+                    self.FM.add_json(self.UT.resource_location_to_path(resource_location_block_model + model_file.removesuffix(".json"), "model"), model)
+
+                blockstate = self.IOM.read(os.path.join(self.LM.path_program, "base_files", "assets", "blockstates", id_file_strata, f"{id_name_strata}.json"))
+                blockstate = blockstate % (blockstate.count("model") * (id_file, id_name, id_name))
+                blockstate = blockstate.replace("\n", "").replace("\t", "").replace(" ", "")
+
+                strata_object = self.UT.get_strata(strata)
+                properties = str([f"BlockProperties.{property_}" for property_ in strata_object["properties"]])#.replace("'", "")
+                harvest_level = max(harvest_level, strata_object["harvest_level"]) if strata_object["harvest_level"] != -1 else -1
+                destroy_time = max(destroy_time, strata_object["destroy_time"])
+                explosion_resistance = max(explosion_resistance, strata_object["explosion_resistance"])
+
+                self.FM.add_kjs(path_script_file, (f"    global.block_ids.push(global.scripts.add_ore(event, '{id_name}', '{id_file_strata}_{id_name_strata}', '{strata_object['material']}', "
+                                f"{properties}, '{strata_object['harvest_tool']}', {harvest_level}, {destroy_time}, {explosion_resistance}, {blockstate}, "
+                                f"'{resource_location_item_model}'))\n"), license_notice, 95, "onEvent('block.registry', event => {\n")
+                self.UT.gen_lang_entry(id_file, id_name, "ore", id_file_strata, id_name_strata)
+
+                ore_id = f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"
+                if drop_function:
+                    self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']})\n"), 
+                                    license_notice, 90, "onEvent('lootjs', event => {\n")
+                self.add_tag_ore(id_file, id_name, id_file_strata, id_name_strata, license_notice)
+                
+                # use strata block
+                if(self.UT.check_mod("mekanism")):
+                    self.FM.add_kjs(os.path.join(path_recipe_file, f"{id_name}.js"), 
+                                    f"    global.rp.mekanism.ore(event, '{ore_id}', {drop_info['drops']}, '{strata_object['block']}', {gem_multiplier})\n", 
+                                    license_notice, 50, "onEvent('recipes', event => {\n")
+
+            return True
+        return False

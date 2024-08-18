@@ -56,6 +56,9 @@ class Utilities:
             self.config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "main.json")))
         except json.JSONDecodeError as e:
             self.LM.log("critical_json_error", f"Error decoding JSON content of the file: main.json", e)
+        
+        self.stratas = dict()
+        self.strata_tags = dict()
 
 
     # gets the file path from a resource location
@@ -80,7 +83,7 @@ class Utilities:
     def get_texture_path(self, id_file, id_name, material_type, new_texture_rl=""):
         extra_texture_name = (new_texture_rl[-1] if material_type == "coin" else "") if new_texture_rl != "" else ""
         return os.path.join(self.LM.path_program, "base_files", "assets", "textures", id_file, id_name, 
-                            "block" if material_type in ["raw_block", "storage_block"] else "item", 
+                            "block" if material_type in ["ore", "raw_block", "storage_block"] else "item", 
                             f"{id_name}_{material_type}{extra_texture_name}.png")
                     
 
@@ -115,14 +118,16 @@ class Utilities:
         if material_type in mod_mapping:
             if not self.check_mod(mod_mapping[material_type]):
                 if not self.check_mod_written(mod_mapping[material_type]):
-                    self.LM.log("mod_not_found", f"Mod {mod_mapping[material_type]} not found in the mod list")
+                    self.LM.log_same_message_once("mod_not_found", f"Mod {mod_mapping[material_type]} not found in the mod list")
                 return False
 
         return True
 
 
-    def get_lang_key(self, id_name, material_type):
-        if material_type in ["raw_block", "storage_block"]:
+    def get_lang_key(self, id_name, material_type, id_file_strata="", id_name_strata=""):
+        if material_type == "ore":
+            return f"block.unification.{id_name}_ore_{id_file_strata}_{id_name_strata}"
+        elif material_type in ["raw_block", "storage_block"]:
             return f"block.unification.{id_name}_{material_type}"
         elif material_type == "molten":
             return f"fluid.unification.{id_name}_molten"
@@ -134,14 +139,43 @@ class Utilities:
             return f"item.unification.{id_name}_{material_type}"
 
 
-    def gen_lang_entry(self, id_file, id_name, material_type):
-        for lang in self.langs:
-            path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
-            for material_type in [f"dirty_{material_type}", f"clean_{material_type}"] if material_type in ["slurry"] else [material_type]:
-                if lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
-                    self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(f"{id_file}.{id_name}.{material_type}")})
+    def gen_lang_entry(self, id_file, id_name, material_type, id_file_strata="", id_name_strata=""):
+        if id_file_strata:
+            for lang in self.langs:
+                path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
+                if lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}") is not None:
+                    self.FM.add_json(path_lang_file, {
+                        self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
+                        lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}")
+                    })
+                elif lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
+                    if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
+                            self.FM.add_json(path_lang_file, {
+                                self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
+                                lang.get(f"{id_file}.{id_name}.{material_type}") % lang.get(f"strata.{id_file_strata}.{id_name_strata}")
+                            })
+                    else:
+                        self.LM.log("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
+                elif lang.get(material_type) is not None:
+                    if lang.get(f"{id_file}.{id_name}") is not None:
+                        if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
+                            self.FM.add_json(path_lang_file, {
+                                self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
+                                lang.get(material_type) % (lang.get(f"{id_file}.{id_name}"), lang.get(f"strata.{id_file_strata}.{id_name_strata}"))
+                            })
+                        else:
+                            self.LM.log("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
+                    else:
+                        self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                 else:
-                    if lang.get(material_type) is not None:
+                    self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
+        else:
+            for lang in self.langs:
+                path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
+                for material_type in [f"dirty_{material_type}", f"clean_{material_type}"] if material_type in ["slurry"] else [material_type]:
+                    if lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
+                        self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(f"{id_file}.{id_name}.{material_type}")})
+                    elif lang.get(material_type) is not None:
                         if lang.get(f"{id_file}.{id_name}") is not None:
                             self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
                         else:
@@ -159,3 +193,51 @@ class Utilities:
             else:
                 return {} if fallback == "dict" else [] if fallback == "list" else fallback
         return config_temp
+
+
+    def register_strata(self, name, strataDict):
+        if not self.check_mod(name[:name.find(".")]):
+            if not self.check_mod_written(name[:name.find(".")]):
+                self.LM.log_same_message_once("mod_not_found", f"Mod {name[:name.find('.')]} not found in the mod list")
+            return
+
+        if strataDict.get("block") is None:
+            self.LM.log("strata_error", f"Strata '{name}' is missing a 'block' field. It will be ignored.")
+            return
+        
+        self.stratas[name] = {
+            "block": strataDict["block"],
+            "properties": strataDict.get("properties", []),
+            "falling": strataDict.get("falling", False),
+            "material": strataDict.get("material", "rock"),
+            "sound_type": strataDict.get("sound_type", "stone"),
+            "harvest_tool": strataDict.get("harvest_tool", "pickaxe"),
+            "harvest_level": strataDict.get("harvest_level", 0),
+            "destroy_time": strataDict.get("destroy_time", 1.5),
+            "explosion_resistance": strataDict.get("explosion_resistance", 6)
+        }
+
+        for tag in strataDict.get("tags", []):
+            if tag in self.strata_tags:
+                self.strata_tags[tag].append(name)
+            else:
+                self.strata_tags[tag] = [name]
+
+
+    def strata_exists(self, name):
+        return name in self.stratas
+
+
+    def get_strata(self, name):
+        return self.stratas.get(name, {})
+
+
+    def get_stratas_in_values(self, values):
+        stratas = []
+        for value in values:
+            if value.startswith("#"):
+                stratas.extend(self.strata_tags.get(value[1:], []))
+            elif self.strata_exists(value):
+                stratas.append(value)
+
+        return stratas

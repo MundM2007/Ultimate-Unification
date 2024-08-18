@@ -68,7 +68,7 @@ onEvent("loaded", e => {
             ore_processing_metal: (event, material, ingot) => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
-                    nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                    nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                     if (checkTag(input) && checkItems(ingot)) {
                         global.mrt.astralsorcery.infuser(event, Item.of(ingot, nUni ? 2 * (i===2 ? 9 : 1) : 3 * (i===2 ? 9 : 1)), input, 100,  i===2 ? 0.7 : 0.1, [true], 
                             "astralsorcery:liquid_starlight", `unification:astralsorcery/infuser/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material", "raw_block"][i]}`)
@@ -88,7 +88,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(ingot)) {
-                        let nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        let nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         global.mrt.betterendforge.alloying(event, Item.of(ingot, nUni ? 3 * (i===2 ? 9 : 1) : 4 * (i===2 ? 9 : 1)), [input, input], i===2 ? 18 : 2, i===2 ? 1800 : 200, 
                             `unification:betterendforge/alloying/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material", "raw_block"][i]}`)
                     }
@@ -111,7 +111,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         if(checkItems(dust)){
                             countOut = [[[1, 0.5], [2, 0]], [[1, 0.5], [2, 0]], [[13, 0.5], [18, 0]]][i][nUni ? 0 : 1]
                             event.recipes.bloodmagic.arc(
@@ -224,7 +224,7 @@ onEvent("loaded", e => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(crushed_ore)) {
                         
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[[1, 0.4], [2, 0]], [[1, 0.4], [2, 0]], [[12, 0.6], [18, 0]], [[0, 0.35], [0, 0.5]]][i][nUni ? 0 : 1]
                         event.recipes.createCrushing(
                             [Item.of(crushed_ore, countOut[0]), Item.of(crushed_ore).withChance(countOut[1])].slice(countOut[0]===0 ? 1 : 0, countOut[1]===0 ? 1 : 2)
@@ -279,7 +279,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(dust)) {
-                        if (!(input===`#forge:ores/${material}`) && ore_drops_fortune){
+                        if (!(input===`#forge:ores/${material}`) && metal_ore_drops_fortune){
                             countOut = [3, 3, 27, 3][i]
                             event.shapeless(Item.of(dust, countOut), 
                                 [Item.of("engineerstools:crushing_hammer").ignoreNBT(), input, input, input, input, input, input, input, input].slice(0, i===3 ? 9 : 3))
@@ -326,7 +326,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(dust)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[[1, 0.4], [2, 0]], [[1, 0.4], [2, 0]], [[12, 0.6], [18, 0]], [[0, 0.35], [0, 0.5]]][i][nUni ? 0 : 1]
                         global.mrt.ftbic.macerating(event, [Item.of(dust, countOut[0]), Item.of(dust).withChance(countOut[1])].slice(countOut[0]===0 ? 1 : 0, countOut[1]===0 ? 1 : 2), input, 
                             `unification:ftbic/macerating/ore_processing/${removeMod(dust)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}`)
@@ -394,7 +394,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
 
                         if(checkItems(dust)){
                             event.shapeless(Item.of(dust, [1, 1, 9, 1][i]), [Item.of("immersiveengineering:hammer").ignoreNBT(), input, input, input, input].slice(0, i===3 ? 5 : 2))
@@ -477,7 +477,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(dust)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         if (nUni) {
                             countOut = [[1, 0.5], [1, 0.5], [13, 0.5], [0, 0.375]][i]
                             global.mrt.integrateddynamics.squeezer(event, [Item.of(dust, countOut[0]), Item.of(dust).withChance(countOut[1])].slice(countOut[0]===0 ? 1 : 0, 2), "", input,
@@ -509,21 +509,13 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore: (event, material, stratas, gem_multiplier) => {
-                if (checkTag(`#forge:raw_materials/${material}`)) {
-                    stratas.forEach(strata => {
-                        let ore = `osv:custom_${material}_ore`
-                        if (!(strata === "minecraft:stone")) {
-                            if (strata.startsWith("minecraft:")){
-                                ore += removeMod(strata)
-                            } else {
-                                ore += strata.replace(":", "_")
-                            }
-                        }
-                        global.mrt.mekanism.combining(event, ore, [`${8*gem_multiplier}x #forge:raw_materials/${material}`, strata], 
-                            `unification:mekanism/combining/component/${removeMod(ore)}/from_${strata}`)
-                    })
-                }
+            ore: (event, ore, drops, strata, gem_multiplier) => {
+                drops.forEach(drop => {
+                    if(Item.of(drop, Math.ceil(5*gem_multiplier)).isEmpty()) console.log(drop)
+                    if(Item.of(strata).isEmpty()) console.log(strata)
+                    global.mrt.mekanism.combining(event, ore, [Item.of(drop, 5*gem_multiplier), strata], 
+                        `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop`)
+                })
             },
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
@@ -537,7 +529,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         if(checkItems(dust)){
                             countIn = [[3, 1], [3, 1], [1, 1], [3, 2]][i][nUni ? 0 : 1]
                             countOut = [[4, 2], [4, 2], [12, 18], [1, 1]][i][nUni ? 0 : 1]
@@ -601,7 +593,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(dust)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[2, 3], [2, 3], [18, 27], [0.5, 0.75]][i][nUni ? 0 : 1]
                         global.mrt.occultism.crushing(event, Number.isInteger(countOut) ? Item.of(dust, countOut) : Item.of(dust).withChance(countOut), input, 
                             `unification:occultism/crushing/ore_processing/${removeMod(dust)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}`)
@@ -643,7 +635,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(dust)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         if (nUni){
                             countOut = [[1, 0.4], [1, 0.4], [12, 0.6], [0, 0.35]][i]
                             global.mrt.silents_mechanisms.crushing(event, [Item.of(dust, countOut[0]), Item.of(dust).withChance(countOut[1])].slice(countOut[0]===0 ? 1 : 0, 2), input, 200, 
@@ -671,7 +663,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && !Fluid.of(molten).equals(Fluid.empty)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[144, 192], [144, 192], [1296, 1728], [36, 48]][i][nUni ? 0 : 1]
                         global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, countOut), [], input, 800, 100, 
                             `unification:tconstruct/melting/ore_processing/${removeMod(molten)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}`)
@@ -782,7 +774,7 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input)) {
-                        nUni = !(input===`#forge:ores/${material}`) && ore_drops_fortune
+                        nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         if (nUni) {
                             if(checkItems(ingot)){
                                 countOut = [1.300001 , 1.300001, 11.700001, 0.325][i]

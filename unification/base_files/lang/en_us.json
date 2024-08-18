@@ -11,6 +11,7 @@
     "coin": "%s Coin",
     "gear": "%s Gear",
 
+	"ore": "%s Ore (%s)",
     "piece": "%s Ore Piece",
     "raw_block": "Block of Raw %s",
     "raw_material": "Raw %s",
@@ -314,6 +315,93 @@
     
 	"thermal.apatite": "Apatite",
 	"thermal.cinnabar": "Cinnabar",
+
+	"strata.aoa3.abyssal_stone": "Abyssal Stone",
+	"strata.aoa3.aromatic_stone": "Aromatic Stone",
+	"strata.aoa3.baron_stone": "Baron Stone",
+	"strata.aoa3.bright_rock": "Bright Rock",
+	"strata.aoa3.coral_rock": "Coral Rock",
+	"strata.aoa3.creep_stone": "Creep Stone",
+	"strata.aoa3.crystallised_rock": "Crystallised Rock",
+	"strata.aoa3.darkened_rock": "Darkened Rock",
+	"strata.aoa3.dense_stone": "Dense Stone",
+	"strata.aoa3.fungal_rock": "Fungal Rock",
+	"strata.aoa3.greckon_stone": "Greckon Stone",
+	"strata.aoa3.hellstone": "Hellstone",
+	"strata.aoa3.irostone": "Irostone",
+	"strata.aoa3.lelyetian_stone": "Lelyetian Stone",
+	"strata.aoa3.polluted_stone": "Polluted Stone",
+	"strata.aoa3.pressed_creep_stone": "Pressed Creep Stone",
+	"strata.aoa3.primed_stone": "Primed Stone",
+	"strata.aoa3.runic_stone": "Runic Stone",
+	"strata.aoa3.weightless_stone": "Weightless Stone",
+
+	"strata.astralsorcery.marble_raw": "Marble",
+
+	"strata.atum.limestone": "Limestone",
+
+	"strata.betterendforge.brimstone": "Brimstone",
+
+	"strata.boss_tools.mars_stone": "Mars Stone",
+	"strata.boss_tools.mercury_stone": "Mercury Stone",
+	"strata.boss_tools.moon_stone": "Moon Stone",
+	"strata.boss_tools.venus_stone": "Venus Stone",
+
+	"strata.botania.livingrock": "Livingrock",
+
+	"strata.byg.black_sand": "Black Sand",
+	"strata.byg.blue_netherrack": "Blue Netherrack",
+	"strata.byg.blue_sand": "Blue Sand",
+	"strata.byg.brimstone": "Brimstone",
+	"strata.byg.cryptic_stone": "Cryptic Stone",
+	"strata.byg.end_sand": "End Sand",
+	"strata.byg.ether_stone": "Ether Stone",
+	"strata.byg.pink_sand": "Pink Sand",
+	"strata.byg.purple_sand": "Purple Sand",
+	"strata.byg.red_rock": "Red Rock",
+	"strata.byg.rocky_stone": "Rocky Stone",
+	"strata.byg.scoria_stone": "Scoria Stone",
+	"strata.byg.soapstone": "Soapstone",
+	"strata.byg.white_sand": "White Sand",
+
+	"strata.chisel.basalt": "Basalt",
+	"strata.chisel.limestone": "Limestone",
+	"strata.chisel.marble": "Marble",
+
+	"strata.create.dolomite": "Dolomite",
+	"strata.create.gabbro": "Gabbro",
+	"strata.create.limestone": "Limestone",
+	"strata.create.natural_scoria": "Natural Scoria",
+	"strata.create.weathered_limestone": "Weathered Limestone",
+
+	"strata.divinerpg.frozen_stone": "Frozen Stone",
+	"strata.divinerpg.twilight_stone": "Twilight Stone",
+
+	"strata.forbidden_arcanus.darkstone": "Darkstone",
+
+	"strata.minecraft.andesite": "Andesite",
+	"strata.minecraft.basalt": "Basalt",
+	"strata.minecraft.blackstone": "Blackstone",
+	"strata.minecraft.diorite": "Diorite",
+	"strata.minecraft.end_stone": "End Stone",
+	"strata.minecraft.granite": "Granite",
+	"strata.minecraft.netherrack": "Netherrack",
+	"strata.minecraft.red_sand": "Red Sand",
+	"strata.minecraft.sand": "Sand",
+	"strata.minecraft.soul_soil": "Soul Soil",
+	"strata.minecraft.stone": "Stone",
+
+	"strata.mysticalagriculture.soulstone": "Soulstone",
+
+	"strata.quark.brimstone": "Brimstone",
+	"strata.quark.deepslate": "Deepslate",
+	"strata.quark.elder_prismarine": "Elder Prismarine",
+	"strata.quark.jasper": "Jasper",
+	"strata.quark.limestone": "Limestone",
+	"strata.quark.marble": "Marble",
+	"strata.quark.myalite": "Myalite",
+	"strata.quark.slate": "Slate",
+	"strata.quark.voidstone": "Voidstone",
 
 
 	"projectred-core.electrotine.dust": "Electrotine Dust"

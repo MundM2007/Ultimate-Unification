@@ -1,0 +1,125 @@
+{
+    "arcane_crystal": {     
+        "type": "gem",
+        "drops": "forbidden_arcanus:arcane_crystal",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 25],
+                    "size": 5,
+                    "count": 3,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 55],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20, 45],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "dark_rune": {     
+        "type": "gem",
+        "drops": "forbidden_arcanus:dark_rune",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [1, 10],
+                    "size": 3,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [20, 30],
+                    "size": 2,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [20,  30],
+                    "size": 2,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    },
+    "rune": {     
+        "type": "gem",
+        "drops": "forbidden_arcanus:rune",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "height": [10, 35],
+                    "size": 3,
+                    "count": 2,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#the_end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "height": [30, 65],
+                    "size": 2,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "height": [30,  55],
+                    "size": 2,
+                    "count": 2,
+                    "biomes": {
+                        "values": ["#the_end"]
+                    }
+                }
+            }
+        ]
+    }
+}
