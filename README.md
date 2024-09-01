@@ -94,8 +94,10 @@ Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ult
 - strata world gen
 - support for ore generating methods, e.g. occultism miner, environmental tech
 - data structure verification for base_files
-- fluid unification (oil)
+- oil unification
 - new mystical agriculture crops
+- changing the lang files for existing items and blocks
+- change block properties of blocks
 
 ## Join our Discord
 
