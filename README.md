@@ -98,6 +98,7 @@ Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ult
 - new mystical agriculture crops
 - changing the lang files for existing items and blocks
 - change block properties of blocks
+- all nuclearcraft stuff (depends weither the mod will ever be continued on 1.16)
 
 ## Join our Discord
 
