@@ -88,7 +88,7 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 
 Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new/choose) and I'll look into it.
 
-## Planed Features
+## Planned Features
 
 - more mod support
 - strata world gen
