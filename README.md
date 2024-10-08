@@ -6,8 +6,8 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 
 ## Installation / Setup
 
-To install just paste the kubejs and unification folders provided in this repository into the minecraft modpack instance.
-For Setup check out the [wiki](https://github.com/MundM2007/Ultimate-Unification/wiki).
+To install just paste the kubejs and unification folders provided in this repository into the minecraft modpack instance.<br/>
+For Setup check out the [wiki](https://github.com/MundM2007/Ultimate-Unification/wiki).<br/>
 To Generate all the Kubejs scripts aswell as asset files run the main.py in the unification folder.
 
 ## Required Mods
