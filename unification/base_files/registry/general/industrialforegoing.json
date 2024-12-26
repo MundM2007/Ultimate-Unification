@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "pink_slime": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
         
         "replace": [
             ["ingot", "industrialforegoing:items/pink_slime_ingot", "industrialforegoing:pink_slime_ingot"]
@@ -36,7 +42,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b45ca5"
+            "molten#b45ca5",
+            "mysticalagriculture#b45ca5"
         ],
         "remove": {}
     }, 
@@ -46,6 +53,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
         
         "replace": [
             ["gem", "industrialforegoing:items/pink_slime", "industrialforegoing:pink_slime"]

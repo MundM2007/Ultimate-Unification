@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import json
@@ -83,7 +83,7 @@ class Utilities:
     def get_texture_path(self, id_file, id_name, material_type, new_texture_rl=""):
         extra_texture_name = (new_texture_rl[-1] if material_type == "coin" else "") if new_texture_rl != "" else ""
         return os.path.join(self.LM.path_program, "base_files", "assets", "textures", id_file, id_name, 
-                            "block" if material_type in ["ore", "raw_block", "storage_block"] else "item", 
+                            "block" if material_type in ["ore"] + self.get_main_config("advanced.block_material_types", "list_blocks") else "item", 
                             f"{id_name}_{material_type}{extra_texture_name}.png")
                     
 
@@ -109,7 +109,7 @@ class Utilities:
             "slurry": "mekanism",
             "fragment": "bloodmagic",
             "gravel": "bloodmagic",
-            "crushed_ore": "create"
+            "crushed_ore": "create",
         }
 
         if "slurry" in material_type:
@@ -127,7 +127,7 @@ class Utilities:
     def get_lang_key(self, id_name, material_type, id_file_strata="", id_name_strata=""):
         if material_type == "ore":
             return f"block.unification.{id_name}_ore_{id_file_strata}_{id_name_strata}"
-        elif material_type in ["raw_block", "storage_block"]:
+        elif material_type in self.get_main_config("advanced.block_material_types", "list_blocks"):
             return f"block.unification.{id_name}_{material_type}"
         elif material_type == "molten":
             return f"fluid.unification.{id_name}_molten"
@@ -135,6 +135,8 @@ class Utilities:
             return f"slurry.unification.dirty_{id_name}_slurry"
         elif material_type == "clean_slurry":
             return f"slurry.unification.clean_{id_name}_slurry"
+        elif material_type == "mysticalagriculture":
+            return f"crop.mysticalcustomization.{id_name}"
         else:
             return f"item.unification.{id_name}_{material_type}"
 
@@ -164,11 +166,11 @@ class Utilities:
                                 lang.get(material_type) % (lang.get(f"{id_file}.{id_name}"), lang.get(f"strata.{id_file_strata}.{id_name_strata}"))
                             })
                         else:
-                            self.LM.log("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
+                            self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
                     else:
-                        self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
+                        self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                 else:
-                    self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
+                    self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
         else:
             for lang in self.langs:
                 path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
@@ -179,9 +181,9 @@ class Utilities:
                         if lang.get(f"{id_file}.{id_name}") is not None:
                             self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
                         else:
-                            self.LM.log("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
+                            self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                     else:
-                        self.LM.log("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
+                        self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
 
     
     @functools.lru_cache()
@@ -191,7 +193,7 @@ class Utilities:
             if config_temp.get(key) is not None:
                 config_temp = config_temp[key]
             else:
-                return {} if fallback == "dict" else [] if fallback == "list" else fallback
+                return {} if fallback == "dict" else [] if fallback == "list" else ["raw_block", "storage_block"] if fallback == "list_blocks" else fallback
         return config_temp
 
 

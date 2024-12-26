@@ -1,0 +1,6 @@
+{
+    "replace": [
+        ["world.azureSilver", "count", 0, 8],
+        ["world.crimsonIron", "count", 0, 8]
+    ]
+}

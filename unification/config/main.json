@@ -18,19 +18,22 @@
         "c6": "Here recipe types can be configured to never add new recipes, in some cases these recipes can still exist if being replaced; is prioritized over recipe_types_to_keep",
         "recipe_types_to_remove": [],
 
-        "c7": "Here you can enable weither failed item replacements should be added as a new item instead, also affects the modes 'replace' and 'no_add' by allowing materials_types from remove to also be replaced again",
+        "c7": "Here you can enable weither overhouled recipes for mystical agriculture seed growing in botany pots should be added, or the orginal values should be kept",
+        "new_seed_recipes": true,
+
+        "c8": "Here you can enable weither failed item replacements should be added as a new item instead, also affects the modes 'replace' and 'no_add' by allowing materials_types from remove to also be replaced again",
         "add_failed_replacements": true,
 
-        "c8": "Here you can enable weither the material_type check for mod specific materials should be disabled (e.g. for crushed_ore from create)",
+        "c9": "Here you can enable weither the material_type check for mod specific materials should be disabled (e.g. for crushed_ore from create)",
         "disable_material_type_check": false,
 
-        "c9": "Here you can enable or disable weither gems textures should be replaced",
+        "c10": "Here you can enable or disable weither gems textures should be replaced",
         "replace_gem_textures": true,
 
-        "c10": "Here you can enable or disable weither textures should be replaced at all; overwrites replace_gem_textures if false",
+        "c11": "Here you can enable or disable weither textures should be replaced at all; overwrites replace_gem_textures if false",
         "replace_textures": true,
 
-        "c11": "Which resource loader to use for textures; options: 'lmr' - faster, but may not work; 'kubejs' - a lot slower, but definetly always works",
+        "c12": "Which resource loader to use for textures; options: 'lmr' - faster, but may not work; 'kubejs' - a lot slower, but definetly always works",
         "resource_loader": "lmr"
     },
 
@@ -38,25 +41,28 @@
         "c1": "Weither ores should be added at all",
         "active": true,
 
-        "c2": "Weither the metal ores should drop itself",
+        "c2": "Weither the generation of other ores should be disabled. Set to null to not interfere with configs and false to load config defaults for generating ores",
+        "disable_other_ores": null,
+
+        "c3": "Weither the metal ores should drop itself",
         "metal_ore_drop_itself": false,
 
-        "c3": "Weither the metal should be affected by fortune, disabled when dropping the ore itself",
+        "c4": "Weither the metal should be affected by fortune, disabled when dropping the ore itself",
         "metal_fortune_affected": true,
 
-        "c4": "Weither the metal should be affected by silk touch, disabled when dropping the ore itself",
+        "c5": "Weither the metal should be affected by silk touch, disabled when dropping the ore itself",
         "metal_silktouch_affected": true,
 
-        "c5": "Weither the gem ores should drop itself",
+        "c6": "Weither the gem ores should drop itself",
         "gem_ore_drop_itself": false,
 
-        "c6": "Weither the gem should be affected by fortune, disabled when dropping the ore itself",
+        "c7": "Weither the gem should be affected by fortune, disabled when dropping the ore itself",
         "gem_fortune_affected": true,
 
-        "c7": "Weither the gem should be affected by silk touch, disabled when dropping the ore itself",
+        "c8": "Weither the gem should be affected by silk touch, disabled when dropping the ore itself",
         "gem_silktouch_affected": true,
 
-        "c8": "Here you can modify the ore drop dimension multiplier for the ores",
+        "c9": "Here you can modify the ore drop dimension multiplier for the ores",
         "dim_multiplier": {
             "atum": 1.5,
             "end": 2,
@@ -67,5 +73,12 @@
             "overworld": 1,
             "venus": 1.5
         }
+    },
+    "advanced": {
+        "c1": "Here you can set the material types that should be registered as a block. Only change this if you know what you are doing!",
+        "block_material_types": [
+            "storage_block",
+            "raw_block"
+        ]
     }
-  }
+}

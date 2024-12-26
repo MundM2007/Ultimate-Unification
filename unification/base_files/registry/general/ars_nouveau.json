@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "source_gem": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
         
         "replace": [
             ["gem", "ars_nouveau:items/mana_gem", "ars_nouveau:mana_gem"],
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#da97fc"
+            "molten#da97fc",
+            "mysticalagriculture#da97fc"
         ],
         "remove": {}
     }

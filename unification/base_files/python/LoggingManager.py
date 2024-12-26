@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import os

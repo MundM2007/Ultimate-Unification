@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apalachia": {
@@ -23,11 +23,17 @@
             "destroy_time": 8,
             "explosion_resistance": 8
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/apalachia_block", "divinerpg:apalachia_block"],
             ["gem", "divinerpg:items/apalachia_gem", "divinerpg:apalachia_gem"],
-            ["parts", "divinerpg:items/apalachia_fragments", "divinerpg:apalachia_fragments"]
+            ["part", "divinerpg:items/apalachia_fragments", "divinerpg:apalachia_fragments"]
         ],
         "add": [
             "dust",
@@ -36,7 +42,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#a630b4"
+            "molten#a630b4",
+            "mysticalagriculture#a630b4"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "divinerpg:items/aquatic_ingot", "divinerpg:aquatic_ingot"]
@@ -59,7 +72,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#41a0cc"
+            "molten#41a0cc",
+            "mysticalagriculture#41a0cc"
         ],
         "remove": {}
     },
@@ -69,6 +83,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/arlemite_block", "divinerpg:arlemite_block"],
@@ -93,7 +113,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#579f3f"
+            "molten#579f3f",
+            "mysticalagriculture#579f3f"
         ],
         "remove": {}
     },
@@ -103,6 +124,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/bloodgem_block", "divinerpg:bloodgem_block"],
@@ -115,7 +142,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#982b6a"
+            "molten#982b6a",
+            "mysticalagriculture#982b6a"
         ],
         "remove": {}
     },
@@ -125,6 +153,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/bluefire_stone", "divinerpg:bluefire_stone"]
@@ -137,7 +171,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#486ae3"
+            "molten#486ae3",
+            "mysticalagriculture#486ae3"
         ],
         "remove": {}
     },
@@ -147,6 +182,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/corrupted_stone", "divinerpg:corrupted_stone"]
@@ -159,7 +200,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#5a26ca"
+            "molten#5a26ca",
+            "mysticalagriculture#5a26ca"
         ],
         "remove": {}
     },
@@ -169,6 +211,12 @@
             "destroy_time": 6,
             "explosion_resistance": 6
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/divine_stone", "divinerpg:divine_stone"]
@@ -181,7 +229,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#c9b845"
+            "molten#c9b845",
+            "mysticalagriculture#c9b845"
         ],
         "remove": {}
     },
@@ -191,11 +240,17 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/eden_block", "divinerpg:eden_block"],
             ["gem", "divinerpg:items/eden_gem", "divinerpg:eden_gem"],
-            ["parts", "divinerpg:items/eden_fragments", "divinerpg:eden_fragments"]
+            ["part", "divinerpg:items/eden_fragments", "divinerpg:eden_fragments"]
         ],
         "add": [
             "dust",
@@ -204,7 +259,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b85915"
+            "molten#b85915",
+            "mysticalagriculture#b85915"
         ],
         "remove": {}
     },
@@ -214,6 +270,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/ender_stone", "divinerpg:ender_stone"]
@@ -226,7 +288,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#c058ea"
+            "molten#c058ea",
+            "mysticalagriculture#c058ea"
         ],
         "remove": {}
     },
@@ -236,6 +299,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "divinerpg:items/hellstone_ingot", "divinerpg:hellstone_ingot"]
@@ -249,7 +318,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#5f2c1d"
+            "molten#5f2c1d",
+            "mysticalagriculture#5f2c1d"
         ],
         "remove": {}
     },
@@ -259,6 +329,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/ice_stone", "divinerpg:ice_stone"]
@@ -271,7 +347,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#6ed3d3"
+            "molten#6ed3d3",
+            "mysticalagriculture#6ed3d3"
         ],
         "remove": {}
     },
@@ -281,6 +358,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/jungle_stone", "divinerpg:jungle_stone"]
@@ -293,7 +376,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#78aa1b"
+            "molten#78aa1b",
+            "mysticalagriculture#78aa1b"
         ],
         "remove": {}
     },
@@ -303,6 +387,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/molten_stone", "divinerpg:molten_stone"]
@@ -315,7 +405,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#c5852b"
+            "molten#c5852b",
+            "mysticalagriculture#c5852b"
         ],
         "remove": {}
     },
@@ -325,11 +416,17 @@
             "destroy_time": 10,
             "explosion_resistance": 10
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/mortum_block", "divinerpg:mortum_block"],
             ["gem", "divinerpg:items/mortum_gem", "divinerpg:mortum_gem"],
-            ["parts", "divinerpg:items/mortum_fragments", "divinerpg:mortum_fragments"]
+            ["part", "divinerpg:items/mortum_fragments", "divinerpg:mortum_fragments"]
         ],
         "add": [
             "dust",
@@ -338,7 +435,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#4c4b4d"
+            "molten#4c4b4d",
+            "mysticalagriculture#4c4b4d"
         ],
         "remove": {}
     },
@@ -348,6 +446,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/realmite_block", "divinerpg:realmite_block"],
@@ -372,7 +476,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#c0751e"
+            "molten#c0751e",
+            "mysticalagriculture#c0751e"
         ],
         "remove": {}
     },
@@ -382,6 +487,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/rupee_block", "divinerpg:rupee_block"],
@@ -406,7 +517,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#42b0cf"
+            "molten#42b0cf",
+            "mysticalagriculture#42b0cf"
         ],
         "remove": {}
     },
@@ -416,6 +528,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "divinerpg:items/shadow_bar", "divinerpg:shadow_bar"]
@@ -429,7 +547,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#4f4f4f"
+            "molten#4f4f4f",
+            "mysticalagriculture#4f4f4f"
         ],
         "remove": {}
     },
@@ -439,6 +558,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/shadow_stone", "divinerpg:shadow_stone"]
@@ -452,11 +572,17 @@
             "destroy_time": 9,
             "explosion_resistance": 9
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/skythern_block", "divinerpg:skythern_block"],
             ["gem", "divinerpg:items/skythern_gem", "divinerpg:skythern_gem"],
-            ["parts", "divinerpg:items/skythern_fragments", "divinerpg:skythern_fragments"]
+            ["part", "divinerpg:items/skythern_fragments", "divinerpg:skythern_fragments"]
         ],
         "add": [
             "dust",
@@ -465,7 +591,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#bbb7c0"
+            "molten#bbb7c0",
+            "mysticalagriculture#bbb7c0"
         ],
         "remove": {}
     },
@@ -475,6 +602,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "divinerpg:items/terran_stone", "divinerpg:terran_stone"]
@@ -487,7 +620,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#2ecc44"
+            "molten#2ecc44",
+            "mysticalagriculture#2ecc44"
         ],
         "remove": {}
     },
@@ -497,6 +631,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "divinerpg:blocks/torridite_block", "divinerpg:torridite_block"],
@@ -521,7 +661,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#ba2d21"
+            "molten#ba2d21",
+            "mysticalagriculture#ba2d21"
         ],
         "remove": {}
     },
@@ -531,10 +672,17 @@
             "destroy_time": 7,
             "explosion_resistance": 7
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
+        
         "replace": [
             ["storage_block", "divinerpg:blocks/wildwood_block", "divinerpg:wildwood_block"],
             ["gem", "divinerpg:items/wildwood_gem", "divinerpg:wildwood_gem"],
-            ["parts", "divinerpg:items/wildwood_fragments", "divinerpg:wildwood_fragments"]
+            ["part", "divinerpg:items/wildwood_fragments", "divinerpg:wildwood_fragments"]
         ],
         "add": [
             "dust",
@@ -543,7 +691,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#70c3ee"
+            "molten#70c3ee",
+            "mysticalagriculture#70c3ee"
         ],
         "remove": {}
     }

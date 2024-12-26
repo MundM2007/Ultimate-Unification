@@ -3,6 +3,7 @@
     "ingot": "%s Ingot",
     "nugget": "%s Nugget",
     "gem": "%s",
+	"part": "%s Parts",
 
     "dust": "%s Dust",
     "plate": "%s Plate",
@@ -27,6 +28,7 @@
     "molten": "Molten %s",
     "clean_slurry": "Clean %s Slurry",
     "dirty_slurry": "Dirty %s Slurry",
+	"mysticalagriculture": "%s",
 
 	
     "alloy.arcane_gold": "Arcane Gold",
@@ -123,9 +125,11 @@
 	"byg.emeraldite": "Emeraldite",
 	"byg.lignite": "Lignite",
 	"byg.pendorite": "Pendorite",
+	"byg.pendorite_scraps": "Pendorite Scraps",
 
 	"create.andesite_alloy": "Andesite Alloy",
 	"create.chromatic_compound": "Chromatic Compound",
+	"create.polished_rose_quartz": "Polished Rose Quartz",
 	"create.refined_radiance": "Refined Radiance",
 	"create.shadow_steel": "Shadow Steel",
 
@@ -195,7 +199,7 @@
 	"industrialforegoing.pink_slime_gem": "Pink Slime",
 
 	"mekanism.refined_glowstone": "Refined Glowstone",
-	"mekanism.refined_obsidian": "Refined Obsidan",
+	"mekanism.refined_obsidian": "Refined Obsidian",
 
 	"metal.aluminum": "Aluminum",
 	"metal.bismuth": "Bismuth",
@@ -309,12 +313,16 @@
 	"tconstruct.hepatizon": "Hepatizon",
 	"tconstruct.manyullyn": "Manyullyn",
 	"tconstruct.pig_iron": "Pig Iron",
-	"tconstruct.queens_slime": "Queens Slime",
+	"tconstruct.queens_slime": "Queen's Slime",
 	"tconstruct.slimesteel": "Slimesteel",
-	"tconstruct.tinkers_bronze": "Tinkers Bronze",
+	"tconstruct.tinkers_bronze": "Tinker's Bronze",
     
 	"thermal.apatite": "Apatite",
 	"thermal.cinnabar": "Cinnabar",
+
+
+	"projectred-core.electrotine.dust": "Electrotine Dust",
+
 
 	"strata.aoa3.abyssal_stone": "Abyssal Stone",
 	"strata.aoa3.aromatic_stone": "Aromatic Stone",
@@ -330,6 +338,7 @@
 	"strata.aoa3.hellstone": "Hellstone",
 	"strata.aoa3.irostone": "Irostone",
 	"strata.aoa3.lelyetian_stone": "Lelyetian Stone",
+	"strata.aoa3.precasian_lower_rock": "Precasian Lower Rock",
 	"strata.aoa3.polluted_stone": "Polluted Stone",
 	"strata.aoa3.pressed_creep_stone": "Pressed Creep Stone",
 	"strata.aoa3.primed_stone": "Primed Stone",
@@ -401,8 +410,5 @@
 	"strata.quark.marble": "Marble",
 	"strata.quark.myalite": "Myalite",
 	"strata.quark.slate": "Slate",
-	"strata.quark.voidstone": "Voidstone",
-
-
-	"projectred-core.electrotine.dust": "Electrotine Dust"
+	"strata.quark.voidstone": "Voidstone"
 }

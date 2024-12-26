@@ -14,12 +14,16 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "quartz_enriched_iron": {
         "variants": {
-            "energy_from_coin": 30000
+            "energy_from_coin": 30000,
+            "essence": "mysticalagriculture:quartz_enriched_iron_essence",
+            "seed": "mysticalagriculture:quartz_enriched_iron_seeds",
+            "crop": "mysticalagriculture:quartz_enriched_iron_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -28,8 +32,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -56,6 +63,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -65,8 +73,10 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
+            ["mysticalagriculture:crops/quartz_enriched_iron", "botanypots.crop"],
             ["refinedstorage:block_of_quartz_enriched_iron", "minecraft.storage_convert_metal"],
-            ["refinedstorage:quartz_enriched_iron_from_block", "minecraft.storage_convert_metal"]
+            ["refinedstorage:quartz_enriched_iron_from_block", "minecraft.storage_convert_metal"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_quartz_enriched_iron_seeds", "thermal.crop"]
         ]
     }
 }

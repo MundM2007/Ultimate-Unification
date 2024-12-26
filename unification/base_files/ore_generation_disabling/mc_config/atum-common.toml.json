@@ -1,0 +1,10 @@
+{
+    "replace": [
+        ["\"ore gen\"", "\"Nebu count, set to 0 to disable\"", 0, 1],
+        ["\"ore gen\"", "\"Coal count, set to 0 to disable\"", 0, 20],
+        ["\"ore gen\"", "\"Redstone count, set to 0 to disable\"", 0, 8],
+        ["\"ore gen\"", "\"Diamond count, set to 0 to disable\"", 0, 1],
+        ["\"ore gen\"", "\"Iron count, set to 0 to disable\"", 0, 20],
+        ["\"ore gen\"", "\"Gold count, set to 0 to disable\"", 0, 2]
+    ]
+}

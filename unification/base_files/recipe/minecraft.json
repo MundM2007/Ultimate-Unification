@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
@@ -22,7 +22,11 @@
             "gem_multiplier": 1,
             "energy_from_coin": 12000,
             "gem": "minecraft:coal",
-            "storage_block": "minecraft:coal_block"
+            "storage_block": "minecraft:coal_block",
+            "essence": "mysticalagriculture:coal_essence",
+            "seed": "mysticalagriculture:coal_seeds",
+            "crop": "mysticalagriculture:coal_crop",
+            "tier": 2
         },
         "add": [
             "appliedenergistics2.ore_processing",
@@ -33,6 +37,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
@@ -64,6 +69,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
@@ -84,8 +90,10 @@
             ["mekanism:processing/coal/to_ore", "mekanism.ore"],
             ["minecraft:coal_from_blasting", "minecraft.ore_processing_gem"],
             ["minecraft:coal_from_smelting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/coal", "botanypots.crop"],
             ["silents_mechanisms:crushing/coal", "silents_mechanisms.ore_processing_gem"],
             ["silents_mechanisms:crushing/coal_dust", "silents_mechanisms.dust"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_coal_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_coal_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_coal_ore", "thermal.ore_processing_gem"]
         ]
@@ -95,7 +103,11 @@
             "gem_multiplier": 1,
             "energy_from_coin": 96000,
             "gem": "minecraft:diamond",
-            "molten": "tconstruct:molten_diamond"
+            "molten": "tconstruct:molten_diamond",
+            "essence": "mysticalagriculture:diamond_essence",
+            "seed": "mysticalagriculture:diamond_seeds",
+            "crop": "mysticalagriculture:diamond_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -107,6 +119,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.ore_processing_gem",
             "create.plate",
             "createaddition.rod",
@@ -139,6 +152,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
@@ -154,7 +168,6 @@
             ["boss_tools_giselle_addon:smelting/diamond_gem_from_venus_ore", "minecraft.ore_processing_gem"],
             ["create:crushing/diamond_ore", "create.ore_processing_gem"],
             ["createaddition:crushing/diamond_ore", "create.ore_processing_gem"],
-            ["hammerlib:gears/diamond", "minecraft.gear"],
             ["immersiveengineering:crusher/ore_diamond", "immersiveengineering.ore_processing_gem"],
             ["industrialforegoing:iron_gear", "minecraft.gear"],
             ["integrateddynamics:mechanical_squeezer/ore/diamond", "integrateddynamics.ore_processing_gem"],
@@ -163,6 +176,7 @@
             ["mekanism:processing/diamond/to_ore", "mekanism.ore"],
             ["minecraft:diamond_from_blasting", "minecraft.ore_processing_gem"],
             ["minecraft:diamond_from_smelting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/diamond", "botanypots.crop"],
             ["silents_mechanisms:crushing/diamond", "silents_mechanisms.ore_processing_gem"],
             ["tconstruct:smeltery/casting/diamond/block", "tconstruct.casting"],
             ["tconstruct:smeltery/casting/diamond/gem_gold_cast", "tconstruct.casting"],
@@ -170,6 +184,7 @@
             ["tconstruct:smeltery/melting/diamond/block", "tconstruct.smelting"],
             ["tconstruct:smeltery/melting/diamond/ore", "tconstruct.ore_processing_gem"],
             ["tconstruct:smeltery/melting/diamond/gem", "tconstruct.smelting"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_diamond_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_diamond_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_diamond_ore", "thermal.ore_processing_gem"],
             ["thermal:parts/diamond_gear", "minecraft.gear"]
@@ -180,7 +195,11 @@
             "gem_multiplier": 1,
             "energy_from_coin": 32000,
             "gem": "minecraft:emerald",
-            "molten": "tconstruct:molten_emerald" 
+            "molten": "tconstruct:molten_emerald",
+            "essence": "mysticalagriculture:emerald_essence",
+            "seed": "mysticalagriculture:emerald_seeds",
+            "crop": "mysticalagriculture:emerald_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -192,6 +211,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
@@ -225,6 +245,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
@@ -242,6 +263,7 @@
             ["mekanism:processing/emerald/to_ore", "mekanism.ore"],
             ["minecraft:emerald_from_blasting", "minecraft.ore_processing_gem"],
             ["minecraft:emerald_from_smelting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/emerald", "botanypots.crop"],
             ["silents_mechanisms:crushing/emerald", "silents_mechanisms.ore_processing_gem"],
             ["tconstruct:smeltery/casting/emerald/block", "tconstruct.casting"],
             ["tconstruct:smeltery/casting/emerald/gem_gold_cast", "tconstruct.casting"],
@@ -249,6 +271,7 @@
             ["tconstruct:smeltery/melting/emerald/block", "tconstruct.smelting"],
             ["tconstruct:smeltery/melting/emerald/ore", "tconstruct.ore_processing_gem"],
             ["tconstruct:smeltery/melting/emerald/gem", "tconstruct.smelting"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_emerald_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_emerald_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_emerald_ore", "thermal.ore_processing_gem"],
             ["thermal:parts/emerald_gear", "minecraft.gear"]
@@ -259,7 +282,11 @@
             "energy_from_coin": 64000,
             "molten": "tconstruct:molten_gold",
             "clean_slurry": "mekanism:clean_gold",
-            "dirty_slurry": "mekanism:dirty_gold"
+            "dirty_slurry": "mekanism:dirty_gold",
+            "essence": "mysticalagriculture:gold_essence",
+            "seed": "mysticalagriculture:gold_seeds",
+            "crop": "mysticalagriculture:gold_crop",
+            "tier": 4
         },
         "add": [
             "appliedenergistics2.ore_processing",
@@ -270,6 +297,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.ore_processing_metal",
             "createaddition.rod",
             "createaddition.wire",
@@ -296,6 +324,7 @@
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.ore_processing_metal", 
             "thermal.pieces_to_raw",
             "thermal.rod",
@@ -326,9 +355,9 @@
             ["createaddition:rolling/gold_ingot", "createaddition.rod"],
             ["createaddition:rolling/gold_plate", "createaddition.wire"],
             ["engineerstools:crushing/gold_grit_crushing_recipe", "engineerstools.ore_processing_metal"],
+            ["exnihilosequentia:ens_chunk_gold", "minecraft.pieces_to_raw"],
             ["ftbic:extruding/gold_wire", "ftbic.wire"],
             ["ftbic:shaped/gold_wire", "minecraft.wire"],
-            ["hammerlib:gears/gold", "minecraft.gear"],
             ["immersiveengineering:arcfurnace/ore_gold", "immersiveengineering.ore_processing_metal"],
             ["immersiveengineering:crafting/hammercrushing_gold", "immersiveengineering.ore_processing_metal"],
             ["immersiveengineering:crusher/ore_gold", "immersiveengineering.ore_processing_metal"],
@@ -356,6 +385,7 @@
             ["minecraft:ens_ingot_gold_blast", "minecraft.ore_processing_metal"],
             ["minecraft:gold_ingot", "minecraft.ore_processing_metal"],
             ["minecraft:gold_ingot_from_blasting", "minecraft.ore_processing_metal"],
+            ["mysticalagriculture:crops/gold", "botanypots.crop"],
             ["occultism:blasting/gold_ingot_from_dust", "minecraft.smelting_recipes"],
             ["occultism:crushing/gold_dust", "occultism.ore_processing_metal"],
             ["occultism:smelting/gold_ingot_from_dust", "minecraft.smelting_recipes"],
@@ -369,6 +399,7 @@
             ["silents_mechanisms:crushing/gold_dust_from_ingot", "silents_mechanisms.dust"],
             ["silents_mechanisms:smelting/gold_ingot", "minecraft.smelting_recipes"],
             ["tconstruct:smeltery/melting/metal/gold/ore", "tconstruct.ore_processing_metal"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_gold_seeds", "thermal.crop"],
             ["thermal:fuels/numismatic/numismatic_gold_coin", "thermal.coin_to_energy"],
             ["thermal:machine/press/packing3x3/press_gold_packing", "thermal.storage_convert_metal"],
             ["thermal:machine/press/unpacking/press_gold_unpacking", "thermal.storage_convert_metal"],
@@ -382,7 +413,11 @@
             "energy_from_coin": 32000,
             "molten": "tconstruct:molten_iron",
             "clean_slurry": "mekanism:clean_iron",
-            "dirty_slurry": "mekanism:dirty_iron"
+            "dirty_slurry": "mekanism:dirty_iron",
+            "essence": "mysticalagriculture:iron_essence",
+            "seed": "mysticalagriculture:iron_seeds",
+            "crop": "mysticalagriculture:iron_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.ore_processing",
@@ -390,6 +425,7 @@
             "betterendforge.ore_processing_metal",
             "bloodmagic.ore_processing_metal",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.ore_processing_metal", 
             "createaddition.rod",
             "createaddition.wire",
@@ -416,6 +452,7 @@
             "silents_mechanisms.ore_processing_metal",
             "tconstruct.ore_processing_metal",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.ore_processing_metal", 
             "thermal.pieces_to_raw",
             "thermal.rod",
@@ -451,7 +488,7 @@
             ["createaddition:rolling/iron_ingot", "createaddition.rod"],
             ["createaddition:rolling/iron_plate", "createaddition.wire"],
             ["engineerstools:crushing/iron_grit_crushing_recipe", "engineerstools.ore_processing_metal"],
-            ["hammerlib:gears/iron", "minecraft.gear"],
+            ["exnihilosequentia:ens_chunk_iron", "minecraft.pieces_to_raw"],
             ["immersiveengineering:arcfurnace/ore_iron", "immersiveengineering.ore_processing_metal"],
             ["immersiveengineering:crafting/hammercrushing_iron", "immersiveengineering.ore_processing_metal"],
             ["immersiveengineering:crafting/stick_iron", "minecraft.rod"],
@@ -477,6 +514,7 @@
             ["minecraft:ens_ingot_iron_blast", "minecraft.ore_processing_metal"],
             ["minecraft:iron_ingot", "minecraft.ore_processing_metal"],
             ["minecraft:iron_ingot_from_blasting", "minecraft.ore_processing_metal"],
+            ["mysticalagriculture:crops/iron", "botanypots.crop"],
             ["occultism:blasting/iron_ingot_from_dust", "minecraft.smelting_recipes"],
             ["occultism:crushing/iron_dust", "occultism.ore_processing_metal"],
             ["occultism:smelting/iron_ingot_from_dust", "minecraft.smelting_recipes"],
@@ -490,6 +528,7 @@
             ["silents_mechanisms:crushing/iron_dust_from_ingot", "silents_mechanisms.dust"],
             ["silents_mechanisms:smelting/iron_ingot", "minecraft.smelting_recipes"],
             ["tconstruct:smeltery/melting/metal/iron/ore", "tconstruct.ore_processing_metal"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_iron_seeds", "thermal.crop"],
             ["thermal:fuels/numismatic/numismatic_iron_coin", "thermal.coin_to_energy"],
             ["thermal:machine/press/packing3x3/press_iron_packing", "thermal.storage_convert_metal"],
             ["thermal:machine/press/unpacking/press_iron_unpacking", "thermal.storage_convert_metal"],
@@ -503,7 +542,11 @@
             "gem_multiplier": 6,
             "energy_from_coin": 32000,
             "gem": "minecraft:lapis_lazuli",
-            "storage_block": "minecraft:lapis_block"
+            "storage_block": "minecraft:lapis_block",
+            "essence": "mysticalagriculture:lapis_lazuli_essence",
+            "seed": "mysticalagriculture:lapis_lazuli_seeds",
+            "crop": "mysticalagriculture:lapis_lazuli_crop",
+            "tier": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -515,6 +558,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
@@ -548,6 +592,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
@@ -564,7 +609,9 @@
             ["mekanism:processing/lapis_lazuli/to_ore", "mekanism.ore"],
             ["minecraft:lapis_from_blasting", "minecraft.ore_processing_gem"],
             ["minecraft:lapis_from_smelting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/lapis_lazuli", "botanypots.crop"],
             ["silents_mechanisms:crushing/lapis_lazuli", "silents_mechanisms.ore_processing_gem"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_lapis_lazuli_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_lapis_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_lapis_ore", "thermal.ore_processing_gem"],
             ["thermal:parts/lapis_gear", "minecraft.gear"]
@@ -573,7 +620,11 @@
     "netherite": {
         "variants": {
             "molten": "tconstruct:molten_netherite",
-            "energy_from_coin": 320000
+            "energy_from_coin": 320000,
+            "essence": "mysticalagriculture:netherite_essence",
+            "seed": "mysticalagriculture:netherite_seeds",
+            "crop": "mysticalagriculture:netherite_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -582,6 +633,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.dust",
             "createaddition.rod",
             "createaddition.wire",
@@ -605,6 +657,7 @@
             "potionsmaster.dust",
             "silents_mechanisms.dust",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.ingot_in_smelter",
             "thermal.rod",
             "thermal.storage_convert_metal"
@@ -617,8 +670,11 @@
             ["mekanism:processing/netherite/ingot_from_dust_smelting", "minecraft.smelting_recipes"],
             ["minecraft:netherite_block", "minecraft.storage_convert_metal"],
             ["minecraft:netherite_ingot_from_netherite_block", "minecraft.storage_convert_metal"],
+            ["mysticalagriculture:crops/netherite", "botanypots.crop"],
+            ["potionsmaster:crushing/netherite_powder", "potionsmaster.dust"],
             ["potionsmaster:netherite_powder", "potionsmaster.dust"],
             ["tconstruct:common/materials/netherite_nugget_from_ingot", "minecraft.storage_convert_metal"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_netherite_seeds", "thermal.crop"],
             ["thermal:fuels/numismatic/numismatic_netherite_coin", ""],
             ["thermal:machine/press/packing3x3/press_netherite_packing", "thermal.storage_convert_metal"],
             ["thermal:machine/press/unpacking/press_netherite_unpacking", "thermal.storage_convert_metal"],
@@ -630,7 +686,13 @@
             "gem_multiplier": 1,
             "energy_from_coin": 16000,
             "gem": "minecraft:quartz",
-            "molten": "tconstruct:molten_quartz"
+            "molten": "tconstruct:molten_quartz",
+            "storage_block": "minecraft:quartz_block",
+            "count_block": 4,
+            "essence": "mysticalagriculture:quartz_essence",
+            "seed": "mysticalagriculture:quartz_seeds",
+            "crop": "mysticalagriculture:quartz_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.ore_processing",
@@ -641,6 +703,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.ore_processing_gem",
             "create.plate",
             "createaddition.rod",
@@ -673,6 +736,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
@@ -688,6 +752,7 @@
             ["mekanism:processing/quartz/to_ore", "mekanism.ore"],
             ["minecraft:quartz", "minecraft.ore_processing_gem"],
             ["minecraft:quartz_from_blasting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/quartz", "botanypots.crop"],
             ["silents_mechanisms:crushing/quartz", "silents_mechanisms.ore_processing_gem"],
             ["tconstruct:smeltery/casting/quartz/block", "tconstruct.casting"],
             ["tconstruct:smeltery/casting/quartz/gem_gold_cast", "tconstruct.casting"],
@@ -695,6 +760,7 @@
             ["tconstruct:smeltery/melting/quartz/block", "tconstruct.smelting"],
             ["tconstruct:smeltery/melting/quartz/gem", "tconstruct.ore_processing_gem"],
             ["tconstruct:smeltery/melting/quartz/ore", "tconstruct.smelting"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_quartz_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_quartz_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_quartz_ore", "thermal.ore_processing_gem"],
             ["thermal:parts/quartz_gear", "minecraft.gear"]
@@ -705,7 +771,11 @@
             "gem_multiplier": 4.5,
             "energy_from_coin": 16000,
             "gem": "minecraft:redstone",
-            "storage_block": "minecraft:redstone_block"
+            "storage_block": "minecraft:redstone_block",
+            "essence": "mysticalagriculture:redstone_essence",
+            "seed": "mysticalagriculture:redstone_seeds",
+            "crop": "mysticalagriculture:redstone_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -717,6 +787,7 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
@@ -751,6 +822,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
@@ -771,7 +843,9 @@
             ["mekanism:processing/redstone/to_ore", "mekanism.ore"],
             ["minecraft:redstone_from_blasting", "minecraft.ore_processing_gem"],
             ["minecraft:redstone_from_smelting", "minecraft.ore_processing_gem"],
+            ["mysticalagriculture:crops/redstone", "botanypots.crop"],
             ["silents_mechanisms:crushing/redstone", "silents_mechanisms.ore_processing_gem"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_redstone_seeds", "thermal.crop"],
             ["thermal:machine/pulverizer/pulverizer_redstone_ore", "thermal.ore_processing_gem"],
             ["thermal:machine/smelter/smelter_redstone_ore", "thermal.ore_processing_gem"]
         ]

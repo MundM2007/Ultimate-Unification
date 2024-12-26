@@ -1,0 +1,7 @@
+{
+    "replace": [
+        ["worldgen.nether", "oreChances", 0, 8],
+        ["worldgen.end", "oreChances", 0, 8],
+        ["worldgen.overworld", "oreChances", 0, 2]
+    ]
+}

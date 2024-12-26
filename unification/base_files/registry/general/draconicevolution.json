@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "awakened_draconium": {
@@ -23,6 +23,7 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "draconicevolution:block/awakened_draconium_block", "draconicevolution:awakened_draconium_block"],
@@ -47,6 +48,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "draconicevolution:block/draconium_block", "draconicevolution:draconium_block"],

@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     
@@ -24,6 +24,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/azure_electrum_ingot", "silentgear:azure_electrum_ingot"],
@@ -37,7 +43,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#224ee3"
+            "molten#224ee3",
+            "mysticalagriculture#224ee3"
         ],
         "remove": {}
     },
@@ -47,6 +54,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/azure_silver_ingot", "silentgear:azure_silver_ingot"],
@@ -71,7 +84,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#b477fc"
+            "molten#b477fc",
+            "mysticalagriculture#b477fc"
         ],
         "remove": {}
     },
@@ -81,6 +95,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/blaze_gold_ingot", "silentgear:blaze_gold_ingot"],
@@ -94,7 +114,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#e58149"
+            "molten#e58149",
+            "mysticalagriculture#e58149"
         ],
         "remove": {}
     },
@@ -104,6 +125,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/crimson_iron_ingot", "silentgear:crimson_iron_ingot"],
@@ -128,7 +155,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#f0466e"
+            "molten#f0466e",
+            "mysticalagriculture#f0466e"
         ],
         "remove": {
             "dust": [
@@ -143,6 +171,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/crimson_steel_ingot", "silentgear:crimson_steel_ingot"],
@@ -156,7 +190,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#bf133d"
+            "molten#bf133d",
+            "mysticalagriculture#bf133d"
         ],
         "remove": {}
     },
@@ -166,6 +201,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "silentgear:item/tyrian_steel_ingot", "silentgear:tyrian_steel_ingot"],
@@ -179,7 +220,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#980f76"
+            "molten#980f76",
+            "mysticalagriculture#980f76"
         ],
         "remove": {}
     }

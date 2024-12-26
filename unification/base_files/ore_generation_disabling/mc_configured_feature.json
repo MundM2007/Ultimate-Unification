@@ -1,0 +1,31 @@
+{
+    "locations": {
+        "aoa3": [
+            "ore_baronyte",
+            "ore_blazium",
+            "ore_bloodstone",
+            "ore_blue_gemstone",
+            "ore_charged_runium",
+            "ore_chestbone_fragments",
+            "ore_crystallite",
+            "ore_elecanium",
+            "ore_footbone_fragments",
+            "ore_gemenyte",
+            "ore_ghastly",
+            "ore_ghoulish",
+            "ore_green_gemstone",
+            "ore_jewelyte",
+            "ore_legbone_fragments",
+            "ore_lyon",
+            "ore_mystite",
+            "ore_ornamite",
+            "ore_purple_gemstone",
+            "ore_red_gemstone",
+            "ore_shyregem",
+            "ore_shyrestone",
+            "ore_varsium",
+            "ore_yellow_gemstone",
+            "ore_white_gemstone"
+        ]
+    }
+}

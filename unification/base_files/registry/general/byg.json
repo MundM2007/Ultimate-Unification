@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "ametrine": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "byg:item/ametrine_gems", "byg:ametrine_gems"],
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#e293cb"
+            "molten#e293cb",
+            "mysticalagriculture#e293cb"
         ],
         "remove": {}
     },
@@ -45,6 +52,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "byg:item/anthracite", "byg:anthracite"],
@@ -57,7 +70,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#353e48"
+            "molten#353e48",
+            "mysticalagriculture#353e48"
         ],
         "remove": {}
     },
@@ -67,6 +81,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "byg:item/emeraldite_shards", "byg:emeraldite_shards"]
@@ -79,7 +99,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#40f082"
+            "molten#40f082",
+            "mysticalagriculture#40f082"
         ],
         "remove": {}
     },
@@ -89,6 +110,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 2
+        },
+        "burn_time": 1600,
 
         "replace": [
             ["gem", "byg:item/lignite", "byg:lignite"],
@@ -101,7 +128,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#3f2d20"
+            "molten#3f2d20",
+            "mysticalagriculture#3f2d20"
         ],
         "remove": {}
     },
@@ -111,16 +139,44 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "byg:block/pendorite_block", "byg:pendorite_block"],
-            ["ingot", "byg:item/pendorite_ingot", "byg:pendorite_ingot"],
-            ["parts", "byg:item/pendorite_scraps", "byg:pendorite_scraps"],
+            ["ingot", "byg:item/pendorite_ingot", "byg:pendorite_ingot"]
+        ],
+        "add": [
+            "nugget",
+            "plate",
+            "rod",
+            "gear",
+            "dust",
+            "wire",
+            "coin",
+            "molten#8784d2",
+            "mysticalagriculture#8784d2"
+        ],
+        "remove": {}
+    },
+    "pendorite_scraps": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["part", "byg:item/pendorite_scraps", "byg:pendorite_scraps"],
             ["raw_block", "byg:block/raw_pendorite_block", "byg:raw_pendorite_block"],
             ["raw_material", "byg:item/raw_pendorite", "byg:raw_pendorite"]
         ],
         "add": [
-            "nugget",
             "crystal",
             "shard",
             "clump",
@@ -128,14 +184,9 @@
             "fragment",
             "gravel",
             "crushed_ore",
-            "plate",
-            "rod",
-            "gear",
             "dust",
             "slurry#8784d2",
             "piece",
-            "wire",
-            "coin",
             "molten#8784d2"
         ],
         "remove": {}

@@ -14,13 +14,17 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "hepatizon": {
         "variants": {
             "energy_from_coin": 34000,
-            "molten": "tconstruct:molten_hepatizon"
+            "molten": "tconstruct:molten_hepatizon",
+            "essence": "mysticalagriculture:hepatizon_essence",
+            "seed": "mysticalagriculture:hepatizon_seeds",
+            "crop": "mysticalagriculture:hepatizon_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -29,8 +33,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -54,6 +61,7 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_smelter",
@@ -63,13 +71,18 @@
         ],
         "remove": [
             ["createaddition:compat/tconstruct/hepatizon", ""],
+            ["mysticalagriculture:crops/hepatizon", "botanypots.crop"],
             ["thermal:compat/tconstruct/smelter_alloy_tconstruct_hepatizon_ingot", ""]
         ]
     },
     "manyullyn": {
         "variants": {
             "energy_from_coin": 64000,
-            "molten": "tconstruct:molten_manyullyn"
+            "molten": "tconstruct:molten_manyullyn",
+            "essence": "mysticalagriculture:manyullyn_essence",
+            "seed": "mysticalagriculture:manyullyn_seeds",
+            "crop": "mysticalagriculture:manyullyn_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -78,8 +91,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -103,6 +119,7 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_smelter",
@@ -111,13 +128,18 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
+            ["mysticalagriculture:crops/manyullyn", "botanypots.crop"],
             ["thermal:compat/tconstruct/smelter_alloy_tconstruct_manyullyn_ingot", ""]
         ]
     },
     "pig_iron": {
         "variants": {
             "energy_from_coin": 24000,
-            "molten": "tconstruct:molten_pig_iron"
+            "molten": "tconstruct:molten_pig_iron",
+            "essence": "mysticalagriculture:pig_iron_essence",
+            "seed": "mysticalagriculture:pig_iron_seeds",
+            "crop": "mysticalagriculture:pig_iron_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -126,8 +148,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -146,46 +171,7 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
-            "thermal.dust",
-            "thermal.gear",
-            "thermal.ingot_in_smelter",
-            "thermal.plate",
-            "thermal.rod",
-            "thermal.storage_convert_metal"
-        ]
-    },
-    "queens_slime": {
-        "variants": {
-            "energy_from_coin": 76000,
-            "molten": "tconstruct:molten_queens_slime"
-        },
-        "add": [
-            "appliedenergistics2.dust",
-            "bloodmagic.dust",
-            "boss_tools.plate",
-            "boss_tools_giselle_addon.plate",
-            "boss_tools_giselle_addon.rod",
-            "boss_tools_giselle_addon.wire",
-            "create.dust",
-            "create.plate",
-            "createaddition.rod",
-            "createaddition.wire",
-            "ftbic.coin",
-            "ftbic.dust",
-            "ftbic.gear",
-            "ftbic.plate",
-            "ftbic.rod",
-            "ftbic.wire",
-            "mekanism.dust",
-            "minecraft.gear",
-            "minecraft.rod",
-            "minecraft.smelting_recipes",
-            "minecraft.wire",
-            "occultism.dust",
-            "potionsmaster.dust",
-            "silents_mechanisms.dust",
-            "thermal.coin",
-            "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_smelter",
@@ -194,13 +180,17 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
-            ["thermal:compat/tconstruct/smelter_alloy_tconstruct_queens_slime_ingot", ""]
+            ["mysticalagriculture:crops/pig_iron", "botanypots.crop"]
         ]
     },
-    "slimesteel": {
+    "queens_slime": {
         "variants": {
-            "energy_from_coin": 24000,
-            "molten": "tconstruct:molten_slimesteel"
+            "energy_from_coin": 76000,
+            "molten": "tconstruct:molten_queens_slime",
+            "essence": "mysticalagriculture:queens_slime_essence",
+            "seed": "mysticalagriculture:queens_slime_seeds",
+            "crop": "mysticalagriculture:queens_slime_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -209,8 +199,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -229,18 +222,27 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_smelter",
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_metal"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/queens_slime", "botanypots.crop"],
+            ["thermal:compat/tconstruct/smelter_alloy_tconstruct_queens_slime_ingot", ""]
         ]
     },
-    "tinkers_bronze": {
+    "slimesteel": {
         "variants": {
-            "energy_from_coin": 34000,
-            "molten": "tconstruct:molten_tinkers_bronze"
+            "energy_from_coin": 24000,
+            "molten": "tconstruct:molten_slimesteel",
+            "essence": "mysticalagriculture:slimesteel_essence",
+            "seed": "mysticalagriculture:slimesteel_seeds",
+            "crop": "mysticalagriculture:slimesteel_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -249,8 +251,62 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
+            "createaddition.rod",
+            "createaddition.wire",
+            "ftbic.coin",
+            "ftbic.dust",
+            "ftbic.gear",
+            "ftbic.plate",
+            "ftbic.rod",
+            "ftbic.wire",
+            "mekanism.dust",
+            "minecraft.gear",
+            "minecraft.rod",
+            "minecraft.smelting_recipes",
+            "minecraft.wire",
+            "occultism.dust",
+            "potionsmaster.dust",
+            "silents_mechanisms.dust",
+            "thermal.coin",
+            "thermal.coin_to_energy",
+            "thermal.crop",
+            "thermal.dust",
+            "thermal.gear",
+            "thermal.ingot_in_smelter",
+            "thermal.plate",
+            "thermal.rod",
+            "thermal.storage_convert_metal"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/slimesteel", "botanypots.crop"]
+        ]
+    },
+    "tinkers_bronze": {
+        "variants": {
+            "energy_from_coin": 34000,
+            "molten": "tconstruct:molten_tinkers_bronze",
+            "essence": "mysticalagriculture:tinkers_bronze_essence",
+            "seed": "mysticalagriculture:tinkers_bronze_seeds",
+            "crop": "mysticalagriculture:tinkers_bronze_crop",
+            "tier": 3
+        },
+        "add": [
+            "appliedenergistics2.dust",
+            "bloodmagic.dust",
+            "boss_tools.plate",
+            "boss_tools_giselle_addon.plate",
+            "boss_tools_giselle_addon.rod",
+            "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
+            "create.dust",
+            "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -271,6 +327,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_smelter",
@@ -279,6 +336,7 @@
             "thermal.storage_convert_metal"
         ],
         "remove": [
+            ["mysticalagriculture:crops/tinkers_bronze", "botanypots.crop"],
             ["tconstruct:smeltery/casting/metal/silicon_bronze/block", "tconstruct.smelting"],
             ["tconstruct:smeltery/melting/metal/silicon_bronze/block", "tconstruct.smelting"],
             ["tconstruct:smeltery/melting/metal/silicon_bronze/ingot", "tconstruct.smelting"],

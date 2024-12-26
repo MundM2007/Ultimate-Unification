@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
@@ -23,6 +23,7 @@
             "destroy_time": 5,
             "explosion_resistance": 6
         },
+        "burn_time": 1600,
 
         "replace": [],
         "add": [
@@ -52,6 +53,7 @@
             "destroy_time": 5,
             "explosion_resistance": 6
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "minecraft:block/diamond_block", "minecraft:diamond_block"]
@@ -85,6 +87,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "minecraft:block/emerald_block", "minecraft:emerald_block"]
@@ -114,6 +117,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "minecraft:block/gold_block", "minecraft:gold_block"],
@@ -182,6 +186,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "minecraft:block/iron_block", "minecraft:iron_block"],
@@ -254,6 +259,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -282,6 +288,7 @@
             "destroy_time": 50,
             "explosion_resistance": 1200
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "minecraft:block/netherite_block", "minecraft:netherite_block"],
@@ -300,7 +307,6 @@
             "plate",
             "rod",
             "gear",
-            "crushed_ore",
             "wire"
         ],
         "remove": {
@@ -330,6 +336,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "appliedenergistics2:item/purified_nether_quartz_crystal", "appliedenergistics2:purified_nether_quartz_crystal"]
@@ -362,6 +369,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [

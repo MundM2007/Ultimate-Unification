@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aeternium": {
@@ -23,6 +23,12 @@
             "destroy_time": 6,
             "explosion_resistance": 6
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "betterendforge:block/aeternium_block", "betterendforge:aeternium_block"],
@@ -36,7 +42,8 @@
             "nugget",
             "wire",
             "coin",
-            "molten#6c8681"
+            "molten#6c8681",
+            "mysticalagriculture#6c8681"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "betterendforge:block/amber_block", "betterendforge:amber_block"],
@@ -60,7 +73,8 @@
             "dust",
             "wire",
             "coin",
-            "molten#c98f0d"
+            "molten#c98f0d",
+            "mysticalagriculture#c98f0d"
         ],
         "remove": {}
     },
@@ -69,7 +83,13 @@
             "harvest_level": 1,
             "destroy_time": 3,
             "explosion_resistance": 3
+        },        
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "betterendforge:block/terminite_block", "betterendforge:terminite_block"],
@@ -83,7 +103,8 @@
             "dust",
             "wire",
             "coin",
-            "molten#70f0e5"
+            "molten#70f0e5",
+            "mysticalagriculture#70f0e5"
         ],
         "remove": {}
     },
@@ -93,6 +114,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "betterendforge:block/thallasium_block", "betterendforge:thallasium_block"],
@@ -117,7 +144,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#53aebd"
+            "molten#53aebd",
+            "mysticalagriculture#53aebd"
         ],
         "remove": {}
     }

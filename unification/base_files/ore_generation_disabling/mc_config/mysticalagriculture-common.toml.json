@@ -1,0 +1,7 @@
+{
+    "replace": [
+        ["World", "souliumOreChance", 0, 0.05],
+        ["World", "inferiumSpawnRate", 0, 16],
+        ["World", "prosperitySpawnRate", 0, 12]
+    ]
+}

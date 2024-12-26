@@ -1,0 +1,5 @@
+{
+    "replace": [
+        ["", "preferredOres", ["unification"], ["immersiveengineering", "minecraft"]]
+    ]
+}

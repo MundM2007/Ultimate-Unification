@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "ebony": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "psi:items/ebony_psimetal", "psi:ebony_psimetal"],
@@ -36,7 +42,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#171414"
+            "molten#171414",
+            "mysticalagriculture#171414"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "psi:items/ivory_psimetal", "psi:ivory_psimetal"],
@@ -59,7 +72,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#dddfd2"
+            "molten#dddfd2",
+            "mysticalagriculture#dddfd2"
         ],
         "remove": {}
     },
@@ -69,11 +83,19 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "dust",
+            "essence_type": "dust",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["dust", "psi:items/psidust", "psi:psidust"]
         ],
-        "add": [],
+        "add": [
+            "mysticalagriculture#a5aaf0"
+        ],
         "remove": {}
     },
     "psigem": {
@@ -82,12 +104,20 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "psi:blocks/psigem_block", "psi:psigem_block"],
             ["gem", "psi:items/psigem", "psi:psigem"]
         ],
-        "add": [],
+        "add": [
+            "mysticalagriculture#a5aaf0"
+        ],
         "remove": {}
     },
     "psimetal": {
@@ -96,6 +126,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "psi:items/psimetal", "psi:psimetal"],
@@ -109,7 +145,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#a5aaf0"
+            "molten#a5aaf0",
+            "mysticalagriculture#a5aaf0"
         ],
         "remove": {}
     }

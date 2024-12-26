@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_gold": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#cc8956"
+            "molten#cc8956",
+            "mysticalagriculture#cc8956"
         ],
         "remove": {
             "storage_block": [
@@ -58,6 +65,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -70,7 +83,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#cbd4b9"
+            "molten#cbd4b9",
+            "mysticalagriculture#cbd4b9"
         ],
         "remove": {
             "storage_block": [
@@ -91,6 +105,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -102,7 +117,7 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin" 
         ],
         "remove": {
             "storage_block": [
@@ -134,6 +149,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/bronze_coin_0", "thermal:bronze_coin"],
@@ -190,6 +211,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -202,7 +229,8 @@
             "dust",
             "wire",
             "coin",
-            "molten#606980"
+            "molten#606980",
+            "mysticalagriculture#606980"
         ],
         "remove": {
             "ingot": [
@@ -229,6 +257,7 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "burn_time": 1600,
 
         "replace": [
             ["gem", "", "minecraft:charcoal"]
@@ -257,13 +286,20 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "rock",
+            "tier": 3
+        },
+        "burn_time": 3200,
 
         "replace": [],
         "add": [
             "gem",
             "dust",
             "storage_block",
-            "molten#2e4049"
+            "molten#2e4049",
+            "mysticalagriculture#2e4049"
         ],
         "remove": {
             "gem": [
@@ -285,6 +321,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/constantan_coin_0", "thermal:constantan_coin"],
@@ -338,6 +375,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/electrum_coin_0", "thermal:electrum_coin"],
@@ -398,6 +436,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -419,6 +458,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/enderium_coin_0", "thermal:enderium_coin"],
@@ -468,6 +508,7 @@
             "destroy_time": 0.5,
             "explosion_resistance": 0.5
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -490,6 +531,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -525,6 +567,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/invar_coin_0", "thermal:invar_coin"],
@@ -574,6 +617,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/lumium_coin_0", "thermal:lumium_coin"],
@@ -623,6 +667,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -635,7 +685,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#90a0ca"
+            "molten#90a0ca",
+            "mysticalagriculture#90a0ca"
         ],
         "remove": {
             "storage_block": [
@@ -656,6 +707,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -668,7 +725,8 @@
             "rod",
             "wire",
             "coin",
-            "molten#0adfa5"
+            "molten#0adfa5",
+            "mysticalagriculture#0adfa5"
         ],
         "remove": {
             "ingot": [
@@ -689,6 +747,7 @@
             "destroy_time": 50,
             "explosion_resistance": 1200
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -710,6 +769,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -722,7 +787,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#a11b11"
+            "molten#a11b11",
+            "mysticalagriculture#a11b11"
         ],
         "remove": {
             "storage_block": [
@@ -747,10 +813,17 @@
             "destroy_time": 0.5,
             "explosion_resistance": 0.5
         },
+        "mysticalagriculture": {
+            "flower_type": "dust",
+            "essence_type": "dust",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
-            "dust"
+            "dust",
+            "mysticalagriculture#c5c0bd"
         ],
         "remove": {
             "dust": [
@@ -766,6 +839,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["coin", "thermal:item/signalum_coin_0", "thermal:signalum_coin"],
@@ -815,6 +889,8 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "burn_time": 0,
+
         "replace": [],
         "add": [
             "gem"
@@ -836,6 +912,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -893,6 +970,7 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "burn_time": 100,
 
         "replace": [],
         "add": [
@@ -918,6 +996,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -930,7 +1014,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#d3d1a8"
+            "molten#d3d1a8",
+            "mysticalagriculture#d3d1a8"
         ],
         "remove": {
             "storage_block": [

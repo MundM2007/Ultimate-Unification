@@ -14,12 +14,16 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "awakened_draconium": {
         "variants": {
-            "energy_from_coin": 240000
+            "energy_from_coin": 240000,
+            "essence": "mysticalagriculture:awakened_draconium_essence",
+            "seed": "mysticalagriculture:awakened_draconium_seeds",
+            "crop": "mysticalagriculture:awakened_draconium_crop",
+            "tier": 6
         },
         "add": [
             "appliedenergistics2.dust",
@@ -28,8 +32,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -55,6 +62,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -62,11 +70,18 @@
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_metal"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/awakened_draconium", "botanypots.crop"]
         ]
     },
     "draconium": {
         "variants": {
-            "energy_from_coin": 64000
+            "energy_from_coin": 64000,
+            "essence": "mysticalagriculture:draconium_essence",
+            "seed": "mysticalagriculture:draconium_seeds",
+            "crop": "mysticalagriculture:draconium_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -79,9 +94,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -118,6 +136,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -130,6 +149,7 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
+            ["mysticalagriculture:crops/draconium", "botanypots.crop"],
             ["draconicevolution:components/draconium_ingot", "minecraft.smelting_recipes"],
             ["draconicevolution:draconium_ingot", "minecraft.ore_processing_metal"]
         ]

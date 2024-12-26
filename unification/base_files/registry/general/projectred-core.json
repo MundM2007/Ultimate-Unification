@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "electrotine": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "projectred-core:item/electrotine_ingot", "projectred-core:electrotine_ingot"],
@@ -36,7 +42,8 @@
             "nugget",
             "wire",
             "coin",
-            "molten#5fb0e3"
+            "molten#5fb0e3",
+            "mysticalagriculture#5fb0e3"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
         
         "replace": [
             ["gem", "projectred-core:item/peridot", "projectred-core:peridot"],
@@ -58,7 +71,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#458314"
+            "molten#458314",
+            "mysticalagriculture#458314"
         ],
         "remove": {}
     }

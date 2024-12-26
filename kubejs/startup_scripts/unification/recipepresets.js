@@ -14,12 +14,28 @@
 // ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 //  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 // --------------------------------------------------------------------------------
-// Ultimate Unification Copyright (C) 2023 under MIT License by:                   
+// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 //         - MundM2007          (https://github.com/MundM2007)
 
 let countOut
 let countIn
 let nUni
+const essences = [
+    "mysticalagriculture:inferium_essence",
+    "mysticalagriculture:prudentium_essence",
+    "mysticalagriculture:tertium_essence",
+    "mysticalagriculture:imperium_essence",
+    "mysticalagriculture:supremium_essence",
+    "mysticalagradditions:insanium_essence"
+]
+const essence_blocks = [
+    "mysticalagriculture:inferium_block",
+    "mysticalagriculture:prudentium_block",
+    "mysticalagriculture:tertium_block",
+    "mysticalagriculture:imperium_block",
+    "mysticalagriculture:supremium_block",
+    "mysticalagradditions:insanium_block"
+]
 
 function removeMod(item) {
     return item.slice(item.indexOf(":") + 1)
@@ -52,7 +68,7 @@ onEvent("loaded", e => {
             ore_processing: (event, material, dust, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(dust)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.appliedenergistics2.grinder(event, Item.of(dust, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 8, 
+                    global.mrt.appliedenergistics2.grinder(event, Item.of(dust, Math.floor(2 * gem_multiplier)), `#forge:ores/${material}`, 8, 
                         `unification:appliedenergistics2/grinder/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
@@ -61,7 +77,7 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(material)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.astralsorcery.infuser(event, Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 100,  0.1, [true], "astralsorcery:liquid_starlight",
+                    global.mrt.astralsorcery.infuser(event, Item.of(gem, Math.floor(2 * gem_multiplier)), `#forge:ores/${material}`, 100,  0.1, [true], "astralsorcery:liquid_starlight",
                         `unification:astralsorcery/infuser/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -80,7 +96,7 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.betterendforge.alloying(event, Item.of(gem, Math.round(4 * gem_multiplier)), [`#forge:ores/${material}`, `#forge:ores/${material}`], 200, 
+                    global.mrt.betterendforge.alloying(event, Item.of(gem, Math.floor(4 * gem_multiplier)), [`#forge:ores/${material}`, `#forge:ores/${material}`], 200, 
                         `unification:betterendforge/alloying/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -200,6 +216,29 @@ onEvent("loaded", e => {
                 }
             },
         },
+        botania: {
+            reprocessor: (event, seed, essence, tier) => {
+                if (checkItems([seed, essence])) {
+                    global.mrt.botania.mana_infusion(event, Item.of(essence, 2), seed, 100 * tier, essence_blocks[tier - 1], `unification:botania/mana_infusion/component/${removeMod(essence)}/from_seed`)
+                }
+            }
+        },
+        botanypots: {
+            crop: (event, seed, essence, crop, tier) => {
+                if (checkItems([seed, essence])) {
+                    if(isNaN(tier)) tier = 1
+                    let soil = ["inferium", "prudentium", "tertium", "imperium", "supremium", "insanium"][tier]
+                    if(new_seed_recipes){
+                        global.mrt.botanypots.crop(event, [[essence, 0.75], [seed, 0.05], ["mysticalagriculture:fertilized_essence", 0.01]], seed,
+                            soil, 2800 + (200 * tier) + ((tier == 6) ? 200 : 0), crop, `unification:botanypots/crop/${removeMod(seed)}`)
+                    }else{
+                        global.mrt.botanypots.crop(event, [[essence, 0.75], [seed, 0.05], ["mysticalagriculture:fertilized_essence", 0.01]], seed,
+                            soil, [1200, 2400, 3600, 4000, 4500, 4500][tier - 1], crop, `unification:botanypots/crop/${removeMod(seed)}`)
+                    }
+
+                }
+            }
+        },
         create: {
             dust: (event, material, dust) => {
                 if (checkItems(dust)) {
@@ -215,7 +254,7 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    event.recipes.createCrushing([Item.of(gem, Math.round(2 * gem_multiplier)), Item.of(gem, Math.round(gem_multiplier)).withChance(0.25)], `#forge:ores/${material}`)
+                    event.recipes.createCrushing([Item.of(gem, Math.floor(2 * gem_multiplier)), Item.of(gem, Math.floor(gem_multiplier)).withChance(0.25)], `#forge:ores/${material}`)
                         .id(`unification:create/crushing/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -223,7 +262,6 @@ onEvent("loaded", e => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input) && checkItems(crushed_ore)) {
-                        
                         nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[[1, 0.4], [2, 0]], [[1, 0.4], [2, 0]], [[12, 0.6], [18, 0]], [[0, 0.35], [0, 0.5]]][i][nUni ? 0 : 1]
                         event.recipes.createCrushing(
@@ -257,6 +295,11 @@ onEvent("loaded", e => {
                     }
                 }
             },
+            reprocessor: (event, seed, essence) => {
+                if (checkItems([seed, essence])) {
+                    event.recipes.create.milling(Item.of(essence).withChance(2.5), seed).id(`unification:botania/mana_infusion/component/${removeMod(essence)}/from_seed`)
+                }
+            }
         },
         createaddition: {
             rod: (event, material, rod) => {
@@ -283,7 +326,7 @@ onEvent("loaded", e => {
                             countOut = [3, 3, 27, 3][i]
                             event.shapeless(Item.of(dust, countOut), 
                                 [Item.of("engineerstools:crushing_hammer").ignoreNBT(), input, input, input, input, input, input, input, input].slice(0, i===3 ? 9 : 3))
-                                .damageIngredient(Item.of("engineerstools:crushing_hammer").ignoreNBT(), [10, 10, 90, 10][i])
+                                .damageIngredient(Item.of("engineerstools:crushing_hammer").ignoreNBT(), [10, 10, 90, 5][i])
                                 .id(`unification:minecraft/shapeless/ore_processing/${removeMod(dust)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}/with_engineerstools_crushing_hammer`)
                         } else {
                             countOut = [2, 2, 18, 1][i]
@@ -319,7 +362,7 @@ onEvent("loaded", e => {
                 let input = `#forge:ores/${material}`
                 if (checkTag(input) && checkItems(dust)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.ftbic.macerating(event, [Item.of(dust, Math.round(2 * gem_multiplier))], input, `unification:ftbic/macerating/ore_processing/${removeMod(dust)}/from_ore`)
+                    global.mrt.ftbic.macerating(event, [Item.of(dust, Math.floor(2 * gem_multiplier))], input, `unification:ftbic/macerating/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
             ore_processing_metal: (event, material, dust) => {
@@ -386,7 +429,7 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    event.recipes.immersiveengineeringCrusher(Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, Item.of(gem, Math.round(gem_multiplier)).withChance(0.25)
+                    event.recipes.immersiveengineeringCrusher(Item.of(gem, Math.floor(2 * gem_multiplier)), `#forge:ores/${material}`, Item.of(gem, Math.floor(gem_multiplier)).withChance(0.25)
                         ).id(`unification:immersiveengineering/crusher/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -467,9 +510,9 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, dust, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(dust)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.integrateddynamics.squeezer(event, [Item.of(dust, Math.round(gem_multiplier)), Item.of(dust, Math.round(gem_multiplier)).withChance(0.5)], "", 
+                    global.mrt.integrateddynamics.squeezer(event, [Item.of(dust, Math.floor(gem_multiplier)), Item.of(dust, Math.floor(gem_multiplier)).withChance(0.5)], "", 
                         `#forge:ores/${material}`, `unification:integrateddynamics/squeezer/ore_processing/${removeMod(dust)}/from_ore`)
-                    global.mrt.integrateddynamics.mechanical_squeezer(event, [Item.of(dust, Math.round(2 * gem_multiplier))], "", `#forge:ores/${material}`, 40,
+                    global.mrt.integrateddynamics.mechanical_squeezer(event, [Item.of(dust, Math.floor(2 * gem_multiplier))], "", `#forge:ores/${material}`, 40,
                         `unification:integrateddynamics/mechanical_squeezer/ore_processing/${removeMod(dust)}/from_ore`)
                 }
             },
@@ -491,8 +534,8 @@ onEvent("loaded", e => {
                             global.mrt.integrateddynamics.squeezer(event, [Number.isInteger(countOut) ? Item.of(dust, countOut) : Item.of(dust).withChance(countOut)], "", input,
                                 `unification:integrateddynamics/squeezer/ore_processing/${removeMod(dust)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}`)
                             
-                            countOut = [3, 3, 27, 2][i]
-                            global.mrt.integrateddynamics.mechanical_squeezer(event, Item.of(dust, countOut), "", Ingredient.of(input, i===3 ? 3 : 1), 40,
+                            countOut = [3, 3, 27, 0.6667][i]
+                            global.mrt.integrateddynamics.mechanical_squeezer(event, Item.of(dust, countOut), "", input, 40,
                                 `unification:integrateddynamics/mechanical_squeezer/ore_processing/${removeMod(dust)}/from_${["ore", "raw_material", "raw_block", "piece"][i]}`)
                         }
                     }
@@ -510,22 +553,25 @@ onEvent("loaded", e => {
                 }
             },
             ore: (event, ore, drops, strata, gem_multiplier) => {
-                drops.forEach(drop => {
-                    if(Item.of(drop, Math.ceil(5*gem_multiplier)).isEmpty()) console.log(drop)
-                    if(Item.of(strata).isEmpty()) console.log(strata)
-                    global.mrt.mekanism.combining(event, ore, [Item.of(drop, 5*gem_multiplier), strata], 
+                if(drops.length == 1){
+                    global.mrt.mekanism.combining(event, ore, [Item.of(drops[0], Math.ceil(5 * gem_multiplier)), strata], 
                         `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop`)
-                })
+                }else{
+                    for(i = 0; i < drops.length; i++){
+                        global.mrt.mekanism.combining(event, ore, [Item.of(drops[i], Math.ceil(5 * gem_multiplier)), strata], 
+                            `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop_${i+1}`)
+                    }
+                }
             },
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.mekanism.enriching(event, Item.of(gem, Math.round(2 * gem_multiplier)), `#forge:ores/${material}`, 
+                    global.mrt.mekanism.enriching(event, Item.of(gem, Math.floor(2 * gem_multiplier)), `#forge:ores/${material}`, 
                         `unification:mekanism/enriching/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
             ore_processing_metal: (event, material, dust, dirty_dust, clump, shard, crystal, clean_slurry, dirty_slurry) => {
-                let names = [dirty_dust, clump, shard, crystal, clean_slurry, dirty_slurry];
+                let names = [dirty_dust, clump, shard, crystal];
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
                     if (checkTag(input)) {
@@ -561,7 +607,6 @@ onEvent("loaded", e => {
                 if(checkTag(`#forge:dirty_dusts/${material}`) && checkItems(dust)){
                         global.mrt.mekanism.enriching(event, dust, `#forge:dirty_dusts/${material}`, `unification:mekanism/enriching/ore_processing/${removeMod(dust)}/from_dirty_dust`)
                 }
-
                 if(checkTag(`#forge:clumps/${material}`) && checkItems([dust].concat(names.slice(0, 1)))){
                     global.mrt.mekanism.crushing(event, dirty_dust, `#forge:clumps/${material}`, `unification:mekanism/crushing/ore_processing/${removeMod(dirty_dust)}/from_clump`)
                 }
@@ -571,9 +616,188 @@ onEvent("loaded", e => {
                 if(checkTag(`#forge:clumps/${material}`) && checkItems([dust].concat(names.slice(0, 3)))){
                     global.mrt.mekanism.injecting(event, shard, `#forge:crystals/${material}`, 'mekanism:hydrogen_chloride',
                         `unification:mekanism/injecting/ore_processing/${removeMod(shard)}/from_crystal`)
+                    global.mrt.mekanism.crystallizing(event, crystal, [clean_slurry, 200], `unification:mekanism/crystallizing/ore_processing/${removeMod(crystal)}/from_clean_slurry`)
+                    global.mrt.mekanism.washing(event, clean_slurry, ["#minecraft:water", 5], dirty_slurry, `unification:mekanism/washing/ore_processing/${removeMod(clean_slurry)}/from_dirty_slurry`)
                 }
-                global.mrt.mekanism.crystallizing(event, crystal, [clean_slurry, 200], `unification:mekanism/crystallizing/ore_processing/${removeMod(crystal)}/from_clean_slurry`)
-                global.mrt.mekanism.washing(event, clean_slurry, ["#minecraft:water", 5], dirty_slurry, `unification:mekanism/washing/ore_processing/${removeMod(clean_slurry)}/from_dirty_slurry`)
+            }
+        },
+        minecraft: {   
+            gear: (event, material, gear) => {
+                if (checkItems(gear)) {
+                    if (checkTag(`#forge:ingots/${material}`)){
+                        event.shaped(gear, [" I ", "III", " I "], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(gear)}/from_ingots`)
+                    } else if (checkTag(`#forge:gems/${material}`)){
+                        event.shaped(gear, [" I ", "III", " I "], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(gear)}/from_gems`)
+                    }
+                }
+            },
+            ore_processing_gem: (event, material, gem, gem_multiplier) => {
+                if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
+                    if(isNaN(gem_multiplier)) gem_multiplier = 1
+                    event.smelting(Item.of(gem, Math.floor(gem_multiplier)), `#forge:ores/${material}`)
+                        .xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(gem)}/from_ore`)
+                    event.blasting(Item.of(gem, Math.floor(gem_multiplier)), `#forge:ores/${material}`)
+                        .xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(gem)}/from_ore`)
+                }
+            },     
+            ore_processing_metal: (event, material, ingot) => {
+                [`#forge:ores/${material}`, `#forge:raw_materials/${material}`].forEach((input, i) => {
+                    if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
+                    if (checkTag(input) && checkItems(ingot)) {
+                        event.smelting(ingot, input).xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material"][i]}`)
+                        event.blasting(ingot, input).xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material"][i]}`)
+                    }
+                })
+            },
+            pieces_to_raw: (event, material, raw) => {
+                if(enable_raw_recipes){
+                    if (checkTag(`#forge:pieces/${material}`) && checkItems(raw)) {
+                        event.shaped(raw, ["PP", "PP"], {P: `#forge:pieces/${material}`}).id(`unification:minecraft/shaped/ore_processing/${removeMod(raw)}/from_pieces`)
+                    }
+                } else {
+                    let ore = `kubejs:${material}_ore.minecraft.stone`
+                    if (checkTag(`#forge:pieces/${material}`) && checkItems(ore)) {
+                        event.shaped(ore, ["PP", "PP"], {P: `#forge:pieces/${material}`}).id(`unification:minecraft/shaped/ore_processing/${removeMod(ore)}/from_pieces`)
+                    }
+                }
+            },
+            rod: (event, material, rod) => {
+                if (checkItems(rod)) {
+                    if (checkTag(`#forge:ingots/${material}`)){
+                        event.shaped(`3x ${rod}`, ["  I", " I ", "I  "], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(rod)}/from_ingot`)
+                    } else if (checkTag(`#forge:gems/${material}`)){
+                        event.shaped(`3x ${rod}`, ["  I", " I ", "I  "], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(rod)}/from_gem`)
+                    }
+                }
+            },
+            storage_convert_gem: (event, material, gem, block, count_block) => {
+                if(checkItems(block) && checkItems(gem)){
+                    let gemTag = `#forge:gems/${material}`
+                    let blockTag = `#forge:storage_blocks/${material}`
+                    if (checkTag(gemTag) && checkTag(blockTag)) {
+                        if(count_block != "count_block"){
+                            event.shapeless(Item.of(gem, count_block), [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(gem)}/from_block`)
+                            if(count_block === 1){
+                                event.shaped(block, ["I"], {I: gemTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_gems`)
+                            }else if(count_block === 4){
+                                event.shaped(block, ["II", "II"], {I: gemTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_gems`)
+                            }else if(count_block === 9){
+                                event.shaped(block, ["III", "III", "III"], {I: gemTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_gems`)
+                            }else{
+                                event.shapeless(block, Item.of(gem, count_block)).id(`unification:minecraft/shapeless/storage/${removeMod(block)}/from_gems`)
+                            }
+                        }else{
+                            event.shapeless(Item.of(gem, 9), [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(gem)}/from_block`)
+                            event.shaped(block, ["III", "III", "III"], {I: gemTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_gems`)
+                        }
+                    }
+                }
+            },
+            storage_convert_metal: (event, material, ingot, block, nugget, count_block) => {
+                if(checkItems(ingot)){
+                    let ingotTag = `#forge:ingots/${material}`
+                    let blockTag = `#forge:storage_blocks/${material}`
+                    let nuggetTag = `#forge:nuggets/${material}`
+                    if (checkItems(block) && checkTag(ingotTag) && checkTag(blockTag)) {
+                        if(count_block != "count_block"){
+                            event.shapeless(Item.of(ingot, count_block), [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(ingot)}/from_block`)
+                            if(count_block === 1){
+                                event.shaped(block, ["I"], {I: ingotTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_ingots`)
+                            }else if(count_block === 4){
+                                event.shaped(block, ["II", "II"], {I: ingotTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_ingots`)
+                            }else if(count_block === 9){
+                                event.shaped(block, ["III", "III", "III"], {I: ingotTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_ingots`)
+                            }else{
+                                event.shapeless(block, Item.of(ingot, count_block)).id(`unification:minecraft/shapeless/storage/${removeMod(block)}/from_ingots`)
+                            }
+                        }else{
+                            event.shapeless(Item.of(ingot, 9), [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(ingot)}/from_block`)
+                            event.shaped(block, ["III", "III", "III"], {I: ingotTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_ingots`)
+                        }
+                    }
+                    if (checkItems(nugget) && checkTag(ingotTag) && checkTag(nuggetTag)) {
+                        event.shapeless(`9x ${nugget}`, [ingotTag]).id(`unification:minecraft/shapeless/storage/${removeMod(nugget)}/from_ingot`)
+                        event.shaped(ingot, ["NNN", "NNN", "NNN"], {N: nuggetTag}).id(`unification:minecraft/shaped/storage/${removeMod(ingot)}/from_nuggets`)
+                    }
+                }
+            },
+            storage_convert_raw: (event, material, raw, block) => {
+                let rawTag = `#forge:raws/${material}`
+                let blockTag = `#forge:raw_blocks/${material}`
+                if (checkTag(rawTag) && checkTag(blockTag) && checkItems(raw) && checkItems(block)) {
+                    event.shapeless(`9x ${raw}`, [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(raw)}/from_block`)
+                    event.shaped(block, ["III", "III", "III"], {I: rawTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_raw_materials`)
+                }
+            },
+            smelting_recipes: (event, material, ingot, gem, nugget, fromDustOnly) => {
+                let element
+                if(checkItems(ingot)) element = ingot
+                else if(checkItems(gem)) element = gem
+                else return
+
+                if(fromDustOnly === null) fromDustOnly = false
+
+                let types = ["dust", "gear", "plate", "rod", "wire", "coin"]
+                let output = [element, `4x ${element}`, element, `4x ${nugget}`, `4x ${nugget}`, `3x ${nugget}`]
+                let xp = [0.1, 0, 0, 0, 0, 0]
+                types.forEach((type, i) => {
+                    if(checkTag(`#forge:${type}s/${material}`)){
+                        if(checkItems(Item.of(output[i]).id)){
+                            event.smelting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/smelting/component/${removeMod(output[i])}/from_${type}`)
+                            event.blasting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/blasting/component/${removeMod(output[i])}/from_${type}`)
+                        }
+                        if(fromDustOnly === true) return
+                    }
+                })
+            },
+            wire: (event, material, wire) => {
+                if (checkItems(wire)) {
+                    if(checkTag(`#forge:ingots/${material}`)){
+                        event.shaped(Item.of(wire, 3), ["III"], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(wire)}/from_ingots`)
+                    } else if(checkTag(`#forge:gems/${material}`)){
+                        event.shaped(Item.of(wire, 3), ["III"], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(wire)}/from_gems`)
+                    }
+                }
+            }
+        },
+        mysticalagriculture: {
+            essence_to_material: (event, essence, mysticalagriculture_craft_type, ingot, gem, gem_multiplier, mysticalagriculture_output_multiplier) => {
+                let element
+                if(checkItems(ingot)) element = ingot
+                else if(checkItems(gem)) element = gem
+                else return
+
+                if(isNaN(gem_multiplier)) gem_multiplier = 1
+                if(isNaN(mysticalagriculture_craft_type)) mysticalagriculture_craft_type = 8
+                if(isNaN(mysticalagriculture_output_multiplier)) mysticalagriculture_output_multiplier = 1
+
+                if(checkItems(essence)){
+                    if(mysticalagriculture_craft_type == 9){
+                        event.shaped(Item.of(element, Math.floor(gem_multiplier * mysticalagriculture_output_multiplier)), ["EEE", "EEE", "EEE"], {E: essence})
+                            .id(`unification:minecraft/shaped/component/${removeMod(element)}/from_essence`)
+                    }else if(mysticalagriculture_craft_type == 8){
+                        event.shaped(Item.of(element, Math.floor(gem_multiplier * mysticalagriculture_output_multiplier)), ["EEE", "E E", "EEE"], {E: essence})
+                            .id(`unification:minecraft/shaped/component/${removeMod(element)}/from_essence`)
+                    }else if(mysticalagriculture_craft_type == 3){
+                        event.shaped(Item.of(element, Math.floor(gem_multiplier * mysticalagriculture_output_multiplier)), ["EEE"], {E: essence})
+                            .id(`unification:minecraft/shaped/component/${removeMod(element)}/from_essence`)
+                    }
+                }
+            },
+            seed: (event, material, seed, tier) => {
+                if(checkItems(seed)){
+                    if(checkTag(`#forge:ingots/${material}`)) tag = `#forge:ingots/${material}`
+                    else if(checkTag(`#forge:gems/${material}`)) tag = `#forge:gems/${material}`
+                    else return
+                    let essence = essences[tier - 1]
+                    global.mrt.mysticalagriculture.infusion(event, seed, "mysticalagriculture:prosperity_seed_base", [tag, essence, tag, essence, tag, essence, tag, essence], 
+                        `unification:mysticalagriculture/infusion/component/${removeMod(seed)}/from_infusion`)
+                }
+            },
+            reprocessor: (event, seed, essence) => {
+                if(checkItems([seed, essence])){
+                    event.recipes.mysticalagriculture.reprocessor(Item.of(essence, 2), seed).id(`unification:mysticalagriculture/reprocessor/component/${removeMod(essence)}/from_seed`)
+                }
             }
         },
         occultism: {
@@ -627,7 +851,7 @@ onEvent("loaded", e => {
             ore_processing_gem: (event, material, gem, gem_multiplier) => {
                 if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.silents_mechanisms.crushing(event, [Item.of(gem, Math.round(2 * gem_multiplier)), Item.of("minecraft:cobblestone").withChance(0.1)], `#forge:ores/${material}`, 200, 
+                    global.mrt.silents_mechanisms.crushing(event, [Item.of(gem, Math.floor(2 * gem_multiplier)), Item.of("minecraft:cobblestone").withChance(0.1)], `#forge:ores/${material}`, 200, 
                         `unification:silents_mechanisms/crushing/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -651,10 +875,39 @@ onEvent("loaded", e => {
             }
         },
         tconstruct: {
+            casting: (event, molten, storage_block, ingot, nugget, gem, plate, gear, rod, wire, coin, count_block) => {
+                let casts = ["", "ingot", "nugget", "gem", "plate", "gear", "rod", "wire", "coin"]
+                let amounts = [1296, 144, 16, 144, 144, 576, 72, 72, 48]
+                let times = [180, 60, 20, 80, 60, 120, 43, 43, 35]
+                if(!Fluid.of(molten).equals(Fluid.of(""))){
+                    [storage_block, ingot, nugget, gem, plate, gear, rod, wire, coin].forEach((output, i) => {
+                        if (checkItems(output)) {
+                            if (i == 0) {
+                                let amount = amounts[i]
+                                if(count_block != "count_block"){
+                                    amount = count_block * 144
+                                }
+                                if (output == "appliedenergistics2:quartz_block") {
+                                    global.mrt.tconstruct.casting(event, output, [molten, amount], "", true, false, times[0], 
+                                        `unification:tconstruct/casting/component/certus_quartz_block/from_molten`)
+                                }else{
+                                    global.mrt.tconstruct.casting(event, output, [molten, amount], "", true, false, times[0], 
+                                        `unification:tconstruct/casting/component/${removeMod(output)}/from_molten`)
+                                }
+                            } else {
+                                global.mrt.tconstruct.casting(event, output, [molten, amounts[i]], `#tconstruct:casts/multi_use/${casts[i]}`, false, false, times[i], 
+                                    `unification:tconstruct/casting/component/${removeMod(output)}/from_molten/multi_use`)
+                                global.mrt.tconstruct.casting(event, output, [molten, amounts[i]], `#tconstruct:casts/single_use/${casts[i]}`, false, true, times[i], 
+                                    `unification:tconstruct/casting/component/${removeMod(output)}/from_molten/single_use`)
+                            }
+                        }
+                    })
+                }
+            },
             ore_processing_gem: (event, material, molten, gem_multiplier) => {
-                if (checkTag(`#forge:ores/${material}`) && !Fluid.of(molten).equals(Fluid.empty)) {
+                if (checkTag(`#forge:ores/${material}`) && !Fluid.of(molten).equals(Fluid.of(""))) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, Math.round(144 * gem_multiplier)), Fluid.of(molten, Math.round(48 * gem_multiplier)), 
+                    global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, Math.floor(144 * gem_multiplier)), Fluid.of(molten, Math.floor(48 * gem_multiplier)), 
                         `#forge:ores/${material}`, 800, 100, `unification:tconstruct/melting/ore_processing/${removeMod(molten)}/from_ore`)
                 }
             },
@@ -662,7 +915,7 @@ onEvent("loaded", e => {
             ore_processing_metal: (event, material, molten) => {
                 [`#forge:ores/${material}`, `#forge:raw_materials/${material}`, `#forge:raw_blocks/${material}`, `#forge:pieces/${material}`].forEach((input, i) => {
                     if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
-                    if (checkTag(input) && !Fluid.of(molten).equals(Fluid.empty)) {
+                    if (checkTag(input) && !Fluid.of(molten).equals(Fluid.of(""))) {
                         nUni = !(input===`#forge:ores/${material}`) && metal_ore_drops_fortune
                         countOut = [[144, 192], [144, 192], [1296, 1728], [36, 48]][i][nUni ? 0 : 1]
                         global.mrt.tconstruct.ore_melting(event, Fluid.of(molten, countOut), [], input, 800, 100, 
@@ -670,7 +923,7 @@ onEvent("loaded", e => {
                     }
                 })
             },
-            smelting: (event, material, molten) => {
+            smelting: (event, material, molten, count_block) => {
                 let inputs = [
                     `#forge:storage_blocks/${material}`,`#forge:ingots/${material}`, `#forge:nuggets/${material}`, `#forge:gems/${material}`, `#forge:dusts/${material}`, 
                     `#forge:plates/${material}`, `#forge:gears/${material}`, `#forge:rods/${material}`, `#forge:wires/${material}`, `#forge:coins/${material}`
@@ -678,31 +931,15 @@ onEvent("loaded", e => {
                 let amounts = [1296, 144, 16, 144, 144, 144, 576, 72, 72, 48]
                 let times = [180, 60, 20, 80, 60, 60, 120, 43, 43, 35]
                 let ids = ["block", "ingot", "nugget", "gem", "dust", "plate", "gear", "rod", "wire", "coin"]
-                if(!Fluid.of(molten).equals(Fluid.empty)){
+                if(!Fluid.of(molten).equals(Fluid.of(""))){
                     inputs.forEach((input, i) => {
                         if (checkTag(input)) {
-                            global.mrt.tconstruct.melting(event, Fluid.of(molten, amounts[i]), input, 800, times[i], 
-                                `unification:tconstruct/melting/component/${removeMod(molten)}/from_${ids[i]}`)
-                        }
-                    })
-                }
-            },
-            casting: (event, molten, storage_block, ingot, nugget, gem, plate, gear, rod, wire, coin) => {
-                let casts = ["", "ingot", "nugget", "gem", "plate", "gear", "rod", "wire", "coin"]
-                let amounts = [1296, 144, 16, 144, 144, 576, 72, 72, 48]
-                let times = [180, 60, 20, 80, 60, 120, 43, 43, 35]
-                if(!Fluid.of(molten).equals(Fluid.empty)){
-                    [storage_block, ingot, nugget, gem, plate, gear, rod, wire, coin].forEach((output, i) => {
-                        if (checkItems(output)) {
-                            if (i === 0) {
-                                global.mrt.tconstruct.casting(event, output, [molten, amounts[0]], "", true, false, times[0], 
-                                    `unification:tconstruct/casting/component/${removeMod(output)}/from_molten`)
-                            } else {
-                                global.mrt.tconstruct.casting(event, output, [molten, amounts[i]], `#tconstruct:casts/multi_use/${casts[i]}`, true, false, times[i], 
-                                    `unification:tconstruct/casting/component/${removeMod(output)}/from_molten/multi_use`)
-                                global.mrt.tconstruct.casting(event, output, [molten, amounts[i]], `#tconstruct:casts/single_use/${casts[i]}`, true, true, times[i], 
-                                    `unification:tconstruct/casting/component/${removeMod(output)}/from_molten/single_use`)
+                            let amount = amounts[i]
+                            if(i == 0 && count_block != "count_block"){
+                                amount = count_block * 144
                             }
+                            global.mrt.tconstruct.melting(event, Fluid.of(molten, amount), input, 800, times[i], 
+                                `unification:tconstruct/melting/component/${removeMod(molten)}/from_${ids[i]}`)
                         }
                     })
                 }
@@ -729,6 +966,18 @@ onEvent("loaded", e => {
                     event.recipes.thermal.numismatic_fuel(`#forge:coins/${material}`).energy(energy_amount)
                 }
             },
+            crop: (event, seed, essence, tier) => {
+                if (checkItems([seed, essence])) {
+                    if(isNaN(tier)) tier = 1
+                    if(new_seed_recipes){
+                        event.recipes.thermal.insolator([Item.of(essence), Item.of(seed).withChance(1.05), Item.of("mysticalagriculture:fertilized_essence").withChance(0.01)], seed)
+                            .energy(Math.ceil(45000 + (5000 * tier) + ((tier == 6) ? 5000 : 0))).water(500).id(`unification:thermal/insolator/${removeMod(seed)}`)
+                    }else{
+                        event.recipes.thermal.insolator([Item.of(essence), Item.of(seed)], seed)
+                            .energy(Math.ceil(100000)).water(500).id(`unification:thermal/insolator/${removeMod(seed)}`)
+                    }
+                }
+            },
             dust: (event, material, dust) => {
                 if (checkItems(dust)) {
                     if (checkTag(`#forge:ingots/${material}`)){
@@ -750,7 +999,7 @@ onEvent("loaded", e => {
                 }
             },
             ingot_in_chiller: (event, molten, ingot) => {
-                if(!Fluid.of(molten).equals(Fluid.empty) && checkItems(ingot)){
+                if(!Fluid.of(molten).equals(Fluid.of("")) && checkItems(ingot)){
                     event.recipes.thermal.chiller(ingot, [Fluid.of(molten, 144), 'thermal:chiller_ingot_cast']).id(`unification:thermal/chiller/component/${removeMod(ingot)}/from_molten`)
                 }
             },
@@ -763,9 +1012,9 @@ onEvent("loaded", e => {
                 input = `#forge:ores/${material}`
                 if (checkTag(input) && checkItems(gem)) {
                     if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    event.recipes.thermal.pulverizer([Item.of(gem, Math.round(2 * gem_multiplier)), Item.of("minecraft:gravel").withChance(0.2)], input).energy(4000)
+                    event.recipes.thermal.pulverizer([Item.of(gem, Math.floor(2 * gem_multiplier)), Item.of("minecraft:gravel").withChance(0.2)], input).energy(4000)
                         .id(`unification:thermal/pulverizer/ore_processing/${removeMod(gem)}/from_ore`)
-                    event.recipes.thermal.smelter([Item.of(gem, Math.round(gem_multiplier)), Item.of(gem, Math.round(gem_multiplier)).withChance(0.5), 
+                    event.recipes.thermal.smelter([Item.of(gem, Math.floor(gem_multiplier)), Item.of(gem, Math.floor(gem_multiplier)).withChance(0.5), 
                         Item.of("thermal:rich_slag").withChance(0.15)], input).energy(3200).id(`unification:thermal/smelter/ore_processing/${removeMod(gem)}/from_ore`)
                 }
             },
@@ -834,31 +1083,39 @@ onEvent("loaded", e => {
                 }
             },
             rod: (event, molten, rod) => {
-                if(!Fluid.of(molten).equals(Fluid.empty) && checkItems(rod)){
+                if(!Fluid.of(molten).equals(Fluid.of("")) && checkItems(rod)){
                     event.recipes.thermal.chiller(rod, [Fluid.of(molten, 72), 'thermal:chiller_rod_cast']).id(`unification:thermal/chiller/component/${removeMod(rod)}/from_molten`)
                 }
             },
-            storage_convert_gem: (event, material, gem, block) => {
+            storage_convert_gem: (event, material, gem, block, count_block) => {
                 if(checkItems(block) && checkItems(gem)){
                     let gemTag = `#forge:gems/${material}`
                     let blockTag = `#forge:storage_blocks/${material}`
                     if (checkTag(gemTag) && checkTag(blockTag)) {
-                        event.recipes.thermal.press(`9x ${gem}`, [blockTag, "thermal:press_unpacking_die"])
+                        let count = 9
+                        if(count_block != "count_block"){
+                            count = count_block
+                        }
+                        event.recipes.thermal.press(Item.of(gem, count), [blockTag, "thermal:press_unpacking_die"])
                             .id(`unification:thermal/press_unpacking/storage/${removeMod(gem)}/from_block`)
-                        event.recipes.thermal.press(block, [`9x ${gemTag}`, "thermal:press_packing_3x3_die"])
+                        event.recipes.thermal.press(block, [Ingredient.of(gemTag, count), "thermal:press_packing_3x3_die"])
                             .id(`unification:thermal/press_packing_3x3/storage/${removeMod(block)}/from_gems`)
                     }
                 }
             },
-            storage_convert_metal: (event, material, ingot, block, nugget) => {
+            storage_convert_metal: (event, material, ingot, block, nugget, count_block) => {
                 if(checkItems(ingot)){
                     let ingotTag = `#forge:ingots/${material}`
                     let blockTag = `#forge:storage_blocks/${material}`
                     let nuggetTag = `#forge:nuggets/${material}`
                     if (checkItems(block) && checkTag(ingotTag) && checkTag(blockTag)) {
-                        event.recipes.thermal.press(`9x ${ingot}`, [blockTag, "thermal:press_unpacking_die"])
+                        let count = 9
+                        if(count_block != "count_block"){
+                            count = count_block
+                        }
+                        event.recipes.thermal.press(Item.of(ingot, count), [blockTag, "thermal:press_unpacking_die"])
                             .id(`unification:thermal/press_unpacking/storage/${removeMod(ingot)}/from_block`)
-                        event.recipes.thermal.press(block, [`9x ${ingotTag}`, "thermal:press_packing_3x3_die"])
+                        event.recipes.thermal.press(block, [Ingredient.of(ingotTag, count), "thermal:press_packing_3x3_die"])
                             .id(`unification:thermal/press_packing_3x3/storage/${removeMod(block)}/from_ingots`)
                     }
                     if (checkItems(nugget) && checkTag(ingotTag) && checkTag(nuggetTag)) {
@@ -878,119 +1135,6 @@ onEvent("loaded", e => {
                             .id(`unification:thermal/press_unpacking/storage/${removeMod(raw)}/from_block`)
                         event.recipes.thermal.press(block, [`9x ${rawTag}`, "thermal:press_packing_3x3_die"])
                             .id(`unification:thermal/press_packing_3x3/storage/${removeMod(block)}/from_raw_materials`)
-                    }
-                }
-            }
-        },
-        minecraft: {   
-            gear: (event, material, gear) => {
-                if (checkItems(gear)) {
-                    if (checkTag(`#forge:ingots/${material}`)){
-                        event.shaped(gear, [" I ", "III", " I "], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(gear)}/from_ingots`)
-                    } else if (checkTag(`#forge:gems/${material}`)){
-                        event.shaped(gear, [" I ", "III", " I "], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(gear)}/from_gems`)
-                    }
-                }
-            },
-            ore_processing_gem: (event, material, gem, gem_multiplier) => {
-                if (checkTag(`#forge:ores/${material}`) && checkItems(gem)) {
-                    if(isNaN(gem_multiplier)) gem_multiplier = 1
-                    event.smelting(Item.of(gem, Math.round(gem_multiplier)), `#forge:ores/${material}`)
-                        .xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(gem)}/from_ore`)
-                    event.blasting(Item.of(gem, Math.round(gem_multiplier)), `#forge:ores/${material}`)
-                        .xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(gem)}/from_ore`)
-                }
-            },     
-            ore_processing_metal: (event, material, ingot) => {
-                [`#forge:ores/${material}`, `#forge:raw_materials/${material}`].forEach((input, i) => {
-                    if(!enable_raw_recipes && (input == `#forge:raw_materials/${material}` || input == `#forge:raw_blocks/${material}`)) return
-                    if (checkTag(input) && checkItems(ingot)) {
-                        event.smelting(ingot, input).xp(1).id(`unification:minecraft/smelting/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material"][i]}`)
-                        event.blasting(ingot, input).xp(1).id(`unification:minecraft/blasting/ore_processing/${removeMod(ingot)}/from_${["ore", "raw_material"][i]}`)
-                    }
-                })
-            },
-            pieces_to_raw: (event, material, raw) => {
-                if(enable_raw_recipes){
-                    if (checkTag(`#forge:pieces/${material}`) && checkItems(raw)) {
-                        event.shaped(raw, ["PP", "PP"], {P: `#forge:pieces/${material}`}).id(`unification:minecraft/shaped/ore_processing/${removeMod(raw)}/from_pieces`)
-                    }
-                } else {
-                    let ore = `kubejs:${material}_ore.minecraft.stone`
-                    if (checkTag(`#forge:pieces/${material}`) && checkItems(ore)) {
-                        event.shaped(ore, ["PP", "PP"], {P: `#forge:pieces/${material}`}).id(`unification:minecraft/shaped/ore_processing/${removeMod(ore)}/from_pieces`)
-                    }
-                }
-            },
-            rod: (event, material, rod) => {
-                if (checkItems(rod)) {
-                    if (checkTag(`#forge:ingots/${material}`)){
-                        event.shaped(`3x ${rod}`, ["  I", " I ", "I  "], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(rod)}/from_ingot`)
-                    } else if (checkTag(`#forge:gems/${material}`)){
-                        event.shaped(`3x ${rod}`, ["  I", " I ", "I  "], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(rod)}/from_gem`)
-                    }
-                }
-            },
-            storage_convert_gem: (event, material, gem, block) => {
-                if(checkItems(block) && checkItems(gem)){
-                    let gemTag = `#forge:gems/${material}`
-                    let blockTag = `#forge:storage_blocks/${material}`
-                    if (checkTag(gemTag) && checkTag(blockTag)) {
-                        event.shapeless(`9x ${gem}`, [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(gem)}/from_block`)
-                        event.shaped(block, ["III", "III", "III"], {I: gemTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_gems`)
-                    }
-                }
-            },
-            storage_convert_metal: (event, material, ingot, block, nugget) => {
-                if(checkItems(ingot)){
-                    let ingotTag = `#forge:ingots/${material}`
-                    let blockTag = `#forge:storage_blocks/${material}`
-                    let nuggetTag = `#forge:nuggets/${material}`
-                    if (checkItems(block) && checkTag(ingotTag) && checkTag(blockTag)) {
-                        event.shapeless(`9x ${ingot}`, [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(ingot)}/from_block`)
-                        event.shaped(block, ["III", "III", "III"], {I: ingotTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_ingots`)
-                    }
-                    if (checkItems(nugget) && checkTag(ingotTag) && checkTag(nuggetTag)) {
-                        event.shapeless(`9x ${nugget}`, [ingotTag]).id(`unification:minecraft/shapeless/storage/${removeMod(nugget)}/from_ingot`)
-                        event.shaped(ingot, ["NNN", "NNN", "NNN"], {N: nuggetTag}).id(`unification:minecraft/shaped/storage/${removeMod(ingot)}/from_nuggets`)
-                    }
-                }
-            },
-            storage_convert_raw: (event, material, raw, block) => {
-                let rawTag = `#forge:raws/${material}`
-                let blockTag = `#forge:raw_blocks/${material}`
-                if (checkTag(rawTag) && checkTag(blockTag) && checkItems(raw) && checkItems(block)) {
-                    event.shapeless(`9x ${raw}`, [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(raw)}/from_block`)
-                    event.shaped(block, ["III", "III", "III"], {I: rawTag}).id(`unification:minecraft/shaped/storage/${removeMod(block)}/from_raw_materials`)
-                }
-            },
-            smelting_recipes: (event, material, ingot, gem, nugget, fromDustOnly) => {
-                let element
-                if(checkItems(ingot)) element = ingot
-                else if(checkItems(gem)) element = gem
-                else return
-
-                if(fromDustOnly === null) fromDustOnly = false
-
-                let types = ["dust", "gear", "plate", "rod", "wire", "coin"]
-                let output = [element, `4x ${element}`, element, `4x ${nugget}`, `4x ${nugget}`, `3x ${nugget}`]
-                let xp = [0.1, 0, 0, 0, 0, 0]
-                types.forEach((type, i) => {
-                    if(checkTag(`#forge:${type}s/${material}`)){
-                        if(checkItems(Item.of(output[i]).id)){
-                            event.smelting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/smelting/component/${removeMod(output[i])}/from_${type}`)
-                            event.blasting(Item.of(output[i]), `#forge:${type}s/${material}`).xp(xp[i]).id(`unification:minecraft/blasting/component/${removeMod(output[i])}/from_${type}`)
-                        }
-                        if(fromDustOnly === true) return
-                    }
-                })
-            },
-            wire: (event, material, wire) => {
-                if (checkItems(wire)) {
-                    if(checkTag(`#forge:ingots/${material}`)){
-                        event.shaped(Item.of(wire, 3), ["III"], {I: `#forge:ingots/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(wire)}/from_ingots`)
-                    } else if(checkTag(`#forge:gems/${material}`)){
-                        event.shaped(Item.of(wire, 3), ["III"], {I: `#forge:gems/${material}`}).id(`unification:minecraft/shaped/component/${removeMod(wire)}/from_gems`)
                     }
                 }
             }

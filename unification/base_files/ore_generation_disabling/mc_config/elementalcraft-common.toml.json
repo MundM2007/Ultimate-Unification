@@ -1,0 +1,5 @@
+{
+    "replace": [
+        ["worldgen.inertCrystal", "arlemiteTries", 0, 4]
+    ]
+}

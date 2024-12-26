@@ -71,7 +71,7 @@
             }
         ]
     },
-    "pendorite": {     
+    "pendorite_scraps": {     
         "type": "metal",
         "drops": "byg:raw_pendorite",
         "counts": 1,

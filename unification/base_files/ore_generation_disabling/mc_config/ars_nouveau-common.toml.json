@@ -1,0 +1,5 @@
+{
+    "replace": [
+        ["general", "genOre", false, true]
+    ]
+}

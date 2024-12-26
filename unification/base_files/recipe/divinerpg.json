@@ -14,12 +14,14 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apalachia": {
         "variants": {
-            "energy_from_coin": 112000
+            "energy_from_coin": 112000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -28,8 +30,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -49,6 +54,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -56,6 +63,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -63,12 +71,16 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["divinerpg:blasting/apalachia_fragments_blasting", "manual.divinerpg.apalachia"],
+            ["divinerpg:smelting/apalachia_fragments_smelting", "manual.divinerpg.apalachia"],
             ["divinerpg:shaped/apalachia_block", "minecraft.storage_convert_gem"]
         ]
     },
     "aquatic": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -77,8 +89,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -98,6 +113,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -105,6 +122,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -116,7 +134,9 @@
     },
     "arlemite": {
         "variants": {
-            "energy_from_coin": 128000
+            "energy_from_coin": 128000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 2
         },
         "add": [
             "appliedenergistics2.dust",
@@ -129,9 +149,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -158,6 +181,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_raw",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "occultism.ore_processing_metal",
             "potionsmaster.dust",
@@ -168,6 +193,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -186,7 +212,9 @@
     },
     "bloodgem": {
         "variants": {
-            "energy_from_coin": 64000
+            "energy_from_coin": 64000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 2
         },
         "add": [
             "appliedenergistics2.dust",
@@ -198,9 +226,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -224,6 +255,8 @@
             "minecraft.rod",
             "minecraft.smelting_recipes",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -233,6 +266,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
@@ -247,7 +281,9 @@
     },
     "bluefire_stone": {
         "variants": {
-            "energy_from_coin": 64000
+            "energy_from_coin": 64000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -256,8 +292,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -277,6 +316,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -284,6 +325,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -293,7 +335,9 @@
     },
     "corrupted_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -302,8 +346,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -323,6 +370,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -330,6 +379,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -339,7 +389,9 @@
     },
     "divine_stone": {
         "variants": {
-            "energy_from_coin": 128000
+            "energy_from_coin": 128000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -348,8 +400,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -369,6 +424,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -376,6 +433,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -385,7 +443,9 @@
     },
     "eden": {
         "variants": {
-            "energy_from_coin": 96000
+            "energy_from_coin": 96000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -394,8 +454,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -415,6 +478,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -422,6 +487,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -429,12 +495,16 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["divinerpg:blasting/eden_fragments_blasting", "manual.divinerpg.eden"],
+            ["divinerpg:smelting/eden_fragments_smelting", "manual.divinerpg.eden"],
             ["divinerpg:shaped/eden_block", "minecraft.storage_convert_gem"]
         ]
     },
     "ender_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -443,8 +513,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -464,6 +537,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -471,6 +546,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -480,7 +556,9 @@
     },
     "hellstone": {
         "variants": {
-            "energy_from_coin": 576000
+            "energy_from_coin": 576000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -489,6 +567,8 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
             "createaddition.rod",
@@ -510,6 +590,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -517,6 +599,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -528,7 +611,9 @@
     },
     "ice_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -537,8 +622,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -558,6 +646,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -565,6 +655,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -574,7 +665,9 @@
     },
     "jungle_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -583,8 +676,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -604,6 +700,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -611,6 +709,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -620,7 +719,9 @@
     },
     "molten_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -629,8 +730,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -650,6 +754,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -657,6 +763,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -666,7 +773,9 @@
     },
     "mortum": {
         "variants": {
-            "energy_from_coin": 128000
+            "energy_from_coin": 128000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -675,8 +784,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -696,6 +808,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -703,6 +817,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -710,12 +825,16 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["divinerpg:blasting/mortum_fragments_blasting", "manual.divinerpg.mortum"],
+            ["divinerpg:smelting/mortum_fragments_smelting", "manual.divinerpg.mortum"],
             ["divinerpg:shaped/mortum_block", "minecraft.storage_convert_gem"]
         ]
     },
     "realmite": {
         "variants": {
-            "energy_from_coin": 120000
+            "energy_from_coin": 120000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -728,9 +847,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -757,6 +879,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_raw",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "occultism.ore_processing_metal",
             "potionsmaster.dust",
@@ -767,6 +891,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -785,7 +910,9 @@
     },
     "rupee": {
         "variants": {
-            "energy_from_coin": 124000
+            "energy_from_coin": 124000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -798,9 +925,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -827,6 +957,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_raw",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "occultism.ore_processing_metal",
             "potionsmaster.dust",
@@ -837,6 +969,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -855,7 +988,9 @@
     },
     "shadow_bar": {
         "variants": {
-            "energy_from_coin": 254000
+            "energy_from_coin": 254000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 2
         },
         "add": [
             "appliedenergistics2.dust",
@@ -864,8 +999,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -885,6 +1023,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -892,6 +1032,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -904,7 +1045,9 @@
     "shadow_stone": {},
     "skythern": {
         "variants": {
-            "energy_from_coin": 120000
+            "energy_from_coin": 120000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -913,8 +1056,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -934,6 +1080,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -941,6 +1089,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -948,12 +1097,16 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["divinerpg:blasting/skythern_fragments_blasting", "manual.divinerpg.skythern"],
+            ["divinerpg:smelting/skythern_fragments_smelting", "manual.divinerpg.skythern"],
             ["divinerpg:shaped/skythern_block", "minecraft.storage_convert_gem"]
         ]
     },
     "terran_stone": {
         "variants": {
-            "energy_from_coin": 160000
+            "energy_from_coin": 160000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -962,8 +1115,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -983,6 +1139,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -990,6 +1148,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -999,7 +1158,9 @@
     },
     "torridite": {
         "variants": {
-            "energy_from_coin": 64000
+            "energy_from_coin": 64000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -1012,9 +1173,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -1041,6 +1205,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_raw",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "occultism.ore_processing_metal",
             "potionsmaster.dust",
@@ -1051,6 +1217,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -1069,7 +1236,9 @@
     },
     "wildwood": {
         "variants": {
-            "energy_from_coin": 104000
+            "energy_from_coin": 104000,
+            "mysticalagriculture_craft_type": 9,
+            "mysticalagriculture_output_multiplier": 1
         },
         "add": [
             "appliedenergistics2.dust",
@@ -1078,8 +1247,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -1099,6 +1271,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_gem",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -1106,6 +1280,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -1113,6 +1288,8 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["divinerpg:blasting/wildwood_fragments_blasting", "manual.divinerpg.wildwood"],
+            ["divinerpg:smelting/wildwood_fragments_smelting", "manual.divinerpg.wildwood"],
             ["divinerpg:shaped/wildwood_block", "minecraft.storage_convert_gem"]
         ]
     }

@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arsenic": {
@@ -23,11 +23,19 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "dust",
+            "essence_type": "dust",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["dust", "nuclearcraft:items/gem_dust_arsenic", "nuclearcraft:gem_dust_arsenic"]
         ],
-        "add": [],
+        "add": [
+            "mysticalagriculture#888a7e"
+        ],
         "remove": {}
     },
     "boron_arsenide": {
@@ -36,6 +44,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
         
         "replace": [
             ["gem", "nuclearcraft:items/gem_boron_arsenide", "nuclearcraft:gem_boron_arsenide"]
@@ -47,7 +61,8 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#868577"
         ],
         "remove": {}
     },
@@ -57,6 +72,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "nuclearcraft:items/gem_boron_nitride", "nuclearcraft:gem_boron_nitride"],
@@ -68,7 +89,8 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#8aa37f"
         ],
         "remove": {}
     },
@@ -78,6 +100,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "nuclearcraft:items/gem_carobbiite", "nuclearcraft:gem_carobbiite"],
@@ -90,7 +118,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#a3a259"
+            "molten#a3a259",
+            "mysticalagriculture#a3a259"
         ],
         "remove": {}
     },
@@ -100,6 +129,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_extreme", "nuclearcraft:alloy_extreme"]
@@ -113,7 +148,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#712b40"
+            "molten#712b40",
+            "mysticalagriculture#712b40"
         ],
         "remove": {}
     },
@@ -123,6 +159,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_ferroboron", "nuclearcraft:alloy_ferroboron"]
@@ -135,7 +177,8 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#4f4f4f"
         ],
         "remove": {}
     },
@@ -145,6 +188,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_hard_carbon", "nuclearcraft:alloy_hard_carbon"]
@@ -157,7 +206,8 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#19667d"
         ],
         "remove": {}
     },
@@ -167,6 +217,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
         
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_hsla_steel", "nuclearcraft:alloy_hsla_steel"]
@@ -180,7 +236,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#8d78b0"
+            "molten#8d78b0",
+            "mysticalagriculture#8d78b0"
         ],
         "remove": {}
     },
@@ -190,6 +247,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_lead_platinum", "nuclearcraft:alloy_lead_platinum"]
@@ -203,7 +266,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#548688"
+            "molten#548688",
+            "mysticalagriculture#548688"
         ],
         "remove": {}
     },
@@ -213,6 +277,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_lithium_manganese_dioxide", "nuclearcraft:alloy_lithium_manganese_dioxide"]
@@ -226,7 +296,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#72707d"
+            "molten#72707d",
+            "mysticalagriculture#72707d"
         ],
         "remove": {}
     },
@@ -236,6 +307,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_magnesium_diboride", "nuclearcraft:alloy_magnesium_diboride"]
@@ -249,7 +326,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#1c170c"
+            "molten#1c170c",
+            "mysticalagriculture#1c170c"
         ],
         "remove": {}
     },
@@ -259,6 +337,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_manganese2", "nuclearcraft:ingot_oxide_manganese2"],
@@ -271,7 +355,8 @@
             "rod",
             "gear",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#2a2320"
         ],
         "remove": {}
     },
@@ -281,6 +366,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_manganese", "nuclearcraft:ingot_oxide_manganese"],
@@ -294,7 +385,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#546f56"
+            "molten#546f56",
+            "mysticalagriculture#546f56"
         ],
         "remove": {}
     },
@@ -304,6 +396,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "nuclearcraft:items/gem_rhodochrosite", "nuclearcraft:gem_rhodochrosite"],
@@ -316,7 +414,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b84244"
+            "molten#b84244",
+            "mysticalagriculture#b84244"
         ],
         "remove": {}
     },
@@ -326,6 +425,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_shibuichi", "nuclearcraft:alloy_shibuichi"]
@@ -339,7 +444,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#acaaa8"
+            "molten#acaaa8",
+            "mysticalagriculture#acaaa8"
         ],
         "remove": {}
     },
@@ -349,6 +455,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_sic_sic_cmc", "nuclearcraft:alloy_sic_sic_cmc"]
@@ -362,7 +474,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#817b65"
+            "molten#817b65",
+            "mysticalagriculture#817b65"
         ],
         "remove": {}
     },
@@ -372,6 +485,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_silicon_carbide", "nuclearcraft:alloy_silicon_carbide"]
@@ -385,7 +504,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#78725b"
+            "molten#78725b",
+            "mysticalagriculture#78725b"
         ],
         "remove": {}
     },
@@ -395,6 +515,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_thermoconducting", "nuclearcraft:alloy_thermoconducting"]
@@ -408,7 +534,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#575f3d"
+            "molten#575f3d",
+            "mysticalagriculture#575f3d"
         ],
         "remove": {}
     },
@@ -418,6 +545,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_thorium", "nuclearcraft:ingot_oxide_thorium"],
@@ -431,7 +564,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#272728"
+            "molten#272728",
+            "mysticalagriculture#272728"
         ],
         "remove": {}
     },
@@ -441,6 +575,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_tin_silver", "nuclearcraft:alloy_tin_silver"]
@@ -454,7 +594,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#d3d1e3"
+            "molten#d3d1e3",
+            "mysticalagriculture#d3d1e3"
         ],
         "remove": {}
     },
@@ -464,6 +605,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_tough", "nuclearcraft:alloy_tough"]
@@ -477,7 +624,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#d3d1e3"
+            "molten#d3d1e3",
+            "mysticalagriculture#d3d1e3"
         ],
         "remove": {}
     },
@@ -487,6 +635,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "nuclearcraft:items/ingot_oxide_uranium", "nuclearcraft:ingot_oxide_uranium"],
@@ -500,7 +654,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#1f7a2e"
+            "molten#1f7a2e",
+            "mysticalagriculture#1f7a2e"
         ],
         "remove": {}
     },
@@ -510,6 +665,13 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 2
+        },
+        "burn_time": 0,
+
         "replace": [
             ["gem", "nuclearcraft:items/gem_villiaumite", "nuclearcraft:gem_villiaumite"],
             ["dust", "nuclearcraft:items/gem_dust_villiaumite", "nuclearcraft:gem_dust_villiaumite"]
@@ -531,6 +693,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
         
         "replace": [
             ["ingot", "nuclearcraft:items/alloy_zircaloy", "nuclearcraft:alloy_zircaloy"]
@@ -544,7 +712,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b6b6ae"
+            "molten#b6b6ae",
+            "mysticalagriculture#b6b6ae"
         ],
         "remove": {}
     }

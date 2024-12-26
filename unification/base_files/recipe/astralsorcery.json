@@ -14,13 +14,17 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aquamarine": {
         "variants": {
             "energy_from_coin": 32000,
-            "gem_multiplier": 2
+            "gem_multiplier": 2,
+            "essence": "mysticalagriculture:aquamarine_essence",
+            "seed": "mysticalagriculture:aquamarine_seeds",
+            "crop": "mysticalagriculture:aquamarine_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -33,9 +37,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -69,6 +76,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
@@ -77,6 +85,7 @@
             "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["mysticalagriculture:crops/aquamarine", "botanypots.crop"],
             ["astralsorcery:blasting/aquamarine", "minecraft.ore_processing_gem"],
             ["astralsorcery:smelting/aquamarine", "minecraft.ore_processing_gem"],
             ["thermal:compat/astralsorcery/pulverizer_astralsorcery_aquamarine_ore", "thermal.ore_processing_gem"]
@@ -84,7 +93,9 @@
     },
     "resonating_gem": {
         "variants": {
-            "energy_from_coin": 40000
+            "energy_from_coin": 40000,
+            "mysticalagriculture_craft_type": 8,
+            "mysticalagriculture_output_multiplier": 8
         },
         "add": [
             "appliedenergistics2.dust",
@@ -93,8 +104,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -114,6 +128,8 @@
             "minecraft.smelting_recipes",
             "minecraft.storage_convert_metal",
             "minecraft.wire",
+            "mysticalagriculture.essence_to_material",
+            "mysticalagriculture.seed",
             "occultism.dust",
             "potionsmaster.dust",
             "silents_mechanisms.dust",
@@ -121,6 +137,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.plate",
@@ -131,7 +148,11 @@
     "rock_crystal": {
         "variants": {
             "energy_from_coin": 32000,
-            "gem_multiplier": 3
+            "gem_multiplier": 3,
+            "essence": "mysticalagriculture:rock_crystal_essence",
+            "seed": "mysticalagriculture:rock_crystal_seeds",
+            "crop": "mysticalagriculture:rock_crystal_crop",
+            "tier": 5
         },
         "add": [
             "appliedenergistics2.dust",
@@ -144,9 +165,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -180,17 +204,25 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_gem"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/rock_crystal", "botanypots.crop"]
         ]
     },
     "starmetal": {
         "variants": {
-            "energy_from_coin": 40000
+            "energy_from_coin": 40000,
+            "essence": "mysticalagriculture:starmetal_essence",
+            "seed": "mysticalagriculture:starmetal_seeds",
+            "crop": "mysticalagriculture:starmetal_crop",
+            "tier": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -203,9 +235,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_metal",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "engineerstools.ore_processing_metal",
@@ -243,6 +278,7 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -255,6 +291,7 @@
             "thermal.storage_convert_raw"
         ],
         "remove": [
+            ["mysticalagriculture:crops/starmetal", "botanypots.crop"],
             ["astralsorcery:blasting/starmetal_ingot", "minecraft.ore_processing_metal"],
             ["astralsorcery:shaped/starmetal", "minecraft.storage_convert_metal"],
             ["astralsorcery:shapeless/starmetal_ingot", "minecraft.storage_convert_metal"],

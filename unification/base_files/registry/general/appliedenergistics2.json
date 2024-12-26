@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "certus_quartz": {
@@ -23,6 +23,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["dust", "appliedenergistics2:item/certus_quartz_dust", "appliedenergistics2:certus_quartz_dust"],
@@ -46,6 +47,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "appliedenergistics2:item/certus_quartz_crystal_charged", "appliedenergistics2:charged_certus_quartz_crystal"]
@@ -68,6 +70,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["dust", "appliedenergistics2:item/fluix_dust", "appliedenergistics2:fluix_dust"],

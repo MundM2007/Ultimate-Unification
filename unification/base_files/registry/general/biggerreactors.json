@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blutonium": {
@@ -23,6 +23,12 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "biggerreactors:block/blutonium_block", "biggerreactors:blutonium_block"],
@@ -36,7 +42,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#296cb3"
+            "molten#296cb3",
+            "mysticalagriculture#296cb3"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "biggerreactors:block/cyanite_block", "biggerreactors:cyanite_block"],
@@ -59,7 +72,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#27b0d9"
+            "molten#27b0d9",
+            "mysticalagriculture#27b0d9"
         ],
         "remove": {}
     },
@@ -69,6 +83,12 @@
             "destroy_time": 8,
             "explosion_resistance": 8
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "biggerreactors:block/ludicrite_block", "biggerreactors:ludicrite_block"],
@@ -82,7 +102,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#da27cf"
+            "molten#da27cf",
+            "mysticalagriculture#da27cf"
         ],
         "remove": {}
     }

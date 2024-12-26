@@ -120,7 +120,7 @@
         "counts": 1,
         "variants": [
             {
-                "values": ["#overworld-all", "#atum-all"],
+                "values": ["#overworld-all"],
                 "gen": {
                     "height": [1, 40],
                     "size": 1,
@@ -132,7 +132,7 @@
                 }
             },
             {
-                "values": ["#overworld-all", "#atum-all"],
+                "values": ["#overworld-all"],
                 "gen": {
                     "height": [4, 32],
                     "size": 2,
@@ -332,7 +332,7 @@
         "counts": [4, 5, 6, 7, 8],
         "variants": [
             {
-                "values": ["#overworld-all", "#atum-all"],
+                "values": ["#overworld-all"],
                 "gen": {
                     "height": [1, 20],
                     "size": 7,

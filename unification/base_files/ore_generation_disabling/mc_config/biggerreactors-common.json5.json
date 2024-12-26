@@ -1,0 +1,5 @@
+{
+    "replace": [
+        ["WorldGen", "EnableYelloriteGeneration", false, true]
+    ]
+}

@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "imperium": {
@@ -23,6 +23,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/imperium_ingot", "mysticalagriculture:imperium_ingot"],
@@ -45,6 +46,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/imperium_gemstone_block", "mysticalagriculture:imperium_gemstone_block"],
@@ -59,6 +61,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/inferium_ingot", "mysticalagriculture:inferium_ingot"],
@@ -81,6 +84,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/inferium_gemstone_block", "mysticalagriculture:inferium_gemstone_block"],
@@ -95,6 +99,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/prosperity_ingot", "mysticalagriculture:prosperity_ingot"],
@@ -118,6 +123,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/prosperity_gemstone_block", "mysticalagriculture:prosperity_gemstone_block"],
@@ -132,6 +138,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/prudentium_ingot", "mysticalagriculture:prudentium_ingot"],
@@ -154,6 +161,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/prudentium_gemstone_block", "mysticalagriculture:prudentium_gemstone_block"],
@@ -168,6 +176,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/soulium_ingot", "mysticalagriculture:soulium_ingot"],
@@ -190,6 +199,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/soulium_gemstone_block", "mysticalagriculture:soulium_gemstone_block"],
@@ -204,6 +214,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/supremium_ingot", "mysticalagriculture:supremium_ingot"],
@@ -226,6 +237,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "mysticalagriculture:block/supremium_gemstone_block", "mysticalagriculture:supremium_gemstone_block"],
@@ -240,6 +252,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mysticalagriculture:item/tertium_ingot", "mysticalagriculture:tertium_ingot"],
@@ -262,6 +275,8 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
+        
         "replace": [
             ["storage_block", "mysticalagriculture:block/tertium_gemstone_block", "mysticalagriculture:tertium_gemstone_block"],
             ["gem", "mysticalagriculture:item/tertium_gemstone", "mysticalagriculture:tertium_gemstone"]

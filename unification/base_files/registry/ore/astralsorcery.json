@@ -5,7 +5,7 @@
         "counts": [1, 2, 3],
         "variants": [
             {
-                "values": ["#overworld-all"],
+                "values": ["#overworld_sand-all"],
                 "gen": {
                     "height": [30, 62],
                     "size": 4,

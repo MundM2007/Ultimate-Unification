@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import functools
@@ -63,6 +63,10 @@ class IOManager:
     # creates a directory if it doesn't exist, otherwise it clears it
     def clear_path(self, path):
         try:
+            if os.path.isfile(path):
+                os.remove(path)
+                return
+            
             os.makedirs(path, exist_ok=True)
             for file in os.listdir(path):
                 if os.path.isdir(os.path.join(path, file)):
@@ -71,6 +75,15 @@ class IOManager:
                     os.remove(os.path.join(path, file))
         except Exception as e:
             self.LM.log("file_error", f"Error clearing path: {path}", e)
+
+    
+    def traverse_path(self, path, function):
+        try:
+            for root, dirs, files in os.walk(path):
+                for file in files:
+                    function(os.path.join(root, file))
+        except Exception as e:
+            self.LM.log("file_error", f"Error traversing path: {path}", e)
     
 
     # copies a file and creates the directories if they don't exist

@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:                   
 #         - MundM2007 (https://github.com/MundM2007)
 
 import os
@@ -46,6 +46,8 @@ paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_slurry"),
     os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_fluid"),
     os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_coin"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "add_ore"),
+    os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "remove_worldgen.js"),
     os.path.join(UT.pack_path, "kubejs", "client_scripts", "unification", "jei_hide"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag"),
@@ -56,14 +58,14 @@ paths_to_clear = [
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_recipe"),
     os.path.join(UT.pack_path, "kubejs", "server_scripts", "unification", "remove_tag"),
     os.path.join(UT.pack_path, "kubejs", "assets", "unification", "models", "item"),
-    os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures", "item"),
+    os.path.join(UT.pack_path, "kubejs", "assets", "unification", "textures", "item")
 ]
 for path in paths_to_clear:
     IOM.clear_path(path)
 
+
 # used for counting
 material_added = 0
-
 
 # reads the gen scripts info and recipe types info
 try:
@@ -73,6 +75,7 @@ except json.JSONDecodeError as e:
     LM.log("critical_json_error", f"Error decoding JSON content of the file: gen_scripts_info.json or recipe_types.json", e)
 for recipe_type in recipe_types:
     recipe_types[recipe_type] = (str(recipe_types.get(recipe_type)).removeprefix("[").removesuffix("]").replace("None", "null").replace("False", "false").replace("True", "true"))
+ME.set_recipe_types(recipe_types)
 
 
 for strata in gen_scripts_info.get("strata", []):
@@ -136,32 +139,18 @@ for element in gen_scripts_info.get("main", []):
 
     anything_changed = 0
 
-    if base_file_registry[id_name].get("block") is not None:
-        harvest_level = base_file_registry[id_name]["block"].get("harvest_level")
-        if harvest_level is None:
-            harvest_level = 2
-            LM.log("value_missing", f"Harvest Level not found for {id_name}, using default value of 2")
-        
-        destroy_time = base_file_registry[id_name]["block"].get("destroy_time")
-        if destroy_time is None:
-            destroy_time = 5
-            LM.log("value_missing", f"Destroy Time not found for {id_name}, using default value of 5")
-        
-        explosion_resistance = base_file_registry[id_name]["block"].get("explosion_resistance")
-        if explosion_resistance is None:
-            explosion_resistance = 6
-            LM.log("value_missing", f"Explosion Resistance not found for {id_name}, using default value of 6")
-        
-    else:
-        harvest_level = 2
-        destroy_time = 5
-        explosion_resistance = 6
-        LM.log("value_missing", f"Block values not found for {id_name}, using default values")
+    KFUT.register_material_property(base_file_registry, id_name, "block.harvest_level", 2)
+    KFUT.register_material_property(base_file_registry, id_name, "block.destroy_time", 5)
+    KFUT.register_material_property(base_file_registry, id_name, "block.explosion_resistance", 6)
+    KFUT.register_material_property(base_file_registry, id_name, "burn_time", 0)
+    KFUT.register_material_property(base_file_registry, id_name, "mysticalagriculture.flower_type", "ingot")
+    KFUT.register_material_property(base_file_registry, id_name, "mysticalagriculture.essence_type", "ingot")
+    KFUT.register_material_property(base_file_registry, id_name, "mysticalagriculture.tier", 1)
 
     if base_file_registry[id_name].get("add") is not None:
         base_file_registry[id_name]["add"] = set(base_file_registry[id_name]["add"])
 
-    ME.init_actions(harvest_level, destroy_time, explosion_resistance)
+    ME.init_actions()
     # replaces items with a new texture and adds the tags
     if base_file_registry[id_name].get("replace") is not None:
         # loops over all elements to replace
@@ -254,7 +243,7 @@ for element in gen_scripts_info.get("main", []):
                 if material not in mns:
                     mns[material] = base_file_recipe[id_name]["variants"][material]
 
-        ME.add_recipes(base_file_recipe, id_file, id_name, mns, recipe_types, recipe_types_active, license_notice)
+        ME.add_recipes(base_file_recipe, id_file, id_name, mns, recipe_types_active, license_notice)
         if mns.get("gem_multiplier") is not None:
             gem_multiplier = mns["gem_multiplier"]
 
@@ -288,11 +277,42 @@ for element in gen_scripts_info.get("main", []):
                 counts = base_file_ore[id_name].get("counts", [1])
                 drop_info["counts"] = counts if isinstance(counts, list) else [counts]
             
-            KFUT.add_ore(id_file, id_name, all_stratas, drop_info, gem_multiplier, harvest_level, destroy_time, explosion_resistance, license_notice)
-            
+            KFUT.add_ore(id_file, id_name, all_stratas, drop_info, gem_multiplier, license_notice)
+
+FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "generalsettings.js"), 
+           (f"let metal_ore_drops_fortune = {not UT.get_main_config('ores.metal_ore_drop_itself', False) and UT.get_main_config('ores.metal_fortune_affected', True)}\n" +
+           f"let enable_raw_recipes = {not UT.get_main_config('ores.metal_ore_drop_itself', False)}\n" +
+           f"let disable_ftbic_recipe_gen = {not UT.get_main_config('unification.replace_recipes', False)}\n" +
+           f"let new_seed_recipes = {UT.get_main_config('unification.new_seed_recipes', True)}").replace("False", "false").replace("True", "true"),
+           "", 250, "", "")
+
+if UT.get_main_config('ores.disable_other_ores', None) is not None:
+    IOM.traverse_path(os.path.join(path_program, "base_files", "ore_generation_disabling", "mc_config"), ME.overwrite_config)
+    IOM.traverse_path(os.path.join(path_program, "base_files", "ore_generation_disabling", "mc_defaultconfig"), ME.overwrite_config)
+
+    config_features_to_disable = json.loads(IOM.read(os.path.join(path_program, "base_files", "ore_generation_disabling", "mc_configured_feature.json")))
+    for mod in config_features_to_disable.get("locations", {}).keys():
+        for ore in config_features_to_disable["locations"][mod]:
+            file_path = os.path.join(UT.pack_path, "kubejs", "data", mod, "worldgen", "configured_feature", f"{ore}.json")
+            if UT.get_main_config('ores.disable_other_ores', None) is True:
+                FM.add_text(file_path, "{}")
+            elif os.path.isfile(file_path):
+                IOM.remove(file_path)
+
+    config_disable_ore_gen_kubejs = json.loads(IOM.read(os.path.join(path_program, "base_files", "ore_generation_disabling", "kubejs_worldgen_remove.json")))
+    for feature_id in config_disable_ore_gen_kubejs.get("feature_ids", []):
+        FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "remove_worldgen.js"), f"    event.removeFeatureById('underground_ores', '{feature_id}')\n",
+            "", 250, "onEvent('worldgen.remove', event => {\n")
+    if config_disable_ore_gen_kubejs.get("ore_ids", []) != []:
+        FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "remove_worldgen.js"), 
+            f"    event.removeOres(ores => {{ores.blocks = {config_disable_ore_gen_kubejs.get("ore_ids")}}})\n", "", 250, "onEvent('worldgen.remove', event => {\n")
+
+
+    
+
 FM.save()
 IOM.copy_tree(os.path.join(path_program, "base_files", "assets", "copy"), os.path.join(UT.pack_path, "kubejs", "assets", "unification"))
-LM.log("info", (f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed} "
+LM.log("info", (f"Materials added: {material_added}, Types added: {ME.type_added}, Textures replaced: {ME.texture_replaced}, Elements removed: {ME.element_removed}, "
                 f"Recipes removed: {ME.recipe_removed}, Amount of Recipe Presets that will be run: {ME.recipe_added}"))
 LM.log("info", "Finished")
 LM.save()

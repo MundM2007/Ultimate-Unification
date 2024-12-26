@@ -49,8 +49,13 @@
 
     "bloodmagic.ore_processing_metal": ["id_name", "dust", "gravel", "fragment"],
 
+    "botania.reprocessor": ["seed", "essence", "tier"],
+
+    "botanypots.crop": ["seed", "essence", "crop", "tier"],
+
     "create.ore_processing_gem": ["id_name", "gem", "gem_multiplier"],
     "create.ore_processing_metal": ["id_name", "ingot", "nugget", "crushed_ore"],
+    "create.reprocessor": ["seed", "essence"],
 
     "engineerstools.ore_processing_metal": ["id_name", "dust"],
 
@@ -70,27 +75,32 @@
     "minecraft.ore_processing_metal": ["id_name", "ingot"],
     "minecraft.pieces_to_raw": ["id_name", "raw_material"],
     "minecraft.smelting_recipes": ["id_name", "ingot", "gem", "nugget"],
-    "minecraft.storage_convert_gem": ["id_name", "gem", "storage_block"],
-    "minecraft.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget"],
+    "minecraft.storage_convert_gem": ["id_name", "gem", "storage_block", "count_block"],
+    "minecraft.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget", "count_block"],
     "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"],
+
+    "mysticalagriculture.essence_to_material": ["essence", "mysticalagriculture_craft_type", "ingot", "gem", "gem_multiplier", "mysticalagriculture_output_multiplier"],
+    "mysticalagriculture.seed": ["id_name", "seed", "tier"],
+    "mysticalagriculture.reprocessor": ["seed", "essence"],
 
     "occultism.ore_processing_metal": ["id_name", "dust"],
 
     "silents_mechanisms.ore_processing_gem": ["id_name", "gem", "gem_multiplier"],
     "silents_mechanisms.ore_processing_metal": ["id_name", "dust"],
 
-    "tconstruct.casting": ["molten", "storage_block", "ingot", "nugget", "gem", "plate", "gear", "rod", "wire", "coin"],
+    "tconstruct.casting": ["molten", "storage_block", "ingot", "nugget", "gem", "plate", "gear", "rod", "wire", "coin", "count_block"],
     "tconstruct.ore_processing_gem": ["id_name", "molten", "gem_multiplier"],
     "tconstruct.ore_processing_metal": ["id_name", "molten"],
-    "tconstruct.smelting": ["id_name", "molten"],
+    "tconstruct.smelting": ["id_name", "molten", "count_block"],
     
     "thermal.coin_to_energy": ["id_name", "energy_from_coin"],
+    "thermal.crop": ["seed", "essence", "tier"],
     "thermal.ingot_in_chiller": ["molten", "ingot"],
     "thermal.ingot_in_smelter": ["id_name", "ingot"],
     "thermal.ore_processing_gem": ["id_name", "gem", "gem_multiplier"],
     "thermal.ore_processing_metal": ["id_name", "ingot", "dust"],
-    "thermal.pieces_to_raw": ["id_name", "raw"],
-    "thermal.storage_convert_gem": ["id_name", "gem", "storage_block"],
-    "thermal.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget"],
+    "thermal.pieces_to_raw": ["id_name", "raw_material"],
+    "thermal.storage_convert_gem": ["id_name", "gem", "storage_block", "count_block"],
+    "thermal.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget", "count_block"],
     "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"]
 }

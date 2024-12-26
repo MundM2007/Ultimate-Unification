@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2024 under MIT License by:                   
+# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import json
@@ -49,6 +49,14 @@ class FileManager:
             except json.JSONDecodeError as e:
                 self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
     
+
+    def add_text(self, path_file, content):
+        if path_file in self.files:
+            self.files[path_file][0] += "\n"
+            self.files[path_file][0] += content
+        else:
+            self.files[path_file] = [content]
+
 
     # handles a texture to be created or deleted later
     def handle_texture(self, path_file, path_copy, active, isAdding):
@@ -87,8 +95,10 @@ class FileManager:
         for index, (path_file, content) in enumerate(self.files.items()):
             if len(content) == 3:
                 self.IOM.write(path_file, content[0] + content[1] + content[2])
-            else:
+            elif len(content) == 2:
                 self.IOM.write(path_file, json.dumps(content[0], indent=4 if content[1] else None))
+            else:
+                self.IOM.write(path_file, content[0])
             self.LM.log_percentage(f"Saving files", index / (amount_files))
         
         amount_textures_add = len(self.textures_add) - 1

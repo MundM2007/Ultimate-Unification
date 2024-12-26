@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "refined_glowstone": {
@@ -23,6 +23,7 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mekanism:item/ingot_refined_glowstone", "mekanism:ingot_refined_glowstone"],
@@ -45,6 +46,7 @@
             "destroy_time": 20,
             "explosion_resistance": 1200
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "mekanism:item/ingot_refined_obsidian", "mekanism:ingot_refined_obsidian"],

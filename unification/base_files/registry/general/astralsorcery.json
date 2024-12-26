@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aquamarine": {
@@ -23,6 +23,7 @@
             "destroy_time": 0.5,
             "explosion_resistance": 0.5
         },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "astralsorcery:item/aquamarine", "astralsorcery:aquamarine"]
@@ -45,6 +46,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "astralsorcery:item/resonating_gem", "astralsorcery:resonating_gem"]
@@ -57,7 +64,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#034c88"
+            "molten#034c88",
+            "mysticalagriculture#034c88"
         ],
         "remove": {}
     },
@@ -67,6 +75,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "astralsorcery:item/crystal_rock", "astralsorcery:rock_crystal"]
@@ -79,7 +93,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#f1f1f1"
+            "molten#f1f1f1",
+            "mysticalagriculture#f1f1f1"
         ],
         "remove": {}
     },
@@ -89,6 +104,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "astralsorcery:item/starmetal_ingot", "astralsorcery:starmetal_ingot"],

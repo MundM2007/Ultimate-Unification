@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "desh": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "boss_tools:blocks/desh_block", "boss_tools:desh_block"],
@@ -46,7 +52,8 @@
             "slurry#d38b4c",
             "piece",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#d38b4c"
         ],
         "remove": {}
     },
@@ -56,6 +63,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "boss_tools:items/item_ice_shard", "boss_tools:ice_shard"]
@@ -68,7 +81,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b7c2f8"
+            "molten#b7c2f8",
+            "mysticalagriculture#b7c2f8"
         ],
         "remove": {}
     },
@@ -78,6 +92,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "boss_tools:blocks/silicon_block", "boss_tools:silicon_block"],
@@ -101,7 +121,8 @@
             "slurry#6f535e",
             "piece",
             "wire",
-            "coin"
+            "coin",
+            "mysticalagriculture#6f535e"
         ],
         "remove": {}
     }

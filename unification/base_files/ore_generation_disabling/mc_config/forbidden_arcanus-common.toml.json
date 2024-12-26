@@ -1,0 +1,7 @@
+{
+    "replace": [
+        ["world_gen.arcane_crystal", "generate", false, true],
+        ["world_gen.runestone", "generate", false, true],
+        ["world_gen.dark_runestone", "generate", false, true]
+    ]
+}

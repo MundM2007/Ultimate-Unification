@@ -1,0 +1,14 @@
+{
+    "replace": [
+        ["\"World Generation\"", "Apatite", false, true],
+        ["\"World Generation\"", "Cinnabar", false, true],
+        ["\"World Generation\"", "Niter", false, true],
+        ["\"World Generation\"", "Sulfur", false, true],
+        ["\"World Generation\"", "Copper", false, true],
+        ["\"World Generation\"", "Tin", false, true],
+        ["\"World Generation\"", "Lead", false, true],
+        ["\"World Generation\"", "Silver", false, true],
+        ["\"World Generation\"", "Nickel", false, true],
+        ["\"World Generation\"", "Oil", false, true]
+    ]
+}

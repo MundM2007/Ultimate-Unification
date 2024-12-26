@@ -14,13 +14,17 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "refined_glowstone": {
         "variants": {
             "energy_from_coin": 64000,
-            "molten": "tconstruct:molten_refined_glowstone"
+            "molten": "tconstruct:molten_refined_glowstone",
+            "essence": "mysticalagriculture:refined_glowstone_essence",
+            "seed": "mysticalagriculture:refined_glowstone_seeds",
+            "crop": "mysticalagriculture:refined_glowstone_crop",
+            "tier": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -29,8 +33,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -54,6 +61,7 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -61,12 +69,20 @@
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_metal"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/refined_glowstone", "botanypots.crop"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_refined_glowstone_seeds", "thermal.crop"]
         ]
     },
     "refined_obsidian": {
         "variants": {
             "energy_from_coin": 80000,
-            "molten": "tconstruct:molten_refined_obsidian"
+            "molten": "tconstruct:molten_refined_obsidian",
+            "essence": "mysticalagriculture:refined_obsidian_essence",
+            "seed": "mysticalagriculture:refined_obsidian_seeds",
+            "crop": "mysticalagriculture:refined_obsidian_crop",
+            "tier": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -75,8 +91,11 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -98,6 +117,7 @@
             "silents_mechanisms.dust",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ingot_in_chiller",
@@ -105,6 +125,10 @@
             "thermal.plate",
             "thermal.rod",
             "thermal.storage_convert_metal"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/refined_obsidian", "botanypots.crop"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_refined_obsidian_seeds", "thermal.crop"]
         ]
     }
 }

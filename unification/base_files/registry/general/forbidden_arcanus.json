@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_crystal": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "forbidden_arcanus:item/arcane_crystal", "forbidden_arcanus:arcane_crystal"],
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#acb4cd"
+            "molten#acb4cd",
+            "mysticalagriculture#acb4cd"
         ],
         "remove": {}
     },
@@ -45,6 +52,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "forbidden_arcanus:item/dark_rune", "forbidden_arcanus:dark_rune"]
@@ -57,7 +70,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#51414d"
+            "molten#51414d",
+            "mysticalagriculture#51414d"
         ],
         "remove": {}
     },
@@ -67,6 +81,12 @@
             "destroy_time": 20,
             "explosion_resistance": 1200
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "forbidden_arcanus:item/obsidian_ingot", "forbidden_arcanus:obsidian_ingot"]
@@ -80,7 +100,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#4c2e5f"
+            "molten#4c2e5f",
+            "mysticalagriculture#4c2e5f"
         ],
         "remove": {}
     },
@@ -90,6 +111,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "forbidden_arcanus:item/rune", "forbidden_arcanus:rune"]
@@ -102,7 +129,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#931a7f"
+            "molten#931a7f",
+            "mysticalagriculture#931a7f"
         ],
         "remove": {}
     },
@@ -112,6 +140,13 @@
             "destroy_time": 8,
             "explosion_resistance": 8
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 5
+        },
+        "burn_time": 0,
+        
         "replace": [
             ["ingot", "forbidden_arcanus:item/stellarite_piece", "forbidden_arcanus:stellarite_piece"],
             ["storage_block", "forbidden_arcanus:block/stellarite_block", "forbidden_arcanus:stellarite_block"]
@@ -124,7 +159,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#757666"
+            "molten#757666",
+            "mysticalagriculture#757666"
         ],
         "remove": {}
     }

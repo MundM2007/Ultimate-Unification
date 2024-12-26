@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "blazing_crystal": {
@@ -23,6 +23,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/blazing_crystal_block", "powah:blazing_crystal_block"],
@@ -45,6 +46,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/energized_steel_block", "powah:energized_steel_block"],
@@ -68,6 +70,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/niotic_crystal_block", "powah:niotic_crystal_block"],
@@ -90,6 +93,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/nitro_crystal_block", "powah:nitro_crystal_block"],
@@ -112,6 +116,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 6
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/overcharged_core_block", "powah:overcharged_core_block"],
@@ -124,7 +134,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#b931ae"
+            "molten#b931ae",
+            "mysticalagriculture#b931ae"
         ],
         "remove": {}
     },
@@ -134,6 +145,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/spirited_crystal_block", "powah:spirited_crystal_block"],
@@ -156,6 +168,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "powah:block/uraninite_block", "powah:uraninite_block"],

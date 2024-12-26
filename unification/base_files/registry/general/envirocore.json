@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aethium": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/aethium/_", "envirocore:aethium"],
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#222222"
+            "molten#222222",
+            "mysticalagriculture#222222"
         ],
         "remove": {}
     },
@@ -45,6 +52,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/erodium/_", "envirocore:erodium"],
@@ -57,7 +70,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#534a78"
+            "molten#534a78",
+            "mysticalagriculture#534a78"
         ],
         "remove": {}
     },
@@ -67,6 +81,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/ionite/_", "envirocore:ionite"],
@@ -79,7 +99,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#73d4ff"
+            "molten#73d4ff",
+            "mysticalagriculture#73d4ff"
         ],
         "remove": {}
     },
@@ -89,6 +110,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/kyronite/_", "envirocore:kyronite"],
@@ -101,7 +128,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#551c4e"
+            "molten#551c4e",
+            "mysticalagriculture#551c4e"
         ],
         "remove": {}
     },
@@ -111,6 +139,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/litherite/_", "envirocore:litherite"],
@@ -123,7 +157,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#00954f"
+            "molten#00954f",
+            "mysticalagriculture#00954f"
         ],
         "remove": {}
     },
@@ -133,6 +168,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "envirocore:item/crystal/lonsdaleite", "envirocore:lonsdaleite_crystal"]
@@ -145,7 +186,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#0e2f49"
+            "molten#0e2f49",
+            "mysticalagriculture#0e2f49"
         ],
         "remove": {}
     },
@@ -155,6 +197,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 6
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/nanorite/_", "envirocore:nanorite"],
@@ -167,7 +215,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#5f3375"
+            "molten#5f3375",
+            "mysticalagriculture#5f3375"
         ],
         "remove": {}
     },
@@ -177,6 +226,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/pladium/_", "envirocore:pladium"],
@@ -189,7 +244,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#1a2745"
+            "molten#1a2745",
+            "mysticalagriculture#1a2745"
         ],
         "remove": {}
     },
@@ -199,6 +255,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "quartz",
+            "tier": 6
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "envirocore:block/xerothium/_", "envirocore:xerothium"],
@@ -211,7 +273,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#a4d6d8"
+            "molten#a4d6d8",
+            "mysticalagriculture#a4d6d8"
         ],
         "remove": {}
     }

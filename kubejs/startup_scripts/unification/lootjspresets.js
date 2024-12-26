@@ -14,9 +14,8 @@
 // ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 //  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 // --------------------------------------------------------------------------------
-// Ultimate Unification Copyright (C) 2023 By:									   
+// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
 //         - MundM2007          (https://github.com/MundM2007)                              
-// Licensed under GNU GPL v3: https://www.gnu.org/licenses/         			   
 
 function chooseRandom(array) {
 	if (array.length == 1) return array[0]

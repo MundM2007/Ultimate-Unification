@@ -1,0 +1,9 @@
+{
+    "replace": [
+        ["general.\"world gen\"", "arlemiteTries", 0, 4],
+        ["general.\"world gen\"", "realmiteTries", 0, 8],
+        ["general.\"world gen\"", "rupeeTries", 0, 4],
+        ["general.\"world gen\"", "netherTries", 0, 8],
+        ["general.\"world gen\"", "twilightTries", 0, 8]
+    ]
+}

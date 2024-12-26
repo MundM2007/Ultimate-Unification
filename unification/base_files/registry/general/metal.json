@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aluminum": {
@@ -23,6 +23,7 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "burn_time": 0,
 
         "replace": [
             ["crushed_ore", "create:item/crushed_aluminum_ore", "create:crushed_aluminum_ore"]
@@ -92,6 +93,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -115,7 +122,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#d3b9d0"
+            "molten#d3b9d0",
+            "mysticalagriculture#d3b9d0"
         ],
         "remove": {
             "storage_block": [
@@ -140,6 +148,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -153,6 +167,7 @@
             "dirty_dust",
             "fragment",
             "gravel",
+            "crushed_ore",
             "plate",
             "rod",
             "gear",
@@ -162,7 +177,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#83808f"
+            "molten#83808f",
+            "mysticalagriculture#83808f"
         ],
         "remove": {
             "storage_block": [
@@ -183,6 +199,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -229,6 +246,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "mekanism:item/crystal_copper", "mekanism:crystal_copper"],
@@ -330,6 +348,7 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -367,6 +386,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "mekanism:item/crystal_lead", "mekanism:crystal_lead"],
@@ -454,6 +474,12 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -467,6 +493,7 @@
             "dirty_dust",
             "fragment",
             "gravel",
+            "crushed_ore",
             "plate",
             "rod",
             "gear",
@@ -476,7 +503,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#ececed"
+            "molten#ececed",
+            "mysticalagriculture#ececed"
         ],
         "remove": {
             "storage_block": [
@@ -498,6 +526,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -511,6 +545,7 @@
             "dirty_dust",
             "fragment",
             "gravel",
+            "crushed_ore",
             "plate",
             "rod",
             "gear",
@@ -520,7 +555,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#e1bfd8"
+            "molten#e1bfd8",
+            "mysticalagriculture#e1bfd8"
         ],
         "remove": {
             "storage_block": [
@@ -541,6 +577,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crushed_ore", "create:item/crushed_nickel_ore", "create:crushed_nickel_ore"],
@@ -616,6 +653,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "mekanism:item/crystal_osmium", "mekanism:crystal_osmium"],
@@ -667,6 +705,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crushed_ore", "create:item/crushed_platinum_ore", "create:crushed_platinum_ore"]
@@ -698,7 +737,8 @@
             ],
             "ingot": [
                 ["silents_mechanisms:platinum_ingot", "silents_mechanisms:item/platinum_ingot"],
-                ["chemlib:ingot_platinum", ""]
+                ["chemlib:ingot_platinum", ""],
+                ["exnihilosequentia:ingot_platinum", ""]
             ],
             "nugget": [
                 ["silents_mechanisms:platinum_nugget", "silents_mechanisms:item/platinum_nugget"]
@@ -715,6 +755,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crushed_ore", "create:item/crushed_silver_ore", "create:crushed_silver_ore"],
@@ -799,6 +840,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -812,6 +859,7 @@
             "dirty_dust",
             "fragment",
             "gravel",
+            "crushed_ore",
             "plate",
             "rod",
             "gear",
@@ -821,7 +869,8 @@
             "piece",
             "wire",
             "coin",
-            "molten#3d3d3d"
+            "molten#3d3d3d",
+            "mysticalagriculture#3d3d3d"
         ],
         "remove": {
             "storage_block": [
@@ -842,6 +891,7 @@
             "destroy_time": 2,
             "explosion_resistance": 2
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "mekanism:item/crystal_tin", "mekanism:crystal_tin"],
@@ -917,6 +967,7 @@
             "destroy_time": 4,
             "explosion_resistance": 4
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -929,6 +980,7 @@
             "shard",
             "clump",
             "dirty_dust",
+            "crushed_ore",
             "dust",
             "plate",
             "rod",
@@ -953,6 +1005,7 @@
             "destroy_time": 4,
             "explosion_resistance": 4
         },
+        "burn_time": 0,
 
         "replace": [],
         "add": [
@@ -965,6 +1018,7 @@
             "shard",
             "clump",
             "dirty_dust",
+            "crushed_ore",
             "dust",
             "plate",
             "rod",
@@ -988,6 +1042,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crystal", "mekanism:item/crystal_uranium", "mekanism:crystal_uranium"],
@@ -1060,6 +1115,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["crushed_ore", "create:item/crushed_zinc_ore", "create:crushed_zinc_ore"]

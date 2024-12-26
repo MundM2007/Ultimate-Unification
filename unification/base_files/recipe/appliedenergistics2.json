@@ -14,13 +14,18 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "certus_quartz": {
         "variants": {
             "energy_from_coin": 32000,
-            "gem_multiplier": 1
+            "gem_multiplier": 1,
+            "count_block": 4,
+            "essence": "mysticalagriculture:certus_quartz_essence",
+            "seed": "mysticalagriculture:certus_quartz_seeds",
+            "crop": "mysticalagriculture:certus_quartz_crop",
+            "tier": 3
         },
         "add": [
             "appliedenergistics2.dust",
@@ -32,9 +37,12 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.dust",
             "create.ore_processing_gem",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -67,13 +75,16 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.dust",
             "thermal.gear",
             "thermal.ore_processing_gem",
             "thermal.plate",
-            "thermal.rod"
+            "thermal.rod",
+            "thermal.storage_convert_gem"
         ],
         "remove": [
+            ["mysticalagriculture:crops/certus_quartz", "botanypots.crop"],
             ["appliedenergistics2:grinder/certus_quartz_dust_ore", "appliedenergistics2.ore_processing"],
             ["appliedenergistics2:grinder/certus_quartz_dust", "appliedenergistics2.dust"],
             ["create:compat/ae2/crushing/certus_ore", "create.ore_processing_gem"],
@@ -81,13 +92,15 @@
             ["mekanism:compat/appliedenergistics2/certus_ore_to_crystal", "mekanism.ore_processing_gem"],
             ["mekanism:compat/appliedenergistics2/certus_crystal_to_dust", "mekanism.dust"],
             ["thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_ore", "thermal.ore_processing_gem"],
-            ["thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_dust", "thermal.dust"]
+            ["thermal:compat/appliedenergistics2/pulverizer_ae2_certus_quartz_dust", "thermal.dust"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_certus_quartz_seeds", "thermal.crop"]
         ]
     },
     "charged_certus_quartz": {
         "variants": {
             "energy_from_coin": 40000,
-            "gem_multiplier": 1
+            "gem_multiplier": 1,
+            "count_block": 4
         },
         "add": [
             "appliedenergistics2.dust",
@@ -151,7 +164,12 @@
     },
     "fluix": {
         "variants": {
-            "energy_from_coin": 40000
+            "energy_from_coin": 40000,
+            "count_block": 4,
+            "essence": "mysticalagriculture:fluix_essence",
+            "seed": "mysticalagriculture:fluix_seeds",
+            "crop": "mysticalagriculture:fluix_crop",
+            "tier": 4
         },
         "add": [
             "bloodmagic.dust",
@@ -159,7 +177,10 @@
             "boss_tools_giselle_addon.plate",
             "boss_tools_giselle_addon.rod",
             "boss_tools_giselle_addon.wire",
+            "botania.reprocessor",
+            "botanypots.crop",
             "create.plate",
+            "create.reprocessor",
             "createaddition.rod",
             "createaddition.wire",
             "ftbic.coin",
@@ -184,9 +205,15 @@
             "tconstruct.smelting",
             "thermal.coin",
             "thermal.coin_to_energy",
+            "thermal.crop",
             "thermal.gear",
             "thermal.plate",
-            "thermal.rod"
+            "thermal.rod",
+            "thermal.storage_convert_gem"
+        ],
+        "remove": [
+            ["mysticalagriculture:crops/fluix", "botanypots.crop"],
+            ["thermal:compat/mysticalagriculture/insolator_mysticalag_fluix_seeds", "thermal.crop"]
         ]
     }
 }

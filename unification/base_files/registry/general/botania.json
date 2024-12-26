@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dragonstone": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 5
+        },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "botania:block/dragonstone_block", "botania:dragonstone_block"],
@@ -34,7 +40,9 @@
             "rod",
             "gear",
             "wire",
-            "molten#f17cbc"
+            "molten#f17cbc",
+            "coin",
+            "mysticalagriculture#f17cbc"
         ],
         "remove": {}
     },
@@ -44,6 +52,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "botania:block/elementium_block", "botania:elementium_block"],
@@ -78,6 +87,7 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "botania:block/manasteel_block", "botania:manasteel_block"],
@@ -101,6 +111,7 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "burn_time": 0,
 
         "replace": [
             ["storage_block", "botania:block/terrasteel_block", "botania:terrasteel_block"],

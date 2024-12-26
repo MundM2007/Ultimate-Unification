@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "andesite_alloy": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 2
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "create:item/andesite_alloy", "create:andesite_alloy"]
@@ -36,7 +42,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#838383"
+            "molten#838383",
+            "mysticalagriculture#838383"
         ],
         "remove": {}
     },
@@ -46,6 +53,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "create:item/chromatic_compound_0", "create:chromatic_compound"],
@@ -61,30 +74,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#764466"
-        ],
-        "remove": {}
-    },
-    "refined_radiance": {
-        "block": {
-            "harvest_level": 2,
-            "destroy_time": 3,
-            "explosion_resistance": 3
-        },
-
-        "replace": [
-            ["ingot", "create:item/refined_radiance", "create:refined_radiance"]
-        ],
-        "add": [
-            "storage_block",
-            "nugget",
-            "dust",
-            "plate",
-            "rod",
-            "gear",
-            "wire",
-            "coin",
-            "molten#764466"
+            "molten#764466",
+            "mysticalagriculture#764466"
         ],
         "remove": {}
     },
@@ -94,6 +85,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "create:item/polished_rose_quartz", "create:polished_rose_quartz"]
@@ -107,7 +104,38 @@
             "gear",
             "wire",
             "coin",
-            "molten#fc797f"
+            "molten#fc797f",
+            "mysticalagriculture#fc797f"
+        ],
+        "remove": {}
+    },
+    "refined_radiance": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["ingot", "create:item/refined_radiance", "create:refined_radiance"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#764466",
+            "mysticalagriculture#764466"
         ],
         "remove": {}
     },
@@ -117,6 +145,12 @@
             "destroy_time": 5,
             "explosion_resistance": 5
         },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
 
         "replace": [
             ["ingot", "create:item/shadow_steel", "create:shadow_steel"]
@@ -130,7 +164,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#4a3e58"
+            "molten#4a3e58",
+            "mysticalagriculture#4a3e58"
         ],
         "remove": {}
     }

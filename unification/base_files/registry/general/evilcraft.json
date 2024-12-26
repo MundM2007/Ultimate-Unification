@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2024 under MIT License by:                   \n",
+        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "dark_gem": {
@@ -23,6 +23,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 3
+        },
+        "burn_time": 0,
 
         "replace": [
             ["gem", "evilcraft:item/dark_gem", "evilcraft:dark_gem"],
@@ -35,7 +41,8 @@
             "gear",
             "wire",
             "coin",
-            "molten#3d3d3d"
+            "molten#3d3d3d",
+            "mysticalagriculture#3d3d3d"
         ],
         "remove": {}
     },
@@ -45,6 +52,12 @@
             "destroy_time": 3,
             "explosion_resistance": 3
         },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
         
         "replace": [
             ["gem", "evilcraft:item/dark_power_gem", "evilcraft:dark_power_gem"],
@@ -57,7 +70,8 @@
             "dust",
             "wire",
             "coin",
-            "molten#7e4344"
+            "molten#7e4344",
+            "mysticalagriculture#7e4344"
         ],
         "remove": {}
     }

@@ -14,7 +14,7 @@
 // ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 //  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 // --------------------------------------------------------------------------------
-// Ultimate Unification Copyright (C) 2023 under MIT License by:                   
+// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:                   
 //         - MundM2007          (https://github.com/MundM2007)					   
 //         - G_cat              (https://github.com/Gcat101)                       
 
@@ -151,7 +151,7 @@ function addFTBICRecipes(event, output, input, type, id) {
 
 		if (ingredient.withCount(1).tag===undefined) {
 			ingredientJson = {ingredient: {item: ingredient.id}, count: ingredient.getCount()}
-			if (ingredient.getNBT()!=null){
+			if (ingredient.getNbt()!=null){
 				ingredientJson["ingredient"]["type"] = "forge:nbt"
 				ingredientJson["ingredient"]["nbt"] = String(ingredient.getNbt())
 			}
@@ -183,11 +183,10 @@ function addBossToolsRecipes(event, type, output, input, time, id) {
 
 function SMIngredientConvert(ingredientArray) {
 	let values = []
-	arrConvert(ingredientArray[0]).forEach(value => {
-		values.push(Ingredient.of(value).toJson())
+	arrConvert(ingredientArray).forEach(value => {
+		values.push(Ingredient.of(value).withCount(1).toJson())
 	})
-	if (typeof ingredientArray[1]!="number") ingredientArray[1] = 1
-	return {value: values, count: ingredientArray[1]}
+	return {value: values, count: Ingredient.of(ingredientArray[0]).count}
 }
 
 function exCompressumLootTable(items) {
@@ -1391,6 +1390,45 @@ onEvent("loaded", e => {
 			}
 		},
 
+		lazierae2: {
+			aggregator: (event, output, inputs, time, energy, id) => {
+				applyID(event, id, {
+					type: "lazierae2:aggregator",
+					process_time: typeof time == "number" ? time : 200,
+					energy_cost: typeof energy == "number" ? energy : 1000,
+					output: Item.of(output),
+					input: ingredientsConvert(arrConvert(inputs).slice(0, 3))
+				})
+			},
+			centrifuge: (event, output, input, time, energy, id) => {
+				applyID(event, id, {
+					type: "lazierae2:centrifuge",
+					process_time: typeof time == "number" ? time : 200,
+					energy_cost: typeof energy == "number" ? energy : 1000,
+					output: Item.of(output),
+					input: [Ingredient.of(input)]
+				})
+			},
+			energizer: (event, output, input, time, energy, id) => {
+				applyID(event, id, {
+					type: "lazierae2:energizer",
+					process_time: typeof time == "number" ? time : 200,
+					energy_cost: typeof energy == "number" ? energy : 1000,
+					output: Item.of(output),
+					input: [Ingredient.of(input)]
+				})
+			},
+			etcher: (event, output, inputs, time, energy, id) => {
+				applyID(event, id, {
+					type: "lazierae2:etcher",
+					process_time: typeof time == "number" ? time : 200,
+					energy_cost: typeof energy == "number" ? energy : 1000,
+					output: Item.of(output),
+					input: ingredientsConvert(arrConvert(inputs).slice(0, 3))
+				})
+			}
+		},
+
 		mekanism: {
 			activating: (event, output, input, id) => {
 				applyID(event, id, {
@@ -1877,7 +1915,7 @@ onEvent("loaded", e => {
 					input: Ingredient.of(input),
 					results: ingredientsConvert(arrConvert(output)),
 
-					loss_rate: typeof loss_rate == "number" ? loss_rate : 273
+					loss_rate: typeof loss_rate == "number" ? loss_rate : 20
 				})
 			},
 			heat_frame_cooling: (event, output, input, max_temp, bonusOutput, id) => {
