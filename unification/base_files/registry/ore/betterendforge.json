@@ -7,14 +7,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 7,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "betterendforge:amber_ore"
         ]
     },
     "thallasium": {     
@@ -25,14 +29,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [30, 70],
                     "size": 10,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "betterendforge:thallasium_ore"
         ]
     }
 }

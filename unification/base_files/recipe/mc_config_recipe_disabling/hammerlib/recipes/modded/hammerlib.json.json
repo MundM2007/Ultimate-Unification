@@ -1,0 +1,10 @@
+{
+    "replace": [
+        ["active.minecraft:crafting", "hammerlib:gears/diamond", false, true],
+        ["active.minecraft:crafting", "hammerlib:gears/gold", false, true],
+        ["active.minecraft:crafting", "hammerlib:gears/iron", false, true],
+        ["active.minecraft:crafting", "hammerlib:gears/stone", false, true],
+        ["active.minecraft:crafting", "hammerlib:gears/wooden", false, true],
+        ["active.minecraft:smithing", "hammerlib:gears/netherite", false, true]
+    ]
+}

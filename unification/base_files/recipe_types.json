@@ -77,7 +77,7 @@
     "minecraft.smelting_recipes": ["id_name", "ingot", "gem", "nugget"],
     "minecraft.storage_convert_gem": ["id_name", "gem", "storage_block", "count_block"],
     "minecraft.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget", "count_block"],
-    "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"],
+    "minecraft.storage_convert_raw": ["id_name", "raw_material", "raw_block"],
 
     "mysticalagriculture.essence_to_material": ["essence", "mysticalagriculture_craft_type", "ingot", "gem", "gem_multiplier", "mysticalagriculture_output_multiplier"],
     "mysticalagriculture.seed": ["id_name", "seed", "tier"],
@@ -102,5 +102,118 @@
     "thermal.pieces_to_raw": ["id_name", "raw_material"],
     "thermal.storage_convert_gem": ["id_name", "gem", "storage_block", "count_block"],
     "thermal.storage_convert_metal": ["id_name", "ingot", "storage_block", "nugget", "count_block"],
-    "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_storage_block"]
+    "thermal.storage_convert_raw": ["id_name", "raw_material", "raw_block"],
+
+
+    "manual.alloy.arcane_gold": ["ingot", "recipe_kept"],
+    "manual.alloy.brass": ["ingot", "recipe_kept"],
+    "manual.alloy.bronze": ["ingot", "recipe_kept"],
+    "manual.alloy.constantan": ["ingot", "recipe_kept"],
+    "manual.alloy.electrum": ["ingot", "recipe_kept"],
+    "manual.alloy.enderium": ["ingot", "molten", "recipe_kept"],
+    "manual.alloy.ender_pearl": ["dust", "recipe_kept"],
+    "manual.alloy.flour": ["dust", "recipe_kept"],
+    "manual.alloy.invar": ["ingot", "recipe_kept"],
+    "manual.alloy.lumium": ["ingot", "recipe_kept"],
+    "manual.alloy.obsidian": ["dust", "recipe_kept"],
+    "manual.alloy.red_alloy": ["ingot", "molten", "recipe_kept"],
+    "manual.alloy.salt": ["dust", "recipe_kept"],
+    "manual.alloy.signalum": ["ingot", "molten", "recipe_kept"],
+    "manual.alloy.silicon": ["recipe_kept"],
+    "manual.alloy.steel": ["ingot", "recipe_kept"],
+    "manual.alloy.wood": ["dust", "gear", "recipe_kept"],
+
+    "manual.appliedenergistics2.fluix": ["gem", "molten", "recipe_kept"],
+
+    "manual.astralsorcery.aquamarine": ["recipe_kept"],
+    "manual.astralsorcery.starmetal": ["recipe_kept"],
+
+    "manual.atum.nebu": ["ingot", "nugget", "dust", "molten", "gravel", "fragment", "crushed_ore", "dirty_dust", "clump", "shard", "crystal", "clean_slurry", "dirty_slurry", "recipe_kept"],
+
+    "manual.betterendforge.aeternium": ["ingot", "molten", "recipe_kept"],
+    "manual.betterendforge.amber": ["raw_material", "recipe_kept"],
+    "manual.betterendforge.terminite": ["ingot", "molten", "recipe_kept"],
+
+    "manual.boss_tools.desh": ["wire", "molten", "recipe_kept"],
+    "manual.boss_tools.silicon": ["wire", "molten", "recipe_kept"],
+
+    "manual.byg.pendorite": ["ingot", "recipe_kept"],
+    "manual.byg.pendorite_scraps": ["ingot", "crushed_ore", "recipe_kept"],
+
+    "manual.create.andesite_alloy": ["ingot", "recipe_kept"],
+    "manual.create.chromatic_compound": ["ingot", "recipe_kept"],
+
+    "manual.divinerpg.apalachia": ["part", "recipe_kept"],
+    "manual.divinerpg.eden": ["part", "recipe_kept"],
+    "manual.divinerpg.mortum": ["part", "recipe_kept"],
+    "manual.divinerpg.skythern": ["part", "recipe_kept"],
+    "manual.divinerpg.wildwood": ["part", "recipe_kept"],
+
+    "manual.extendedcrafting.black_iron": ["ingot", "molten", "recipe_kept"],
+    "manual.extendedcrafting.crystaltine": ["essence", "ingot", "mysticalagriculture_output_multiplier", "recipe_kept"],
+    "manual.extendedcrafting.ender": ["ingot", "molten", "recipe_kept"],
+    "manual.extendedcrafting.enhanced_ender": ["essence", "ingot", "mysticalagriculture_output_multiplier", "recipe_kept"],
+
+    "manual.ftbic.advanced_alloy": ["ingot", "recipe_kept"],
+    "manual.ftbic.iridium_alloy": ["ingot", "molten", "recipe_kept"],
+
+    "manual.gem.bitumen": ["gem", "recipe_kept"],
+    "manual.gem.fluorite": ["gem", "recipe_kept"],
+    "manual.gem.potassium_nitrate": ["gem", "recipe_kept"],
+    "manual.gem.sulfur": ["gem", "recipe_kept"],
+
+    "manual.mekanism.refined_obsidian": ["ingot", "nugget", "recipe_kept"],
+
+    "manual.metal.aluminum": ["piece", "recipe_kept"],
+    "manual.metal.cobalt": ["piece", "recipe_kept"],
+    "manual.metal.copper": ["piece", "recipe_kept"],
+    "manual.metal.lead": ["piece", "recipe_kept"],
+    "manual.metal.nickel": ["piece", "recipe_kept"],
+    "manual.metal.osmium": ["piece", "recipe_kept"],
+    "manual.metal.platinum": ["piece", "recipe_kept"],
+    "manual.metal.silver": ["piece", "recipe_kept"],
+    "manual.metal.tin": ["piece", "recipe_kept"],
+    "manual.metal.uranium": ["piece", "recipe_kept"],
+    "manual.metal.zinc": ["piece", "recipe_kept"],
+
+    "manual.minecraft.diamond": ["gem", "molten", "recipe_kept"],
+    "manual.minecraft.emerald": ["gem", "molten", "recipe_kept"],
+    "manual.minecraft.glowstone": ["recipe_kept"],
+    "manual.minecraft.gold": ["piece", "recipe_kept"],
+    "manual.minecraft.iron": ["piece", "recipe_kept"],
+    "manual.minecraft.netherite": ["recipe_kept"],
+    "manual.minecraft.quartz": ["dust", "recipe_kept"],
+    "manual.minecraft.redstone": ["recipe_kept"],
+
+    "manual.mysticalagriculture.prosperity_gem": ["gem", "gem_multiplier", "recipe_kept"],
+    "manual.mysticalagriculture.soulium": ["ingot", "nugget", "molten", "recipe_kept"],
+    "manual.mysticalagriculture.soulium_gem": ["gem", "gem_multiplier", "recipe_kept"],
+
+    "manual.powah.overcharged": ["essence", "gem", "gem_multiplier", "mysticalagriculture_output_multiplier", "recipe_kept"],
+
+    "manual.projectred-core.electrotine": ["ingot", "nugget", "dust", "molten", "gem_multiplier", "essence", "seed", "tier", "mysticalagriculture_craft_type", "mysticalagriculture_output_multiplier", "recipe_kept"],
+
+    "manual.psi.psidust": ["dust", "gem_multiplier", "essence", "seed", "tier", "mysticalagriculture_craft_type", "mysticalagriculture_output_multiplier", "recipe_kept"],
+
+    "manual.refinedstorage.quartz_enriched_iron": ["ingot", "molten", "recipe_kept"],
+
+    "manual.silentgear.azure_electrum": ["ingot", "molten", "recipe_kept"],
+    "manual.silentgear.blaze_gold": ["ingot", "recipe_kept"],
+    "manual.silentgear.crimson_steel": ["ingot", "molten", "recipe_kept"],
+
+    "manual.silents_mechanisms.aluminum_steel": ["ingot", "molten", "recipe_kept"],
+    "manual.silents_mechanisms.bismuth_brass": ["ingot", "molten", "recipe_kept"],
+    "manual.silents_mechanisms.bismuth_steel": ["ingot", "molten", "recipe_kept"],
+
+    "manual.tconstruct.hepatizon": ["ingot", "recipe_kept"],
+    "manual.tconstruct.manyullyn": ["ingot", "recipe_kept"],
+    "manual.tconstruct.pig_iron": ["ingot", "recipe_kept"],
+    "manual.tconstruct.queens_slime": ["ingot", "recipe_kept"],
+    "manual.tconstruct.slimestone": ["ingot", "recipe_kept"],
+    "manual.tconstruct.tinkers_bronze": ["ingot", "recipe_kept"],
+
+    "manual.twilightforest.fiery": ["ingot", "recipe_kept"],
+    "manual.twilightforest.ironwood": ["ingot", "recipe_kept"],
+
+    "manual.woot.stygian_iron": ["ingot", "recipe_kept"]
 }

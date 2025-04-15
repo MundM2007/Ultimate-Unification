@@ -7,18 +7,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 128],
                     "size": 16,
                     "count": 18,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [40, 120],
                     "size": 12,
                     "count": 13,
@@ -30,17 +32,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [40, 120],
                     "size": 12,
                     "count": 13,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             },
             {
                 "values": ["#venus-all"],
                 "gen": {
+                    "feature_name_extra": "venus",
                     "height": [32, 128],
                     "size": 12,
                     "count": 20,
@@ -49,6 +53,11 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:coal_ore",
+            "boss_tools:venus_coal_ore",
+            "minecraft:coal_ore"
         ]
     },
     "diamond": {       
@@ -59,18 +68,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 6,
                     "count": 3,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
                     "count": 2,
@@ -82,17 +93,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [15, 35],
                     "size": 6,
                     "count": 2,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             },
             {
                 "values": ["#mars-all"],
                 "gen": {
+                    "feature_name_extra": "mars",
                     "height": [1, 16],
                     "size": 6,
                     "count": 4,
@@ -104,6 +117,7 @@
             {
                 "values": ["#venus-all"],
                 "gen": {
+                    "feature_name_extra": "venus",
                     "height": [1, 16],
                     "size": 6,
                     "count": 4,
@@ -112,6 +126,12 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:diamond_ore",
+            "boss_tools:mars_diamond_ore",
+            "boss_tools:venus_diamond_ore",
+            "minecraft:diamond_ore"
         ]
     },
     "emerald": {       
@@ -122,29 +142,32 @@
             {
                 "values": ["#overworld-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 40],
                     "size": 1,
                     "count": 3,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#overworld-all"],
                 "gen": {
+                    "feature_name_extra": "overworld_mountain",
                     "height": [4, 32],
                     "size": 2,
                     "count": 4,
                     "biomes": {
-                        "values": ["#extreme_hills"]
+                        "values": ["#mountain"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [20, 50],
                     "size": 2,
                     "count": 2,
@@ -156,14 +179,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [10, 40],
                     "size": 2,
                     "count": 2,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:emerald_ore",
+            "minecraft:emerald_ore"
         ]
     },
     "gold": {       
@@ -174,23 +202,24 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 32],
                     "size": 7,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld_mesa",
                     "height": [32, 79],
                     "size": 9,
                     "count": 30,
                     "biomes": {
-                        "blacklist": true,
                         "values": ["#mesa"]
                     }
                 }
@@ -198,6 +227,7 @@
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 60],
                     "size": 7,
                     "count": 4,
@@ -209,17 +239,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 7,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             },
             {
                 "values": ["#alfheim-all"],
                 "gen": {
+                    "feature_name_extra": "alfheim",
                     "height": [1, 60],
                     "size": 8,
                     "count": 5,
@@ -231,6 +263,7 @@
             {
                 "values": ["#alfheim-all"],
                 "gen": {
+                    "feature_name_extra": "alfheim_golden_fields",
                     "height": [1, 60],
                     "size": 8,
                     "count": 10,
@@ -242,6 +275,7 @@
             {
                 "values": ["#venus-all"],
                 "gen": {
+                    "feature_name_extra": "venus",
                     "height": [8, 40],
                     "size": 12,
                     "count": 4,
@@ -250,6 +284,15 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:gold_ore",
+            "boss_tools:venus_gold_ore",
+            "byg:blue_nether_gold_ore",
+            "byg:brimstone_nether_gold_ore",
+            "minecraft:gold_ore",
+            "minecraft:nether_gold_ore",
+            "mythicbotany:gold_ore"
         ]
     },
     "iron": {       
@@ -260,18 +303,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 64],
                     "size": 11,
                     "count": 17,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 90],
                     "size": 10,
                     "count": 11,
@@ -283,17 +328,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 80],
                     "size": 10,
                     "count": 11,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             },
             {
                 "values": ["#moon-all"],
                 "gen": {
+                    "feature_name_extra": "moon",
                     "height": [1, 64],
                     "size": 16,
                     "count": 13,
@@ -305,6 +352,7 @@
             {
                 "values": ["#mars-all"],
                 "gen": {
+                    "feature_name_extra": "mars",
                     "height": [16, 64],
                     "size": 14,
                     "count": 10,
@@ -316,6 +364,7 @@
             {
                 "values": ["#mercury-all"],
                 "gen": {
+                    "feature_name_extra": "mercury",
                     "height": [1, 64],
                     "size": 16,
                     "count": 16,
@@ -324,6 +373,13 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:iron_ore",
+            "boss_tools:moon_iron_ore",
+            "boss_tools:mars_iron_ore",
+            "boss_tools:mercury_iron_ore",
+            "minecraft:iron_ore"
         ]
     },
     "lapis": {       
@@ -334,18 +390,20 @@
             {
                 "values": ["#overworld-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 7,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 6,
                     "count": 4,
@@ -357,14 +415,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 6,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:lapis_ore",
+            "minecraft:lapis_ore"
         ]
     },
     "quartz": {       
@@ -373,8 +436,22 @@
         "counts": 1,
         "variants": [
             {
+                "values": ["granite"],
+                "gen": {
+                    "feature_name_extra": "overworld",
+                    "height": [24, 76],
+                    "size": 4,
+                    "count": 13,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#end"]
+                    }
+                }
+            },
+            {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 128],
                     "size": 14,
                     "count": 16,
@@ -383,6 +460,12 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:blue_nether_quartz_ore",
+            "byg:brimstone_nether_quartz_ore",
+            "minecraft:nether_quartz_ore",
+            "mysticalworld:granite_quartz_ore"
         ]
     },
     "redstone": {       
@@ -393,18 +476,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 10,
                     "count": 8,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 9,
                     "count": 6,
@@ -416,14 +501,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 9,
                     "count": 6,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "atum:redstone_ore",
+            "byg:cryptic_redstone_ore",
+            "minecraft:redstone_ore"
         ]
     }
 }

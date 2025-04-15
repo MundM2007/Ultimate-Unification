@@ -7,18 +7,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 128],
                     "size": 8,
                     "count": 16,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 90],
                     "size": 8,
                     "count": 8,
@@ -30,14 +32,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 80],
                     "size": 8,
                     "count": 8,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "mysticalagriculture:end_inferium_ore",
+            "mysticalagriculture:inferium_ore",
+            "mysticalagriculture:nether_inferium_ore"
         ]
     },
     "prosperity": {       
@@ -48,18 +56,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 50],
                     "size": 8,
                     "count": 12,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 60],
                     "size": 8,
                     "count": 8,
@@ -71,14 +81,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 8,
                     "count": 8,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "mysticalagriculture:end_prosperity_ore",
+            "mysticalagriculture:prosperity_ore",
+            "mysticalagriculture:nether_prosperity_ore"
         ]
     },
     "soulium": {       
@@ -89,6 +105,7 @@
             {
                 "values": ["#nether_soulstone-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 10,
                     "count": 64,
@@ -97,6 +114,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "mysticalagriculture:soulium_ore"
         ]
     }
 }

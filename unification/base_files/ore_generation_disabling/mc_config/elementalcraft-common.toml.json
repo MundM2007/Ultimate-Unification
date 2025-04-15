@@ -1,5 +1,5 @@
 {
     "replace": [
-        ["worldgen.inertCrystal", "arlemiteTries", 0, 4]
+        ["worldgen.inertCrystal", "disableInertCrystal", true, false]
     ]
 }

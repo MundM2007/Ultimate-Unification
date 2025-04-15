@@ -7,15 +7,20 @@
             {
                 "values": ["#overworld_sand-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [40, 160],
                     "size": 20,
                     "count": 2,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "thermal:oil_red_sand",
+            "thermal:oil_sand"
         ]
     },
     "fluorite": {     
@@ -26,18 +31,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 8,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [60, 90],
                     "size": 8,
                     "count": 5,
@@ -49,14 +56,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [50, 80],
                     "size": 8,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "mekanism:fluorite_ore"
         ]
     },
     "potassium_nitrate": {     
@@ -64,42 +75,48 @@
         "drops": "unification:potassium_nitrate_gem",
         "counts": [3, 4, 5],
         "variants": [
-        {
-            "values": ["#overworld-all", "#atum-all"],
-            "gen": {
-                "height": [15, 35],
-                "size": 5,
-                "count": 5,
-                "biomes": {
-                    "blacklist": true,
-                    "values": ["#nether", "#the_end"]
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "feature_name_extra": "overworld",
+                    "height": [15, 35],
+                    "size": 5,
+                    "count": 5,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "feature_name_extra": "nether",
+                    "height": [45, 65],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "feature_name_extra": "end",
+                    "height": [35, 55],
+                    "size": 5,
+                    "count": 4,
+                    "biomes": {
+                        "values": ["#end"]
+                    }
                 }
             }
-        },
-        {
-            "values": ["#nether-all"],
-            "gen": {
-                "height": [45, 65],
-                "size": 5,
-                "count": 4,
-                "biomes": {
-                    "values": ["#nether"]
-                }
-            }
-        },
-        {
-            "values": ["#end-all"],
-            "gen": {
-                "height": [35, 55],
-                "size": 5,
-                "count": 4,
-                "biomes": {
-                    "values": ["#the_end"]
-                }
-            }
-        }
-    ]
-},
+        ],
+        "remove": [
+            "thermal:niter_ore"
+        ]
+    },
     "ruby": {     
         "type": "gem",
         "drops": "unification:ruby_gem",
@@ -108,18 +125,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [20, 25],
                     "size": 5,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [45, 50],
                     "size": 4,
                     "count": 4,
@@ -131,14 +150,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [35, 40],
                     "size": 4,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "projectred-exploration:ruby_ore",
+            "thermal:ruby_ore"
         ]
     },
     "sapphire": {     
@@ -149,18 +173,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [20, 25],
                     "size": 5,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [45, 50],
                     "size": 4,
                     "count": 4,
@@ -172,14 +198,21 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [35, 40],
                     "size": 4,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "aoa3:sapphire_ore",
+            "mysticalworld:sapphire_ore",
+            "projectred-exploration:sapphire_ore",
+            "thermal:sapphire_ore"
         ]
     },
     "sulfur": {     
@@ -190,18 +223,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 7,
                     "count": 3,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
                     "count": 3,
@@ -213,14 +248,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 6,
                     "count": 3,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "thermal:sulfur_ore"
         ]
     }
 }

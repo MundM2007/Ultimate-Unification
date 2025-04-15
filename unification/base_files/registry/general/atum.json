@@ -14,9 +14,17 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
+    "bone": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "burn_time": 0
+    },
     "nebu": {
         "block": {
             "harvest_level": 1,
@@ -57,5 +65,13 @@
             "mysticalagriculture#a36200"
         ],
         "remove": {}
+    },
+    "relic": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "burn_time": 0
     }
 }

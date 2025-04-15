@@ -1,0 +1,61 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "quicksilver": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["storage_block", "mysticalworld:block/quicksilver_block", "mysticalworld:quicksilver_block"],
+            ["ingot", "mysticalworld:item/quicksilver_ingot", "mysticalworld:quicksilver_ingot"],
+            ["nugget", "mysticalworld:item/quicksilver_nugget", "mysticalworld:quicksilver_nugget"],
+            ["dust", "mysticalworld:item/quicksilver_dust", "mysticalworld:quicksilver_dust"],
+            ["crushed_ore", "create:item/crushed_quicksilver_ore", "create:crushed_quicksilver_ore"]
+        ],
+        "add": [
+            "gear",
+            "plate",
+            "rod",
+            "wire",
+            "raw_material",
+            "raw_block",
+            "shard",
+            "clump",
+            "crystal",
+            "dirty_dust",
+            "slurry#3d8a9b",
+            "fragment",
+            "gravel",
+            "piece",
+            "coin",
+            "molten#bd967a",
+            "mysticalagriculture#bd967a"
+        ],
+        "remove": {}
+    }
+}

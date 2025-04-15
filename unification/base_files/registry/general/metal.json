@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "aluminum": {
@@ -51,27 +51,30 @@
         ],
         "remove": {
             "storage_block": [
-                ["silents_mechanisms:aluminum_block", "silents_mechanisms:block/aluminum_block"],
+                ["immersiveengineering:storage_aluminum", "immersiveengineering:block/metal/storage_aluminum"],
                 ["nuclearcraft:ingot_block_aluminum", "nuclearcraft:blocks/ingot_block_aluminum"],
-                ["immersiveengineering:storage_aluminum", "immersiveengineering:block/metal/storage_aluminum"]
+                ["silents_mechanisms:aluminum_block", "silents_mechanisms:block/aluminum_block"],
+                ["tmechworks:aluminum_block", "tmechworks:block/aluminum_block"]
             ],
             "ingot": [
-                ["silents_mechanisms:aluminum_ingot", "silents_mechanisms:item/aluminum_ingot"],
-                ["nuclearcraft:ingot_aluminum", "nuclearcraft:items/ingot_aluminum"],
-                ["immersiveengineering:ingot_aluminum", "immersiveengineering:item/metal_ingot_aluminum"],
                 ["chemlib:ingot_aluminum", ""],
-                ["exnihilosequentia:ingot_aluminum", ""]
+                ["exnihilosequentia:ingot_aluminum", ""],
+                ["immersiveengineering:ingot_aluminum", "immersiveengineering:item/metal_ingot_aluminum"],
+                ["nuclearcraft:ingot_aluminum", "nuclearcraft:items/ingot_aluminum"],
+                ["silents_mechanisms:aluminum_ingot", "silents_mechanisms:item/aluminum_ingot"],
+                ["tmechworks:aluminum_ingot", "tmechworks:item/materials/aluminum_ingot"]
             ],
             "nugget": [
+                ["immersiveengineering:nugget_aluminum", "immersiveengineering:item/metal_nugget_aluminum"],
                 ["silents_mechanisms:aluminum_nugget", "silents_mechanisms:item/aluminum_nugget"],
-                ["immersiveengineering:nugget_aluminum", "immersiveengineering:item/metal_nugget_aluminum"]
+                ["tmechworks:aluminum_nugget", "tmechworks:item/materials/aluminum_nugget"]
             ],
             "dust": [
                 ["immersiveengineering:dust_aluminum", "immersiveengineering:item/metal_dust_aluminum"],
-                ["pedestals:dustaluminum", "pedestals:items/dustaluminum"],
-                ["silents_mechanisms:aluminum_dust", "silents_mechanisms:item/aluminum_dust"],
                 ["nuclearcraft:dust_aluminum", "nuclearcraft:items/dust_aluminum"],
-                ["potionsmaster:aluminium_powder", "potionsmaster:item/aluminum_powder"]
+                ["potionsmaster:aluminium_powder", "potionsmaster:item/aluminum_powder"],
+                ["pedestals:dustaluminum", "pedestals:items/dustaluminum"],
+                ["silents_mechanisms:aluminum_dust", "silents_mechanisms:item/aluminum_dust"]
             ],
             "plate": [
                 ["immersiveengineering:plate_aluminum", "immersiveengineering:item/metal_plate_aluminum"]
@@ -278,40 +281,51 @@
         "remove": {
             "storage_block": [
                 ["create:copper_block", "create:block/copper_block"],
+                ["iceandfire:copper_block", "iceandfire:block/copper_block"],
                 ["immersiveengineering:storage_copper", "immersiveengineering:block/metal/storage_copper"],
-                ["projectred-exploration:copper_block", "projectred-exploration:block/copper_block"],
-                ["thermal:copper_block", "thermal:block/copper_block"],
-                ["tconstruct:copper_block", "tconstruct:block/storage/copper"],
-                ["silents_mechanisms:copper_block", "silents_mechanisms:block/copper_block"],
+                ["mekanism:block_copper", "mekanism:block/block_copper"],
+                ["mysticalworld:copper_block", "mysticalworld:block/copper_block"],
                 ["nuclearcraft:ingot_block_copper", "nuclearcraft:blocks/ingot_block_copper"],
                 ["occultism:copper_block", "occultism:block/copper_block"],
-                ["mekanism:block_copper", "mekanism:block/block_copper"]
+                ["projectred-exploration:copper_block", "projectred-exploration:block/copper_block"],
+                ["silents_mechanisms:copper_block", "silents_mechanisms:block/copper_block"],
+                ["tconstruct:copper_block", "tconstruct:block/storage/copper"],
+                ["thermal:copper_block", "thermal:block/copper_block"],
+                ["tmechworks:copper_block", "tmechworks:block/copper_block"]
             ],
             "ingot": [
                 ["chemlib:ingot_copper", ""],
                 ["create:copper_ingot", "create:item/copper_ingot"],
                 ["exnihilosequentia:ingot_copper", ""],
+                ["iceandfire:copper_ingot", "iceandfire:item/copper_ingot"],
                 ["immersiveengineering:ingot_copper", "immersiveengineering:item/metal_ingot_copper"],
                 ["mekanism:ingot_copper", "mekanism:item/ingot_copper"],
+                ["mysticalworld:copper_ingot", "mysticalworld:item/copper_ingot"],
                 ["nuclearcraft:ingot_copper", "nuclearcraft:items/ingot_copper"],
                 ["occultism:copper_ingot", "occultism:item/copper_ingot"],
                 ["projectred-core:copper_ingot", "projectred-core:item/copper_ingot"],
+                ["routerreborn:copper_ingot", ""],
                 ["silents_mechanisms:copper_ingot", "silents_mechanisms:item/copper_ingot"],
+                ["tconstruct:copper_ingot", "tconstruct:item/materials/copper_ingot"],
                 ["thermal:copper_ingot", "thermal:item/copper_ingot"],
-                ["tconstruct:copper_ingot", "tconstruct:item/materials/copper_ingot"]
+                ["tmechworks:copper_ingot", "tmechworks:item/materials/copper_ingot"]
             ],
             "nugget": [
                 ["create:copper_nugget", "create:item/copper_nugget"],
+                ["iceandfire:copper_nugget", "iceandfire:item/copper_nugget"],
                 ["immersiveengineering:nugget_copper", "immersiveengineering:item/metal_nugget_copper"],
                 ["mekanism:nugget_copper", "mekanism:item/nugget_copper"],
+                ["mysticalworld:copper_nugget", "mysticalworld:item/copper_nugget"],
                 ["occultism:copper_nugget", "occultism:item/copper_nugget"],
                 ["silents_mechanisms:copper_nugget", "silents_mechanisms:item/copper_nugget"],
+                ["tconstruct:copper_nugget", "tconstruct:item/materials/copper_nugget"],
                 ["thermal:copper_nugget", "thermal:item/copper_nugget"],
-                ["tconstruct:copper_nugget", "tconstruct:item/materials/copper_nugget"]
+                ["tmechworks:copper_nugget", "tmechworks:item/materials/copper_nugget"]
             ],
             "dust": [
                 ["immersiveengineering:dust_copper", "immersiveengineering:item/metal_dust_copper"],
                 ["mekanism:dust_copper", "mekanism:item/dust_copper"],
+                ["mysticalworld:copper_dust", "mysticalworld:item/copper_dust"],
                 ["nuclearcraft:dust_copper", "nuclearcraft:items/dust_copper"],
                 ["occultism:copper_dust", "occultism:item/copper_dust"],
                 ["pedestals:dustcopper", "pedestals:items/dustcopper"],
@@ -418,6 +432,7 @@
         "remove": {
             "storage_block": [
                 ["mekanism:block_lead", "mekanism:block/block_lead"],
+                ["mysticalworld:lead_block", "mysticalworld:block/lead_block"],
                 ["thermal:lead_block", "thermal:block/lead_block"],
                 ["eidolon:lead_block", "eidolon:block/lead_block"],
                 ["silents_mechanisms:lead_block", "silents_mechanisms:block/lead_block"],
@@ -426,6 +441,7 @@
             ],
             "ingot": [
                 ["mekanism:ingot_lead", "mekanism:item/ingot_lead"],
+                ["mysticalworld:lead_ingot", "mysticalworld:item/lead_ingot"],
                 ["thermal:lead_ingot", "thermal:item/lead_ingot"],
                 ["eidolon:lead_ingot", "eidolon:item/lead_ingot"],
                 ["silents_mechanisms:lead_ingot", "silents_mechanisms:item/lead_ingot"],
@@ -436,6 +452,7 @@
             ],
             "nugget": [
                 ["mekanism:nugget_lead", "mekanism:item/nugget_lead"],
+                ["mysticalworld:lead_nugget", "mysticalworld:item/lead_nugget"],
                 ["thermal:lead_nugget", "thermal:item/lead_nugget"],
                 ["eidolon:lead_nugget", "eidolon:item/lead_nugget"],
                 ["silents_mechanisms:lead_nugget", "silents_mechanisms:item/lead_nugget"],
@@ -443,6 +460,7 @@
             ],
             "dust": [
                 ["mekanism:dust_lead", "mekanism:item/dust_lead"],
+                ["mysticalworld:lead_dust", "mysticalworld:item/lead_dust"],
                 ["thermal:lead_dust", "thermal:item/lead_dust"],
                 ["silents_mechanisms:lead_dust", "silents_mechanisms:item/lead_dust"],
                 ["nuclearcraft:dust_lead", "nuclearcraft:items/dust_lead"],
@@ -787,7 +805,9 @@
         ],
         "remove": {
             "storage_block": [
+                ["iceandfire:silver_block", "iceandfire:block/silver_block"],
                 ["immersiveengineering:storage_silver", "immersiveengineering:block/metal/storage_silver"],
+                ["mysticalworld:silver_block", "mysticalworld:block/silver_block"],
                 ["projectred-exploration:silver_block", "projectred-exploration:block/silver_block"],
                 ["thermal:silver_block", "thermal:block/silver_block"],
                 ["silents_mechanisms:silver_block", "silents_mechanisms:block/silver_block"],
@@ -795,7 +815,9 @@
                 ["occultism:silver_block", "occultism:block/silver_block"]
             ],
             "ingot": [
+                ["iceandfire:silver_ingot", "iceandfire:item/silver_ingot"],
                 ["immersiveengineering:ingot_silver", "immersiveengineering:item/metal_ingot_silver"],
+                ["mysticalworld:silver_ingot", "mysticalworld:item/silver_ingot"],
                 ["projectred-core:silver_ingot", "projectred-core:item/silver_ingot"],
                 ["thermal:silver_ingot", "thermal:item/silver_ingot"],
                 ["silents_mechanisms:silver_ingot", "silents_mechanisms:item/silver_ingot"],
@@ -805,13 +827,16 @@
                 ["occultism:silver_ingot", "occultism:item/silver_ingot"]
             ],
             "nugget": [
+                ["iceandfire:silver_nugget", "iceandfire:item/silver_nugget"],
                 ["immersiveengineering:nugget_silver", "immersiveengineering:item/metal_nugget_silver"],
+                ["mysticalworld:silver_nugget", "mysticalworld:item/silver_nugget"],
                 ["thermal:silver_nugget", "thermal:item/silver_nugget"],
                 ["silents_mechanisms:silver_nugget", "silents_mechanisms:item/silver_nugget"],
                 ["occultism:silver_nugget", "occultism:item/silver_nugget"]
             ],
             "dust": [
                 ["immersiveengineering:dust_silver", "immersiveengineering:item/metal_dust_silver"],
+                ["mysticalworld:silver_dust", "mysticalworld:item/silver_dust"],
                 ["thermal:silver_dust", "thermal:item/silver_dust"],
                 ["silents_mechanisms:silver_dust", "silents_mechanisms:item/silver_dust"],
                 ["nuclearcraft:dust_silver", "nuclearcraft:items/dust_silver"],
@@ -923,32 +948,36 @@
         "remove": {
             "storage_block": [
                 ["mekanism:block_tin", "mekanism:block/block_tin"],
+                ["mysticalworld:tin_block", "mysticalworld:block/tin_block"],
+                ["nuclearcraft:ingot_block_tin", "nuclearcraft:blocks/ingot_block_tin"],
                 ["projectred-exploration:tin_block", "projectred-exploration:block/tin_block"],
-                ["thermal:tin_block", "thermal:block/tin_block"],
                 ["silents_mechanisms:tin_block", "silents_mechanisms:block/tin_block"],
-                ["nuclearcraft:ingot_block_tin", "nuclearcraft:blocks/ingot_block_tin"]
+                ["thermal:tin_block", "thermal:block/tin_block"]
             ],
             "ingot": [
-                ["mekanism:ingot_tin", "mekanism:item/ingot_tin"],
-                ["projectred-core:tin_ingot", "projectred-core:item/tin_ingot"],
-                ["thermal:tin_ingot", "thermal:item/tin_ingot"],
-                ["silents_mechanisms:tin_ingot", "silents_mechanisms:item/tin_ingot"],
-                ["nuclearcraft:ingot_tin", "nuclearcraft:items/ingot_tin"],
                 ["chemlib:ingot_tin", ""],
-                ["exnihilosequentia:ingot_tin", ""]
+                ["exnihilosequentia:ingot_tin", ""],
+                ["mekanism:ingot_tin", "mekanism:item/ingot_tin"],
+                ["mysticalworld:tin_ingot", "mysticalworld:item/tin_ingot"],
+                ["nuclearcraft:ingot_tin", "nuclearcraft:items/ingot_tin"],
+                ["projectred-core:tin_ingot", "projectred-core:item/tin_ingot"],
+                ["silents_mechanisms:tin_ingot", "silents_mechanisms:item/tin_ingot"],
+                ["thermal:tin_ingot", "thermal:item/tin_ingot"]
             ],
             "nugget": [
                 ["mekanism:nugget_tin", "mekanism:item/nugget_tin"],
-                ["thermal:tin_nugget", "thermal:item/tin_nugget"],
-                ["silents_mechanisms:tin_nugget", "silents_mechanisms:item/tin_nugget"]
+                ["mysticalworld:tin_nugget", "mysticalworld:item/tin_nugget"],
+                ["silents_mechanisms:tin_nugget", "silents_mechanisms:item/tin_nugget"],
+                ["thermal:tin_nugget", "thermal:item/tin_nugget"]
             ],
             "dust": [
                 ["mekanism:dust_tin", "mekanism:item/dust_tin"],
-                ["thermal:tin_dust", "thermal:item/tin_dust"],
-                ["silents_mechanisms:tin_dust", "silents_mechanisms:item/tin_dust"],
                 ["nuclearcraft:dust_tin", "nuclearcraft:items/dust_tin"],
                 ["pedestals:dusttin", "pedestals:items/dusttin"],
-                ["potionsmaster:tin_powder", "potionsmaster:item/tin_powder"]
+                ["potionsmaster:tin_powder", "potionsmaster:item/tin_powder"],
+                ["mysticalworld:tin_dust", "mysticalworld:item/tin_dust"],
+                ["silents_mechanisms:tin_dust", "silents_mechanisms:item/tin_dust"],
+                ["thermal:tin_dust", "thermal:item/tin_dust"]
             ],
             "gear": [
                 ["thermal:tin_gear", "thermal:item/tin_gear"]

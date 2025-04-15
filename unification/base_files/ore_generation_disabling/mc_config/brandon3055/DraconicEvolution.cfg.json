@@ -1,7 +1,7 @@
 {
     "replace": [
-        ["features.World", "enableOreEnd", false, true],
-        ["features.World", "enableOreOverworld", false, true],
-        ["features.World", "enableOreNether", false, true]
+        ["Server", "enableOreEnd", false, true],
+        ["Server", "enableOreOverworld", false, true],
+        ["Server", "enableOreNether", false, true]
     ]
 }

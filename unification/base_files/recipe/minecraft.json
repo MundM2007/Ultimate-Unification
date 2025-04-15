@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
@@ -277,6 +277,7 @@
             ["thermal:parts/emerald_gear", "minecraft.gear"]
         ]
     },
+    "glowstone": {},
     "gold": {
         "variants": {
             "energy_from_coin": 64000,
@@ -689,9 +690,9 @@
             "molten": "tconstruct:molten_quartz",
             "storage_block": "minecraft:quartz_block",
             "count_block": 4,
-            "essence": "mysticalagriculture:quartz_essence",
-            "seed": "mysticalagriculture:quartz_seeds",
-            "crop": "mysticalagriculture:quartz_crop",
+            "essence": "mysticalagriculture:nether_quartz_essence",
+            "seed": "mysticalagriculture:nether_quartz_seeds",
+            "crop": "mysticalagriculture:nether_quartz_crop",
             "tier": 3
         },
         "add": [

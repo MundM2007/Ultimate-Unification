@@ -57,7 +57,6 @@
 	"alloy.wood": "Wood",
 	"alloy.zirconium": "Zirconium",
 
-	"aoa3.amethyst": "Amethyst",
 	"aoa3.baronyte": "Baronyte",
 	"aoa3.blazium": "Blazium",
 	"aoa3.bloodstone": "Bloodstone",
@@ -100,7 +99,9 @@
 	"astralsorcery.rock_crystal": "Rock Crystal",
 	"astralsorcery.starmetal": "Starmetal",
 
+	"atum.bone": "Bone",
 	"atum.nebu": "Nebu",
+	"atum.relic": "Relic",
 
 	"betterendforge.aeternium": "Aeternium",
 	"betterendforge.amber": "Amber",
@@ -179,6 +180,11 @@
 	"evilcraft.dark_gem": "Dark Gem",
 	"evilcraft.dark_power_gem": "Dark Power Gem",
 
+	"extendedcrafting.black_iron": "Black Iron",
+	"extendedcrafting.crystaltine": "Crystaltine",
+	"extendedcrafting.ender": "Ender",
+	"extendedcrafting.enhanced_ender": "Enhanced Ender",
+
 	"forbidden_arcanus.arcane_crystal": "Arcane Crystal",
 	"forbidden_arcanus.dark_rune": "Dark Rune",
 	"forbidden_arcanus.obsidian_ingot": "Obsidian Ingot",
@@ -188,12 +194,18 @@
 	"ftbic.advanced_alloy": "Advanced Alloy",
 	"ftbic.iridium_alloy": "Iridium Alloy",
 
+	"gem.amethyst": "Amethyst",
 	"gem.bitumen": "Bitumen",
 	"gem.fluorite": "Fluorite",
 	"gem.potassium_nitrate": "Potassium Nitrate",
 	"gem.ruby": "Ruby",
 	"gem.sapphire": "Sapphire",
 	"gem.sulfur": "Sulfur",
+
+	"iceandfire.dragonsteel_fire": "Fire Dragonsteel",
+	"iceandfire.dragonsteel_ice": "Ice Dragonsteel",
+	"iceandfire.dragonsteel_lightning": "Lightning Dragonsteel",
+	"iceandfire.ghost": "Phantasmal",
 
 	"industrialforegoing.pink_slime": "Pink Slime",
 	"industrialforegoing.pink_slime_gem": "Pink Slime",
@@ -248,6 +260,14 @@
 	"mysticalagriculture.supremium_gem": "",
 	"mysticalagriculture.tertium": "Tertium",
 	"mysticalagriculture.tertium_gem": "",
+
+	"mysticalworld.quicksilver": "Quicksilver",
+
+	"mythicbotany.alfsteel": "Alfsteel",
+
+	"naturesaura.infused_iron": "Infused Iron",
+	"naturesaura.sky": "Sky",
+	"naturesaura.tainted_gold": "Tainted Gold",
 
 	"nuclearcraft.arsenic": "",
 	"nuclearcraft.boron_arsenide": "Boron Arsenide",
@@ -314,11 +334,18 @@
 	"tconstruct.manyullyn": "Manyullyn",
 	"tconstruct.pig_iron": "Pig Iron",
 	"tconstruct.queens_slime": "Queen's Slime",
+	"tconstruct.rose_gold": "Rose Gold",
 	"tconstruct.slimesteel": "Slimesteel",
 	"tconstruct.tinkers_bronze": "Tinker's Bronze",
     
 	"thermal.apatite": "Apatite",
 	"thermal.cinnabar": "Cinnabar",
+
+	"twilightforest.fiery": "Fiery",
+	"twilightforest.ironwood": "Ironwood",
+	"twilightforest.knightmetal": "Knightmetal",
+
+	"woot.stygian_iron": "Stygian Iron",
 
 
 	"projectred-core.electrotine.dust": "Electrotine Dust",
@@ -347,7 +374,9 @@
 
 	"strata.astralsorcery.marble_raw": "Marble",
 
+	"strata.atum.alabaster": "Alabaster",
 	"strata.atum.limestone": "Limestone",
+	"strata.atum.porphyry": "Porphyry",
 
 	"strata.betterendforge.brimstone": "Brimstone",
 

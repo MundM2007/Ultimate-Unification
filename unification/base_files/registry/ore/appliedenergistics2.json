@@ -7,18 +7,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 64],
                     "size": 7,
                     "count": 9,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 95],
                     "size": 7,
                     "count": 8,
@@ -30,14 +32,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 85],
                     "size": 7,
                     "count": 8,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "appliedenergistics2:quartz_ore"
         ]
     },
     "charged_certus_quartz": {     
@@ -48,18 +54,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 32],
                     "size": 3,
                     "count": 5,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 65],
                     "size": 3,
                     "count": 4,
@@ -71,14 +79,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 55],
                     "size": 3,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "appliedenergistics2:charged_quartz_ore"
         ]
     }
 }

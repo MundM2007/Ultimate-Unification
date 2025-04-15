@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
+# Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import json
@@ -35,7 +35,7 @@ class FileManager:
             self.files[path_file] = [f"{license_notice}//priority: {priority}\n{event_write}", content, ending]
     
 
-    # adds a JSON file section to be written to the file later
+    # adds a JSON file section to be written to the file later, validates the JSON content and handles errors
     def add_json(self, path_file, content, pretty_print=False):
         if self.files.get(path_file):
             try:
@@ -50,6 +50,7 @@ class FileManager:
                 self.LM.log("json_error", f"Error decoding JSON content: {content} that's trying to be written to the file: {path_file}", e)
     
 
+    # adds a text file section to be written to the file later
     def add_text(self, path_file, content):
         if path_file in self.files:
             self.files[path_file][0] += "\n"
@@ -62,19 +63,23 @@ class FileManager:
     def handle_texture(self, path_file, path_copy, active, isAdding):
         if active:
             if os.path.exists(path_file):
+                # adds the texture to be created later
                 self.textures_add[path_copy] = path_file
                 return True
             else:
+                # errors if the texture doesn't exist
                 if isAdding:
                     self.LM.log("texture_missing", f"Missing Material texture file: {path_file} meaning the corresponding item won't be added to the game")
                 else:
                     self.LM.log("texture_missing", f"Missing Material texture file: {path_file} meaning the corresponding item's texture won't be changed")
+                # removes the texture if it exists
                 if os.path.exists(path_copy):
                     self.files_remove.add(path_copy)
                 if path_copy in self.textures_add:
                     self.textures_add.pop(path_copy)
                 return False
         else:
+            # removes the texture if it exists
             if os.path.exists(path_copy):
                 self.files_remove.add(path_copy)
             if path_copy in self.textures_add:
@@ -82,6 +87,7 @@ class FileManager:
             return False
         
     
+    # removes a JSON file
     def remove_json(self, path_file):
         if os.path.exists(path_file):
             self.files_remove.add(path_file)
@@ -93,19 +99,23 @@ class FileManager:
     def save(self):
         amount_files = len(self.files) - 1
         for index, (path_file, content) in enumerate(self.files.items()):
+            # if len == 3, the it's a KubeJS file, if len == 2, it's a JSON file, if len == 1, it's a text file
             if len(content) == 3:
                 self.IOM.write(path_file, content[0] + content[1] + content[2])
             elif len(content) == 2:
                 self.IOM.write(path_file, json.dumps(content[0], indent=4 if content[1] else None))
             else:
                 self.IOM.write(path_file, content[0])
+            # logs the progress of the saving process
             self.LM.log_percentage(f"Saving files", index / (amount_files))
         
+        # copies the textures to the destination folder
         amount_textures_add = len(self.textures_add) - 1
         for index, (path_copy, path_file) in enumerate(self.textures_add.items()):
             self.IOM.copy(path_file, path_copy)
             self.LM.log_percentage(f"Saving textures", index / (amount_textures_add))
 
+        # removes the files
         amount_files_remove = len(self.files_remove) - 1
         for index, path_file in enumerate(self.files_remove):
             self.IOM.remove(path_file)

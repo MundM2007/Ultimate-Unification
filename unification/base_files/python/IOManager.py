@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
+# Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import functools
@@ -24,7 +24,7 @@ class IOManager:
         self.LM = LM
     
 
-    # reads the content of a file
+    # reads the content of a file, uses lru_cache to cache the result for faster access, because the same file is read a lot of times
     @functools.lru_cache()
     def read(self, path_file):
         try:
@@ -63,10 +63,6 @@ class IOManager:
     # creates a directory if it doesn't exist, otherwise it clears it
     def clear_path(self, path):
         try:
-            if os.path.isfile(path):
-                os.remove(path)
-                return
-            
             os.makedirs(path, exist_ok=True)
             for file in os.listdir(path):
                 if os.path.isdir(os.path.join(path, file)):
@@ -77,6 +73,7 @@ class IOManager:
             self.LM.log("file_error", f"Error clearing path: {path}", e)
 
     
+    # traverses a path and applies a function to each file in the path
     def traverse_path(self, path, function):
         try:
             for root, dirs, files in os.walk(path):

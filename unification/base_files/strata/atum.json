@@ -1,6 +1,14 @@
 {
+    "alabaster": {
+        "block": "atum:alabaster",
+        "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
+    },
     "limestone": {
         "block": "atum:limestone",
+        "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
+    },
+    "porphyry": {
+        "block": "atum:porphyry",
         "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
     }
 }

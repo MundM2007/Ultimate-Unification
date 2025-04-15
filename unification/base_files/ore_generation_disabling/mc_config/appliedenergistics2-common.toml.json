@@ -1,5 +1,5 @@
 {
     "replace": [
-        ["Server", "CertusQuartzWorldGen", false, true]
+        ["features.World", "CertusQuartzWorldGen", false, true]
     ]
 }

@@ -7,18 +7,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 8,
                     "count": 3,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [1, 35],
                     "size": 8,
                     "count": 4,
@@ -30,14 +32,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 70],
                     "size": 10,
                     "count": 6,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "draconicevolution:end_draconium_ore",
+            "draconicevolution:nether_draconium_ore",
+            "draconicevolution:overworld_draconium_ore"
         ]
     }
 }

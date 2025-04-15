@@ -1,5 +1,7 @@
 {
     "replace": [
+        ["\"ore gen\"", "\"Relic Ore count, set to 0 to disable\"", 0, 4],
+        ["\"ore gen\"", "\"Bone Ore count, set to 0 to disable\"", 0, 12],
         ["\"ore gen\"", "\"Nebu count, set to 0 to disable\"", 0, 1],
         ["\"ore gen\"", "\"Coal count, set to 0 to disable\"", 0, 20],
         ["\"ore gen\"", "\"Redstone count, set to 0 to disable\"", 0, 8],

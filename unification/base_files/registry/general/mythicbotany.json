@@ -1,0 +1,50 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "alfsteel": {
+        "block": {
+            "harvest_level": 3,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 5
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["ingot", "mythicbotany:item/alfsteel_ingot", "mythicbotany:alfsteel_ingot"],
+            ["storage_block", "mythicbotany:block/alfsteel_block", "mythicbotany:alfsteel_block"],
+            ["nugget", "mythicbotany:item/alfsteel_nugget", "mythicbotany:alfsteel_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#b06f03",
+            "mysticalagriculture#b06f03"
+        ],
+        "remove": {}
+    }
+}

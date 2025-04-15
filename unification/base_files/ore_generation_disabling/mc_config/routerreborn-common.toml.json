@@ -1,0 +1,5 @@
+{
+    "replace": [
+        ["OreGen", "EnableCopperWorldGen", false, true]
+    ]
+}

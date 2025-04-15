@@ -6,7 +6,7 @@ Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 
 ## Installation / Setup
 
-To install just paste the kubejs and unification folders provided in this repository into the minecraft modpack instance.<br/>
+To install just paste the defaultconfigs, kubejs and unification folders provided in this repository into the minecraft modpack instance.<br/>
 For Setup check out the [wiki](https://github.com/MundM2007/Ultimate-Unification/wiki).<br/>
 To Generate all the Kubejs scripts aswell as asset files run the main.py in the unification folder.
 
@@ -69,7 +69,7 @@ To Generate all the Kubejs scripts aswell as asset files run the main.py in the 
 - [Mystical Agradditions](https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions)
 - [Mystical Agriculture](https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture)
 - [MythicBotany](https://www.curseforge.com/minecraft/mc-mods/mythicbotany)
-- [NuclearCraft](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod)
+- [NuclearCraft (Materials exist, but because of broken mod state not fully supported)](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod)
 - [Occultism](https://www.curseforge.com/minecraft/mc-mods/occultism)
 - [Oh the Biomes You'll Go](https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-youll-go)
 - [Pam's HarvestCraft 2 - Food Core](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-core)

@@ -14,15 +14,14 @@
 // ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 //  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 // --------------------------------------------------------------------------------
-// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:                   
+// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:                   
 //         - MundM2007          (https://github.com/MundM2007)					   
 //         - G_cat              (https://github.com/Gcat101)                       
 
 // Universal Functions
 
 function arrConvert(element) {
-	let array = Array.isArray(element) ? element : [element]
-	return array
+	return Array.isArray(element) ? element : [element]
 }
 
 function ingredientOfNoCount(item) {
@@ -84,12 +83,18 @@ function fluidConvertWithTag(fluidArray, typeNames, amountName) {
 	if (typeof amountName != "string") amountName = "amount"
 
 	let fluid = {}
-	fluidArray[0].substring(0, 1) === "#" ? fluid[typeNames[1]] = fluidArray[0].substring(1) : fluid[typeNames[0]] = fluidArray[0]
-	fluid[amountName] = typeof fluidArray[1] == "number" ? fluidArray[1] : 1000 
+	if(typeof fluidArray[0] == "string") {
+		fluidArray[0].substring(0, 1) === "#" ? fluid[typeNames[1]] = fluidArray[0].substring(1) : fluid[typeNames[0]] = fluidArray[0]
+		fluid[amountName] = typeof fluidArray[1] == "number" ? fluidArray[1] : 1000
+	}else{
+		fluid[typeNames[0]] = fluidArray[0].id
+		fluid[amountName] = fluidArray[0].getAmount()
+	} 
 	return fluid
 }
 
 function fluidConvertOnlyTag(fluidArray) {
+	if (typeof fluidArray[0] == "string" && fluidArray[0].substring(0, 1) === "#") fluidArray[0] = fluidArray[0].substring(1)
 	return {tag: fluidArray[0], amount: typeof fluidArray[1]=="number" ? fluidArray[1] : 1000 }
 }
 
@@ -498,12 +503,12 @@ onEvent("loaded", e => {
 				applyID(event, id, {
 					type: "astralsorcery:liquid_interaction",
 
-					reactant1: fluid1.id,
-					reactant1Amount: fluid1.getAmount(),
+					reactant1: fluid1.fluid,
+					reactant1Amount: fluid1.amount,
 					chanceConsumeReactant1: inputFluid1[1],
 
-					reactant2: fluid2.id,
-					reactant2Amount: fluid2.getAmount(),
+					reactant2: fluid2.fluid,
+					reactant2Amount: fluid2.amount,
 					chanceConsumeReactant2: inputFluid2[1],
 
 					result: {
@@ -1203,9 +1208,7 @@ onEvent("loaded", e => {
 				if (typeof time!="number") time = 200
 				let byproducts = []
 				arrConvert(outputItem).forEach(item => byproducts.push(ingredientOfAlwaysChance(item)))
-
-				console.log(fluidConvertOnlyTag(arrConvert(input)))
-
+				
 				applyID(event, id, {
 					type: "immersivepetroleum:distillation",
 					input: fluidConvertOnlyTag(arrConvert(input)),

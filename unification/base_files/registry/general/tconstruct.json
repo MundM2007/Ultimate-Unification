@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "hepatizon": {
@@ -105,6 +105,29 @@
             ["storage_block", "tconstruct:block/storage/queens_slime_top", "tconstruct:queens_slime_block"],
             ["ingot", "tconstruct:item/materials/queens_slime_ingot", "tconstruct:queens_slime_ingot"],
             ["nugget", "tconstruct:item/materials/queens_slime_nugget", "tconstruct:queens_slime_nugget"]
+        ],
+        "add": [
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin"
+        ],
+        "remove": {}
+    },
+    "rose_gold": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["storage_block", "tconstruct:block/storage/rose_gold", "tconstruct:rose_gold_block"],
+            ["ingot", "tconstruct:item/materials/rose_gold_ingot", "tconstruct:rose_gold_ingot"],
+            ["nugget", "tconstruct:item/materials/rose_gold_nugget", "tconstruct:rose_gold_nugget"]
         ],
         "add": [
             "dust",

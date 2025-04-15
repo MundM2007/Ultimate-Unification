@@ -14,7 +14,7 @@
 // ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 //  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 // --------------------------------------------------------------------------------
-// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
+// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              
 //         - MundM2007          (https://github.com/MundM2007)                              
 
 function chooseRandom(array) {
@@ -92,9 +92,9 @@ onEvent("loaded", e => {
 			with_silk_touch: (event, block, drops, counts) => {
 				event
         			.addBlockLootModifier(block)
-					.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
+					//.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
 					.thenRemove(block)
-					.thenApply((_) => {
+					.thenApply((context) => {
 						context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
 					})
 			},
@@ -102,7 +102,7 @@ onEvent("loaded", e => {
 				event
         			.addBlockLootModifier(block)
 					.thenRemove(block)
-					.thenApply((_) => {
+					.thenApply((context) => {
 						context.addLoot(Item.of(chooseRandom(drops), chooseRandom(counts)))
 					})
 			}

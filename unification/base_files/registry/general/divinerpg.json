@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "apalachia": {
@@ -33,10 +33,10 @@
         "replace": [
             ["storage_block", "divinerpg:blocks/apalachia_block", "divinerpg:apalachia_block"],
             ["gem", "divinerpg:items/apalachia_gem", "divinerpg:apalachia_gem"],
-            ["part", "divinerpg:items/apalachia_fragments", "divinerpg:apalachia_fragments"]
+            ["part", "divinerpg:items/apalachia_fragments", "divinerpg:apalachia_fragments"],
+            ["dust", "divinerpg:items/apalachia_dust", "divinerpg:apalachia_dust"]
         ],
         "add": [
-            "dust",
             "plate",
             "rod",
             "gear",
@@ -250,10 +250,10 @@
         "replace": [
             ["storage_block", "divinerpg:blocks/eden_block", "divinerpg:eden_block"],
             ["gem", "divinerpg:items/eden_gem", "divinerpg:eden_gem"],
-            ["part", "divinerpg:items/eden_fragments", "divinerpg:eden_fragments"]
+            ["part", "divinerpg:items/eden_fragments", "divinerpg:eden_fragments"],
+            ["dust", "divinerpg:items/eden_dust", "divinerpg:eden_dust"]
         ],
         "add": [
-            "dust",
             "plate",
             "rod",
             "gear",
@@ -426,10 +426,10 @@
         "replace": [
             ["storage_block", "divinerpg:blocks/mortum_block", "divinerpg:mortum_block"],
             ["gem", "divinerpg:items/mortum_gem", "divinerpg:mortum_gem"],
-            ["part", "divinerpg:items/mortum_fragments", "divinerpg:mortum_fragments"]
+            ["part", "divinerpg:items/mortum_fragments", "divinerpg:mortum_fragments"],
+            ["dust", "divinerpg:items/mortum_dust", "divinerpg:mortum_dust"]
         ],
         "add": [
-            "dust",
             "plate",
             "rod",
             "gear",
@@ -582,10 +582,10 @@
         "replace": [
             ["storage_block", "divinerpg:blocks/skythern_block", "divinerpg:skythern_block"],
             ["gem", "divinerpg:items/skythern_gem", "divinerpg:skythern_gem"],
-            ["part", "divinerpg:items/skythern_fragments", "divinerpg:skythern_fragments"]
+            ["part", "divinerpg:items/skythern_fragments", "divinerpg:skythern_fragments"],
+            ["dust", "divinerpg:items/skythern_dust", "divinerpg:skythern_dust"]
         ],
         "add": [
-            "dust",
             "plate",
             "rod",
             "gear",
@@ -682,10 +682,10 @@
         "replace": [
             ["storage_block", "divinerpg:blocks/wildwood_block", "divinerpg:wildwood_block"],
             ["gem", "divinerpg:items/wildwood_gem", "divinerpg:wildwood_gem"],
-            ["part", "divinerpg:items/wildwood_fragments", "divinerpg:wildwood_fragments"]
+            ["part", "divinerpg:items/wildwood_fragments", "divinerpg:wildwood_fragments"],
+            ["dust", "divinerpg:items/wildwood_dust", "divinerpg:wildwood_dust"]
         ],
         "add": [
-            "dust",
             "plate",
             "rod",
             "gear",

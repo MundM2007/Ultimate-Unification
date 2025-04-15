@@ -12,7 +12,7 @@
 # ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
 #  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # --------------------------------------------------------------------------------
-# Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              
+# Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              
 #         - MundM2007 (https://github.com/MundM2007)
 
 import json
@@ -28,6 +28,7 @@ class Utilities:
         self.FM = FM
         self.pack_path = os.path.abspath(os.path.join(self.LM.path_program, os.pardir))
 
+        # assign each mod either true or false, depending weither it is active or not, for checking if a mod is in the mod list
         self.mod_list = {"minecraft": True}
         try:
             mod_list_config = json.loads(self.IOM.read(os.path.join(self.LM.path_program, "config", "mod_list.json")))
@@ -39,17 +40,18 @@ class Utilities:
             else:
                 self.mod_list.update({mod: False})
 
+
         self.langs = []
         for id_file in os.listdir(os.path.join(self.LM.path_program, "base_files", "lang")):
             if os.path.isfile(os.path.join(self.LM.path_program, "base_files", "lang", id_file)):
-                base_file_lang = os.path.join(self.LM.path_program, "base_files", "lang", f"{id_file}")
-                # checks if the lang file is valid
+                base_file_lang_location = os.path.join(self.LM.path_program, "base_files", "lang", f"{id_file}")
+                # checks if the lang file is valid, and adds all lanuages to a list
                 try:
-                    base_file_registry = json.loads(self.IOM.read(base_file_lang))
-                    base_file_registry["lang"] = id_file.removesuffix(".json")
-                    self.langs.append(base_file_registry)
+                    base_file_lang = json.loads(self.IOM.read(base_file_lang_location))
+                    base_file_lang["lang"] = id_file.removesuffix(".json")
+                    self.langs.append(base_file_lang)
                 except json.JSONDecodeError as e:
-                    self.LM.log("json_error", f"Error decoding JSON content of the file: {base_file_lang} skipping this lang", e)
+                    self.LM.log("json_error", f"Error decoding JSON content of the file: {base_file_lang_location} skipping this language", e)
          
         # reads the main config
         try:
@@ -57,6 +59,7 @@ class Utilities:
         except json.JSONDecodeError as e:
             self.LM.log("critical_json_error", f"Error decoding JSON content of the file: main.json", e)
         
+        # intializes stratas dictionarizes
         self.stratas = dict()
         self.strata_tags = dict()
 
@@ -87,16 +90,17 @@ class Utilities:
                             f"{id_name}_{material_type}{extra_texture_name}.png")
                     
 
-    # checks if a mod is in the mod list
+    # checks if a mod is in the mod list and active
     def check_mod(self, mod_id):
         return mod_id in self.mod_list and self.mod_list[mod_id]
     
 
+    # checks if a mod is in the mod list
     def check_mod_written(self, mod_id):
         return mod_id in self.mod_list
 
 
-    # checks if a material type is from a mod that is in the mod list
+    # checks if a material type is from a mod that is in the mod list and active
     def check_material(self, material_type):
         if self.get_main_config("unification.disable_material_type_check", False) is True:
             return True
@@ -115,6 +119,7 @@ class Utilities:
         if "slurry" in material_type:
             material_type = "slurry"
 
+        # logs error if mod is not found in the mod list
         if material_type in mod_mapping:
             if not self.check_mod(mod_mapping[material_type]):
                 if not self.check_mod_written(mod_mapping[material_type]):
@@ -124,6 +129,7 @@ class Utilities:
         return True
 
 
+    # gets the language key for a specific id name and material type
     def get_lang_key(self, id_name, material_type, id_file_strata="", id_name_strata=""):
         if material_type == "ore":
             return f"block.unification.{id_name}_ore_{id_file_strata}_{id_name_strata}"
@@ -142,14 +148,19 @@ class Utilities:
 
 
     def gen_lang_entry(self, id_file, id_name, material_type, id_file_strata="", id_name_strata=""):
+        # if id_file_strata is not empty, it means that the material type is an ore
         if id_file_strata:
+            # do this for every language file
             for lang in self.langs:
+                # get path of the lang file in the game
                 path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
+                # check if this specific material, and strata (so this specific ore) have a lang entry, if so use that
                 if lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}") is not None:
                     self.FM.add_json(path_lang_file, {
                         self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
                         lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}")
                     })
+                # if not check if the material type has a lang entry, and use that instead and replace the %s with the strata name
                 elif lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
                     if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
                             self.FM.add_json(path_lang_file, {
@@ -158,6 +169,7 @@ class Utilities:
                             })
                     else:
                         self.LM.log("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
+                # if not check if the material type has a lang entry, and use that instead and replace the %s with the material name and strata name
                 elif lang.get(material_type) is not None:
                     if lang.get(f"{id_file}.{id_name}") is not None:
                         if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
@@ -172,11 +184,16 @@ class Utilities:
                 else:
                     self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
         else:
+            # do this for every language file
             for lang in self.langs:
+                # get path of the lang file in the game
                 path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
+                # generate two lang entries if we have a slurry, one for dirty and one for clean
                 for material_type in [f"dirty_{material_type}", f"clean_{material_type}"] if material_type in ["slurry"] else [material_type]:
+                    # check if this specific item has a lang entry, if so use that
                     if lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
                         self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(f"{id_file}.{id_name}.{material_type}")})
+                    # if not check if the material type has a lang entry, and use that instead and replace the %s with the material name
                     elif lang.get(material_type) is not None:
                         if lang.get(f"{id_file}.{id_name}") is not None:
                             self.FM.add_json(path_lang_file, {self.get_lang_key(id_name, material_type): lang.get(material_type) % lang.get(f"{id_file}.{id_name}")})
@@ -186,6 +203,7 @@ class Utilities:
                         self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {material_type} in the lang file: {lang.get('lang')}")
 
     
+    # used to get a main config option, and also has a fallback option if the config option is not found, uses lru_chache because this is called a lot with the same parameters
     @functools.lru_cache()
     def get_main_config(self, config_path, fallback):
         config_temp = copy.deepcopy(self.config)
@@ -197,16 +215,19 @@ class Utilities:
         return config_temp
 
 
+    # registers a strata in the above defined stratas dictionary, and also adds it to the strata_tags dictionary if it has tags
     def register_strata(self, name, strataDict):
         if not self.check_mod(name[:name.find(".")]):
             if not self.check_mod_written(name[:name.find(".")]):
                 self.LM.log_same_message_once("mod_not_found", f"Mod {name[:name.find('.')]} not found in the mod list")
             return
 
+        # error if no block is defined in the strata
         if strataDict.get("block") is None:
             self.LM.log("strata_error", f"Strata '{name}' is missing a 'block' field. It will be ignored.")
             return
         
+        # transfer relevant information and sets defaults
         self.stratas[name] = {
             "block": strataDict["block"],
             "properties": strataDict.get("properties", []),
@@ -219,6 +240,7 @@ class Utilities:
             "explosion_resistance": strataDict.get("explosion_resistance", 6)
         }
 
+        # adds the specific tags to the strata_tags dictionary, and add the strata to it
         for tag in strataDict.get("tags", []):
             if tag in self.strata_tags:
                 self.strata_tags[tag].append(name)
@@ -226,14 +248,17 @@ class Utilities:
                 self.strata_tags[tag] = [name]
 
 
+    # checks if a strata exists in the stratas dictionary
     def strata_exists(self, name):
         return name in self.stratas
 
 
+    # gets the strata information from the stratas dictionary
     def get_strata(self, name):
         return self.stratas.get(name, {})
 
 
+    # gets all stratas in the values section of the ore, handling tags and normal stratas
     def get_stratas_in_values(self, values):
         stratas = []
         for value in values:
@@ -243,3 +268,43 @@ class Utilities:
                 stratas.append(value)
 
         return stratas
+    
+
+    # gets the ore drop function for the drop info, so weither to use fortune or silk touch, and check if the ore should drop itself
+    def get_ore_drop_function(self, drop_info): 
+        if drop_info and not self.get_main_config(f"{drop_info["type"]}_ore_drop_itself", False):
+            fortune_part = "with_fortune" if self.get_main_config(f"{drop_info["type"]}_fortune_affected", True) else "without_fortune"
+            silk_touch_part = "with_silk_touch" if self.get_main_config(f"{drop_info["type"]}_silk_touch_affected", True) else "without_silk_touch"
+            return f"global.lp.{fortune_part}.{silk_touch_part}"
+        return "global.rp.without_fortune.without_silk_touch"
+    
+
+    # get the blockstate of an strata, for this read the file and replace all the %s with the id_file, id_name and id_name, to get the amount the word model is used
+    def get_strata_blockstate(self, id_file, id_name, id_file_strata, id_name_strata):
+        blockstate_path = os.path.join(self.LM.path_program, "base_files", "assets", "blockstates", id_file_strata, f"{id_name_strata}.json")
+        if not os.path.isfile(blockstate_path): self.LM.log("asset_file_missing", f"Missing Strata asset file: {blockstate_path}"); return ""
+        blockstate = self.IOM.read(blockstate_path)
+        blockstate = blockstate % (blockstate.count("model") * (id_file, id_name, id_name))
+        blockstate = blockstate.replace("\n", "").replace("\t", "").replace(" ", "")
+        return blockstate
+
+
+
+    def handle_ore_assets(self, id_file, id_name, id_file_strata, id_name_strata, blockstate, resource_location_item_model): 
+        # gets the resource location of the block model in the game assets
+        if blockstate == "": return False
+        resource_location_block_model = f'unification:{id_file}/{id_name}/block/{id_name}_ore/{id_file_strata}/{id_name_strata}/'
+
+        # gets the model path in the base files
+        model_path = os.path.join(self.LM.path_program, "base_files", "assets", "models", id_file_strata, id_name_strata)
+        if not os.path.isdir(model_path): self.LM.log("asset_folder_missing", f"Missing Strata asset folder: {model_path}"); return False
+
+        # for each file in the model path read it, replace the %s accordingly and then save it to the game assets
+        for model_file in os.listdir(model_path):
+            model = (self.IOM.read(os.path.join(model_path, model_file)) % (id_file, id_name, id_name, id_file, id_name, id_name)).replace("\n", "").replace("\t", "").replace(" ", "")
+            self.FM.add_json(self.resource_location_to_path(resource_location_block_model + model_file.removesuffix(".json"), "model"), model)
+
+        # adds the item model to the game assets
+        self.FM.add_json(self.resource_location_to_path(resource_location_item_model, "model", True), {"parent": resource_location_block_model + "x_0_y_0"})
+
+        return True

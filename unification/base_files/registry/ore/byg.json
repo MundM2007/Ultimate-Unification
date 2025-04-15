@@ -7,6 +7,7 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [10, 100],
                     "size": 4,
                     "count": 10,
@@ -15,9 +16,14 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:ametrine_ore",
+            "byg:budding_ametrine_ore"
         ]
     },
-    "anthracite": {     
+    "anthracite": {
+        "enabled": false,   
         "type": "gem",
         "drops": "byg:anthracite",
         "counts": 1,
@@ -25,6 +31,7 @@
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 10,
                     "count": 18,
@@ -33,6 +40,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:anthracite_ore"
         ]
     },
     "emeraldite": {     
@@ -43,6 +53,7 @@
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 3,
                     "count": 30,
@@ -51,6 +62,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:emeraldite_ore"
         ]
     },
     "lignite": {     
@@ -61,6 +75,7 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [10, 100],
                     "size": 12,
                     "count": 15,
@@ -69,6 +84,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:lignite_ore"
         ]
     },
     "pendorite_scraps": {     
@@ -79,6 +97,7 @@
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 4,
                     "count": 30,
@@ -87,6 +106,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "byg:pendorite_ore"
         ]
     }
 }

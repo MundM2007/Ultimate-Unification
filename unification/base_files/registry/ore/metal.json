@@ -7,18 +7,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [45, 75],
                     "size": 5,
                     "count": 8,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [70, 100],
                     "size": 5,
                     "count": 7,
@@ -30,14 +32,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [60, 90],
                     "size": 5,
                     "count": 7,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "immersiveengineering:ore_aluminum",
+            "silents_mechanisms:bauxite_ore",
+            "tmechworks:aluminum_ore"
         ]
     },
     "bismuth": {     
@@ -48,18 +56,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [15, 50],
                     "size": 7,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [50, 80],
                     "size": 7,
                     "count": 3,
@@ -71,14 +81,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [40, 70],
                     "size": 7,
                     "count": 3,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "silents_mechanisms:bismuth_ore"
         ]
     },
     "boron": {     
@@ -89,18 +103,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 5,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 5,
                     "count": 4,
@@ -112,14 +128,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [14, 40],
                     "size": 5,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "nuclearcraft:boron_ore"
         ]
     },
     "cobalt": {     
@@ -130,6 +150,7 @@
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [45, 80],
                     "size": 7,
                     "count": 5,
@@ -138,6 +159,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "tconstruct:cobalt_ore"
         ]
     },
     "copper": {     
@@ -148,18 +172,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [45, 90],
                     "size": 9,
                     "count": 13,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [70, 100],
                     "size": 8,
                     "count": 10,
@@ -171,14 +197,30 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [60, 90],
                     "size": 8,
                     "count": 10,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "create:copper_ore",
+            "iceandfire:copper_ore",
+            "immersiveengineering:ore_copper",
+            "mekanism:copper_ore",
+            "mysticalworld:copper_ore",
+            "nuclearcraft:ore_copper",
+            "occultism:copper_ore",
+            "projectred-exploration:copper_ore",
+            "routerreborn:copper_ore",
+            "silents_mechanisms:copper_ore",
+            "tconstruct:copper_ore",
+            "thermal:copper_ore",
+            "tmechworks:copper_ore"
         ]
     },
     "iridium": {       
@@ -189,18 +231,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 5,
                     "count": 5,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 4,
                     "count": 5,
@@ -212,11 +256,12 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 4,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
@@ -230,18 +275,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [30, 45],
                     "size": 4,
                     "count": 7,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [55, 70],
                     "size": 4,
                     "count": 5,
@@ -253,14 +300,24 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [45, 60],
                     "size": 4,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "eidolon:lead_ore",
+            "immersiveengineering:ore_lead",
+            "mekanism:lead_ore",
+            "mysticalworld:lead_ore",
+            "nuclearcraft:ore_lead",
+            "silents_mechanisms:lead_ore",
+            "thermal:load_ore"
         ]
     },
     "lithium": {       
@@ -271,18 +328,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 5,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 5,
                     "count": 4,
@@ -294,14 +353,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [15, 40],
                     "size": 5,
                     "count": 4,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "nuclearcraft:ore_lithium"
         ]
     },
     "magnesium": {       
@@ -312,18 +375,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 25],
                     "size": 5,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [25, 45],
                     "size": 4,
                     "count": 3,
@@ -335,14 +400,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [15, 35],
                     "size": 4,
                     "count": 3,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "nuclearcraft:ore_magnesium"
         ]
     },
     "nickel": {       
@@ -353,18 +422,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [20, 40],
                     "size": 5,
                     "count": 7,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [50, 70],
                     "size": 5,
                     "count": 6,
@@ -376,14 +447,20 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [40, 60],
                     "size": 5,
                     "count": 6,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "immersiveengineering:ore_nickel",
+            "silents_mechanisms:nickel_ore",
+            "thermal:nickel_ore"
         ]
     },
     "osmium": {       
@@ -394,18 +471,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [20, 50],
                     "size": 10,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [50, 80],
                     "size": 9,
                     "count": 5,
@@ -417,14 +496,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [40, 70],
                     "size": 9,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "mekanism:osmium_ore"
         ]
     },
     "platinum": {       
@@ -435,18 +518,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 4,
                     "count": 2,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
                     "count": 1,
@@ -458,14 +543,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 6,
                     "count": 1,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "silents_mechanisms:platinum_ore"
         ]
     },
     "silver": {       
@@ -476,18 +565,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [25, 40],
                     "size": 4,
                     "count": 7,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [45, 60],
                     "size": 4,
                     "count": 6,
@@ -499,14 +590,24 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [35, 50],
                     "size": 4,
                     "count": 6,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "iceandfire:silver_ore",
+            "immersiveengineering:ore_silver",
+            "mysticalworld:silver_ore",
+            "occultism:silver_ore",
+            "projectred-exploration:silver_ore",
+            "silents_mechanisms:silver_ore",
+            "thermal:silver_ore"
         ]
     },
     "thorium": {       
@@ -517,18 +618,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 4,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 3,
                     "count": 3,
@@ -540,14 +643,18 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [15, 40],
                     "size": 3,
                     "count": 3,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "nuclearcraft:ore_thorium"
         ]
     },
     "tin": {       
@@ -558,18 +665,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [40, 65],
                     "size": 6,
                     "count": 10,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [70, 95],
                     "size": 5,
                     "count": 9,
@@ -581,14 +690,23 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [60, 85],
                     "size": 5,
                     "count": 9,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "mekanism:tin_ore",
+            "mysticalworld:tin_ore",
+            "nuclearcraft:ore_tin",
+            "projectred-exploration:tin_ore",
+            "thermal:tin_ore",
+            "silents_mechanisms:tin_ore"
         ]
     },
     "titanium": {       
@@ -599,18 +717,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [20, 30],
                     "size": 3,
                     "count": 2,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [50, 60],
                     "size": 4,
                     "count": 1,
@@ -622,11 +742,12 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [40, 50],
                     "size": 4,
                     "count": 1,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
@@ -640,18 +761,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [10, 30],
                     "size": 5,
                     "count": 4,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [40, 60],
                     "size": 5,
                     "count": 3,
@@ -663,11 +786,12 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [30, 50],
                     "size": 5,
                     "count": 3,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
@@ -681,18 +805,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 5,
                     "count": 6,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 5,
                     "count": 5,
@@ -704,14 +830,22 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 5,
                     "count": 5,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "biggerreactors:yellorite_ore",
+            "immersiveengineering:ore_uranium",
+            "mekanism:uranium_ore",
+            "nuclearcraft:ore_uranium",
+            "silents_mechanisms:uranium_ore"
         ]
     },
     "zinc": {       
@@ -722,18 +856,20 @@
             {
                 "values": ["#overworld-all", "#atum-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [30, 50],
                     "size": 5,
                     "count": 8,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             },
             {
                 "values": ["#nether-all"],
                 "gen": {
+                    "feature_name_extra": "nether",
                     "height": [60, 80],
                     "size": 4,
                     "count": 8,
@@ -745,14 +881,19 @@
             {
                 "values": ["#end-all"],
                 "gen": {
+                    "feature_name_extra": "end",
                     "height": [50, 70],
                     "size": 4,
                     "count": 8,
                     "biomes": {
-                        "values": ["#the_end"]
+                        "values": ["#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "create:zinc_ore",
+            "silents_mechanisms:zinc_ore"
         ]
     }
 }

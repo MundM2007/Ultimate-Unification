@@ -7,6 +7,7 @@
             {
                 "values": ["#overworld_sand-all"],
                 "gen": {
+                    "feature_name_extra": "overworld_water",
                     "height": [30, 62],
                     "size": 4,
                     "count": 5,
@@ -15,6 +16,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "astralsorcery:aquamarine_sand_ore"
         ]
     },
     "rock_crystal": {     
@@ -25,15 +29,19 @@
             {
                 "values": ["#overworld-all"],
                 "gen": {
+                    "feature_name_extra": "overworld",
                     "height": [15, 45],
                     "size": 4,
                     "count": 8,
                     "biomes": {
                         "blacklist": true,
-                        "values": ["#nether", "#the_end"]
+                        "values": ["#nether", "#end"]
                     }
                 }
             }
+        ],
+        "remove": [
+            "astralsorcery:rock_crystal_ore"
         ]
     },
     "starmetal": {
@@ -44,6 +52,9 @@
             {
                 "values": ["#overworld-all", "#nether-all", "#end-all", "#atum-all", "#moon-all", "#mars-all", "#mercury-all"]
             }
+        ],
+        "remove": [
+            "astralsorcery:starmetal_ore"
         ]
     }
 }

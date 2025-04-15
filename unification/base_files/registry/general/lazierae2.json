@@ -1,0 +1,80 @@
+{
+    "license_notice": [
+        "//          ██╗   ██╗██╗  ████████╗██╗███╗   ███╗ █████╗ ████████╗███████╗         \n",
+        "//          ██║   ██║██║  ╚══██╔══╝██║████╗ ████║██╔══██╗╚══██╔══╝██╔════╝         \n",
+        "//          ██║   ██║██║     ██║   ██║██╔████╔██║███████║   ██║   █████╗           \n",
+        "//          ██║   ██║██║     ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██╔══╝           \n",
+        "//          ╚██████╔╝███████╗██║   ██║██║ ╚═╝ ██║██║  ██║   ██║   ███████╗         \n",
+        "//           ╚═════╝ ╚══════╝╚═╝   ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝         \n",
+        "//                                                                                 \n",
+        "// ██╗   ██╗███╗   ██╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n",
+        "// ██║   ██║████╗  ██║██║██╔════╝██║██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n",
+        "// ██║   ██║██╔██╗ ██║██║█████╗  ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║\n",
+        "// ██║   ██║██║╚██╗██║██║██╔══╝  ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║\n",
+        "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
+        "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
+        "// --------------------------------------------------------------------------------\n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
+        "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
+    ],
+    "fluix_iron": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["ingot", "lazierae2:item/fluix_iron_ingot", "lazierae2:fluix_iron_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#8f5ccb",
+            "mysticalagriculture#8f5ccb"
+        ],
+        "remove": {}
+    },
+    "fluix_steel": {
+        "block": {
+            "harvest_level": 1,
+            "destroy_time": 3,
+            "explosion_resistance": 3
+        },
+        "mysticalagriculture": {
+            "flower_type": "ingot",
+            "essence_type": "ingot",
+            "tier": 4
+        },
+        "burn_time": 0,
+
+        "replace": [
+            ["ingot", "lazierae2:item/fluix_steel_ingot", "lazierae2:fluix_steel_ingot"]
+        ],
+        "add": [
+            "storage_block",
+            "nugget",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#59407a",
+            "mysticalagriculture#59407a"
+        ],
+        "remove": {}
+    }
+}

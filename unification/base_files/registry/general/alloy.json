@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "arcane_gold": {
@@ -792,14 +792,17 @@
         ],
         "remove": {
             "storage_block": [
+                ["extendedcrafting:redstone_ingot_block", "extendedcrafting:block/redstone_ingot_block"],
                 ["silents_mechanisms:redstone_alloy_block", "silents_mechanisms:block/redstone_alloy_block"]
             ],
             "ingot": [
+                ["extendedcrafting:redstone_ingot", "extendedcrafting:item/redstone_ingot"],
                 ["projectred-core:red_ingot", "projectred-core:item/red_ingot"],
                 ["morered:red_alloy_ingot", "morered:item/red_alloy_ingot"],
                 ["silents_mechanisms:redstone_alloy_ingot", "silents_mechanisms:item/redstone_alloy_ingot"]
             ],
             "nugget": [
+                ["extendedcrafting:redstone_nugget", "extendedcrafting:item/redstone_nugget"],
                 ["silents_mechanisms:redstone_alloy_nugget", "silents_mechanisms:item/redstone_alloy_nugget"]
             ],
             "dust": [

@@ -14,9 +14,45 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
+    "amethyst": {
+        "block": {
+            "harvest_level": 2,
+            "destroy_time": 5,
+            "explosion_resistance": 10
+        },
+        "mysticalagriculture": {
+            "flower_type": "rock",
+            "essence_type": "gem",
+            "tier": 4
+        },
+        "burn_time": 0,
+
+        "add": [
+            "storage_block",
+            "gem",
+            "dust",
+            "plate",
+            "rod",
+            "gear",
+            "wire",
+            "coin",
+            "molten#8d00c6",
+            "mysticalagriculture#8d00c6"
+        ],
+        "remove": {
+            "storage_block": [
+                ["aoa3:amethyst_block", "aoa3:block/amethyst_block"],
+                ["iceandfire:amythest_block", "iceandfire:block/amythest_block"]
+            ],
+            "gem": [
+                ["aoa3:amethyst", "aoa3:item/amethyst"],
+                ["iceandfire:amythest_gem", "iceandfire:item/amythest_gem"]
+            ]
+        }
+    },
     "bitumen": {
         "block": {
             "harvest_level": -1,
@@ -176,11 +212,15 @@
         "remove": {
             "storage_block": [
                 ["aoa3:sapphire_block", "aoa3:block/sapphire_block"],
+                ["iceandfire:sapphire_block", "iceandfire:block/sapphire_block"],
+                ["mysticalworld:sapphire_block", "mysticalworld:block/sapphire_block"],
                 ["projectred-exploration:sapphire_block", "projectred-exploration:block/sapphire_block"],
                 ["thermal:sapphire_block", "thermal:block/sapphire_block"]
             ],
             "gem": [
                 ["aoa3:sapphire", "aoa3:item/sapphire"],
+                ["iceandfire:sapphire_gem", "iceandfire:item/sapphire_gem"],
+                ["mysticalworld:sapphire", "mysticalworld:item/sapphire"],
                 ["projectred-core:sapphire", "projectred-core:item/sapphire"],
                 ["thermal:sapphire", "thermal:item/sapphire"]
             ],

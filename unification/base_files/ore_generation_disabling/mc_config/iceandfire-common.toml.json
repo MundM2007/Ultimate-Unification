@@ -1,0 +1,8 @@
+{
+    "replace": [
+        ["Generation.Ores", "\"Generate Amethyst Ore\"", false, true],
+        ["Generation.Ores", "\"Generate Copper Ore\"", false, true],
+        ["Generation.Ores", "\"Generate Sapphire Ore\"", false, true],
+        ["Generation.Ores", "\"Generate Silver Ore\"", false, true]
+    ]
+}

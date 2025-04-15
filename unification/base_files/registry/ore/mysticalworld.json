@@ -1,0 +1,49 @@
+{
+    "quicksilver": {       
+        "type": "ingot",
+        "drops": "rftoolsbase:dimensionalshard",
+        "counts": 1,
+        "variants": [
+            {
+                "values": ["#overworld-all", "#atum-all"],
+                "gen": {
+                    "feature_name_extra": "overworld",
+                    "height": [0, 16],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "blacklist": true,
+                        "values": ["#nether", "#end"]
+                    }
+                }
+            },
+            {
+                "values": ["#nether-all"],
+                "gen": {
+                    "feature_name_extra": "nether",
+                    "height": [30, 50],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#nether"]
+                    }
+                }
+            },
+            {
+                "values": ["#end-all"],
+                "gen": {
+                    "feature_name_extra": "end",
+                    "height": [15, 35],
+                    "size": 4,
+                    "count": 3,
+                    "biomes": {
+                        "values": ["#end"]
+                    }
+                }
+            }
+        ],
+        "remove": [
+            "mysticalworld:quicksilver_ore"
+        ]
+    }
+}

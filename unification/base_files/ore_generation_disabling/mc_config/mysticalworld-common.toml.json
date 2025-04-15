@@ -1,0 +1,12 @@
+{
+    "replace": [
+        ["oregen.Quartz_oregen", "oreChances", 0, 13],
+        ["oregen.Copper_oregen", "oreChances", 0, 8],
+        ["oregen.Silver_oregen", "oreChances", 0, 4],
+        ["oregen.Lead_oregen", "oreChances", 0, 4],
+        ["oregen.Quicksilver_oregen", "oreChances", 0, 3],
+        ["oregen.Sapphire_oregen", "oreChances", 0, 4],
+        ["oregen.Tin_oregen", "oreChances", 0, 8],
+        ["oregen.Quartz_oregen", "oreChances", 0, 13]
+    ]
+}

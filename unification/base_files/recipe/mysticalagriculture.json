@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "imperium": {
@@ -187,7 +187,11 @@
             "thermal.storage_convert_metal"
         ]
     },
-    "prosperity_gem": {},
+    "prosperity_gem": {
+        "variants": {
+            "gem_multiplier": 2
+        }
+    },
     "prudentium": {
         "variants": {
             "energy_from_coin": 112000,
@@ -290,7 +294,11 @@
             
         ]
     },
-    "soulium_gem": {},
+    "soulium_gem": {
+        "variants": {
+            "gem_multiplier": 1.5
+        }
+    },
     "supremium": {
         "variants": {
             "energy_from_coin": 1120000,

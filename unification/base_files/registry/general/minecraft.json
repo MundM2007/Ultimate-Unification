@@ -14,7 +14,7 @@
         "// ╚██████╔╝██║ ╚████║██║██║     ██║╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║\n",
         "//  ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n",
         "// --------------------------------------------------------------------------------\n",
-        "// Ultimate Unification Copyright (C) 2023-2024 under MIT License by:              \n",
+        "// Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              \n",
         "//         - MundM2007          (https://github.com/MundM2007)                     \n\n"
     ],
     "coal": {
@@ -111,6 +111,7 @@
             ]
         }
     },
+    "glowstone": {},
     "gold": {
         "block": {
             "harvest_level": 2,
@@ -152,6 +153,7 @@
                 ["bloodmagic:goldsand", "bloodmagic:item/goldsand"],
                 ["immersiveengineering:dust_gold", "immersiveengineering:item/metal_dust_gold"],
                 ["mekanism:dust_gold", "mekanism:item/dust_gold"],
+                ["mysticalworld:gold_dust", "mysticalworld:item/gold_dust"],
                 ["occultism:gold_dust", "occultism:item/gold_dust"],
                 ["thermal:gold_dust", "thermal:item/gold_dust"],
                 ["pedestals:dustgold", "pedestals:items/dustgold"],
@@ -221,6 +223,7 @@
                 ["bloodmagic:ironsand", "bloodmagic:item/ironsand"],
                 ["immersiveengineering:dust_iron", "immersiveengineering:item/metal_dust_iron"],
                 ["mekanism:dust_iron", "mekanism:item/dust_iron"],
+                ["mysticalworld:iron_dust", "mysticalworld:item/iron_dust"],
                 ["occultism:iron_dust", "occultism:item/iron_dust"],
                 ["thermal:iron_dust", "thermal:item/iron_dust"],
                 ["pedestals:dustiron", "pedestals:items/dustiron"],
@@ -235,6 +238,7 @@
                 ["silents_mechanisms:compressed_iron_ingot", "silents_mechanisms:item/compressed_iron_ingot"]
             ],
             "rod": [
+                ["buildersaddition:iron_rod", "buildersaddition:item/iron_rod"],
                 ["createaddition:iron_rod", "createaddition:item/iron_rod"],
                 ["immersiveengineering:stick_iron", "immersiveengineering:item/material_stick_iron"],
                 ["silentgear:iron_rod", "silentgear:item/iron_rod"],

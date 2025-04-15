@@ -7,6 +7,7 @@
             {
                 "values": ["#moon-all"],
                 "gen": {
+                    "feature_name_extra": "moon",
                     "height": [1, 64],
                     "size": 8,
                     "count": 4,
@@ -15,6 +16,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "boss_tools:moon_desh_ore"
         ]
     },
     "ice_shard": {     
@@ -25,6 +29,7 @@
             {
                 "values": ["#mars-all"],
                 "gen": {
+                    "feature_name_extra": "mars",
                     "height": [1, 64],
                     "size": 12,
                     "count": 10,
@@ -33,6 +38,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "boss_tools:mars_ice_shard_ore"
         ]
     },
     "silicon": {     
@@ -43,6 +51,7 @@
             {
                 "values": ["#mars-all"],
                 "gen": {
+                    "feature_name_extra": "mars",
                     "height": [1, 64],
                     "size": 10,
                     "count": 8,
@@ -51,6 +60,9 @@
                     }
                 }
             }
+        ],
+        "remove": [
+            "boss_tools:mars_silicon_ore"
         ]
     }
 }
