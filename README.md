@@ -102,13 +102,9 @@ Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ult
 
 ## Planned Features
 
-- more mod support
-- strata world gen
 - strata ores properties and rotations
 - support for ore generating methods, e.g. occultism miner, environmental tech
-- data structure verification for base_files
 - oil unification
-- new mystical agriculture crops
 - changing the lang files for existing items and blocks
 - change block properties of blocks
 - all nuclearcraft stuff (depends weither the mod will ever be continued on 1.16)
