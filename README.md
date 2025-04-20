@@ -2,11 +2,11 @@
 
 Ultimate Unification is a Python and KubeJS script utility designed for unification in Minecraft. It streamlines various aspects of the game:
 
-Item Unification: Combines similar items, ores, and fluids while hiding unused ones.
-Recipe Unification: Removes duplicates and ensures consistent material usage for input and output.
-Loot Table Unification: Ensures all loot sources drop the correct, unified materials.
-Expanded Content: Easily add new items and recipes for a more cohesive experience across all materials.
-1.18 Backport: Brings ore processing mechanics, strata-based ore generation, and drop logic from 1.18 to 1.16.5.
+* Item Unification: Combines similar items, ores, and fluids while hiding unused ones.
+* Recipe Unification: Removes duplicates and ensures consistent material usage for input and output.
+* Loot Table Unification: Ensures all loot sources drop the correct, unified materials.
+* Expanded Content: Easily add new items and recipes for a more cohesive experience across all materials.
+* 1.18 Backport: Brings ore processing mechanics, strata-based ore generation, and drop logic from 1.18 to 1.16.5.
 
 Ultimate Unification is highly configurable to your needs. Available for 1.16.5.
 
