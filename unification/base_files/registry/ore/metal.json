@@ -1,12 +1,14 @@
 {
-    "aluminum": {     
+    "aluminum": {
         "type": "metal",
-        "drops": "unification:aluminum_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:aluminum_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [45, 75],
                     "size": 5,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [70, 100],
                     "size": 5,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [60, 90],
                     "size": 5,
@@ -48,14 +50,16 @@
             "tmechworks:aluminum_ore"
         ]
     },
-    "bismuth": {     
+    "bismuth": {
         "type": "metal",
-        "drops": "unification:bismuth_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:bismuth_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [15, 50],
                     "size": 7,
@@ -67,8 +71,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [50, 80],
                     "size": 7,
@@ -79,8 +83,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [40, 70],
                     "size": 7,
@@ -95,14 +99,16 @@
             "silents_mechanisms:bismuth_ore"
         ]
     },
-    "boron": {     
+    "boron": {
         "type": "metal",
-        "drops": "unification:boron_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:boron_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 5,
@@ -114,8 +120,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 5,
@@ -126,8 +132,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [14, 40],
                     "size": 5,
@@ -142,14 +148,17 @@
             "nuclearcraft:boron_ore"
         ]
     },
-    "cobalt": {     
+    "cobalt": {
         "type": "metal",
-        "drops": "unification:cobalt_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:cobalt_raw_material",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 80],
                     "size": 7,
@@ -164,14 +173,16 @@
             "tconstruct:cobalt_ore"
         ]
     },
-    "copper": {     
+    "copper": {
         "type": "metal",
-        "drops": "unification:copper_raw_material",
-        "counts": [2, 3, 4, 5],
+        "loot": {
+            "drops": "unification:copper_raw_material",
+            "counts": [2, 3, 4, 5]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [45, 90],
                     "size": 9,
@@ -183,8 +194,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [70, 100],
                     "size": 8,
@@ -195,8 +206,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [60, 90],
                     "size": 8,
@@ -223,14 +234,16 @@
             "tmechworks:copper_ore"
         ]
     },
-    "iridium": {       
+    "iridium": {
         "type": "metal",
-        "drops": "unification:iridium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:iridium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 5,
@@ -242,8 +255,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 4,
@@ -254,8 +267,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 4,
@@ -267,14 +280,16 @@
             }
         ]
     },
-    "lead": {       
+    "lead": {
         "type": "metal",
-        "drops": "unification:lead_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:lead_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [30, 45],
                     "size": 4,
@@ -286,8 +301,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [55, 70],
                     "size": 4,
@@ -298,8 +313,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [45, 60],
                     "size": 4,
@@ -320,14 +335,16 @@
             "thermal:load_ore"
         ]
     },
-    "lithium": {       
+    "lithium": {
         "type": "metal",
-        "drops": "unification:lithium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:lithium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 5,
@@ -339,8 +356,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 5,
@@ -351,8 +368,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 40],
                     "size": 5,
@@ -367,14 +384,16 @@
             "nuclearcraft:ore_lithium"
         ]
     },
-    "magnesium": {       
+    "magnesium": {
         "type": "metal",
-        "drops": "unification:magnesium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:magnesium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 25],
                     "size": 5,
@@ -386,8 +405,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [25, 45],
                     "size": 4,
@@ -398,8 +417,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 35],
                     "size": 4,
@@ -414,14 +433,16 @@
             "nuclearcraft:ore_magnesium"
         ]
     },
-    "nickel": {       
+    "nickel": {
         "type": "metal",
-        "drops": "unification:nickel_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:nickel_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 40],
                     "size": 5,
@@ -433,8 +454,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [50, 70],
                     "size": 5,
@@ -445,8 +466,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [40, 60],
                     "size": 5,
@@ -463,14 +484,16 @@
             "thermal:nickel_ore"
         ]
     },
-    "osmium": {       
+    "osmium": {
         "type": "metal",
-        "drops": "unification:osmium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:osmium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 50],
                     "size": 10,
@@ -482,8 +505,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [50, 80],
                     "size": 9,
@@ -494,8 +517,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [40, 70],
                     "size": 9,
@@ -510,14 +533,16 @@
             "mekanism:osmium_ore"
         ]
     },
-    "platinum": {       
+    "platinum": {
         "type": "metal",
-        "drops": "unification:platinum_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:platinum_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 4,
@@ -529,8 +554,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
@@ -541,8 +566,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 6,
@@ -557,14 +582,16 @@
             "silents_mechanisms:platinum_ore"
         ]
     },
-    "silver": {       
+    "silver": {
         "type": "metal",
-        "drops": "unification:silver_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:silver_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [25, 40],
                     "size": 4,
@@ -576,8 +603,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 60],
                     "size": 4,
@@ -588,8 +615,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [35, 50],
                     "size": 4,
@@ -610,14 +637,16 @@
             "thermal:silver_ore"
         ]
     },
-    "thorium": {       
+    "thorium": {
         "type": "metal",
-        "drops": "unification:thorium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:thorium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 4,
@@ -629,8 +658,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [25, 50],
                     "size": 3,
@@ -641,8 +670,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 40],
                     "size": 3,
@@ -657,14 +686,16 @@
             "nuclearcraft:ore_thorium"
         ]
     },
-    "tin": {       
+    "tin": {
         "type": "metal",
-        "drops": "unification:tin_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:tin_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [40, 65],
                     "size": 6,
@@ -676,8 +707,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [70, 95],
                     "size": 5,
@@ -688,8 +719,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [60, 85],
                     "size": 5,
@@ -709,14 +740,16 @@
             "silents_mechanisms:tin_ore"
         ]
     },
-    "titanium": {       
+    "titanium": {
         "type": "metal",
-        "drops": "unification:titanium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:titanium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 30],
                     "size": 3,
@@ -728,8 +761,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [50, 60],
                     "size": 4,
@@ -740,8 +773,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [40, 50],
                     "size": 4,
@@ -753,14 +786,16 @@
             }
         ]
     },
-    "tungsten": {       
+    "tungsten": {
         "type": "metal",
-        "drops": "unification:tungsten_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:tungsten_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [10, 30],
                     "size": 5,
@@ -772,8 +807,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [40, 60],
                     "size": 5,
@@ -784,8 +819,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [30, 50],
                     "size": 5,
@@ -797,14 +832,16 @@
             }
         ]
     },
-    "uranium": {       
+    "uranium": {
         "type": "metal",
-        "drops": "unification:uranium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:uranium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 5,
@@ -816,8 +853,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 5,
@@ -828,8 +865,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 5,
@@ -848,14 +885,16 @@
             "silents_mechanisms:uranium_ore"
         ]
     },
-    "zinc": {       
+    "zinc": {
         "type": "metal",
-        "drops": "unification:zinc_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:zinc_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [30, 50],
                     "size": 5,
@@ -867,8 +906,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [60, 80],
                     "size": 4,
@@ -879,8 +918,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [50, 70],
                     "size": 4,

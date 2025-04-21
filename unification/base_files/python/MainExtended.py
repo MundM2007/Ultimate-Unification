@@ -207,6 +207,7 @@ class MainExtended:
 
         # used for correct manualunification recipe handling
         recipes.append(f"manual.{id_file}.{id_name}")
+
         mns["recipe_kept"] = f"manual.{id_file}.{id_name}" in self.UT.get_main_config("unification.recipe_types_to_keep", "list")
         
         for recipe in recipes:
@@ -244,12 +245,17 @@ class MainExtended:
                 else:
                     arguments = arguments.replace(f"'{material}'", f"'{mns[material]}'")
 
+            # if the recipe contains a hyphen, then use brackets to access the property
+            parts = recipe.split(".")
+            result_recipe = []
+            for part in parts:
+                if "-" in part: result_recipe.append(f"['{part}']")
+                else: result_recipe.append(f".{part}")
+            
             # adds to the file and keeps track of how many recipe presets will be run
             self.FM.add_kjs(os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", id_file, f"{id_name}.js"), 
-                    f"    global.rp.{recipe}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
+                    f"    global.rp{"".join(result_recipe)}(event, " + arguments + ")\n", license_notice, 50, "onEvent('recipes', event => {\n")
             self.recipe_added += 1
-
-        
 
     
     # config overwriting

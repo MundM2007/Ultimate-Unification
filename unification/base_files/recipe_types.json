@@ -160,7 +160,7 @@
     "manual.gem.bitumen": ["gem", "recipe_kept"],
     "manual.gem.fluorite": ["gem", "recipe_kept"],
     "manual.gem.potassium_nitrate": ["gem", "recipe_kept"],
-    "manual.gem.sulfur": ["gem", "recipe_kept"],
+    "manual.gem.sulfur": ["gem", "dust", "recipe_kept"],
 
     "manual.mekanism.refined_obsidian": ["ingot", "nugget", "recipe_kept"],
 

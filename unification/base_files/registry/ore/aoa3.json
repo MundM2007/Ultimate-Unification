@@ -1,12 +1,14 @@
 {
-    "amethyst": {     
+    "amethyst": {
         "type": "gem",
-        "drops": "aoa3:amethyst",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:amethyst",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [13, 31],
                     "size": 7,
@@ -23,14 +25,16 @@
             "iceandfire:amethyst_ore"
         ]
     },
-    "baronyte": {     
+    "baronyte": {
         "type": "metal",
-        "drops": "unification:baronyte_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:baronyte_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#barathos-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "barathos",
                     "height": [24, 36],
                     "size": 8,
@@ -47,12 +51,14 @@
     },
     "blazium": {
         "type": "metal",
-        "drops": "unification:blazium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:blazium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#barathos-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "barathos",
                     "height": [0, 20],
                     "size": 8,
@@ -69,12 +75,14 @@
     },
     "bloodstone": {
         "type": "gem",
-        "drops": "aoa3:bloodstone",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:bloodstone",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#abyss-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "abyss",
                     "height": [1, 64],
                     "size": 12,
@@ -91,12 +99,14 @@
     },
     "blue_gemstone": {
         "type": "gem",
-        "drops": "aoa3:blue_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:blue_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,
@@ -113,12 +123,14 @@
     },
     "charged_runium": {
         "type": "gem",
-        "drops": "aoa3:charged_runium_chunk",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:charged_runium_chunk",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#deeplands-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "deeplands",
                     "height": [70, 115],
                     "size": 18,
@@ -135,12 +147,14 @@
     },
     "crystallite": {
         "type": "gem",
-        "drops": "aoa3:crystallite",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:crystallite",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#haven-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "haven",
                     "height": [70, 115],
                     "size": 18,
@@ -157,12 +171,14 @@
     },
     "elecanium": {
         "type": "metal",
-        "drops": "unification:elecanium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:elecanium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#runandor-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "runandor",
                     "height": [1, 35],
                     "size": 5,
@@ -179,12 +195,15 @@
     },
     "emberstone": {
         "type": "metal",
-        "drops": "unification:emberstone_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:emberstone_raw_material",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [3, 32],
                     "size": 5,
@@ -201,12 +220,14 @@
     },
     "gemenyte": {
         "type": "gem",
-        "drops": "aoa3:gemenyte",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:gemenyte",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#creeponia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "creeponia",
                     "height": [21, 37],
                     "size": 6,
@@ -223,12 +244,14 @@
     },
     "ghastly": {
         "type": "metal",
-        "drops": "unification:ghastly_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:ghastly_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#greckon-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "greckon",
                     "height": [30, 60],
                     "size": 7,
@@ -245,12 +268,14 @@
     },
     "ghoulish": {
         "type": "metal",
-        "drops": "unification:ghoulish_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:ghoulish_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#greckon-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "greckon",
                     "height": [1, 30],
                     "size": 7,
@@ -267,12 +292,14 @@
     },
     "green_gemstone": {
         "type": "gem",
-        "drops": "aoa3:green_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:green_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,
@@ -289,12 +316,14 @@
     },
     "jade": {
         "type": "gem",
-        "drops": "aoa3:jade",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:jade",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [15, 40],
                     "size": 4,
@@ -307,7 +336,7 @@
             },
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld_water",
                     "height": [15, 40],
                     "size": 4,
@@ -324,12 +353,14 @@
     },
     "jewelyte": {
         "type": "gem",
-        "drops": "aoa3:jewelyte",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:jewelyte",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#creeponia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "creeponia",
                     "height": [21, 37],
                     "size": 6,
@@ -346,12 +377,14 @@
     },
     "limonite": {
         "type": "metal",
-        "drops": "unification:limonite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:limonite_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [25, 250],
                     "size": 7,
@@ -369,12 +402,14 @@
     },
     "lyon": {
         "type": "metal",
-        "drops": "unification:lyon_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:lyon_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#iromine-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "iromine",
                     "height": [1, 64],
                     "size": 7,
@@ -391,12 +426,14 @@
     },
     "mystite": {
         "type": "metal",
-        "drops": "unification:mystite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:mystite_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#mysterium-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mysterium",
                     "height": [1, 100],
                     "size": 9,
@@ -413,12 +450,14 @@
     },
     "ornamyte": {
         "type": "gem",
-        "drops": "aoa3:ornamyte",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:ornamyte",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#creeponia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "creeponia",
                     "height": [2, 15],
                     "size": 6,
@@ -435,12 +474,14 @@
     },
     "purple_gemstone": {
         "type": "gem",
-        "drops": "aoa3:purple_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:purple_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,
@@ -457,12 +498,14 @@
     },
     "red_gemstone": {
         "type": "gem",
-        "drops": "aoa3:red_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:red_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,
@@ -479,12 +522,14 @@
     },
     "rosite": {
         "type": "metal",
-        "drops": "unification:rosite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:rosite_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [15, 50],
                     "size": 10,
@@ -502,12 +547,14 @@
     },
     "runium": {
         "type": "gem",
-        "drops": "aoa3:runium_chunk",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:runium_chunk",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [5, 40],
                     "size": 5,
@@ -525,12 +572,14 @@
     },
     "shyrestone": {
         "type": "metal",
-        "drops": "unification:shyrestone_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:shyrestone_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#shyrelands-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "shyrelands",
                     "height": [65, 105],
                     "size": 5,
@@ -547,12 +596,14 @@
     },
     "shyregem": {
         "type": "gem",
-        "drops": "aoa3:shyregem",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:shyregem",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#shyrelands-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "shyrelands",
                     "height": [65, 105],
                     "size": 5,
@@ -569,12 +620,19 @@
     },
     "skeletal": {
         "type": "gem",
-        "drops": ["aoa3:skullbone_fragment", "aoa3:chestbone_fragment", "aoa3:footbone_fragment", "aoa3:legbone_fragment"],
-        "counts": 1,
+        "loot": {
+            "drops": [
+                "aoa3:skullbone_fragment",
+                "aoa3:chestbone_fragment",
+                "aoa3:footbone_fragment",
+                "aoa3:legbone_fragment"
+            ],
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#precasia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "precasia",
                     "height": [65, 105],
                     "size": 5,
@@ -594,12 +652,14 @@
     },
     "varsium": {
         "type": "metal",
-        "drops": "unification:varsium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:varsium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#barathos-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "barathos",
                     "height": [24, 64],
                     "size": 8,
@@ -616,12 +676,14 @@
     },
     "white_gemstone": {
         "type": "gem",
-        "drops": "aoa3:white_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:white_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,
@@ -638,12 +700,14 @@
     },
     "yellow_gemstone": {
         "type": "gem",
-        "drops": "aoa3:yellow_gemstones",
-        "counts": 1,
+        "loot": {
+            "drops": "aoa3:yellow_gemstones",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#crystevia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "crystevia",
                     "height": [1, 115],
                     "size": 13,

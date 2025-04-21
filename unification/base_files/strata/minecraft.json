@@ -1,11 +1,13 @@
 {
     "andesite": {
         "block": "minecraft:andesite",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "basalt": {
         "block": "minecraft:basalt",
-        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
+        "dimension": "minecraft:the_nether",
+        "tags": ["all-all", "all-minecraft", "the_nether-all", "the_nether-minecraft"],
         "sound_type": "basalt",
         "properties": ["AXIS"],
         "destroy_time": 1.25,
@@ -13,31 +15,37 @@
     },
     "blackstone": {
         "block": "minecraft:blackstone",
-        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"]
+        "dimension": "minecraft:the_nether",
+        "tags": ["all-all", "all-minecraft", "the_nether-all", "the_nether-minecraft"]
     },
     "diorite": {
         "block": "minecraft:diorite",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "end_stone": {
         "block": "minecraft:end_stone",
-        "tags": ["all-all", "all-minecraft", "end-all", "end-minecraft"],
+        "dimension": "minecraft:the_end",
+        "tags": ["all-all", "all-minecraft", "the_end-all", "the_end-minecraft"],
         "destroy_time": 3,
         "explosion_resistance": 9
     },
     "granite": {
         "block": "minecraft:granite",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     },
     "netherrack": {
         "block": "minecraft:netherrack",
-        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
+        "dimension": "minecraft:the_nether",
+        "tags": ["all-all", "all-minecraft", "the_nether-all", "the_nether-minecraft"],
         "sound_type": "netherrack",
         "destroy_time": 0.4,
         "explosion_resistance": 0.4
     },
     "red_sand": {
         "block": "minecraft:red_sand",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld_sand-all", "overworld_sand-minecraft"],
         "falling": true,   
         "material": "sand",
@@ -49,6 +57,7 @@
     },
     "sand": {
         "block": "minecraft:sand",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld_sand-all", "overworld_sand-minecraft"],
         "falling": true,
         "material": "sand",
@@ -60,7 +69,8 @@
     },
     "soul_soil": {
         "block": "minecraft:soul_soil",
-        "tags": ["all-all", "all-minecraft", "nether-all", "nether-minecraft"],
+        "dimension": "minecraft:the_nether",
+        "tags": ["all-all", "all-minecraft", "the_nether-all", "the_nether-minecraft"],
         "material": "sand",
         "sound_type": "soul_soil",
         "harvest_tool": "shovel",
@@ -70,6 +80,7 @@
     },
     "stone": {
         "block": "minecraft:stone",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-minecraft", "overworld-all", "overworld-minecraft"]
     }
 }

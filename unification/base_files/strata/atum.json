@@ -1,6 +1,7 @@
 {
     "alabaster": {
         "block": "atum:alabaster",
+        "dimension": "atum:atum",
         "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
     },
     "limestone": {

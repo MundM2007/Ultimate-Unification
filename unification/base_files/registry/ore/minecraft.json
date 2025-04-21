@@ -1,12 +1,14 @@
 {
-    "coal": {       
+    "coal": {
         "type": "gem",
-        "drops": "minecraft:coal",
-        "counts": 1,
+        "loot": {
+            "drops": "minecraft:coal",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 128],
                     "size": 16,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [40, 120],
                     "size": 12,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [40, 120],
                     "size": 12,
@@ -43,7 +45,7 @@
             },
             {
                 "values": ["#venus-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "venus",
                     "height": [32, 128],
                     "size": 12,
@@ -60,14 +62,16 @@
             "minecraft:coal_ore"
         ]
     },
-    "diamond": {       
+    "diamond": {
         "type": "gem",
-        "drops": "minecraft:diamond",
-        "counts": 1,
+        "loot": {
+            "drops": "minecraft:diamond",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 6,
@@ -79,8 +83,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
@@ -91,8 +95,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 35],
                     "size": 6,
@@ -104,7 +108,7 @@
             },
             {
                 "values": ["#mars-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mars",
                     "height": [1, 16],
                     "size": 6,
@@ -116,7 +120,7 @@
             },
             {
                 "values": ["#venus-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "venus",
                     "height": [1, 16],
                     "size": 6,
@@ -134,14 +138,16 @@
             "minecraft:diamond_ore"
         ]
     },
-    "emerald": {       
+    "emerald": {
         "type": "gem",
-        "drops": "minecraft:emerald",
-        "counts": 1,
+        "loot": {
+            "drops": "minecraft:emerald",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 40],
                     "size": 1,
@@ -154,7 +160,7 @@
             },
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld_mountain",
                     "height": [4, 32],
                     "size": 2,
@@ -165,8 +171,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [20, 50],
                     "size": 2,
@@ -177,8 +183,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [10, 40],
                     "size": 2,
@@ -194,14 +200,16 @@
             "minecraft:emerald_ore"
         ]
     },
-    "gold": {       
+    "gold": {
         "type": "metal",
-        "drops": "unification:gold_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:gold_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 32],
                     "size": 7,
@@ -214,7 +222,7 @@
             },
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld_mesa",
                     "height": [32, 79],
                     "size": 9,
@@ -225,8 +233,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 60],
                     "size": 7,
@@ -237,8 +245,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 7,
@@ -250,19 +258,25 @@
             },
             {
                 "values": ["#alfheim-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "alfheim",
                     "height": [1, 60],
                     "size": 8,
                     "count": 5,
                     "biomes": {
-                        "values": ["mythic_botany:alfheim_plains", "mythic_botany:alfheim_hills", "mythic_botany:dreamwood_forest", "mythic_botany:alfheim_lakes", "mythic_botany:golden_fields"]
+                        "values": [
+                            "mythic_botany:alfheim_plains",
+                            "mythic_botany:alfheim_hills",
+                            "mythic_botany:dreamwood_forest",
+                            "mythic_botany:alfheim_lakes",
+                            "mythic_botany:golden_fields"
+                        ]
                     }
                 }
             },
             {
                 "values": ["#alfheim-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "alfheim_golden_fields",
                     "height": [1, 60],
                     "size": 8,
@@ -274,7 +288,7 @@
             },
             {
                 "values": ["#venus-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "venus",
                     "height": [8, 40],
                     "size": 12,
@@ -295,14 +309,16 @@
             "mythicbotany:gold_ore"
         ]
     },
-    "iron": {       
+    "iron": {
         "type": "metal",
-        "drops": "unification:iron_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:iron_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 64],
                     "size": 11,
@@ -314,8 +330,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 90],
                     "size": 10,
@@ -326,8 +342,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 80],
                     "size": 10,
@@ -339,7 +355,7 @@
             },
             {
                 "values": ["#moon-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "moon",
                     "height": [1, 64],
                     "size": 16,
@@ -351,7 +367,7 @@
             },
             {
                 "values": ["#mars-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mars",
                     "height": [16, 64],
                     "size": 14,
@@ -363,7 +379,7 @@
             },
             {
                 "values": ["#mercury-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mercury",
                     "height": [1, 64],
                     "size": 16,
@@ -382,14 +398,16 @@
             "minecraft:iron_ore"
         ]
     },
-    "lapis": {       
+    "lapis": {
         "type": "gem",
-        "drops": "minecraft:lapis_lazuli",
-        "counts": [4, 5, 6, 7, 8],
+        "loot": {
+            "drops": "minecraft:lapis_lazuli",
+            "counts": [4, 5, 6, 7, 8]
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 7,
@@ -401,8 +419,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 6,
@@ -413,8 +431,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 6,
@@ -430,14 +448,17 @@
             "minecraft:lapis_ore"
         ]
     },
-    "quartz": {       
+    "quartz": {
         "type": "gem",
-        "drops": "minecraft:quartz",
-        "counts": 1,
+        "loot": {
+            "drops": "minecraft:quartz",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
                 "values": ["granite"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [24, 76],
                     "size": 4,
@@ -449,8 +470,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 128],
                     "size": 14,
@@ -468,14 +489,16 @@
             "mysticalworld:granite_quartz_ore"
         ]
     },
-    "redstone": {       
+    "redstone": {
         "type": "gem",
-        "drops": "minecraft:redstone",
-        "counts": [4, 5],
+        "loot": {
+            "drops": "minecraft:redstone",
+            "counts": [4, 5]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 10,
@@ -487,8 +510,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 9,
@@ -499,8 +522,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 9,

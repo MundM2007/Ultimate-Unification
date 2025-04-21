@@ -37,20 +37,23 @@ const essence_blocks = [
     "mysticalagradditions:insanium_block"
 ]
 
+// removes the mod:namespace from the item id
 function removeMod(item) {
     return item.slice(item.indexOf(":") + 1)
 }
+// checks if a tag exists
 function checkTag(tag) {
     let items =Ingredient.of(tag).itemIds
     if(items.length == 0) return false
     if(Array.from(items).filter(item => item != "minecraft:air").length == 0) return;
     return true
 }
+// checks if the given items exists
 function checkItems(items){
     if (!Array.isArray(items)) items = [items]
     let failed = false
     items.forEach(item => {
-        if (Item.of(item).id == "minecraft:air") {failed = true; console.log(item); return}
+        if (Item.of(item).id == "minecraft:air") {failed = true; return}
     })
     return !failed
 }
@@ -221,6 +224,7 @@ onEvent("loaded", e => {
         botania: {
             reprocessor: (event, seed, essence, tier) => {
                 if (checkItems([seed, essence])) {
+                    if(isNaN(tier)) tier = 1
                     global.mrt.botania.mana_infusion(event, Item.of(essence, 2), seed, 100 * tier, essence_blocks[tier - 1], `unification:botania/mana_infusion/component/${removeMod(essence)}/from_seed`)
                 }
             }
@@ -555,6 +559,7 @@ onEvent("loaded", e => {
                 }
             },
             ore: (event, ore, drops, strata, gem_multiplier) => {
+                if(!checkItems(drops) || checkItems(strata)) return
                 if(drops.length == 1){
                     global.mrt.mekanism.combining(event, ore, [Item.of(drops[0], Math.ceil(5 * gem_multiplier)), strata], 
                         `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop`)
@@ -724,7 +729,7 @@ onEvent("loaded", e => {
                 }
             },
             storage_convert_raw: (event, material, raw, block) => {
-                let rawTag = `#forge:raws/${material}`
+                let rawTag = `#forge:raw_materials/${material}`
                 let blockTag = `#forge:raw_blocks/${material}`
                 if (checkTag(rawTag) && checkTag(blockTag) && checkItems([raw, block])) {
                     event.shapeless(`9x ${raw}`, [blockTag]).id(`unification:minecraft/shapeless/storage/${removeMod(raw)}/from_block`)

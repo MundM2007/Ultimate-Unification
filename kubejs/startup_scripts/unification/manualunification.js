@@ -17,6 +17,17 @@
 // Ultimate Unification Copyright (C) 2023-2025 under MIT License by:              
 //         - MundM2007          (https://github.com/MundM2007)
 
+const $EidolonRegistry = java("elucent.eidolon.Registry")
+const $CrucibleRecipe = java("elucent.eidolon.recipe.CrucibleRecipe")
+const $CrucibleRegistry = java("elucent.eidolon.recipe.CrucibleRegistry")
+const $WorktableRecipe = java("elucent.eidolon.recipe.WorktableRecipe")
+const $WorktableRegistry = java("elucent.eidolon.recipe.WorktableRegistry")
+const $ForgeTags = java("net.minecraftforge.common.Tags")
+const $MinecraftItems = java("net.minecraft.item.Items")
+const $ItemTags = java("net.minecraft.tags.ItemTags")
+const $ItemStack = java("net.minecraft.item.ItemStack")
+
+
 function verifyAndAddCreateMixer(event, output, inputsNeeded, inputsOptional, id, removeIds){
     if(!checkItems(output)) return
     inputsNeeded = inputsNeeded.concat()
@@ -117,17 +128,14 @@ function verifyAndAddThermalSmelter(event, output, inputsNeeded, inputsOptional,
 onEvent("loaded", e => {
     global.rp.manual = {
         alloy: {
-            arcane_gold: (event, ingot, _recipe_kept) => {
+            arcane_gold: (_event, ingot, _recipe_kept) => {
                 if(!checkItems(ingot)) return
-                event.custom({
-                    type: "eidolon:crucible",
-                    result: {item: ingot, count: 2},
-                    steps: [
-                        {ingredients: [{tag: "forge:dusts/redstone"}, {tag: "forge:dusts/redstone"}, {item: "eidolon:soul_shard"}]},
-                        {ingredients: [{tag: "forge:ingots/gold"}, {tag: "forge:ingots/gold"}]}
-                    ]
-                }).id("unification:eidolon/crucible/component/arcane_gold")
-                event.remove({id: "eidolon:arcane_gold"})
+                $CrucibleRegistry.register(
+                    new $CrucibleRecipe(Item.of(ingot, 2))
+                        .setRegistryName("eidolon:arcane_gold")
+                        .addStep($ForgeTags.Items.DUSTS_REDSTONE, $ForgeTags.Items.DUSTS_REDSTONE, $EidolonRegistry.SOUL_SHARD.get())
+                        .addStep($ForgeTags.Items.INGOTS_GOLD, $ForgeTags.Items.INGOTS_GOLD)  
+                )
             },
             brass: (event, ingot, recipe_kept) => {
                 let inputsNeeded = ["#forge:ingots/copper", "#forge:ingots/zinc"]
@@ -1092,6 +1100,97 @@ onEvent("loaded", e => {
                 }
             },
             recipes: event => {
+                if(Platform.isLoaded("eidolon")){
+                    $CrucibleRegistry.register(
+                        new $CrucibleRecipe(Item.of("eidolon:crimson_essence", 4))
+                            .setRegistryName("eidolon:crimson_essence_fungus")
+                            .addStep($MinecraftItems.CRIMSON_FUNGUS, $MinecraftItems.NETHER_WART)
+                            .addStirringStep(1, $ItemTags.createOptional("forge:dusts/sulfur"))
+                    )
+                    $CrucibleRegistry.register(
+                        new $CrucibleRecipe(Item.of("eidolon:crimson_essence", 2))
+                            .setRegistryName("eidolon:crimson_essence_roots")
+                            .addStep($MinecraftItems.CRIMSON_ROOTS, $MinecraftItems.NETHER_WART)
+                            .addStirringStep(1, $ItemTags.createOptional("forge:dusts/sulfur"))
+                    )
+                    $CrucibleRegistry.register(
+                        new $CrucibleRecipe(Item.of("eidolon:crimson_essence", 2))
+                            .setRegistryName("eidolon:crimson_essence_vines")
+                            .addStep($MinecraftItems.WEEPING_VINES, $MinecraftItems.NETHER_WART)
+                            .addStirringStep(1, $ItemTags.createOptional("forge:dusts/sulfur"))
+                    )
+                    $CrucibleRegistry.register(
+                        new $CrucibleRecipe(Item.of("eidolon:gunpowder", 4))
+                            .setRegistryName("eidolon:gunpowder")
+                            .addStep($ItemTags.createOptional("forge:dusts/sulfur"), $MinecraftItems.BONE_MEAL)
+                            .addStirringStep(1, $MinecraftItems.CHARCOAL)
+                    )
+
+                    $WorktableRegistry.registerAll(
+                        new $WorktableRecipe(
+                            new $WorktableRecipe.RecipeCore(
+                                $ItemTags.createOptional("forge:ingots/lead"), $ItemTags.createOptional("forge:ingots/lead"), $ItemTags.createOptional("forge:ingots/lead"),
+                                $ItemTags.createOptional("forge:ingots/lead"), $ItemTags.createOptional("forge:ingots/lead"), $ItemTags.createOptional("forge:ingots/lead"),
+                                $MinecraftItems.LEATHER, $EidolonRegistry.SOUL_SHARD.get(), $MinecraftItems.LEATHER
+                            ),
+                            new $WorktableRecipe.RecipeExtras(
+                                $ForgeTags.Items.STORAGE_BLOCKS_LAPIS,
+                                $ItemStack.EMPTY,
+                                $ForgeTags.Items.GEMS_QUARTZ,
+                                $ItemStack.EMPTY
+                            ),
+                            Item.of("eidolon:mind_shielding_plate")
+                        ).setRegistryName("eidolon:mind_shielding_plate")
+                    )
+                    $WorktableRegistry.register(
+                        new $WorktableRecipe(
+                            new $WorktableRecipe.RecipeCore(
+                                $ItemStack.EMPTY, $EidolonRegistry.GOLD_INLAY.get(), $ItemStack.EMPTY,
+                                $ItemTags.createOptional("forge:ingots/arcane_gold"), $EidolonRegistry.BASIC_BELT.get(), $ItemTags.createOptional("forge:ingots/arcane_gold"),
+                                $ItemStack.EMPTY, $ForgeTags.Items.GEMS_DIAMOND, $ItemStack.EMPTY
+                            ),
+                            new $WorktableRecipe.RecipeExtras(
+                                $MinecraftItems.LEATHER,
+                                $EidolonRegistry.SOUL_SHARD.get(),
+                                $EidolonRegistry.ENCHANTED_ASH.get(),
+                                $EidolonRegistry.SOUL_SHARD.get()
+                            ),
+                            Item.of("eidolon:resolute_belt")
+                        ).setRegistryName("eidolon:resolute_belt")
+                    )
+                    $WorktableRegistry.register(
+                        new $WorktableRecipe(
+                            new $WorktableRecipe.RecipeCore(
+                                $ItemStack.EMPTY, $ItemTags.createOptional("forge:ingots/arcane_gold"), $EidolonRegistry.SHADOW_GEM.get(),
+                                $ItemStack.EMPTY, $MinecraftItems.STICK, $ItemTags.createOptional("forge:ingots/arcane_gold"),
+                                $EidolonRegistry.GOLD_INLAY.get(), $ItemStack.EMPTY, $ItemStack.EMPTY
+                            ),
+                            new $WorktableRecipe.RecipeExtras(
+                                $MinecraftItems.LEATHER,
+                                $EidolonRegistry.SOUL_SHARD.get(),
+                                $EidolonRegistry.ENCHANTED_ASH.get(),
+                                $EidolonRegistry.SOUL_SHARD.get()
+                            ),
+                            Item.of("eidolon:soulfire_wand")
+                        ).setRegistryName("eidolon:soulfire_wand")
+                    )
+                    $WorktableRegistry.register(
+                        new $WorktableRecipe(
+                            new $WorktableRecipe.RecipeCore(
+                                $ItemStack.EMPTY, $MinecraftItems.BOOK,$ItemStack.EMPTY,
+                                $ItemTags.createOptional("forge:ingots/arcane_gold"), $MinecraftItems.OBSIDIAN, $ItemTags.createOptional("forge:ingots/arcane_gold"),
+                                $MinecraftItems.OBSIDIAN, $MinecraftItems.OBSIDIAN, $MinecraftItems.OBSIDIAN
+                            ),
+                            new $WorktableRecipe.RecipeExtras(
+                                $ForgeTags.Items.GEMS_DIAMOND,
+                                $EidolonRegistry.GOLD_INLAY.get(),
+                                $ForgeTags.Items.GEMS_DIAMOND,
+                                $EidolonRegistry.GOLD_INLAY.get()
+                            ),
+                            Item.of("eidolon:soul_enchanter")
+                        ).setRegistryName("eidolon:soul_enchanter")
+                    )
+                }
                 if(Platform.isLoaded("naturesaura") && checkTag("#forge:ores/diamond"), checkTag("#forge:ores/redstone")){
                     event.custom({
                         type: "naturesaura:tree_ritual",
@@ -1264,19 +1363,16 @@ onEvent("loaded", e => {
                     if(Platform.isLoaded("exnihilothermal")) event.remove({id: "exnihilothermal:sieve/ens_sulfur"})
                 }
                 if(Platform.isLoaded("immersivepetroleum") && checkItems(dust)){
-                    global.mrt.immersivepetroleum.hydrotreater(event, Fluid.of("immersivepetroleum:diesel", 7), Item.of(dust).withChance(0.02) [["#forge:diesel_sulfur", 7]
+                    global.mrt.immersivepetroleum.hydrotreater(event, Fluid.of("immersivepetroleum:diesel", 7), Item.of(dust).withChance(0.02), [["#forge:diesel_sulfur", 7],
                         ["#minecraft:water", 7]], 1, 512, `unification:immersivepetroleum/hydrotreater/component/${removeMod(dust)}/from_sulfur_recovery`)
                     event.remove({id: "immersivepetroleum:hydrotreater/sulfur_recovery"})
                 }
-                if(Platform.isLoaded("eidolon") && checkTag("#minecraft:coals") && checkItems(gem)){
-                    event.custom({
-                        type: "eidolon:crucible",
-                        result: {item: gem, count: 2},
-                        steps: [
-                            {ingredients: [{tag: "minecraft:coals"}, {item: "eidolon:enchanted_ash"}]},
-                        ]
-                    }).id("unification:eidolon/crucible/component/sulfur")
-                    event.remove({id: "eidolon:sulfur"})
+                if(Platform.isLoaded("eidolon") && checkItems(dust)){
+                    $CrucibleRegistry.register(
+                        new $CrucibleRecipe(Item.of(dust, 2))
+                            .setRegistryName("eidolon:sulfur")
+                            .addStep($MinecraftItems.COAL, $EidolonRegistry.ENCHANTED_ASH.get())
+                    )
                 }
                 if(Platform.isLoaded("nuclearcraft")){
                     //todo: gem_dust_sulfur

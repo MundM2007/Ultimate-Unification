@@ -230,6 +230,7 @@ class Utilities:
         # transfer relevant information and sets defaults
         self.stratas[name] = {
             "block": strataDict["block"],
+            "dimension": strataDict.get("dimension", "default"),
             "properties": strataDict.get("properties", []),
             "falling": strataDict.get("falling", False),
             "material": strataDict.get("material", "rock"),
@@ -272,11 +273,11 @@ class Utilities:
 
     # gets the ore drop function for the drop info, so weither to use fortune or silk touch, and check if the ore should drop itself
     def get_ore_drop_function(self, drop_info): 
-        if drop_info and not self.get_main_config(f"{drop_info["type"]}_ore_drop_itself", False):
-            fortune_part = "with_fortune" if self.get_main_config(f"{drop_info["type"]}_fortune_affected", True) else "without_fortune"
-            silk_touch_part = "with_silk_touch" if self.get_main_config(f"{drop_info["type"]}_silk_touch_affected", True) else "without_silk_touch"
-            return f"global.lp.{fortune_part}.{silk_touch_part}"
-        return "global.rp.without_fortune.without_silk_touch"
+        if self.get_main_config(f"{drop_info["type"]}_ore_drop_itself", False): return ""
+        if not drop_info: return "global.rp.without_fortune.without_silk_touch"
+        fortune_part = "with_fortune" if self.get_main_config(f"{drop_info["type"]}_fortune_affected", True) else "without_fortune"
+        silk_touch_part = "with_silk_touch" if self.get_main_config(f"{drop_info["type"]}_silk_touch_affected", True) else "without_silk_touch"
+        return f"global.lp.{fortune_part}.{silk_touch_part}"
     
 
     # get the blockstate of an strata, for this read the file and replace all the %s with the id_file, id_name and id_name, to get the amount the word model is used

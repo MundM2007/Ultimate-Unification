@@ -1,10 +1,12 @@
 {
     "frozen_stone": {
         "block": "divinerpg:frozen_stone",
+        "dimension": "divinerpg:iceika",
         "tags": ["all-all", "all-divinerpg", "iceika-all", "iceika-divinerpg"]
     },
     "twilight_stone": {
         "block": "divinerpg:twilight_stone",
+        "dimension": "divinerpg:twilight_dimensions",
         "tags": ["all-all", "all-divinerpg", "apalachia-all", "apalachia-divinerpg", "eden-all", "eden-divinerpg", "mortum-all", "mortum-divinerpg", "skythern-all", "skythern-divinerpg", "wildwood-all", "wildwood-divinerpg"]
     }
 }

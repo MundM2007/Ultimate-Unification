@@ -1,12 +1,14 @@
 {
     "dimensional": {       
         "type": "gem",
-        "drops": "rftoolsbase:dimensionalshard",
-        "counts": 1,
+        "loot": {
+            "drops": "rftoolsbase:dimensionalshard",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 20],
                     "size": 2,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 40],
                     "size": 8,

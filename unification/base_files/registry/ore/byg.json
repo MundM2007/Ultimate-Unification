@@ -1,12 +1,15 @@
 {
     "ametrine": {     
         "type": "gem",
-        "drops": "byg:ametrine_gems",
-        "counts": 1,
+        "loot": {
+            "drops": "byg:ametrine_gems",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [10, 100],
                     "size": 4,
@@ -22,15 +25,18 @@
             "byg:budding_ametrine_ore"
         ]
     },
-    "anthracite": {
-        "enabled": false,   
+    "anthracite": { 
         "type": "gem",
-        "drops": "byg:anthracite",
+        "loot": {
+            "drops": "byg:anthracite",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "counts": 1,
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 10,
@@ -47,12 +53,15 @@
     },
     "emeraldite": {     
         "type": "gem",
-        "drops": "byg:emeraldite_shards",
-        "counts": 1,
+        "loot": {
+            "drops": "byg:emeraldite_shards",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 3,
@@ -69,18 +78,27 @@
     },
     "lignite": {     
         "type": "gem",
-        "drops": "byg:lignite",
-        "counts": [4, 5, 6],
+        "loot": {
+            "drops": "byg:lignite",
+            "counts": [4, 5, 6],
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [10, 100],
                     "size": 12,
                     "count": 15,
                     "biomes": {
-                        "values": ["byg:ethereal_clearing", "byg:ethereal_islands", "byg:ethereal_forest", "byg:viscal_isles", "byg:shattered_viscal_isles"]
+                        "values": [
+                            "byg:ethereal_clearing", 
+                            "byg:ethereal_islands", 
+                            "byg:ethereal_forest", 
+                            "byg:viscal_isles", 
+                            "byg:shattered_viscal_isles"
+                        ]
                     }
                 }
             }
@@ -91,12 +109,15 @@
     },
     "pendorite_scraps": {     
         "type": "metal",
-        "drops": "byg:raw_pendorite",
-        "counts": 1,
+        "loot": {
+            "drops": "byg:raw_pendorite",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 4,

@@ -1,12 +1,14 @@
 {
     "desh": {     
         "type": "metal",
-        "drops": "unification:desh_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:desh_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#moon-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "moon",
                     "height": [1, 64],
                     "size": 8,
@@ -23,18 +25,24 @@
     },
     "ice_shard": {     
         "type": "gem",
-        "drops": "boss_tools:ice_shard",
-        "counts": 3,
+        "loot": {
+            "drops": "boss_tools:ice_shard",
+            "counts": 3,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
                 "values": ["#mars-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mars",
                     "height": [1, 64],
                     "size": 12,
                     "count": 10,
                     "biomes": {
-                        "values": ["boss_tools:mars", "boss_tools:mars_ice_spike"]
+                        "values": [
+                            "boss_tools:mars", 
+                            "boss_tools:mars_ice_spike"
+                        ]
                     }
                 }
             }
@@ -45,18 +53,24 @@
     },
     "silicon": {     
         "type": "metal",
-        "drops": "unification:silicon_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:silicon_raw_material",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
                 "values": ["#mars-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mars",
                     "height": [1, 64],
                     "size": 10,
                     "count": 8,
                     "biomes": {
-                        "values": ["boss_tools:mars", "boss_tools:mars_ice_spike"]
+                        "values": [
+                            "boss_tools:mars", 
+                            "boss_tools:mars_ice_spike"
+                        ]
                     }
                 }
             }

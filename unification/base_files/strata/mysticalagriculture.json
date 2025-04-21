@@ -1,6 +1,7 @@
 {
     "soulstone": {
         "block": "mysticalagriculture:soulstone",
+        "dimension": "minecraft:the_nether",
         "tags": ["all-all", "all-mysticalagriculture", "nether_soulstone-all", "nether_soulstone-mysticalagriculture"]
     }
 }

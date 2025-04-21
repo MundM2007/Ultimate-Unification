@@ -1,12 +1,14 @@
 {
     "azure_silver": {       
         "type": "metal",
-        "drops": "silentgear:raw_azure_silver",
-        "counts": 1,
+        "loot": {
+            "drops": "silentgear:raw_azure_silver",
+            "counts": 1
+        },
         "variants": [
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [15, 80],
                     "size": 8,
@@ -23,12 +25,15 @@
     },
     "crimson_iron": {       
         "type": "metal",
-        "drops": "silentgear:raw_crimson_iron",
-        "counts": 1,
+        "loot": {
+            "drops": "silentgear:raw_crimson_iron",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 9,

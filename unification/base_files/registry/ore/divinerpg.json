@@ -1,12 +1,14 @@
 {
-    "apalachia": {     
+    "apalachia": {
         "type": "gem",
-        "drops": "divinerpg:apalachia_fragments",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:apalachia_fragments",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#apalachia-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "apalachia",
                     "height": [1, 128],
                     "size": 10,
@@ -21,14 +23,16 @@
             "divinerpg:apalachia_ore"
         ]
     },
-    "arlemite": {     
+    "arlemite": {
         "type": "metal",
-        "drops": "unification:arlemite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:arlemite_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 4,
@@ -40,8 +44,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 4,
@@ -52,8 +56,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 4,
@@ -68,14 +72,17 @@
             "divinerpg:arlemite_ore"
         ]
     },
-    "bloodgem": {     
+    "bloodgem": {
         "type": "gem",
-        "drops": "divinerpg:bloodgem",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:bloodgem",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 6,
@@ -90,14 +97,16 @@
             "divinerpg:bloodgem_ore"
         ]
     },
-    "eden": {     
+    "eden": {
         "type": "gem",
-        "drops": "divinerpg:eden_fragments",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:eden_fragments",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#eden-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "eden",
                     "height": [1, 128],
                     "size": 10,
@@ -112,14 +121,16 @@
             "divinerpg:eden_ore"
         ]
     },
-    "mortum": {     
+    "mortum": {
         "type": "gem",
-        "drops": "divinerpg:mortum_fragments",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:mortum_fragments",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#mortum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "mortum",
                     "height": [1, 128],
                     "size": 10,
@@ -134,14 +145,16 @@
             "divinerpg:mortum_ore"
         ]
     },
-    "realmite": {     
+    "realmite": {
         "type": "metal",
-        "drops": "unification:realmite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:realmite_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 50],
                     "size": 5,
@@ -153,8 +166,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 80],
                     "size": 5,
@@ -165,8 +178,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 70],
                     "size": 5,
@@ -181,14 +194,16 @@
             "divinerpg:realmite_ore"
         ]
     },
-    "rupee": {     
+    "rupee": {
         "type": "metal",
-        "drops": "unification:rupee_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:rupee_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 4,
@@ -200,8 +215,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 45],
                     "size": 4,
@@ -212,8 +227,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 35],
                     "size": 4,
@@ -228,14 +243,16 @@
             "divinerpg:rupee_ore"
         ]
     },
-    "skythern": {     
+    "skythern": {
         "type": "gem",
-        "drops": "divinerpg:skythern_fragments",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:skythern_fragments",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#skythern-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "skythern",
                     "height": [1, 128],
                     "size": 10,
@@ -250,14 +267,17 @@
             "divinerpg:skythern_ore"
         ]
     },
-    "torridite": {     
+    "torridite": {
         "type": "metal",
-        "drops": "unification:torridite_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:torridite_raw_material",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 6,
@@ -272,14 +292,16 @@
             "divinerpg:torridite_ore"
         ]
     },
-    "wildwood": {     
+    "wildwood": {
         "type": "gem",
-        "drops": "divinerpg:wildwood_fragments",
-        "counts": 1,
+        "loot": {
+            "drops": "divinerpg:wildwood_fragments",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#wildwood-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "wildwood",
                     "height": [1, 128],
                     "size": 10,

@@ -1,6 +1,7 @@
 {
     "marble_raw": {
         "block": "astralsorcery:marble_raw",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-astralsorcery", "overworld-all", "overworld-astralsorcery"]
     }
 }

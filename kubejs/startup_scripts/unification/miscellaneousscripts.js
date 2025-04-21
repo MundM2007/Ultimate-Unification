@@ -66,7 +66,6 @@ onEvent('loaded', event => {
             if(burn_time > 0){
                 if(["ingot", "gem", "dust"].includes(material_type)) item.burnTime(burn_time)
                 else if (material_type == "nugget") item.burnTime(Math.floor(burn_time / 10))
-                else if (material_type == "storage_block") item.burnTime(burn_time * 10)
             }
         },
         add_coin: (event, id_name, model_path) => {

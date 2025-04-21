@@ -1,12 +1,14 @@
 {
     "draconium": {     
         "type": "metal",
-        "drops": "unification:draconium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:draconium_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 8,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 35],
                     "size": 8,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 70],
                     "size": 10,

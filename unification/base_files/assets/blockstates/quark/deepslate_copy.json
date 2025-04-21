@@ -1,0 +1,52 @@
+{
+    "variants": {
+        "axis=x": [
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_270",
+                "x": 90,
+                "y": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_270_mirrored",
+                "x": 90,
+                "y": 90
+            }
+        ],
+        "axis=y": [
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_0_y_0"
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_0_y_0_mirrored"
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_0_y_180",
+                "y": 180
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_0_y_180_mirrored",
+                "y": 180
+            }
+        ],
+        "axis=z": [
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_0",
+                "x": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_0_mirrored",
+                "x": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_180",
+                "y": 180,
+                "x": 90
+            },
+            {
+                "model": "unification:%s/%s/block/%s_ore/quark/deepslate/x_270_y_180",
+                "y": 180,
+                "x": 90
+            }
+        ]
+    }
+}

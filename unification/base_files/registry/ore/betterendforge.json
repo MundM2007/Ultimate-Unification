@@ -1,12 +1,15 @@
 {
     "amber": {     
         "type": "gem",
-        "drops": "betterendforge:raw_amber",
-        "counts": 1,
+        "loot": {
+            "drops": "betterendforge:raw_amber",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 7,
@@ -23,12 +26,15 @@
     },
     "thallasium": {     
         "type": "metal",
-        "drops": "unification:thallasium_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:thallasium_raw_material",
+            "counts": 1,
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [30, 70],
                     "size": 10,

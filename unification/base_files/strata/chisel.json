@@ -1,14 +1,17 @@
 {
     "basalt": {
         "block": "chisel:basalt/raw",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     },
     "limestone": {
         "block": "chisel:limestone/raw",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     },
     "marble": {
         "block": "chisel:marble/raw",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-chisel", "overworld-all", "overworld-chisel"]
     }
 }

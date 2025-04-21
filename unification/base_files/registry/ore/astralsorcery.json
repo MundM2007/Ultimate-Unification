@@ -1,12 +1,14 @@
 {
     "aquamarine": {     
         "type": "gem",
-        "drops": "astralsorcery:aquamarine",
-        "counts": [1, 2, 3],
+        "loot": {
+            "drops": "astralsorcery:aquamarine",
+            "counts": [1, 2, 3]
+        },
         "variants": [
             {
                 "values": ["#overworld_sand-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld_water",
                     "height": [30, 62],
                     "size": 4,
@@ -23,12 +25,14 @@
     },
     "rock_crystal": {     
         "type": "gem",
-        "drops": "astralsorcery:rock_crystal",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "astralsorcery:rock_crystal",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [15, 45],
                     "size": 4,
@@ -46,11 +50,13 @@
     },
     "starmetal": {
         "type": "metal",
-        "drops": "unification:starmetal_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:starmetal_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
-                "values": ["#overworld-all", "#nether-all", "#end-all", "#atum-all", "#moon-all", "#mars-all", "#mercury-all"]
+                "values": ["#overworld-all", "#the_nether-all", "#the_end-all", "#atum-all", "#moon-all", "#mars-all", "#mercury-all"]
             }
         ],
         "remove": [

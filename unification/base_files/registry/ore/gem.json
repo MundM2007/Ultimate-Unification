@@ -1,12 +1,14 @@
 {
-    "bitumen": {     
+    "bitumen": {
         "type": "gem",
-        "drops": "unification:bitumen_gem",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:bitumen_gem",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld_sand-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [40, 160],
                     "size": 20,
@@ -23,14 +25,16 @@
             "thermal:oil_sand"
         ]
     },
-    "fluorite": {     
+    "fluorite": {
         "type": "gem",
-        "drops": "unification:fluorite_gem",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "unification:fluorite_gem",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 30],
                     "size": 8,
@@ -42,8 +46,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [60, 90],
                     "size": 8,
@@ -54,8 +58,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [50, 80],
                     "size": 8,
@@ -70,14 +74,16 @@
             "mekanism:fluorite_ore"
         ]
     },
-    "potassium_nitrate": {     
+    "potassium_nitrate": {
         "type": "gem",
-        "drops": "unification:potassium_nitrate_gem",
-        "counts": [3, 4, 5],
+        "loot": {
+            "drops": "unification:potassium_nitrate_gem",
+            "counts": [3, 4, 5]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [15, 35],
                     "size": 5,
@@ -89,8 +95,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 65],
                     "size": 5,
@@ -101,8 +107,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [35, 55],
                     "size": 5,
@@ -117,14 +123,16 @@
             "thermal:niter_ore"
         ]
     },
-    "ruby": {     
+    "ruby": {
         "type": "gem",
-        "drops": "unification:ruby_gem",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "unification:ruby_gem",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 25],
                     "size": 5,
@@ -136,8 +144,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 50],
                     "size": 4,
@@ -148,8 +156,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [35, 40],
                     "size": 4,
@@ -165,14 +173,16 @@
             "thermal:ruby_ore"
         ]
     },
-    "sapphire": {     
+    "sapphire": {
         "type": "gem",
-        "drops": "unification:sapphire_gem",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "unification:sapphire_gem",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 25],
                     "size": 5,
@@ -184,8 +194,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 50],
                     "size": 4,
@@ -196,8 +206,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [35, 40],
                     "size": 4,
@@ -215,14 +225,16 @@
             "thermal:sapphire_ore"
         ]
     },
-    "sulfur": {     
+    "sulfur": {
         "type": "gem",
-        "drops": "unification:sulfur_gem",
-        "counts": [3, 4, 5],
+        "loot": {
+            "drops": "unification:sulfur_gem",
+            "counts": [3, 4, 5]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 16],
                     "size": 7,
@@ -234,8 +246,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 50],
                     "size": 6,
@@ -246,8 +258,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 40],
                     "size": 6,

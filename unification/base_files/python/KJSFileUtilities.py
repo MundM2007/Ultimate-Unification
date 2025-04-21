@@ -280,7 +280,7 @@ class KJSFileUtilities:
 
                 # get properties, harvest level, destroy time and explosion resistance of the given strata / ore (use the max value)
                 strata_object = self.UT.get_strata(strata)
-                properties = str([f"BlockProperties.{property_}" for property_ in strata_object["properties"]])#.replace("'", "")
+                properties = str([f"BlockProperties.{property_}" for property_ in strata_object["properties"]])
                 harvest_level = max(self.harvest_level, strata_object["harvest_level"]) if strata_object["harvest_level"] != -1 else -1
                 destroy_time = max(self.destroy_time, strata_object["destroy_time"])
                 explosion_resistance = max(self.explosion_resistance, strata_object["explosion_resistance"])
@@ -294,8 +294,12 @@ class KJSFileUtilities:
                 # generate the script file to register the ore drop and tags
                 ore_id = f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"
                 if drop_function:
-                    self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']})\n"), 
+                    strata_mult = self.UT.get_main_config(f"ores.dimension_multiplier.{strata_object["dimension"]}", 
+                                                          self.UT.get_main_config(f"ores.dimension_multiplier.default", 1))
+                    if not drop_info['strata_mult_enabled']: strata_mult = 1
+                    self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']}, {strata_mult})\n"), 
                                     license_notice, 90, "onEvent('lootjs', event => {\n")
+                
                 self.add_tag_ore(id_file, id_name, id_file_strata, id_name_strata, license_notice)
                 
                 # add the mekanism ore drop + strata -> to ore recipe
@@ -346,9 +350,15 @@ class KJSFileUtilities:
         min_height = 0
         max_height = 64
         if generation.get("height") is not None:
-            min_height = generation["height"][0]
-            max_height = generation["height"][1]
-        
+            if isinstance(generation["height"], list):
+                if len(generation["height"]) == 1:
+                    max_height = generation["height"][0]
+                elif len(generation["height"]) == 2:
+                    min_height = generation["height"][0]
+                    max_height = generation["height"][1]
+            else:
+                max_height = generation["height"]
+             
         size = 8
         if generation.get("size") is not None:
             size = generation["size"]

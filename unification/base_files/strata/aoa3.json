@@ -1,82 +1,102 @@
 {
     "abyssal_stone": {
         "block": "aoa3:abyssal_stone",
+        "dimension": "aoa3:abyss",
         "tags": ["all-all", "all-aoa3", "abyss-all", "abyss-aoa3"]
     },
     "aromatic_stone": {
         "block": "aoa3:aromatic_stone",
+        "dimension": "aoa3:gardencia",
         "tags": ["all-all", "all-aoa3", "gardencia-all", "gardencia-aoa3"]
     },
     "baron_stone": {
         "block": "aoa3:baron_stone",
+        "dimension": "aoa3:barathos",
         "tags": ["all-all", "all-aoa3", "barathos-all", "barathos-aoa3"]
     },
     "bright_rock": {
         "block": "aoa3:bright_rock",
+        "dimension": "aoa3:shyrelands",
         "tags": ["all-all", "all-aoa3", "shyrelands-all", "shyrelands-aoa3"]
     },
     "coral_rock": {
         "block": "aoa3:coral_rock",
+        "dimension": "aoa3:lborean",
         "tags": ["all-all", "all-aoa3", "lborean-all", "lborean-aoa3"]
     },
     "creep_stone": {
         "block": "aoa3:creep_stone",
+        "dimension": "aoa3:creeponia",
         "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"]
     },
     "crystallised_rock": {
         "block": "aoa3:crystallised_rock",
+        "dimension": "aoa3:crystevia",
         "tags": ["all-all", "all-aoa3", "crystevia-all", "crystevia-aoa3"]
     },
     "darkened_rock": {
         "block": "aoa3:darkened_rock",
+        "dimension": "aoa3:dustopia",
         "tags": ["all-all", "all-aoa3", "dustopia-all", "dustopia-aoa3"]
     },
     "dense_stone": {
         "block": "aoa3:dense_stone",
+        "dimension": "aoa3:deeplands",
         "tags": ["all-all", "all-aoa3", "deeplands-all", "deeplands-aoa3"]
     },
     "fungal_rock": {
         "block": "aoa3:fungal_rock",
+        "dimension": "aoa3:mysterium",
         "tags": ["all-all", "all-aoa3", "mysterium-all", "mysterium-aoa3"]
     },
     "greckon_stone": {
         "block": "aoa3:greckon_stone",
+        "dimension": "aoa3:greckon",
         "tags": ["all-all", "all-aoa3", "greckon-all", "greckon-aoa3"]
     },
     "hellstone": {
         "block": "aoa3:hellstone",
+        "dimension": "aoa3:barathos",
         "tags": ["all-all", "all-aoa3", "barathos-all", "barathos-aoa3"]
     },
     "irostone": {
         "block": "aoa3:irostone",
+        "dimension": "aoa3:iromine",
         "tags": ["all-all", "all-aoa3", "iromine-all", "iromine-aoa3"]
     },
     "lelyetian_stone": {
         "block": "aoa3:lelyetian_stone",
+        "dimension": "aoa3:lelyetia",
         "tags": ["all-all", "all-aoa3", "lelyetia-all", "lelyetia-aoa3"]
     },
     "polluted_stone": {
         "block": "aoa3:polluted_stone",
+        "dimension": "aoa3:vox_ponds",
         "tags": ["all-all", "all-aoa3", "vox_ponds-all", "vox_ponds-aoa3"]
     },
     "precasian_lower_rock": {
         "block": "aoa3:precasian_lower_rock",
+        "dimension": "aoa3:precasia",
         "tags": ["all-all", "all-aoa3", "precasia-all", "precasia-aoa3"]
     },
     "pressed_creep_stone": {
         "block": "aoa3:pressed_creep_stone",
+        "dimension": "aoa3:creeponia",
         "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"]
     },
     "primed_stone": {
         "block": "aoa3:primed_stone",
+        "dimension": "aoa3:creeponia",
         "tags": ["all-all", "all-aoa3", "creeponia-all", "creeponia-aoa3"]
     },
     "runic_stone": {
         "block": "aoa3:runic_stone",
+        "dimension": "aoa3:runandor",
         "tags": ["all-all", "all-aoa3", "runandor-all", "runandor-aoa3"]
     },
     "weightless_stone": {
         "block": "aoa3:weightless_stone",
+        "dimension": "aoa3:haven",
         "tags": ["all-all", "all-aoa3", "haven-all", "haven-aoa3"]
     }
 }

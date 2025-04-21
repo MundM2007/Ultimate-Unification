@@ -1,12 +1,14 @@
 {
     "inferium": {       
         "type": "gem",
-        "drops": "mysticalagriculture:inferium_essence",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "mysticalagriculture:inferium_essence",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 128],
                     "size": 8,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 90],
                     "size": 8,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 80],
                     "size": 8,
@@ -50,12 +52,14 @@
     },
     "prosperity": {       
         "type": "gem",
-        "drops": "mysticalagriculture:inferium_essence",
-        "counts": [1, 2, 3],
+        "loot": {
+            "drops": "mysticalagriculture:prosperity_shard",
+            "counts": [1, 2, 3]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 50],
                     "size": 8,
@@ -67,8 +71,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 60],
                     "size": 8,
@@ -79,8 +83,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 50],
                     "size": 8,
@@ -99,12 +103,15 @@
     },
     "soulium": {       
         "type": "gem",
-        "drops": "mysticalagriculture:soulium_dust",
-        "counts": [1, 2],
+        "loot": {
+            "drops": "mysticalagriculture:soulium_essence",
+            "counts": [1, 2, 3],
+            "strata_multiplier_enabled": false
+        },
         "variants": [
             {
                 "values": ["#nether_soulstone-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [1, 128],
                     "size": 10,

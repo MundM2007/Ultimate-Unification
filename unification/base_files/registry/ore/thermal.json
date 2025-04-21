@@ -1,12 +1,14 @@
 {
     "apatite": {       
         "type": "gem",
-        "drops": "thermal:apatite",
-        "counts": [6, 7, 8],
+        "loot": {
+            "drops": "thermal:apatite",
+            "counts": [6, 7, 8]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [64, 128],
                     "size": 22,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [100, 128],
                     "size": 22,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [80, 110],
                     "size": 22,
@@ -48,12 +50,14 @@
     },
     "cinnabar": {       
         "type": "gem",
-        "drops": "thermal:cinnabar",
-        "counts": [1, 2],
+        "loot": {
+            "drops": "thermal:cinnabar",
+            "counts": [1, 2]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [5, 30],
                     "size": 5,
@@ -65,8 +69,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 55],
                     "size": 5,
@@ -77,8 +81,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [25, 50],
                     "size": 5,

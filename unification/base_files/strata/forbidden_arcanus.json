@@ -1,6 +1,7 @@
 {
     "darkstone": {
         "block": "forbidden_arcanus:darkstone",
+        "dimension": "minecraft:overworld",
         "tags": ["all-all", "all-forbidden_arcanus", "overworld-all", "overworld-forbidden_arcanus"]
     }
 }

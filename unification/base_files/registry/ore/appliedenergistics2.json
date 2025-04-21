@@ -1,12 +1,14 @@
 {
     "certus_quartz": {     
         "type": "gem",
-        "drops": "appliedenergistics2:certus_quartz_crystal",
-        "counts": 1,
+        "loot": {
+            "drops": "appliedenergistics2:certus_quartz_crystal",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 64],
                     "size": 7,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 95],
                     "size": 7,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 85],
                     "size": 7,
@@ -48,12 +50,14 @@
     },
     "charged_certus_quartz": {     
         "type": "gem",
-        "drops": "appliedenergistics2:charged_certus_quartz_crystal",
-        "counts": 1,
+        "loot": {
+            "drops": "appliedenergistics2:charged_certus_quartz_crystal",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 32],
                     "size": 3,
@@ -65,8 +69,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 65],
                     "size": 3,
@@ -77,8 +81,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 55],
                     "size": 3,

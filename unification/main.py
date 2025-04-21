@@ -79,6 +79,15 @@ for recipe_type in recipe_types:
 ME.set_recipe_types(recipe_types)
 
 
+# transfers some general settings to a kubejs file for use in recipepresets / manualunification
+FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "generalsettings.js"), 
+           (f"let raw_lower_output = {UT.get_main_config('ores.raw_lower_output', True)}\n" +
+           f"let raw_ore_processing = {UT.get_main_config('ores.raw_ore_processing', True)}\n" +
+           f"let disable_ftbic_recipe_gen = {not UT.get_main_config('unification.replace_recipes', False)}\n" +
+           f"let new_seed_recipes = {UT.get_main_config('unification.new_seed_recipes', True)}\n" + 
+           f"let replace_recipes = {UT.get_main_config('unification.replace_recipes', False)}\n")
+           .replace("False", "false").replace("True", "true"), "", 250, "", "")
+
 # initializes stratas
 for strata in gen_scripts_info.get("strata", []):
     id_file = strata[:strata.find(".")]
@@ -270,7 +279,6 @@ for element in gen_scripts_info.get("main", []):
             gem_multiplier = mns["gem_multiplier"]
 
 
-    
     #
     # ORES
     #
@@ -301,16 +309,17 @@ for element in gen_scripts_info.get("main", []):
                     stratas = UT.get_stratas_in_values(ore_object["values"])
                     all_stratas.update(stratas)
                     # adds the ore generation for the ore for each variant
-                    if ore_object.get("gen") is not None:
-                        KFUT.add_ore_gen(id_file, id_name, stratas, ore_object["gen"], license_notice)
+                    if ore_object.get("generation") is not None:
+                        KFUT.add_ore_gen(id_file, id_name, stratas, ore_object["generation"], license_notice)
 
             # gets the drop info for the ore (drops, type, counts)
             drop_info = None
-            if base_file_ore[id_name].get("drops") is not None:
-                drop_info = {"drops": base_file_ore[id_name]["drops"] if isinstance(base_file_ore[id_name]["drops"], list) else [base_file_ore[id_name]["drops"]]}
-                drop_info["type"] = base_file_ore[id_name].get("type", "metal")
-                counts = base_file_ore[id_name].get("counts", [1])
+            if base_file_ore[id_name].get("loot") is not None and base_file_ore[id_name]["loot"].get("drops") is not None:
+                drop_info = {"drops": base_file_ore[id_name]["loot"]["drops"] if isinstance(base_file_ore[id_name]["loot"]["drops"], list) else [base_file_ore[id_name]["loot"]["drops"]]}
+                drop_info["type"] = base_file_ore[id_name]["loot"].get("type", "metal")
+                counts = base_file_ore[id_name]["loot"].get("counts", [1])
                 drop_info["counts"] = counts if isinstance(counts, list) else [counts]
+                drop_info["strata_mult_enabled"] = bool(base_file_ore[id_name]["loot"].get("strata_multiplier_enabled", True))
             
             KFUT.add_ore(id_file, id_name, all_stratas, drop_info, gem_multiplier, license_notice)
 
@@ -323,15 +332,6 @@ for element in gen_scripts_info.get("main", []):
                             KFUT.remove_tag_ore(ore, id_file, license_notice)
                         elif UT.get_main_config('ores.disable_other_ores', None) is False:
                             KFUT.add_tag_ore_other(ore, id_file, id_name, license_notice)
-
-# transfers some general settings to a kubejs file for use in recipepresets / manualunification
-FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification", "generalsettings.js"), 
-           (f"let raw_lower_output = {UT.get_main_config('ores.raw_lower_output', True)}\n" +
-           f"let raw_ore_processing = {UT.get_main_config('ores.raw_ore_processing', True)}\n" +
-           f"let disable_ftbic_recipe_gen = {not UT.get_main_config('unification.replace_recipes', False)}\n" +
-           f"let new_seed_recipes = {UT.get_main_config('unification.new_seed_recipes', True)}\n" + 
-           f"let replace_recipes = {UT.get_main_config('unification.replace_recipes', False)}\n")
-           .replace("False", "false").replace("True", "true"), "", 250, "", "")
 
 
 # disables other ores generation
@@ -346,7 +346,7 @@ if UT.get_main_config('ores.disable_other_ores', None) is not None:
         for ore in config_features_to_disable["locations"][mod]:
             file_path = os.path.join(UT.pack_path, "kubejs", "data", mod, "worldgen", "configured_feature", f"{ore}.json")
             if UT.get_main_config('ores.disable_other_ores', None) is True:
-                FM.add_text(file_path, "{}")
+                FM.add_text(file_path, '{"type": "minecraft:no_op", "config": {}}')
             elif os.path.isfile(file_path):
                 IOM.remove(file_path)
 

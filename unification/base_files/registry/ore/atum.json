@@ -1,18 +1,25 @@
 {
-    "bone": {     
+    "bone": {
         "type": "gem",
-        "drops": "atum:dusty_bone",
-        "counts": 3,
+        "loot": {
+            "drops": "atum:dusty_bone",
+            "counts": 3
+        },
         "variants": [
             {
                 "values": ["#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "atum",
                     "height": [1, 128],
                     "size": 9,
                     "count": 12,
                     "biomes": {
-                        "values": ["atum:oasis", "atum:savanna", "atum:savanna_plateau", "atum:strange_sands"]
+                        "values": [
+                            "atum:oasis",
+                            "atum:savanna",
+                            "atum:savanna_plateau",
+                            "atum:strange_sands"
+                        ]
                     }
                 }
             }
@@ -21,20 +28,27 @@
             "atum:bone_ore"
         ]
     },
-    "nebu": {     
+    "nebu": {
         "type": "metal",
-        "drops": "unification:nebu_raw_material",
-        "counts": 1,
+        "loot": {
+            "drops": "unification:nebu_raw_material",
+            "counts": 1
+        },
         "variants": [
             {
                 "values": ["#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "atum",
                     "height": [1, 64],
                     "size": 8,
                     "count": 1,
                     "biomes": {
-                        "values": ["atum:oasis", "atum:savanna", "atum:savanna_plateau", "atum:strange_sands"]
+                        "values": [
+                            "atum:oasis",
+                            "atum:savanna",
+                            "atum:savanna_plateau",
+                            "atum:strange_sands"
+                        ]
                     }
                 }
             }
@@ -43,20 +57,34 @@
             "atum:nebu_ore"
         ]
     },
-    "relic": {     
+    "relic": {
         "type": "gem",
-        "drops": ["atum:coin_dirty", "atum:relic_dirty_bracelet", "atum:relic_dirty_brooch", "atum:relic_dirty_idol", "atum:relic_dirty_necklace", "atum:relic_dirty_ring"],
-        "counts": 3,
+        "loot": {
+            "drops": [
+                "atum:coin_dirty",
+                "atum:relic_dirty_bracelet",
+                "atum:relic_dirty_brooch",
+                "atum:relic_dirty_idol",
+                "atum:relic_dirty_necklace",
+                "atum:relic_dirty_ring"
+            ],
+            "counts": 3
+        },
         "variants": [
             {
                 "values": ["#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "atum",
                     "height": [1, 64],
                     "size": 5,
                     "count": 4,
                     "biomes": {
-                        "values": ["atum:oasis", "atum:savanna", "atum:savanna_plateau", "atum:strange_sands"]
+                        "values": [
+                            "atum:oasis",
+                            "atum:savanna",
+                            "atum:savanna_plateau",
+                            "atum:strange_sands"
+                        ]
                     }
                 }
             }

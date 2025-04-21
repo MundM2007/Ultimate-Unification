@@ -1,6 +1,6 @@
 {
     "unification": {
-        "c1": "Here you can set the mode the unification will work in; options: 'full': uses the exact json base files without changes; 'replace': replaces instead of adds, when remove is available; 'no_add': doesn't add new items only replaces and removes originals, uses the same logic as 'replace'",
+        "c1": "Here you can set the mode the unification will work in; options: 'full': uses the exact json base files without changes; 'replace': replaces instead of adds, when remove is available; 'no_add': doesn't add new items only replaces and removes originals, uses the same logic as 'replace'. Default: full",
         "mode": "full",
 
         "c2": "This is a list of mod priorities used if mode is replace or no_add; uses alphabatical order if not provided",
@@ -9,69 +9,78 @@
         "c3": "Here you can overwrite the mod chosen for a specific material if mode is replace or no_add; syntax: {material: mod}",
         "mod_overwrites": {},
 
-        "c4": "Setting this to true, will disable the creation of new recipes and will only add recipes that have been removed (so it acts as a replacement of recipes)",
+        "c4": "Setting this to true, will disable the creation of new recipes and will only add recipes that have been removed (so it acts as a replacement of recipes). Default: false",
         "replace_recipes": false,
 
         "c5": "If replace_recipes is set to true, this will still add recipes for the specified recipe types",
         "recipe_types_to_keep": [],
 
-        "c6": "Here recipe types can be configured to never add new recipes, in some cases these recipes can still exist if being replaced; is prioritized over recipe_types_to_keep",
+        "c6": "Here recipe types can be configured to never add new recipes, in some cases these recipes can still exist if being replaced using .replaceInput/.replaceOutput; is prioritized over recipe_types_to_keep",
         "recipe_types_to_remove": [],
 
-        "c7": "Here you can enable weither overhouled recipes for mystical agriculture seed growing in botany pots should be added, or the orginal values should be kept",
+        "c7": "Here you can enable weither overhouled recipes for mystical agriculture seed growing in botany pots should be added, or the orginal values should be kept. Default: true",
         "new_seed_recipes": true,
 
-        "c8": "Here you can enable weither failed item replacements should be added as a new item instead, also affects the modes 'replace' and 'no_add' by allowing materials_types from remove to also be replaced again",
+        "c8": "Here you can enable weither failed item replacements should be added as a new item instead, also affects the modes 'replace' and 'no_add' by allowing materials_types from remove to also be replaced again. Default: true",
         "add_failed_replacements": true,
 
-        "c9": "Here you can enable weither the material_type check for mod specific materials should be disabled (e.g. for crushed_ore from create)",
+        "c9": "Here you can enable weither the material_type check for mod specific materials should be disabled (e.g. for crushed_ore from create). Default: false",
         "disable_material_type_check": false,
 
-        "c10": "Here you can enable or disable weither gems textures should be replaced",
+        "c10": "Here you can enable or disable weither gems textures should be replaced. Default: true",
         "replace_gem_textures": true,
 
-        "c11": "Here you can enable or disable weither textures should be replaced at all; overwrites replace_gem_textures if false",
+        "c11": "Here you can enable or disable weither textures should be replaced at all; overwrites replace_gem_textures if false. Default: true",
         "replace_textures": true,
 
-        "c12": "Which resource loader to use for textures; options: 'lmr' - faster, but may not work; 'kubejs' - a lot slower, but definetly always works",
+        "c12": "Which resource loader to use for textures; options: 'lmr'; 'kubejs'. Default: lmr",
         "resource_loader": "lmr"
     },
 
     "ores": {
-        "c1": "Weither ores should be added at all",
+        "c1": "Weither ores should be added at all. Default: true",
         "active": true,
 
-        "c2": "Weither the generation of other ores should be disabled. Set to null to not interfere with configs and false to load config defaults for generating ores",
-        "disable_other_ores": null,
+        "c2": "Weither other ores including generation, tags and JEI should be disabled. Set to null to not interfere with configs/defaults and false to load config defaults for generating ores and adding tags to all ores. Default: true",
+        "disable_other_ores": true,
 
-        "c3": "Weither the metal ores should drop itself",
+        "c3": "Weither the metal ores should drop itself (true) or raw ores (false). Default: false",
         "metal_ore_drop_itself": false,
 
-        "c4": "Weither the metal should be affected by fortune, disabled when dropping the ore itself",
+        "c4": "Weither the metal should be affected by fortune, disabled when dropping the ore itself. Default: true",
         "metal_fortune_affected": true,
 
-        "c5": "Weither the metal should be affected by silk touch, disabled when dropping the ore itself",
+        "c5": "Weither the metal should be affected by silk touch, disabled when dropping the ore itself. Default: true",
         "metal_silktouch_affected": true,
 
-        "c6": "Weither the gem ores should drop itself",
+        "c6": "Enables raw ores ore processing, this also affects weither pieces are turned into raw ores (true) or the ore iteself (false). Default: true",
+        "raw_ore_processing": true,
+
+        "c7": "Gives raw ores ore processing a lower output than when processing the actual ore, this mimicks ore processing for mods in newer game versions. Default: true",
+        "raw_lower_output": true, 
+
+        "c8": "Weither the gem ores should drop itself (true) or gems (false). Default: false",
         "gem_ore_drop_itself": false,
 
-        "c7": "Weither the gem should be affected by fortune, disabled when dropping the ore itself",
+        "c9": "Weither the gem should be affected by fortune, disabled when dropping the ore itself. Default: true",
         "gem_fortune_affected": true,
 
-        "c8": "Weither the gem should be affected by silk touch, disabled when dropping the ore itself",
+        "c10": "Weither the gem should be affected by silk touch, disabled when dropping the ore itself. Default: true",
         "gem_silktouch_affected": true,
 
-        "c9": "Here you can modify the ore drop dimension multiplier for the ores",
-        "dim_multiplier": {
-            "atum": 1.5,
-            "end": 2,
-            "mars": 1.5,
-            "mercury": 1.5,
-            "moon": 1.5,
-            "nether": 1.5,
-            "overworld": 1,
-            "venus": 1.5
+        "c11": "Here you can modify the ore drop dimension multiplier for the ores",
+        "dimension_multiplier": {
+            "default": 1,
+
+            "atum:atum": 1.5,
+            "boss_tools:mars": 1.5,
+            "boss_tools:mercury": 1.5,
+            "boss_tools:moon": 1.5,
+            "boss_tools:venus": 1.5,
+            "minecraft:the_end": 2,
+            "minecraft:the_nether": 1.5,
+            "minecraft:overworld": 1,
+            "mythicbotany:alfheim": 1.5
         }
     },
     "advanced": {

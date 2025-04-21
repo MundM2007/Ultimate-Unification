@@ -1,12 +1,14 @@
 {
     "electrotine": {       
         "type": "gem",
-        "drops": "projectred-core:electrotine_dust",
-        "counts": [4, 5],
+        "loot": {
+            "drops": "projectred-core:electrotine_dust",
+            "counts": [4, 5]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [1, 64],
                     "size": 8,
@@ -18,8 +20,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [30, 70],
                     "size": 7,
@@ -30,8 +32,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [20, 60],
                     "size": 7,
@@ -48,12 +50,14 @@
     },
     "peridot": {       
         "type": "gem",
-        "drops": "projectred-core:peridot",
-        "counts": [2, 3, 4],
+        "loot": {
+            "drops": "projectred-core:peridot",
+            "counts": [2, 3, 4]
+        },
         "variants": [
             {
                 "values": ["#overworld-all", "#atum-all"],
-                "gen": {
+                "generation": {
                     "feature_name_extra": "overworld",
                     "height": [20, 25],
                     "size": 5,
@@ -65,8 +69,8 @@
                 }
             },
             {
-                "values": ["#nether-all"],
-                "gen": {
+                "values": ["#the_nether-all"],
+                "generation": {
                     "feature_name_extra": "nether",
                     "height": [45, 50],
                     "size": 4,
@@ -77,8 +81,8 @@
                 }
             },
             {
-                "values": ["#end-all"],
-                "gen": {
+                "values": ["#the_end-all"],
+                "generation": {
                     "feature_name_extra": "end",
                     "height": [35, 40],
                     "size": 4,
