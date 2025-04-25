@@ -1,7 +1,7 @@
 name: Unification Error
 description: |
-  Report a unification error. A unification error accures when there's an incorrect recipe or item replacement for example. But no error is caused in game. 
-  Before reporting, please use the search function to make sure an issue hasn't been reported already. This avoids duplicates.
+  Report a unification error: there's an incorrect recipe or item replacement for example, but no error is caused in game. 
+  Before reporting, make sure an issue hasn't been reported already.
 labels: ["unification error"]
 body:
   - type: markdown

@@ -1,7 +1,7 @@
 name: Game Issue
 description: |
   Report a game issue. A game issue accures when some error is shown in chat after joining a world or the game refuses to launch. 
-  Before reporting, please use the search function to make sure an issue hasn't been reported already. This avoids duplicates.
+  Before reporting, make sure an issue hasn't been reported already.
 labels: ["game issue"]
 body:
   - type: markdown

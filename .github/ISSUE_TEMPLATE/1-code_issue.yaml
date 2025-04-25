@@ -1,7 +1,7 @@
 name: Code Issue
 description: |
   Report a code issue. A code issue accures when some error is shown in the console and the execution is halted before finishing. 
-  Before reporting, please use the search function to make sure an issue hasn't been reported already. This avoids duplicates.
+  Before reporting, make sure an issue hasn't been reported already.
 labels: ["code issue"]
 body:
   - type: markdown
