@@ -1,0 +1,36 @@
+name: Unification Error
+description: |
+  Report a unification error. A unification error accures when there's an incorrect recipe or item replacement for example. But no error is caused in game. 
+  Before reporting, please use the search function to make sure an issue hasn't been reported already. This avoids duplicates.
+labels: ["unification error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this unification error report!
+  - type: textarea
+    id: describe-issue
+    attributes:
+      label: Describe the issue
+      description: A clear and concise description of what the error is. If applicable add screenshots to help explain the problem.
+      placeholder: Whats wrong?
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of Minecraft are you using?
+      options:
+        - 1.16.5
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: related-files
+    attributes:
+      label: Related Files
+      description: Please upload related files, these include the 3 files listed in the config directory.
+      placeholder: paste files or link to them here
+    validations:
+      required: true
