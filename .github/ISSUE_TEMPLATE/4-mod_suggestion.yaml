@@ -1,0 +1,18 @@
+name: Mod Suggestion
+description: |
+  Make a mod suggestion. List mods that you think should be supported by the programm. 
+  Before reporting, please use the search function to make sure an issue hasn't been reported already. This avoids duplicates.
+labels: ["mod suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this mod suggestion!
+  - type: textarea
+    id: list
+    attributes:
+      label: List of Mods/Materials
+      description: List of mods or materials that you wish were supported in this project. They should be somewhat known and have a decent number of downloads. I remain the right to decline any recommendations.
+      placeholder: List the mods/materials
+    validations:
+      required: true
