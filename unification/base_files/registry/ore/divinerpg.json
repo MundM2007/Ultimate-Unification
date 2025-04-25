@@ -3,7 +3,8 @@
         "type": "gem",
         "loot": {
             "drops": "divinerpg:apalachia_fragments",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {
@@ -101,7 +102,8 @@
         "type": "gem",
         "loot": {
             "drops": "divinerpg:eden_fragments",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {
@@ -125,7 +127,8 @@
         "type": "gem",
         "loot": {
             "drops": "divinerpg:mortum_fragments",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {
@@ -247,7 +250,8 @@
         "type": "gem",
         "loot": {
             "drops": "divinerpg:skythern_fragments",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {
@@ -296,7 +300,8 @@
         "type": "gem",
         "loot": {
             "drops": "divinerpg:wildwood_fragments",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {

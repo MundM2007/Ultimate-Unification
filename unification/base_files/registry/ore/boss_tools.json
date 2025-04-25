@@ -3,7 +3,8 @@
         "type": "metal",
         "loot": {
             "drops": "unification:desh_raw_material",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {

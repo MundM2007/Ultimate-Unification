@@ -3,7 +3,8 @@
         "type": "metal",
         "loot": {
             "drops": "silentgear:raw_azure_silver",
-            "counts": 1
+            "counts": 1,
+            "strata_multiplier_enabled": false
         },
         "variants": [
             {

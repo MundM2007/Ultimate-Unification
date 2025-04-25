@@ -6,10 +6,12 @@
     },
     "limestone": {
         "block": "atum:limestone",
+        "dimension": "atum:atum",
         "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
     },
     "porphyry": {
         "block": "atum:porphyry",
+        "dimension": "atum:atum",
         "tags": ["all-all", "all-atum", "atum-all", "atum-atum"]
     }
 }
