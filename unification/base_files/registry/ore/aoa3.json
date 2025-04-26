@@ -30,7 +30,7 @@
         "loot": {
             "drops": "unification:baronyte_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -55,7 +55,7 @@
         "loot": {
             "drops": "unification:blazium_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -80,7 +80,7 @@
         "loot": {
             "drops": "aoa3:bloodstone",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -105,7 +105,7 @@
         "loot": {
             "drops": "aoa3:blue_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -130,7 +130,7 @@
         "loot": {
             "drops": "aoa3:charged_runium_chunk",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -155,7 +155,7 @@
         "loot": {
             "drops": "aoa3:crystallite",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -180,7 +180,7 @@
         "loot": {
             "drops": "unification:elecanium_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -205,7 +205,7 @@
         "loot": {
             "drops": "unification:emberstone_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -230,7 +230,7 @@
         "loot": {
             "drops": "aoa3:gemenyte",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -255,7 +255,7 @@
         "loot": {
             "drops": "unification:ghastly_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -280,7 +280,7 @@
         "loot": {
             "drops": "unification:ghoulish_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -305,7 +305,7 @@
         "loot": {
             "drops": "aoa3:green_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -367,7 +367,7 @@
         "loot": {
             "drops": "aoa3:jewelyte",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -417,7 +417,7 @@
         "loot": {
             "drops": "unification:lyon_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -442,7 +442,7 @@
         "loot": {
             "drops": "unification:mystite_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -467,7 +467,7 @@
         "loot": {
             "drops": "aoa3:ornamyte",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -492,7 +492,7 @@
         "loot": {
             "drops": "aoa3:purple_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -517,7 +517,7 @@
         "loot": {
             "drops": "aoa3:red_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -592,7 +592,7 @@
         "loot": {
             "drops": "unification:shyrestone_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -617,7 +617,7 @@
         "loot": {
             "drops": "aoa3:shyregem",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -647,7 +647,7 @@
                 "aoa3:legbone_fragment"
             ],
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -675,7 +675,7 @@
         "loot": {
             "drops": "unification:varsium_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -700,7 +700,7 @@
         "loot": {
             "drops": "aoa3:white_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -725,7 +725,7 @@
         "loot": {
             "drops": "aoa3:yellow_gemstones",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

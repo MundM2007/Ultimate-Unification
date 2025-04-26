@@ -4,7 +4,7 @@
         "loot": {
             "drops": "atum:dusty_bone",
             "counts": 3,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -34,7 +34,7 @@
         "loot": {
             "drops": "unification:nebu_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -71,7 +71,7 @@
                 "atum:relic_dirty_ring"
             ],
             "counts": 3,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

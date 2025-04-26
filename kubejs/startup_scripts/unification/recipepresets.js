@@ -558,14 +558,14 @@ onEvent("loaded", e => {
                     }
                 }
             },
-            ore: (event, ore, drops, strata, gem_multiplier) => {
-                if(!checkItems(drops) || checkItems(strata)) return
+            ore: (event, ore, drops, stratum, gem_multiplier) => {
+                if(!checkItems(drops) || checkItems(stratum)) return
                 if(drops.length == 1){
-                    global.mrt.mekanism.combining(event, ore, [Item.of(drops[0], Math.ceil(5 * gem_multiplier)), strata], 
+                    global.mrt.mekanism.combining(event, ore, [Item.of(drops[0], Math.ceil(5 * gem_multiplier)), stratum], 
                         `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop`)
                 }else{
                     for(i = 0; i < drops.length; i++){
-                        global.mrt.mekanism.combining(event, ore, [Item.of(drops[i], Math.ceil(5 * gem_multiplier)), strata], 
+                        global.mrt.mekanism.combining(event, ore, [Item.of(drops[i], Math.ceil(5 * gem_multiplier)), stratum], 
                             `unification:mekanism/combining/component/${removeMod(ore)}/from_ore_drop_${i+1}`)
                     }
                 }

@@ -4,7 +4,7 @@
         "loot": {
             "drops": "unification:desh_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -29,7 +29,7 @@
         "loot": {
             "drops": "boss_tools:ice_shard",
             "counts": 3,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -57,7 +57,7 @@
         "loot": {
             "drops": "unification:silicon_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

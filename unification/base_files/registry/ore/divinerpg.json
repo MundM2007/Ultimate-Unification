@@ -4,7 +4,7 @@
         "loot": {
             "drops": "divinerpg:apalachia_fragments",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -78,7 +78,7 @@
         "loot": {
             "drops": "divinerpg:bloodgem",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -103,7 +103,7 @@
         "loot": {
             "drops": "divinerpg:eden_fragments",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -128,7 +128,7 @@
         "loot": {
             "drops": "divinerpg:mortum_fragments",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -251,7 +251,7 @@
         "loot": {
             "drops": "divinerpg:skythern_fragments",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -276,7 +276,7 @@
         "loot": {
             "drops": "unification:torridite_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -301,7 +301,7 @@
         "loot": {
             "drops": "divinerpg:wildwood_fragments",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

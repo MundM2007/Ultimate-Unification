@@ -59,9 +59,9 @@ class Utilities:
         except json.JSONDecodeError as e:
             self.LM.log("critical_json_error", f"Error decoding JSON content of the file: main.json", e)
         
-        # intializes stratas dictionarizes
-        self.stratas = dict()
-        self.strata_tags = dict()
+        # intializes strata dictionarizes
+        self.strata = dict()
+        self.stratum_tags = dict()
 
 
     # gets the file path from a resource location
@@ -130,9 +130,9 @@ class Utilities:
 
 
     # gets the language key for a specific id name and material type
-    def get_lang_key(self, id_name, material_type, id_file_strata="", id_name_strata=""):
+    def get_lang_key(self, id_name, material_type, id_file_stratum="", id_name_stratum=""):
         if material_type == "ore":
-            return f"block.unification.{id_name}_ore_{id_file_strata}_{id_name_strata}"
+            return f"block.unification.{id_name}_ore_{id_file_stratum}_{id_name_stratum}"
         elif material_type in self.get_main_config("advanced.block_material_types", "list_blocks"):
             return f"block.unification.{id_name}_{material_type}"
         elif material_type == "molten":
@@ -147,38 +147,38 @@ class Utilities:
             return f"item.unification.{id_name}_{material_type}"
 
 
-    def gen_lang_entry(self, id_file, id_name, material_type, id_file_strata="", id_name_strata=""):
-        # if id_file_strata is not empty, it means that the material type is an ore
-        if id_file_strata:
+    def gen_lang_entry(self, id_file, id_name, material_type, id_file_stratum="", id_name_stratum=""):
+        # if id_file_stratum is not empty, it means that the material type is an ore
+        if id_file_stratum:
             # do this for every language file
             for lang in self.langs:
                 # get path of the lang file in the game
                 path_lang_file = self.resource_location_to_path(f"unification:{lang.get('lang')}", "lang")
-                # check if this specific material, and strata (so this specific ore) have a lang entry, if so use that
-                if lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}") is not None:
+                # check if this specific material, and stratum (so this specific ore) have a lang entry, if so use that
+                if lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_stratum}.{id_name_stratum}") is not None:
                     self.FM.add_json(path_lang_file, {
-                        self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
-                        lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_strata}.{id_name_strata}")
+                        self.get_lang_key(id_name, material_type, id_file_stratum, id_name_stratum): 
+                        lang.get(f"{id_file}.{id_name}.{material_type}.{id_file_stratum}.{id_name_stratum}")
                     })
-                # if not check if the material type has a lang entry, and use that instead and replace the %s with the strata name
+                # if not check if the material type has a lang entry, and use that instead and replace the %s with the stratum name
                 elif lang.get(f"{id_file}.{id_name}.{material_type}") is not None:
-                    if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
+                    if lang.get(f"stratum.{id_file_stratum}.{id_name_stratum}") is not None:
                             self.FM.add_json(path_lang_file, {
-                                self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
-                                lang.get(f"{id_file}.{id_name}.{material_type}") % lang.get(f"strata.{id_file_strata}.{id_name_strata}")
+                                self.get_lang_key(id_name, material_type, id_file_stratum, id_name_stratum): 
+                                lang.get(f"{id_file}.{id_name}.{material_type}") % lang.get(f"stratum.{id_file_stratum}.{id_name_stratum}")
                             })
                     else:
-                        self.LM.log("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
-                # if not check if the material type has a lang entry, and use that instead and replace the %s with the material name and strata name
+                        self.LM.log("lang_entry_missing", f"Missing lang entry for stratum.{id_file_stratum}.{id_name_stratum} in the lang file: {lang.get('lang')}")
+                # if not check if the material type has a lang entry, and use that instead and replace the %s with the material name and stratum name
                 elif lang.get(material_type) is not None:
                     if lang.get(f"{id_file}.{id_name}") is not None:
-                        if lang.get(f"strata.{id_file_strata}.{id_name_strata}") is not None:
+                        if lang.get(f"stratum.{id_file_stratum}.{id_name_stratum}") is not None:
                             self.FM.add_json(path_lang_file, {
-                                self.get_lang_key(id_name, material_type, id_file_strata, id_name_strata): 
-                                lang.get(material_type) % (lang.get(f"{id_file}.{id_name}"), lang.get(f"strata.{id_file_strata}.{id_name_strata}"))
+                                self.get_lang_key(id_name, material_type, id_file_stratum, id_name_stratum): 
+                                lang.get(material_type) % (lang.get(f"{id_file}.{id_name}"), lang.get(f"stratum.{id_file_stratum}.{id_name_stratum}"))
                             })
                         else:
-                            self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for strata.{id_file_strata}.{id_name_strata} in the lang file: {lang.get('lang')}")
+                            self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for stratum.{id_file_stratum}.{id_name_stratum} in the lang file: {lang.get('lang')}")
                     else:
                         self.LM.log_same_message_once("lang_entry_missing", f"Missing lang entry for {id_file}.{id_name} in the lang file: {lang.get('lang')}")
                 else:
@@ -215,60 +215,60 @@ class Utilities:
         return config_temp
 
 
-    # registers a strata in the above defined stratas dictionary, and also adds it to the strata_tags dictionary if it has tags
-    def register_strata(self, name, strataDict):
+    # registers a stratum in the above defined strata dictionary, and also adds it to the stratum_tags dictionary if it has tags
+    def register_stratum(self, name, stratumDict):
         if not self.check_mod(name[:name.find(".")]):
             if not self.check_mod_written(name[:name.find(".")]):
                 self.LM.log_same_message_once("mod_not_found", f"Mod {name[:name.find('.')]} not found in the mod list")
             return
 
-        # error if no block is defined in the strata
-        if strataDict.get("block") is None:
-            self.LM.log("strata_error", f"Strata '{name}' is missing a 'block' field. It will be ignored.")
+        # error if no block is defined in the stratum
+        if stratumDict.get("block") is None:
+            self.LM.log("stratum_error", f"Stratum '{name}' is missing a 'block' field. It will be ignored.")
             return
         
         # transfer relevant information and sets defaults
-        self.stratas[name] = {
-            "block": strataDict["block"],
-            "dimension": strataDict.get("dimension", "default"),
-            "properties": strataDict.get("properties", []),
-            "falling": strataDict.get("falling", False),
-            "material": strataDict.get("material", "rock"),
-            "sound_type": strataDict.get("sound_type", "stone"),
-            "harvest_tool": strataDict.get("harvest_tool", "pickaxe"),
-            "harvest_level": strataDict.get("harvest_level", 0),
-            "destroy_time": strataDict.get("destroy_time", 1.5),
-            "explosion_resistance": strataDict.get("explosion_resistance", 6)
+        self.strata[name] = {
+            "block": stratumDict["block"],
+            "dimension": stratumDict.get("dimension", "default"),
+            "properties": stratumDict.get("properties", []),
+            "falling": stratumDict.get("falling", False),
+            "material": stratumDict.get("material", "rock"),
+            "sound_type": stratumDict.get("sound_type", "stone"),
+            "harvest_tool": stratumDict.get("harvest_tool", "pickaxe"),
+            "harvest_level": stratumDict.get("harvest_level", 0),
+            "destroy_time": stratumDict.get("destroy_time", 1.5),
+            "explosion_resistance": stratumDict.get("explosion_resistance", 6)
         }
 
-        # adds the specific tags to the strata_tags dictionary, and add the strata to it
-        for tag in strataDict.get("tags", []):
-            if tag in self.strata_tags:
-                self.strata_tags[tag].append(name)
+        # adds the specific tags to the stratum_tags dictionary, and add the stratum to it
+        for tag in stratumDict.get("tags", []):
+            if tag in self.stratum_tags:
+                self.stratum_tags[tag].append(name)
             else:
-                self.strata_tags[tag] = [name]
+                self.stratum_tags[tag] = [name]
 
 
-    # checks if a strata exists in the stratas dictionary
-    def strata_exists(self, name):
-        return name in self.stratas
+    # checks if a stratum exists in the strata dictionary
+    def stratum_exists(self, name):
+        return name in self.strata
 
 
-    # gets the strata information from the stratas dictionary
-    def get_strata(self, name):
-        return self.stratas.get(name, {})
+    # gets the stratum information from the strata dictionary
+    def get_stratum(self, name):
+        return self.strata.get(name, {})
 
 
-    # gets all stratas in the values section of the ore, handling tags and normal stratas
-    def get_stratas_in_values(self, values):
-        stratas = []
+    # gets all strata in the values section of the ore, handling tags and normal strata
+    def get_strata_in_values(self, values):
+        strata = []
         for value in values:
             if value.startswith("#"):
-                stratas.extend(self.strata_tags.get(value[1:], []))
-            elif self.strata_exists(value):
-                stratas.append(value)
+                strata.extend(self.stratum_tags.get(value[1:], []))
+            elif self.stratum_exists(value):
+                strata.append(value)
 
-        return stratas
+        return strata
     
 
     # gets the ore drop function for the drop info, so weither to use fortune or silk touch, and check if the ore should drop itself
@@ -280,10 +280,10 @@ class Utilities:
         return f"global.lp.{fortune_part}.{silk_touch_part}"
     
 
-    # get the blockstate of an strata, for this read the file and replace all the %s with the id_file, id_name and id_name, to get the amount the word model is used
-    def get_strata_blockstate(self, id_file, id_name, id_file_strata, id_name_strata):
-        blockstate_path = os.path.join(self.LM.path_program, "base_files", "assets", "blockstates", id_file_strata, f"{id_name_strata}.json")
-        if not os.path.isfile(blockstate_path): self.LM.log("asset_file_missing", f"Missing Strata asset file: {blockstate_path}"); return ""
+    # get the blockstate of an stratum, for this read the file and replace all the %s with the id_file, id_name and id_name, to get the amount the word model is used
+    def get_stratum_blockstate(self, id_file, id_name, id_file_stratum, id_name_stratum):
+        blockstate_path = os.path.join(self.LM.path_program, "base_files", "assets", "blockstates", id_file_stratum, f"{id_name_stratum}.json")
+        if not os.path.isfile(blockstate_path): self.LM.log("asset_file_missing", f"Missing Stratum asset file: {blockstate_path}"); return ""
         blockstate = self.IOM.read(blockstate_path)
         blockstate = blockstate % (blockstate.count("model") * (id_file, id_name, id_name))
         blockstate = blockstate.replace("\n", "").replace("\t", "").replace(" ", "")
@@ -291,14 +291,14 @@ class Utilities:
 
 
 
-    def handle_ore_assets(self, id_file, id_name, id_file_strata, id_name_strata, blockstate, resource_location_item_model): 
+    def handle_ore_assets(self, id_file, id_name, id_file_stratum, id_name_stratum, blockstate, resource_location_item_model): 
         # gets the resource location of the block model in the game assets
         if blockstate == "": return False
-        resource_location_block_model = f'unification:{id_file}/{id_name}/block/{id_name}_ore/{id_file_strata}/{id_name_strata}/'
+        resource_location_block_model = f'unification:{id_file}/{id_name}/block/{id_name}_ore/{id_file_stratum}/{id_name_stratum}/'
 
         # gets the model path in the base files
-        model_path = os.path.join(self.LM.path_program, "base_files", "assets", "models", id_file_strata, id_name_strata)
-        if not os.path.isdir(model_path): self.LM.log("asset_folder_missing", f"Missing Strata asset folder: {model_path}"); return False
+        model_path = os.path.join(self.LM.path_program, "base_files", "assets", "models", id_file_stratum, id_name_stratum)
+        if not os.path.isdir(model_path): self.LM.log("asset_folder_missing", f"Missing Stratum asset folder: {model_path}"); return False
 
         # for each file in the model path read it, replace the %s accordingly and then save it to the game assets
         for model_file in os.listdir(model_path):

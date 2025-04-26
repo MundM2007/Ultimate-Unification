@@ -4,7 +4,7 @@
         "loot": {
             "drops": "botania:dragonstone",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -35,7 +35,7 @@
         "loot": {
             "drops": "unification:elementium_raw_material",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

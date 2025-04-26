@@ -106,7 +106,7 @@
         "loot": {
             "drops": "mysticalagriculture:soulium_essence",
             "counts": [1, 2, 3],
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

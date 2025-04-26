@@ -55,14 +55,14 @@ class KJSFileUtilities:
 
 
     # adds tags to an ore
-    def add_tag_ore(self, id_file, id_name, id_file_strata, id_name_strata, license_notice):
-        id_item = f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"
+    def add_tag_ore(self, id_file, id_name, id_file_stratum, id_name_stratum, license_notice):
+        id_item = f"unification:{id_name}_ore_{id_file_stratum}_{id_name_stratum}"
         for type_tag in ["item", "block"]:
             path_script_file_tag = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_tag", type_tag, "ore", f"{id_file}.js")
             self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
             self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores/{id_name}', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
-            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_strata}', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
-            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_strata}/{id_file_strata}', '{id_item}')\n", 
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_stratum}', '{id_item}')\n", license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
+            self.FM.add_kjs(path_script_file_tag, f"    event.add('forge:ores_in_ground/{id_name_stratum}/{id_file_stratum}', '{id_item}')\n", 
                             license_notice, 90, f"onEvent('{type_tag}.tags', event => {{\n")
 
 
@@ -255,7 +255,7 @@ class KJSFileUtilities:
         self.FM.add_kjs(path_script_file, f"    global.lp.replace(event, '{id_item}', '{new_id_item}')\n", license_notice, 100, "onEvent('lootjs', event => {\n")
 
 
-    def add_ore(self, id_file, id_name, stratas, drop_info, gem_multiplier, license_notice):
+    def add_ore(self, id_file, id_name, strata, drop_info, gem_multiplier, license_notice):
         # checks if the texture exists and pastes it to the correct location
         texture_path = f"unification:{id_file}/{id_name}/block/{id_name}_ore"
         if self.FM.handle_texture(self.UT.get_texture_path(id_file, id_name, "ore"), self.UT.resource_location_to_path(texture_path), True, True):
@@ -265,62 +265,62 @@ class KJSFileUtilities:
             path_script_file_drops = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_loot", f"{id_file}.js")
             path_recipe_file = os.path.join(self.UT.pack_path, "kubejs", "server_scripts", "unification", "add_recipe", "ore", id_file)
             
-            for strata in stratas:
-                # for each strata, check if it exists, get the mod and name of the strata
-                if not self.UT.strata_exists(strata):
+            for stratum in strata:
+                # for each stratum, check if it exists, get the mod and name of the stratum
+                if not self.UT.stratum_exists(stratum):
                     continue
-                id_file_strata = strata[:strata.find(".")]
-                id_name_strata = strata[strata.find(".") + 1:]
+                id_file_stratum = stratum[:stratum.find(".")]
+                id_name_stratum = stratum[stratum.find(".") + 1:]
 
-                # get strata blockstate and resource location, call function which handeles block and item models fro this ore and strata
-                blockstate = self.UT.get_strata_blockstate(id_file, id_name, id_file_strata, id_name_strata)
-                resource_location_item_model = f'unification:item/{id_name}_ore_{id_file_strata}_{id_name_strata}'
-                if not self.UT.handle_ore_assets(id_file, id_name, id_file_strata, id_name_strata, blockstate, resource_location_item_model):
+                # get stratum blockstate and resource location, call function which handeles block and item models fro this ore and stratum
+                blockstate = self.UT.get_stratum_blockstate(id_file, id_name, id_file_stratum, id_name_stratum)
+                resource_location_item_model = f'unification:item/{id_name}_ore_{id_file_stratum}_{id_name_stratum}'
+                if not self.UT.handle_ore_assets(id_file, id_name, id_file_stratum, id_name_stratum, blockstate, resource_location_item_model):
                     continue
 
-                # get properties, harvest level, destroy time and explosion resistance of the given strata / ore (use the max value)
-                strata_object = self.UT.get_strata(strata)
-                properties = str([f"BlockProperties.{property_}" for property_ in strata_object["properties"]])
-                harvest_level = max(self.harvest_level, strata_object["harvest_level"]) if strata_object["harvest_level"] != -1 else -1
-                destroy_time = max(self.destroy_time, strata_object["destroy_time"])
-                explosion_resistance = max(self.explosion_resistance, strata_object["explosion_resistance"])
+                # get properties, harvest level, destroy time and explosion resistance of the given stratum / ore (use the max value)
+                stratum_object = self.UT.get_stratum(stratum)
+                properties = str([f"BlockProperties.{property_}" for property_ in stratum_object["properties"]])
+                harvest_level = max(self.harvest_level, stratum_object["harvest_level"]) if stratum_object["harvest_level"] != -1 else -1
+                destroy_time = max(self.destroy_time, stratum_object["destroy_time"])
+                explosion_resistance = max(self.explosion_resistance, stratum_object["explosion_resistance"])
 
                 # generate the script file to register the ore block and item, as well as the language entry for it
-                self.FM.add_kjs(path_script_file, (f"    global.block_ids.push(global.scripts.add_ore(event, '{id_name}', '{id_file_strata}_{id_name_strata}', '{strata_object['material']}', "
-                                f"{properties}, '{strata_object['harvest_tool']}', {harvest_level}, {destroy_time}, {explosion_resistance}, {blockstate}, "
+                self.FM.add_kjs(path_script_file, (f"    global.block_ids.push(global.scripts.add_ore(event, '{id_name}', '{id_file_stratum}_{id_name_stratum}', '{stratum_object['material']}', "
+                                f"{properties}, '{stratum_object['harvest_tool']}', {harvest_level}, {destroy_time}, {explosion_resistance}, {blockstate}, "
                                 f"'{resource_location_item_model}'))\n"), license_notice, 95, "onEvent('block.registry', event => {\n")
-                self.UT.gen_lang_entry(id_file, id_name, "ore", id_file_strata, id_name_strata)
+                self.UT.gen_lang_entry(id_file, id_name, "ore", id_file_stratum, id_name_stratum)
 
                 # generate the script file to register the ore drop and tags
-                ore_id = f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"
+                ore_id = f"unification:{id_name}_ore_{id_file_stratum}_{id_name_stratum}"
                 if drop_function:
-                    strata_mult = self.UT.get_main_config(f"ores.dimension_multiplier.{strata_object["dimension"]}", 
+                    stratum_mult = self.UT.get_main_config(f"ores.dimension_multiplier.{stratum_object["dimension"]}", 
                                                           self.UT.get_main_config(f"ores.dimension_multiplier.default", 1))
-                    if not drop_info['strata_mult_enabled']: strata_mult = 1
+                    if not drop_info['stratum_mult_enabled']: strata_mult = 1
                     self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']}, {strata_mult})\n"), 
                                     license_notice, 90, "onEvent('lootjs', event => {\n")
                 
-                self.add_tag_ore(id_file, id_name, id_file_strata, id_name_strata, license_notice)
+                self.add_tag_ore(id_file, id_name, id_file_stratum, id_name_stratum, license_notice)
                 
                 # add the mekanism ore drop + strata -> to ore recipe
                 if(self.UT.check_mod("mekanism")):
                     self.FM.add_kjs(os.path.join(path_recipe_file, f"{id_name}.js"), 
-                                    f"    global.rp.mekanism.ore(event, '{ore_id}', {drop_info['drops']}, '{strata_object['block']}', {gem_multiplier})\n", 
+                                    f"    global.rp.mekanism.ore(event, '{ore_id}', {drop_info['drops']}, '{stratum_object['block']}', {gem_multiplier})\n", 
                                     license_notice, 50, "onEvent('recipes', event => {\n")
                 
             return True
         return False
     
 
-    def add_ore_gen(self, id_file, id_name, stratas, generation, license_notice):
+    def add_ore_gen(self, id_file, id_name, strata, generation, license_notice):
         path_script_file = os.path.join(self.UT.pack_path, "kubejs", "startup_scripts", "unification", "add_worldgen", f"{id_file}.js")
         targets = []
-        # create a list of all strata block and ore blocks to be used for generation, so the game knows which blocks to replace with the new ore
-        for strata in stratas:
-            if not self.UT.strata_exists(strata): continue
-            id_file_strata = strata[:strata.find(".")]
-            id_name_strata = strata[strata.find(".") + 1:]
-            targets.append([self.UT.get_strata(strata)['block'], f"unification:{id_name}_ore_{id_file_strata}_{id_name_strata}"])
+        # create a list of all stratum block and ore blocks to be used for generation, so the game knows which blocks to replace with the new ore
+        for stratum in strata:
+            if not self.UT.stratum_exists(stratum): continue
+            id_file_stratum = stratum[:stratum.find(".")]
+            id_name_stratum = stratum[stratum.find(".") + 1:]
+            targets.append([self.UT.get_stratum(stratum)['block'], f"unification:{id_name}_ore_{id_file_stratum}_{id_name_stratum}"])
         if list(filter(lambda target: target[0] == "minecraft:stone", targets)) != []:
             # make sure stone is not in the list of targets multiple times
             targets = list(filter(lambda target: target[0] != "minecraft:stone", targets))

@@ -4,7 +4,7 @@
         "loot": {
             "drops": "silentgear:raw_azure_silver",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -29,7 +29,7 @@
         "loot": {
             "drops": "silentgear:raw_crimson_iron",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

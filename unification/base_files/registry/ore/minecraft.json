@@ -453,7 +453,7 @@
         "loot": {
             "drops": "minecraft:quartz",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

@@ -24,9 +24,9 @@ function chooseRandom(array) {
 function calcFortuneDrops(level, mult) {
 	return Math.max(Math.ceil((Math.random() * (level + 2) - 1) * mult), mult)
 }
-function applyStrataMultiplier(strata_multiplier, mult_array) {
+function applyStratumMultiplier(stratum_multiplier, mult_array) {
 	if(mult_array == undefined) mult_array = [1]
-	let scaled = chooseRandom(mult_array) * strata_multiplier
+	let scaled = chooseRandom(mult_array) * stratum_multiplier
 	let floorValue = Math.floor(scaled)
 	let ceilValue = Math.ceil(scaled)
 
@@ -45,7 +45,7 @@ onEvent("loaded", e => {
 		},
 
 		with_fortune: {
-			with_silk_touch: (event, block, drops, counts, strata_multiplier) => {
+			with_silk_touch: (event, block, drops, counts, stratum_multiplier) => {
 				event
         			.addBlockLootModifier(block)
 					.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
@@ -62,14 +62,13 @@ onEvent("loaded", e => {
 									}
 								}
 							}
-							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, applyStrataMultiplier(strata_multiplier, counts))))
+							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, applyStratumMultiplier(stratum_multiplier, counts))))
 						}else{
-							context.addLoot(Item.of(chooseRandom(drops), applyStrataMultiplier(strata_multiplier, counts)))
+							context.addLoot(Item.of(chooseRandom(drops), applyStratumMultiplier(stratum_multiplier, counts)))
 						}
 					})
 			},
-			without_silk_touch: (event, block, drops, counts, strata_multiplier) => {
-				let counts = applyStrataMultiplier(strata_multiplier, counts)
+			without_silk_touch: (event, block, drops, counts, stratum_multiplier) => {
 				event
         			.addBlockLootModifier(block)
 					.thenRemove(block)
@@ -85,31 +84,29 @@ onEvent("loaded", e => {
 									}
 								}
 							}
-							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, applyStrataMultiplier(strata_multiplier, counts))))
+							context.addLoot(Item.of(chooseRandom(drops), calcFortuneDrops(level, applyStratumMultiplier(stratum_multiplier, counts))))
 						}else{
-							context.addLoot(Item.of(chooseRandom(drops), applyStrataMultiplier(strata_multiplier, counts)))
+							context.addLoot(Item.of(chooseRandom(drops), applyStratumMultiplier(stratum_multiplier, counts)))
 						}
 					})
 			}
 		},
 		without_fortune: {
-			with_silk_touch: (event, block, drops, counts, strata_multiplier) => {
-				let counts = applyStrataMultiplier(strata_multiplier, counts)
+			with_silk_touch: (event, block, drops, counts, stratum_multiplier) => {
 				event
         			.addBlockLootModifier(block)
 					.randomChanceWithEnchantment("minecraft:silk_touch", [1, 0])
 					.thenRemove(block)
 					.thenApply((context) => {
-						context.addLoot(Item.of(chooseRandom(drops), applyStrataMultiplier(strata_multiplier, counts)))
+						context.addLoot(Item.of(chooseRandom(drops), applyStratumMultiplier(stratum_multiplier, counts)))
 					})
 			},
-			without_silk_touch: (event, block, drops, counts, strata_multiplier) => {
-				let counts = applyStrataMultiplier(strata_multiplier, counts)
+			without_silk_touch: (event, block, drops, counts, stratum_multiplier) => {
 				event
         			.addBlockLootModifier(block)
 					.thenRemove(block)
 					.thenApply((context) => {
-						context.addLoot(Item.of(chooseRandom(drops), applyStrataMultiplier(strata_multiplier, counts)))
+						context.addLoot(Item.of(chooseRandom(drops), applyStratumMultiplier(stratum_multiplier, counts)))
 					})
 			}
 		}

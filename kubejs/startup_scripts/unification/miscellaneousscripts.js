@@ -42,8 +42,8 @@ onEvent('loaded', event => {
                 .requiresTool(!harvest_level <= 0)
             if(burn_time > 0 && material_type == "storage_block") block.item(item => item.burnTime(burn_time * 10))
         },
-        add_ore: (event, id_name, strata_name, material_type_extra, properties, harvest_tool, harvest_level, destroy_time, explosion_resistance, blockstate, model_path) => {
-            let ore = event.create(`unification:${id_name}_ore_${strata_name}`)
+        add_ore: (event, id_name, stratum_name, material_type_extra, properties, harvest_tool, harvest_level, destroy_time, explosion_resistance, blockstate, model_path) => {
+            let ore = event.create(`unification:${id_name}_ore_${stratum_name}`)
                 .material(material_type_extra)
                 .translationKey('')
                 .hardness(destroy_time)
@@ -57,7 +57,7 @@ onEvent('loaded', event => {
             /*for (let i = 0; i < properties.length; i++) {
                 ore.property(properties[i])
             }*/
-            return `unification:${id_name}_ore_${strata_name}`
+            return `unification:${id_name}_ore_${stratum_name}`
         },
         add_item: (event, id_name, material_type, texture_path, burn_time) => {
             let item = event.create(`unification:${id_name}_${material_type}`)
@@ -108,7 +108,7 @@ onEvent('loaded', event => {
 
             if(typeof min_height != "number") min_height = 0
             for (let i = 0; i < targets.length; i++){
-            if(!Array.isArray(targets[i]) || targets[i].length != 2) continue
+                if(!Array.isArray(targets[i]) || targets[i].length != 2) continue
                 targets[i] = $OverlayOreConfiguration.target(targets[i][0], targets[i][1])
             }
             let oreConfig = new $OverlayOreConfiguration(targets, typeof max_vein_size=="number" ? max_vein_size : 8, typeof no_surface=="number" ? no_surface : 0)

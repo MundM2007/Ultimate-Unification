@@ -4,7 +4,7 @@
         "loot": {
             "drops": "byg:ametrine_gems",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -30,7 +30,7 @@
         "loot": {
             "drops": "byg:anthracite",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "counts": 1,
         "variants": [
@@ -56,7 +56,7 @@
         "loot": {
             "drops": "byg:emeraldite_shards",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -81,7 +81,7 @@
         "loot": {
             "drops": "byg:lignite",
             "counts": [4, 5, 6],
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {
@@ -112,7 +112,7 @@
         "loot": {
             "drops": "byg:raw_pendorite",
             "counts": 1,
-            "strata_multiplier_enabled": false
+            "stratum_multiplier_enabled": false
         },
         "variants": [
             {

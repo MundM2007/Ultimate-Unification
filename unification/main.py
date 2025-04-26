@@ -88,26 +88,26 @@ FM.add_kjs(os.path.join(UT.pack_path, "kubejs", "startup_scripts", "unification"
            f"let replace_recipes = {UT.get_main_config('unification.replace_recipes', False)}\n")
            .replace("False", "false").replace("True", "true"), "", 250, "", "")
 
-# initializes stratas
-for strata in gen_scripts_info.get("strata", []):
-    id_file = strata[:strata.find(".")]
-    id_name = strata[strata.find(".") + 1:]
+# initializes strata
+for stratum in gen_scripts_info.get("stratum", []):
+    id_file = stratum[:stratum.find(".")]
+    id_name = stratum[stratum.find(".") + 1:]
 
-    base_file_strata_path = os.path.join(path_program, "base_files", "strata", f"{id_file}.json")
+    base_file_stratum_path = os.path.join(path_program, "base_files", "stratum", f"{id_file}.json")
     # checks if the base file exists and is valid
-    if not os.path.isfile(base_file_strata_path):
-        LM.log("strata_file_missing", f"Material Base file missing: {base_file_strata_path} skipping")
+    if not os.path.isfile(base_file_stratum_path):
+        LM.log("stratum_file_missing", f"Material Base file missing: {base_file_stratum_path} skipping")
         continue
     try:
-        base_file_strata = json.loads(IOM.read(base_file_strata_path))
+        base_file_stratum = json.loads(IOM.read(base_file_stratum_path))
     except json.JSONDecodeError as e:
-        LM.log("json_error", f"Error decoding JSON content of the file: {base_file_strata_path} skipping", e)
+        LM.log("json_error", f"Error decoding JSON content of the file: {base_file_stratum_path} skipping", e)
         continue
-    if base_file_strata.get(id_name) is None:
-        LM.log("strata_missing", f"Material ({id_name}) not found in base file: {base_file_strata_path}")
+    if base_file_stratum.get(id_name) is None:
+        LM.log("stratum_missing", f"Material ({id_name}) not found in base file: {base_file_stratum_path}")
         continue
 
-    UT.register_strata(strata, base_file_strata[id_name])
+    UT.register_stratum(stratum, base_file_stratum[id_name])
 
 
 # loops over all materials to add
@@ -302,15 +302,15 @@ for element in gen_scripts_info.get("main", []):
             if license_notice is not None:
                 license_notice = "".join(license_notice)
             
-            # gets all relevant stratas for the ore
-            all_stratas = set()
+            # gets all relevant strata for the ore
+            all_strata = set()
             for ore_object in base_file_ore[id_name].get("variants", []):
                 if ore_object.get("values") is not None:
-                    stratas = UT.get_stratas_in_values(ore_object["values"])
-                    all_stratas.update(stratas)
+                    strata = UT.get_strata_in_values(ore_object["values"])
+                    all_strata.update(strata)
                     # adds the ore generation for the ore for each variant
                     if ore_object.get("generation") is not None:
-                        KFUT.add_ore_gen(id_file, id_name, stratas, ore_object["generation"], license_notice)
+                        KFUT.add_ore_gen(id_file, id_name, strata, ore_object["generation"], license_notice)
 
             # gets the drop info for the ore (drops, type, counts)
             drop_info = None
@@ -319,9 +319,9 @@ for element in gen_scripts_info.get("main", []):
                 drop_info["type"] = base_file_ore[id_name]["loot"].get("type", "metal")
                 counts = base_file_ore[id_name]["loot"].get("counts", [1])
                 drop_info["counts"] = counts if isinstance(counts, list) else [counts]
-                drop_info["strata_mult_enabled"] = bool(base_file_ore[id_name]["loot"].get("strata_multiplier_enabled", True))
+                drop_info["stratum_mult_enabled"] = bool(base_file_ore[id_name]["loot"].get("stratum_multiplier_enabled", True))
             
-            KFUT.add_ore(id_file, id_name, all_stratas, drop_info, gem_multiplier, license_notice)
+            KFUT.add_ore(id_file, id_name, all_strata, drop_info, gem_multiplier, license_notice)
 
             # disables other ores as specified in remove
             if UT.get_main_config('ores.disable_other_ores', None) is not None:
