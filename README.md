@@ -98,7 +98,7 @@ To Generate all the Kubejs scripts aswell as asset files run the game once and t
 - [Tiny Redstone](https://www.curseforge.com/minecraft/mc-mods/tiny-redstone)
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium)
 
-Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new/choose) and I'll look into it.
+Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new?template=4-mod_suggestion.yaml) and I'll look into it.
 
 ## Planned Features
 
