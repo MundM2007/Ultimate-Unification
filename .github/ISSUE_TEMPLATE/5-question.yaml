@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        If you would rather wish to fill out this issue in a full page and not this small window clich [here](https://github.com/MundM2007/Ultimate-Unification/issues/new?template=4-mod_suggestion.yaml)
+        If you would rather wish to fill out this issue in a full page and not this small window clich [here](https://github.com/MundM2007/Ultimate-Unification/issues/new?template=5-question.yaml)
   - type: textarea
     id: question
     attributes:
