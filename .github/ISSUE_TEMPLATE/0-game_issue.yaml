@@ -8,6 +8,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this game issue report!
+        If you would rather wish to fill out this issue in a full page and not this small window clich [here](https://github.com/MundM2007/Ultimate-Unification/issues/new?template=0-game_issue.yaml)
   - type: textarea
     id: describe-issue
     attributes:
