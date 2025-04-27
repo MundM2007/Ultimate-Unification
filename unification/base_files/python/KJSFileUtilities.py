@@ -296,13 +296,13 @@ class KJSFileUtilities:
                 if drop_function:
                     stratum_mult = self.UT.get_main_config(f"ores.dimension_multiplier.{stratum_object["dimension"]}", 
                                                           self.UT.get_main_config(f"ores.dimension_multiplier.default", 1))
-                    if not drop_info['stratum_mult_enabled']: strata_mult = 1
-                    self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']}, {strata_mult})\n"), 
+                    if not drop_info['stratum_mult_enabled']: stratum_mult = 1
+                    self.FM.add_kjs(path_script_file_drops, (f"    {drop_function}(event, '{ore_id}', {drop_info['drops']}, {drop_info['counts']}, {stratum_mult})\n"), 
                                     license_notice, 90, "onEvent('lootjs', event => {\n")
                 
                 self.add_tag_ore(id_file, id_name, id_file_stratum, id_name_stratum, license_notice)
                 
-                # add the mekanism ore drop + strata -> to ore recipe
+                # add the mekanism ore drop + stratum -> to ore recipe
                 if(self.UT.check_mod("mekanism")):
                     self.FM.add_kjs(os.path.join(path_recipe_file, f"{id_name}.js"), 
                                     f"    global.rp.mekanism.ore(event, '{ore_id}', {drop_info['drops']}, '{stratum_object['block']}', {gem_multiplier})\n", 
