@@ -2,4 +2,3 @@ files:
   - source: unification/base_files/lang/en_us.json
     translation: unification/base_files/lang/%locale_with_underscore%.json
     preserve_hierarchy: true
-    scheme: "plain_json"
