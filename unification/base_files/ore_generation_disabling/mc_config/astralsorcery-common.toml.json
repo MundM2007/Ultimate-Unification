@@ -1,6 +1,0 @@
-{
-    "replace": [
-        ["worldgen.aquamarine", "enabled", false, true],
-        ["worldgen.rock_crystal", "enabled", false, true]
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "replace": [
-        ["\"World Gen\"", "poorUraniniteGenChance", 0, 8],
-        ["\"World Gen\"", "denseUraniniteGenChance", 0, 3],
-        ["\"World Gen\"", "uraniniteGenChance", 0, 6]
-    ]
-}

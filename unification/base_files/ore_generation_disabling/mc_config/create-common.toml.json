@@ -1,6 +1,0 @@
-{
-    "replace": [
-        ["worldgen.v2.copper_ore", "frequency", 0, 2],
-        ["worldgen.v2.zinc_ore", "frequency", 0, 4]
-    ]
-}

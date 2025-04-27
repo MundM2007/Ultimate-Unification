@@ -1,5 +1,0 @@
-{
-    "replace": [
-        ["worldgen.inertCrystal", "disableInertCrystal", true, false]
-    ]
-}

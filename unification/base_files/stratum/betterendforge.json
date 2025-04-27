@@ -1,7 +1,0 @@
-{
-    "brimstone": {
-        "block": "betterendforge:brimstone",
-        "dimension": "minecraft:the_end",
-        "tags": ["all-all", "all-betterendforge", "the_end-all", "the_end-betterendforge"]
-    }
-}

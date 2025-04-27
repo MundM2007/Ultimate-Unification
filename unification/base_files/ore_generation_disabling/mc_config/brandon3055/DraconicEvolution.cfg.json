@@ -1,7 +1,0 @@
-{
-    "replace": [
-        ["Server", "enableOreEnd", false, true],
-        ["Server", "enableOreOverworld", false, true],
-        ["Server", "enableOreNether", false, true]
-    ]
-}

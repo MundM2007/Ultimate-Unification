@@ -1,6 +1,0 @@
-{
-    "replace": [
-        ["worldgen.oregen.copperOre", "generateOre", false, true],
-        ["worldgen.oregen.silverOre", "generateOre", false, true]
-    ]
-}

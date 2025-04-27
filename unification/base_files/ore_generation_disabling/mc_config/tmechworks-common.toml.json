@@ -1,6 +1,0 @@
-{
-    "replace": [
-        ["world.copper", "enabled", false, true],
-        ["world.aluminum", "enabled", false, true]
-    ]
-}

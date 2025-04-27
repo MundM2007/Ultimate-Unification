@@ -1,5 +1,0 @@
-{
-    "replace": [
-        ["\"World Generation\"", "\"Ender Ore Generation\"", false, true]
-    ]
-}

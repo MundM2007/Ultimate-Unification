@@ -1,5 +1,0 @@
-{
-    "replace": [
-        ["features.World", "CertusQuartzWorldGen", false, true]
-    ]
-}

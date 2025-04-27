@@ -1,6 +1,0 @@
-{
-    "replace": [
-        ["worldgen", "generateCobalt", false, true],
-        ["worldgen", "generateCopper", false, true]
-    ]
-}

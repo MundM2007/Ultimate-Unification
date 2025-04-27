@@ -1,8 +1,0 @@
-{
-    "replace": [
-        ["ores", "DISABLEDametrineSpawns", "\"\"", "\"byg:shattered_viscal_isles\""],
-        ["ores", "DISABLEDbuddingAmetrineSpawns", "\"\"", "\"byg:shattered_viscal_isles\""],
-        ["ores", "emeralditeSpawns", "\"\"", "\"byg:wailing_garth\""],
-        ["ores", "pendoriteSpawns", "\"\"", "\"byg:embur_bog\""]
-    ]
-}

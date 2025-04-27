@@ -1,7 +1,0 @@
-{
-    "livingrock": {
-        "block": "botania:livingrock",
-        "dimension": "mythicbotany:alfheim",
-        "tags": ["all-all", "all-botania", "alfheim-all", "alfheim-botania"]
-    }
-}
