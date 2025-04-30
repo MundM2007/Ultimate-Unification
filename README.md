@@ -100,6 +100,10 @@ To Generate all the Kubejs scripts aswell as asset files run the game once and t
 
 Is your favorite mod missing? [Create an issue](https://github.com/MundM2007/Ultimate-Unification/issues/new?template=4-mod_suggestion.yaml) and I'll look into it.
 
+## Want to Contribute?
+
+Fork the repository, make your changes and create a pull request. For things that you can do look here: https://github.com/MundM2007/Ultimate-Unification/wiki/ToDos-(for-contributors)
+
 ## Planned Features
 
 - strata ores properties and rotations
