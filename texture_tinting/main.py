@@ -2,7 +2,6 @@ import os
 from PIL import Image
 import sys
 
-#['relic', 'B2956E', '000000', '9f7a4a', '8a6a40', '000000', '7d6139', '000000', '634d2e', '000000', '000000']
 # the 5th is only for dirty dust and gem ore; the 4th for molten; 1, 3, 4, 6, 8 for metal ore; 2, 5, 7, 9 for gem ore
 colors = ['bone', 'CBBDAB', '000000', 'BEAD96', 'A99275', '000000', '927E64', '000000', '73624D', '000000', '000000']
 name = colors[0]
